@@ -1,0 +1,551 @@
+<html>
+<head>
+<title>Andy's XHTML Tutorial</title>
+<style type="text/css">
+a:link {color:'blue';text-decoration:'none';}
+a:hover {color:'red';text-decoration:'none';}
+a:visited {color:'blue';text-decoration:'none';}
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="blue" alink="blue" vlink="blue">
+<a name="top"></a>
+Back to &#149; <a href="index.html">Computers</a>
+&#149; <a href="../home/">Home</a> 
+&#149; <a href="../../">Opening Page</a>
+<h1>Basic XHTML</h1>
+<ul>
+<li><a href="#doc_struc">Document Structure</a>
+<li><a href="#format">Formatting</a>
+<ul>
+  <li><a href="#font">The Font Tag</a>
+  <li><a href="#head">Headers</a>
+  <li><a href="#body">The Body Tag</a>
+  <li><a href="#space">Line Breaks and White Space</a>
+</ul>
+<li><a href="#link">Links and Anchors</a>
+<li><a href="#image">Images</a>
+<li><a href="#list">Lists</a>
+<li><a href="#table">Tables</a>
+<li><a href="#frame">Frames</a>
+<li><a href="#form">Forms</a>
+</ul>
+This tutorial is going to cover the basics of XHTML, HTML is the <u>H</u>yper  
+<u>T</u>ext <u>M</u>arkup <u>L</u>anguage and XHTML is HTML that conforms to the rules of XML. 
+XHTML is used to format 
+web pages. It uses tags surrounding text elements to indicate how to 
+format the text. For example, to add write a word in <em>italics</em>, 
+you would enclose the word in tags like this: 
+<br />
+&lt;em&gt;...&lt;/em&gt;<br>  All XHTML markup tags are enclosed in less-than
+(&lt;) and greater-than(&gt;) signs. For convenience, these are often 
+referred to as 'angle brackets' to differentiate them from parentheses(()), 
+square brackets([]), and curly braces({}). Angle brackets were probably 
+chosen for this task as they are less common than the other delimiters and 
+allow you to use the other delimiters without worrying about it. All angle 
+brackets in an HTML document are considered delimiters, so if you actually 
+want to display a less-than or greater-than sign, you must use an escape 
+sequence(for example, &amp;lt;, for less-than). We'll discuss that more later.
+<br /><br />
+For now, just remember that all HTML tags are enclosed in angle brackets.  
+Most HTML tags come in pairs, like the italics tag above. In this case, 
+&lt;em&gt; means "start doing italics here" and &lt;/em&gt;(with a '/' following the 
+'&lt;') means "stop doing italics here".  Another simple tag that uses this 
+formula is:
+<ul>
+<li>&lt;strong&gt;<strong>bold</strong>&lt;/strong&gt;</li>
+</ul>
+Tags that don't come in pairs are called "empty tags."  Empty tags must 
+close themselves by having a " /" before the closing angle bracket for example a horizontal rule 
+(a line across the page) is expressed as:
+<ul>
+<li>&lt;hr /&gt;</li>
+</ul>
+
+and creates:
+<hr />
+
+<a name="doc_struc"><h2>Document Structure</h2></a>
+In addition to formatting text, tags are also used to format the document 
+itself.  Each HTML document starts with &lt;html&gt; and ends with 
+&lt;/html&gt;.  Within the document, there is a head and a body, which are 
+delimited by &lt;head&gt;...&lt;/head&gt; and &lt;body&gt;...&lt;/body&gt;, 
+respectively. Within the head, is the title, scripts(discussed later), and meta 
+tags(also discussed later). The title is the text you would like to appear 
+in the browser's title bar(in the case of this page, "Andy's XHTML Tutorial"), 
+enclosed in matching &lt;title&gt;...&lt;/title&gt; tags. The body holds the 
+substance of the HTML document.  So a skeletal HTML document would appear as 
+such: <br /><br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Your title here&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+Substance of HTML document<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+<br /><br />
+A couple of worthy notes:
+<ul>
+<li>XHTML is case sensitive. &lt;em&gt; is not the same as &lt;EM&gt;. You must use lower case for all tags</li>
+<li>Tags must be properly nested. For example, if you have &lt;stong&gt; followed by 
+    &lt;em&gt; followed by text, you must first close with &lt;/em&gt;, followed 
+    by &lt;/strong&gt;. You must close inner tags before outer tags.</li>
+</ul>
+<a href="#top">Back to Top</a>
+<a name="format"><h2>Formatting</h2></a>
+<a name="font"><h3>The Font Tag</h3></a>
+<strong>The font tag is deprecated in XHTML. It is recommended you use
+Cascading Style Sheets(CSS) to achieve the formatting discussed in this section.
+However, the <a href="#color">color</a> section is still relevant.</strong>
+In addition to italics, underscore, and bold type, HTML lets you decide 
+the size and color of the text.  This is done using the font tag. For 
+example, &lt;font size="4" color="blue"&gt;...&lt;/font&gt; would create 
+<font size="4" color="blue">text that looks like this</font>. Size and 
+color are called attributes of the font tag. The font tag can take a color 
+attribute, a size attribute, or both.<br /><br />
+The size attribute can take a number of forms:
+<ul>
+<li>size="<i>n</i>" where n is a number between 1 and 7 sets the size of the 
+    font to that size.</li>
+<li>size="<i>+n</i>" or size=<i>-n</i> increases or decreases the current 
+    font size by <i>n</i>.</li>
+<li>size="<i>word</i>" where <i>word</i> is big, small, large, or tiny, sets 
+    the font appropriately to the word.</li>
+</ul>
+<a name="color"></a>
+The color attribute can take 2 forms:
+<ul>
+<li>color="<i>word</i>" where <i>word</i> can be black, blue, cyan, gray, 
+           green, lime, magenta, maroon, navy, olive, orange, purple, red, 
+	   teal, silver, white, or yellow.</li>
+<li>color="<i>code</i>" where <i>code</i> is a pound sign(#) followed by 
+    the six character hexadecimal equivelent of the desired color.</li>
+</ul>
+The hexa-what? you may ask. What this means is an encoding of the 
+RGB(Red-Green-Blue) value of the color. Hexadecimal differs from 
+decimal in that rather than going from 0-9 to 10, hexadecimal goes from 
+0-15 and then to 10. To make this less confusing(maybe), after 9, 
+hexadecimal numbering actually goes to a-f, where f=15. So counting to 
+decimal 16 in hexadecimal goes: 1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,10. 16 in 
+decimal is equal to 10 in hexadecimal. 
+<br /><br /> 
+So having a 6 character hexadecimal code for a color allows you to choose 
+between 256 values each for the red, green, and blue components of the color, 
+the higher the value, the greater intensity of the color. Some examples 
+might help:
+<ul>
+<li>#000000 is black.</li>
+<li>#FFFFFF is white.</li>
+<li>#FF0000 is red.</li>
+<li>#FFFF00 is yellow.</li>
+</ul>
+Any of these colors could just as easily be called by name, but more 
+original colors, such as forest green(#006500) require hexadecimal 
+annotation.
+<a href="#top">Back to Top</a>
+
+<a name="head"><h3>Headers</h3></a>
+HTML also provides 7 levels of headers of the form 
+&lt;h<i>n</i>&gt;...&lt;/h<i>n</i>&gt; where <i>n</i> is a number between 1 and 7. 
+Headers differ from using the 
+font tag with the size attribute in that 
+<ul>
+<li>The text appears on its own line.</li>
+<li>Headers may take an align attribute of left, right, or center.</li>
+<li>As opposed to font size, h1 is actually the largest, h7, the smallest.</li>
+</ul>
+For example, &lt;h3 align="center"&gt;My Header&lt;/h3&gt; displays: 
+<h3 align="center">My Header</h3>
+The default alignment for headers is left.<br />
+<a href="#top">Back to Top</a>
+<br />
+<a name="body"><h3>The Body Tag</h3></a>
+You can also format an entire HTML document using the body tag. Its 
+attributes include bgcolor to set the background color for the page
+and text to set the text color for the page. link, alink, and vlink 
+can be used to set the color of links, active links, and visited links 
+respectively(links are discussed soon). All these attributes use the 
+same color representations as the font <a href="#color">color</a> attribute. So, for example, 
+&lt;body bgcolor="#000000" text="#FFFFFF" link="#FFFF00"&gt;...&lt;/body&gt; 
+makes the background color of the page black, the default text is white, 
+and all links which have not been clicked are yellow.    
+<br /><br />
+<a href="#top">Back to Top</a>
+
+<a name="space"><h3>Line Breaks and White Space</h3></a>
+HTML ignores line breaks and all white space after the first in a sequence. 
+By default, HTML simply wraps text according to the width of your browser 
+window. If you want to insert a line break, there are two common ways to 
+do it:
+<ul>
+<li>&lt;br /&gt; inserts a simple line break.</li>
+<li>&lt;p&gt;(paragraph)&lt;/p&gt; inserts empty lines above and below the text.</li>
+</ul>
+Note that unlike most XHTML tags, there is no closing tag for the &lt;br /&gt; tag.
+<br /><br />
+White space is more difficult to manufacture in HTML. The most common way 
+to add white space is the escape sequence, &amp;nbsp;(no-break white space).
+Other options include using tables and images(discussed later).
+<br /><br />
+<a href="#top">Back to Top</a>
+
+<a name="link"><h2>Links and Anchors</h2></a>
+One of the greatest things about HTML is the ability to jump from page to 
+page or within pages by clicking on links. Links are of the form 
+&lt;a href="<i>address</i>"&gt;<i>text to click on</i>&lt;/a&gt; where 
+<i>address</i> can be a relative or absolute url(Uniform Resource Locator).
+<br /><br /> 
+Relative urls are urls that are contained on your site. So for example, 
+if I wanted to link to a page in the same directory as the one you're 
+currently reading called page2.html, I could just write 
+&lt;a href="page2.html"&gt;page2&lt;/a&gt;.  If the file is the directory 
+above the page this one, the convention '../' means move up one directory
+(i.e., if page2.html is in the directory above the page you're currently 
+reading, you could link to it as such: 
+&lt;a href="../page2.html"&gt;page2&lt;/a&gt;). If the document is below the 
+current document, say in a folder called folder2, You would link to it 
+as &lt;a href="folder2/page2.html"&gt;page2&lt;/a&gt; 
+<br /><br />
+Absolute urls are links to pages not on your site. For these you need the 
+full address of the intended page, starting with 'http://'. For example, to 
+link to the <a href="http://www.iub.edu">Indiana University Bloomington 
+Homepage</a>, you would type 
+&lt;a href="http://www.indiana.edu"&gt;homepage&lt;/a&gt;. Similar rules 
+apply as to relative links for going inside folders, but you usually 
+cannot go up(../), as in relative urls.
+<br />
+You may also use the target attribute to decide which window the link will 
+open in. target="_blank" opens in a new window, _parent, _self, and _top are 
+also used, but more often in <a href='#frame'>framesets</a>.  
+<br /><br />
+Anchors are links within a page. A location on a page can be marked 
+usng the syntax &lt;a name=<i>name</i>&gt;<i>name</i>&lt;/a&gt; This 
+location can be linked to using the syntax 
+&lt;a href="#<i>name</i>"&gt;<i>name</i>&lt;/a&gt;.  If <i>name</i> is 
+on another page, say page2.html, use the syntax 
+&lt;a href="page2.html#<i>name</i>"&gt;<i>name</i>&lt;/a&gt;.
+<br />
+<a href="#top">Back to Top</a>
+
+<a name="image"><h2>Images</h2></a>
+Linking to images is another important part of HTML. The syntax is simply, 
+&lt;img src="<i>image-file</i>" /&gt;.  You can also use an align attribute, the 
+options being left, right, and center(default is left).  In addition, it is 
+recommended to use height and width attributes. These are given in pixels and 
+can indicate the actual dimensions of the image or can be used to shrink or 
+expand the image.
+<br /><br />
+<a href="#top">Back to Top</a>
+
+<a name="list"><h2>Lists</h2></a>
+Lists can be ordered or unordered. To begin an unordered list, use &lt;ul&gt;. Beginning 
+an ordered list begins with a &lt;ol&gt; tag. Either type of list needs a complementary 
+closing tag. Either type of list may take a type attribute to indicate the symbol to 
+be used.  
+
+<ul>
+<li>Unordered lists may take disc, circle, or square types. This is also the default 
+    sequence of symbols for nested ordered lists.</li>
+<li>Ordered lists can take type A, a, I, i, or 1, which indicate the starting value 
+    of the list. The default is 1.</li>
+</ul>
+
+Each item in the list is started with an &lt;li&gt; tag, which does not 
+need to be closedi for most browsers, but does to be XHTML compliant. 
+<br />
+A list of definitions can also be created between &lt;dl&gt;...&lt;/dl&gt; tags.  
+In this case, &lt;dt&gt; is used for the term to be defined, and &lt;dd&gt; for the 
+definition itself.  Neither of these tags needs to be closed.
+<br /><br />
+<a href="#top">Back to Top</a>
+
+<a name="table"><h2>Tables</h2></a>
+Tables are a powerful way to control the layout of XHTML pages. The basic 
+layout is:<p>
+<pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+    &lt;/td&gt;
+    ...
+  &lt;/tr&gt;
+  ...
+&lt;/table&gt;
+</pre>
+<br /><br />
+where tr is a table row and td is a table column.  A table can have any 
+number of rows and columns, but the number of rows columns must be 
+consistent throughout the table. 
+<table>
+<tr>
+<td width="30%">
+The table 
+<pre>
+&lt;table border&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+	One
+    &lt;/td&gt;
+    &lt;td&gt;
+	Two
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+	Three
+    &lt;/td&gt;
+    &lt;td&gt;
+	Four
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+</td>
+<td width="30%">&nbsp;</td>
+<td width="30%"> 
+shows up as
+<table border><tr><td>one</td>
+<td>two</td></tr><tr><td>three</td><td>four</td></tr></table>
+</td>
+</tr>
+</table>
+
+This obstacle can be avoided by using colspan the rowspan attributes 
+of the td tag.
+
+<table>
+<tr>
+<td width="30%">
+The table 
+<pre>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+	One
+    &lt;/td&gt;
+    &lt;td&gt;
+	Two
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan="2"&gt;
+	Three
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+</td>
+<td width="30%">&nbsp;</td>
+<td width="30%"> 
+shows up as
+<table border="1"><tr><td>one</td>
+<td>two</td></tr><tr><td colspan="2">three</td></tr></table>
+</td>
+</tr>
+</table>
+
+The table tag can take several attributes.  Border=<i>n</i> creates a border of <i>n</i> pixels. 
+Border color can be set for 
+the entire border as bordercolor=<em>color</em> where <a href="#color">color</a> can be the same values used in the 
+font tag. You can also use the align attribute with the values 
+left, right, or center.  The width of the table can also be set.  cellspacing(space 
+between cells) and  cellpadding(space around the contents of cells) can be indicated in 
+pixels.  Finally, you can choose which sides of the frame to display using the frame 
+attribute which can take the following values: void(no borders), above, below, hsides, 
+vsides, rhs, lhs, or box(default) and rules, for determining which inner borders to 
+show. Possible values are none, rows, cols, and all(default).
+<br /><br />
+The td tag also has several attributes. These include height, width, align and valign(for the 
+cell's contents), bgcolor, and background(which takes an image).
+<br /><br />
+Tables can also be nested.
+<br /><br />
+<a href="#top">Back to Top</a>
+
+<a name="frame"><h3>Frames</h3></a>
+Frames allow you to have more than one page on your screen at a time. This 
+can be useful if you want to have a static menu that navigates the rest 
+of the page. The frame declaration goes between the closing head and 
+opening body tags. A frameset starts with a &lt;frameset&gt; tag, which 
+takes either a rows or cols attribute, depending on whether you want 
+your frames to appear as rows or columns. The value of the rows or cols 
+attibute is a quoted list containing either the length or width in pixels 
+of each frame or the percentage of screen width or height for the frame to 
+occupy. One of the elements in the quoted list can be an asterisk(*), 
+which indicates that that frame take up any space not occupied by the 
+other frames. 
+Following the opening frameset tag are a series of frame tags, one for each 
+element in the list in the frame tag. Frame tags have two attributes, 
+a name field used to identify the frame and an src field which indicates 
+the url of the frame. Finally, a &lt;/frameset&gt; tag closes the 
+frameset. 
+<br /><br />
+For example:<br />
+&lt;frameset cols="100, *"&gt;
+&nbsp;&nbsp;&lt;frame name="menu" src="menu.html" /&gt;<br />
+&nbsp;&nbsp;&lt;frame name="content" 
+src="http://www.mypage.com/pageone.html /"&gt;<br />
+&lt;/frameset&gt;
+<br /><br />
+Creates a page with a 100 pixel wide menu and content filling the rest of 
+the screen. Cols go left to right, rows go top to bottom. In order 
+to make the links on the menu change the content in the comment frame, 
+use the target attibute of the a href tag(i.e., 
+&lt;a href="http://www.mypage.com/page2" target="content"&gt;). To jump 
+out of a frameset, use the predefined "_top" value for target. You can also set 
+target to _self, to open in the current frame, or _parent in a nested frameset.  
+If you're worried about browsers that don't support frames(which are increasingly 
+rare), you may supply alternate content in the body between 
+&lt;noframes&gt; and &lt;/noframes&gt; tags. Framesets can also be nested 
+to allow both rows and columns of frames.
+
+The frameset tag has a couple other attributes, namely, bordercolor, which 
+takes either predefined colors or hexadecimal color definitions and border, 
+which indicates the width, in pixels, of the borders between frames(5 is 
+default, 0 removes borders completely).    
+  
+The frame tag also has other attributes. Each frame has a border of 8 pixels 
+on each side. This default can be changed using the marginwidth and 
+marginheight attributes. Whether a user can scroll on a frame is usually 
+decided by the frame's content compared to the size of the frame. However, 
+this can be altered using the scrolling attribute, which can take a yes or 
+no value.  Finally, adding the attribute "noresize"(with no value) can 
+prevent users from resizing frames, which they could normally do.
+<br /><br />
+<a href="#top">Back to Top</a>
+
+<a name="form"><h3>Forms</h3></a>
+Forms are used to transfer user data. Forms generally have an action attribute
+that indicates a script(such as Perl, PHP, ASP, or JSP) that will process the 
+form.  If you're just starting with forms and don't know any scripting language, 
+you can also use action="mailto:your@email.address" to send the submitted data
+to your email account. Forms are enclosed in corresponding &lt;form&gt; tags 
+and can include the following, in addition to other valid HTML elements: 
+
+<ul>
+  <li>Input elements. These are standalone attributes that require a 
+      parameter called type. The type can be text for standard text; 
+      password, for text that shows up as asterisks on the user's screen;
+      and file, which adds a 'browse' button, which users may click 
+      to find a file, or they may specify the path to a file in the 
+      text box. Either way, the file is uploaded to the server.  Other 
+      attributes include 'name', which specifies the name the value is 
+      associated with, and value, for specifying a default value.
+      for example:<br />
+      <pre>
+      &lt;form action='myscript.cgi'&gt;<br />
+        Name:&lt;input type='text' name='fun' value='wheee!' /&gt;&ltbr /&gt;<br />
+        Password:&lt;input type='password' name='secret' /&gt;&ltbr /&gt;<br />
+        File:&lt;input type='file' name='myfile' /&gt;<br />
+      &lt;/form&gt;
+      </pre>
+      <br />
+      Would produce:
+      <form>
+      Name:<input type='text' /><br />
+      Password:<input type='password' /><br />
+      File:<input type='file' />
+      </form>
+      The text in the Name textbox would be associated with the name fun, 
+      Password with secret, and File with file.
+   </li>
+   <li>Textarea. This element has opening a closing tags, where text 
+       between the tags is the default text in the text area. Attributes 
+       of the textarea tag include name, which serves the same function 
+       as in the input tag and cols and rows, to specify the number of 
+       columns and rows in characters in the textarea, respectively.
+       For example:<br />
+      <pre>
+      &lt;form action='myscript.cgi'&gt;<br />
+        &lt;textarea name='mytext' rows='5' cols='10'&gt;Default text&lt;/textarea&gt;<br/>
+      &lt;/form&gt;<br />
+      Would produce:
+      <form>
+      <textarea rows='5' cols='10'>Default text</textarea>
+      </form>      
+      and send either the default text or anything you appended or replaced it 
+      with associated with the name mytext to the script myscript.cgi.
+    </li>
+   <li>Select. The select element is used to compose dropdown boxes. The select 
+       element contains a name attribute, like the input element. Select has 
+       opening and closing tags in between which are any number of paired 
+       option tags.  Each option tag represents a member of the dropdown 
+       list. The option tags have an attribute value, which specifies the 
+       value that will be sent to the server if this option is selected. 
+       one of the option tags may also include the 'selected' keyword if you 
+       want one value to come up by default.
+       For example:
+      <pre>
+      &lt;form action='myscript.cgi'&gt;<br />
+        &lt;select name='dropdown'&gt;<br />
+          &lt;option value='first'&gt;first&lt;/option&gt;<br />
+          &lt;option value='second'&gt;second&lt;/option&gt;<br />
+         &lt;option value='third' selected&gt;third&lt;/option&gt;<br />
+        &lt;/select&gt;<br />
+      &lt;form&gt;
+      </pre>
+      <br />
+      Would produce:
+      <form>
+      <select>
+      <option>first</option>
+      <option>second</option>
+      <option selected>third</option>
+      </select>
+      </form>
+      Sending the selected option with the name 'dropdown' to myscript.cgi..
+    </li>
+    <li>More input types. 2 other types of input elements are checkbox and radio. 
+        These differ in that you always want to include a value attribute 
+        and the name attribute is used to group elements together. These are 
+        also paired tags. You may also use th selected keyword for one 
+        radio type and any number or checkbox types.<br />
+        <pre>
+        &lt;form action='myscript.cgi&gt;
+          &lt;input type='radio' name='myradio' value=first /&gt;first&lt;br /&gt;
+          &lt;input type='radio' name='myradio' value=second /&gt;second&lt;br /&gt;
+          &lt;input type='radio' name='myradio' value=third /&gt;third&lt;br /&gt;
+          &lt;br /&gt;
+          &lt;input type='checkbox' name='mycheck' value=first /&gt;first&lt;br /&gt;
+          &lt;input type='checkbox' name='mycheck' value=second /&gt;second&lt;br /&gt;
+        &lt;input type='checkbox' name='mycheck' value=third /&gt;third&lt;br /&gt;
+        </pre>
+        would create:
+        <form action='myscript.cgi'>
+        <input type='radio'>first</input>
+        <input type='radio'>second</input>
+        <input type='radio'>third</input><br />
+        <input type='checkbox'>first</input>
+        <input type='checkbox'>second</input>
+        <input type='checkbox'>third</input>
+        </form>
+        and send the selected radio button value as my radio and any selected 
+        checkboxes as mycheck to myscript.cgi.
+    </li>
+    <li>Still more input types. There are 2 more input types: submit and clear.
+        These are also standalone elements, where submit sends the form to the 
+        location specified in the form action attribute and clear clears all 
+        data that is filled in. The value attribute specifies the text 
+        that will appear on the button created.  For example, <br />
+        &lt;form action="../cgi-bin/myscript.cgi" target="newWindow"&gt;<br />
+        &lt;input type='text' name='mytext' /&gt;&lt;br /&gt;<br />
+        &lt;input type='submit' value='Submit' /&gt;&lt;br /&gt;<br />
+        &lt;input type='reset' value='Clear' /&gt;<br />
+        &lt;/form&gt;<br />
+        Would create:
+        <form action="../cgi-bin/myscript.cgi" target="newWindow">
+        <input type='text' name='mytext'><br />
+        <input type='submit' value='Submit'>
+        <input type='reset' value='Clear'>
+        </form>
+ 
+
+       
+</ul>
+        
+
+
+</body>
+</html>
+ 

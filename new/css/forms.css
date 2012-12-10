@@ -1,0 +1,51 @@
+/***************************************** 
+ * Author: IU Office of Creative Services
+ *
+ * Form styles
+ ****************************************/
+
+/* Fieldsets */
+
+fieldset { 
+	border: 1px solid #ccc; 
+	margin: 0 0 1.5em 0; 
+	padding: 1.400em; 
+}
+#content fieldset { 
+	background: #f7f7f7;
+}
+
+/* Text fields */
+
+input.text { 
+	border: 1px solid #bbb;
+	margin: 0.5em 0.5em 0 0;
+	padding: 5px;
+	width: 300px;
+}
+input.text:focus { 
+	border: 1px solid #666; 
+}
+
+/* Textareas */
+
+textarea { 
+	border: 1px solid #bbb; 
+	height: 250px;
+	margin: 0.5em 0.5em 0.5em 0; 
+	padding: 5px; 
+	width: 400px; 
+}
+textarea:focus { 
+	border: 1px solid #666;  
+}
+
+/* Select fields */
+
+select { 
+	border: 1px solid #ccc; 
+	width: 200px; 
+}
+select:focus { 
+	border: 1px solid #666; 
+}

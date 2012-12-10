@@ -1,0 +1,57 @@
+
+#news-nav {
+	list-style-type: none;
+	overflow: auto;
+}
+
+#news-nav li {
+	padding: 5px 10px;
+	color: black;
+	background: tan;
+	cursor: pointer;
+	text-align: center;
+	float: left;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius:  10px 10px 0 0;
+	border-radius:  10px 10px 0 0;
+	margin: 0 1px;
+}
+
+ul#rss-feeds {
+	list-style-type: none;
+	overflow: auto;
+}
+
+#rss-feeds li {
+	float: left;
+	border: solid thick gray;
+	padding: 4px;
+	margin: 5px;
+	width: 375px;
+	vertical-align: top;
+	-moz-border-radius: 20px;
+	-webkit-border-radius:  20px;
+	border-radius:  20px;
+}
+
+.rss-header {
+	font-size: 16pt;
+	color: black;
+}
+
+.rss-action {
+	font-size: 7pt;
+	border: solid thin gray;
+	padding: 2px;
+	vertical-align: center;
+}
+
+.rss-descriptions {
+	display: none;
+}
+
+
+
+.rss-category:hover {
+	color: #900;
+}

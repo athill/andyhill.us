@@ -1,0 +1,27 @@
+<!DOCTYPE webprojectsession>
+<webprojectsession>
+  <session usePreviewPrefix="0" previewPrefix="" >
+    <itemcursorpositions>
+      <item line="350" column="51" url="new/includes/Html.php.inc" />
+      <item line="61" column="0" url="new/css/main.css" />
+      <item line="45" column="0" url="new/includes/path.php" />
+      <item line="31" column="0" url="new/includes/Menu.php.inc" />
+      <item line="0" column="0" url="new/index.php" />
+      <item line="18" column="28" url="new/includes/application.php" />
+      <item line="0" column="0" url="new/home/index.php" />
+      <item line="0" column="1" url="new/pictures/index.php" />
+      <item line="50" column="27" url="new/includes/header.php" />
+      <item line="0" column="0" url="new/pictures/images.xml" />
+    </itemcursorpositions>
+    <treestatus>
+      <openfolder url="new" />
+      <openfolder url="new/css" />
+      <openfolder url="new/home" />
+      <openfolder url="new/includes" />
+      <openfolder url="new/js" />
+      <openfolder url="new/js/lightbox" />
+      <openfolder url="new/pictures" />
+      <openfolder url="uploads" />
+    </treestatus>
+  </session>
+</webprojectsession>

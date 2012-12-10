@@ -1,0 +1,274 @@
+a:link, a:visited {
+	color: #C00;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body{
+	font-size: 1.2em;
+	/* text-align:center; */
+	background-color:#FFF;
+	font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+	color: #000;
+	margin:0px;
+	padding:0px;
+	min-width: 900px;
+}
+
+h1 {
+	font-size: 3em;
+	color: #dd4225;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+img{
+	border:0px;
+}
+/* Header styles */
+#header {
+	clear:both;
+	float:left;
+	width:100%;
+	height: 141px;
+	background: #f9de00;
+	text-align: center;
+}
+
+#contentwrapper{
+	float: left;
+	width: 100%;
+}
+
+#contentcolumn{
+	margin-left: 14em; /*Set left margin to LeftColumnWidth*/
+}
+
+#leftcolumn{
+	float: left;
+	width: 14em; /*Width of left column*/
+	margin-left: -100%;
+}
+
+
+.kingme {
+	padding: 14px;
+}
+/*
+#header-center {
+	background: red;
+	margin: 0px auto;
+}
+*/
+.page-header {
+	position: absolute;
+	font: italic bold 20pt arial; 
+	padding: 5px;
+	top: 0px;
+	left: 0px;
+	color: #700;
+}
+
+div#drop {
+	left: 2px;
+	top: 2px;
+	color: #CCC;
+}
+
+/**************************************
+ * flow layout from http://matthewjamestaylor.com/blog/perfect-2-column-left-menu.htm
+ *************************************/
+/* 'widths' sub menu */
+/*
+#layoutdims {
+	clear:both;
+	background:#eee;
+	border-top:4px solid #000;
+	margin:0;
+	padding:6px 15px !important;
+	text-align:right;
+}
+*/
+/* column container */
+.colmask {
+	position:relative;	/* This fixes the IE7 overflow hidden bug */
+	clear:both;
+	float:left;
+	width:100%;			/* width of whole page */
+	overflow:hidden;		/* This chops off any overhanging divs */
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+	float:left;
+	width:100%;
+	position:relative;
+}
+.col1,
+.col2,
+.col3 {
+	float:left;
+	/* position:relative; */
+	padding:0 0 1em 0;
+	/* overflow:hidden; */
+}
+/* 2 Column (left menu) settings */
+.leftmenu {
+	background:#fff;		/* right column background colour */
+}
+
+
+.colleft {
+/*	right:85%; */			/* right column width */
+	
+}
+.col1 {
+	width:13em;			/* right column content width */
+	/*background: blue;	*/  /* left column background colour */
+	/*left: 15%; */			/* 100% plus left column left padding */
+}
+.col2 {
+	width: 40em;
+	margin-left: 10em; 
+	/* margin auto 50%; */
+	 /* width:85%; */			/* left column content width (column width minus left and right padding) */
+	/* left: 20em;	*/		/* (right column left and right padding) plus (left column left padding) */
+}
+
+
+/* Footer styles */
+#footer {
+	clear:both;
+	float:left;
+	width:100%;
+	border-top:1px solid #000;
+	text-align: center;
+}
+#footer p {
+	padding:10px;
+	margin:0;
+}
+
+.col-2 {
+	width: 50%;
+	float: left;	
+}
+
+.indent {
+	padding-left: 1em;
+}
+
+/****************************
+ *********menu page***********
+ *****************************/
+.menu-section {
+	width: 30em;
+} 
+ 
+.menu-section-title {
+	font-weight: bold;
+	font-size: 1.8em;
+	text-align: center;
+	margin-bottom: 1em; 
+}
+
+.menu-item {
+	padding: 1em;
+}
+
+
+.menu-item-name-price-row {
+	position: clear: both;
+}
+
+.menu-item-name {
+	width: 15em;
+	float: left;
+	font-weight: bold;
+}
+.menu-item-price {
+	float: right;
+	text-align: right;
+}
+
+.menu-item-descr {
+	clear: both;
+}
+
+.menu-table, .menu-table td, .menu-table th {
+	border-right: thin solid black;
+	border-bottom: thin solid black;
+	margin: 0;
+	padding: 0.5em;
+	border-collapse: collapse;
+}
+
+.menu-table th, .menu-table {
+	border-width: medium;
+}
+
+
+#contact-us {
+
+}
+
+
+
+/******************************
+ *********dictionary grid*****
+ *****************************/
+.dictionary-grid {
+	margin-left: auto;
+	margin-right: auto;
+	width: 25em;
+	font-size: 2em;
+}
+
+.dictionary-grid .row {
+	clear: both;
+	padding: 1em;
+}
+.row .row-left {
+	float: left;
+	width: 6em;
+	font-weight: bold;
+}
+
+.row .row-right {
+	float: left;
+}
+
+.center-column {
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 700px;
+}
+
+
+/*******************
+ ******Page specific****
+ ************************/
+#store-hours .dictionary-grid .row .row-left {
+	width: 10em;
+}
+
+#pk-family .dictionary-grid {
+	font-size: 1.4em;
+}
+
+#pk-family .dictionary-grid .row .row-left {
+	width: 8em;
+}
+
+#pk-delivery {
+	float: right;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-left: 505px;
+	padding-left: 505px;
+}

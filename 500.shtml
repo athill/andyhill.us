@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>500 Internal Service Error</title>
+</head>
+
+<body>
+<h1>Internal Server Error</h1>
+<img src="images/screenshot.gif">
+<br />
+Referring url:
+<!--#echo var="HTTP_REFERER" -->
+<p>
+Visitor's IP address:
+<!--#echo var="REMOTE_ADDR" -->
+<p>
+Requested URL:
+
+<!--#echo var="REQUEST_URI" -->
+<p>
+Server name: 
+
+<!--#echo var="HTTP_HOST" -->
+<p>
+User's Browser: 
+
+<!--#echo var="HTTP_USER_AGENT" -->
+<p>
+Status code:
+
+<!--#echo var="REDIRECT_STATUS" -->
+<p>
+</body>
+</html>
+
+<!-- 
+                                                                                                                                                                                              
+--> 

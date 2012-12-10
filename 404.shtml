@@ -1,0 +1,19 @@
+<h1>Not Found</h1>
+<img src="images/screenshot.gif">
+<br />
+
+<!--#echo var="HTTP_REFERER" -->
+<br>
+<!--#echo var="REMOTE_ADDR" -->
+<br>
+<!--#echo var="REQUEST_URI" -->
+was not found. Thanks for trying to visit
+<!--#echo var="HTTP_HOST" -->
+<br>
+<!--#echo var="HTTP_USER_AGENT" -->
+<br>
+<!--#echo var="REDIRECT_STATUS" -->
+
+<!-- 
+                                                                                                                                                                                                                                                                                                                                                   
+--> 

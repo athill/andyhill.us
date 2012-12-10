@@ -1,0 +1,25 @@
+<h1>Page cannot be found</h1>
+<!--#echo var="HTTP_REFERER" -->
+<img src="images/screenshot.gif">
+<br />
+
+
+<br>
+<!--#echo var="REMOTE_ADDR" -->
+
+<br>
+<!--#echo var="REQUEST_URI" -->
+
+Cannot be found. Thanks for visiting
+
+<!--#echo var="HTTP_HOST" -->
+
+<br>
+<!--#echo var="HTTP_USER_AGENT" -->
+<br>
+
+<!--#echo var="REDIRECT_STATUS" -->
+
+<!-- 
+                                                                                                                                                                                                                                                                                                                                                 
+--> 

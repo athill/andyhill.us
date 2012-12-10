@@ -1,0 +1,51 @@
+/* CSS Document */
+/** 
+* Slideshow style rules.
+*/
+.simpleSlideshow {
+	position:relative;
+	line-height: 1.5em;
+	background-color: #383637;
+	margin:0 auto;
+	width:660px;
+	height:500px;
+	padding: 24px 0;
+
+}
+
+.simpleSlideshow .slidesContainer {
+	margin:0 auto;
+	background-color: #fff;
+	width:560px;
+	height:100%; 
+	position:relative;
+}
+
+.simpleSlideshow .slidesContainer .slide {
+	margin:0 auto;
+	height: 100%;
+	float: left;
+	/*overflow:auto;  allow scrollbar */
+}
+
+/** 
+* Slideshow controls style rules.
+*/
+.simpleSlideshow .control {
+	display:block;
+	width:39px;
+	height:263px;
+	text-indent:-10000px; /* hides the alt text */
+	position:absolute;
+	top:0;
+	cursor: pointer;
+	margin-top: 90px;
+}
+.simpleSlideshow .leftControl {
+	left:0;
+	background:transparent url(img/control_left.jpg) no-repeat 0 0;
+}
+.simpleSlideshow .rightControl {
+	right:0;
+	background:transparent url(img/control_right.jpg) no-repeat 0 0;
+}

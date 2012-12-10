@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:itms="http://phobos.apple.com/rss/1.0/modules/itms/">
+
+	<channel>
+		<title>iTunes 10 New Releases</title>
+		<link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewNewReleases?pageType=newReleases&amp;id=1</link>
+		<description>iTunes Store: Today's 10 Newest Releases</description>
+		<language>en</language>
+		<copyright>Copyright 2006 Apple, Inc.
+
+		</copyright>
+		<lastBuildDate>Thu 18 Jan 2007 12:35:58 -800</lastBuildDate>
+		<generator>iTunes Music Store RSS v1.0.0</generator>
+		<webMaster>musicstore@apple.com</webMaster>
+		<ttl>240</ttl>
+
+		<dc:creator>iTunes Music Store</dc:creator>
+		<dc:date>Thu 18 Jan 2007 12:35:58 -800</dc:date>
+
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<sy:updateBase>2003-09-01T12:00+00:00</sy:updateBase>
+		<image>
+			<url>/images/rss/badge.gif</url>
+			<link>http://www.apple.com/itunes/</link>
+			<title>iTunes Music Store</title>
+			<height>31</height>
+			<width>88</width>
+		</image>
+		<item>
+    <title>Live from SoHo (iTunes Exclusive) - EP - The Decemberists</title>
+    <link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=212035395&amp;s=143441</link>
+    <description>Live from SoHo (iTunes Exclusive) - EP by The Decemberists</description>
+    <pubDate>Thu 18 Jan 2007 12:35:58 -800</pubDate>
+    <content:encoded><![CDATA[<TABLE BORDER=0 WIDTH="100%"><TR><TD><table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr valign="top" align="left">
+					<td ALIGN=CENTER WIDTH=166 VALIGN=TOP><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=212035395&s=143441"><img border="0" src="http://a1.phobos.apple.com/r10/Music/4e/4f/76/dj.fypfmxpy.100x100-75.jpg"></a></td>
+					<td width="10"><img alt="" width="10" height="1" src="/images/spacer.gif"></td>
+					<td width="95%"><B><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=212035395&s=143441">Live from SoHo (iTunes Exclusive) - EP</a></B><br>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=3205453">The Decemberists</a><br><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Release Date:</B>
+						January 16, 2007<br>
+						</font><font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Total Songs:</B>
+						6</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Genre:</B>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=20">Alternative</a></font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Price:</B>
+						$5.94</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Copyright</B>
+						2007 Capitol Records, Inc.. All rights reserved.</font></td>
+				</tr>
+			</table></TD></TR>
+			</TABLE>
+]]></content:encoded>
+    <category domain="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=20">Alternative</category>
+    <itms:artist>The Decemberists</itms:artist>
+    <itms:artistLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=3205453</itms:artistLink>
+    <itms:album>Live from SoHo (iTunes Exclusive) - EP</itms:album>
+    <itms:albumLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=212035395&amp;s=143441</itms:albumLink>
+    <itms:albumPrice>$5.94</itms:albumPrice>
+                
+                <itms:coverArt height="53" width="53">http://a1.phobos.apple.com/r10/Music/4e/4f/76/dj.fypfmxpy.53x53-50.jpg</itms:coverArt>
+    <itms:coverArt height="60" width="60">http://a1.phobos.apple.com/r10/Music/4e/4f/76/dj.fypfmxpy.60x60-50.jpg</itms:coverArt>
+    <itms:coverArt height="100" width="100">http://a1.phobos.apple.com/r10/Music/4e/4f/76/dj.fypfmxpy.100x100-75.jpg</itms:coverArt>
+    
+    
+    <itms:rights>2007 Capitol Records, Inc.. All rights reserved.</itms:rights>
+    
+        <itms:releasedate>January 16, 2007</itms:releasedate>
+    
+
+    
+    
+</item>
+<item>
+    <title>Bleeker Street Stories - EP - Matt White</title>
+    <link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211597449&amp;s=143441</link>
+    <description>Bleeker Street Stories - EP by Matt White</description>
+    <pubDate>Thu 18 Jan 2007 12:35:58 -800</pubDate>
+    <content:encoded><![CDATA[<TABLE BORDER=0 WIDTH="100%"><TR><TD><table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr valign="top" align="left">
+					<td ALIGN=CENTER WIDTH=166 VALIGN=TOP><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211597449&s=143441"><img border="0" src="http://a1.phobos.apple.com/r10/Music/e8/7f/1e/mzi.wclvmxrv.100x100-75.jpg"></a></td>
+					<td width="10"><img alt="" width="10" height="1" src="/images/spacer.gif"></td>
+					<td width="95%"><B><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211597449&s=143441">Bleeker Street Stories - EP</a></B><br>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=60588515">Matt White</a><br><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Release Date:</B>
+						January 16, 2007<br>
+						</font><font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Total Songs:</B>
+						5</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Genre:</B>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=21">Rock</a></font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Price:</B>
+						$4.95</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Copyright</B>
+						2006 Geffen Records</font></td>
+				</tr>
+			</table></TD></TR>
+			</TABLE>
+]]></content:encoded>
+    <category domain="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=21">Rock</category>
+    <itms:artist>Matt White</itms:artist>
+    <itms:artistLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=60588515</itms:artistLink>
+    <itms:album>Bleeker Street Stories - EP</itms:album>
+    <itms:albumLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211597449&amp;s=143441</itms:albumLink>
+    <itms:albumPrice>$4.95</itms:albumPrice>
+                
+                <itms:coverArt height="53" width="53">http://a1.phobos.apple.com/r10/Music/e8/7f/1e/mzi.wclvmxrv.53x53-50.jpg</itms:coverArt>
+    <itms:coverArt height="60" width="60">http://a1.phobos.apple.com/r10/Music/e8/7f/1e/mzi.wclvmxrv.60x60-50.jpg</itms:coverArt>
+    <itms:coverArt height="100" width="100">http://a1.phobos.apple.com/r10/Music/e8/7f/1e/mzi.wclvmxrv.100x100-75.jpg</itms:coverArt>
+    
+    
+    <itms:rights>2006 Geffen Records</itms:rights>
+    
+        <itms:releasedate>January 16, 2007</itms:releasedate>
+    
+
+    
+    
+</item>
+<item>
+    <title>Live Session (iTunes Exclusive) - EP - Junior Boys</title>
+    <link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210279310&amp;s=143441</link>
+    <description>Live Session (iTunes Exclusive) - EP by Junior Boys</description>
+    <pubDate>Thu 18 Jan 2007 12:35:58 -800</pubDate>
+    <content:encoded><![CDATA[<TABLE BORDER=0 WIDTH="100%"><TR><TD><table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr valign="top" align="left">
+					<td ALIGN=CENTER WIDTH=166 VALIGN=TOP><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210279310&s=143441"><img border="0" src="http://a1.phobos.apple.com/r10/Music/67/86/8e/dj.czhspmmw.100x100-75.jpg"></a></td>
+					<td width="10"><img alt="" width="10" height="1" src="/images/spacer.gif"></td>
+					<td width="95%"><B><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210279310&s=143441">Live Session (iTunes Exclusive) - EP</a></B><br>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=54068529">Junior Boys</a><br><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Release Date:</B>
+						January 16, 2007<br>
+						</font><font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Total Songs:</B>
+						4</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Genre:</B>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=20">Alternative</a></font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Price:</B>
+						$3.96</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Copyright</B>
+						2007 Domino Recording Co. LTD</font></td>
+				</tr>
+			</table></TD></TR>
+			</TABLE>
+]]></content:encoded>
+    <category domain="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=20">Alternative</category>
+    <itms:artist>Junior Boys</itms:artist>
+    <itms:artistLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=54068529</itms:artistLink>
+    <itms:album>Live Session (iTunes Exclusive) - EP</itms:album>
+    <itms:albumLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210279310&amp;s=143441</itms:albumLink>
+    <itms:albumPrice>$3.96</itms:albumPrice>
+                
+                <itms:coverArt height="53" width="53">http://a1.phobos.apple.com/r10/Music/67/86/8e/dj.czhspmmw.53x53-50.jpg</itms:coverArt>
+    <itms:coverArt height="60" width="60">http://a1.phobos.apple.com/r10/Music/67/86/8e/dj.czhspmmw.60x60-50.jpg</itms:coverArt>
+    <itms:coverArt height="100" width="100">http://a1.phobos.apple.com/r10/Music/67/86/8e/dj.czhspmmw.100x100-75.jpg</itms:coverArt>
+    
+    
+    <itms:rights>2007 Domino Recording Co. LTD</itms:rights>
+    
+        <itms:releasedate>January 16, 2007</itms:releasedate>
+    
+
+    
+    
+</item>
+<item>
+    <title>The Definitive Greatest Hits - The Reverend Al Green</title>
+    <link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210494223&amp;s=143441</link>
+    <description>The Definitive Greatest Hits by The Reverend Al Green</description>
+    <pubDate>Thu 18 Jan 2007 12:35:58 -800</pubDate>
+    <content:encoded><![CDATA[<TABLE BORDER=0 WIDTH="100%"><TR><TD><table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr valign="top" align="left">
+					<td ALIGN=CENTER WIDTH=166 VALIGN=TOP><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210494223&s=143441"><img border="0" src="http://a1.phobos.apple.com/r10/Music/9f/e7/00/mzi.onpsoilq.100x100-75.jpg"></a></td>
+					<td width="10"><img alt="" width="10" height="1" src="/images/spacer.gif"></td>
+					<td width="95%"><B><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210494223&s=143441">The Definitive Greatest Hits</a></B><br>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=99603">The Reverend Al Green</a><br><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Release Date:</B>
+						January 16, 2007<br>
+						</font><font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Total Songs:</B>
+						21</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Genre:</B>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=15">R&amp;B/Soul</a></font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Price:</B>
+						$11.99</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Copyright</B>
+						Compilation (P) 2007 Capitol Records, Inc.. All rights reserved. Unauthorized reproduction is a violation of applicable laws.</font></td>
+				</tr>
+			</table></TD></TR>
+			</TABLE>
+]]></content:encoded>
+    <category domain="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=15">R&amp;B/Soul</category>
+    <itms:artist>The Reverend Al Green</itms:artist>
+    <itms:artistLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=99603</itms:artistLink>
+    <itms:album>The Definitive Greatest Hits</itms:album>
+    <itms:albumLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210494223&amp;s=143441</itms:albumLink>
+    <itms:albumPrice>$11.99</itms:albumPrice>
+                
+                <itms:coverArt height="53" width="53">http://a1.phobos.apple.com/r10/Music/9f/e7/00/mzi.onpsoilq.53x53-50.jpg</itms:coverArt>
+    <itms:coverArt height="60" width="60">http://a1.phobos.apple.com/r10/Music/9f/e7/00/mzi.onpsoilq.60x60-50.jpg</itms:coverArt>
+    <itms:coverArt height="100" width="100">http://a1.phobos.apple.com/r10/Music/9f/e7/00/mzi.onpsoilq.100x100-75.jpg</itms:coverArt>
+    
+    
+    <itms:rights>Compilation (P) 2007 Capitol Records, Inc.. All rights reserved. Unauthorized reproduction is a violation of applicable laws.</itms:rights>
+    
+        <itms:releasedate>January 16, 2007</itms:releasedate>
+    
+
+    
+    
+</item>
+<item>
+    <title>Venus (Music from the Miramax Motion Picture) - EP - Corinne Bailey Rae</title>
+    <link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211292001&amp;s=143441</link>
+    <description>Venus (Music from the Miramax Motion Picture) - EP by Corinne Bailey Rae</description>
+    <pubDate>Thu 18 Jan 2007 12:35:58 -800</pubDate>
+    <content:encoded><![CDATA[<TABLE BORDER=0 WIDTH="100%"><TR><TD><table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr valign="top" align="left">
+					<td ALIGN=CENTER WIDTH=166 VALIGN=TOP><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211292001&s=143441"><img border="0" src="http://a1.phobos.apple.com/r10/Music/19/50/1c/mzi.aqzswtof.100x100-75.jpg"></a></td>
+					<td width="10"><img alt="" width="10" height="1" src="/images/spacer.gif"></td>
+					<td width="95%"><B><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211292001&s=143441">Venus (Music from the Miramax Motion Picture) - EP</a></B><br>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=64996022">Corinne Bailey Rae</a><br><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Release Date:</B>
+						January 16, 2007<br>
+						</font><font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Total Songs:</B>
+						5</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Genre:</B>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=16">Soundtrack</a></font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Price:</B>
+						$3.49</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Copyright</B>
+						2006 The copyright in this sound recording is owned by EMI Records Ltd</font></td>
+				</tr>
+			</table></TD></TR>
+			</TABLE>
+]]></content:encoded>
+    <category domain="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=16">Soundtrack</category>
+    <itms:artist>Corinne Bailey Rae</itms:artist>
+    <itms:artistLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=64996022</itms:artistLink>
+    <itms:album>Venus (Music from the Miramax Motion Picture) - EP</itms:album>
+    <itms:albumLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211292001&amp;s=143441</itms:albumLink>
+    <itms:albumPrice>$3.49</itms:albumPrice>
+                
+                <itms:coverArt height="53" width="53">http://a1.phobos.apple.com/r10/Music/19/50/1c/mzi.aqzswtof.53x53-50.jpg</itms:coverArt>
+    <itms:coverArt height="60" width="60">http://a1.phobos.apple.com/r10/Music/19/50/1c/mzi.aqzswtof.60x60-50.jpg</itms:coverArt>
+    <itms:coverArt height="100" width="100">http://a1.phobos.apple.com/r10/Music/19/50/1c/mzi.aqzswtof.100x100-75.jpg</itms:coverArt>
+    
+    
+    <itms:rights>2006 The copyright in this sound recording is owned by EMI Records Ltd</itms:rights>
+    
+        <itms:releasedate>January 16, 2007</itms:releasedate>
+    
+
+    
+    
+</item>
+<item>
+    <title>The Black Hole (Original Motion Picture Soundtrack) - John Barry</title>
+    <link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211194337&amp;s=143441</link>
+    <description>The Black Hole (Original Motion Picture Soundtrack) by John Barry</description>
+    <pubDate>Thu 18 Jan 2007 12:35:58 -800</pubDate>
+    <content:encoded><![CDATA[<TABLE BORDER=0 WIDTH="100%"><TR><TD><table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr valign="top" align="left">
+					<td ALIGN=CENTER WIDTH=166 VALIGN=TOP><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211194337&s=143441"><img border="0" src="http://a1.phobos.apple.com/r10/Music/df/3f/95/mzi.bxiyiwwu.100x100-75.jpg"></a></td>
+					<td width="10"><img alt="" width="10" height="1" src="/images/spacer.gif"></td>
+					<td width="95%"><B><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211194337&s=143441">The Black Hole (Original Motion Picture Soundtrack)</a></B><br>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=251072">John Barry</a><br><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Release Date:</B>
+						January 16, 2007<br>
+						</font><font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Total Songs:</B>
+						10</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Genre:</B>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=16">Soundtrack</a></font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Price:</B>
+						$9.90</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Copyright</B>
+						1979 Buena Vista Records</font></td>
+				</tr>
+			</table></TD></TR>
+			</TABLE>
+]]></content:encoded>
+    <category domain="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=16">Soundtrack</category>
+    <itms:artist>John Barry</itms:artist>
+    <itms:artistLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=251072</itms:artistLink>
+    <itms:album>The Black Hole (Original Motion Picture Soundtrack)</itms:album>
+    <itms:albumLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211194337&amp;s=143441</itms:albumLink>
+    <itms:albumPrice>$9.90</itms:albumPrice>
+                
+                <itms:coverArt height="53" width="53">http://a1.phobos.apple.com/r10/Music/df/3f/95/mzi.bxiyiwwu.53x53-50.jpg</itms:coverArt>
+    <itms:coverArt height="60" width="60">http://a1.phobos.apple.com/r10/Music/df/3f/95/mzi.bxiyiwwu.60x60-50.jpg</itms:coverArt>
+    <itms:coverArt height="100" width="100">http://a1.phobos.apple.com/r10/Music/df/3f/95/mzi.bxiyiwwu.100x100-75.jpg</itms:coverArt>
+    
+    
+    <itms:rights>1979 Buena Vista Records</itms:rights>
+    
+        <itms:releasedate>January 16, 2007</itms:releasedate>
+    
+
+    
+    
+</item>
+<item>
+    <title>DreamCypher - The Cruxshadows</title>
+    <link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=207529750&amp;s=143441</link>
+    <description>DreamCypher by The Cruxshadows</description>
+    <pubDate>Thu 18 Jan 2007 12:35:58 -800</pubDate>
+    <content:encoded><![CDATA[<TABLE BORDER=0 WIDTH="100%"><TR><TD><table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr valign="top" align="left">
+					<td ALIGN=CENTER WIDTH=166 VALIGN=TOP><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=207529750&s=143441"><img border="0" src="http://a1.phobos.apple.com/r10/Music/3b/dd/a7/mzi.frvijewz.100x100-75.jpg"></a></td>
+					<td width="10"><img alt="" width="10" height="1" src="/images/spacer.gif"></td>
+					<td width="95%"><B><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=207529750&s=143441">DreamCypher</a></B><br>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=15661235">The Cruxshadows</a><br><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Release Date:</B>
+						January 16, 2007<br>
+						</font><font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Total Songs:</B>
+						14</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Genre:</B>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=20">Alternative</a></font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Price:</B>
+						$9.99</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Copyright</B>
+						2007 Dancing Ferret Discs</font></td>
+				</tr>
+			</table></TD></TR>
+			</TABLE>
+]]></content:encoded>
+    <category domain="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=20">Alternative</category>
+    <itms:artist>The Cruxshadows</itms:artist>
+    <itms:artistLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=15661235</itms:artistLink>
+    <itms:album>DreamCypher</itms:album>
+    <itms:albumLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=207529750&amp;s=143441</itms:albumLink>
+    <itms:albumPrice>$9.99</itms:albumPrice>
+                
+                <itms:coverArt height="53" width="53">http://a1.phobos.apple.com/r10/Music/3b/dd/a7/mzi.frvijewz.53x53-50.jpg</itms:coverArt>
+    <itms:coverArt height="60" width="60">http://a1.phobos.apple.com/r10/Music/3b/dd/a7/mzi.frvijewz.60x60-50.jpg</itms:coverArt>
+    <itms:coverArt height="100" width="100">http://a1.phobos.apple.com/r10/Music/3b/dd/a7/mzi.frvijewz.100x100-75.jpg</itms:coverArt>
+    
+    
+    <itms:rights>2007 Dancing Ferret Discs</itms:rights>
+    
+        <itms:releasedate>January 16, 2007</itms:releasedate>
+    
+
+    
+    
+</item>
+<item>
+    <title>G-Unit Radio, Pt. 22: Hip Hop Is Dead - 50 Cent &amp; DJ Whoo Kid</title>
+    <link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211371057&amp;s=143441</link>
+    <description>G-Unit Radio, Pt. 22: Hip Hop Is Dead by 50 Cent &amp; DJ Whoo Kid</description>
+    <pubDate>Thu 18 Jan 2007 12:35:58 -800</pubDate>
+    <content:encoded><![CDATA[<TABLE BORDER=0 WIDTH="100%"><TR><TD><table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr valign="top" align="left">
+					<td ALIGN=CENTER WIDTH=166 VALIGN=TOP><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211371057&s=143441"><img border="0" src="http://a1.phobos.apple.com/r10/Music/59/22/0c/mzi.cqplwinu.100x100-75.jpg"></a></td>
+					<td width="10"><img alt="" width="10" height="1" src="/images/spacer.gif"></td>
+					<td width="95%"><B><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211371057&s=143441">G-Unit Radio, Pt. 22: Hip Hop Is Dead</a></B><br>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=146665473">50 Cent &amp; DJ Whoo Kid</a><br><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Release Date:</B>
+						January 16, 2007<br>
+						</font><font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Total Songs:</B>
+						15</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Genre:</B>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=18">Hip-Hop/Rap</a></font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Price:</B>
+						$9.99</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Copyright</B>
+						2007 BCD Music Group</font></td>
+				</tr>
+			</table></TD></TR>
+			</TABLE>
+]]></content:encoded>
+    <category domain="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=18">Hip-Hop/Rap</category>
+    <itms:artist>50 Cent &amp; DJ Whoo Kid</itms:artist>
+    <itms:artistLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=146665473</itms:artistLink>
+    <itms:album>G-Unit Radio, Pt. 22: Hip Hop Is Dead</itms:album>
+    <itms:albumLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=211371057&amp;s=143441</itms:albumLink>
+    <itms:albumPrice>$9.99</itms:albumPrice>
+                
+                <itms:coverArt height="53" width="53">http://a1.phobos.apple.com/r10/Music/59/22/0c/mzi.cqplwinu.53x53-50.jpg</itms:coverArt>
+    <itms:coverArt height="60" width="60">http://a1.phobos.apple.com/r10/Music/59/22/0c/mzi.cqplwinu.60x60-50.jpg</itms:coverArt>
+    <itms:coverArt height="100" width="100">http://a1.phobos.apple.com/r10/Music/59/22/0c/mzi.cqplwinu.100x100-75.jpg</itms:coverArt>
+    
+    
+    <itms:rights>2007 BCD Music Group</itms:rights>
+    
+        <itms:releasedate>January 16, 2007</itms:releasedate>
+    
+
+    
+    
+</item>
+<item>
+    <title>I Love You - Diana Ross</title>
+    <link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210516914&amp;s=143441</link>
+    <description>I Love You by Diana Ross</description>
+    <pubDate>Thu 18 Jan 2007 12:35:58 -800</pubDate>
+    <content:encoded><![CDATA[<TABLE BORDER=0 WIDTH="100%"><TR><TD><table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr valign="top" align="left">
+					<td ALIGN=CENTER WIDTH=166 VALIGN=TOP><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210516914&s=143441"><img border="0" src="http://a1.phobos.apple.com/r10/Music/96/6f/27/mzi.rllgmdze.100x100-75.jpg"></a></td>
+					<td width="10"><img alt="" width="10" height="1" src="/images/spacer.gif"></td>
+					<td width="95%"><B><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210516914&s=143441">I Love You</a></B><br>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=184344459">Diana Ross</a><br><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Release Date:</B>
+						January 16, 2007<br>
+						</font><font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Total Songs:</B>
+						15</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Genre:</B>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=1136">Contemporary R&amp;B</a></font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Price:</B>
+						$9.99</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Copyright</B>
+						2007 Manhattan Records. All rights reserved. Unauthorized reproduction is a violation of applicable laws.</font></td>
+				</tr>
+			</table></TD></TR>
+			</TABLE>
+]]></content:encoded>
+    <category domain="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=1136">Contemporary R&amp;B</category>
+    <itms:artist>Diana Ross</itms:artist>
+    <itms:artistLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=184344459</itms:artistLink>
+    <itms:album>I Love You</itms:album>
+    <itms:albumLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=210516914&amp;s=143441</itms:albumLink>
+    <itms:albumPrice>$9.99</itms:albumPrice>
+                
+                <itms:coverArt height="53" width="53">http://a1.phobos.apple.com/r10/Music/96/6f/27/mzi.rllgmdze.53x53-50.jpg</itms:coverArt>
+    <itms:coverArt height="60" width="60">http://a1.phobos.apple.com/r10/Music/96/6f/27/mzi.rllgmdze.60x60-50.jpg</itms:coverArt>
+    <itms:coverArt height="100" width="100">http://a1.phobos.apple.com/r10/Music/96/6f/27/mzi.rllgmdze.100x100-75.jpg</itms:coverArt>
+    
+    
+    <itms:rights>2007 Manhattan Records. All rights reserved. Unauthorized reproduction is a violation of applicable laws.</itms:rights>
+    
+        <itms:releasedate>January 16, 2007</itms:releasedate>
+    
+
+    
+    
+</item>
+<item>
+    <title>Brahms: Symphony No. 3, Haydn Variations - London Philharmonic Orchestra &amp; Marin Alsop</title>
+    <link>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=209659858&amp;s=143441</link>
+    <description>Brahms: Symphony No. 3, Haydn Variations by London Philharmonic Orchestra &amp; Marin Alsop</description>
+    <pubDate>Thu 18 Jan 2007 12:35:58 -800</pubDate>
+    <content:encoded><![CDATA[<TABLE BORDER=0 WIDTH="100%"><TR><TD><table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<tr valign="top" align="left">
+					<td ALIGN=CENTER WIDTH=166 VALIGN=TOP><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=209659858&s=143441"><img border="0" src="http://a1.phobos.apple.com/r10/Music/12/96/6a/mzi.jmtnsyqk.100x100-75.jpg"></a></td>
+					<td width="10"><img alt="" width="10" height="1" src="/images/spacer.gif"></td>
+					<td width="95%"><B><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=209659858&s=143441">Brahms: Symphony No. 3, Haydn Variations</a></B><br>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=4207613">London Philharmonic Orchestra &amp; Marin Alsop</a><br><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Release Date:</B>
+						January 16, 2007<br>
+						</font><font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Total Songs:</B>
+						14</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Genre:</B>
+						<a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=5">Classical</a></font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Price:</B>
+						$7.99</font><br>
+						<font size="3" FACE="Helvetica,Arial,Geneva,Swiss,SunSans-Regular"><B>Copyright</B>
+						2007 Naxos</font></td>
+				</tr>
+			</table></TD></TR>
+			</TABLE>
+]]></content:encoded>
+    <category domain="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewGenre?id=5">Classical</category>
+    <itms:artist>London Philharmonic Orchestra &amp; Marin Alsop</itms:artist>
+    <itms:artistLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewArtist?id=4207613</itms:artistLink>
+    <itms:album>Brahms: Symphony No. 3, Haydn Variations</itms:album>
+    <itms:albumLink>http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewAlbum?id=209659858&amp;s=143441</itms:albumLink>
+    <itms:albumPrice>$7.99</itms:albumPrice>
+                
+                <itms:coverArt height="53" width="53">http://a1.phobos.apple.com/r10/Music/12/96/6a/mzi.jmtnsyqk.53x53-50.jpg</itms:coverArt>
+    <itms:coverArt height="60" width="60">http://a1.phobos.apple.com/r10/Music/12/96/6a/mzi.jmtnsyqk.60x60-50.jpg</itms:coverArt>
+    <itms:coverArt height="100" width="100">http://a1.phobos.apple.com/r10/Music/12/96/6a/mzi.jmtnsyqk.100x100-75.jpg</itms:coverArt>
+    
+    
+    <itms:rights>2007 Naxos</itms:rights>
+    
+        <itms:releasedate>January 16, 2007</itms:releasedate>
+    
+
+    
+    
+</item>
+
+	</channel>
+</rss>

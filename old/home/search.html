@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en' xml:lang='en'>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="shortcut icon" href="http://andyhill.us/images/andyicon.ico">
+<title>Andy Hill's Home Page</title>
+
+<link rel="stylesheet" type="text/css" href="home.css" />
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function formcheck() {
+	var engine;
+	var q = document.search_form.q.value;
+	for (var i = 0; i < document.search_form.db.length; i++) {
+		if (document.search_form.db[i].checked) engine = document.search_form.db[i].value;
+	}
+	if (engine == null) return false;	
+	if (engine == "g") location.href = ("http://www.google.com/search?siteid=32959992&bfpage=horizontal&bfmid=27253343&sitesearch=&q="  + escape(q));
+	else if (engine == "a") location.href = ("http://www.google.com/search?siteid=32959992&bfpage=horizontal&bfmid=27253343&sitesearch=andyhill.us&q="  + escape(q));
+	else if (engine == "d") location.href = ("http://dictionary.reference.com/search?q=" + escape(q));
+	else if (engine == "t") location.href = ("http://thesaurus.reference.com/search?q=" + escape(q));
+	else if (engine == "w") location.href = ("http://www.google.com/search?siteid=32959992&bfpage=horizontal&bfmid=27253343&sitesearch=en.wikipedia.org&q="  + escape(q));
+	return false;
+}
+
+//-->
+</script>
+
+
+</head>
+<body>
+
+<form name="search_form" method="get" action="/search" onsubmit="return formcheck();">
+<table>
+<tr>
+	<td align="center">
+	<input type="text" maxlength="255" size="30" name="q" />
+	<input type="submit" value="Search" class="button" />
+	</td>
+</tr>
+<tr>
+	<td>
+	<input type="radio" name="db" value="g" checked="checked" /> Google
+	<input type="radio" name="db" value="a" /> andyhill.us
+	<input type="radio" name="db" value="d" /> Dictionary
+	<input type="radio" name="db" value="t" /> Thesaurus
+	<input type="radio" name="db" value="w" /> Wikipedia
+	</td>
+</tr>
+</table>
+</form>
+
+
+</body>
+
+</html>

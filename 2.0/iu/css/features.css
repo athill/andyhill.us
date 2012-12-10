@@ -1,0 +1,260 @@
+/***************************************** 
+ * Author: IU Office of Creative Services
+ *
+ * Feature styles
+ ****************************************/
+
+/****************************************
+ * Box Wrappers
+ ****************************************/
+  
+#column1 .box_wrap, #column2 .box_wrap, #column3 .box_wrap {
+	margin: 0 0 14px 0;
+	overflow: hidden;
+	padding: 0 0 2px 0;
+}
+#column1 .box_wrap, #column3 .box_wrap {
+	background: url(../img/features/bg_box_sm.gif) no-repeat bottom left;
+	width: 181px;
+}
+#column2 .box_wrap {
+	background: #f1f1f1 url(../img/features/bg_box_lg.gif) no-repeat bottom left;
+	width: 530px;
+}
+
+/****************************************
+ * Generic Box Feature
+ ****************************************/
+
+#column1 .box, #column3 .box {
+	width: 159px;
+}
+#column2 .box {
+	width: 508px;
+}
+
+.box {
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+	float: left;
+	padding: 0 10px;
+}
+.box h3 {
+	background: #a0524e url(../img/features/bg_h3.gif) repeat-x;
+	margin: 0 -11px 10px -11px;
+	min-height: 1.077em; /* 14px */
+	padding: 8px 3px 9px 6px;
+}
+#column2 .box h3 {
+	width: 528px;
+}
+#column1 .box h3, #column3 .box h3 {
+	width: 172px;
+}
+.box h4 {
+	margin: 0 0 1.143em 0;
+}
+.box p, .box dl { 
+	margin: 0 0 1.333em 0;
+}
+.box img {
+	left: -5px;
+	margin: 0 -11px 5px 0;
+	position: relative;
+	top: -4px;
+}
+.box hr {
+	background: #d9d9d9;
+	border: none; 
+	height: 1px;
+	margin: 0 0 1.333em 0;
+}
+.box ul {
+	list-style-type: none;
+	margin: 0 0 1.333em 0;
+}
+.box ul ul {
+	list-style-type: circle;
+	margin: 5px 0 0 14px;
+}
+.box ol {
+	list-style-position: inside;
+	margin: 0 0 1.333em 0;
+}
+.box ol ol {
+	margin: 5px 0 0 0;
+}
+.box ul li {
+	background: url(../img/bullets/arrow_red.gif) no-repeat 0 5px;
+	margin: 0 0 0.667em 0;
+	padding: 0 0 0 12px;
+	width:140px;
+}
+.box ul li ul li {
+	background: none;
+	padding: 0;
+}
+.box ol li {
+	margin: 0 0 0.667em 0;
+}
+.box dt {
+	margin: 0 0 0.417em 0;
+}
+
+#column2 .box h4 {
+	margin: 0.917em 0 0.500em 0;
+}
+
+/****************************************
+ * Headlines Box Feature
+ ****************************************/
+
+.box ul.headlines {
+	margin: 0 0 4px 0;
+}
+.box ul.headlines li {
+	background: none;
+	border-top: 1px solid #d9d9d9;
+	margin: 0;
+	overflow: hidden;
+	padding: 10px 0 0 55px;
+	width: 102px;
+}
+.box ul.headlines li:first-child,
+.box ul.headlines li.first-child {
+	border: none;
+	padding: 0 0 0 55px;
+}
+.box ul.headlines img {
+	float: left;
+	left: -55px;
+	margin: 3px -45px 0 0;
+	position: relative;
+	top: 0;
+}
+.box ul.headlines p {
+	margin: 0 0 10px 0;
+}
+
+/****************************************
+ * Column 2 Large Feature
+ ****************************************/
+
+#column2 #feature {
+	margin: 0 0 14px 0;
+}
+
+/****************************************
+ * Column 2 News Features
+ ****************************************/
+
+#column2 #news {
+	font-size: 0.917em; /* 11px */
+	line-height: 1.455em; /* 16px */
+	margin: 0 0 14px 0;
+	overflow: hidden;
+	width: 532px;
+}
+#column2 #news ul {
+	list-style: none;
+}
+#column2 #news li {
+	float: left;
+	margin: 0 0 0 10.5px;
+	width: 170px;
+}
+#column2 #news li:first-child,
+#column2 #news li.first-child {
+	margin: 0;
+}
+#column2 #news h3 {
+	color: #333;
+	font-size: 1.273em; /* 14px */
+	font-weight: bold;
+	line-height: 1.071em; /* 15px */
+	margin: 0 0 4px 0;
+	padding: 10px 0 0 10px;
+}
+#column2 #news h3 a {
+	background: none;
+	color: #333;
+}
+#column2 #news img {
+	float: right;
+}
+
+/* Text Snippets */
+
+#column2 .snippet {
+	background: url(../img/features/bg_news.gif) repeat-y;
+}
+#wrapper #column2 .snippet li {
+	width: 168px;
+}
+#column2 .snippet img {
+	margin: 5px 3px 0 5px;
+}
+#column2 .snippet p {
+	margin: 0 0 10px 10px;
+}
+
+/****************************************
+ * Mini Index
+ ****************************************/
+
+#mini-index {
+	background: #f7f7f7;
+	border-top: 1px solid #d9d9d9;
+	clear: left;
+	margin: 0 -29px 3px -29px;
+	overflow: hidden;
+	padding: 30px 29px 27px 29px;
+	position: relative;
+	width: 922px;
+}
+#mini-index ul {
+	list-style: none;
+}
+#mini-index li {
+	float: left;
+  	margin: 0 0 0 14px;
+	padding: 0 12px;
+}
+#mini-index li:first-child,
+#mini-index li.first-child {
+	margin: 0;
+}
+#wrapper .three li {
+	width: 274px;
+}
+#wrapper .four li {
+	width: 194px;
+}
+#wrapper .five li {
+	width: 149px;
+}
+#wrapper .six li {
+	width: 118px;
+}
+#mini-index h3 {
+	margin: 0 0 20px 0;
+}
+#mini-index h4 {
+	margin: 0 0 6px 0;
+}
+#mini-index li li, 
+#mini-index li li:first-child,
+#mini-index li li.first-child {
+	margin: 0 0 6px 0;
+	padding: 0;
+}
+#mini-index li li ul.anchor {
+	padding: 0 0 0 0;
+	margin-left: 3px ;
+}
+#mini-index li li ul.anchor li {
+	border-left: 1px solid #d0d0d0;
+	background: url(../img/mini-anchor.gif) 0px 7px no-repeat;
+	padding: 2px 0 0 10px;
+	margin: 0 0 0 0;
+}

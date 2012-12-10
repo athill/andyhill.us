@@ -1,0 +1,172 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: black;
+	font-family: Verdana, Ariel, sans;
+	font-size: 10pt;
+}
+
+a, a:visited, a:active {
+	color: #900;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* HTML5 backward compatibility */
+header, footer, nav, section, article {  
+	display:block;  
+}
+
+
+#page {
+	width: 1000px;
+	margin: 0 auto;
+	background: #555;
+	color: white;
+}
+
+/*******************
+ * Header 
+ *******************/
+header, #header {
+/*	background: blue; */
+	position: relative;
+	overflow: auto;
+}
+/************ Images at top of page */
+#imgContainer {
+	height: 90px;
+	position: relative;
+}
+
+.headerImg {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/************ Page title */
+.page-title-base {
+	font: italic bold 20pt arial; padding: 5px;
+}
+
+#page-title {
+	position: absolute; 
+	left: 0px; 
+	top: 0px; 
+	color: #700;
+}
+
+#page-title-drop {
+	position: absolute; 
+	left: 2px; 
+	top: 2px; 
+	color: #FFF;
+}
+
+#headerTitleDrop {
+	position: absolute; left: 2px; top: 2px; color: #FFF;
+		font: italic bold 20pt arial; padding: 5px;
+}
+
+#headerTitle {
+	position: absolute; left: 0px; top: 0px; color: #700;
+		font: italic bold 20pt arial; padding: 5px;
+}
+
+
+/************ Global Navigation */
+#global-nav {
+	background: #444;
+	padding: 2px;
+}
+
+
+/************ Path, search */
+#top-divider {
+	position: relative;
+	overflow: auto;
+	background: #999;
+	padding: 2px;
+	clear: both;
+}
+
+#path {
+	/*
+	position: absolute;
+	top: 0;
+	left: 0;
+	*/
+	float: left;
+	height: 100%;
+}
+
+#search {
+	/*
+	position: absolute;
+	top: 0;
+	right: 0;
+	*/
+	float: right;
+	height: 100%;
+}
+
+/**********************
+ * Content area layout. Sidebars, etc.
+ ****************************/
+#layout {
+	overflow: auto;
+	clear: both;
+	/* background: yellow; */
+}
+
+#column1, #column2, #column3, .column23, .column12 {
+	float:left;
+}
+#column1 {
+/*	background: red; */
+}
+#column2 {
+/* 	background: orange; */
+	padding: 1em;
+}
+
+.column2, .column12, .column23 {
+
+}
+
+#content {
+	padding: 1em;
+}
+
+#column3 {
+/*	background: purple; */
+}
+#column1, #column3 {
+	width: 175px;
+}
+#column2 {
+	width: 650px; 
+}
+
+.column23, .column12 {
+	width: 825px;	
+}
+
+
+
+.column123 {
+	width: 1000px;	
+}
+
+/***********************
+ * Footer
+ **********************/
+footer {
+/*	background: green; */
+	text-align: center;
+	padding: 0.5em;
+}

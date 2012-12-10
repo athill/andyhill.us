@@ -1,0 +1,141 @@
+/***************************************** 
+ * Author: IU Office of Creative Services
+ *
+ * IE6 styles
+ ****************************************/
+
+/****************************************
+ * Wrappers & Containers
+ ****************************************/
+
+#container {
+	overflow: hidden;
+}
+
+/****************************************
+ * Header
+ ****************************************/
+ 
+#header ul {
+	margin: 0 20px 0 0;
+}
+
+/****************************************
+ * Box Wrappers
+ ****************************************/
+  
+#column1 .box_wrap, #column2 .box_wrap, #column3 .box_wrap {
+	margin: 0 0 14px 0;
+	overflow: hidden;
+	padding: 0 0 2px 0;
+}
+#column3 .box_wrap {
+	background: url(../img/features/bg_box_sm.gif) no-repeat bottom left;
+	border-right: 1px solid #d9d9d9;
+	width: 181px;
+}
+#column1 .box_wrap {
+	background: url(../img/features/bg_box_sm.gif) no-repeat bottom left;
+	width: 181px;
+}
+#column2 .box_wrap {
+	background: #f1f1f1 url(../img/features/bg_box_lg.gif) no-repeat bottom left;
+	border-right: 1px solid #d9d9d9;
+	width: 528px;
+}
+.box {
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+	float: left;
+	padding: 0 10px;
+}
+
+/****************************************
+ * Columns
+ ****************************************/
+
+
+#column1, #column2 {
+  	margin: 0 16px 0 0;
+}
+
+/****************************************
+ * Column 2 News Features
+ ****************************************/
+
+#column2 #news li {
+	float: left;
+	margin: 0 0 0 0px;
+	width: 177px;
+	padding: 0;
+}
+#column2 #news img {
+	float: left;
+}
+
+/****************************************
+ * Vertical Navigation
+ ****************************************/
+
+#nav_vertical {
+/*	background: url(../img/features/bg_box_sm.gif) no-repeat bottom left;*/
+	margin: 0 0 11px 0;
+	padding: 0 0 2px 0;
+	width: 153px;
+}
+#nav_vertical ul {
+	border-top: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+	border-left: 1px solid #d9d9d9;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 140px;
+}
+#nav_vertical li a {
+	background: #ededed;
+	border-bottom: 1px solid #fff;
+	display: block;
+	padding: 10px 13px;
+	width: 153px;
+}
+#nav_vertical li a:hover {
+	background: #fff;
+}
+#nav_vertical li.active a { 
+	background: #ededed; 
+}
+#nav_vertical li.first a { 
+	padding: 13px 13px 10px 13px;
+}
+#nav_vertical li.last a {
+	border-bottom: none;
+}
+
+/****************************************
+ * Mini Index
+ ****************************************/
+
+#mini_index a {
+	color: #900;
+}
+#mini_index h4 {
+	color: #000;
+}
+#mini_index h4 a {
+	color: #7d110c;
+}
+#mini_index h3 {
+	color: #000;
+}
+#mini_index h3 a {
+	color: #7d110c;
+}
+ 
+/****************************************
+ * Footer
+ ****************************************/
+
+#footer {
+	height: 78px;
+}

@@ -1,0 +1,171 @@
+/***************************************** 
+ * Author: IU Office of Creative Services
+ *
+ * Navigation styles
+ ****************************************/
+
+/***************************************
+ * Breadcrumbs
+ **************************************/
+#breadcrumb {
+	padding: 0.5em 0;	
+}
+
+
+/****************************************
+ * Horizontal Navigation
+ ****************************************/
+
+#nav_horizontal {
+	background: #ededed url(../img/nav/bg_horizontal.gif) no-repeat bottom left;
+	margin: 0;
+	padding: 0 0 2px 0;
+	
+}
+
+#nav_horizontal, .submenu {
+	clear: both; /*added by maitrey*/
+	width: 922px;
+	
+}
+#nav_horizontal ul, .submenu ul {
+	border-top: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+	border-left: 1px solid #d9d9d9;
+	list-style: none;
+	overflow: hidden;
+}
+
+#nav_horizontal ul, .submenu ul {
+	width: 920px;
+}
+#nav_horizontal li, .submenu li {
+	float: left;
+}
+#nav_horizontal li a {
+	background: #ededed;
+	border-right: 1px solid #d9d9d9;
+	display: block;
+	padding: 10px 13px 9px 13px;
+}
+/*changed by maitrey*/
+.submenu li a {
+	background: #ededed;
+	border-right: 1px solid #d9d9d9;
+	display: block;
+	padding: 10px 11px 9px 11px;
+}
+/*-------------*/
+#nav_horizontal li a:hover, .submenu li a:hover {
+	color: #700;
+}
+#nav_horizontal li.active a, .submenu li.active a { 
+	background-color: #fff !important;
+}
+
+.submenu {
+	margin: 0 !important;	
+}
+
+#submenu, #submenu li a { 
+	background: #DDD;
+}
+
+#subsubmenu, #subsubmenu li a { 
+	background: #BBB;
+}
+
+.submenu-wrapper {
+	float: left;
+	width:70%;	
+}
+
+/****************************************
+ * Vertical Navigation
+ ****************************************/
+
+#nav_vertical {
+	background: url(../img/features/bg_box_sm.gif) no-repeat bottom left;
+	margin: 0 0 11px 0;
+	padding: 0 0 2px 0;
+	width: 181px;
+}
+#nav_vertical ul {
+	border-top: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+	border-left: 1px solid #d9d9d9;
+	list-style: none;
+	width: 179px;
+}
+#nav_vertical li a {
+	background: #ededed;
+	border-bottom: 1px solid #fff;
+	display: block;
+	padding: 10px 13px;
+	/* width: 153px; */
+}
+#nav_vertical li a:hover {
+	background: #fff;
+}
+#nav_vertical li.active a { 
+	background: #fff; 
+}
+#nav_vertical li.first a { 
+	padding: 13px 13px 10px 13px;
+}
+#nav_vertical li.last a {
+	border-bottom: none;
+}
+
+/* Level 1 Subnavigation */
+
+#wrapper .subnav li a {
+	background: #f1f1f1;
+	border-bottom: 1px solid #d9d9d9;
+}
+#wrapper .subnav li a:hover {
+	background-color: #fff;
+}
+#wrapper .subnav li.active a {
+	background-color: #ededed;
+}
+#wrapper .subnav li.last a {
+	border-bottom: none;
+}
+
+/* Level 2 Subnavigation */
+
+
+#wrapper #nav_vertical li ul {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid #d9d9d9;
+	border-left: none;
+	padding: 12px 12px 10px 0;
+	width: 167px;
+}
+#wrapper #nav_vertical li li a {
+	background: url(../img/bullets/square_red.gif) no-repeat 13px 6px;
+	border-bottom: none;
+	padding: 4px 0 4px 29px;
+	width: 150px;
+}
+#wrapper #nav_vertical li li a:hover {
+	background: url(../img/bullets/square_red.gif) no-repeat 13px 6px;
+	text-decoration: underline;
+}
+
+/* Level 3 Subnavigation */
+
+#wrapper #nav_vertical li li ul {
+	border-bottom: none;
+	padding: 0;
+}
+#wrapper #nav_vertical li li li a {
+	background: url(../img/bullets/arrow_red.gif) no-repeat 30px 8px;
+	padding: 4px 0 4px 40px;
+	width: 139px;
+}
+#wrapper #nav_vertical li li li a:hover {
+	background: url(../img/bullets/arrow_red.gif) no-repeat 30px 8px;
+}

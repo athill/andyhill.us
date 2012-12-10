@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+   <channel>
+      <title>The Earth Times Online Newspaper - Environment News</title>
+      <link>http://www.earthtimes.org</link>
+      <description>The Earth Times online newspaper, serving the planet with environmental news that matters. Cover ecology, climate change and news affecting the world's environment</description>
+      <language>en-us</language>
+      <generator>PHP/4.3.10</generator>
+      <item>
+         <title>Analysis: Gulf vs. East Coast offshore</title>
+         <link>http://www.earthtimes.org/articles/show/39835.html</link>
+         <description>Either Texas or Massachusetts will be home to the new advanced wind turbine blade test facility, the U.S. Department of Energy and National Renewable Energy Laboratory recently announced.</description>
+		 <category>Energy,Environment</category>
+         <pubDate>Tue, 13 Mar 2007 20:44:01 GMT</pubDate>
+         <guid isPermaLink="true">http://www.earthtimes.org/articles/show/39835.html</guid>
+      </item>
+      <item>
+         <title>Texas approves NOx reducing additive</title>
+         <link>http://www.earthtimes.org/articles/show/39816.html</link>
+         <description>The Texas Commission on Environmental Quality approved a biodiesel fuel additive Tuesday that is expected to reduce nitrogen oxide emissions.</description>
+		 <category>Energy,Environment</category>
+         <pubDate>Tue, 13 Mar 2007 19:52:01 GMT</pubDate>
+         <guid isPermaLink="true">http://www.earthtimes.org/articles/show/39816.html</guid>
+      </item>
+      <item>
+         <title>Russia delays nuclear fuel to Iran</title>
+         <link>http://www.earthtimes.org/articles/show/39815.html</link>
+         <description>Russia will not supply fuel as scheduled to the Iranian nuclear plant it is building, and has delayed its opening.</description>
+		 <category>Energy,Environment</category>
+         <pubDate>Tue, 13 Mar 2007 19:47:01 GMT</pubDate>
+         <guid isPermaLink="true">http://www.earthtimes.org/articles/show/39815.html</guid>
+      </item>
+      <item>
+         <title>Russia pipeline halves oil through Belarus</title>
+         <link>http://www.earthtimes.org/articles/show/39814.html</link>
+         <description>At least half of Russian oil heading through Belarus to Europe will be diverted with a new pipeline to bypass the former Soviet state.</description>
+		 <category>Energy,Environment</category>
+         <pubDate>Tue, 13 Mar 2007 19:42:01 GMT</pubDate>
+         <guid isPermaLink="true">http://www.earthtimes.org/articles/show/39814.html</guid>
+      </item>
+      <item>
+         <title>Two key Iraq parties oppose oil law</title>
+         <link>http://www.earthtimes.org/articles/show/39812.html</link>
+         <description>Two Iraqi political parties, including one of the former prime minister, said the draft hydrocarbons law should be tabled until the security situation improves.</description>
+		 <category>Energy,Environment</category>
+         <pubDate>Tue, 13 Mar 2007 19:42:01 GMT</pubDate>
+         <guid isPermaLink="true">http://www.earthtimes.org/articles/show/39812.html</guid>
+      </item>
+      <item>
+         <title>Canada invests in carbon capture</title>
+         <link>http://www.earthtimes.org/articles/show/39810.html</link>
+         <description>The I-CAN Center for the Conversion of Carbon Dioxide received funding Monday from the Canadian government and Natural Resources Canada.</description>
+		 <category>Energy,Environment</category>
+         <pubDate>Tue, 13 Mar 2007 19:36:02 GMT</pubDate>
+         <guid isPermaLink="true">http://www.earthtimes.org/articles/show/39810.html</guid>
+      </item>
+      <item>
+         <title>Big U.K. coal burner cuts carbon emissions</title>
+         <link>http://www.earthtimes.org/articles/show/39803.html</link>
+         <description>Drax Group Plc, which generates about 8 percent of U.K. electricity, announced it will burn crops to produce 10 percent of its output by 2009.</description>
+		 <category>Energy,Environment</category>
+         <pubDate>Tue, 13 Mar 2007 19:26:00 GMT</pubDate>
+         <guid isPermaLink="true">http://www.earthtimes.org/articles/show/39803.html</guid>
+      </item>
+      <item>
+         <title>Britain sets 60 percent carbon emissions reduction target</title>
+         <link>http://www.earthtimes.org/articles/show/39720.html</link>
+         <description>LONDON - Britain became the first country on Tuesday to propose legally binding limits on carbon dioxide emissions. In the draft guidelines for the Climate Change Bill, British government said that it aimed to cut emissions by 60 percent till 2050.</description>
+		 <category>Environment</category>
+         <pubDate>Tue, 13 Mar 2007 16:22:01 GMT</pubDate>
+         <guid isPermaLink="true">http://www.earthtimes.org/articles/show/39720.html</guid>
+      </item>
+      <item>
+         <title>ROUNDUP: Britain sets ambitious national carbon emission targets </title>
+         <link>http://www.earthtimes.org/articles/show/39697.html</link>
+         <description>London- Britain said Tuesday it hoped to become the  first low carbon economy  in the world by setting ambitious national targets for a 60-per cent cut in carbon emissions by 2050. A draft bill presented Tuesday was hailed as  revolutionary  by Prime...</description>
+		 <category>Environment</category>
+         <pubDate>Tue, 13 Mar 2007 15:21:00 GMT</pubDate>
+         <guid isPermaLink="true">http://www.earthtimes.org/articles/show/39697.html</guid>
+      </item>
+      <item>
+         <title>Economic aid agencies promote clean energy</title>
+         <link>http://www.earthtimes.org/articles/show/39693.html</link>
+         <description>International financial institutions said Tuesday they will work with private companies to help meet the world's future energy needs.</description>
+		 <category>Energy,Environment</category>
+         <pubDate>Tue, 13 Mar 2007 14:45:59 GMT</pubDate>
+         <guid isPermaLink="true">http://www.earthtimes.org/articles/show/39693.html</guid>
+      </item>
+   </channel>
+</rss>
