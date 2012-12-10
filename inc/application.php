@@ -3,15 +3,24 @@ date_default_timezone_set('America/New_York');
 ////useless here if any vars are set. first thing on each page (for sessions)
 //session_start();
 $webroot = "";
+$basefileroot = "/home/andyhil/public_html";
+////dev environments
 if (stripos($_SERVER['SCRIPT_NAME'], "/new/") === 0) {
 	$webroot .= "/new";
 } else if (stripos($_SERVER['SCRIPT_NAME'], "/dev/") === 0) {
 	$webroot .= "/dev";
 }
 
+////Local
+if ($_SERVER['HTTP_HOST'] == 'localhost') {
+	$webroot = '/andyhill';
+	$basefileroot = '/var/www/html';
+}
+
+
 $settings = array(
 	"webroot" => $webroot,
-	"fileroot" => "/home/andyhil/public_html".$webroot,
+	"fileroot" => $basefileroot.$webroot,
 	"isTST" => $webroot != "",
 
 	"view" => $_SERVER['PHP_SELF'],
@@ -59,6 +68,7 @@ $GLOBALS['menuStyle'] = "popup";
 ////Global objects
 include_once($settings['incroot'] . "/html.class.php");
 $settings['h'] = html::singleton();
+
 include_once($settings['incroot'] . "/Logger.class.php");
 $settings['logger'] = new Logger();
 //include_once($settings['incroot'] . "/ADS.class.php");
