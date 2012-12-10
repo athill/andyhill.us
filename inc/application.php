@@ -99,52 +99,47 @@ $settings['jsModules']['popup'] = true;
 
 
 ////Globalize/localize vars
+
+/*
 foreach ($settings as $key => $value) {
 	$GLOBALS[$key] = $value;
 	$$key = $value;
 }
+*/
+
+$GLOBALS['site'] = $settings;
+
+
 
 ////Directory Settings -- override global settings for directory
-$dirSettings = $GLOBALS['dir'].'/directorySettings.php';
+$dirSettings = $GLOBALS['site']['dir'].'/directorySettings.php';
 //print_r($GLOBALS);
 if (file_exists($dirSettings)) {
 	require_once($dirSettings);
 }
+if (isset($directory['jsModules'])) $directory['jsModules'] = array_merge($GLOBALS['site']['jsModules'], $directory['jsModules']) or die("???");
+if (isset($directory)) $GLOBALS['site'] = array_merge($GLOBALS['site'], $directory) or die("???");
 
 
-
-//print_r($directory);
-if (isset($directory)) $GLOBALS = array_merge($GLOBALS, $directory) or die("???");
-////Local Settings override global and directory
-if (isset($local))$GLOBALS = array_merge($GLOBALS, $local) or die("^^^");
-
-if (isset($directory['jsModules'])) $GLOBALS['jsModules'] = array_merge($settings['jsModules'], $directory['jsModules']) or die("???");
 ////Local Settings override global and directory
 if (isset($local['jsModules'])) {
-
-	$GLOBALS['jsModules'] = array_merge($settings['jsModules'], $local['jsModules']) or die("^^^");
+	$local['jsModules'] = array_merge($GLOBALS['site']['jsModules'], $local['jsModules']) or die("^^^!!");
 }
+if (isset($local))$GLOBALS['site'] = array_merge($GLOBALS['site'], $local) or die("^^^");
 
-//echo '<pre>';
-//print_r($GLOBALS['jsModules']);
-//echo '</pre>';
 
-//print_r($GLOBALS['stylesheets']);
-
-//echo 'TEMPLATE: '.$GLOBALS["template"];
 
 ////Error handler
 ////TODO: Move up to global objects?
-include_once($incroot."/Error.class.php");
+include_once($GLOBALS['site']['incroot']."/Error.class.php");
 $error = new Error();
+
 
 ////Template
 ////TODO: Move instantiation up to global objects? um, no -- needs Menu and Template
-include_once($incroot."/site/Template.class.php");
-
-$template = new Template($menu, $GLOBALS["template"]);
+include_once($GLOBALS['site']['incroot']."/site/Template.class.php");
+$template = new Template($menu, $GLOBALS['site']["template"]);
 ////TODO: Move head() and heading() to template.start() ?
 $template->head();
 $template->heading();
-
 ?>

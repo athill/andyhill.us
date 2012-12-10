@@ -160,7 +160,7 @@ class html {
 	public function scriptfile($files) {
 		$files = explode(",", $files);
 		foreach($files as $file) {
-			if (substr($file, 0, 1) === "/") $file = $GLOBALS['webroot'] . $file;
+			if (substr($file, 0, 1) === "/") $file = $GLOBALS['site']['webroot'] . $file;
 			$this->tag("script", 'type="text/javascript" src="'. $file .'"', '', true);	
 		}
 	}
@@ -176,7 +176,7 @@ class html {
 	public function stylesheet($files) {
 		$files = explode(",", $files);
 		foreach($files as $file) {
-			if (substr($file, 0, 1) === "/") $file = $GLOBALS['webroot'] . $file;
+			if (substr($file, 0, 1) === "/") $file = $GLOBALS['site']['webroot'] . $file;
 			$this->tag("link", 'rel="stylesheet" href="'.$file.'" type="text/css"');
 		}
 	}
@@ -239,8 +239,7 @@ class html {
 
 	////a href
 	public function a($href, $display="", $atts="") {
-		global $webroot;
-		if (substr($href, 0, 1) == "/") $href= $webroot.$href;
+		if (substr($href, 0, 1) == "/") $href= $GLOBALS['site']['webroot'].$href;
 		if ($display === "") $display = $href;
 		$atts = 'href="' . $href . '"'.$this->fixAtts($atts);
 		$this->tag("a", $atts, $display, true);
@@ -254,8 +253,7 @@ class html {
 	
 	////img
 	public function img($src, $alt, $atts='') {
-		global $webroot;
-		if (substr($src, 0, 1) == "/") $src= $webroot.$src;
+		if (substr($src, 0, 1) == "/") $src= $GLOBALS['site']['webroot'].$src;
 		$atts = 'src="'.$src.'" alt="'.$alt.'"'.$this->fixAtts($atts); 
 		$this->tag("img", $atts);		
 	}

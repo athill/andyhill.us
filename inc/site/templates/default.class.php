@@ -16,11 +16,9 @@ class TemplateInstance {
 	}
 	
 	public function heading() {
-	  global $h, $pageTitle;
-		
+	  global $h;
 		////Main container
 		$h->odiv('id="page"');
-		
 		$this->displayHeader();
 		////Site structure
 		$this->base->openLayout();
