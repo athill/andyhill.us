@@ -1,4 +1,4 @@
-d3.csv("./data/us-income-inequality.csv", function(data1) { 
+d3.csv("./data/line.csv", function(data1) { 
 
     /* Read CSV file: first row =>  year,top1,top5  */
     var maxval = 0,
@@ -9,10 +9,18 @@ d3.csv("./data/us-income-inequality.csv", function(data1) {
     sampsize = data1.length;
 
     for (var i=0; i < sampsize; i++) {
-       label_array[i] = parseInt(data1[i].year);
-       val_array1[i] = { x: label_array[i], y: parseFloat(data1[i].p99), z: parseFloat(data1[i].p95) };
-       maxval = Math.max(maxval, parseFloat(data1[i].p99), parseFloat(data1[i].p95) );
+       label_array[i] = parseInt(data1[i].Year);
+       val_array1[i] = { x: label_array[i], y: parseFloat(removeCommas(data1[i].TotalReceipts)), 
+          z: parseFloat(removeCommas(data1[i].TotalOutlays)) };
+       maxval = Math.max(maxval, parseFloat(removeCommas(data1[i].TotalReceipts)), 
+          parseFloat(removeCommas(data1[i].TotalOutlays)) );
      }
+
+     function removeCommas(val) {
+       return val.replace(/,/g, '');
+     }
+
+     console.log(val_array1);
 
      maxval = (1 + Math.floor(maxval / 10)) * 10;   
 
@@ -64,10 +72,10 @@ d3.csv("./data/us-income-inequality.csv", function(data1) {
    rules.append("svg:text")
     .data(y.ticks(12))
     .attr("y", y)
-    .attr("x", -10)
+    .attr("x", 40)
     .attr("dy", ".35em")
     .attr("text-anchor", "end")
-    .text(y.tickFormat(5));
+    .text(y.tickFormat(8));
 
 
    // Series I
@@ -114,7 +122,7 @@ d3.csv("./data/us-income-inequality.csv", function(data1) {
    vis.append("svg:text")
        .attr("x", w/4)
        .attr("y", 20)
-       .text("% share of income (excluding capital gains): U.S. 1920-2008");
+       .text("Total Federal Receipts and Outlays in Millions: 1901–2011");
 
    vis.append("svg:rect")
        .attr("x", w/2 - 20)
@@ -126,7 +134,7 @@ d3.csv("./data/us-income-inequality.csv", function(data1) {
    vis.append("svg:text")
        .attr("x", 30 + w/2)
        .attr("y", 55)
-       .text("Top 5% households");
+       .text("Total Outlays");
 
    vis.append("svg:rect")
        .attr("x", w/2 - 20)
@@ -138,7 +146,7 @@ d3.csv("./data/us-income-inequality.csv", function(data1) {
    vis.append("svg:text")
        .attr("x", 30 + w/2)
        .attr("y", 85)
-       .text("Top 1% households");
+       .text("Total Receipts");
 
 
 }); 
