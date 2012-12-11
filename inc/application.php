@@ -90,7 +90,7 @@ $settings['pageTitle'] = $retval['pagetitle'];
 //// js/css packages
 $settings['jsModules'] = array();
 $modules = array(
-	"tooltip", "treeTable", "highcharts", "popup", "galleria", "treemenu"
+	"tooltip", "treeTable", "highcharts", "popup", "galleria", "treemenu", "d3"
 );
 foreach ($modules as $module) {
 	if (!array_key_exists($module, $settings['jsModules'])) $settings['jsModules'][$module] = false;

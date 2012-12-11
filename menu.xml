@@ -31,9 +31,11 @@
 			<link href="shepherdspsalm" display="The Shepherd's Psalm"/>
 			<link href="desiderata" display="Desiderata"/>
 			<link href="serenityprayer" display="The Serenity Prayer"/>
-		</links>	
-
+		</links>
 	</links>
+	<links href="/d3/" display="D3.js">
+		<link href="barchart.php" display="Bar Chart"/>
+	</links>		
 	<!--
 	<links href="/admin/" display="Administration">
 		<links href="login.php" display="Login">
