@@ -35,6 +35,7 @@
 	</links>
 	<links href="/d3/" display="D3.js">
 		<link href="barchart.php" display="Bar Chart"/>
+		<link href="line.php" display="Line Chart" />
 	</links>		
 	<!--
 	<links href="/admin/" display="Administration">
