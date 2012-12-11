@@ -181,6 +181,12 @@ class html {
 		}
 	}
 	
+	public function style($css) {
+		$this->otag('style', 'type="text/css"');
+		$this->tnl($css);
+		$this->ctag('style');	
+	}
+
 	public function br($count = 1) {
 		if ($count > 0) {
 			$this->tnl(str_repeat('<br />', $count));	
