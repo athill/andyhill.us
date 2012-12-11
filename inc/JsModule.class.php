@@ -40,7 +40,11 @@ class JsModule {
 				),
 				"styles" => array("/js/jquery.treeview/jquery.treeview.css")
 			),
-
+			////D3.js
+			"d3" => array(
+				"scripts" => array("http://d3js.org/d3.v2.js"),
+				"styles" => array("")
+			),
 		);
 	}
 	
