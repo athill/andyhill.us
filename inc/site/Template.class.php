@@ -48,7 +48,7 @@ class Template {
 	  }
 	  $h->ohtml($title, $this->includes);
 	  if (array_key_exists('headerExtra', $GLOBALS['site'])) {
-		$h->tnl($GLOBALS['headerExtra']['site']);  
+		$h->tnl($GLOBALS['site']['headerExtra']);  
 	  }
 	  $h->body($this->template->bodyAtts);
 	  if ($this->hasSkipNav) $this->skipNav();		
