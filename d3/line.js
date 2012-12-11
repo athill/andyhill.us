@@ -1,3 +1,19 @@
+function millionFormat(integer) {
+  return '$' + addCommas(integer) + 'M';
+}
+
+function addCommas(nStr) {
+  nStr += '';
+  x = nStr.split('.');
+  x1 = x[0];
+  x2 = x.length > 1 ? '.' + x[1] : '';
+  var rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+  }
+  return x1 + x2;
+}
+
 d3.csv("./data/line.csv", function(data1) { 
 
     /* Read CSV file: first row =>  year,top1,top5  */
@@ -20,7 +36,7 @@ d3.csv("./data/line.csv", function(data1) {
        return val.replace(/,/g, '');
      }
 
-     console.log(val_array1);
+    // console.log(val_array1);
 
      maxval = (1 + Math.floor(maxval / 10)) * 10;   
 
@@ -88,14 +104,20 @@ d3.csv("./data/line.csv", function(data1) {
          .x(function(d) { return x(d.x); })
          .y(function(d) { return y(d.y); }));
 
-   vis.selectAll("circle.line")
-       .data(val_array1)
+  var circles = vis.selectAll("circle.line");
+
+   circles.data(val_array1)
      .enter().append("svg:circle")
        .attr("class", "line")
        .attr("fill", "maroon" )
        .attr("cx", function(d) { return x(d.x); })
        .attr("cy", function(d) { return y(d.y); })
-       .attr("r", 1);
+       .attr("r", 3)
+        // .on("mouseover", function(){d3.select(this).style("fill", "green");})
+        // .on("mouseout", function(){d3.select(this).style("fill", "maroon");}); 
+      .append("svg:title")
+      .text(function(d) { return d.x + ' - ' + millionFormat(d.y) ; });
+
 
    // Series II
    vis.append("svg:path")
@@ -107,14 +129,16 @@ d3.csv("./data/line.csv", function(data1) {
          .x(function(d) { return x(d.x); })
          .y(function(d) { return y(d.z); }));
 
-   vis.select("circle.line")
-       .data(val_array1)
+   circles.data(val_array1)
      .enter().append("svg:circle")
        .attr("class", "line")
        .attr("fill", "darkblue" )
-       .attr("cx", function(d) { return x(d.x); })
+       .attr("cx", function(d) { console.log('setting z.x to ' + x(d.x) + 'setting z.y to ' + y(d.z) + 
+          ' setting x.y to ' + y(d.y)); return x(d.x); })
        .attr("cy", function(d) { return y(d.z); })
-       .attr("r", 1);
+       .attr("r", 3)
+       .append("svg:title")
+       .text(function(d) { return d.x + ' - ' + millionFormat(d.z) ; });
 
    // -----------------------------
    // Add Title then Legend

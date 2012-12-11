@@ -25,7 +25,7 @@ $(function() {
             };
 
     ////Slide
-    /*var w = 960,
+    var w = 960,
         h = 500,
         y = d3.scale.ordinal().domain(d3.range(50)).rangePoints([20, h - 20]),
         t = Date.now();
@@ -50,7 +50,7 @@ $(function() {
             .attr("cx", x1)
             .each("end", slide(x1, x0));
       };
-    }*/
+    }
 
     d3.text("hist01z1.csv", function(datasetText) {
 
