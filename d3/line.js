@@ -22,12 +22,15 @@ d3.csv("./data/line.csv", function(data1) {
     var label_array = new Array(),
         val_array1 = new Array();
 
+    var projected = 2012;
+
     sampsize = data1.length;
 
     for (var i=0; i < sampsize; i++) {
        label_array[i] = parseInt(data1[i].Year);
        val_array1[i] = { x: label_array[i], y: parseFloat(removeCommas(data1[i].TotalReceipts)), 
-          z: parseFloat(removeCommas(data1[i].TotalOutlays)) };
+          z: parseFloat(removeCommas(data1[i].TotalOutlays)), 
+          balance: data1[i].TotalSurplusOrDeficit };
        maxval = Math.max(maxval, parseFloat(removeCommas(data1[i].TotalReceipts)), 
           parseFloat(removeCommas(data1[i].TotalOutlays)) );
      }
@@ -98,7 +101,7 @@ d3.csv("./data/line.csv", function(data1) {
    vis.append("svg:path")
        .attr("class", "line")
        .attr("fill", "none")
-       .attr("stroke", "maroon")
+       .attr("stroke", function(d) { return (d.x >= projected) ? 'red' : "maroon";  })
        .attr("stroke-width", 2)
        .attr("d", d3.svg.line()
          .x(function(d) { return x(d.x); })
@@ -109,21 +112,21 @@ d3.csv("./data/line.csv", function(data1) {
    circles.data(val_array1)
      .enter().append("svg:circle")
        .attr("class", "line")
-       .attr("fill", "maroon" )
+       .attr("fill", function(d) { return (d.x >= projected) ? 'red' : "maroon";  })
        .attr("cx", function(d) { return x(d.x); })
        .attr("cy", function(d) { return y(d.y); })
        .attr("r", 3)
         // .on("mouseover", function(){d3.select(this).style("fill", "green");})
         // .on("mouseout", function(){d3.select(this).style("fill", "maroon");}); 
       .append("svg:title")
-      .text(function(d) { return d.x + ' - ' + millionFormat(d.y) ; });
+      .text(function(d) { return d.x + ' - ' + millionFormat(d.y)  + ' in receipts.\nBalance: ' + d.balance + 'M'; });
 
 
    // Series II
    vis.append("svg:path")
        .attr("class", "line")
        .attr("fill", "none")
-       .attr("stroke", "darkblue")
+       .attr("stroke", function(d) { return (d.x >= projected) ? 'blue' : "darkblue";  })
        .attr("stroke-width", 2)
        .attr("d", d3.svg.line()
          .x(function(d) { return x(d.x); })
@@ -132,13 +135,12 @@ d3.csv("./data/line.csv", function(data1) {
    circles.data(val_array1)
      .enter().append("svg:circle")
        .attr("class", "line")
-       .attr("fill", "darkblue" )
-       .attr("cx", function(d) { console.log('setting z.x to ' + x(d.x) + 'setting z.y to ' + y(d.z) + 
-          ' setting x.y to ' + y(d.y)); return x(d.x); })
+       .attr("fill", function(d) { return (d.x >= projected) ? 'blue' : "darkblue";  } )
+       .attr("cx", function(d) { return x(d.x); })
        .attr("cy", function(d) { return y(d.z); })
        .attr("r", 3)
        .append("svg:title")
-       .text(function(d) { return d.x + ' - ' + millionFormat(d.z) ; });
+       .text(function(d) { return d.x + ' - ' + millionFormat(d.z) + ' in outlays.\nBalance: ' + d.balance + 'M'; });
 
    // -----------------------------
    // Add Title then Legend
@@ -146,7 +148,7 @@ d3.csv("./data/line.csv", function(data1) {
    vis.append("svg:text")
        .attr("x", w/4)
        .attr("y", 20)
-       .text("Total Federal Receipts and Outlays in Millions: 1901–2011");
+       .text("Total Federal Receipts and Outlays in Millions: 1901–2011 (2012-2017 projected)");
 
    vis.append("svg:rect")
        .attr("x", w/2 - 20)
