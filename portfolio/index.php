@@ -19,7 +19,7 @@ EOT;
 
 $h->p($text);
 
-class site {
+class site2 {
 		var $title;
 		var $url;
 		var $img;
@@ -51,13 +51,13 @@ $sites = array(
 	new site("Market Square Communications", "http://marketsquarecommunications.com", "img/marksquarecommscreencap.png", 
 		"Quick project from '09. Hope they're doing well."),
 */
-	new site("Pizza King of Carmel", "http://pizzakingofcarmel.com", "img/pizzakingscreencap.png", 
+	new site2("Pizza King of Carmel", "http://pizzakingofcarmel.com", "img/pizzakingscreencap.png", 
 		"Coming soon!"),
 
 );
 
-foreach ($sites as $site) {
-		$site->render();
+foreach ($sites as $site2) {
+		$site2->render();
 }
 
 $template->footer();

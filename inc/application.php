@@ -12,7 +12,7 @@ if (stripos($_SERVER['SCRIPT_NAME'], "/new/") === 0) {
 }
 
 ////Local
-if ($_SERVER['HTTP_HOST'] == 'localhost') {
+if ($_SERVER['HTTP_HOST'] == 'localhost' || !array_key_exists($_SERVER, 'HTTP_HOST')) {
 	$webroot = '/andyhill';
 	$basefileroot = '/var/www/html';
 }
@@ -66,7 +66,7 @@ $settings['view'] = $_SERVER['SCRIPT_NAME'];
 $GLOBALS['menuStyle'] = "popup";
 
 ////Global objects
-include_once($settings['incroot'] . "/html.class.php");
+include_once($settings['incroot'] . "/Html.class.php");
 $settings['h'] = html::singleton();
 
 include_once($settings['incroot'] . "/Logger.class.php");
@@ -131,8 +131,10 @@ if (isset($local))$GLOBALS['site'] = array_merge($GLOBALS['site'], $local) or di
 
 ////Error handler
 ////TODO: Move up to global objects?
-include_once($GLOBALS['site']['incroot']."/Error.class.php");
-$error = new Error();
+/*include_once($GLOBALS['site']['incroot']."/Error.class.php");
+$error = new Error();*/
+$current_error_reporting = error_reporting();
+$old_error_reporting = error_reporting(E_ALL ^ E_NOTICE);
 
 
 ////Template

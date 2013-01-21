@@ -43,7 +43,7 @@ $(document).ready(function() {
  });
 
 function setCategory($element) {
-	var category = $element.html(); 
+	var category = $element.html().replace(/\s/g, ''); 
 	window.location.hash = category;
 	$element.data('category', category);
 	$.get("feed.php", { category: category }, 
