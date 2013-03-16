@@ -1,6 +1,6 @@
 <?php
 $local['jsModules']['d3'] = true;
-$local['scripts'] = array('index.js');
+$local['scripts'] = array('indexjs.js');
 include('../inc/application.php');
 $h->startBuffer();
 $g3=<<<EOT

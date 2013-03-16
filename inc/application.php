@@ -12,7 +12,7 @@ if (stripos($_SERVER['SCRIPT_NAME'], "/new/") === 0) {
 }
 
 ////Local
-if ($_SERVER['HTTP_HOST'] == 'localhost' || !array_key_exists($_SERVER, 'HTTP_HOST')) {
+if ($_SERVER['HTTP_HOST'] == 'localhost' || !array_key_exists('HTTP_HOST', $_SERVER)) {
 	$webroot = '/andyhill';
 	$basefileroot = '/var/www/html';
 }
