@@ -9,7 +9,7 @@
 	<link href="/news/" display="News"/>
 
 	<links href="/pictures/" display="Pictures">
-		<link href="family.php" display="Friends and Family"/>
+		<!-- <link href="family.php" display="Friends and Family"/> -->
 		<link href="nationalmall.php" display="National Mall"/>
 	</links>
 	<link href="/recipes/" display="Recipes"/>	
