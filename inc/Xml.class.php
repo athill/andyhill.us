@@ -87,30 +87,6 @@ class Xml {
 	}
 
 
-/*
-public string function rtn(required string methodName, required any args) {
-	 var temp = "";
-//	 Request.utils.dump(Variables);
-	 if (methodName == "rtn") throw "Recursion fail in get() in xml";
-	 else if (!StructKeyExists(Variables, methodName) || !IsCustomFunction(Variables[methodName])) {
-		 startBuffer();
-		 OnMissingMethod(methodName, args);
-		 return Trim(endBuffer());
-		// throw "Bad methodName, '#methodName#', in html.rtn()";
-	 }
-	 ////also guard against startBuffer(), endBuffer(), others?
-	 try {
-		 startBuffer();
-		 temp = Variables[methodName];
-		 temp(argumentCollection = args);
-		 return Trim(endBuffer());
-	 } catch (any e) {
-		////handle error
-		Request.utils.throw(e.message);
-	 }
-}
-*/
-
 	/*
 	 * Add space befoer attributes and/or convert attribute struct to string
 	 */

@@ -18,9 +18,8 @@ Copyright 2012 andy hill
 /**
  * HTML generating interface
  *
- * @package includes
- * @author andy hill 1 2009-2012
- * @version 3.0
+ * @author andy hill 1 2009-2013
+ * @version 3.1
  *
  */
 
@@ -64,26 +63,28 @@ class Html extends Xml {
 		$indentTags = explode(',', "datalist,div,dl,fieldset,footer,header,nav,ol,section,select,tr,ul");
 		$command = substr($name, 0, 1);
 		$tag = substr($name, 1);
+	
 		//echo 'command: '. $command . ' tag: ' . $tag . ' in array?'. in_array($tag, $nonemptyTags);
 		////empty tag
 		if (in_array($name, $emptyTags) && $name != 'col') {
 			$atts = count($args) > 0 ? $args[0] : '';
 			$this->tag($name, $atts);
 		////input tag
-		} else if (in_array($name, explode(',', "radio,checkbox,hidden,submit,button,intext,date,color,datetime,"&
+		} else if (in_array($name, explode(',', "radio,checkbox,hidden,submit,button,reset,number,month,intext,date,color,datetime,".
 				"inemail,range,search,tel,time,url,week"))) {
 			$fieldname = $args[0];
 			$value = count($args) >= 2 ? $args[1] : '';
 			$atts = count($args) >= 3 ? $args[2] : '';
 			if ($name == 'date') {
 				$atts = $this->addClass($this->fixAtts($atts), "datepicker");
-				if (strpos("size=", atts) === false) $atts .= ' size="15"';
+				if (strpos("size=", $atts) === false) $atts .= ' size="15"';
 			}
-			$pos = strpos('in', name);
+			$pos = strpos('in', $name);
 			if ($pos == 0) $name = str_replace('in', '', $name);
 			$this->input($name, $fieldname, $value, $atts);
 		////open/close tag
 		} else if (in_array($name, $nonemptyTags)) {
+			// $this->tbr('nonempty');
 			$content = $args[0];
 			$atts = count($args) >= 2 ? $args[1] : '';
 			$inline = !preg_match('/\n/', $content);
@@ -114,6 +115,13 @@ class Html extends Xml {
 	private function fixLink($link) {
 		// print_r($GLOBALS['site']);
 		return (substr($link, 0, 1) == "/") ? $GLOBALS['site']['webroot'] . $link : $link;
+	}
+
+	// print array
+	function pa($array) {
+		$this->opre();
+		print_r($array);
+		$this->cpre();
 	}
 
 	/*****
@@ -360,8 +368,8 @@ class Html extends Xml {
   	public function liArray($listType, $listItemArray, $atts='', $liAtts='') {
 		if (!in_array($listType, array("ul","ol"))) $listType = "ul";
 		 $this->otag($listType, $atts, true);
-         foreach ($listItemArray as $i => $item) {
-             $this->tag("li", $liAtts[$i], $item);
+         foreach ($listItemArray as $item) {
+             $this->tag("li", $liAtts, $item);
          }
          $this->ctag($listType, true);
      }
@@ -611,7 +619,7 @@ class Html extends Xml {
 	 */
 	public function label($id, $content, $atts='') {
 		$atts = 'for="'.$id.'"' . $this->fixAtts($atts);
-		$this->tag('label', $atts, $content, true);
+		$this->tag('label', $atts, $content, true, false);
 	}
 
 
@@ -632,9 +640,10 @@ class Html extends Xml {
 	 * Creates a text area 	 
 	 */
 	public function textarea($name, $value='', $atts='', $rows=5, $cols=60) {
+
 		$atts = ' name="'.$name.'" rows="'.$rows.'" cols="'.$cols.'"' . $this->fixAtts($atts); 
 		$atts = $this->checkId($name, $atts);
-		tag('textarea', $atts, $value, true, false);
+		$this->tag('textarea', $atts, $value, true, false);
 	}	
 
 
@@ -911,6 +920,18 @@ class Html extends Xml {
 		return $atts;
 	}				
 
-
+	public function dictionaryGrid($defns, $atts="") {
+		$this->odiv('class="dictionary-grid"'.$atts);
+		for ($i = 0; $i < count($defns); $i++) {
+			$defn = $defns[$i]; 
+			$this->odiv('class="row"');
+			$this->div($defn['left'].":", 'class="row-left"');
+			$this->div($defn['right'], 'class="row-right"');
+			$this->cdiv();	////close row
+		}
+		$this->cdiv();
+	}
 }
+
+
 ?>	
