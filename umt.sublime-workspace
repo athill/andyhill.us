@@ -1,0 +1,1184 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ke",
+				"keys"
+			],
+			[
+				"cont",
+				"content"
+			],
+			[
+				"debug",
+				"debugInfo"
+			],
+			[
+				"RE",
+				"REDIRECT_STATUS"
+			],
+			[
+				"H",
+				"HTTP_USER_AGENT"
+			],
+			[
+				"HT",
+				"HTTP_HOST"
+			],
+			[
+				"is_",
+				"is_array"
+			],
+			[
+				"date",
+				"datestring"
+			],
+			[
+				"da",
+				"datestring"
+			],
+			[
+				"tw",
+				"twitter_id"
+			],
+			[
+				"str",
+				"strlen"
+			],
+			[
+				"fa",
+				"facebook_id"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"fiel",
+				"fields"
+			],
+			[
+				"add",
+				"added"
+			],
+			[
+				"array_s",
+				"array_slice"
+			],
+			[
+				"leg",
+				"legislator"
+			],
+			[
+				"tmp",
+				"tmp2"
+			],
+			[
+				"dis",
+				"district"
+			],
+			[
+				"sta",
+				"state"
+			],
+			[
+				"par",
+				"party"
+			],
+			[
+				"dat",
+				"data"
+			],
+			[
+				"arra",
+				"array_keys"
+			],
+			[
+				"pro",
+				"protected"
+			],
+			[
+				"met",
+				"method"
+			],
+			[
+				"ur",
+				"urlencode"
+			],
+			[
+				"base",
+				"baseurl"
+			],
+			[
+				"incl",
+				"includes"
+			],
+			[
+				"bas",
+				"basefileroot"
+			],
+			[
+				"state",
+				"state_id"
+			],
+			[
+				"file",
+				"files"
+			],
+			[
+				"resource",
+				"resources"
+			],
+			[
+				"ha",
+				"have_content"
+			],
+			[
+				"pr",
+				"project_id"
+			],
+			[
+				"co",
+				"col	collect { |e| .. }"
+			],
+			[
+				"tr",
+				"try"
+			],
+			[
+				"ca",
+				"call"
+			],
+			[
+				"contr",
+				"controllers"
+			],
+			[
+				"P",
+				"Project"
+			],
+			[
+				"proje",
+				"projects_path"
+			],
+			[
+				"b",
+				"before_filter"
+			],
+			[
+				"dele",
+				"delete"
+			],
+			[
+				"ad",
+				"admin_users_path"
+			],
+			[
+				"del",
+				"delete"
+			],
+			[
+				"no",
+				"notice"
+			],
+			[
+				"find",
+				"find_user"
+			],
+			[
+				"check",
+				"checkbox"
+			],
+			[
+				"au",
+				"authenticate_user"
+			],
+			[
+				"mo",
+				"mock_with"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"un",
+				"unconfirmed"
+			],
+			[
+				"us",
+				"users"
+			],
+			[
+				"email",
+				"email_spec"
+			],
+			[
+				"ac",
+				"action_mailer"
+			],
+			[
+				"p",
+				"presence"
+			],
+			[
+				"fin",
+				"find"
+			],
+			[
+				"ti",
+				"tickets"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
+				"re",
+				"redirect_to"
+			],
+			[
+				"fla",
+				"flash"
+			],
+			[
+				"and",
+				"andyhill"
+			],
+			[
+				"req",
+				"reqArgs"
+			],
+			[
+				"na",
+				"name"
+			],
+			[
+				"def",
+				"defaults"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"select",
+				"selectIt"
+			],
+			[
+				"option",
+				"optionClassList"
+			],
+			[
+				"list",
+				"listType"
+			],
+			[
+				"sc",
+				"scriptname"
+			],
+			[
+				"con",
+				"config"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"G",
+				"GLOBALS"
+			],
+			[
+				"emp",
+				"emptyTags"
+			],
+			[
+				"comm",
+				"comment"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"bu",
+				"bufferIndex"
+			],
+			[
+				"strt",
+				"strtolower"
+			],
+			[
+				"att",
+				"atts"
+			],
+			[
+				"sub",
+				"substr"
+			],
+			[
+				"buff",
+				"bufferIndex"
+			],
+			[
+				"ci",
+				"citizen"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/athill/github/unified-migration-theory/bin/migrate.py",
+			"settings":
+			{
+				"buffer_size": 5255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/athill/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 13149,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/athill/Documents/code/sitemap.txt",
+			"settings":
+			{
+				"buffer_size": 171,
+				"line_ending": "Unix",
+				"name": "wget --spider --recursive --no-verbose --output-fi"
+			}
+		},
+		{
+			"file": "/home/athill/sites/test/properties.json",
+			"settings":
+			{
+				"buffer_size": 144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/athill/sites/test/migrations/basic/def.txt",
+			"settings":
+			{
+				"buffer_size": 51,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "unified-migration-theory\n========================\n\nDependencies\n------------\n[Python](http://www.python.org/)\n[Paramiko](http://www.lag.net/paramiko/)\n\n\nSummary\n-------\nGoal: To create a system to easily define a migration from one instance of a project to another. For example, moving from a test environment to a production environment. Additionally, to allow easy recovery from a given migration, to support various methods of migration (local, sftp, ftp, etc.), and to allow output from versioning system reports (currently, git), but extend it to allow shortcuts for hand-written files or additional directives to those generated.\n\nBackground\n----------\nThis started with a script I wrote in [Apach Ant](http://ant.apache.org/). \n\nThe script has a \"migration\" parameter that indicates the name of a directory (folder) in a pre-defined \"migrations\" directory.\n\nThe appropriately named folder in the migrations directory contains four files:\n- includes.txt - These are ant-based patterns to include \n- excludes.txt - ibid, but exclude\n- properties  - where you're copying from, where you're copying to, etc.\n- README.txt  - Purpose of migration and anything not covered by the script (e.g. database updates)\n\nSo you set up your properties and your includes, run the ant script and boom: requested files are backed up from 'production', files from 'test' replace or are added to 'production', and then the backups and definition are archived for future reference.\n\nI use this ant script all the time. And it's awesome, but only works on local or network migrations. \n\nSo here's the deal:\n\n<pre>\n- bin\n	- migrate.py: does the work\n- sites\n	- [site-id]: associates a local site with a remote site\n		- properties.json: configuration file\n		- migrations\n			[migration-id]\n				def.txt: Defines a migration. It's based on the output of \n					<code>git diff --name-status [commit]</code>, I'll get into that.\n				backup/: will be generated based on the files and directoies you want to delete or modify\n			...\n	...\n</pre>\n\nA lot of error checking needs to be added, but you basically call\n\n<code>\npython bin/migrate.py [site-id] [migration-id]\n</code>\n\nand assuming \n\n* ~/sites/[site-id]/migrations/[migration-id] exists\n* as does ~/sites/[site-id]/properties.json\n* as does ~/sites/[site-id]/migrations/[migration-id]/def.txt\n\n\n### ~/sites/[site-id]/properties.json:\n\n\n\n<pre>\n{\n        \"host\": \"example.com\",\n        \"port\": (optional, default: 22),\n        \"password\": \"password, if ommitted, you will be prompted (once I implement it). Looking into key-based auth\",\n        \"username\": \"username, may integrate into host. e.g., username@example.com\",\n        \"remoteroot\": \"/full/path/to/remote/webroot\",\n        \"localroot\":  \"/full/path/to/local/webroot\"\n}\n</pre>\n\n\n### ~/sites/[site-id]/migrations/[migration-id]/def.txt\n\n<pre>\nA  file/to/add.ext\nD  file/to/delete.ext\nM  file/to/modify.ext\n</pre>\n",
+			"file": "/home/athill/github/unified-migration-theory/README.md",
+			"file_size": 3084,
+			"file_write_time": 1365981682000000,
+			"settings":
+			{
+				"buffer_size": 2899,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 332.0,
+		"selected_items":
+		[
+			[
+				"mar",
+				"Markdown Preview: preview in Browser"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/athill/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/athill/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/var/www/html/andyhill/400.shtml",
+		"/var/www/html/andyhill/404.shtml",
+		"/var/www/html/andyhill/admin/genErrorPages.php",
+		"/var/www/html/andyhill/d3/directorySettings.php",
+		"/home/athill/diff.txt",
+		"/var/www/html/andyhill/portfolio/index.php",
+		"/var/www/html/andyhill/inc/JsModule.class.php",
+		"/var/www/html/andyhill/inc/html.class.php",
+		"/var/www/html/andyhill/resume/index.php",
+		"/var/www/html/andyhill/inspire/.htaccess",
+		"/var/www/html/andyhill/menu.xml",
+		"/var/www/html/andyhill/inc/application.php",
+		"/var/www/html/andyhill/d3/index.php",
+		"/var/www/html/andyhill/d3/index.js",
+		"/var/www/html/andyhill/d3/barchart.php",
+		"/var/www/html/andyhill/d3/barchart.js",
+		"/var/www/html/andyhill/d3/line.php",
+		"/var/www/html/andyhill/d3/line.js",
+		"/var/www/html/andyhill/d3/sunlight/index.php",
+		"/var/www/html/andyhill/d3/sunlight/stuff.php",
+		"/var/www/html/andyhill/d3/sunlight/reps.php",
+		"/var/www/html/andyhill/inc/api/Api.class.php",
+		"/var/www/html/andyhill/inc/api/Sunlight.class.php",
+		"/var/www/html/andyhill/includes/application.php",
+		"/var/www/html/andyhill/inc/Error.class.php",
+		"/var/www/html/andyhill/inc/.application.php.swp",
+		"/home/athill/midphase.txt",
+		"/var/www/html/andyhill/d3/data/line.csv",
+		"/var/www/html/andyhill/inc/api/ApiBase.php",
+		"/var/www/html/andyhill/d3/data/us-income-inequality.csv",
+		"/var/www/html/andyhill/inc/site/Template.class.php",
+		"/var/www/html/andyhill/d3/hist01z1.csv",
+		"/var/www/html/andyhill/index.php",
+		"/var/www/html/andyhill/inc/site/templates/default.class.php",
+		"/var/www/html/andyhill/home/index.php",
+		"/var/www/html/settings.txt",
+		"/var/www/html/ticketee/features/creating_comments.feature",
+		"/var/www/html/ticketee/app/controllers/tags_controller.rb",
+		"/var/www/html/ticketee/config/routes.rb",
+		"/var/www/html/ticketee/features/step_definitions/ticket_steps.rb",
+		"/var/www/html/ticketee/features/deleting_tags.feature",
+		"/var/www/html/ticketee/app/views/tags/_form.html.erb",
+		"/var/www/html/ticketee/app/controllers/comments_controller.rb",
+		"/var/www/html/ticketee/app/controllers/tickets_controller.rb",
+		"/var/www/html/ticketee/app/models/ticket.rb",
+		"/var/www/html/ticketee/app/views/tags/remove.js.erb",
+		"/var/www/html/ticketee/app/views/tickets/show.html.erb",
+		"/var/www/html/ticketee/app/views/tickets/_form.html.erb",
+		"/var/www/html/ticketee/app/views/tags/_tag.html.erb",
+		"/var/www/html/ticketee/spec/controllers/comments_controller_spec.rb",
+		"/var/www/html/ticketee/features/creating_tickets.feature",
+		"/var/www/html/ticketee/app/views/comments/_form.html.erb",
+		"/var/www/html/ticketee/db/migrate/20121209202000_create_tags.rb",
+		"/var/www/html/ticketee/app/views/projects/show.html.erb",
+		"/var/www/html/ticketee/features/managing_states.feature",
+		"/var/www/html/ticketee/app/views/admin/states/new.html.erb",
+		"/var/www/html/ticketee/features/step_definitions/application_steps.rb",
+		"/var/www/html/ticketee/spec/controllers/tickets_controller_spec.rb",
+		"/var/www/html/ticketee/features/assigning_permissions.feature",
+		"/var/www/html/ticketee/app/views/admin/states/_form.html.erb",
+		"/var/www/html/ticketee/spec/controllers/assets_controller_spec.rb",
+		"/var/www/html/ticketee/app/helpers/admin/permissions_helper.rb",
+		"/var/www/html/ticketee/features/creating_projects.feature",
+		"/var/www/html/ticketee/features/step_definitions/state_steps.rb",
+		"/var/www/html/ticketee/features/creating_states.feature",
+		"/var/www/html/ticketee/app/controllers/admin/states_controller.rb",
+		"/var/www/html/ticketee/app/models/state.rb",
+		"/var/www/html/ticketee/db/migrate/20121209191527_add_default_to_states.rb",
+		"/var/www/html/ticketee/db/seeds.rb",
+		"/var/www/html/ticketee/app/views/admin/states/index.html.erb",
+		"/var/www/html/ticketee/app/views/admin/base/index.html.erb",
+		"/var/www/html/ticketee/app/models/comment.rb",
+		"/var/www/html/ticketee/app/views/comments/_comment.html.erb",
+		"/var/www/html/ticketee/app/helpers/tickets_helper.rb",
+		"/var/www/html/ticketee/app/views/layouts/application.html.erb",
+		"/var/www/html/ticketee/app/controllers/application_controller.rb",
+		"/var/www/html/ticketee/db/migrate/20121208211351_add_previous_state_id_to_comments.rb",
+		"/var/www/html/ticketee/features/seed.feature",
+		"/var/www/html/ticketee/app/views/states/_state.html.erb",
+		"/var/www/html/ticketee/db/migrate/20121202213516_create_states.rb",
+		"/var/www/html/ticketee/features/step_definitions/viewing_projects.rb",
+		"/var/www/html/ticketee/db/schema.rb",
+		"/var/www/html/ticketee/app/views/projects/index.html.erb",
+		"/var/www/html/ticketee/Gemfile",
+		"/var/www/html/ticketee/app/assets/javascripts/tickets.js.coffee",
+		"/var/www/html/ticketee/app/controllers/files_controller.rb",
+		"/var/www/html/ticketee/app/views/files/_form.html.erb",
+		"/var/www/html/ticketee/.gitignore",
+		"/var/www/html/ticketee/app/models/asset.rb",
+		"/var/www/html/ticketee/spec/controllers/files_controller_spec.rb",
+		"/var/www/html/ticketee/db/migrate/20121201213305_create_assets.rb",
+		"/var/www/html/ticketee/spec/fixtures/gradient.txt",
+		"/var/www/html/ticketee/spec/fixtures/spin.txt",
+		"/var/www/html/ticketee/db/migrate/20121201203539_add_attachment_asset_to_tickets.rb",
+		"/var/www/html/ticketee/spec/fixtures/speed.txt",
+		"/home/athill/PRETRIAL_CONFERENCE.txt",
+		"/var/www/html/ticketee/app/assets/stylesheets/application.css",
+		"/var/www/html/ticketee/app/assets/stylesheets/projects.css.scss",
+		"/var/www/html/ticketee/app/assets/stylesheets/tickets.css.scss",
+		"/var/www/html/ticketee/app/assets/stylesheets/users.css.scss",
+		"/var/www/html/ticketee/app/views/admin/users/show.html.erb",
+		"/var/www/html/ticketee/app/controllers/admin/permissions_controller.rb",
+		"/var/www/html/ticketee/app/views/admin/permissions/index.html.erb",
+		"/var/www/html/ticketee/features/step_definitions/permission_steps.rb",
+		"/var/www/html/ticketee/features/step_definitions/user_steps.rb",
+		"/home/athill/quick_switch.txt",
+		"/var/www/html/ticketee/features/deleting_tickets.feature",
+		"/var/www/html/ticketee/features/hidden_links.feature",
+		"/var/www/html/ticketee/app/helpers/application_helper.rb",
+		"/var/www/html/ticketee/app/views/devise/mailer/confirmation_instructions.html.erb",
+		"/var/www/html/ticketee/features/step_definitions/creating_projects.rb",
+		"/var/www/html/ticketee/bin/test.txt",
+		"/var/www/html/ticketee/factories/project_factory.rb",
+		"/var/www/html/ticketee/app/models/user.rb",
+		"/var/www/html/ticketee/features/editing_tickets.feature",
+		"/var/www/html/ticketee/app/models/project.rb",
+		"/var/www/html/ticketee/features/viewing_projects.feature",
+		"/var/www/html/ticketee/app/controllers/registrations_controller.rb",
+		"/var/www/html/ticketee/app/controllers/projects_controller.rb",
+		"/var/www/html/ticketee/app/models/ability.rb",
+		"/var/www/html/ticketee/features/signing_up.feature",
+		"/var/www/html/ticketee/app/views/users/confirmation.html.erb",
+		"/var/www/html/ticketee/features/viewing_tickets.feature",
+		"/var/www/html/ticketee/app/controllers/admin/base_controller.rb",
+		"/var/www/html/ticketee/app/controllers/admin/users_controller.rb",
+		"/var/www/html/ticketee/features/deleting_users.feature"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"print",
+			"\\t",
+			"delete",
+			"Delete",
+			"delete",
+			"modify",
+			"Modify",
+			"modify",
+			"Add",
+			"add",
+			"Add",
+			"add",
+			"import ",
+			" estimate",
+			"..........",
+			"webroot",
+			":",
+			"Edit",
+			"New",
+			"can i put here?",
+			"user@ticketee.com",
+			"Project",
+			"@project = Project.find(params[:id])",
+			"	private\n		def find_project\n			@project = Project.find(params[:id])\n			rescue ActiveRecord::RecordNotFound\n			flash[:alert] = \"The project you were looking for could not be found\"\n			redirect_to\n		end",
+			"my",
+			"explode",
+			"options[i]",
+			"otag",
+			" atts",
+			"fixAtts",
+			"atts",
+			"required string ",
+			"void ",
+			"StructKeyExists",
+			"void ",
+			"required ",
+			" string",
+			"	tag",
+			"tag",
+			"ctag",
+			"options.",
+			"otag",
+			"ctag",
+			"otag",
+			"any ",
+			" void",
+			"void",
+			"scriptname",
+			"void "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"    "
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/athill/github/unified-migration-theory/bin/migrate.py",
+					"settings":
+					{
+						"buffer_size": 5255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								936,
+								936
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 210.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/athill/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 13149,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1046,
+								1046
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 798.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/athill/Documents/code/sitemap.txt",
+					"settings":
+					{
+						"buffer_size": 171,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								171,
+								171
+							]
+						],
+						"settings":
+						{
+							"auto_name": "wget --spider --recursive --no-verbose --output-fi",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/athill/sites/test/properties.json",
+					"settings":
+					{
+						"buffer_size": 144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/athill/sites/test/migrations/basic/def.txt",
+					"settings":
+					{
+						"buffer_size": 51,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								50,
+								50
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/athill/github/unified-migration-theory/README.md",
+					"settings":
+					{
+						"buffer_size": 2899,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1568,
+								1568
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 63.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"lin",
+				"d3/line.js"
+			],
+			[
+				"line",
+				"d3/line.php"
+			],
+			[
+				"d3",
+				"d3/index.js"
+			],
+			[
+				"d3in",
+				"d3/index.php"
+			],
+			[
+				"men",
+				"menu.xml"
+			],
+			[
+				"commcon",
+				"app/controllers/comments_controller.rb"
+			],
+			[
+				"commco",
+				"spec/controllers/comments_controller_spec.rb"
+			],
+			[
+				"cre",
+				"features/creating_comments.feature"
+			],
+			[
+				"tag",
+				"app/controllers/tags_controller.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"cretick",
+				"features/creating_tickets.feature"
+			],
+			[
+				"crea",
+				"features/creating_comments.feature"
+			],
+			[
+				"speccomm",
+				"spec/controllers/comments_controller_spec.rb"
+			],
+			[
+				"commcont",
+				"spec/controllers/comments_controller_spec.rb"
+			],
+			[
+				"contcomm",
+				"app/controllers/comments_controller.rb"
+			],
+			[
+				"comm_for",
+				"app/views/comments/_form.html.erb"
+			],
+			[
+				"creati",
+				"features/creating_comments.feature"
+			],
+			[
+				"modelti",
+				"app/models/ticket.rb"
+			],
+			[
+				"tickcon",
+				"app/controllers/tickets_controller.rb"
+			],
+			[
+				"viewticksh",
+				"app/views/tickets/show.html.erb"
+			],
+			[
+				"apviewtic",
+				"app/views/tickets/_form.html.erb"
+			],
+			[
+				"cretickf",
+				"features/creating_tickets.feature"
+			],
+			[
+				"helpperm",
+				"app/helpers/admin/permissions_helper.rb"
+			],
+			[
+				"assi",
+				"features/assigning_permissions.feature"
+			],
+			[
+				"comm_f",
+				"app/views/comments/_form.html.erb"
+			],
+			[
+				"applicast",
+				"features/step_definitions/application_steps.rb"
+			],
+			[
+				"creat",
+				"features/creating_comments.feature"
+			],
+			[
+				"creatin",
+				"features/creating_projects.feature"
+			],
+			[
+				"see",
+				"db/seeds.rb"
+			],
+			[
+				"modelsta",
+				"app/models/state.rb"
+			],
+			[
+				"admist",
+				"app/controllers/admin/states_controller.rb"
+			],
+			[
+				"admbas",
+				"app/views/admin/base/index.html.erb"
+			],
+			[
+				"viewtish",
+				"app/views/tickets/show.html.erb"
+			],
+			[
+				"vitish",
+				"app/views/tickets/show.html.erb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"modcomm",
+				"app/models/comment.rb"
+			],
+			[
+				"modti",
+				"app/models/ticket.rb"
+			],
+			[
+				"contrti",
+				"app/controllers/tickets_controller.rb"
+			],
+			[
+				"viewproin",
+				"app/views/projects/index.html.erb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"file",
+				"app/controllers/files_controller.rb"
+			],
+			[
+				"tickfor",
+				"app/views/tickets/_form.html.erb"
+			],
+			[
+				"contrtic",
+				"app/controllers/tickets_controller.rb"
+			],
+			[
+				"modelt",
+				"app/models/ticket.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"_form",
+				"app/views/tickets/_form.html.erb"
+			],
+			[
+				"hel",
+				"app/helpers/admin/permissions_helper.rb"
+			],
+			[
+				"viewperin",
+				"app/views/admin/permissions/index.html.erb"
+			],
+			[
+				"contrperm",
+				"app/controllers/admin/permissions_controller.rb"
+			],
+			[
+				"viewadmuser",
+				"app/views/admin/users/show.html.erb"
+			],
+			[
+				"fea",
+				"features/creating_projects.feature"
+			],
+			[
+				"step",
+				"features/step_definitions/creating_projects.rb"
+			],
+			[
+				"ste",
+				"features/step_definitions/permission_steps.rb"
+			],
+			[
+				"continit",
+				"app/views/devise/mailer/confirmation_instructions.html.erb"
+			],
+			[
+				"ticksho",
+				"app/views/tickets/show.html.erb"
+			],
+			[
+				"helpapp",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"projshow",
+				"app/views/projects/show.html.erb"
+			],
+			[
+				"h",
+				"features/hidden_links.feature"
+			],
+			[
+				"de",
+				"features/deleting_tickets.feature"
+			],
+			[
+				"ed",
+				"features/editing_tickets.feature"
+			],
+			[
+				"user.",
+				"app/models/user.rb"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"",
+				"app/controllers/tickets_controller.rb"
+			],
+			[
+				"perm",
+				"features/step_definitions/permission_steps.rb"
+			],
+			[
+				"tic",
+				"app/controllers/tickets_controller.rb"
+			],
+			[
+				"tickets",
+				"spec/controllers/tickets_controller_spec.rb"
+			],
+			[
+				"confir",
+				"app/views/users/confirmation.html.erb"
+			],
+			[
+				"sign",
+				"features/signing_up.feature"
+			],
+			[
+				"hidd",
+				"features/hidden_links.feature"
+			],
+			[
+				"modpr",
+				"app/models/project.rb"
+			],
+			[
+				"view",
+				"features/viewing_projects.feature"
+			],
+			[
+				"edi",
+				"features/editing_tickets.feature"
+			],
+			[
+				"dele",
+				"features/deleting_tickets.feature"
+			],
+			[
+				"creating",
+				"features/creating_tickets.feature"
+			],
+			[
+				"project",
+				"app/controllers/projects_controller.rb"
+			],
+			[
+				"proj",
+				"html/ticketee/app/controllers/projects_controller.rb"
+			],
+			[
+				"adminuserssh",
+				"html/ticketee/app/views/admin/users/show.html.erb"
+			],
+			[
+				"apcon",
+				"html/ElectionCentral/app/controllers/application_controller.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/athill/sublime/svdp.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 328.0,
+	"status_bar_visible": true
+}
