@@ -45,6 +45,10 @@ class JsModule {
 				"scripts" => array("http://d3js.org/d3.v2.js"),
 				"styles" => array("")
 			),
+			"ui" => array(
+				"scripts" => array("/js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"),
+				"styles" => array("/js/jquery-ui-1.10.3.custom/css/ui-darkness/jquery-ui-1.10.3.custom.min.css")
+			)
 		);
 	}
 	
