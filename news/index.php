@@ -1,6 +1,7 @@
 <?php
 $local['scripts'] = array('news.js');
 $local['stylesheets'] = array('news.css');
+$local['jsModules']['ui'] = true;
 require_once("../inc/application.php");
 
 $geekout=<<<EOT

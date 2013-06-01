@@ -1,19 +1,27 @@
 $(document).ready(function() {
+	// jQuery.migrateMute = true;
 	/////////////////////////////
-	///// Load opening feed set
-	///// according to hash, or wires if no hash
+	///// Tab Navigation
 	/////////////////////////////
 	var defaultCategory = "Wires";
 	var category = defaultCategory;
-	if (window.location.hash.length) {
-		category = window.location.hash.replace("#", "");
-	}
-	var $element = $("#rss-category-"+category);
-	if ($element.length == 0) {
-		$element = $("#rss-category-"+defaultCategory);
-			
-	}
-	setCategory($element);
+
+	$(window).bind('hashchange', function(e) {
+		if (location.hash !='') {
+			category = location.hash.replace("#", "");
+		}
+		var tab = $("#rss-category-"+category);
+		if (tab.length == 0) {
+			tab = $("#rss-category-"+defaultCategory);
+				
+		}
+		setCategory(tab, category);		
+	});
+
+	$(window).trigger( 'hashchange' );
+
+
+	
 
 	///////////////////////////
 	//// Open/close all entries in a feed
@@ -36,15 +44,15 @@ $(document).ready(function() {
 	/////////////////////
 	//// Tab navigation
 	///////////////////////
-	$(".rss-category").click(function() { 
-		setCategory($(this));
+	$(".rss-category").click(function() {
+			var category = $.trim($(this).html()); 
+			setCategory($(this), category);
 		}
 	);
  });
 
-function setCategory($element) {
-	var category = $element.html().replace(/\s/g, ''); 
-	window.location.hash = category;
+function setCategory($element, category) {
+	location.hash = category;
 	$element.data('category', category);
 	$.get("feed.php", { category: category }, 
 		function(data) {
