@@ -4,6 +4,9 @@ for (var i = 0; i < html5elems.length; i++) {
 	document.createElement(html5elems[i]);
 }
 
+////Console.log fix for IE
+if ( ! window.console ) console = { log: function(){} };
+
 $(function() { 	
 	$('ul.sf-menu').superfish({ autoArrows: false });
 	var kids = $('ul#global-nav-menu:first').children();
