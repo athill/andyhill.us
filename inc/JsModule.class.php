@@ -52,7 +52,7 @@ class JsModule {
 			"slideshow" => array(
 				//"scripts" => array('/js/reveal.js/js/reveal.min.js'),
 				'scripts'=>array(),
-				"styles" => array('/js/reveal.js/css/reveal.min.css','/js/reveal.js/css/theme/default.css')
+				"styles" => array('/js/reveal/css/reveal.min.css','/js/reveal/css/theme/default.css')
 			)
 		);
 	}
