@@ -10,11 +10,7 @@ and flexibilty of the infrastructure as well as tackling specific challenges,
 such as displaying an image gallery, in a pleasing way.
 </p>
 
-<p>
-I created and maintain the Pizza King site for my cousin, Jeff. It's a good 
-place and he's a good guy, you should 
-<a href="http://pizzakingofcarmel.com/directions.php" target="_blank">check it out.</a>
-</p>
+
 EOT;
 
 $h->p($text);
@@ -40,7 +36,8 @@ class site2 {
 				$h->img('/portfolio/'.$this->img, '', 'class="img"');
 				$h->div($this->url, 'class="url"');
 				$display = $h->endBuffer();			
-				$h->a($this->url, $display, 'target="_blank"');				
+				$h->a($this->url, $display, 'target="_blank"');
+				$h->div($this->comment, 'class="comment"');
 				$h->cdiv();
 		}
 		
@@ -52,7 +49,9 @@ $sites = array(
 		"Quick project from '09. Hope they're doing well."),
 */
 	new site2("Pizza King of Carmel", "http://pizzakingofcarmel.com", "img/pizzakingscreencap.png", 
-		"Coming soon!"),
+		'I created and maintain the Pizza King site for my cousin, Jeff. It\'s a good 
+place and he\'s a good guy, you should 
+<a href="http://pizzakingofcarmel.com/directions.php" target="_blank">check it out.</a>'),
 	new site2("From URL to Web Page", "From URL to Web Page.zip", "img/url2web.png", 
 		"Presentation I did for work"),
 
