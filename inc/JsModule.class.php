@@ -48,6 +48,11 @@ class JsModule {
 			"ui" => array(
 				"scripts" => array("/js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"),
 				"styles" => array("/js/jquery-ui-1.10.3.custom/css/ui-darkness/jquery-ui-1.10.3.custom.min.css")
+			),
+			"slideshow" => array(
+				//"scripts" => array('/js/reveal.js/js/reveal.min.js'),
+				'scripts'=>array(),
+				"styles" => array('/js/reveal.js/css/reveal.min.css','/js/reveal.js/css/theme/default.css')
 			)
 		);
 	}
