@@ -36,6 +36,7 @@
 	<links href="/d3/" display="D3.js">
 		<link href="barchart.php" display="Bar Chart"/>
 		<link href="line.php" display="Line Chart" />
+		<link href="snap/" display="S.N.A.P." />
 	</links>		
 	<!--
 	<links href="/admin/" display="Administration">

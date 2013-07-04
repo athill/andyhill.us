@@ -1,24 +1,7 @@
 <?php
 $local['jsModules']['d3'] = true;
-$local['scripts'] = array('line.js');
-$local['headerExtra'] = <<<EOT
-<style>
-.chart div {
-   font: 10px sans-serif;
-   background-color: steelblue;
-   text-align: right;
-   padding: 3px;
-   margin: 1px;
-   color: white;
-}
-
-.chart rect {
-   stroke: white;
-   fill: steelblue;
- }
-
-</style>
-EOT;
+$local['jsModules']['ui'] = true;
+$local['scripts'] = array('/js/linechart.jquery.js');
 
 include('../inc/application.php');
 
@@ -34,9 +17,12 @@ http://www.whitehouse.gov/sites/default/files/omb/budget/fy2013/assets/hist01z1.
 
     <div id="line-chart"></div>
 
-
+    <div id="line-chart2"></div>
 
     
 <?php
+
+$h->scriptfile(array('/js/linechart.jquery.js', 'line.js'));
+
 $template->footer();
 ?>
