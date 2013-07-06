@@ -26,7 +26,7 @@ $(document).ready(function() {
 	///////////////////////////
 	//// Open/close all entries in a feed
 	///////////////////////////
-	$(".rss-toggleall").live("click", 
+	$(document).on("click", ".rss-toggleall", 
 		function() {
 			var id = $(this).attr("id").split("_");
 			var index = id[1];
