@@ -6,11 +6,12 @@
 	/* display: inline; */
 	border: thin dotted white;
 	padding: 0.5em;
-	margin: 1em;
+	margin: 0.5em;
 	float: left;
 	text-align: center;
 	background: #AAA;
-	width: 325px;
+	width: 290px;
+	min-height: 290px;
 }
 
 .portfolio-entry a {
@@ -29,7 +30,7 @@
 }
 
 .portfolio-entry .img {
-	padding: 1em;
+	padding: 0.5em;
 }
 
 .portfolio-entry .url {

@@ -54,6 +54,9 @@ place and he\'s a good guy, you should
 <a href="http://pizzakingofcarmel.com/directions.php" target="_blank">check it out.</a>'),
 	new site2("From URL to Web Page", "From URL to Web Page.zip", "img/url2web.png", 
 		"Presentation I did for work"),
+	new site2("Metaprogramming in ColdFusion", "cfmeta/", "img/cfmeta.png", 
+		'Presentation I did for cfmeetup. <br /><a href="cfmeta/slideshow.pdf" target="_blank">PDF</a>
+		 ... <a href="https://github.com/athill/cfmeta/" target="_blank">GitHub</a>'),	
 
 );
 
