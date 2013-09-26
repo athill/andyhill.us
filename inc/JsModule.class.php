@@ -53,6 +53,10 @@ class JsModule {
 				//"scripts" => array('/js/reveal.js/js/reveal.min.js'),
 				'scripts'=>array(),
 				"styles" => array('/js/reveal/css/reveal.min.css','/js/reveal/css/theme/default.css')
+			),
+			"underscore" => array(
+				'scripts'=>array('/js/underscore-min.js'),
+				"styles" => array()
 			)
 		);
 	}
