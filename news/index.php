@@ -1,8 +1,85 @@
 <?php
 $local['scripts'] = array('news.js');
 $local['stylesheets'] = array('news.css');
-//$local['jsModules']['ui'] = true;
+$local['jsModules']['underscore'] = true;
 require_once("../inc/application.php");
+
+$h->h1('um');
+?>
+<script type="text/template" class="template">
+
+<h2><%- rc.listTitle %></h2>
+
+<ul>
+<% _.each( rc.listItems, function( listItem ){ %>
+	<li>
+	<%- listItem.name %>
+	<% if ( listItem.hasOlympicGold ){ %>
+		<em>*</em>
+	<% } %>
+	</li>
+<% }); %>
+</ul>
+
+
+<% var showFootnote = _.any(_.pluck( rc.listItems, "hasOlympicGold" )); %>
+
+
+<% if ( showFootnote ){ %>
+	<p style="font-size: 12px ;">
+	<em>* Olympic gold medalist</em>
+	</p>
+<% } %>
+
+</script>
+<!-- END: Underscore Template Definition. -->
+ 
+ 
+<!-- Include and run scripts. -->
+<?php
+ $h->script('// When rending an underscore template, we want top-level
+// variables to be referenced as part of an object. For
+// technical reasons (scope-chain search), this speeds up
+// rendering; however, more importantly, this also allows our
+// templates to look / feel more like our server-side
+// templates that use the rc (Request Context / Colletion) in
+// order to render their markup.
+_.templateSettings.variable = "rc";
+ 
+// Grab the HTML out of our template tag and pre-compile it.
+var template = _.template(
+	$( "script.template" ).html()
+);
+ 
+// Define our render data (to be put into the "rc" variable).
+var templateData = {
+	listTitle: "Olympic Volleyball Players",
+	listItems: [
+		{
+			name: "Misty May-Treanor",
+			hasOlympicGold: true
+		},
+		{
+			name: "Kerri Walsh Jennings",
+			hasOlympicGold: true
+		},
+		{
+			name: "Jennifer Kessy",
+			hasOlympicGold: false
+		},
+		{
+			name: "April Ross",
+			hasOlympicGold: false
+		}
+	]
+};
+ 
+// Render the underscore template and inject it after the H1
+// in our current DOM.
+$( "h1" ).after(
+template( templateData )
+);');
+
 
 $geekout=<<<EOT
 <p>

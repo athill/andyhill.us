@@ -6,7 +6,8 @@ require_once('RSS.class.php');
 
 $category = (array_key_exists('category', $_GET)) ? $_GET['category'] : 'Wires';
 
-$feeds = array();
+$feeds = array(
+);
 switch ($category) {
 	case "Wires":
 		$feeds[] = "http://feeds.reuters.com/reuters/politicsNews";
