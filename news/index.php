@@ -4,6 +4,11 @@ $local['stylesheets'] = array('news.css');
 $local['jsModules']['underscore'] = true;
 require_once("../inc/application.php");
 
+require_once($site['incroot'].'/lastRSS.php');
+
+
+
+
 $h->h1('um');
 ?>
 <script type="text/template" class="template">
