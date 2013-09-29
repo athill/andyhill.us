@@ -1,10 +1,11 @@
 <?php
 $local['template'] = 'none';
 require_once('../inc/application.php');
-require_once($site['incroot'].'/lastRSS.php');
 
+//// set category
 $category = (array_key_exists('category', $_GET)) ? $_GET['category'] : 'Wires';
 
+//// define feeds
 $feeds = array(
 	"Wires" => array(
 		"http://feeds.reuters.com/reuters/politicsNews",
@@ -73,8 +74,8 @@ $feeds = array(
 		"http://www.opencongress.org/person/atom/400177_baron_hill",
 	),
 );
-// print_r($feeds[$category]);
-
+//// Build the structure and output
+require_once($site['incroot'].'/lastRSS.php');
 $rss = new lastRSS;
 $rss->cache_dir = './cache';
 $rss->cache_time = 3600; // one hour
@@ -85,7 +86,7 @@ foreach ($feeds[$category] as $i => $feed) {
 		$rtn[] = $rs;
 	}
 }
-
+header('Content-Type: application/json');
 echo(json_encode($rtn));
 ?>
 

@@ -6,31 +6,6 @@ $local['jsModules']['ui'] = true;
 require_once("../inc/application.php");
 ?>
 
-
-<script type="text/template" id="feeds">
-<% _.each(rc, function(feed, i) { %>
-	<article>
-	<h3 class="feed-header"><%- feed.title %></h3>
-	<div class="feed-actions">
-		<a href="<%- feed.link%>" title="site" target="_blank">site</a>
-		<a href="#" class="feed-toggleall" title="expand all" id="feed-expandall_<%= i %>">expand all</a>
-	</div>
-		
-	<ul>
-	<% _.each(feed.items, function(item, j) { %>
-		<% if (j > 9) return item; %>
-		<li>
-		<a href="<%- item.link %>" class="feed-links feed-links<%= i %>" id="feed-link<%= i %>_<%= j %>"
-			title="" target="_blank"><%- item.title.replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '') %></a>
-		<div class="feed-descriptions feed-descriptions_<%= i %>" id="feed-description<%= i %>_<%= j %>">
-			<%= item.description %>
-		</div>
-		</li>
-	<% }); %>
-	</ul>
-	</article>
-<% }); %>
-</script>
  
  
 <!-- Include and run scripts. -->
@@ -75,7 +50,35 @@ $h->liArray('ul', $items['display'], 'id="news-nav"', $items['atts']);
 
 ////feeds
 $h->tnl('<output id="rss-feeds"></ul>');
-//$h->div("", 'id="rss-feed-container"');
+?>
+<script type="text/template" id="feeds">
+<% _.each(rc, function(feed, i) { %>
+	<article class="feed">
+		<header class="feed-header">
+			<h3 class="feed-title elipsis" title="<%- feed.title %>"><%- feed.title %></h3>
+			<div class="feed-actions">
+				<a href="<%- feed.link%>" title="site" target="_blank">site</a>
+				<a href="#" class="feed-toggleall" title="expand all" id="feed-expandall_<%= i %>">expand all</a>
+			</div>
+		</header>
+		<ul>
+		<% _.each(feed.items, function(item, j) { %>
+			<% if (j > 9) return item; %>
+			<li class="elipsis">
+			<a href="<%- item.link %>" class="feed-links feed-links<%= i %>" id="feed-link<%= i %>_<%= j %>"
+				title="" target="_blank"><%- item.title.replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '') %></a>
+			<div class="feed-descriptions feed-descriptions_<%= i %>" id="feed-description<%= i %>_<%= j %>">
+				<%= item.description.replace(/&lt;/g, '<').replace(/&gt;/g, '>') %>
+			</div>
+			</li>
+		<% }); %>
+		</ul>
+	</article>
+<% }); %>
+</script>
+<?php
+
+
 
 ////other links
 $h->br(3);

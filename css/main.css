@@ -34,7 +34,7 @@ header, footer, nav, section, article {
 /*******************
  * Header 
  *******************/
-header, #header {
+#header {
 /*	background: blue; */ 
 	position: relative;
 	overflow: auto;

@@ -69,7 +69,7 @@ function initLinks($element) {
 	////Initialize tooltip
 	$('.feed-links').tooltip({
 		content: function() {
-			return $(this).next().html().replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+			return '<h4>'+ $(this).html() + '</h4>' + $(this).next().html();
 		}
 	});
 	$(".feed-category").css("background", "gray");
@@ -77,6 +77,16 @@ function initLinks($element) {
 	$element.css("background", "white");
 	$element.html($element.data("category"));
 }
+//// TODO: SCOPE
+var news = {
+	clean: function(str) {
+		str.replace(/&lt;/g, '<')
+			.replace(/&gt;/g, '>')
+			.replace(/<!\[CDATA\[/g, '')
+			.replace(/\]\]>/g, '');
+	}
+}
+
 
 
 
