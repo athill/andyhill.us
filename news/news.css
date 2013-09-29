@@ -17,12 +17,11 @@
 	margin: 0 1px;
 }
 
-ul#rss-feeds {
-	list-style-type: none;
+output#rss-feeds {
 	overflow: auto;
 }
 
-#rss-feeds li {
+#rss-feeds > article {
 	float: left;
 	border: solid thick gray;
 	padding: 4px;
@@ -34,24 +33,26 @@ ul#rss-feeds {
 	border-radius:  20px;
 }
 
-.rss-header {
+
+.feed-header {
 	font-size: 16pt;
 	color: black;
+	display: inline;
 }
 
-.rss-action {
+.feed-action {
 	font-size: 7pt;
 	border: solid thin gray;
 	padding: 2px;
 	vertical-align: center;
 }
 
-.rss-descriptions {
+.feed-descriptions {
 	display: none;
 }
 
 
 
-.rss-category:hover {
+.feed-category:hover {
 	color: #900;
 }

@@ -1,3 +1,3 @@
 <?php
-$directory['jsModules']['tooltip'] = true;
+//$directory['jsModules']['tooltip'] = true;
 ?>

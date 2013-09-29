@@ -1,5 +1,10 @@
+var template;
+
 $(document).ready(function() {
-	// jQuery.migrateMute = true;
+	//// namespace in template
+	_.templateSettings.variable = "rc";
+	//// load template
+	template = _.template($("#feeds").html());
 	/////////////////////////////
 	///// Tab Navigation
 	/////////////////////////////
@@ -10,9 +15,9 @@ $(document).ready(function() {
 		if (location.hash !='') {
 			category = location.hash.replace("#", "");
 		}
-		var tab = $("#rss-category-"+category);
+		var tab = $("#feed-category-"+category);
 		if (tab.length == 0) {
-			tab = $("#rss-category-"+defaultCategory);
+			tab = $("#feed-category-"+defaultCategory);
 				
 		}
 		setCategory(tab, category);		
@@ -20,33 +25,25 @@ $(document).ready(function() {
 
 	$(window).trigger( 'hashchange' );
 
-
+	$('.feed-category').click(function(e) {
+		setCategory($(this), $(this).attr('id').replace('feed-category-', ''));
+	})
 	
 
-	///////////////////////////
 	//// Open/close all entries in a feed
-	///////////////////////////
-	$(document).on("click", ".rss-toggleall", 
+	$(document).on("click", ".feed-toggleall", 
 		function() {
 			var id = $(this).attr("id").split("_");
 			var index = id[1];
-			var thisClass =  ".rss-description_" + index;
+			var thisClass =  ".feed-descriptions_" + index;
 			if ($(this).html() == "expand all") {
-				$(".rss-descriptions_" + index).show();
+				$(".feed-descriptions_" + index).show();
 				$(this).html("collapse all");
 			} else {
-				$(".rss-descriptions_" + index).hide();	
+				$(".feed-descriptions_" + index).hide();	
 				$(this).html("expand all");
 			}
 			return false;
-		}
-	);
-	/////////////////////
-	//// Tab navigation
-	///////////////////////
-	$(".rss-category").click(function() {
-			var category = $.trim($(this).html()); 
-			setCategory($(this), category);
 		}
 	);
  });
@@ -54,9 +51,11 @@ $(document).ready(function() {
 function setCategory($element, category) {
 	location.hash = category;
 	$element.data('category', category);
-	$.get("feed.php", { category: category }, 
+	$.getJSON("feed.php", { category: category }, 
 		function(data) {
-			$("#rss-feed-container").html(data);
+			$( "#rss-feeds" ).html(
+				template( data )
+			);
 			initLinks($element);		
 		}
 	);
@@ -64,17 +63,16 @@ function setCategory($element, category) {
 
 }
 
+
+
 function initLinks($element) {
 	////Initialize tooltip
-	$(".rss-links").tooltip(  {
-				bodyHandler: function() {
-					return "<strong>" + $(this).attr("rel") + "</strong>" + 
-						"<br /><br />" + 
-						$(this).next().text();
-				}, 
-				showURL: false
+	$('.feed-links').tooltip({
+		content: function() {
+			return $(this).next().html().replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+		}
 	});
-	$(".rss-category").css("background", "gray");
+	$(".feed-category").css("background", "gray");
 	////color tabs
 	$element.css("background", "white");
 	$element.html($element.data("category"));

@@ -2,88 +2,40 @@
 $local['scripts'] = array('news.js');
 $local['stylesheets'] = array('news.css');
 $local['jsModules']['underscore'] = true;
+$local['jsModules']['ui'] = true;
 require_once("../inc/application.php");
-
-require_once($site['incroot'].'/lastRSS.php');
-
-
-
-
-$h->h1('um');
 ?>
-<script type="text/template" class="template">
 
-<h2><%- rc.listTitle %></h2>
 
-<ul>
-<% _.each( rc.listItems, function( listItem ){ %>
-	<li>
-	<%- listItem.name %>
-	<% if ( listItem.hasOlympicGold ){ %>
-		<em>*</em>
-	<% } %>
-	</li>
+<script type="text/template" id="feeds">
+<% _.each(rc, function(feed, i) { %>
+	<article>
+	<h3 class="feed-header"><%- feed.title %></h3>
+	<div class="feed-actions">
+		<a href="<%- feed.link%>" title="site" target="_blank">site</a>
+		<a href="#" class="feed-toggleall" title="expand all" id="feed-expandall_<%= i %>">expand all</a>
+	</div>
+		
+	<ul>
+	<% _.each(feed.items, function(item, j) { %>
+		<% if (j > 9) return item; %>
+		<li>
+		<a href="<%- item.link %>" class="feed-links feed-links<%= i %>" id="feed-link<%= i %>_<%= j %>"
+			title="" target="_blank"><%- item.title.replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '') %></a>
+		<div class="feed-descriptions feed-descriptions_<%= i %>" id="feed-description<%= i %>_<%= j %>">
+			<%= item.description %>
+		</div>
+		</li>
+	<% }); %>
+	</ul>
+	</article>
 <% }); %>
-</ul>
-
-
-<% var showFootnote = _.any(_.pluck( rc.listItems, "hasOlympicGold" )); %>
-
-
-<% if ( showFootnote ){ %>
-	<p style="font-size: 12px ;">
-	<em>* Olympic gold medalist</em>
-	</p>
-<% } %>
-
 </script>
-<!-- END: Underscore Template Definition. -->
  
  
 <!-- Include and run scripts. -->
 <?php
- $h->script('// When rending an underscore template, we want top-level
-// variables to be referenced as part of an object. For
-// technical reasons (scope-chain search), this speeds up
-// rendering; however, more importantly, this also allows our
-// templates to look / feel more like our server-side
-// templates that use the rc (Request Context / Colletion) in
-// order to render their markup.
-_.templateSettings.variable = "rc";
- 
-// Grab the HTML out of our template tag and pre-compile it.
-var template = _.template(
-	$( "script.template" ).html()
-);
- 
-// Define our render data (to be put into the "rc" variable).
-var templateData = {
-	listTitle: "Olympic Volleyball Players",
-	listItems: [
-		{
-			name: "Misty May-Treanor",
-			hasOlympicGold: true
-		},
-		{
-			name: "Kerri Walsh Jennings",
-			hasOlympicGold: true
-		},
-		{
-			name: "Jennifer Kessy",
-			hasOlympicGold: false
-		},
-		{
-			name: "April Ross",
-			hasOlympicGold: false
-		}
-	]
-};
- 
-// Render the underscore template and inject it after the H1
-// in our current DOM.
-$( "h1" ).after(
-template( templateData )
-);');
+
 
 
 $geekout=<<<EOT
@@ -109,23 +61,21 @@ EOT;
 
 $template->template->geekout($geekout);
 
-
-$options = "Wires,Left,Right,Libertarian,TV,Print,Radio,Congress,Indiana,Bloomington";
-$options = explode(",", $options);
+//// Navigation
+$options = explode(',', "Wires,Left,Right,Libertarian,TV,Print,Radio,Congress,Indiana,Bloomington");
 $items = array(
 	'display' => array(),
 	'atts' => array()
 );
-
-
 foreach ($options as $option) {
 	$items['display'][] = $option;
-	$items['atts'][] = 'class="rss-category" id="rss-category-'.$option.'"';
+	$items['atts'][] = 'class="feed-category" id="feed-category-'.$option.'" data-category="'.$option.'"';
 }
 $h->liArray('ul', $items['display'], 'id="news-nav"', $items['atts']);
 
 ////feeds
-$h->div("", 'id="rss-feed-container"');
+$h->tnl('<output id="rss-feeds"></ul>');
+//$h->div("", 'id="rss-feed-container"');
 
 ////other links
 $h->br(3);
@@ -145,7 +95,4 @@ $h->tnl(" ");
 $h->a("http://www.gpoaccess.gov/", "gpoaccess.gov");
 
 $template->footer();
-
 ?>
-
-

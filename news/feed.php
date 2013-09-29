@@ -3,9 +3,6 @@ $local['template'] = 'none';
 require_once('../inc/application.php');
 require_once($site['incroot'].'/lastRSS.php');
 
-
-require_once('RSS.class.php');
-
 $category = (array_key_exists('category', $_GET)) ? $_GET['category'] : 'Wires';
 
 $feeds = array(
@@ -76,32 +73,19 @@ $feeds = array(
 		"http://www.opencongress.org/person/atom/400177_baron_hill",
 	),
 );
-//$h->pa($feeds);
-//$h->otable('id="rss-feeds" cellspacing="8"');
-$h->otag("ul", 'id="rss-feeds"');
-foreach ($feeds[$category] as $i => $feed) {
-	$h->otag("li");
-	$rss = new rss($feed, $i);
-	//echo 'here';
-	$rss->display();
-	$h->ctag("li");
-//	if ($i %  2 == 1 && $i < (count($feeds) - 1)) $h->cotr();
-}
-//$h->ctable();
-$h->ctag("ul");
-/*
+// print_r($feeds[$category]);
 
-$h->otable('id="rss-feeds" cellspacing="8"');
-foreach ($feeds as $i => $feed) {
-	$h->otd();
-	$rss = new rss($feed, $i);
-	//echo 'here';
-	$rss->display();
-	$h->ctd();
-	if ($i %  2 == 1 && $i < (count($feeds) - 1)) $h->cotr();
+$rss = new lastRSS;
+$rss->cache_dir = './cache';
+$rss->cache_time = 3600; // one hour
+
+$rtn = array();
+foreach ($feeds[$category] as $i => $feed) {
+	if ($rs = $rss->get($feed)) {
+		$rtn[] = $rs;
+	}
 }
-$h->ctable();
-*/
-//$h->script("initLinks();");
+
+echo(json_encode($rtn));
 ?>
 
