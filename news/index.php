@@ -75,9 +75,9 @@ $h->tnl('<output id="rss-feeds"></output>');
 			<% if (j > 9) return item; %>
 			<li class="elipsis">
 			<a href="<%- item.link %>" class="feed-links feed-links<%= i %>" id="feed-link<%= i %>_<%= j %>"
-				title="" target="_blank"><%- item.title.replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '') %></a>
+				title="" target="_blank"><%- item.title %></a>
 			<div class="feed-descriptions feed-descriptions_<%= i %>" id="feed-description<%= i %>_<%= j %>">
-				<%= item.description.replace(/&lt;/g, '<').replace(/&gt;/g, '>') %>
+				<%= item.description %>
 			</div>
 			</li>
 		<% }); %>

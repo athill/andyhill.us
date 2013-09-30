@@ -33,6 +33,7 @@ $feeds = array(
 		"http://www.dailypaul.com/rss.xml",
 		//"http://www.lewrockwell.com/rss.xml",
 		//"http://bytestyle.tv/rss.xml",
+		//http://feeds.feedburner.com/reason/AllArticles
 		
 	),
 	"TV" => array(
@@ -77,19 +78,46 @@ $feeds = array(
 	),
 );
 //// Build the structure and output
-require_once($site['incroot'].'/lastRSS.php');
-$rss = new lastRSS;
-$rss->cache_dir = './cache';
-$rss->cache_time = 3600; // one hour
+// require_once($site['incroot'].'/lastRSS.php');
+// $rss = new lastRSS;
+// $rss->cache_dir = './cache';
+// $rss->cache_time = 3600; // one hour
 
+// $rtn = array();
+// foreach ($feeds[$category] as $i => $feed) {
+// 	if ($rs = $rss->get($feed)) {
+// 		$rtn[] = $rs;
+// 	} else {
+// 		$rtn[] = array('title'=>"Error", 'desription'=>'fubar');
+// 	}
+// }
+
+require_once($site['incroot'].'/simplepie/autoloader.php');
+$feed = new SimplePie();
 $rtn = array();
-foreach ($feeds[$category] as $i => $feed) {
-	if ($rs = $rss->get($feed)) {
-		$rtn[] = $rs;
-	} else {
-		$rtn[] = array('title'=>"Error", 'desription'=>'fubar');
+
+foreach ($feeds[$category] as $f) {
+	$feed->set_feed_url($f);
+	$feed->init();
+	$feed->handle_content_type();
+
+	$tmp = array(
+		'title'=>$feed->get_title(),
+		'link'=>$feed->get_permalink(),
+		'description'=>$feed->get_description(),
+		'items'=>array()
+	);
+	foreach ($feed->get_items() as $item) {
+		$tmp['items'][] = array(
+		'title'=>$item->get_title(),
+		'link'=>$item->get_permalink(),
+		'description'=>$item->get_description(),
+		'date'=>$item->get_date('j F Y | g:i a')
+		);
 	}
+	$rtn[] = $tmp;
 }
+
 header('Content-Type: application/json');
 echo(json_encode($rtn));
 ?>
