@@ -10,6 +10,15 @@ require_once("../inc/application.php");
  
 <!-- Include and run scripts. -->
 <?php
+//// playing with block functions
+// $h->otag('script', 'type="text/template"');
+// $h->tblock('_.each(thing1, thing2)', function() {
+// 	global $h;
+// 	//$h->h1($h->rtn('tint', array('test'));
+
+// });
+// $h->ctag('script');
+
 
 
 
@@ -49,7 +58,7 @@ foreach ($options as $option) {
 $h->liArray('ul', $items['display'], 'id="news-nav"', $items['atts']);
 
 ////feeds
-$h->tnl('<output id="rss-feeds"></ul>');
+$h->tnl('<output id="rss-feeds"></output>');
 ?>
 <script type="text/template" id="feeds">
 <% _.each(rc, function(feed, i) { %>

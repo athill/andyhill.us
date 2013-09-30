@@ -112,6 +112,12 @@ class Html extends Xml {
 		}		
 	}
 
+	// public function rtn($fn, $args) {
+	// 	$this->startBuffer();
+	// 	$this->__call($fn, $args);
+	// 	return $this->endBuffer();
+	// }
+
 	private function fixLink($link) {
 		// print_r($GLOBALS['site']);
 		return (substr($link, 0, 1) == "/") ? $GLOBALS['site']['webroot'] . $link : $link;
@@ -939,7 +945,28 @@ class Html extends Xml {
 		}
 		$this->cdiv();
 	}
+	/***** 
+	 * HTML Templates
+	 ******/
+	//// interpolate a string from a template
+ 	public function tint($str) {
+ 		$this->tnl('<%= '.$str.' %>');
+ 	}
+
+	//// escape a string from a template
+ 	public function tesc($str) {
+ 		$this->tnl('<%- '.$str.' %>');
+ 	} 	
+
+	//// evaluate a string from a template
+ 	public function tevl($str) {
+ 		$this->tnl('<% '.$str.' %>');
+ 	} 	
+
+ 	public function tblock($head, $blockfn) {
+ 		$this->tevl($head.' {');
+ 		$blockfn();
+ 		$this->tevl('}');
+ 	}
 }
-
-
 ?>	

@@ -3,6 +3,7 @@ var template;
 $(document).ready(function() {
 	//// namespace in template
 	_.templateSettings.variable = "rc";
+	
 	//// load template
 	template = _.template($("#feeds").html());
 	/////////////////////////////

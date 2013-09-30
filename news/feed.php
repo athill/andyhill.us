@@ -28,10 +28,12 @@ $feeds = array(
 		
 	),
 	"Libertarian" => array(
-		"http://www.dailypaul.com/rss.xml",
-		"http://www.lewrockwell.com/rss.xml",
-		"http://bytestyle.tv/rss.xml",
+		"http://feeds.feedburner.com/reason/AllArticles?format=xml",
 		"http://feeds2.feedburner.com/CatoDispatch",
+		"http://www.dailypaul.com/rss.xml",
+		//"http://www.lewrockwell.com/rss.xml",
+		//"http://bytestyle.tv/rss.xml",
+		
 	),
 	"TV" => array(
 		"http://feeds.feedburner.com/AbcNews_Politics",
@@ -84,6 +86,8 @@ $rtn = array();
 foreach ($feeds[$category] as $i => $feed) {
 	if ($rs = $rss->get($feed)) {
 		$rtn[] = $rs;
+	} else {
+		$rtn[] = array('title'=>"Error", 'desription'=>'fubar');
 	}
 }
 header('Content-Type: application/json');
