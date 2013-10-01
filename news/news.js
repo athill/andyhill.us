@@ -15,19 +15,18 @@ $(document).ready(function() {
 	$(window).bind('hashchange', function(e) {
 		if (location.hash !='') {
 			category = location.hash.replace("#", "");
+		} else {
+			category = defaultCategory;
 		}
 		var tab = $("#feed-category-"+category);
-		if (tab.length == 0) {
-			tab = $("#feed-category-"+defaultCategory);
-				
-		}
 		setCategory(tab, category);		
 	});
 
 	$(window).trigger( 'hashchange' );
 
 	$('.feed-category').click(function(e) {
-		setCategory($(this), $(this).attr('id').replace('feed-category-', ''));
+		location.hash = $(this).attr('id').replace('feed-category-', '');
+		// setCategory($(this), $(this).attr('id').replace('feed-category-', ''));
 	})
 	
 
@@ -50,7 +49,7 @@ $(document).ready(function() {
  });
 
 function setCategory($element, category) {
-	location.hash = category;
+	
 	$element.data('category', category);
 	$.getJSON("feed.php", { category: category }, 
 		function(data) {
@@ -60,7 +59,8 @@ function setCategory($element, category) {
 			initLinks($element);		
 		}
 	);
-	$element.html('<span style="color: white; background: red;">wait</span>');	
+	$element.html('Loading');
+	$element.addClass('wait');
 
 }
 
@@ -75,6 +75,7 @@ function initLinks($element) {
 	});
 	////color tabs
 	$(".feed-category").removeClass("active");
+	$element.removeClass('wait');
 	$element.addClass("active");
 	//// Revert text to category
 	$element.html($element.data("category"));

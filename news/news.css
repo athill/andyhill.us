@@ -21,6 +21,12 @@
 	background: white;
 }
 
+#news-nav li.wait {
+	background: red;
+	color: white;
+	font-weight: bold;
+}
+
 output#rss-feeds {
 	overflow: auto;
 }
