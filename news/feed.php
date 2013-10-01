@@ -21,26 +21,29 @@ $feeds = array(
 
 	),
 	"Right" => array(
-		"http://lucianne.com/rssfeed/",
+		"https://www.nationalreview.com/rss.xml",
+		// "http://lucianne.com/rssfeed/",
 		"http://feeds.feedburner.com/americanthinker",
-		"http://www.nationalreview.com/index.xml",
-		"http://www.moonbattery.com/index.xml",
+		"http://ace.mu.nu/index.rdf",
+		// "http://www.moonbattery.com/index.xml",
+		'http://newsbusters.org/blog/feed',
+		// http://feeds.feedburner.com/FoundryConservativePolicyNews
 		
 	),
 	"Libertarian" => array(
 		"http://feeds.feedburner.com/reason/AllArticles?format=xml",
 		"http://feeds2.feedburner.com/CatoDispatch",
 		"http://www.dailypaul.com/rss.xml",
+		'http://libertarianstandard.com/feed/'
 		//"http://www.lewrockwell.com/rss.xml",
 		//"http://bytestyle.tv/rss.xml",
-		//http://feeds.feedburner.com/reason/AllArticles
 		
 	),
 	"TV" => array(
-		"http://feeds.feedburner.com/AbcNews_Politics",
+		"http://feeds.abcnews.com/abcnews/politicsheadlines",
 		"http://feeds.cbsnews.com/CBSNewsMain",
 		"http://rss.cnn.com/rss/cnn_topstories.rss",
-		"http://www.foxnews.com/xmlfeed/rss/0,4313,0,00.rss",
+		"http://www.foxnews.com/about/rss/feedburner/foxnews/politics",
 		"http://www.msnbc.msn.com/id/3032552/device/rss/rss.xml",
 	),
 	"Print" => array(
@@ -49,13 +52,13 @@ $feeds = array(
 		"http://feeds.wsjonline.com/wsj/xml/rss/3_7011.xml",
 		"http://feeds.nytimes.com/nyt/rss/HomePage",
 		"http://feeds.latimes.com/latimes/news/nationworld/nation",
-		"http://feeds.washingtonpost.com/wp-dyn/rss/politics/index_xml",
+		"http://feeds.washingtonpost.com/rss/politics",
 	),
 	"Radio" => array(
 		"http://www.npr.org/rss/rss.php?id=1001",
 		"http://www.democracynow.org/democracynow.rss",
-		"http://www.prisonplanet.com/feed.rss",
-		"http://feeds.feedburner.com/GlennBeckArticles",
+		"http://feeds.feedburner.com/RushLimbaugh-AllContent",
+		"http://www.marketplace.org/latest-stories/long-feed.xml",
 	),
 	"Congress" => array(
 		"http://www.opencongress.org/bill/atom/most/viewed",
@@ -66,15 +69,16 @@ $feeds = array(
 	),
 	"Indiana" => array(
 		"http://www.indystar.com/apps/pbcs.dll/section?Category=NEWS05&template=rss&mime=XML",
-		"http://www.opencongress.org/person/atom/300070_richard_lugar",
-		"http://www.opencongress.org/person/atom/300006_evan_bayh",
+		"http://www.opencongress.org/people/atom/402675_Daniel_Coats",
+		"http://www.opencongress.org/people/atom/412205_Joe_Donnelly",
 		"http://www.in.gov/portal/news_events/39832.xml",
 
 	),
 	"Bloomington" => array(
 		"http://www.heraldtimesonline.com/rss/local.xml",
 		"http://bloomington.in.gov/documentTypes/documents.php?format=rss;documentType_id=9",
-		"http://www.opencongress.org/person/atom/400177_baron_hill",
+		"http://www.opencongress.org/people/atom/412428_Todd_Young",
+		'http://www.idsnews.com/news/feeds/rss.aspx'
 	),
 );
 //// Build the structure and output

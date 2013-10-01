@@ -70,7 +70,7 @@ function initLinks($element) {
 	////Initialize tooltip
 	$('.feed-links').tooltip({
 		content: function() {
-			return '<h4>'+ $(this).html() + '</h4>' + $(this).next().html();
+			return '<h4>'+ $(this).html() + '</h4>'+$(this).attr('href')+'<br><br>'+$(this).next().html();
 		}
 	});
 	$(".feed-category").css("background", "gray");

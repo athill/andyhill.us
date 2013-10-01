@@ -78,6 +78,8 @@ $h->tnl('<output id="rss-feeds"></output>');
 				title="" target="_blank"><%- item.title %></a>
 			<div class="feed-descriptions feed-descriptions_<%= i %>" id="feed-description<%= i %>_<%= j %>">
 				<%= item.description %>
+				<br><br>
+				Posted: <time><%= item.date %></time>
 			</div>
 			</li>
 		<% }); %>
@@ -86,6 +88,22 @@ $h->tnl('<output id="rss-feeds"></output>');
 <% }); %>
 </script>
 <?php
+////  resources
+$resources = array(
+	array('title'=>'Polls', 
+			'links'=>array(
+
+			)
+	),
+	array('title'=>'Watchers', 
+			'links'=>array(
+
+			)
+	),	
+
+);
+
+$h->odiv('id="resources"');
 
 
 
@@ -105,6 +123,7 @@ $h->tnl(" ");
 $h->a("http://opensecrets.org", "opensecrets.org");
 $h->tnl(" ");
 $h->a("http://www.gpoaccess.gov/", "gpoaccess.gov");
+$h->cdiv();
 
 $template->footer();
 ?>
