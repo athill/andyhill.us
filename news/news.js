@@ -73,9 +73,10 @@ function initLinks($element) {
 			return '<h4>'+ $(this).html() + '</h4>'+$(this).attr('href')+'<br><br>'+$(this).next().html();
 		}
 	});
-	$(".feed-category").css("background", "gray");
 	////color tabs
-	$element.css("background", "white");
+	$(".feed-category").removeClass("active");
+	$element.addClass("active");
+	//// Revert text to category
 	$element.html($element.data("category"));
 }
 //// TODO: SCOPE
