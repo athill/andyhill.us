@@ -53,6 +53,7 @@ output#rss-feeds {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	display: block;
 }
 
 .feed-title {

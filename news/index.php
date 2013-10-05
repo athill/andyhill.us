@@ -73,8 +73,8 @@ $h->tnl('<output id="rss-feeds"></output>');
 		<ul>
 		<% _.each(feed.items, function(item, j) { %>
 			<% if (j > 9) return item; %>
-			<li class="elipsis">
-			<a href="<%- item.link %>" class="feed-links feed-links<%= i %>" id="feed-link<%= i %>_<%= j %>"
+			<li>
+			<a href="<%- item.link %>" class="feed-links feed-links<%= i %> elipsis" id="feed-link<%= i %>_<%= j %>"
 				title="" target="_blank"><%- item.title %></a>
 			<div class="feed-descriptions feed-descriptions_<%= i %>" id="feed-description<%= i %>_<%= j %>">
 				<%= item.description %>
