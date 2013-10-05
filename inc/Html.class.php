@@ -118,9 +118,10 @@ class Html extends Xml {
 	// }
 
 	private function fixLink($link) {
+		global $site;
 		// print_r($GLOBALS['site']);
 //		echo strpos($link, $GLOBALS['site']['webroot']);
-		return (substr($link, 0, 1) == "/" && strpos($link, $GLOBALS['site']['webroot']) === false) ? 
+		return (substr($link, 0, 1) == "/" && strlen($site['webroot']) && strpos($link, $site['webroot']) === false) ? 
 			$GLOBALS['site']['webroot'] . $link : 
 			$link;
 	}
