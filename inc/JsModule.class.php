@@ -1,8 +1,12 @@
 <?php
 class JsModule {
 	var $modules;
+	var $jquery;
+	
+
 	
 	function __construct() {
+		$this->jquery = array('/js/jquery-1.10.1.min.js', '/js/jquery-migrate-1.2.1.min.js');
 		$this->modules = array(
 					////Tooltip
 			"tooltip" => array( 
@@ -23,8 +27,7 @@ class JsModule {
 			),
 			////superfish
 			"popup" => array(
-				"scripts" => array("/js/superfish/js/superfish.js","/js/superfish/js/hoverIntent.js",
-								"/js/superfish/js/jquery.bgiframe.min.js"),
+				"scripts" => array("/js/superfish/js/superfish.js","/js/superfish/js/hoverIntent.js"),
 				"styles" => array("/js/superfish/css/superfish.css")
 			),
 			////Galleria

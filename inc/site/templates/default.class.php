@@ -7,15 +7,15 @@ class TemplateInstance {
 
 	public $bodyAtts = 'id="default" class="default"';	
 	public $stylesheets = array("/css/main.css");
-	public $scripts = array("/js/jquery-1.10.1.min.js");
+	public $scripts = array();
 	private $base;
 	
 	public function __construct($base) {
 		global $site;
 		$this->base = $base;	
-		$this->scripts[] = ($site['isPRD']) ? 
-			'/js/jquery-migrate-1.2.1.min.js' : 
-			'/js/jquery-migrate-1.2.1.js';
+		// $this->scripts[] = ($site['isPRD']) ? 
+		// 	'/js/jquery-migrate-1.2.1.min.js' : 
+		// 	'/js/jquery-migrate-1.2.1.js';
 		$this->scripts = array_merge($this->scripts, array("/js/site.js","/js/header.js"));
 	}
 	

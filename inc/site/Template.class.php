@@ -27,18 +27,21 @@ class Template {
 //	  $scripts = explode(",", $this->template->scripts);
 //	  $sheets = explode(",", $this->template->stylesheets);
 //	  $h->pa($this->includes);
-	  $this->includes = array_merge($this->includes, $this->template->scripts, $this->template->stylesheets);
+	  
 	  
 	  ////Add scripts/styles from jsModules
 	  include_once($site['incroot']."/JsModule.class.php");
 	  $jsMods = new JsModule();
+	  foreach ($jsMods->jquery as $script) {
+	  	$this->includes[] = $script;
+	  }
 	  foreach ($site['jsModules'] as $module => $bool) {
 		  if ($bool) {
 			  	$mod = $jsMods->modules[$module];
 		  		$this->includes = array_merge($this->includes, $mod['scripts'], $mod['styles']);
 		  }
 	  }
-
+	  $this->includes = array_merge($this->includes, $this->template->scripts, $this->template->stylesheets);
  	  ////Add scripts/sheets from $GLOBALS
 	  $this->includes = array_merge($this->includes, $site['scripts'], $site['stylesheets']);
 	  ////HTML/head
