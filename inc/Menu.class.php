@@ -24,8 +24,6 @@
 
 //include_once($GLOBALS['incroot']."/html.class.php");
 
-	
-$h = html::singleton();
 
 class Menu {
 	 	
