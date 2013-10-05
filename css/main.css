@@ -84,7 +84,8 @@ header, footer, nav, section, article {
 
 /************ Global Navigation */
 #global-nav {
-	clear: both;
+	
+
 }
 
 #global-nav-menu {
@@ -117,6 +118,23 @@ header, footer, nav, section, article {
 .sf-menu li.sfHover {
 	background: #999;
 }
+
+.sf-menu li.active {
+	background: #FFF;
+}
+
+.sf-menu li.active > a {
+	color: #000 !important;
+}
+
+.sf-menu li.active:hover {
+	background: #999;
+}
+
+.sf-menu li.active > a {
+	color: #000 !important;
+}
+
 
 /* styling for both css and generated arrows */
 .sf-arrows .sf-with-ul:after {
