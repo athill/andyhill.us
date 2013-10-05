@@ -6,7 +6,7 @@ class JsModule {
 
 	
 	function __construct() {
-		$this->jquery = array('/js/jquery-1.10.1.min.js', '/js/jquery-migrate-1.2.1.min.js');
+		$this->jquery = array('/js/jquery-1.10.1.min.js');
 		$this->modules = array(
 					////Tooltip
 			"tooltip" => array( 
