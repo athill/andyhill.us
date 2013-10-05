@@ -11,10 +11,11 @@ class Template {
 	
 	
 	public function __construct($menu, $templateText="default") {
+		global $site;
 		$this->templateText = $templateText;
 		//echo 'um'.$templateText;
 		if ($this->templateText == "none") return;
-		include_once($GLOBALS['site']['incroot']."/site/templates/".$this->templateText.".class.php");
+		include_once($site['incroot']."/site/templates/".$this->templateText.".class.php");
 		$this->template = new TemplateInstance($this) or die("???");
 		$this->menu = $menu;
 	}
@@ -29,9 +30,9 @@ class Template {
 	  $this->includes = array_merge($this->includes, $this->template->scripts, $this->template->stylesheets);
 	  
 	  ////Add scripts/styles from jsModules
-	  include_once($GLOBALS['site']['incroot']."/JsModule.class.php");
+	  include_once($site['incroot']."/JsModule.class.php");
 	  $jsMods = new JsModule();
-	  foreach ($GLOBALS['site']['jsModules'] as $module => $bool) {
+	  foreach ($site['jsModules'] as $module => $bool) {
 		  if ($bool) {
 			  	$mod = $jsMods->modules[$module];
 		  		$this->includes = array_merge($this->includes, $mod['scripts'], $mod['styles']);
@@ -39,32 +40,32 @@ class Template {
 	  }
 
  	  ////Add scripts/sheets from $GLOBALS
-	  $this->includes = array_merge($this->includes, $GLOBALS['site']['scripts'], $GLOBALS['site']['stylesheets']);
+	  $this->includes = array_merge($this->includes, $site['scripts'], $site['stylesheets']);
 	  ////HTML/head
-	  $title = $GLOBALS['site']['siteName'];
-	  if ($GLOBALS['site']['pageTitle'] != "") {
-		$title .= ': '. $GLOBALS['site']['pageTitle'];
+	  $title = $site['siteName'];
+	  if ($site['pageTitle'] != "") {
+		$title .= ': '. $site['pageTitle'];
 	  }
 	  $h->ohtml($title, $this->includes, $site['meta']);
-	  if (array_key_exists('headerExtra', $GLOBALS['site'])) {
-		$h->tnl($GLOBALS['site']['headerExtra']);  
+	  if (array_key_exists('headerExtra', $site)) {
+		$h->tnl($site['headerExtra']);  
 	  }
 	  $h->body($this->template->bodyAtts);
 	  if ($this->hasSkipNav) $this->skipNav();		
 	}
 
 	public function openLayout() {
-		global $h;
+		global $h, $site;
 		////Site structure
 		$h->odiv('id="layout"');
 		$class = "column123";
-		if ($GLOBALS['site']['leftSideBar']['type'] != "none" && $GLOBALS['site']['rightSideBar'] != "none") {
+		if ($site['leftSideBar']['type'] != "none" && $site['rightSideBar'] != "none") {
 			$class = 'column2';	////left-content-right
-			$this->leftSideBar($GLOBALS['site']['leftSideBar']['type'], $GLOBALS['site']['leftSideBar']['args']);
-		} else if ($GLOBALS['site']['leftSideBar']['type'] != "none") {
+			$this->leftSideBar($site['leftSideBar']['type'], $site['leftSideBar']['args']);
+		} else if ($site['leftSideBar']['type'] != "none") {
 			$class = 'column23';	////left-content
-			$this->leftSideBar($GLOBALS['site']['leftSideBar']['type'], $GLOBALS['site']['leftSideBar']['args']);
-		} else if ($GLOBALS['site']['rightSideBar'] != "none") {
+			$this->leftSideBar($site['leftSideBar']['type'], $site['leftSideBar']['args']);
+		} else if ($site['rightSideBar'] != "none") {
 			$class = 'column12';	////content-right
 		}
 		$h->odiv('id="content-wrapper" class="'.$class.'"');
@@ -72,11 +73,11 @@ class Template {
 	}
 
 	function closeLayout() {
-		global $h;		
+		global $h, $site;		
 		$h->cdiv();	////close content
 		$h->cdiv();	//close content-wrapper
 		//$h->tbr('rsb: ' . $GLOBALS['rightSideBar']);
-		if ($GLOBALS['site']['rightSideBar'] != "none") {
+		if ($site['rightSideBar'] != "none") {
 			$this->rightSideBar();
 		}
 		$h->cdiv();	//close layout
@@ -94,7 +95,7 @@ class Template {
 		array("display" => "Search"),
 		array("display" => "Primary Navigation")
 	  );
-	  if ($GLOBALS['site']['leftSideBar']['type'] != "none") {
+	  if ($site['leftSideBar']['type'] != "none") {
 		$links[] = 	array("display" => "Secondary Navigation");
 	  }
 	  ////generate href ids
@@ -116,7 +117,7 @@ class Template {
 	
 	////Left side bar
 	public function leftSideBar($type, $args) {
-		global $h;
+		global $h, $site;
 		$h->odiv('id="column1"');
 		//$h->pa($leftSideBar);
 		switch ($type) {
@@ -124,7 +125,7 @@ class Template {
 				$h->tnl($args['content']);
 				break;
 			case 'menu':
-				$path = $GLOBALS['site']['path'];				
+				$path = $site['path'];				
 				if (array_key_exists('path', $args)) {
 					$path = $args['path'];
 				}
@@ -144,7 +145,7 @@ class Template {
 	public function rightSideBar() {
 		global $h;
 		$h->odiv('id="column3"');
-		$h->tnl($GLOBALS['site']['rightSideBar']);
+		$h->tnl($site['rightSideBar']);
 		$h->cdiv(); //close column 3
 	}
 	

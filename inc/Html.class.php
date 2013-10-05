@@ -170,10 +170,14 @@ class Html extends Xml {
 		
 		$metas = array('keywords', 'description', 'author', 'copyright', 'viewport');
 		foreach ($metas as $meta) {
-			$this->tag('meta', 'name="'.$meta.'" content="'.$options[$meta].'"');
-		}		
-		$this->tag("link", 'rel="icon" href="'.$options['icon'].'"');
-		$this->tag("link", 'rel="shortcut icon" href="'.$options['icon'].'"');
+			if ($options[$meta] != '') {
+				$this->tag('meta', 'name="'.$meta.'" content="'.$options[$meta].'"');
+			}
+		}
+		if ($options['icon'] != '') {
+			$this->tag("link", 'rel="icon" href="'.$options['icon'].'"');
+			$this->tag("link", 'rel="shortcut icon" href="'.$options['icon'].'"');
+		}
 		for ($i = 0; $i < count($includes); $i++) {
 			$filenameParts = explode('.', $includes[$i]);
 			$ext = end($filenameParts);
