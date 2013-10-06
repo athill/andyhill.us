@@ -13,7 +13,7 @@ class Template {
 	public function __construct($menu, $templateText="default") {
 		global $site;
 		$this->templateText = $templateText;
-		//echo 'um'.$templateText;
+		// echo 'um'.$templateText;
 		if ($this->templateText == "none") return;
 		include_once($site['incroot']."/site/templates/".$this->templateText.".class.php");
 		$this->template = new TemplateInstance($this) or die("???");
