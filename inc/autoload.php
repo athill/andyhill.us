@@ -1,9 +1,10 @@
 <?php
-spl_autoload_register(function($class_name) {
+spl_autoload_register('my_autoloader');
+
+function my_autoloader($class_name) {
 	global $site;		
     //class directories
     $directories = array(
-    	'',
         $site['incroot'].'/',
     );
    
@@ -18,5 +19,6 @@ spl_autoload_register(function($class_name) {
             return;
         }           
     }
-});
+ }
+
 ?>
