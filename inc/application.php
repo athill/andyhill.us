@@ -78,10 +78,6 @@ if (count($site["script"]) > 0 && $site["script"][0] == "") {
 	array_shift($site["script"]);
 }
 
-
-print_r($site);
-
-
 ////Global objects
 $site['h'] = Html::singleton();
 $h = $site['h'];
@@ -89,8 +85,10 @@ $site['logger'] = new Logger();
 $site['mailer'] = new Mailer();
 ////Menu
 $xmlfile = $site['fileroot'].'/menu.xml';
-$menu = new Menu($xmlfile, $site['script']);
-$retval = $menu->buildPathAndSetTitle(array('script'=>$site['script']));
+$site['menu'] = new Menu($xmlfile, $site['script']);
+//// FIX: $menu should not be global
+$menu = $site['menu'];
+$retval = $site['menu']->buildPathAndSetTitle(array('script'=>$site['script']));
 //echo 'um';
 //print_r($retval);
 $site['breadcrumbs'] = $retval['breadcrumbs'];
@@ -102,9 +100,14 @@ $dirSettings = $site['filedir'].'/directorySettings.php';
 if (file_exists($dirSettings)) {
 	require_once($dirSettings);
 }
-if (isset($directory)) $site = array_merge_recursive($site, $directory) or die("???");
+if (isset($directory['jsModules'])) $directory['jsModules'] = array_merge($site['jsModules'], $directory['jsModules']) or die("???");
+if (isset($directory)) $site = array_merge($site, $directory) or die("???");
 ////Local Settings override global and directory
-if (isset($local))$site = array_merge_recursive($site, $local) or die("^^^");
+if (isset($local['jsModules'])) {
+	$local['jsModules'] = array_merge($site['jsModules'], $local['jsModules']) or die("^^^!!");
+}
+if (isset($local)) $site = array_merge($site, $local) or die("^^^");
+
 
 ////Error handler
 ////TODO: Move up to global objects?
@@ -116,7 +119,8 @@ $old_error_reporting = error_reporting(E_ALL ^ E_NOTICE);
 ////Template
 ////TODO: Move instantiation up to global objects? um, no -- needs Menu and Template
 include_once($site['incroot']."/site/Template.class.php");
-$template = new Template($menu, $site["template"]);
+// echo $site['template'];
+$template = new Template($site['menu'], $site["template"]);
 ////TODO: Move head() and heading() to template.start() ?
 $template->head();
 $template->heading();
