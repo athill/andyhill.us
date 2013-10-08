@@ -137,68 +137,125 @@ class Menu {
 	// builds the path and sets the title
 	// TODO: add 'look ahead' when href of form 'subfolder/...file' or something
 	/////////////////////////////////
-	function buildPathAndSetTitle($options) {
-		global $h;
-		$this->debug("here");
-		$defaults = array(
+// 	function buildPathAndSetTitle($options) {
+// 		global $h;
+// 		$this->debug("here");
+// 		$defaults = array(
+// 			'xml' => $this->xml,	////MenuXml to parse -- used in recursion
+// 			'path'=>'',				////Build the path -- used in recursion
+// 			'depth'=>0,				////Current depth -- used in recursion
+// 			'return'=> array(
+// 						'breadcrumbs'=> array(), ////seq of assoc: href,display
+// 						'pagetitle'=>""			////pagetitle
+// 					)
+// 		);
+// 		//$h->pa($this->script);
+// 		$opts = $h->extend($defaults, $options);
+// 		////localize
+// 		foreach ($opts as $k => $v) {
+// 			$$k = $v;
+// 		}
+// //		$this->debug("xml",$xml);
+// 		////Main loop over children
+// 		foreach ($xml->children() as $elem) {
+// 			$this->debug("href: ",(string)$elem['href']);
+// 			$this->debug('script', $this->script);
+// 			////step is href stripped of /'s to match $this->script position
+// 			$step = (string)$elem['href'];
+// 			$step = str_replace("/", "", $step);
+// 			////set href to redirect, if appropriate
+// 			$href = (string)(isset($elem['redirect'])) ? 
+// 				$elem['redirect'] : 
+// 				$elem['href'];
+// 			////If script[depth] and step match, build and set
+// 			$this->debug("step: ".$step. " script: ". $this->script[$depth]);			
+// 			$this->debug('entering step/script compare');
+// 			if ($step == $this->script[$depth]) {		
+// 				$this->debug('in step/script compare');
+// 				////add href to path
+// 				$path .= $elem['href'];
+// 				////update return object
+// 				$return['breadcrumbs'][] = array('href'=> $path, 'display'=>(string)$elem['display']);
+// 				$return['pagetitle'] = (string) $elem['display'];
+// 				////end of the line? return
+// 				$this->debug('entering depth compare');				
+// 				if ($depth + 1 == count($this->script)) {				
+// 					$this->debug('in depth compare');
+// 					return $return;
+// 				////otherwise, keep going
+// 				} else {
+// 					$this->debug('in not depth compare');
+// 					return $this->buildPathAndSetTitle(
+// 						array(
+// 							'xml'=>$elem, 
+// 							'path'=>$path, 
+// 							'depth'=>++$depth, 
+// 							'return'=>$return
+// 						)
+// 					);
+
+// 				}
+// 			}
+// 		}	////Close foreach $xml
+// 		return $return;
+
+// 	}
+
+	function parseData($options=[]) {
+		global $h, $site;
+		$defaults = [
 			'xml' => $this->xml,	////MenuXml to parse -- used in recursion
-			'path'=>'',				////Build the path -- used in recursion
+			'script' => str_replace('index.php', '', $_SERVER['PHP_SELF']),
+			'path'=>$site['webroot'],	////Build the path -- used in recursion
 			'depth'=>0,				////Current depth -- used in recursion
 			'return'=> array(
-						'breadcrumbs'=> array(), ////seq of assoc: href,display
-						'pagetitle'=>""			////pagetitle
+						'breadcrumbs'=> array(
+							['href'=>'/', 'display'=>'Home']
+						), ////seq of assoc: href,display
+						'pageTitle'=>"",		////pagetitle
+						'complete'=>false,		////full url matched
 					)
-		);
-		//$h->pa($this->script);
+		];
 		$opts = $h->extend($defaults, $options);
-		////localize
-		foreach ($opts as $k => $v) {
-			$$k = $v;
-		}
-//		$this->debug("xml",$xml);
+		$isRoot = $opts['script'] == $site['webroot'].'/';
 		////Main loop over children
-		foreach ($xml->children() as $elem) {
-			$this->debug("href: ",(string)$elem['href']);
-			$this->debug('script', $this->script);
-			////step is href stripped of /'s to match $this->script position
-			$step = (string)$elem['href'];
-			$step = str_replace("/", "", $step);
-			////set href to redirect, if appropriate
-			$href = (string)(isset($elem['redirect'])) ? 
-				$elem['redirect'] : 
-				$elem['href'];
-			////If script[depth] and step match, build and set
-			$this->debug("step: ".$step. " script: ". $this->script[$depth]);			
-			$this->debug('entering step/script compare');
-			if ($step == $this->script[$depth]) {		
-				$this->debug('in step/script compare');
-				////add href to path
-				$path .= $elem['href'];
-				////update return object
-				$return['breadcrumbs'][] = array('href'=> $path, 'display'=>(string)$elem['display']);
-				$return['pagetitle'] = (string) $elem['display'];
-				////end of the line? return
-				$this->debug('entering depth compare');				
-				if ($depth + 1 == count($this->script)) {				
-					$this->debug('in depth compare');
-					return $return;
-				////otherwise, keep going
+		foreach ($opts['xml']->children() as $elem) {
+			// print_r($elem);
+			if (array_key_exists('redirect', $elem)) {
+				continue;
+			}
+			//// root exception
+			if ($elem['href'] == '/') {
+				if ($isRoot) {
+					$opts['return']['pageTitle'] = (string)$elem['display'];
+					$opts['return']['complete'] = true;
+					return $opts['return'];
 				} else {
-					$this->debug('in not depth compare');
-					return $this->buildPathAndSetTitle(
-						array(
-							'xml'=>$elem, 
-							'path'=>$path, 
-							'depth'=>++$depth, 
-							'return'=>$return
-						)
-					);
-
+					continue;
 				}
 			}
-		}	////Close foreach $xml
-		return $return;
-
+			$compare = $opts['path'].$elem['href'];
+			//// match
+			if (strpos($opts['script'], $compare) === 0) {
+				$display = (string)$elem['display'];
+				$opts['path'] = $compare;
+				$opts['depth']++;
+				$opts['return']['breadcrumbs'][] = [
+					'href'=>$compare,
+					'display'=>$display,
+				];
+				$opts['return']['pageTitle'] = $display;
+				// echo 'cpm: '.$opts['script'].' '.$compare."\n";
+				if ($opts['script'] === $compare) {
+					$opts['return']['complete'] = true;
+					return $opts['return'];
+				} else if (count($elem->children())) {
+					$opts['xml'] = $elem;
+					return $this->parseData($opts);
+				}
+			}
+		}
+		return $opts['return'];
 	}
 
 	function renderBreadcrumbs($options) {
@@ -208,31 +265,16 @@ class Menu {
 			'delimiter'=>' &gt; '
 		);
 		$opts = $h->extend($defaults, $options);		
-		////localize
-		foreach ($opts as $k => $v) {
-			$$k = $v;
+		$len = count($opts['breadcrumbs']);
+		$lis = [];
+		foreach ($opts['breadcrumbs'] as $i => $bc) {
+			$lis[] = ($i < $len - 1) ?
+				$h->rtn('a', [$bc['href'], $bc['display']]) :
+				$bc['display'];
 		}
-//		echo count($breadcrumbs) . "^^" . $breadcrumbs[0]['href'] .';';  
-		////Home page
-		if (count($breadcrumbs) == 0 || $breadcrumbs[0]['href'] == "/") {
-			$h->span('Home');
-		////otherwise
-		} else {
-			$h->a('/', "Home");
-//			$h->pa($breadcrumbs);
-			for ($i = 0; $i < count($breadcrumbs); $i++) {
-				$crumb = $breadcrumbs[$i];
-				////end of line
-				if ($i+1 == count($breadcrumbs)) {
-					$h->tnl($delimiter);
-					$h->span($crumb['display']);
-				} else {
-					$h->tnl($delimiter);
-					$h->a($crumb['href'], $crumb['display']);
-				}
-			}
-		}
-	
+
+		$h->liArray('ul', $lis);
+		return;
 	}
 
 

@@ -164,14 +164,23 @@ header, footer, nav, section, article {
 	clear: both;
 }
 
-#path {
-	/*
-	position: absolute;
-	top: 0;
-	left: 0;
-	*/
+#breadcrumb {
 	float: left;
 	height: 100%;
+}
+
+#breadcrumb ul {
+	padding: 0.5em;
+	margin: 0;
+}
+
+#breadcrumb ul li {
+	list-style: none;
+	display: inline;
+}
+
+#breadcrumb ul li:not(:last-child):after {
+	content: ' > ';
 }
 
 #search {

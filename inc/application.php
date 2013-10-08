@@ -72,7 +72,7 @@ $site['path'] = $tmp;
 if (strpos($site['path'], "/") !== 0) {
 	$site['path'] = "/".$site['path'];
 }
-//if ($_SERVER['REMOTE_ADDR'] == '24.1.115.39') echo 'path?!?' . $site['path'].'<br />';	
+// if ($_SERVER['REMOTE_ADDR'] == '24.1.115.39') echo 'path?!?' . $site['path'].'<br />';	
 $site["script"] = explode("/", $tmp);
 if (count($site["script"]) > 0 && $site["script"][0] == "") {
 	array_shift($site["script"]);
@@ -88,11 +88,11 @@ $xmlfile = $site['fileroot'].'/menu.xml';
 $site['menu'] = new Menu($xmlfile, $site['script']);
 //// FIX: $menu should not be global
 $menu = $site['menu'];
-$retval = $site['menu']->buildPathAndSetTitle(array('script'=>$site['script']));
-//echo 'um';
-//print_r($retval);
-$site['breadcrumbs'] = $retval['breadcrumbs'];
-$site['pageTitle'] = $retval['pagetitle'];
+//$retval = $site['menu']->buildPathAndSetTitle(array('script'=>$site['script']));
+$rv = $site['menu']->parseData();
+// $h->pa($rv);
+$site['breadcrumbs'] = $rv['breadcrumbs'];
+$site['pageTitle'] = $rv['pagetitle'];
 
 
 ////Directory Settings -- override global settings for directory
