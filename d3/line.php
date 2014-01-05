@@ -1,9 +1,8 @@
 <?php
-$local['jsModules']['d3'] = true;
-// $local['jsModules']['ui'] = true;
-$local['scripts'] = array('/js/linechart.jquery.js');
-
-include('../inc/application.php');
+include('../inc/setup.inc.php');
+$page = new Page(array(
+	'jsModules' => array('d3'=>true),
+));
 
 
 $sources = array('http://www.whitehouse.gov/sites/default/files/omb/budget/fy2013/assets/hist01z1.xls');
@@ -31,5 +30,5 @@ $h->tbr('Modified from <a href="'.$link.'" target="_blank">'.$link.'</a>.');
 
 $h->scriptfile(array('/js/linechart.jquery.js', 'line.js'));
 
-$template->footer();
+$page->end();
 ?>

@@ -1,5 +1,6 @@
 <?php
-include_once('../../inc/application.php');
+include_once('../../inc/setup.inc.php');
+$page = new Page();
 
 /*$api_key = '0f9d6efec2874d029e55c76f67f08a88';
 $baseurl = 'http://api.realtimecongress.org/api/v1/';
@@ -35,7 +36,7 @@ foreach ($data['floor_updates'] as $update) {
 	$h->td($h->endBuffer());	
 }	
 $h->ctable();
-$template->footer();
+$page->end();
 
 
 function formatDate($datestring) {

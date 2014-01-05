@@ -1,5 +1,6 @@
 <?php
-include_once('../../inc/application.php');
+require_once('../../inc/setup.inc.php');
+$page = new Page();
 
 $pages = array(
 	'404'=>array(
@@ -34,7 +35,7 @@ foreach ($pages as $id => $atts) {
 
 
 
-$template->footer();
+$page->end();
 
 
 function debugInfo() {

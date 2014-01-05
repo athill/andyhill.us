@@ -1,8 +1,9 @@
 <?php
-$local['jsModules']['d3'] = true;
-$local['scripts'] = array('barchart.js');
-$local['headerExtra'] = <<<EOT
-<style>
+include('../inc/setup.inc.php');
+$page = new Page(array(
+  'jsModules' => array('d3'=>true),
+  'scripts' => array('barchart.js'),
+  'headerExtra'=>'<style>
 .chart div {
    font: 10px sans-serif;
    background-color: steelblue;
@@ -15,20 +16,14 @@ $local['headerExtra'] = <<<EOT
 .chart rect {
    stroke: white;
    fill: steelblue;
- }
+}
+</style>'
+));
 
-</style>
-EOT;
+$h->div('', 'id="viz"');
 
-include('../inc/application.php');
+$h->div('', 'id="dynamic"');
 
-?>
 
-    <div id="viz"></div>
-
-    <div id="dynamic"></div>
-
-    
-<?php
-$template->footer();
+$page->end();
 ?>

@@ -1,6 +1,6 @@
 <?php
-include_once('../../inc/application.php');
-
+include_once('../../inc/setup.inc.php');
+$page = new Page();
 /*$api_key = '0f9d6efec2874d029e55c76f67f08a88';
 $baseurl = 'http://api.realtimecongress.org/api/v1/';
 
@@ -130,7 +130,7 @@ $h->pa($results);
 
 //$h->pa($results);
 
-$template->footer();
+$page->end();
 
 
 ?>

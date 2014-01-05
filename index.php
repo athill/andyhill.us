@@ -1,5 +1,6 @@
 <?php
-require_once("inc/application.php");
+require_once('inc/setup.inc.php');
+$page = new Page();
 ////Geekout
 $h->startBuffer();
 $g1=<<<EOT
@@ -34,7 +35,7 @@ $h->p($g3);
 
 $geekout = $h->endBuffer();
 
-$template->template->geekOut($geekout);
+$page->template->template->geekOut($geekout);
 
 ////content
 $p1 = <<<EOT
@@ -59,5 +60,5 @@ EOT;
 $h->p($p1);
 $h->p($p2);
 
-$template->footer();
+$page->end();
 ?>

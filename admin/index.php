@@ -1,6 +1,7 @@
 <?php
 exit();
-include('../inc/application.php');
+require_once('../inc/setup.inc.php');
+$page = new Page();
 ////Facebook
 // App ID: 405216726278675
 // App Secret: 1e677d512a76fac8ea474f5df4445268
@@ -13,5 +14,5 @@ $links = array(
 $h->linkList($links);
 
 
-$template->footer();
+$page->end();
 ?>

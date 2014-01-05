@@ -1,7 +1,14 @@
 <?php
-$local['jsModules']['d3'] = true;
-$local['scripts'] = array('indexjs.js');
-include('../inc/application.php');
+// $local['jsModules']['d3'] = true;
+// $local['scripts'] = array('indexjs.js');
+// include('../inc/application.php');
+include('../inc/setup.inc.php');
+$page = new Page(array(
+	'jsModules' => array('d3'=>true),
+	'scripts' => array('indexjs.js')	
+));
+
+
 $h->startBuffer();
 $g3=<<<EOT
 <a href="http://d3js.org/" target="_blank">D3.js</a> is a JavaScript library for manipulating 
@@ -11,7 +18,7 @@ EOT;
 $h->p($g3);
 
 $geekout = $h->endBuffer();
-$template->template->geekOut($geekout);
+$page->template->template->geekOut($geekout);
 //print_r($GLOBALS['site']);
 ?>
 
@@ -22,5 +29,6 @@ $template->template->geekOut($geekout);
 	<div id="viz2"></div>
     
 <?php
-$template->footer();
+// $template->footer();
+$page->end();
 ?>

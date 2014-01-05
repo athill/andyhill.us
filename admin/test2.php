@@ -1,20 +1,22 @@
 <?php
-ini_set ('display_errors', '1');
+require_once('../inc/setup.inc.php');
+$page = new Page();
+
 
 // phpinfo();
  // if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+    // session_start();
 // }
 
-setcookie('test1', 'value', time()+60*60*24*365, '/');
+// setcookie('test1', 'value', time()+60*60*24*365, '/');
 
 
 
 // print_r(session_get_cookie_params());
 
-if ( !is_writable(session_save_path()) ) {
-   echo 'Session save path "'.session_save_path().'" is not writable!'; 
-}
+// if ( !is_writable(session_save_path()) ) {
+//    echo 'Session save path "'.session_save_path().'" is not writable!'; 
+// }
 
 //echo 'session id: '.session_id();
 
@@ -63,20 +65,24 @@ print_r($user_id);
         // In this case, we'll get an exception, so we'll
         // just ask the user to login again here.
         $login_url = $facebook->getLoginUrl(); 
+        
+
         echo 'Please <a href="' . $login_url . '">login.</a>';
         error_log($e->getType());
         error_log($e->getMessage());
-        echo 'in catch';
       }   
     } else {
 
       // No user, print a link for the user to login
       $login_url = $facebook->getLoginUrl();
       echo 'Please <a href="' . $login_url . '">login.</a>';
-      echo 'in else';
     }
-
+$ret = $facebook->api('/me', 'GET', array('fields'=>array('picture')));
+  print_r($ret);
   ?>
 
-  </body>
-</html>
+  <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/50100_1181255135_8931_q.jpg" />
+
+<?php
+$page->end();
+?>

@@ -44,14 +44,15 @@ class Menu {
 	 * @param 
 	 */ 
  	function __construct($pathToXmlFile, $script="") {
-		global $webroot; 		
+		global $site; 		
 		$this->debugOn = ($_SERVER['REMOTE_ADDR'] == '24.1.115.39') && false;
 		if(!$this->xml=simplexml_load_file($pathToXmlFile)) {
 		    trigger_error('Error reading XML file',E_USER_ERROR);
 		}
 //print_r($GLOBALS);
-		$this->script = ($script=="") ? $GLOBALS['settings']['script'] : $script;
-		$this->path = ($path=="") ? $GLOBALS['settings']['path'] : implode("/", $script);		
+		$this->script = ($script=="") ? $site['script'] : $script;
+		$this->path = ($site['path'] == "") ? $site['path'] : implode("/", $script);		
+		print_r($this->path);
 		if (array_key_exists('REDIRECT_URL', $_SERVER)) {
 			$path = $_SERVER['REDIRECT_URL'];
 			if (stripos($path, $webroot) === 0) {
@@ -84,7 +85,7 @@ class Menu {
 	
 	////TODO: Used for directory listings, etc. Use xpath
 	function getNodeFromPath($options=array()) {
-		global $webroot, $h;
+		global $site, $h;
 		$d = $this->debugOn && false; 	////debug
 		$defaults = array(
 			'path' => $this->path,
@@ -93,8 +94,8 @@ class Menu {
 		);
 		$opts = $h->extend($defaults, $options);		
 		$path = $opts['path'];
-		if (stripos($path, $webroot) === 0) {
-			$path = str_ireplace($webroot, "", $path);
+		if (stripos($path, $site['webroot']) === 0) {
+			$path = str_ireplace($site['webroot'], "", $path);
 		}
 		foreach ($opts['xml'] as $tagname => $node) {		
 			$href = (string)$node['href'];
@@ -201,21 +202,22 @@ class Menu {
 
 // 	}
 
-	function parseData($options=[]) {
+	function parseData($options=array()) {
 		global $h, $site;
-		$defaults = [
+		$defaults = array(
 			'xml' => $this->xml,	////MenuXml to parse -- used in recursion
 			'script' => str_replace('index.php', '', $_SERVER['PHP_SELF']),
 			'path'=>$site['webroot'],	////Build the path -- used in recursion
 			'depth'=>0,				////Current depth -- used in recursion
 			'return'=> array(
 						'breadcrumbs'=> array(
-							['href'=>'/', 'display'=>'Home']
+							array('href'=>'/', 'display'=>'Home')
 						), ////seq of assoc: href,display
-						'pageTitle'=>"",		////pagetitle
+						'pagetitle'=>"",		////pagetitle
 						'complete'=>false,		////full url matched
 					)
-		];
+		);
+
 		$opts = $h->extend($defaults, $options);
 		$isRoot = $opts['script'] == $site['webroot'].'/';
 		////Main loop over children
@@ -240,11 +242,11 @@ class Menu {
 				$display = (string)$elem['display'];
 				$opts['path'] = $compare;
 				$opts['depth']++;
-				$opts['return']['breadcrumbs'][] = [
+				$opts['return']['breadcrumbs'][] = array(
 					'href'=>$compare,
 					'display'=>$display,
-				];
-				$opts['return']['pageTitle'] = $display;
+				);
+				$opts['return']['pagetitle'] = $display;
 				// echo 'cpm: '.$opts['script'].' '.$compare."\n";
 				if ($opts['script'] === $compare) {
 					$opts['return']['complete'] = true;
@@ -266,7 +268,7 @@ class Menu {
 		);
 		$opts = $h->extend($defaults, $options);		
 		$len = count($opts['breadcrumbs']);
-		$lis = [];
+		$lis = array();
 		foreach ($opts['breadcrumbs'] as $i => $bc) {
 			$lis[] = ($i < $len - 1) ?
 				$h->rtn('a', [$bc['href'], $bc['display']]) :
@@ -300,6 +302,7 @@ class Menu {
 			'depth'=>0,				////Current depth -- used in recursion
 			'root'=>''
 		);
+		
 		$opts = $h->extend($defaults, $options);
 		$array = array();
 		foreach ($opts['xml'] as $tagname => $node) {

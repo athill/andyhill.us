@@ -1,11 +1,17 @@
 <?php
+include("../inc/setup.inc.php");
 //include($GLOBALS['fileroot'] . "/includes/dirList.php");
 $root = dirname($_SERVER['SCRIPT_NAME']);
 $includeroot = str_replace("/dev", "", $root);
-$local['jsModules']['treemenu'] = true;
-$local['leftSideBar'] = array('type' =>'menu', 'args' => array());
-$local['stylesheets'] = array($includeroot."/quotes.css");
-include("../inc/application.php");
+$page = new Page(array(
+
+));
+
+
+// $local['jsModules']['treemenu'] = true;
+// $local['leftSideBar'] = array('type' =>'menu', 'args' => array());
+// $local['stylesheets'] = array($includeroot."/quotes.css");
+// include("../inc/application.php");
 $url = 'http://'.$_SERVER['HTTP_HOST'].$root;
 $content = <<<EOT
 This directory uses Apache Web Server's 
@@ -25,10 +31,10 @@ EOT;
 if (!array_key_exists('REDIRECT_URL', $_SERVER)) {
 ////index page
 
-	$template->template->geekOut($content);
+	$page->template->template->geekOut($content);
 	$h->tbr("Some words that inspire me.");
-
-	$template->menu->menuList(array('maxdepth'=>-1));
+	$options = array('maxdepth'=>-1);
+	$site['menu']->menuList($options);
 } else {
 	//$h->pa($_SERVER);
 
@@ -62,5 +68,5 @@ if (!array_key_exists('REDIRECT_URL', $_SERVER)) {
 
 
 
-$template->footer();
+$page->end();
 ?>
