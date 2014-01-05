@@ -22,6 +22,15 @@
     </div>
     <div class="title-date indent1">
         <div class="title">
+        Linear Algebra through C.S. Applications
+        <a href="http://andyhill.us/resume/matrix_cert.pdf" target="_blank">With Distinction</a>
+        </div>
+        <div class="date">
+        September 2013
+        </div>
+    </div>    
+    <div class="title-date indent1">
+        <div class="title">
         Software Engineering for Software as a Service (Part I) 
         <a href="http://andyhill.us/resume/saas_cert.pdf" target="_blank">1917.3/2126</a>
         </div>

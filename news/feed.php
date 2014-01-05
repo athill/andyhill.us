@@ -39,6 +39,15 @@ $feeds = array(
 		//"http://bytestyle.tv/rss.xml",
 		
 	),
+	'Government'=>array(
+		'https://www.federalregister.gov/blog/feed',
+		'http://gao.gov/rss/reports_450.xml',
+		'http://www.cbo.gov/publications/all/rss.xml',
+		'http://www.whitehouse.gov/omb/feed/blog',
+		'http://www.treasury.gov/rss/Pages/RSS.aspx?config=TreasuryNotes',
+
+
+	),
 	"TV" => array(
 		"http://feeds.abcnews.com/abcnews/politicsheadlines",
 		"http://feeds.cbsnews.com/CBSNewsMain",

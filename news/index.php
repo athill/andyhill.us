@@ -46,7 +46,7 @@ EOT;
 $template->template->geekout($geekout);
 
 //// Navigation
-$options = explode(',', "Wires,Left,Right,Libertarian,TV,Print,Radio,Congress,Indiana,Bloomington");
+$options = explode(',', "Wires,Government,Left,Right,Libertarian,TV,Print,Radio,Congress,Indiana,Bloomington");
 $items = array(
 	'display' => array(),
 	'atts' => array()
