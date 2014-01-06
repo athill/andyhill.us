@@ -22,7 +22,7 @@ $g2 = $h->endBuffer();
 $h->p(trim($g2));
 ////g3
 $g3=<<<EOT
-The primary engine of the site is contained in application.php, which sets defaults for 
+The primary engine of the site is contained in setup.inc.php, which sets defaults for 
 the infrastructure of the site. This includes setting basic convenience variables such as 
 which page is being viewed, as well as more complex settings, such as which CSS and 
 JavaScript modules to load. These settings can be overridden for an entire directory 

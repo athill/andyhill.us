@@ -1,7 +1,4 @@
 <?php
-// $local['template'] = "Basic";
-// include('../inc/application.php');
-
 include('../inc/setup.inc.php');
 $page = new Page(array(
 	'template'=>'Basic'

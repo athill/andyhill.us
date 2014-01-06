@@ -1,5 +1,6 @@
 <?php
-require_once("../inc/application.php");
+require_once("../inc/setup.inc.php");
+$page = new Page();
 $category = "nationalmall";
 
 ////geek out
@@ -8,12 +9,12 @@ This subsite uses the Galleria jQuery plugin, which is pretty nice. It's primari
 out-of-the-box behavior, except that I took advantage of their API to display 
 the title and description in the right sidebar.
 EOT;
-$template->template->geekOut($geekout);
+$page->template->template->geekOut($geekout);
 
 ////content
 require_once("Galleria.class.php");
 $gallery = new Galleria($category);
 $gallery->render();
 
-$template->footer();
+$page->end();
 ?>

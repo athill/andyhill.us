@@ -1,7 +1,6 @@
 <?php
-echo 'here';
-
-require_once('../../inc/application.php');
+require_once('../../inc/setup.inc.php');
+$page = new Page();
 
 $links = array(
 		array('href'=>'genXml.php', 'display'=>'Generate XML')
@@ -10,6 +9,6 @@ $links = array(
 
 $h->linkList($links);
 
-$template->footer();   
+$page->end();   
 
 ?>

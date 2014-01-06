@@ -1,6 +1,7 @@
 <?php
-require_once('inc/application.php');
+require_once('inc/setup.inc.php');
+$page = new Page();
 
-$template->footer();
+$page->end();
 
 ?>

@@ -1,4 +1,0 @@
-[20-Oct-2012 16:21:42 UTC] PHP Deprecated:  Directive 'magic_quotes_gpc' is deprecated in PHP 5.3 and greater in Unknown on line 0
-[20-Oct-2012 16:21:42 UTC] PHP Warning:  include_once(/home/andyhil/public_html/inc/html.class.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/informed/public_html/inc/application.php on line 60
-[20-Oct-2012 16:21:42 UTC] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening '/home/andyhil/public_html/inc/html.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/informed/public_html/inc/application.php on line 60
-[20-Oct-2012 16:21:42 UTC] PHP Fatal error:  Class 'html' not found in /home/informed/public_html/inc/application.php on line 61

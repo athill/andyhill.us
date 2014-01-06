@@ -1,6 +1,8 @@
 <?php
-$local['template'] = "Basic";
-require_once('../../../inc/application.php');
+require_once('../../../inc/setup.inc.php');
+$page = new Page(array(
+	'template'=>'Basic'
+));
 
 $rawdata = array(
 	'family' => json_decode(file_get_contents('family.json'), true),
@@ -29,7 +31,7 @@ foreach ($rawdata as $category => $arr) {
 //$h->pa($data);
 file_put_contents('../../data.json', json_encode($data));
 
-$template->footer();
+$page->end();
 
 
 /*

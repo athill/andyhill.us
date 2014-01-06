@@ -1,0 +1,47 @@
+<menu>
+	<links href="/" display="Home">
+	</links>
+	<links href="/resume/" display="Resume">
+		<link href="print.php" display="Print" target="_blank"/>
+		<link href="resume.pdf" display="Download" target="_blank"/>
+	</links>
+	<link href="/portfolio/" display="Portfolio" />	
+	<link href="/news/" display="News"/>
+
+	<links href="/pictures/" display="Pictures">
+		<!-- <link href="family.php" display="Friends and Family"/> -->
+		<link href="nationalmall.php" display="National Mall"/>
+	</links>
+	<link href="/recipes/" display="Recipes"/>	
+	<links href="/blogs.php" display="Blogs">
+		<links href="codeblog" display="codeblog" 
+			redirect="http://andyhill.us/codeblog/" target="_blank"/>
+		<links href="ttsmoia" display="ttmsoia" 
+			redirect="http://ttmsoia.andyhill.us" target="_blank" 
+			title="trying to make sense of it all"/>
+	</links>
+	<links href="/inspire/" display="Inspiration">
+		<links href="songs/" display="Songs">
+			<link href="holdonhope" display="Hold On Hope"/>
+			<link href="ontheradio" display="On the Radio"/>
+			<link href="randydescribeseternity" display="Randy Describes Eternity"/>
+		</links>
+		<links href="spirit/" display="Spirit">
+			<link href="lordsprayer" display="The Lord's Prayer"/>
+			<link href="shepherdspsalm" display="The Shepherd's Psalm"/>
+			<link href="desiderata" display="Desiderata"/>
+			<link href="serenityprayer" display="The Serenity Prayer"/>
+		</links>
+	</links>
+	<links href="/d3/" display="D3.js">
+		<link href="barchart.php" display="Bar Chart"/>
+		<link href="line.php" display="Line Chart" />
+		<link href="snap/" display="S.N.A.P." />
+	</links>		
+	<!--
+	<links href="/admin/" display="Administration">
+		<links href="login.php" display="Login">
+		</links>
+	</links>
+	-->
+</menu>

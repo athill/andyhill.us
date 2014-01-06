@@ -1,7 +1,8 @@
 <?php
-//echo 'here';
-$local['template'] = "Basic";
-require_once('../../inc/application.php');
+require_once('../../inc/setup.inc.php');
+$page = new Page(array(
+	'template'=>'none';
+));
 
 $bin = '/usr/bin/';
 
@@ -38,6 +39,6 @@ if (array_key_exists('filelist', $_POST)) {
 ////int file_put_contents ( string $filename , mixed $data [, int $flags = 0 [, resource $context ]] )
 file_put_contents('data.json', json_encode($data));
 
-$template->footer();
+$page->end();
 
 ?>

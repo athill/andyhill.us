@@ -1,5 +1,7 @@
 <?php
-require_once('inc/application.php');
+
+require_once('inc/setup.inc.php');
+$page = new Page();
 $geekout=<<<EOT
 <p>
 Both these blogs use 
@@ -15,7 +17,7 @@ plug-ins.
 Many thanks to the WordPress team, as well as the theme and plug-in developers.
 </p> 
 EOT;
-$template->template->geekOut($geekout);
+$page->template->template->geekOut($geekout);
 
 $h->op();
 $h->a('http://andyhill.us/codeblog/', 'codeblog', 
@@ -39,8 +41,5 @@ EOT;
 $h->tnl($text);
 $h->cp();
 
-
-
-
-$template->footer();
+$page->end();
 ?>

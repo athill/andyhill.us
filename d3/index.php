@@ -1,7 +1,4 @@
 <?php
-// $local['jsModules']['d3'] = true;
-// $local['scripts'] = array('indexjs.js');
-// include('../inc/application.php');
 include('../inc/setup.inc.php');
 $page = new Page(array(
 	'jsModules' => array('d3'=>true),

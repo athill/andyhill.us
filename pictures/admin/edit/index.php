@@ -1,5 +1,6 @@
 <?php
-require_once('../../../inc/application.php');
+require_once('../../../inc/setup.inc.php');
+$page = new Page();
 ////Select category
 $h->oform("");
 $h->select('category', array('family','nationalmall'), $h->getVal('category'));
@@ -86,6 +87,6 @@ function getVal($name, $array) {
 	return (array_key_exists($name, $array)) ? $array[$name] : "";
 }
 
-$template->footer();   
+$page->end();   
 
 ?>

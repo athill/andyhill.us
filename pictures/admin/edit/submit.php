@@ -1,7 +1,8 @@
 <?php
-//echo 'here';
-$local['template'] = "Basic";
-require_once('../../../inc/application.php');
+require_once('../../../inc/setup.inc.php');
+$page = new Page(array(
+	'template'=>'Basic'
+));
 
 ////path to images from main application
 $imagedir = 'img/'.$category.'/';
@@ -60,6 +61,5 @@ $h->pa($json);
 
 file_put_contents($datafile, json_encode($json));
 
-$template->footer();
-
+$page->end();
 ?>

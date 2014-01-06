@@ -1,7 +1,4 @@
 <?php
-// $local['stylesheets'] = array('recipes.css');
-// include_once("../inc/application.php");
-
 require_once("../inc/setup.inc.php");
 $page = new Page(array(
 	'stylesheets'=>array('recipes.css')

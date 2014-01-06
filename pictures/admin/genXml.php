@@ -1,5 +1,6 @@
 <?php
-require_once('../../inc/application.php');
+require_once('../../inc/setup.inc.php');
+$page = new Page();
 $dir = '../img/nationalmall/';
 $h->oform("genXml_submit.php");
 //echo '<select name="file">';
@@ -52,35 +53,5 @@ function getVal($name, $array) {
 	return (array_key_exists($name, $array)) ? $array[$name] : "";
 }
 
-$template->footer();   
-
-
-/*
-class SortableDirectoryIterator implements IteratorAggregate {
-
-    private $_storage;
-
-    public function __construct($path) {
-	    $this->_storage = new ArrayObject();
-	    $files = new DirectoryIterator($path);
-
-	    foreach ($files as $file) {
-	        $this->_storage->offsetSet($file->getFilename(), $file->getFileInfo());
-	    }
-
-////here's the problem
-	    $this->_storage->uksort(
-	        function ($a, $b) {
-	            return strcmp($a, $b);
-	        }
-	    );
-////end problem
-    }
-
-    public function getIterator() {
-	    return $this->_storage->getIterator();
-    }
-
-}
-*/
+$page->end();
 ?>
