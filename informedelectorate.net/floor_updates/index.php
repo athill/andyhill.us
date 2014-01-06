@@ -1,5 +1,5 @@
 <?php
-include_once('../../inc/setup.inc.php');
+include_once('../inc/setup.inc.php');
 $page = new Page();
 
 /*$api_key = '0f9d6efec2874d029e55c76f67f08a88';
@@ -7,7 +7,7 @@ $baseurl = 'http://api.realtimecongress.org/api/v1/';
 
 $data = json_decode(file_get_contents($baseurl.'bills.json?apikey='.$api_key.'&bill_id=hr3261-112'), true);*/
 
-require_once($GLOBALS['site']['fileroot'].'/inc/api/Sunlight.class.php');
+require_once(dirname($GLOBALS['site']['fileroot']).'/inc/api/Sunlight.class.php');
 $sun = new Sunlight();
 
 

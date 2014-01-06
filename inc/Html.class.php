@@ -264,11 +264,11 @@ class Html extends Xml {
 	public function script($js,$inline='') {
 		if ($inline == '') $inline = $this->jsInline;
 		if($inline){
-			$this->oscript();
+			$this->oscript(true);
 			//add XHTML comments
 			$this->tnl(trim($js));
 			//if ($js[count($js)] != "\n") $this->wo("\n");
-			$this->cscript();
+			$this->cscript(true);
 		} else {
 			$this->js[] = array('type'=>'script','value'=>$js);
 		}

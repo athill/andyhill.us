@@ -1,7 +1,11 @@
 <menu>
 	<links href="/" display="Home">
 	</links>
-	<links href="/resume/" display="Resume">
+	<links href="/words/" display="Words">
+	</links>
+	<links href="/floor_updates/" display="Floor Updates">
+	</links>	
+<!--	<links href="/resume/" display="Resume">
 		<link href="print.php" display="Print" target="_blank"/>
 		<link href="resume.pdf" display="Download" target="_blank"/>
 	</links>
@@ -9,7 +13,6 @@
 	<link href="/news/" display="News"/>
 
 	<links href="/pictures/" display="Pictures">
-		<!-- <link href="family.php" display="Friends and Family"/> -->
 		<link href="nationalmall.php" display="National Mall"/>
 	</links>
 	<link href="/recipes/" display="Recipes"/>	
@@ -38,10 +41,5 @@
 		<link href="line.php" display="Line Chart" />
 		<link href="snap/" display="S.N.A.P." />
 	</links>		
-	<!--
-	<links href="/admin/" display="Administration">
-		<links href="login.php" display="Login">
-		</links>
-	</links>
 	-->
 </menu>

@@ -30,7 +30,7 @@ $site = array(
 	"siteName" 	=> "informedelectorate.us",
 	"leftSideBar" => array('type'=>"none", 'args'=>array()),
 	"rightSideBar" => "none",
-	"template" => "default",
+	"template" => "informedelectorate",
 	"scripts" => array(),
 	"stylesheets" => array(),
 	'jsModules' => array(
