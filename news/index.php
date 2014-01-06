@@ -1,25 +1,10 @@
 <?php
-$local['scripts'] = array('news.js');
-$local['stylesheets'] = array('news.css');
-$local['jsModules']['underscore'] = true;
-$local['jsModules']['ui'] = true;
-require_once("../inc/application.php");
-?>
-
- 
- 
-<!-- Include and run scripts. -->
-<?php
-//// playing with block functions
-// $h->otag('script', 'type="text/template"');
-// $h->tblock('_.each(thing1, thing2)', function() {
-// 	global $h;
-// 	//$h->h1($h->rtn('tint', array('test'));
-
-// });
-// $h->ctag('script');
-
-
+require_once("../inc/setup.inc.php");
+$page = new Page(array(
+	'scripts'=>array('news.js'),
+	'stylesheets'=>array('news.css'),
+	'jsModules'=>array('underscore'=>true, 'ui'=>true)
+));
 
 
 $geekout=<<<EOT
@@ -43,7 +28,7 @@ themselves.
 </p>
 EOT;
 
-$template->template->geekout($geekout);
+$page->template->template->geekout($geekout);
 
 //// Navigation
 $options = explode(',', "Wires,Government,Left,Right,Libertarian,TV,Print,Radio,Congress,Indiana,Bloomington");
@@ -125,5 +110,5 @@ $h->tnl(" ");
 $h->a("http://www.gpoaccess.gov/", "gpoaccess.gov");
 $h->cdiv();
 
-$template->footer();
+$page->end();
 ?>

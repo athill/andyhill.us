@@ -4,11 +4,6 @@ date_default_timezone_set('America/New_York');
 //// autoloader
 require_once('autoload.php');
 
-
-
-////useless here if any vars are set. first thing on each page (for sessions)
-//session_start();
-
 ////Discover webroot and fileroot
 $webroot = "";
 $basefileroot = "/home/andyhil/public_html";
@@ -109,6 +104,4 @@ if (file_exists($dirSettings)) {
 }
 if (isset($directory['jsModules'])) $directory['jsModules'] = array_merge($site['jsModules'], $directory['jsModules']) or die("???");
 if (isset($directory)) $site = array_merge($site, $directory) or die("???");
-
 ?>
-

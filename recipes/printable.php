@@ -1,6 +1,11 @@
 <?php
-$local['template'] = "Basic";
-include('../inc/application.php');
+// $local['template'] = "Basic";
+// include('../inc/application.php');
+
+include('../inc/setup.inc.php');
+$page = new Page(array(
+	'template'=>'Basic'
+));
 
 if(!$xml=simplexml_load_file('recipes0904.grmt')){
     trigger_error('Error reading XML file',E_USER_ERROR);
@@ -14,5 +19,6 @@ if (count($recipes) > 0) {
 } else {
 	$h->div('Error: Bad id', 'class="error"');
 }
-$template->footer();
+// $template->footer();
+$page->end();
 ?>

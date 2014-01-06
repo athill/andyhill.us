@@ -1,6 +1,12 @@
 <?php
-$local['stylesheets'] = array('recipes.css');
-include_once("../inc/application.php");
+// $local['stylesheets'] = array('recipes.css');
+// include_once("../inc/application.php");
+
+require_once("../inc/setup.inc.php");
+$page = new Page(array(
+	'stylesheets'=>array('recipes.css')
+));
+
 if(!$xml=simplexml_load_file('recipes0904.grmt')){
     trigger_error('Error reading XML file',E_USER_ERROR);
 }
@@ -33,7 +39,7 @@ and the results.
 </p>
 
 EOD;
-$template->template->geekOut($intro);
+$page->template->template->geekOut($intro);
 
 
 ///////////////////////
@@ -139,6 +145,6 @@ foreach ($xml as $tagname => $recipe) {
 	}
 }
 $h->cdiv(); ////close recipes
-$template->footer();
-
+// $template->footer();
+$page->end();
 ?>

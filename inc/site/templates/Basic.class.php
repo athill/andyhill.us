@@ -11,6 +11,7 @@ class TemplateInstance {
 	private $base;
 	
 	public function __construct($base) {
+		global $site;
 		$this->base = $base;	
 		$this->base->hasSkipNav = false;
 		$GLOBALS['jsModules']['popup'] = false;

@@ -11,8 +11,6 @@
  *
  */
 
-include_once($GLOBALS['incroot']."/html.class.php");	
-$h = html::singleton();
 
 class Recipe {
 	 	
@@ -31,14 +29,14 @@ class Recipe {
 		global $h;
 		if (!$output) $h->startBuffer();		
 		$this->startXML();
-		$h->op($this->recipe->asXML());
+		$h->tnl($this->recipe->asXML());
 		$this->endXML();
 	}
 
 	private function startXML() {
 		global $h;
 		header("Content-type: text/xml");
-		$h->tnl('<?xml version="1.0" encoding="UTF-8"?>');
+		$h->wonl('<?xml version="1.0" encoding="UTF-8"?>');
 		$h->tnl('<!DOCTYPE gourmetDoc>');
 		$h->otag('gourmetDoc');
 	}

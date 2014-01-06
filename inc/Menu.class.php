@@ -32,7 +32,7 @@ class Menu {
 	 *
 	 */  
  	public $xml;
-	private $debugOn = false;//; 	
+	private $debugOn = true;//; 	
 	var $host = "";
 	var $path = "";
 	var $script;
@@ -51,8 +51,7 @@ class Menu {
 		}
 //print_r($GLOBALS);
 		$this->script = ($script=="") ? $site['script'] : $script;
-		$this->path = ($site['path'] == "") ? $site['path'] : implode("/", $script);		
-		print_r($this->path);
+		$this->path = $site['path'];		
 		if (array_key_exists('REDIRECT_URL', $_SERVER)) {
 			$path = $_SERVER['REDIRECT_URL'];
 			if (stripos($path, $webroot) === 0) {
@@ -76,7 +75,6 @@ class Menu {
 			'atts'=>''
 		);
 		$opts = $h->extend($defaults, $options);
-		
 		if ($this->debugOn) $h->pa($opts);
 		$node = $this->getNodeFromPath(array('path'=>$opts['path']));
 		$array = $this->xmlMenu2array(array('xml'=>$node, 'root'=>$opts['path'], 'maxdepth'=>$opts['maxdepth']));
@@ -92,7 +90,7 @@ class Menu {
 			'xml' => $this->xml,
 			'return'=>null
 		);
-		$opts = $h->extend($defaults, $options);		
+		$opts = $h->extend($defaults, $options);
 		$path = $opts['path'];
 		if (stripos($path, $site['webroot']) === 0) {
 			$path = str_ireplace($site['webroot'], "", $path);
@@ -133,75 +131,6 @@ class Menu {
 	/************************************
 	 *Title and breadcrumbs
 	 ************************************/
-
-	/////////////////////////////////
-	// builds the path and sets the title
-	// TODO: add 'look ahead' when href of form 'subfolder/...file' or something
-	/////////////////////////////////
-// 	function buildPathAndSetTitle($options) {
-// 		global $h;
-// 		$this->debug("here");
-// 		$defaults = array(
-// 			'xml' => $this->xml,	////MenuXml to parse -- used in recursion
-// 			'path'=>'',				////Build the path -- used in recursion
-// 			'depth'=>0,				////Current depth -- used in recursion
-// 			'return'=> array(
-// 						'breadcrumbs'=> array(), ////seq of assoc: href,display
-// 						'pagetitle'=>""			////pagetitle
-// 					)
-// 		);
-// 		//$h->pa($this->script);
-// 		$opts = $h->extend($defaults, $options);
-// 		////localize
-// 		foreach ($opts as $k => $v) {
-// 			$$k = $v;
-// 		}
-// //		$this->debug("xml",$xml);
-// 		////Main loop over children
-// 		foreach ($xml->children() as $elem) {
-// 			$this->debug("href: ",(string)$elem['href']);
-// 			$this->debug('script', $this->script);
-// 			////step is href stripped of /'s to match $this->script position
-// 			$step = (string)$elem['href'];
-// 			$step = str_replace("/", "", $step);
-// 			////set href to redirect, if appropriate
-// 			$href = (string)(isset($elem['redirect'])) ? 
-// 				$elem['redirect'] : 
-// 				$elem['href'];
-// 			////If script[depth] and step match, build and set
-// 			$this->debug("step: ".$step. " script: ". $this->script[$depth]);			
-// 			$this->debug('entering step/script compare');
-// 			if ($step == $this->script[$depth]) {		
-// 				$this->debug('in step/script compare');
-// 				////add href to path
-// 				$path .= $elem['href'];
-// 				////update return object
-// 				$return['breadcrumbs'][] = array('href'=> $path, 'display'=>(string)$elem['display']);
-// 				$return['pagetitle'] = (string) $elem['display'];
-// 				////end of the line? return
-// 				$this->debug('entering depth compare');				
-// 				if ($depth + 1 == count($this->script)) {				
-// 					$this->debug('in depth compare');
-// 					return $return;
-// 				////otherwise, keep going
-// 				} else {
-// 					$this->debug('in not depth compare');
-// 					return $this->buildPathAndSetTitle(
-// 						array(
-// 							'xml'=>$elem, 
-// 							'path'=>$path, 
-// 							'depth'=>++$depth, 
-// 							'return'=>$return
-// 						)
-// 					);
-
-// 				}
-// 			}
-// 		}	////Close foreach $xml
-// 		return $return;
-
-// 	}
-
 	function parseData($options=array()) {
 		global $h, $site;
 		$defaults = array(
@@ -293,6 +222,7 @@ class Menu {
 	///////////////////////////////////////////////////
 	function xmlMenu2array($options=array()) {
 		global $h;
+		
 		$d = $this->debugOn && false; 	////debug
 		$defaults = array(
 			'xml' => $this->xml,	////Xml to parse -- used in recursion
@@ -305,6 +235,7 @@ class Menu {
 		
 		$opts = $h->extend($defaults, $options);
 		$array = array();
+
 		foreach ($opts['xml'] as $tagname => $node) {
 			$item = array();			
 			foreach ($node->attributes() as $key => $value) {

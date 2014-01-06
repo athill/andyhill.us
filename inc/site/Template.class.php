@@ -1,6 +1,4 @@
 <?php
-$h = html::singleton();
-
 class Template {
 	public $template;
 	private $templateText = "default";

@@ -1,7 +1,9 @@
 <?php
+require_once('../inc/setup.inc.php');
+$page = new Page(array(
+	'template'=>'none'
+));
 
-$local['template'] = 'none';
-require_once('../inc/application.php');
 //// set category
 $category = (array_key_exists('category', $_GET)) ? $_GET['category'] : 'Wires';
 

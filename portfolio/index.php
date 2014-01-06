@@ -1,6 +1,8 @@
 <?php
-$local['stylesheets'] = array('portfolio.css');
-require_once("../inc/application.php");
+require_once("../inc/setup.inc.php");
+$page = new Page(array(
+	'stylesheets'=>array('portfolio.css')
+));
 
 $text=<<<EOT
 <p>
@@ -64,5 +66,5 @@ foreach ($sites as $site2) {
 		$site2->render();
 }
 
-$template->footer();
+$page->end();
 ?>

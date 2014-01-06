@@ -4,14 +4,11 @@ include("../inc/setup.inc.php");
 $root = dirname($_SERVER['SCRIPT_NAME']);
 $includeroot = str_replace("/dev", "", $root);
 $page = new Page(array(
-
+	'jsModules'=>array('treemenu'=>true),
+	'leftSideBar'=>array('type' =>'menu', 'args' => array()),
+	'stylesheets'=>array($includeroot."/quotes.css")
 ));
 
-
-// $local['jsModules']['treemenu'] = true;
-// $local['leftSideBar'] = array('type' =>'menu', 'args' => array());
-// $local['stylesheets'] = array($includeroot."/quotes.css");
-// include("../inc/application.php");
 $url = 'http://'.$_SERVER['HTTP_HOST'].$root;
 $content = <<<EOT
 This directory uses Apache Web Server's 
@@ -51,7 +48,7 @@ if (!array_key_exists('REDIRECT_URL', $_SERVER)) {
 
 	if (is_dir($file)) {
 //		$h->tbr('directory');
-		$template->menu->menuList();
+		$site['menu']->menuList();
 	} else if (file_exists($file.'.txt')) {
 		$h->h(1, $pageTitle);
 		include_once("Quote.class.php");
