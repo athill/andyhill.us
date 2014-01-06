@@ -27,11 +27,14 @@ class Api {
 	}
 
 	public function get($method, $params=array()) {
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $this->getUrl($method, $params));
-		curl_setopt($ch, CURLOPT_HEADER, false);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		$content = curl_exec($ch);
+		// $ch = curl_init();
+		// curl_setopt($ch, CURLOPT_URL, $this->getUrl($method, $params));
+		// curl_setopt($ch, CURLOPT_HEADER, false);
+		// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		// $content = curl_exec($ch);
+		$url = $this->getUrl($method, $params);
+		// echo $url;
+		$content = file_get_contents($url);
 		return json_decode($content, true);
 	}
 

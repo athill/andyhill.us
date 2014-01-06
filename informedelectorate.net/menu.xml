@@ -5,6 +5,8 @@
 	</links>
 	<links href="/floor_updates/" display="Floor Updates">
 	</links>	
+	<links href="/state_bills/" display="State Bills">
+	</links>	
 <!--	<links href="/resume/" display="Resume">
 		<link href="print.php" display="Print" target="_blank"/>
 		<link href="resume.pdf" display="Download" target="_blank"/>

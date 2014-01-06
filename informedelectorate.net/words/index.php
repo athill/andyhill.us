@@ -3,7 +3,6 @@ require_once('../inc/setup.inc.php');
 
 $page = new Page(array(
 	'jsModules'=>array('d3'=>true),
-	'scripts'=>array('scripts.js')
 ));
 /*$api_key = '0f9d6efec2874d029e55c76f67f08a88';
 $baseurl = 'http://api.realtimecongress.org/api/v1/';
@@ -91,7 +90,8 @@ if (array_key_exists('words', $_GET)) {
 		);
 	}
 
-	$h->script('var json='.json_encode($graph), true);
+	$h->script('var json='.json_encode($graph));
+	$h->scriptfile('scripts.js');
 }
 // $h->pa($final);
 

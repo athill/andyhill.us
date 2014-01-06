@@ -27,7 +27,7 @@ $site = array(
 	'filedir' => dirname($_SERVER['SCRIPT_FILENAME']),
 	"isTST" => $webroot != "",
 	"view" => $self,
-	"siteName" 	=> "informedelectorate.us",
+	"siteName" 	=> "InformedElectorate.net",
 	"leftSideBar" => array('type'=>"none", 'args'=>array()),
 	"rightSideBar" => "none",
 	"template" => "informedelectorate",

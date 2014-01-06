@@ -13,12 +13,14 @@ $sun = new Sunlight();
 
 
 
-$data = $sun->get('realtime', 'floor_updates', array());
+$data = $sun->get('congress3', '/floor_updates', array());
 // $h->pa($data['floor_updates']);
+
+// $h->pa($data);
 
 
 $tdata = array();
-foreach ($data['floor_updates'] as $update) {
+foreach ($data['results'] as $update) {
 	// $h->cotr();
 	// $date = formatDate($update['legislative_day']);
 	$bills = array();
@@ -32,7 +34,7 @@ foreach ($data['floor_updates'] as $update) {
 	$tdata[] = array(
 		getTime($update['timestamp']),
 		ucfirst($update['chamber']),
-		trim($h->rtn('liArray', array('ol', $update['events']))),
+		$update['update'],
 		trim($h->rtn('linkList', array($bills)))
 	);
 }	
@@ -40,7 +42,7 @@ foreach ($data['floor_updates'] as $update) {
 $h->simpleTable(array(
 	'headers'=>array('Date', 'Chamber', 'Event', 'Bills'),
 	'data'=>$tdata,
-	'atts'=>'border="1"'
+	'atts'=>'class="data-table"'
 ));
 // $h->ctable();
 $page->end();
@@ -53,7 +55,7 @@ function formatDate($datestring) {
 }
 
 function getTime($timestamp) {
-	return date('m/d/Y G:ia', strtotime($timestamp));
+	return date('m/d/Y n:ia', strtotime($timestamp));
 }
 
 ?>

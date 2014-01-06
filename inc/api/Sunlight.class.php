@@ -7,9 +7,14 @@ class Sunlight extends Api {
 
 	public function get($collection, $method, $params=array()) {
 		switch ($collection) {
+			//// deprecated
 			case 'congress':
 				$this->url = 'http://services.sunlightlabs.com/api/';
 				////http://services.sunlightlabs.com/api/api.method.format?apikey=YOUR_API_KEY&<params>
+				break;
+			case 'congress3':
+				$this->url = 'http://congress.api.sunlightfoundation.com';
+				$this->separator = '/';
 				break;
 			case 'openstates':
 				$this->url = 'http://openstates.org/api/v1/';
@@ -24,6 +29,7 @@ class Sunlight extends Api {
 				$this->url = 'http://transparencydata.com/api/1.0/';
 				////http://transparencydata.com/api/1.0/<method>.<format>
 				break;
+			//// deprecated
 			case 'realtime':
 			default:
 				$this->url = 'http://api.realtimecongress.org/api/v1/';
@@ -34,10 +40,10 @@ class Sunlight extends Api {
 	}
 
 	function getFullName($d) {
-		$name = $d['firstname'];
-		if ($d['middlename'] != '') $name .= ' '.$d['middlename'];
+		$name = $d['first_name'];
+		if ($d['middle_name'] != '') $name .= ' '.$d['middle_name'];
 		if ($d['nickname'] != '') $name .= ' ('.$d['nickname'].')';
-		$name .= ' '.$d['lastname'];		
+		$name .= ' '.$d['last_name'];		
 		return $name;
 	}
 

@@ -6,7 +6,7 @@ class TemplateInstance {
 
 
 	public $bodyAtts = 'id="default" class="default"';	
-	public $stylesheets = array("/css/main.css");
+	public $stylesheets = array("/css/informedelectorate.css");
 	public $scripts = array();
 	private $base;
 	
@@ -32,11 +32,11 @@ class TemplateInstance {
 		global $h, $site;
 		////header container
 		$h->otag('header', 'id="header"');
-		$h->odiv('id="img-container"');
 		////Header title
 		$pageTitle = "";
-		$h->div($site['siteName'], 'id="page-title-drop" class="page-title-base"');
-		$h->div($site['siteName'], 'id="page-title" class="page-title-base"');
+		$h->div($site['siteName'], 'id="page-title"');
+		// $h->div($site['siteName'], 'id="page-title-drop" class="page-title-base"');
+		// $h->div($site['siteName'], 'id="page-title" class="page-title-base"');
 		$h->ctag('header');		////close header
 		////Global Navigation
 		$h->otag('nav', 'id="global-nav"');		
