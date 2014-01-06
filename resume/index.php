@@ -21,6 +21,6 @@ if ($hasHeader) {
 include_once("resume.inc.php");
 
 if ($hasHeader) { 
-	$template->footer();	
+	$page->end();	
 } 
 ?>
