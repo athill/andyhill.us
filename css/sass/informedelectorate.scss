@@ -1,7 +1,10 @@
+$blue: #004;
+$red: darkred;
+
 body {
   margin: 0;
   padding: 0;
-  background: #000044;
+  background: $blue;
   font-family: Verdana, Ariel, sans;
   font-size: 10pt; }
 
@@ -40,7 +43,7 @@ header, footer, nav, section, article {
 #img-container {
   height: 90px;
   position: relative;
-  background: darkred;
+  background: $red;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
@@ -55,9 +58,9 @@ header, footer, nav, section, article {
   position: absolute;
   left: 52px;
   top: 32px;
-  color: #000044;
+  color: $blue;
   font-size: 4em;
-  text-shadow: 2px 2px darkred; }
+  text-shadow: 2px 2px $red; }
 
 #headerTitle {
   position: absolute;
@@ -83,26 +86,26 @@ header, footer, nav, section, article {
   color: #FFF !important; }
 
 .sf-menu li {
-  background: darkred; }
+  background: $red; }
 
 .sf-menu ul li {
-  background: darkred; }
+  background: $red; }
 
 .sf-menu ul ul li {
-  background: darkred; }
+  background: $red; }
 
 .sf-menu li:hover,
 .sf-menu li.sfHover {
-  background: #000044; }
+  background: $blue; }
 
 .sf-menu li.active {
-  background: #000044; }
+  background: $blue; }
 
 .sf-menu li.active > a {
   color: white !important; }
 
 .sf-menu li.active:hover {
-  background: #000044; }
+  background: $blue; }
 
 .sf-menu li.active > a {
   color: white !important; }
@@ -237,7 +240,7 @@ header, footer, nav, section, article {
  * Footer
  **********************/
 footer {
-  background: darkred;
+  background: $red;
   color: white;
   text-align: center;
   padding: 0.5em;
