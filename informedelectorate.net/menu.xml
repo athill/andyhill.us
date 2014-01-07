@@ -1,6 +1,8 @@
 <menu>
 	<links href="/" display="Home">
 	</links>
+	<links href="/reps/" display="Representatives">
+	</links>	
 	<links href="/words/" display="Words">
 	</links>
 	<links href="/floor_updates/" display="Floor Updates">
