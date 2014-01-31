@@ -31,6 +31,15 @@ foreach ($pages as $item) {
 	$h->p($item['descr']);
 }
 
+// $resources = array(
+// 	array('category'=>'', 
+// 		'children'=>array(
+// 			array('href'=>'', 'display'=>''),
+// 		)
+// 	);
+	
+// );
+
 
 $page->end();
 

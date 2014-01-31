@@ -29,22 +29,28 @@ header, footer, nav, section, article {
  * Header 
  *******************/
 #header {
-  /*	background: blue; */
+  background: url('../img/informedelectorate-header-short.png') repeat-x 1em 1em;
   position: relative;
   overflow: auto;
   margin-top: 2em;
   padding: 1em;
   height: 90px; }
+/*
+#header-img {
+  padding: 2em;
+  margin: 2em;
+  background: url('../img/informedelectorate-header.png') no-repeat;
+}*/
 
 /************ Images at top of page */
-#img-container {
+/*#img-container {
   height: 90px;
   position: relative;
   background: darkred;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
-  padding: 15px; }
+  padding: 15px; }*/
 
 /************ Page title */
 .page-title-base {
@@ -52,12 +58,13 @@ header, footer, nav, section, article {
   padding: 5px; }
 
 #page-title {
+  font-family: 'UnifrakturCook', cursive;
   position: absolute;
   left: 52px;
   top: 32px;
-  color: #000044;
+  color: white;
   font-size: 4em;
-  text-shadow: 2px 2px darkred; }
+  text-shadow: 2px 2px #004; }
 
 #headerTitle {
   position: absolute;

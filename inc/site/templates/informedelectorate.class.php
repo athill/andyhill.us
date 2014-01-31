@@ -6,7 +6,7 @@ class TemplateInstance {
 
 
 	public $bodyAtts = 'id="default" class="default"';	
-	public $stylesheets = array("/css/informedelectorate.css");
+	public $stylesheets = array("/css/informedelectorate.css", 'http://fonts.googleapis.com/css?family=UnifrakturCook:700');
 	public $scripts = array();
 	private $base;
 	
@@ -34,6 +34,7 @@ class TemplateInstance {
 		$h->otag('header', 'id="header"');
 		////Header title
 		$pageTitle = "";
+		// $h->img('../img/informedelectorate-header.png', '', 'id="header-img"');
 		$h->div($site['siteName'], 'id="page-title"');
 		// $h->div($site['siteName'], 'id="page-title-drop" class="page-title-base"');
 		// $h->div($site['siteName'], 'id="page-title" class="page-title-base"');
