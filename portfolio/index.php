@@ -59,6 +59,8 @@ place and he\'s a good guy, you should
 	new site2("Metaprogramming in ColdFusion", "cfmeta/", "img/cfmeta.png", 
 		'Presentation I did for cfmeetup. <br /><a href="cfmeta/slideshow.pdf" target="_blank">PDF</a>
 		 ... <a href="https://github.com/athill/cfmeta/" target="_blank">GitHub</a>'),	
+	new site2("InformedElectorate.net", "http://InformedElectorate.net", "img/informedelectorate.png", 
+		'Skeleton of site idea that would encourage civil engagement.'),		
 
 );
 
