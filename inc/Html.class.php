@@ -369,6 +369,11 @@ class Html extends Xml {
 	 * @param	cols	string	default="" list of column widths which will generate <col width="X" /> tags
 	 */	
 	public function otable($atts='', $rowAtts='', $cols='') {
+		$this->otabletr($atts, $rowAtts, $cols);
+
+	}
+
+	public function otabletr($atts='', $rowAtts='', $cols='') {
 		$this->otag('table', $atts);
 		if ($cols != "") {
 			////TODO WHY WON'T THIS WORK?
@@ -390,10 +395,14 @@ class Html extends Xml {
 	/**
 	 * Closes a table
 	 */
-	public function ctable() {
+	public function ctrtable() {
 		$this->ctag('tr', true);
 		$this->ctag('tbody');
 		$this->ctag('table');
+	}
+
+	public function ctable() {
+		$this->ctrtable();
 	}
 
 	
@@ -809,7 +818,7 @@ class Html extends Xml {
 
 
 	public function checkId($name, $atts) {
-		if (strpos("id=", $atts) === false) $atts = ' id="'.$name.'"' . $this->fixAtts($atts);
+		if (strpos($atts, "id=") === false) $atts = ' id="'.$name.'"' . $this->fixAtts($atts);
 		return $atts;
 	}
 
@@ -947,7 +956,7 @@ class Html extends Xml {
 			else if ($container == "div" || ($container == "none" && $selectall)) $this->odiv($containerAtts);
 			for ($i = 0; $i < count($vals); $i++) {
 				//echo "<br>";
-				$this->br();
+				// $this->br();
 				if ($container == "table") $this->otd();
 				$value = $vals[$i];
 				$labl = $value;
@@ -985,6 +994,7 @@ class Html extends Xml {
 				$attributes = $this->combineClassAtts($attributes);
 				//if (id != value) 
 				$attributes .= $this->fixAtts('id="'.$id.'"');
+				// $this->tbr($attributes);
 				$this->input($type, $name, $value, $attributes);
 				if (!$labelfirst) $this->label($id, $labl, $lblAtt);
 				//$this->tbr($labl);
@@ -997,8 +1007,9 @@ class Html extends Xml {
 					}
 				}	
 				if ($container == "table") $this->ctd();
-				if ($numCols > 0 && ($i % $numCols) == 0 && $i < count($vals)) {
-					if ($container == "table") $this->corow();
+				if ($numCols > 0 && (($i+1) % $numCols) == 0 && $i < count($vals)) {
+					// $this->tbr($numCols.'|'.$i);
+					if ($container == "table") $this->cotr();
 					else $this->br();
 				}
 			}
@@ -1076,7 +1087,9 @@ class Html extends Xml {
 			}
 			$atts = preg_replace($re, "", $atts);
 			$classes = array_unique($classes); 
-			$atts = $atts . ' class="'.implode(' ', $classes).'"';
+			if (count($classes)) {
+				$atts = $atts . ' class="'.implode(' ', $classes).'"';
+			}
 		}
 		return $atts;
 	}				
