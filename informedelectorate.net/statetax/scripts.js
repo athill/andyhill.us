@@ -45,7 +45,7 @@ $(function() {
 	var w = 400;
 	var h = 250;
 	dollars = d3.format('$0,0');
-
+	console.log(d3.version);
 	var tip = d3.tip()
 	  .attr('class', 'd3-tip')
 	  .offset([0, -10])

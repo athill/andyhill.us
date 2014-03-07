@@ -46,7 +46,7 @@ class JsModule {
 			////D3.js
 			"d3" => array(
 				// "scripts" => array("http://d3js.org/d3.v3.min.js"),
-				"scripts" => array("/js/d3.min.js"),
+				"scripts" => array("/js/d3-3.4.3.min.js"),
 				"styles" => array("")
 			),
 			////D3.js
