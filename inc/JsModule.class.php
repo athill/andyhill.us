@@ -45,14 +45,20 @@ class JsModule {
 			),
 			////D3.js
 			"d3" => array(
-				"scripts" => array("http://d3js.org/d3.v3.min.js"),
+				// "scripts" => array("http://d3js.org/d3.v3.min.js"),
+				"scripts" => array("/js/d3.min.js"),
 				"styles" => array("")
 			),
 			////D3.js
 			"d3.geo" => array(
-				"scripts" => array("http://d3js.org/d3.geo.projection.v0.min.js"),
+				"scripts" => array("/js/d3.geo.projection.v0.min.js"),
 				"styles" => array("")
 			),
+			////D3.js
+			"d3.tip" => array(
+				"scripts" => array("/js/d3-tip/index.js"),
+				"styles" => array("")
+			),			
 
 			"ui" => array(
 				"scripts" => array("/js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"),
