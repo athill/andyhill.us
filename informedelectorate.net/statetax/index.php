@@ -49,6 +49,25 @@ foreach ($combos as $combo) {
 $categories[] = implode('+', $areas);
 $categories[] = 'Total';
 sort($categories);
+$left = array();
+$right = array();
+$half = ceil(count($categories)/2);
+foreach ($categories as $i=>$category) {
+	if ($i < $half) $left[] = $category;
+	else $right[] = $category;
+}
+$categories = array();
+foreach ($left as $i=>$lf) {
+	$categories[] = $lf;
+	if ($i < count($right)) {
+		$categories[] = $right[$i];
+	}
+}
+// $h->pa($left);
+// $h->pa($right);
+
+//$categories = array_merge($left, $right);
+
 $h->otabletr('id="interface-container"');
 //// Map
 $h->td('', 'id="state_map"');
