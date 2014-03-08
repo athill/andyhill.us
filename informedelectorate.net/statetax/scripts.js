@@ -23,35 +23,33 @@ for (var type in max) {
 							.range([255, 0])
 }
 
+//Width and height
+var w = 400;
+var h = 250;
+dollars = d3.format('$0,0');
+//// set up tooltip
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([0, -10])
+  .html(function(d) {
+  	var area = $('input[name=option]:checked').val();
+  	var name = d.properties.NAME;
+    return getTooltip(name, area);
+});
+
+//Define map projection
+var projection = d3.geo.albersUsa()
+					   .translate([w/2, h/2])
+					   .scale([500]);
+
+//Define path generator
+var path = d3.geo.path()
+				 .projection(projection);
 
 $(function() {
-	//Width and height
-	var w = 400;
-	var h = 250;
-	dollars = d3.format('$0,0');
-	//// set up tooltip
-	var tip = d3.tip()
-	  .attr('class', 'd3-tip')
-	  .offset([0, -10])
-	  .html(function(d) {
-	  	var area = $('input[name=option]:checked').val();
-	  	// console.log(d);
-	  	var name = d.properties.NAME;
-	  	//
-	    return getTooltip(name, area);
-	  });
-
 	//// area
 	var area = $('input[name=option]:checked').val();
-
-	//Define map projection
-	var projection = d3.geo.albersUsa()
-						   .translate([w/2, h/2])
-						   .scale([500]);
-
-	//Define path generator
-	var path = d3.geo.path()
-					 .projection(projection);
+	
 
 	//Create SVG element
 	var svg = d3.select("#state_map")
@@ -83,7 +81,8 @@ $(function() {
 	//// Change option
 	$('#interface-container').on('click', 'input[name=option]', function(e)  {
 		var area = $('input[name=option]:checked').val();
-		$('.state').each(function(i, elem) {
+		var $states = $states || $('.state');
+		$states.each(function(i, elem) {
 			var name = $(this).attr('id');
 			$(this).css('fill', getRgb(name, area));
 		});
@@ -98,20 +97,18 @@ function getRgb(name, area) {
 	var areas = area.split('+');
 	//// create area in scales if it doesn't exist
 	if (!(area in scales)) {
-		var mx = 0;
-		for (var i = 0; i < areas.length; i++) {
-			mx += parseInt(max[areas[i]]);
-		}
+		var mx = areas.reduce(function(p, c) { 
+			return p + parseInt(max[c]); 
+		}, 0);
 		scales[area] = d3.scale.linear()	
 							.domain([0, mx])
 							.range([255, 0]);
 	}
 	//// build rgb
+	var value = areas.reduce(function(p, c) {
+		return p + parseInt(data[name][c]);
+	}, 0);
 	for (var color in colorcode) {
-		var value = 0;
-		for (var i = 0; i < areas.length; i++) {
-			value += parseInt(data[name][areas[i]]);
-		}
 		rgb[color] = Math.floor(scales[area](value)*colorcode[color]);
 	}
 	var rgbstr = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
@@ -122,11 +119,9 @@ function getTooltip(name, area) {
 	var value = name;
 	if (name in data) {
 		var areas = area.split('+');
-		var total = 0;
-		for (var i = 0; i < areas.length; i++) {
-			var a = areas[i];
-			total += parseInt(data[name][a]);
-		}
+		var total = areas.reduce(function(p, c) {
+			return p + parseInt(data[name][c]);
+		}, 0);
 		value += ' - ' + dollars(total);
 	} 
 	return value;	

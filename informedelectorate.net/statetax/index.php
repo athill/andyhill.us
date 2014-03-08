@@ -104,6 +104,7 @@ $h->p('This was created using the '.hlink('http://d3js.org/', 'D3').', '.hlink('
 
 //// scripts
 $h->script('var data = '.file_get_contents('data.json').';');
+// $h->script('var json = '.file_get_contents($site['fileroot'].'/js/states.json').';');
 $h->scriptfile('scripts.js');
 
 //// done
