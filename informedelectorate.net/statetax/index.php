@@ -9,6 +9,8 @@ $page = new Page(array(
 	'stylesheets'=>array('styles.css')
 ));
 
+$h->h1('State Taxes');
+
 
 //// Intro
 $h->p('Use the radio buttons on the right to view the various combinations of per capita state and local tax burdens. Lighter shades indicate lower taxes. Hover over a state to see its per capita tax burden for the selected combination. Except for Total, I\'ve offered all combinations of the other fields to see how various tax types accumulate when combined.');
