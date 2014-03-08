@@ -1,44 +1,28 @@
-// var data = {};
-var max = {};
-var types = [];
-var scales = {};
-var colorcode = {
+var max = {};		//// maximum values for primary areas
+var scales = {};	//// scaling functions by area
+var colorcode = {	//// color multipliers
 	r: 0.2,
 	g: 1,
 	b: 0.1
 };
-var dollars;
-// var app = {
-// 	color: color
-// };
+var dollars;		//// format function for dollars
 
-// alert(app.color.g);
-
-
-// $.getJSON('data.json', function(d) {
-// 	data = d;
-	
-	
+//// Build max map	
 for (var state in data) {
 	for (var type in data[state]) {
-		if (!(type in max)) {
-			// console.log('not in max '+type);
-			types.push(type);
+		if (!(type in max) || parseInt(data[state][type]) > parseInt(max[type])) {
 			max[type] = data[state][type];
-		} else if (parseInt(data[state][type]) > parseInt(max[type])) {
-			max[type] = data[state][type];
-		} else {
-			// console.log(max[type] + ': ' +data[state][type]);
 		}
 	}
 }
+
+//// Build basic scaling functions
 for (var type in max) {
 	scales[type] = d3.scale.linear()
 							.domain([0, max[type]])
 							.range([255, 0])
 }
-	// console.log(scales);
-// });
+
 
 $(function() {
 	//Width and height
@@ -57,7 +41,7 @@ $(function() {
 	    return getTooltip(name, area);
 	  });
 
-	//// AREA
+	//// area
 	var area = $('input[name=option]:checked').val();
 
 	//Define map projection
@@ -74,7 +58,7 @@ $(function() {
 				.append("svg")
 				.attr("width", w)
 				.attr("height", h);
-
+	//// Initialize tooltip
 	svg.call(tip);
 
 	//Load in GeoJSON data
@@ -94,7 +78,6 @@ $(function() {
 		   	})
 		   .on('mouseover', tip.show)
 		   .on('mouseout', tip.hide)
-		   // .append("title")
 	});
 
 	//// Change option
@@ -148,25 +131,3 @@ function getTooltip(name, area) {
 	} 
 	return value;	
 }
-
-
-
-// function getMult(name, area) {
-// 		var mult = 1;
-
-// 		if (name in data && max[area] !== 0) {
-// 			var value = parseInt(data[name][area]);
-// 			var mx = max[area];
-// 			mult = (value/mx)/100; 
-// 			console.log(name+'; value: '+ value +'max: '+mx+' mult: '+mult);
-// 		} else {
-// 			mult = 0.5;
-// 		} 
-// 		mult = ((mult*255));
-// 		return mult;
-// }
-
-// function numberWithCommas(x) {
-//     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-// }
-	
