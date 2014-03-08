@@ -4,6 +4,6 @@
 js/jquery-ui-1.10.3.custom/development-bundle/
 .sublime-workspace
 datasources.json
-js/npm-debug.log
+npm-debug.log
 js/topojson-master/
 js/us-atlas/

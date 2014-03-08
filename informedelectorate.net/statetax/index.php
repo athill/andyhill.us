@@ -72,7 +72,7 @@ $h->ctd();
 $h->ctrtable('/#interface-container');
 
 $h->p('<small>Source: US Census Bureau, 2011 reports.<br />
-* The US Census Bureau does not classify revenue from Texas’s margin tax as corporate income tax revenue.<br />
+* The US Census Bureau does not classify revenue from Texas\'s margin tax as corporate income tax revenue.<br />
 Note: "$0" means no tax was collected or the amount was too insignificant to count.<br />
 State Tax Collections per Capita by Category, 2011</small>');
 

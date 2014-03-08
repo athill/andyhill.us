@@ -51,6 +51,7 @@ class Template {
 	  if (array_key_exists('headerExtra', $site)) {
 		$h->tnl($site['headerExtra']);  
 	  }
+	  $h->script('var webroot = "'.$site['webroot'].'";');
 	  $h->body($this->template->bodyAtts);
 	  if ($this->hasSkipNav) $this->skipNav();		
 	}
