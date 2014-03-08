@@ -45,7 +45,7 @@ $(function() {
 	var w = 400;
 	var h = 250;
 	dollars = d3.format('$0,0');
-
+	//// set up tooltip
 	var tip = d3.tip()
 	  .attr('class', 'd3-tip')
 	  .offset([0, -10])
@@ -57,11 +57,8 @@ $(function() {
 	    return getTooltip(name, area);
 	  });
 
-
-
 	//// AREA
 	var area = $('input[name=option]:checked').val();
-
 
 	//Define map projection
 	var projection = d3.geo.albersUsa()
@@ -97,19 +94,15 @@ $(function() {
 		   	})
 		   .on('mouseover', tip.show)
 		   .on('mouseout', tip.hide)
-		   .append("title")
+		   // .append("title")
 	});
 
-
+	//// Change option
 	$('#interface-container').on('click', 'input[name=option]', function(e)  {
 		var area = $('input[name=option]:checked').val();
 		$('.state').each(function(i, elem) {
 			var name = $(this).attr('id');
 			$(this).css('fill', getRgb(name, area));
-			// if (name in data) {
-			// 	$title = $('title', $(this));
-			// 	$title.text(getTooltip(name, area));
-			// }
 		});
 	});
 });
@@ -118,26 +111,28 @@ $(function() {
 
 function getRgb(name, area) {
 	if (!(name in data)) return {};
-	// var mult = getMult(name, area);
 	var rgb = {};
 	var areas = area.split('+');
-	// console.log(areas);
-	for (var color in colorcode) {
-		rgb[color] = 0;
-		var str = '';
+	//// create area in scales if it doesn't exist
+	if (!(area in scales)) {
+		var mx = 0;
 		for (var i = 0; i < areas.length; i++) {
-			var a = areas[i];
-			var value = data[name][a];
-			var scale = scales[a](value);
-			var c = parseInt(colorcode[color]*scale);
-			rgb[color] += c;
-			str += value+'|'+c+'-';
+			mx += parseInt(max[areas[i]]);
 		}
-		rgb[color] = Math.floor(rgb[color] / areas.length);
-		// console.log(rgb[color]+' '+areas.length);
-
+		scales[area] = d3.scale.linear()	
+							.domain([0, mx])
+							.range([255, 0]);
 	}
-	return 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
+	//// build rgb
+	for (var color in colorcode) {
+		var value = 0;
+		for (var i = 0; i < areas.length; i++) {
+			value += parseInt(data[name][areas[i]]);
+		}
+		rgb[color] = Math.floor(scales[area](value)*colorcode[color]);
+	}
+	var rgbstr = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
+	return rgbstr;
 }
 
 function getTooltip(name, area) {
