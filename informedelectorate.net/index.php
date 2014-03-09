@@ -24,7 +24,7 @@ $pages = array(
 	array('href'=>'/state_bills/', 
 			'header'=>'Current State Bills', 
 			'descr'=>'Current bills in selected state. Includes links to <a href="http://openstates.org/" target="_blank">Open States</a>'),
-	array('href'=>'/statetaxes/', 
+	array('href'=>'/statetax/', 
 			'header'=>'Comparison of State Tax Revenues ', 
 			'descr'=>'State tax revenue per capita by instrument. Interactive map.'),
 );
