@@ -38,7 +38,7 @@ class TemplateInstance {
 		$h->div($site['siteName'], 'id="page-title"');
 		// $h->div($site['siteName'], 'id="page-title-drop" class="page-title-base"');
 		// $h->div($site['siteName'], 'id="page-title" class="page-title-base"');
-		$h->div('<q>Whenever the people are well-informed, they can be trusted with their own government</q> &ndash;<cite>Thomas jefferson, Letter to Richard Price (8 January 1789)</cite>', 'id="citation"');
+		$h->div('<q>Whenever the people are well-informed, they can be trusted with their own government</q> &ndash;<cite>Thomas Jefferson, Letter to Richard Price (8 January 1789)</cite>', 'id="citation"');
 		$h->ctag('header');		////close header
 		////Global Navigation
 		$h->otag('nav', 'id="global-nav"');		
