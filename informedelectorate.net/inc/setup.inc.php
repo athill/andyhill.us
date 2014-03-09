@@ -5,7 +5,7 @@ date_default_timezone_set('America/New_York');
 
 ////Discover webroot and fileroot
 $webroot = "";
-$basefileroot = "/home/andyhil/public_html";
+$basefileroot = "/home/andyhil/public_html/informedelectorate.net";
 ////dev environments
 if (stripos($_SERVER['SCRIPT_NAME'], "/new/") === 0) {
 	$webroot .= "/new";
