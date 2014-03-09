@@ -6,7 +6,10 @@ class TemplateInstance {
 
 
 	public $bodyAtts = 'id="default" class="default"';	
-	public $stylesheets = array("/css/informedelectorate.css", 'http://fonts.googleapis.com/css?family=UnifrakturCook:700');
+	public $stylesheets = array("/css/informedelectorate.css", 
+								// 'http://fonts.googleapis.com/css?family=UnifrakturCook:700',
+								'http://fonts.googleapis.com/css?family=UnifrakturMaguntia',
+	);
 	public $scripts = array();
 	private $base;
 	

@@ -58,10 +58,11 @@ header, footer, nav, section, article {
   padding: 5px; }
 
 #page-title {
-  font-family: 'UnifrakturCook', cursive;
+  /*font-family: 'UnifrakturCook', cursive;*/
+  font-family: 'UnifrakturMaguntia', cursive;
   position: absolute;
   left: 20px;
-  top: 00px;
+  top: 12px;
   color: white;
   font-size: 4em;
   text-shadow: 2px 2px #004; }
