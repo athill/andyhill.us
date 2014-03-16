@@ -3,11 +3,7 @@ session_start();
 date_default_timezone_set('America/New_York');
 
 
-<<<<<<< HEAD
-///Discover webroot and fileroot
-=======
 ////Discover webroot and fileroot
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59
 $webroot = "";
 $basefileroot = "/home/andyhil/public_html/informedelectorate.net";
 ////dev environments
@@ -109,8 +105,4 @@ if (file_exists($dirSettings)) {
 }
 if (isset($directory['jsModules'])) $directory['jsModules'] = array_merge($site['jsModules'], $directory['jsModules']) or die("???");
 if (isset($directory)) $site = array_merge($site, $directory) or die("???");
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59

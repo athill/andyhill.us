@@ -738,13 +738,8 @@ abstract class BaseFacebook
   protected function getCode() {
 
       if (!isset($_REQUEST['code']) || !isset($_REQUEST['state']) || $this->state === null) {
-<<<<<<< HEAD
       print_r($this->state);
       print_r($_REQUEST['state']);
-=======
-      // print_r($this->state);
-      // print_r($_REQUEST['state']);
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59
         return false;
       }
 

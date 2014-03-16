@@ -1,18 +1,10 @@
 <?php
-<<<<<<< HEAD
-spl_autoload_register(function($class_name) {
-	global $site;		
-    //class directories
-    $directories = array(
-    	'',
-=======
 spl_autoload_register('my_autoloader');
 
 function my_autoloader($class_name) {
 	global $site;		
     //class directories
     $directories = array(
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59
         $site['incroot'].'/',
     );
    
@@ -27,10 +19,6 @@ function my_autoloader($class_name) {
             return;
         }           
     }
-<<<<<<< HEAD
-});
-=======
  }
 
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59
 ?>

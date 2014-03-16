@@ -86,11 +86,7 @@ $h->choicegrid(array(
 						'container'=>'table',
 						'name'=>'option', 
 						'vals'=>$opts,
-<<<<<<< HEAD
-						'selected'=>array('income+sales+property+corporate')
-=======
 						'selected'=>array('corporate+income+property+sales')
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59
 				)
 );
 $h->ctd();

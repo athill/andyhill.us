@@ -37,20 +37,18 @@ foreach ($data['results'] as $item) {
 	// }
 }
 
+// print_r($results);
+
 
 $tmp = array();
 $keys = array_keys($results);
 $count = count($keys);
-<<<<<<< HEAD
-=======
 $final = array();
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59
 foreach ($keys as $i => $bioguide_id)  {
 	$tmp[] = $bioguide_id;
 	if ($i % 5 == 0 || $i == $count - 1) {
 		//echo 'in here ';
 		$data = $sun->get('congress', 'legislators.getList', array('bioguide_id'=>$tmp));
-<<<<<<< HEAD
 		foreach ($data['response']['legislators'] as $j => $leg) {
 			$d = $leg['legislator'];
 			//print_r($d);
@@ -68,7 +66,6 @@ foreach ($keys as $i => $bioguide_id)  {
 			);
 			//print_r($tmp2);
 			$results[$id] = array_merge($results[$id], $tmp2);
-=======
 		// $h->pa($data);
 		foreach ($data['response']['legislators'] as $j => $leg) {
 
@@ -93,19 +90,15 @@ foreach ($keys as $i => $bioguide_id)  {
 			} else {
 				// unset($results[$id]);
 			}
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59
 		}
 		$tmp = array();		
 	}
 }
 
-<<<<<<< HEAD
 $h->pa($results);
-=======
 $h->pa($final);
 
 
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59
 
 /*
 {"response": 

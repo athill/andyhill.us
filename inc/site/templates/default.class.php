@@ -117,19 +117,16 @@ class TemplateInstance {
 	}
 	
 	public function breadcrumbs() {
-<<<<<<< HEAD
 	  global $h, $breadcrumbs;
 //	  $h->pa($breadcrumbs);
 	  $h->odiv('id="breadcrumb"');
 	  $this->base->breadcrumbs(array('breadcrumbs'=>$breadcrumbs));
 	  $h->cdiv();		
-=======
 	  global $h, $site;
 //	  $h->pa($breadcrumbs);
 	  $h->onav('id="breadcrumb"');
 	  $this->base->breadcrumbs(array('breadcrumbs'=>$site['breadcrumbs']));
 	  $h->cnav();		
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59
 	}
 	
 	public function footer() {

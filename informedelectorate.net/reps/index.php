@@ -113,8 +113,4 @@ function render($item) {
 
 $page->end();
 
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59

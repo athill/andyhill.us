@@ -2,7 +2,7 @@
 /old/
 cgi-bin/
 php.ini
-*error_log
+*error_log*
 js/jquery-ui-1.10.3.custom/development-bundle/
 .sublime-workspace
 datasources.json
@@ -15,3 +15,4 @@ wgetLog_informed
 .sass-cache/
 informedelectorate.net/state_bills/cache/
 news/cache/
+error_log

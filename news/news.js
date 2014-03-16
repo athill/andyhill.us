@@ -80,11 +80,7 @@ function initLinks($element) {
 	//// Revert text to category
 	$element.html($element.data("category"));
 }
-<<<<<<< HEAD
 //// TODO: SCOPE
-=======
-//// Not used
->>>>>>> 7842472cc6c0e9b3a367fd0238969f9cd16eec59
 var news = {
 	clean: function(str) {
 		str.replace(/&lt;/g, '<')
