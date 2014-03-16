@@ -37,12 +37,13 @@ foreach ($data['results'] as $item) {
 	// }
 }
 
-print_r($sequence);
-//exit(1);
+// print_r($results);
+
 
 $tmp = array();
 $keys = array_keys($results);
 $count = count($keys);
+$final = array();
 foreach ($keys as $i => $bioguide_id)  {
 	$tmp[] = $bioguide_id;
 	if ($i % 5 == 0 || $i == $count - 1) {
@@ -65,12 +66,38 @@ foreach ($keys as $i => $bioguide_id)  {
 			);
 			//print_r($tmp2);
 			$results[$id] = array_merge($results[$id], $tmp2);
+		// $h->pa($data);
+		foreach ($data['response']['legislators'] as $j => $leg) {
+
+			$d = $leg['legislator'];
+			if (count($d) > 0) {
+				
+				$id = $d['bioguide_id'];
+				$name = $d['firstname'];
+				if ($d['middlename'] != '') $name .= ' '.$d['middlename'];
+				if ($d['nickname'] != '') $name .= ' ('.$d['nickname'].')';
+				$name .= ' '.$d['lastname'];
+				$tmp2 = array(
+					'name'=> $name,
+					'party'=>$d['party'],
+					'chamber'=>$d['chamber'],
+					'state'=>$d['state'],
+					'district'=>$d['district'],
+					'count'=>$results[$id]
+				);
+				//print_r($tmp2);
+				$final[$id] = $tmp2;
+			} else {
+				// unset($results[$id]);
+			}
 		}
 		$tmp = array();		
 	}
 }
 
-$h->pa($results);
+$h->pa($final);
+
+
 
 /*
 {"response": 
