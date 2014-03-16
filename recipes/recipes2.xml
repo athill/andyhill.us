@@ -1,0 +1,876 @@
+<?xml version="1.0"?>
+<recipes 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="recipes.xsd">
+	<recipe>
+		<name>Baked Rice With Cheese And Green Chilies</name>
+		<region>Chinese</region>
+		<ingredients>
+			<ingredient>
+				<type>Olive oil</type>
+				<quantity>1 T.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Onion</type>
+				<quantity>1 medium, chopped</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Brown rice</type>
+				<quantity>1.5 cups, cooked with water</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Cheddar cheese</type>
+				<quantity>8 oz., grated</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Ricotta</type>
+				<quantity>1 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Jalapeno peppers</type>
+				<quantity>2, minced</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Chopped green chilis</type>
+				<quantity>4 oz. can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Cilantro</type>
+				<quantity>.25 c., minced</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Cumin</type>
+				<quantity>.5 t.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Salt and pepper</type>
+				<quantity>To taste</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Preheat the oven to 350 degrees.</step>
+			<step> Heat the oil in a small skillet. Add the onion and saute over low heat until lightly browned.</step>
+			<step> In a mixing bowl, combine the onion with the rice and all the remaining ingredients. Stir together thoroughly.</step>
+			<step>Pour the mixture into a lightly oiled, 1 1/2-quart baking casserole.</step>
+			<step>Bake for 35 minutes, or until the top is golden brown and bubbly.</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Crab dip</name>
+		<region>Other</region>
+		<ingredients>
+			<ingredient>
+				<type>cream of shrimp soup</type>
+				<quantity>1 can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>cream cheese</type>
+				<quantity>8 oz</quantity>
+			</ingredient>
+			<ingredient>
+				<type>king crab</type>
+				<quantity>1 can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>lemon juice</type>
+				<quantity>to taste</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Mix</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Eggplant Parmesan</name>
+		<region>Italian</region>
+		<ingredients>
+			<ingredient>
+				<type>Eggplant</type>
+				<quantity>1 (2 lbs.)</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Salt</type>
+				<quantity>2 tsp</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Eggs</type>
+				<quantity>3</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Bread crumbs</type>
+				<quantity>1.5-2 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Olive oil</type>
+				<quantity>0.25 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Grated parmesan cheese</type>
+				<quantity>1 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Oregano</type>
+				<quantity>1 t.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Sliced mozzerella</type>
+				<quantity>0.25 lb.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Tomato Sauce</type>
+				<quantity>3 c.</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Peel eggplant and slice into 1/8 in. slices, salt and let drain for 30 min.</step>
+			<step>Pat dry.</step>
+			<step>Beat eggs wit 2 T water</step>
+			<step>Dip eggplant slices into eggs and then into crumbs</step>
+			<step>Heat 1/4 c. oil in large fry pan and saute eggplant slices until golden brown</step>
+			<step>Continue cooking eggplant until all is sauteed, using additional oil if needed</step>
+			<step>Place half the eggplant slices in 9 X 13 pan, sprinkle with 1/3 parmesan, 1/2 oregano, and 1/3 mozzarella.  Cover with half the tomato sauce.  Repeat layers, top with last of parmesan and mozzarella.</step>
+			<step>Bake in preheated 350 oven 30 min, or until bubbly.</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Hot mushroom cheese spread</name>
+		<region>Other</region>
+		<ingredients>
+			<ingredient>
+				<type>Mayonaise</type>
+				<quantity>1 C.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Italian dressing mix</type>
+				<quantity>1/2 package</quantity>
+			</ingredient>
+			<ingredient>
+				<type>cheddar</type>
+				<quantity>1 c. grated</quantity>
+			</ingredient>
+			<ingredient>
+				<type>mushrooms</type>
+				<quantity>8 oz can</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Mix</step>
+			<step>Bake 20-25 min. 350 deb.</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Karen Massey's Cheese Ball</name>
+		<region>Other</region>
+		<ingredients>
+			<ingredient>
+				<type>cream cheese</type>
+				<quantity>16 oz</quantity>
+			</ingredient>
+			<ingredient>
+				<type>green peeper</type>
+				<quantity>1/4 c. chopped</quantity>
+			</ingredient>
+			<ingredient>
+				<type>onion</type>
+				<quantity>2 t., minces</quantity>
+			</ingredient>
+			<ingredient>
+				<type>seasoned ssalt</type>
+				<quantity>1 t</quantity>
+			</ingredient>
+			<ingredient>
+				<type>crushed pineapple</type>
+				<quantity>8 oz can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>grated pecans</type>
+				<quantity>1 1/2 c.</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Mix</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Mock Chicken and Rice Casserole</name>
+		<region>Other</region>
+		<ingredients>
+			<ingredient>
+				<type>Medium onion, chopped</type>
+				<quantity>1</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Rice, uncooked</type>
+				<quantity>1 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Celery, chopped</type>
+				<quantity>1 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Carrots, chopped</type>
+				<quantity>1 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Soy chicken, diced</type>
+				<quantity>1 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Oil</type>
+				<quantity>1/4 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Water</type>
+				<quantity>2 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Veggie boullion cube</type>
+				<quantity>1</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Vegex or spike</type>
+				<quantity>1 t.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Mushroom soup</type>
+				<quantity>14 oz. can</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Combine onion, celery, rice, soy chicken, and carrots and place in 2 qt. casserole dish.</step>
+			<step>Combine remaining ingredients. Cook 3 minutes over medium heat.</step>
+			<step>Pour over other ingredients.</step>
+			<step>Cook at 350 degrees for 1 hour.</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Red Beans and Rice</name>
+		<region>Cajun</region>
+		<ingredients>
+			<ingredient>
+				<type>Dried kidney beans</type>
+				<quantity>2 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Vegetable broth</type>
+				<quantity>14 oz.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Whole Tomatoes</type>
+				<quantity>14 oz.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Veggie Bacon Bits</type>
+				<quantity>3 T</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Veggie Worcestershire sauce</type>
+				<quantity>1 T</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Chopped garlic</type>
+				<quantity>3 cloves</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Bay leaves</type>
+				<quantity>2</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Ceyenne pepper</type>
+				<quantity>1 T</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Soak beans overnight. Drain and rinse well.</step>
+			<step>In large pot, place beans covered in water until it boils. Simmer on low heat for 30 minutes. Rinse and drain well.</step>
+			<step>In a large saucepan, place the beans and other ingredients and simmer over very low heat for two or more hours, until most of the liquid has evaporated. Stir frequently during this process so that the bottom does not burn.</step>
+			<step>Remove the bay leaves.</step>
+			<step>With a slotted spoon, serve beans over a bed of rice.</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Seafood Enchiladas</name>
+		<region>Chinese</region>
+		<ingredients>
+			<ingredient>
+				<type>Butter</type>
+				<quantity>1/4 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Flour</type>
+				<quantity>1/4 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Krab or crab, flake</type>
+				<quantity>8 oz.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Chikin broth</type>
+				<quantity>10 oz.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>sour cream</type>
+				<quantity>8 oz.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>green chiles, chopped</type>
+				<quantity>4 oz. can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>12" or fajita tortillas</type>
+				<quantity>10-12</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Celery, diced</type>
+				<quantity>1/2 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Onion, diced</type>
+				<quantity>1</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Montery jack cheese, shredded</type>
+				<quantity>8 oz.</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Make a roux with the butter, flour, and chicken broth. To make a roux, melt the butter, add flour, stir until smooth, wait a minute, and then slowly add the chikin broth a little at a time, stirring all the time, bring the liquid near a boil before adding</step>
+			<step>When roux is thick (or not, it</step>
+			<step>Cover bottom of 9x13 casserole dish with sauce.</step>
+			<step>Warm tortillas.</step>
+			<step>Sprinkle krab, celery, onions, most of the cheese in each tortilla and roll.</step>
+			<step>Pour rest of sauce on top and bake at 425 degrees 20 minutes.</step>
+			<step>Sprinke remaining cheese on top and cook for 5 more minutes.</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Seafood Fettuccini</name>
+		<region>Italian</region>
+		<ingredients>
+			<ingredient>
+				<type>Fettuccini</type>
+				<quantity>6 oz.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Butter</type>
+				<quantity>1/4 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Garlic</type>
+				<quantity>2 cloves, minced</quantity>
+			</ingredient>
+			<ingredient>
+				<type>8 oz.</type>
+				<quantity>Krab or crab</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Whipping cream</type>
+				<quantity>1 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Parmesan cheese</type>
+				<quantity>1/2 c., grated</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Black pepper</type>
+				<quantity>1/4 t.</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Cook fettuccini.</step>
+			<step>Heat butter and garlic in skillet on medium until garlic is slightly browned.</step>
+			<step>Add Krab, whipping cream, and pepper.  Heat 3 min. or until mixture</step>
+			<step>Add Parm. cheese, stir for 1 minute</step>
+			<step>Toss with fettuccini.</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Spaghetti Casserole</name>
+		<region>Italian</region>
+		<ingredients>
+			<ingredient>
+				<type>Spaghetti</type>
+				<quantity>6 oz.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Onion, chopped</type>
+				<quantity>1</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Green bell pepper, chopped</type>
+				<quantity>1</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Tomato sauce</type>
+				<quantity>8 oz. can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Corn</type>
+				<quantity>14 oz. can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Red wine</type>
+				<quantity>1/2 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Tobasco</type>
+				<quantity>Splash</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Marjoram</type>
+				<quantity>1 1/2 t.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Firm tofu, chopped</type>
+				<quantity>1 lb.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Parmesan cheese</type>
+				<quantity>2 oz.</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Preheat oven to 400F.</step>
+			<step>Cook spaghetti.</step>
+			<step>Saute onion, green pepper, and tofu in olive oil.</step>
+			<step>Add tomato sauce, wine, corn, tabasco, salt, and pepper.</step>
+			<step>Put cooked spaghetti in bottom of casserole dish and top with the sauce and parmesan cheese.</step>
+			<step>Bake for 25-30 minutes</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Spinach artichoke dip</name>
+		<region>Other</region>
+		<ingredients>
+			<ingredient>
+				<type>artichoke hearts</type>
+				<quantity>14 oz can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>mayonaise</type>
+				<quantity>1 c</quantity>
+			</ingredient>
+			<ingredient>
+				<type>ccream cheese</type>
+				<quantity>8 oz</quantity>
+			</ingredient>
+			<ingredient>
+				<type>garlic powder</type>
+				<quantity>1/4 t.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>romano cheese</type>
+				<quantity>3 oz. grated</quantity>
+			</ingredient>
+			<ingredient>
+				<type>frozen spinach</type>
+				<quantity>1 box,  thawed and drained</quantity>
+			</ingredient>
+			<ingredient>
+				<type>mozzerella</type>
+				<quantity>2 oz</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Mix all but mozzerella</step>
+			<step>Top with mozzerella</step>
+			<step>Bake at 350 for 30 min</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Spinach Veggie Casserole</name>
+		<region>Other</region>
+		<ingredients>
+			<ingredient>
+				<type>Rice</type>
+				<quantity>1 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Water</type>
+				<quantity>2 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Butter</type>
+				<quantity>2 T.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Flour</type>
+				<quantity>2 T.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Milk</type>
+				<quantity>2 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Garlic cloves, minced</type>
+				<quantity>2</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Onion, chopped</type>
+				<quantity>1</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Red bell pepper, chopped</type>
+				<quantity>1</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Corn, drained</type>
+				<quantity>15 oz. can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Vegetable oil</type>
+				<quantity>2 t.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Swiss cheese, shredded</type>
+				<quantity>2 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Spinach, chopped</type>
+				<quantity>2 10 oz. bags</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Hot pepper sauce</type>
+				<quantity>1 t.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Dried bread crumbs</type>
+				<quantity>1/2 c.</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Preheat oven to 350F</step>
+			<step>Cook rice in water</step>
+			<step>Make a roux with the butter, flour, and milk. To make a roux, melt the butter, add flour, stir until smooth, wait a minute, and then slowly add the milk a little at a time, stirring all the time, bring the liquid near a boil before adding more.</step>
+			<step>Saute garlic, onion, pepper, corn, and oil in skillet.</step>
+			<step>When roux has thickened, add 3/4 cheese, salt, pepper, and hot sauce.</step>
+			<step>Add spinach and stir.</step>
+			<step>Combine rice, cheese mixture, and and sauteed veggies and poor in casserole dish.</step>
+			<step>Sprinkle breadcrumbs and remaining cheese on top and cook until cheese melts.</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Sweet Potato Burritos</name>
+		<region>Chinese</region>
+		<ingredients>
+			<ingredient>
+				<type>Vegetable broth</type>
+				<quantity>3 tsp</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Onion</type>
+				<quantity>1 lg, chopped</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Garlic</type>
+				<quantity>4 cloves, minced</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Sweet potatos</type>
+				<quantity>4 C., mached</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Chili powder, Cumin</type>
+				<quantity>3 Tbs, 1tsp</quantity>
+			</ingredient>
+			<ingredient>
+				<type>10 in flour tortillas</type>
+				<quantity>12</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Prepared mustard</type>
+				<quantity>4 tsp</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Cayenne</type>
+				<quantity>1 pinch</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Tamari</type>
+				<quantity>3 Tbl</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Cheddar</type>
+				<quantity>8 oz, shredded</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Pinto Beans</type>
+				<quantity>1 C</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Preheat oven to 350 deg F (175 C).</step>
+			<step>Combine everything except torillas and half cheddar</step>
+			<step>Spoon mixture evenly into tortitillas in casserole dish</step>
+			<step>Top with remaining cheddar</step>
+			<step>Cook for 25-30 minutes.</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Sweet-n-sour Chikin</name>
+		<region>Chinese</region>
+		<ingredients>
+			<ingredient>
+				<type>Veggie "chikin", diced</type>
+				<quantity>10-12 oz.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Carrot, diced</type>
+				<quantity>1 large</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Onion, diced</type>
+				<quantity>One</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Pineapple chunks in juice</type>
+				<quantity>16 oz. can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Brown sugar</type>
+				<quantity>2-3 t.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Soy sauce</type>
+				<quantity>2-3 t.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Corn starch</type>
+				<quantity>2-3 t.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Rice</type>
+				<quantity>1 c. uncooked w/ 2 c. water</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Open pineapple, keep juice for sauce after draining.</step>
+			<step>Add soy sauce to taste and cornstarch to desired thickness and stir.</step>
+			<step>Fry up chikin, carrot, and onion (I use peanut oil). When close to done add sauce and stir for a minute or so.</step>
+			<step>Mix in pineapple and serve over rice</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Thai Peanut Noodles</name>
+		<region>Other</region>
+		<ingredients>
+			<ingredient>
+				<type>Rice or spiral noodles</type>
+				<quantity>8 oz</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Peanut butter (natural)</type>
+				<quantity>1.5 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Coconut milk</type>
+				<quantity>14 oz</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Tamari or soy sauce</type>
+				<quantity>To taste</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Sesame oil</type>
+				<quantity>To taste</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Tofu</type>
+				<quantity>1lb., chopped</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Carrot</type>
+				<quantity>1 medium, chopped</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Broccoli</type>
+				<quantity>1 medium stalk, chopped</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Peanut oil</type>
+				<quantity>1 tsp</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Cook noodles</step>
+			<step>Add peanut butter to coconut milk a little at a time while stirring until smooth</step>
+			<step>Add tamari and sesame oil to taste</step>
+			<step>Stir fry tofu, carrot, and brocolli in peanut oil</step>
+			<step>Combine</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Tortilla-Black Bean Casserole</name>
+		<region>Chinese</region>
+		<ingredients>
+			<ingredient>
+				<type>6 in. cor tortillas</type>
+				<quantity>12 or so</quantity>
+			</ingredient>
+			<ingredient>
+				<type>green pepper</type>
+				<quantity>1, diced</quantity>
+			</ingredient>
+			<ingredient>
+				<type>onion</type>
+				<quantity>1, diced</quantity>
+			</ingredient>
+			<ingredient>
+				<type>salsa</type>
+				<quantity>3/4 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>stewed tomatoes</type>
+				<quantity>16 oz</quantity>
+			</ingredient>
+			<ingredient>
+				<type>black beans</type>
+				<quantity>32 oz</quantity>
+			</ingredient>
+			<ingredient>
+				<type>cumin</type>
+				<quantity>1 T</quantity>
+			</ingredient>
+			<ingredient>
+				<type>chili powder</type>
+				<quantity>2T</quantity>
+			</ingredient>
+			<ingredient>
+				<type>oregano</type>
+				<quantity>1T</quantity>
+			</ingredient>
+			<ingredient>
+				<type>cheddar</type>
+				<quantity>8 oz, grated</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>preheat oven to 350 deg.</step>
+			<step>Combine everything except tortillas into a sauce</step>
+			<step>Layer tortillas, then sauce, tortillas, sauce, tortillas</step>
+			<step>Top with cheddar</step>
+			<step>Cook for 30 minutes or til cheese is melted</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Vegetarian Taco Casserole</name>
+		<region>Mexican</region>
+		<ingredients>
+			<ingredient>
+				<type>Tortilla chips, crushed</type>
+				<quantity>2 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Large onion, chopped</type>
+				<quantity>1</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Bell pepper, chopped</type>
+				<quantity>1</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Canola oil</type>
+				<quantity>1 T.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Garlic cloves, minced</type>
+				<quantity>2</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Frozen hash browns</type>
+				<quantity>1 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Chopped green chiles</type>
+				<quantity>8 oz.can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Brown rice, cooked</type>
+				<quantity>3 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Salsa</type>
+				<quantity>1 c.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Chili powder</type>
+				<quantity>3 T.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Cumin</type>
+				<quantity>2 T.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Oregano</type>
+				<quantity>1 T.</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Black beans</type>
+				<quantity>14 oz. can</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Cheddar cheese</type>
+				<quantity>8 oz.</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Cover bottom of casserole dish with tortilla chips.</step>
+			<step>Saute onion, pepper, garlic, and hash browns.</step>
+			<step>Combine chiles, rice, salsa, chili powder, cumin, oregano, and black beans.</step>
+			<step>Combine with vegetable mixture and heat until warm.</step>
+			<step>Transfer to casserole dish, top with cheese, and bake at 350F for 20 minutes.</step>
+		</directions>
+	</recipe>
+	<recipe>
+		<name>Veggie Lasagne</name>
+		<region>Italian</region>
+		<ingredients>
+			<ingredient>
+				<type>onion, zuchini, carrot, broccoli, mushroom</type>
+				<quantity>diced</quantity>
+			</ingredient>
+			<ingredient>
+				<type>garlic</type>
+				<quantity>3 T. minced</quantity>
+			</ingredient>
+			<ingredient>
+				<type>Tomato sauce</type>
+				<quantity>14 oz</quantity>
+			</ingredient>
+			<ingredient>
+				<type>oregano</type>
+				<quantity>1/2 t</quantity>
+			</ingredient>
+			<ingredient>
+				<type>pepper, thyme, basil</type>
+				<quantity>1/4 t each</quantity>
+			</ingredient>
+			<ingredient>
+				<type>lasagne noodles</type>
+				<quantity>10-12</quantity>
+			</ingredient>
+			<ingredient>
+				<type>ricotta</type>
+				<quantity>1/2 lb</quantity>
+			</ingredient>
+			<ingredient>
+				<type>mozzeralla</type>
+				<quantity>8 oz, shredded</quantity>
+			</ingredient>
+			<ingredient>
+				<type>parmesan</type>
+				<quantity>1/4 c, shredded</quantity>
+			</ingredient>
+		</ingredients>
+		<directions>
+			<step>Cook noodles</step>
+			<step>Preheat oven to 350 deg</step>
+			<step>Saute veggies</step>
+			<step>Combine with tomato sauce and spices</step>
+			<step>Spread thin layer of sauce</step>
+			<step>layer noodles, sauce, ricotta, mozzerella, noodles, sauce, ricotta, mozzerella, noodles</step>
+			<step>Top with remaining mozzerella and parmesan</step>
+			<step>Cook for 30-40 minutes</step>
+		</directions>
+	</recipe>
+</recipes>

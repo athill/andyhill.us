@@ -1,0 +1,38 @@
+/**********************
+ *  Portfolio styles
+ ***********************/
+
+.portfolio-entry {
+	/* display: inline; */
+	border: thin dotted white;
+	padding: 0.5em;
+	margin: 0.5em;
+	float: left;
+	text-align: center;
+	background: #AAA;
+	width: 290px;
+	min-height: 290px;
+}
+
+.portfolio-entry a {
+	color: black;
+}
+
+.portfolio-entry a:hover {
+	text-decoration: none;
+	background: gray;
+}
+
+.portfolio-entry .title {
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #900;
+}
+
+.portfolio-entry .img {
+	padding: 0.5em;
+}
+
+.portfolio-entry .url {
+
+}
