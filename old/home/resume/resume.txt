@@ -1,0 +1,58 @@
+﻿Andrew T. Hill
+719 E. 7th Street, 2B Bloomington, IN 47408∙(812)323-1590∙andyhil@andyhill.us∙http://www.andyhill.us
+
+Objective	To find a challenging position and  apply and expand my computer skills. Specifically 
+interested in writing code, web design and network technologies.
+
+Education	
+Indiana University, Bloomington, IN                                                                      
+    Unix Systems Support Group Unix Certification                                        August 2003
+    Bachelor of Science in Computer Science GPA since returning: 3.5/4.0                   May, 2003
+    Completed coursework in Anthropology GPA 3.2/4.0                                       1989-1992
+
+Relevant Coursework: Databases,  Software  Engineering,  Programming Languages   
+    Network Technologies and Administration, Webmastering, Discrete  Mathematics, Data 
+    Structures, Computing Theory,  Operating Systems,  Compilers, Graphics.
+Projects	
+•Helped  to  implement  an  online  shopping cart interface for Boxcar Books, a 
+      local book retailer using PHP, MySQL, Access, C#, and MyODBC.
+•Wrote a disassembler that returned Motorola 86000 byte code to Assembly.
+•Helped  to  write  a  multi-threaded proxy  server  in  C  that  would  retrieve .jpeg files 
+       from a server, compress the image using the djpeg library and Java RPC, and return the compressed 
+       image to the client.
+•Wrote a compiler that compiled a subset of Scheme to Spark assembly code. 
+
+Computer Skills	
+•Operating Systems: Windows, Solaris, Red Hat, Macintosh
+•Languages:  Java,  C, Scheme, UNIX, Perl, SQL,  C++, Motorola 68000 Assembly, OpenGL
+•Web: HTML, JavaScript, Cascading Style Sheets, CGI, PHP, JSP, Servlets
+•Applications: Microsoft Office, Adobe Photoshop and Illustrator, Macromedia Flash and Dreamweaver, others. 
+Relevant Work Experience	
+Indiana University, Bloomington, IN                                        
+  University Information Technology Services
+   Support Center Consultant                                                    September 2003-Present
+    Assist walk-in and telephone customers with computer related problems including networking,  
+    hardware, authentication, and security issues.    
+
+   Support Specialist, Consultant
+    Starting as a computer lab consultant  who oversaw a lab and answered customer  
+    questions, was promoted  to  the  Support Staff position in May of 2002, which entails 
+    moving among 36 staffed and  unstaffed  labs,  supervising  140 consultants, monitoring  
+    and  adjusting staffing,   updating   web internal   pages,  acting as go-between   to  
+    UITS  higher-ups,  and helping  with  difficult  customer issues.
+     •	Improved user-interface and efficiency of online FAQ(Perl).
+     •	Created online interface to communicate lab supply needs between support staff members(Perl).
+
+Other Work Experience	
+  Michael’s Uptown Café, Bloomington, IN                                                  1999-2002
+   Prep and Line Cook  
+    Maintained food inventory, checked in and put away orders, opened restaurant on
+    Weekends, trained new cooks.
+
+  XJD, Inc., Bloomington, IN
+   Mousepad Production Team Leader
+    Ran large die-cutter. Was responsible for team strategy, quality control, 
+    Maximizing productivity.                              
+
+References	Available upon request.
+

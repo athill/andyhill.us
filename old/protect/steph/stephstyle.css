@@ -1,0 +1,9 @@
+body {background: #339}
+h1 {text-align:center;font:normal 30pt "Lucida Calligraphy","ariel"}
+h2 {text-align:center;font:normal 15pt "Lucida Calligraphy","ariel"}
+p {font:normal 15pt "harrington", "lucida handwriting"}
+td {font:normal 15pt "harrington", "lucida handwriting"}
+li {font:normal 15pt "harrington", "lucida handwriting"}
+a:link {color:yellow;text-decoration:none}
+a:hover {color:red;text-decoration:none}
+a:visited {text-decoration:none}

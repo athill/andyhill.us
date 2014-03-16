@@ -1,0 +1,91 @@
+
+#news-nav {
+	list-style-type: none;
+	overflow: auto;
+}
+
+#news-nav li {
+	padding: 5px 10px;
+	color: black;
+	background: gray;
+	cursor: pointer;
+	text-align: center;
+	float: left;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius:  10px 10px 0 0;
+	border-radius:  10px 10px 0 0;
+	margin: 0 1px;
+}
+
+#news-nav li.active {
+	background: white;
+}
+
+#news-nav li.wait {
+	background: red;
+	color: white;
+	font-weight: bold;
+}
+
+output#rss-feeds {
+	overflow: auto;
+}
+
+#rss-feeds > article {
+	float: left;
+	border: solid thick gray;
+	padding: 4px;
+	margin: 5px;
+	width: 375px;
+	vertical-align: top;
+	-moz-border-radius: 20px;
+	-webkit-border-radius:  20px;
+	border-radius:  20px;
+}
+
+
+
+.feed-header {
+	overflow: auto;
+}
+
+.elipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+.feed-title {
+	font-size: 16pt;
+	color: black;
+	float: left;
+	padding: 0;
+	margin: 0;
+	width: 275px;
+}
+
+.feed-actions {
+	float: right;
+}
+
+.feed-actions a {
+	font-size: 7pt;
+	border: solid thin gray;
+	padding: 2px;
+	vertical-align: center;
+}
+
+.feed-descriptions {
+	display: none;
+}
+
+
+
+.feed-category:hover {
+	color: #900;
+}
+
+#resources {
+	clear: both;
+}

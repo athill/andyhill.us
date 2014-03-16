@@ -1,0 +1,22 @@
+div.recipe {
+	padding-bottom: 2em;
+}
+
+
+div.recipe td, div.recipe th {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+div.recipe h2, div.recipe h3 {
+	margin: 0;
+	paadding: 0;
+}
+
+div#menu a {
+	padding: .3em;
+}
+
+#recipes th {
+	text-align: left;
+}

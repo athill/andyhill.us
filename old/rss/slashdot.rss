@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0">
+
+<channel rdf:about="http://slashdot.org/">
+<title>Slashdot</title>
+<link>http://slashdot.org/</link>
+<description>News for nerds, stuff that matters</description>
+<dc:language>en-us</dc:language>
+<dc:rights>Copyright 1997-2006, OSTG - Open Source Technology Group, Inc.  All Rights Reserved.</dc:rights>
+<dc:date>2007-03-14T00:10:19+00:00</dc:date>
+<dc:publisher>OSTG</dc:publisher>
+<dc:creator>pater@slashdot.org</dc:creator>
+<dc:subject>Technology</dc:subject>
+<syn:updatePeriod>hourly</syn:updatePeriod>
+<syn:updateFrequency>1</syn:updateFrequency>
+<syn:updateBase>1970-01-01T00:00+00:00</syn:updateBase>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://politics.slashdot.org/article.pl?sid=07/03/13/216235&amp;from=rss" />
+  <rdf:li rdf:resource="http://hardware.slashdot.org/article.pl?sid=07/03/13/1949212&amp;from=rss" />
+  <rdf:li rdf:resource="http://linux.slashdot.org/article.pl?sid=07/03/13/1935222&amp;from=rss" />
+  <rdf:li rdf:resource="http://games.slashdot.org/article.pl?sid=07/03/13/2025226&amp;from=rss" />
+  <rdf:li rdf:resource="http://science.slashdot.org/article.pl?sid=07/03/13/1828224&amp;from=rss" />
+  <rdf:li rdf:resource="http://linux.slashdot.org/article.pl?sid=07/03/13/1913209&amp;from=rss" />
+  <rdf:li rdf:resource="http://yro.slashdot.org/article.pl?sid=07/03/13/1815204&amp;from=rss" />
+  <rdf:li rdf:resource="http://yro.slashdot.org/article.pl?sid=07/03/13/1730222&amp;from=rss" />
+  <rdf:li rdf:resource="http://science.slashdot.org/article.pl?sid=07/03/13/1638245&amp;from=rss" />
+  <rdf:li rdf:resource="http://linux.slashdot.org/article.pl?sid=07/03/13/1546208&amp;from=rss" />
+  <rdf:li rdf:resource="http://yro.slashdot.org/article.pl?sid=07/03/13/1533202&amp;from=rss" />
+  <rdf:li rdf:resource="http://it.slashdot.org/article.pl?sid=07/03/13/139216&amp;from=rss" />
+  <rdf:li rdf:resource="http://yro.slashdot.org/article.pl?sid=07/03/13/1413242&amp;from=rss" />
+  <rdf:li rdf:resource="http://hardware.slashdot.org/article.pl?sid=07/03/13/135209&amp;from=rss" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=07/03/13/1211258&amp;from=rss" />
+ </rdf:Seq>
+</items>
+<image rdf:resource="http://images.slashdot.org/topics/topicslashdot.gif" />
+<textinput rdf:resource="http://slashdot.org/search.pl" />
+</channel>
+
+<image rdf:about="http://images.slashdot.org/topics/topicslashdot.gif">
+<title>Slashdot</title>
+<url>http://images.slashdot.org/topics/topicslashdot.gif</url>
+<link>http://slashdot.org/</link>
+</image>
+
+<item rdf:about="http://politics.slashdot.org/article.pl?sid=07/03/13/216235&amp;from=rss">
+<title>Billion Dollar Handout To Upgrade TVs</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101491181/article.pl</link>
+<description>db32 writes "SFGate has the story of the cutoff date for those rabbit ear antennas that some of us grew up with (Feb. 19, 2009). Now while the story of analog vs. digital TV has been beaten to death, still I think there is something more here. 'The Department of Commerce's National Telecommunications and Information Administration... said it is setting aside $990 million to pay for the boxes. Each home can request up to two $40 coupons for a digital-to-analog converter box, which consumer electronics makers such as RCA and LG plan to produce.' Beyond my disdain for most TV to begin with, I am blown away that with all of our current problems &amp;mdash; homelessness and crime on the home front, war fighting and terrorism abroad &amp;mdash; our government is seriously going to spend this much money on upgrading peoples' televisions."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=jPZlpt"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=jPZlpt" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101491181"/&gt;</description>
+<dc:creator>kdawson</dc:creator>
+<dc:date>2007-03-13T22:55:00+00:00</dc:date>
+<dc:subject>tv</dc:subject>
+<slash:department>if-we-can-send-a-man-to-the-moon</slash:department>
+<slash:section>politics</slash:section>
+<slash:comments>174</slash:comments>
+<slash:hit_parade>174,174,143,101,18,11,5</slash:hit_parade>
+<feedburner:origLink>http://politics.slashdot.org/article.pl?sid=07/03/13/216235&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://hardware.slashdot.org/article.pl?sid=07/03/13/1949212&amp;from=rss">
+<title>A New Lease On Internal Combustion</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101477039/article.pl</link>
+<description>Somnus suggests we check out the latest issue of MIT's Technology Review, where researchers describe how they can dramatically boost engine output and efficiency by preventing pre-ignition, or "knock." How they do it: "Both turbocharging and direct injection are preexisting technologies, and neither looks particularly impressive... by combining them, and augmenting them with a novel way to use a small amount of ethanol, Cohn and his colleagues have created a design that they believe could triple the power of a test engine."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=lUbNKw"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=lUbNKw" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101477039"/&gt;</description>
+<dc:creator>kdawson</dc:creator>
+<dc:date>2007-03-13T21:31:00+00:00</dc:date>
+<dc:subject>hardhack</dc:subject>
+<slash:department>more-power-to-ya</slash:department>
+<slash:section>hardware</slash:section>
+<slash:comments>202</slash:comments>
+<slash:hit_parade>202,199,170,134,30,9,9</slash:hit_parade>
+<feedburner:origLink>http://hardware.slashdot.org/article.pl?sid=07/03/13/1949212&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://linux.slashdot.org/article.pl?sid=07/03/13/1935222&amp;from=rss">
+<title>Dell Opens a Poll On Linux Options</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101466802/article.pl</link>
+<description>narramissic writes "In response to overwhelming user demand for Linux, Dell has posted a survey on a company blog that asks 'PC users to choose between Linux flavors such as Fedora and Ubuntu, and to pick more general choices such as notebooks versus desktops, high-end models versus value models and telephone-based support versus community-based support.' Votes will be collected through March 23, and Dell plans to use the feedback to begin selling Linux-based consumer PCs." The poll is pretty minimal. Wonder how much it will really guide Dell's choices.
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=IuDnN2"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=IuDnN2" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101466802"/&gt;</description>
+<dc:creator>kdawson</dc:creator>
+<dc:date>2007-03-13T20:52:00+00:00</dc:date>
+<dc:subject>business</dc:subject>
+<slash:department>you-asked-for-it</slash:department>
+<slash:section>linux</slash:section>
+<slash:comments>241</slash:comments>
+<slash:hit_parade>241,240,189,123,26,14,11</slash:hit_parade>
+<feedburner:origLink>http://linux.slashdot.org/article.pl?sid=07/03/13/1935222&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://games.slashdot.org/article.pl?sid=07/03/13/2025226&amp;from=rss">
+<title>Still A Rough Road Ahead for the PlayStation 3</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101477040/article.pl</link>
+<description>TobyToadstool writes "Despite the good news out of GDC last week, it still seems like Sony's new console has some image management to do. CNET says that the PlayStation 3 is 'the most unwanted console in recent memory' and asks 'why is the PS3 so undesirable?' They specifically question the company's wisdom in emphasizing the power of the console. Their impression is that this invites developers to neglect gameplay, in favour of investing in graphics. Likewise, Gamespot is running a piece suggesting ten ways to make the PS3 worth buying. A lower price is just one of the suggestions with exclusives, and the need for online standardization, following close behind. Looks like Sony still has its work cut out."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=UY3fQY"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=UY3fQY" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101477040"/&gt;</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2007-03-13T20:30:00+00:00</dc:date>
+<dc:subject>playstation</dc:subject>
+<slash:department>still-working-out-the-kinks</slash:department>
+<slash:section>games</slash:section>
+<slash:comments>137</slash:comments>
+<slash:hit_parade>137,135,117,86,11,6,2</slash:hit_parade>
+<feedburner:origLink>http://games.slashdot.org/article.pl?sid=07/03/13/2025226&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://science.slashdot.org/article.pl?sid=07/03/13/1828224&amp;from=rss">
+<title>3D Martian Flyover Movies</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101458215/article.pl</link>
+<description>Matthew Sparkes writes "NASA has created two virtual flyovers of the Mars rover landing sites using 3D imagery from the Mars Reconnaissance Orbiter (New Scientist story here). The images were made using the most powerful camera ever sent to another planet, MRO's High Resolution Imaging Science Experiment (HiRISE). The three-dimensional information is obtained by taking pairs of images from slightly different vantage points as the spacecraft orbits the Red Planet."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=hWnoIf"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=hWnoIf" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101458215"/&gt;</description>
+<dc:creator>kdawson</dc:creator>
+<dc:date>2007-03-13T20:08:00+00:00</dc:date>
+<dc:subject>mars</dc:subject>
+<slash:department>wheee</slash:department>
+<slash:section>science</slash:section>
+<slash:comments>56</slash:comments>
+<slash:hit_parade>56,54,46,32,10,1,0</slash:hit_parade>
+<feedburner:origLink>http://science.slashdot.org/article.pl?sid=07/03/13/1828224&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://linux.slashdot.org/article.pl?sid=07/03/13/1913209&amp;from=rss">
+<title>Microsoft Cracking Open the Door To OSS</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101451623/article.pl</link>
+<description>AlexGr sends us to a long piece in Redmond Magazine on Microsoft's changing relationship to open source. The article centers around a profile of Bill Hilf, Microsoft's internal and external evangelist for OSS. It's an even-handed piece that fully reflects the continuing deep skepticism in the community of Microsoft's motives and actions.
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=GpoX2X"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=GpoX2X" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101451623"/&gt;</description>
+<dc:creator>kdawson</dc:creator>
+<dc:date>2007-03-13T19:31:00+00:00</dc:date>
+<dc:subject>microsoft</dc:subject>
+<slash:department>competition-and-coexistence</slash:department>
+<slash:section>linux</slash:section>
+<slash:comments>132</slash:comments>
+<slash:hit_parade>132,132,109,89,26,12,3</slash:hit_parade>
+<feedburner:origLink>http://linux.slashdot.org/article.pl?sid=07/03/13/1913209&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://yro.slashdot.org/article.pl?sid=07/03/13/1815204&amp;from=rss">
+<title>New US Computer Forensic Institute</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101442490/article.pl</link>
+<description>Quincy writes "The DHS and Secret Service are setting up a new computer forensic institute in Alabama. Set to open in mid-2008, the new National Computer Forensic Institute will be able to train over 900 law enforcement officers per year. 'It will initially be staffed by 18 Secret Service agents and will feature classrooms, a forensic laboratory, an evidence vault, and server rooms. Courses will be offered in the investigation of electronic crimes, network intrusion investigation, and computer forensics... [T]he Secret Service says that it will help to bring judges and prosecutors up to speed as well.'" Maybe over time we'll see fewer botches of justice like those in the news recently.
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=N8PTCt"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=N8PTCt" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101442490"/&gt;</description>
+<dc:creator>kdawson</dc:creator>
+<dc:date>2007-03-13T18:50:00+00:00</dc:date>
+<dc:subject>court</dc:subject>
+<slash:department>bits-of-evidence</slash:department>
+<slash:section>yro</slash:section>
+<slash:comments>103</slash:comments>
+<slash:hit_parade>103,101,81,54,12,5,1</slash:hit_parade>
+<feedburner:origLink>http://yro.slashdot.org/article.pl?sid=07/03/13/1815204&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://yro.slashdot.org/article.pl?sid=07/03/13/1730222&amp;from=rss">
+<title>Who Controls Your Television?</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101436130/article.pl</link>
+<description>Nurgled writes "The EFF, reportedly the only consumer rights organization to be granted membership of the Digital Video Broadcasting consortium, reports that TV and movie industry representatives have been pushing for DRM in the DVB technologies. This in itself is not entirely unexpected, but these talks have been going on in closed meetings. The EFF itself has been blocked from reporting on this until now as a condition of being allowed to attend. The proposed technologies allow rights-holders and broadcasters to severely hamper your ability to make use of broadcast television content, including the ability to retroactively blacklist any devices that consumers may already own that act in ways undesirable to the rights-holder or broadcaster. The EFF concludes that public interest and consumer rights advocates must fight back."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=6zwZNA"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=6zwZNA" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101436130"/&gt;</description>
+<dc:creator>kdawson</dc:creator>
+<dc:date>2007-03-13T18:11:00+00:00</dc:date>
+<dc:subject>tv</dc:subject>
+<slash:department>retroactive-blacklist</slash:department>
+<slash:section>yro</slash:section>
+<slash:comments>199</slash:comments>
+<slash:hit_parade>199,194,163,110,23,14,6</slash:hit_parade>
+<feedburner:origLink>http://yro.slashdot.org/article.pl?sid=07/03/13/1730222&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://science.slashdot.org/article.pl?sid=07/03/13/1638245&amp;from=rss">
+<title>Why Exercise Boosts Brainpower</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101427408/article.pl</link>
+<description>aditi sends us a report from Reuters on research indicating that exercise boosts brainpower by building new brain cells in a brain region linked with memory and memory loss. Quoting: "Tests on mice showed they grew new brain cells in a brain region called the dentate gyrus, a part of the hippocampus that is known to be affected in the age-related memory decline that begins around age 30 for most humans. Researchers used magnetic resonance imaging scans to help document the process in mice &amp;mdash; and then used MRIs to look at the brains of people before and after exercise. They found the same patterns, which suggests that people also grow new brain cells when they exercise."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=JJrQbd"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=JJrQbd" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101427408"/&gt;</description>
+<dc:creator>kdawson</dc:creator>
+<dc:date>2007-03-13T17:27:00+00:00</dc:date>
+<dc:subject>biotech</dc:subject>
+<slash:department>muscle-head</slash:department>
+<slash:section>science</slash:section>
+<slash:comments>256</slash:comments>
+<slash:hit_parade>256,250,206,147,29,21,8</slash:hit_parade>
+<feedburner:origLink>http://science.slashdot.org/article.pl?sid=07/03/13/1638245&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://linux.slashdot.org/article.pl?sid=07/03/13/1546208&amp;from=rss">
+<title>Linux Starts to Find Home on Desktops</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101417702/article.pl</link>
+<description>WSJdpatton writes "The much-hyped notion that Linux would be a viable alternative to Windows to run desktop and notebook PCs for corporate users seemed dead on arrival a few years ago. But the idea is showing some new vital signs as companies look for cheaper alternatives to Microsoft products. The Wall Street Journal outlines several firms that are reaping savings and stability on their workplace desktops by rolling out Linux distributions. 'Auto maker PSA Peugeot Citro&amp;#235;n last month said it will start using Linux on 20,000 of its workers' PCs. Novell Inc., which sells a version of Linux and is supplying it to Peugeot, says it has recently signed up several large U.S. financial institutions that are installing Linux on some employee PCs. Sales of Linux PCs are showing a really nice uptick at Novell, says Ronald Hovsepian, chief executive of Novell.' Not everyone is a convert, though. 'The State of Illinois recently consolidated its IT systems onto Microsoft software -- and has no interest in using Linux, says Paul Campbell, director of the state's Central Management Services department. "We don't have time for science projects in state government," he says.'"
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=MhK3n4"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=MhK3n4" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101417702"/&gt;</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2007-03-13T16:43:00+00:00</dc:date>
+<dc:subject>business</dc:subject>
+<slash:department>baby-penguin-steps</slash:department>
+<slash:section>linux</slash:section>
+<slash:comments>299</slash:comments>
+<slash:hit_parade>299,291,242,156,41,26,19</slash:hit_parade>
+<feedburner:origLink>http://linux.slashdot.org/article.pl?sid=07/03/13/1546208&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://yro.slashdot.org/article.pl?sid=07/03/13/1533202&amp;from=rss">
+<title>Do You Need to Surf Anonymously?</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101411287/article.pl</link>
+<description>An anonymous reader writes "Computerworld has up an article entitled 'How to Surf Anonymously without a Trace'. It purports to offer tips on how to avoid detection by anyone attempting to monitor your internet access. 'If you don't like the limitations imposed on you by [proxy] sites like the Cloak or would simply prefer to configure anonymous surfing yourself, you can easily set up your browser to use an anonymous proxy server to sit between you and the sites you visit. To use an anonymous proxy server with your browser, first find an anonymous proxy server. Hundreds of free, public proxy servers are available, but many frequently go offline or are very slow. Many sites compile lists of these proxy servers, including Public Proxy Servers and the Atom InterSoft proxy server list.'"
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=W64pZ0"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=W64pZ0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101411287"/&gt;</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2007-03-13T16:01:00+00:00</dc:date>
+<dc:subject>privacy</dc:subject>
+<slash:department>don't-forget-to-wear-sneakers</slash:department>
+<slash:section>yro</slash:section>
+<slash:comments>246</slash:comments>
+<slash:hit_parade>246,241,191,155,51,23,15</slash:hit_parade>
+<feedburner:origLink>http://yro.slashdot.org/article.pl?sid=07/03/13/1533202&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://it.slashdot.org/article.pl?sid=07/03/13/139216&amp;from=rss">
+<title>International URLs Pass First Test</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101400835/article.pl</link>
+<description>Off the Rails writes "The BBC reports on the results of a successful test of non-ASCII domain names on Internet-equivalent hardware (pdf) carried out last October. The next stage is to plug the system into the net, and if it still works, it could go live sometime next year. 'Early work on the technical feasibility of using non-English character sets suggested that the address system would cope with the introduction of international characters tests were called for to ensure this was the case ... Also needed are policy decisions by Icann on how the internationalised domain names fit in and work with the existing rules governing the running of the address books. Icann is under pressure to get the international domain names working because some nations, in particular China, are working on their own technology to support their own character sets.'"
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=AFZbqR"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=AFZbqR" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101400835"/&gt;</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2007-03-13T15:20:00+00:00</dc:date>
+<dc:subject>internet</dc:subject>
+<slash:department>nice-to-see-some-new-faces-online</slash:department>
+<slash:section>it</slash:section>
+<slash:comments>148</slash:comments>
+<slash:hit_parade>148,146,111,80,26,10,2</slash:hit_parade>
+<feedburner:origLink>http://it.slashdot.org/article.pl?sid=07/03/13/139216&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://yro.slashdot.org/article.pl?sid=07/03/13/1413242&amp;from=rss">
+<title>Viacom Sues Google Over YouTube for $1 Billion</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101394184/article.pl</link>
+<description>Snowgen writes "Viacom has filed a $1,000,000,000.00 lawsuit for 'massive intentional copyright infringement' against Google over YouTube video clips. '"YouTube's strategy has been to avoid taking proactive steps to curtail the infringement on its site," Viacom said in a statement. "Their business model, which is based on building traffic and selling advertising off of unlicensed content, is clearly illegal and is in obvious conflict with copyright laws.'"
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=kmcRrU"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=kmcRrU" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101394184"/&gt;</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2007-03-13T14:48:00+00:00</dc:date>
+<dc:subject>google</dc:subject>
+<slash:department>everyone-get-their-doctor-evil-fingers-up</slash:department>
+<slash:section>yro</slash:section>
+<slash:comments>462</slash:comments>
+<slash:hit_parade>462,456,391,273,68,47,36</slash:hit_parade>
+<feedburner:origLink>http://yro.slashdot.org/article.pl?sid=07/03/13/1413242&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://hardware.slashdot.org/article.pl?sid=07/03/13/135209&amp;from=rss">
+<title>OpenOffice.org Tries to Woo Dell</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101383235/article.pl</link>
+<description>Rob writes "OpenOffice.org project members have written to Dell (pdf), hoping to persuade the company to adopt OpenOffice in response to customer demand. John McCreesh, OpenOffice.org marketing project lead, writes 'Let's have a conversation about how we could build an OpenOffice.org supplied by Dell product to give your customers what they are asking for.' Demand for open source products on Dell's IdeaStorm web site prompted the letter. A somewhat obvious question is raised: why isn't OpenOffice already available by default on new PC's and Workstations?"
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=Am8AOr"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=Am8AOr" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101383235"/&gt;</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2007-03-13T13:57:00+00:00</dc:date>
+<dc:subject>software</dc:subject>
+<slash:department>maybe-they-need-to-hire-professional-wooers</slash:department>
+<slash:section>hardware</slash:section>
+<slash:comments>275</slash:comments>
+<slash:hit_parade>275,273,236,174,36,14,9</slash:hit_parade>
+<feedburner:origLink>http://hardware.slashdot.org/article.pl?sid=07/03/13/135209&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=07/03/13/1211258&amp;from=rss">
+<title>Pirating Software? Choose Microsoft!</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/101377338/article.pl</link>
+<description>An anonymous reader writes "ArsTechnica is running a story regarding comments by Microsoft Business Group President Jeff Raikes, who had a pithy comment on the subject of software piracy. His view is that, should software piracy occur, Microsoft's desire is that the pirated software should be theirs. Potentially, in the future, they could then convert the illegal users from the 'dark side' into legit users who obtain licenses. 'We understand that in the long run the fundamental asset is the installed base of people who are using our products. What you hope to do over time is convert them to licensing the software.' Obviously Microsoft prefers the market to use their software even if it's pirated, rather than the alternative: the use of free software."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=IUVh7u"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=IUVh7u" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/101377338"/&gt;</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2007-03-13T13:22:00+00:00</dc:date>
+<dc:subject>microsoft</dc:subject>
+<slash:department>where-do-you-want-to-keycrack-today</slash:department>
+<slash:section>mainpage</slash:section>
+<slash:comments>233</slash:comments>
+<slash:hit_parade>233,228,176,121,34,20,14</slash:hit_parade>
+<feedburner:origLink>http://slashdot.org/article.pl?sid=07/03/13/1211258&amp;from=rss</feedburner:origLink></item>
+
+<textinput rdf:about="http://slashdot.org/search.pl">
+<title>Search Slashdot</title>
+<description>Search Slashdot stories</description>
+<name>query</name>
+<link>http://slashdot.org/search.pl</link>
+</textinput>
+
+</rdf:RDF>

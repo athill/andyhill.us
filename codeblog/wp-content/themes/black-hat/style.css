@@ -1,0 +1,762 @@
+﻿/*
+Theme Name: Black Hat
+Theme URI: http://www.nickifaulk.com/free-wordpress-themes/
+Description: This is a dark minimalist theme built specifically with WordPress 2.7 in mind, but is backwards compatible with WordPress 2.6.  (Sorry, I will no longer be supporting version 2.5 or older.)  Stickers icons courtesy of DryIcons.  Favicon by Brian Brasher.  Twitter "Follow Me" icon by Josiah Jost.  &nbsp; <strong> *** IMPORTANT!! Don't forget to view the <a href="../wp-content/themes/blackhat/readme.htm">Read Me</a> file! *** </strong>
+Version: 1.2
+Author: Nicki Faulk
+Author URI: http://www.nickifaulk.com
+Tags: two-columns, fixed-width, left-sidebar, black, white, blue, dark, threaded-comments, theme-options, sticky-post, microformats
+
+
+
+
+	This theme is released under GNU General Public License (GPL): 	http://www.gnu.org/licenses/gpl.html
+
+	My themes are free to use and modify to your every liking.  However, I ask that you please leave my name and link as credit.  
+	This is considered a courtesy, and lets me know that you appreciate the time and efforts put into something for free.
+	
+	Feel free to add a “modified by” or a similar statement making known that you did all of the additional work.  If you’ve used 
+	one of my designs as your template and would like to show me your work, please do!  I love to see what others have done with my themes!  :)
+
+
+
+
+*/
+
+/* Architecture */
+html { }
+
+body {
+	background: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #bcbcbc;
+}
+
+#wrapper {
+	width:970px;
+	margin: 0 auto;
+	background: #242323;
+	padding: 0 0;
+	background-image:url(images/stripes.png);
+	background-repeat:repeat;
+}
+
+#header {
+	height: 110px;
+	border-top: 1px solid #E5E5E5;
+	background-color:#242323;
+	background-image:none;
+}
+
+#container {
+	width: 100%;
+}
+
+#content {
+	width:680px;
+}
+
+#sidebar {
+	padding:20px;
+	width: 220px;
+	float: left;
+}
+
+#footer {
+	clear: left;
+	width: 100%;
+	padding:20px 0;
+	border-top: 1px solid #EFEFEF;	
+	border-bottom: 1px solid #E5E5E5;
+	background-color:#242323;
+	background-image:none;
+}
+
+#footer p {
+	padding:5px 8px;
+}
+
+#footer p a:hover {
+	text-decoration:none;
+	color:#5eb9f3;
+}
+
+/* General */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #666666;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #5eb9f3;
+	text-decoration: underline;
+}
+
+img {
+	border: 0;
+}
+
+
+.avatar {
+	float:left;
+	margin:0 10px 5px 0;
+}
+
+.centered, .aligncenter, .center {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0;
+	float:none;
+}
+
+.alignnone, .none {
+	float:none;
+	margin:0;
+	padding:0 0 10px 0;
+	display:block;
+}
+
+.alignright, .right {
+	float:right;
+	margin:0;
+	padding:0 0 10px 10px;
+	display:inline;
+}
+
+.alignleft, .left {
+	float:left;
+	margin:0;
+	padding:0 10px 10px 0;
+	display:inline;
+}
+
+.alignleftnav {
+	float:left;
+	margin:0;
+	padding:7px;
+	display:inline;
+}
+
+.alignrightnav {
+	float:right;
+	margin:0;
+	padding:7px;
+	display:inline;
+}
+
+div.alignleftnav a, div.alignrightnav a {
+	color:#c4c3c3;
+}
+
+div.alignleftnav a:hover, div.alignrightnav a:hover {
+	text-decoration:none;
+	color:#5eb9f3;
+}
+
+.wp-caption {
+	border:1px solid #454545;
+	background-color:#121212;
+	margin:5px;
+}
+	
+.wp-caption img {
+	margin:5px;
+	border:0px;
+}
+
+.wp-caption p.wp-caption-text {
+	padding-top:5px;
+	margin-bottom:5px;
+	font-size:10px;
+	font-style:italic;
+	font-weight:bold;
+	line-height:12px;
+	text-align:center;
+}
+
+.separator {
+	color: #CCCCCC;
+	margin: 0 5px;
+}
+
+.clear {
+	clear: both;
+	width:100%;
+	height:1px;
+}
+
+.meta-sep {
+	color: #CCCCCC;
+	margin: 0 5px;
+}
+
+.navigation {
+	clear:both;
+	width:100%;
+	margin-bottom:10px;
+}
+
+.navigationpage {
+	clear:both;
+	width:100%;
+	border:1px solid #c4c3c3;
+	background-color:#242323;
+	margin-bottom:20px;
+}
+
+.floater-left {
+	float: left;
+}
+
+.floater-right {
+	float: right;
+}
+
+div.floater-left a, div.floater-right a {
+	color:#c4c3c3;
+	padding:5px;
+	background-color:#242323;
+	border:1px solid #c4c3c3;
+	display: block;
+}
+
+div.floater-left a:hover, div.floater-right a:hover {
+	text-decoration:none;
+	color:#5eb9f3;
+}
+
+#access {
+	width:100%;
+	height:89px;
+}
+
+#theend {
+	width:100%;
+	height:89px;
+}
+
+#allowed {
+	overflow:hidden;
+	width:100%;
+	border-bottom: 1px solid #E5E5E5;
+	background-color:#242323;
+	background-image:none;
+}
+
+#menu ul {
+	display: inline; /* Added to fix the double margin in IE6 */
+	list-style: none;
+}
+
+#menu ul li {
+	display: inline; /* Added to fix the double margin in IE6 */
+	float: left;
+	margin-left: 10px;
+	padding: 15px 10px;
+}
+
+#menu ul li a:hover {
+	color:#bcbcbc;
+	text-decoration:none;
+}
+
+#menu a {
+	display:block;
+}
+
+#menu li ul, #menu li ul ul,
+#menu li ul ul, #menu li ul ul ul ul
+{
+	position:absolute;
+	float:left;
+	left:-999em;
+	background-color:#242323;
+	border:1px solid #666666;
+}
+
+#menu li:hover ul, #menu li.sfhover ul, 
+#menu li:hover ul ul, #menu li.sfhover ul ul,
+#menu li:hover ul ul ul,  #menu li.sfhover ul ul ul, 
+#menu li:hover ul ul ul ul, #menu li.sfhover ul ul ul ul 
+{
+	left:auto;
+}
+
+#menu ul ul li {
+	padding:5px 10px;
+}
+
+
+#blog-title {
+	font-size: 250%;
+	font-weight: normal;
+	margin: 40px 0 0 20px;
+}
+
+#blog-title a {
+	color: #ffffff;
+}
+
+#blog-title a:hover {
+	text-decoration:none;
+}
+
+#blog-description {
+	font-size: 120%;
+	font-weight: normal;
+	font-style:italic;
+	margin: 0 0 0 20px;
+}
+
+/* Content */
+.page-title {
+	margin-bottom: 15px;
+	font-weight: normal;
+	font-size: 160%;
+}
+
+.post, .related {
+	border:1px solid #c4c3c3;
+	background-color:#242323;
+	padding:8px;
+	margin-bottom: 50px;
+}
+
+.entry-title {
+	width: 450px;
+	font-weight: normal;
+	font-size: 160%;
+	float:left;
+}
+
+.entry-title a {
+	color: #5eb9f3;
+}
+
+.related-title {
+	margin-bottom: 10px;
+	color: #c4c3c3;
+	width: 450px;
+	font-weight: bold;
+	font-size: 130%;
+	float:left;
+}
+
+.related ul {
+	clear:both;
+}
+
+.related ul li {
+	margin-left:25px;
+	padding:5px;
+	list-style-type:none;
+}
+
+.more-link {
+	display: block;
+	margin: 10px 0 0 0;
+}
+
+.entry-comments {
+	float: right;
+	width:25px;
+}
+
+.entry-comments {
+	float: right;
+	background: url(images/cbubble.gif) no-repeat top left;
+	padding: 3px 1px 7px 4px;
+	text-align:center;
+}
+
+.entry-comments a {
+	padding: 3px 7px 7px 5px;
+	color: #FFFFFF;
+}
+
+.entry-comments a:hover {
+	color: #FFFFFF;
+}
+
+.entry-meta {
+	clear:both;
+	color: #666666;
+	font-size: 90%;
+	margin-top: 10px;
+}
+
+.entry-categ {
+	color: #666666;
+	font-size: 90%;
+	border-bottom: 1px solid #EFEFEF;
+	padding-bottom: 5px;
+}
+
+.entry-footer {
+	color: #666666;
+	font-size: 90%;
+	border:1px solid #4b4a4a;
+	background-color:#343333;
+	padding:5px;
+}
+
+.entry-footer span {
+	color: #CCCCCC;
+	margin: 0 5px;
+}
+
+.entry-subscribe {
+	padding: 5px 5px 5px 26px;
+	background: #FAFAFA url(images/rss.gif) no-repeat top left;
+	background-position: 6px 6px;
+}
+
+.entry-content {
+	margin-top: 15px;
+	overflow:hidden;
+}
+
+.entry-content p {
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+
+.entry-content h2 {
+	font-size: 120%;
+	margin-bottom: 5px;
+	margin-top: 25px;
+}
+
+.entry-content a {
+	text-decoration: underline;
+}
+
+.entry-content ul, .entry-content ol {
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+
+.entry-content ul li, .entry-content ol li {
+	line-height: 1.3;
+	margin-bottom: 5px;
+}
+
+.sitemap h3 {
+	margin:25px 0 10px 20px;
+}
+
+.sitemap ul, .sitemap p {
+	margin-left:45px;
+}
+
+.linkspglist h2 {
+	margin-left:15px;
+}
+
+.linkspglist ul {
+	margin-left:45px;
+	margin-bottom:45px;
+}
+
+/* Sidebar */
+
+
+/* Start: QBKL Styles - Added to make styling available even if widgets are not used */
+
+.widget {
+	border:1px solid #c4c3c3;
+	background-color:#242323;
+}
+
+#sidebar h2, #sidebar h3 {
+	font-size: 100%;
+	font-weight: bold;
+	color: #bcbcbc;
+	background-color:#343333;
+	line-height:24px;
+	text-transform: uppercase;
+	padding: 0 5px;
+}
+
+#sidebar ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+#sidebar ul li {
+	margin:0;
+	padding:0;
+	margin-bottom: 20px;
+}
+
+#sidebar ul li ul, #sidebar ul li ul li ul {
+	margin:0;
+	padding:0;
+}
+
+#sidebar ul li ul li {
+	margin:0;
+	padding:0;
+}
+
+#sidebar ul li a, #sidebar ul li ul li a {
+	color:#c4c3c3;
+}
+
+#sidebar ul li ul li a {
+	padding-left:10px;
+	line-height:22px;
+	display:block;
+}
+
+#sidebar ul li ul li a:hover {
+	background-color:#4b4a4a;
+}
+
+#sidebar ul li ul li ul li {
+	padding: 4px 0 0 10px;
+	margin: 0;
+	border-bottom: none;
+}
+
+/* End: QBKL Styles */
+
+#rss-links ul li {
+	background: url(images/rss.gif) no-repeat top left;
+	padding-left: 22px;
+	background-position: 1px 4px;
+}
+
+#recentcomments li.recentcomments {
+	padding-left:5px;
+}
+
+.textwidget {
+	padding:5px;
+}
+
+.textwidget p {
+	margin-bottom: 10px;
+}
+
+.textwidget a {
+	text-decoration: underline;
+}
+
+.widget_tag_cloud {
+	text-align:center;
+}
+
+.widget_tag_cloud h3 {
+	text-align:left;
+}
+
+.widget_tag_cloud a {
+	text-transform: lowercase;
+	text-align:center;
+	padding-left:2px;
+	padding-right:2px;
+}
+
+#wp-calendar {
+	margin:0 auto;
+}
+
+#wp-calendar caption {
+	padding: 5px 0;
+	margin-bottom: 5px;	
+}
+
+#wp-calendar td {
+	padding: 4px 6px;
+	color: #999999;
+}
+
+#wp-calendar td a {
+	font-weight: bold;
+}
+
+#wp-calendar #next {
+	text-align: right;
+}
+
+/* Comments */
+#comments {
+}
+
+.comments {
+	margin-top: 30px;
+	border:1px solid #c4c3c3;
+	background-color:#242323;
+	padding:8px;
+	margin-bottom: 50px;
+}
+
+.comments h3 {
+	font-size: 130%;
+	margin-bottom: 10px;
+	color: #c4c3c3;
+}
+
+.comments ol {
+	list-style: none;
+}
+
+.comments ol li {
+	padding: 10px;
+	background: #343333;
+	margin-top: 2px;
+}
+
+.comments ol li.bypostauthor {
+	background-color:#34363c;
+}
+
+.comment-author {
+	font-weight: bold;
+}
+
+.comment-author a {
+	color:#bcbcbc;
+}
+
+.comment-meta {
+	color: #666666;
+	margin-bottom: 5px;
+	font-size: 90%;
+}
+
+.unapproved {
+	font-style: italic;
+	color:#E09CA2;
+}
+
+#respond {
+	margin-top: 30px;
+	border:1px solid #c4c3c3;
+	background-color:#242323;
+	padding:8px;
+}
+
+#respond h3 {
+	color: #c4c3c3;
+}
+	
+.formcontainer {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#comment-notes {
+	margin-bottom: 10px;
+}
+
+.form-label {
+	margin-bottom: 2px;
+}
+
+.form-input, .form-textarea {
+	margin-bottom: 10px;
+}
+
+.form-input input, .form-textarea textarea {
+	padding: 5px;
+	background: #FAFAFA;
+	border: 1px solid #CCCCCC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.form-textarea input {
+	width: 280px;
+}
+
+.form-textarea textarea {
+	width: 350px;
+}
+
+.form-input input:hover {
+	background-color: #FFFFFF;
+}
+
+.form-submit input {
+	padding: 2px 5px;
+}
+
+.children li, .reply{
+	margin:0;
+	padding:0;
+	border: none;
+	padding-left: 3em;
+	list-style:none;
+}
+.children li ul {
+padding-left: 3em;
+}
+
+.children li div .reply {
+padding-left: 5em;
+}
+
+input#s, input#author, input#email, input#url, textarea#comment {
+	color:#a3a3a3;
+	background-color:#343333;
+	border:1px solid #4b4a4a;
+	width:150px;
+	padding:1px 2px;
+}
+
+textarea#comment {
+	width:350px;
+	height:150px;
+}
+
+input#searchsubmit {
+	vertical-align:middle;
+	padding:0 5px;
+}
+
+code {
+	font-family:"Courier New", Courier, monospace;
+	display:block;
+	padding:5px;
+	border:1px solid #545454;
+	background-color:#24272d;
+	width:90%;
+	margin:15px auto;
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+
+blockquote, blockquote blockquote {
+	background:#191919;
+	border:1px solid #060606;
+	padding:5px 15px;
+	margin:10px 10px 5px 15px;
+	font-style:italic;
+	color:#ffffff;
+}
+
+blockquote blockquote {
+	color:#a4a4a4;
+}
+
+strong.search-excerpt {color:#242323; background-color:#5eb9f3; padding-left:2px; padding-right:2px;}  
+
+#akismetwrap {
+	padding:5px;
+}
+
+#akismetstats {
+	margin-left:auto;
+	margin-right:auto;
+}
