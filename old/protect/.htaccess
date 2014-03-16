@@ -1,0 +1,10 @@
+
+
+AuthType Basic
+
+AuthName "protect"
+
+AuthUserFile /home/andyhil/.htpasswds/protect/passwd
+
+
+require valid-user

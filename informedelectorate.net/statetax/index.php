@@ -16,7 +16,7 @@ $h->h1('State Taxes');
 $h->p('Use the radio buttons on the right to view the various combinations of per capita state and local tax burdens. Lighter shades indicate lower taxes. Hover over a state to see its per capita tax burden for the selected combination. Except for Total, I\'ve offered all combinations of the other fields to see how various tax types accumulate when combined.');
 //// Build possible combinations
 $combos = array();
-$areas = array('Corporate', 'Income', 'Property', 'Sales');
+$areas = array('Income', 'Sales', 'Property', 'Corporate');
 $builds = array();
 foreach ($areas as $area) {
 	$combos[] = array($area=>1);
@@ -86,7 +86,7 @@ $h->choicegrid(array(
 						'container'=>'table',
 						'name'=>'option', 
 						'vals'=>$opts,
-						'selected'=>array('corporate+income+property+sales')
+						'selected'=>array('income+sales+property+corporate')
 				)
 );
 $h->ctd();

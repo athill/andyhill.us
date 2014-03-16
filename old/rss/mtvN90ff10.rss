@@ -1,0 +1,14 @@
+<rss version="0.91">
+  <channel>
+    <title>Discontinued Feed</title>
+    <description>This feed has been discontinued.</description>
+    <link>http://myrss.com/discontinued-feed.php?2007-03-21</link>
+  </channel>
+
+  <item>
+    <title>This feed has been discontinued, please unsubscribe. [2007-03-21]</title>
+    <description>This feed has been discontinued and you should unsubscribe. The feed reader you are using does not support standard HTTP mechanisms for announcing that a feed has been discontinued so you will receive this message until you manually unsubscribe. Please contact the provider of your feed reader and encourage them to support the use of HTTP 410 response codes. Your feed reader identified itself as "" </description> 
+    <link>http://myrss.com/discontinued-feed.php?2007-03-21</link> 
+ </item>
+
+</rss>

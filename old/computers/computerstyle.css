@@ -1,0 +1,13 @@
+body {background:black}
+
+h1 {text-align:center;font:normal 30pt  "Lucida Console", arial}
+
+h2 {font:normal 15pt "Lucida Console", arial}
+
+li {font:normal 15pt "Lucida Console" arial}
+
+a:link {color:yellow;text-decoration:none}
+
+a:hover {color:red;text-decoration:none}
+
+a:visited{text-decoration:none}

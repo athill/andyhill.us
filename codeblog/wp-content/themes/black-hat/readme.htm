@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Read Me: Theme features, notes, and other helpful information</title>
+<style type="text/css">
+	body {
+		background-color:#e7e7e7;
+		text-align:center;
+	}
+	
+	.entry {
+		text-align:left;
+		width:760px;
+		background-color:#ffffff;
+		margin:25px auto;
+		padding:0 15px 25px 15px;
+		border:1px solid #cccccc;
+		border-radius:10px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		overflow:hidden;
+	}
+	
+	p, a, ul, li {
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		font-size:12px;
+		line-height:18px;
+		color:#333333;
+	}
+	
+	a {
+		color:#0066ff;
+		text-decoration:none;
+	}
+	
+	h1 {
+		font-family:Georgia, "Times New Roman", Times, serif;
+		font-size:26px;
+		color:#333333;
+		text-align:center;
+		background-color:#ededed;
+		padding:15px;
+		border:1px solid #cccccc;
+		border-radius:10px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+	}
+	
+	h2 {
+		font-family:Georgia, "Times New Roman", Times, serif;
+		font-size:18px;
+		color:#333333;
+		border-bottom:1px solid #333333;
+	}
+	
+	code {
+		font-family:"Courier New", Courier, monospace;
+		font-size:12px;
+		color:#545454;
+	}
+	
+	.mC {}
+	.mH {width:100%; /*margin-left:10px; margin-bottom:10px;*/}
+	.mL {display:none; /*margin-bottom:10px;*/}
+	.mO {display:block;}
+.style1 {color: #990000}
+</style>
+<!--[if IE]>
+    <style type="text/css">
+	.entry {
+		padding:25px 15px;
+	}
+    </style>
+<![endif]-->
+<script type="text/javascript">
+	function toggleMenu(objID) {
+	if (!document.getElementById) return;
+	var ob = document.getElementById(objID).style;
+	ob.display = (ob.display == 'block')?'none': 'block';
+	}
+</script>
+</head>
+<body>
+	<div class="entry">
+    	<h1>Theme Features</h1>
+    	<p>&nbsp;</p>
+    	<div class="howto" id="themeoptions">
+            <p><strong>How-to find the Theme Options page</strong>:</p>
+            <ul>
+              <li><strong>WordPress 2.6 &mdash; </strong> Go to WP Admin, Design, Theme Options</li>
+              <li><strong>WordPress 2.7 &mdash; </strong> Go to WP Admin, Appearance, Theme Options</li>
+            </ul>
+        </div>
+    	<p>&nbsp;</p>
+    	<p class="style1">(Click a topic to show more information.)</p>
+    	<div class="mH" onclick="toggleMenu('Move_Sidebar')">
+    	<h2>Moving the sidebar</h2>
+	<div class="mL" id="Move_Sidebar">
+    	<p>Usually the most requested modification to my themes, the question I'm often asked most is: &quot;How do I move the sidebar?&quot;</p>
+    	<p>This can easily be managed from the <a href="#themeoptions">theme options</a>. Under <strong>Sidebar Options</strong>, <strong>Sidebar location</strong>, select the desired location from the dropdown list and save changes.</p>
+    	<p><em>Note: Choosing &quot;hidden&quot; will remove the sidebar altogether!</em></p>
+	</div>
+</div>
+   	  <p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Sitemap')">
+    	<h2>Sitemap template</h2>
+	<div class="mL" id="Sitemap">
+    	<p>A sitemap template is included in this theme. To use, simply login to your WordPress Admin panel and create a new page. </p>
+    	<p><strong>WordPress 2.6:</strong> Under Page Template, select Sitemap from the dropdown list and publish.</p>
+    	<p><strong>WordPress 2.7:</strong> Under Attributes, select Sitemap from the dropdown list under Template and publish.</p>
+    	<p><em>Note: No additional content is needed for this page, the template will automatically fill in everything.</em></p>
+	</div>
+</div>
+    	<p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Links')">
+    	<h2>Links template</h2>
+	<div class="mL" id="Links">
+    	<p>A links page template is included in this theme. To use, simply login to your WordPress Admin panel and create a new page. </p>
+    	<p><strong>WordPress 2.6:</strong> Under Page Template, select Links from the dropdown list and publish.</p>
+    	<p><strong>WordPress 2.7:</strong> Under Attributes, select Links from the dropdown list under Template and publish.</p>
+    	<p><em>Note: No additional content is needed for this page, the template will automatically fill in everything.</em></p>
+	</div>
+</div>
+    	<p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Admin_Login')">
+   	  	<h2>Admin &amp; Login links</h2>
+	<div class="mL" id="Admin_Login">
+    	<p>I've found that many users dislike using the meta widget and often remove it, but forget to set a link for quick access to the WordPress admin panel. For this reason I've hardcoded the WordPress admin and login functions into the footer of the theme. </p>
+    	<p>If a user is not logged in, the login link will appear, otherwise the admin link will appear.</p>
+    	<p>If registration is enabled, the register link will also appear. </p>
+    	<p>Additionally, if a user is logged in, the Admin and/or Logout links will appear in the navigation bar at the top of the page (depending of course on the permissions of the user).</p>
+	</div>
+</div>
+    	<p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('PFriendly')">
+   	  	<h2>Printer-friendly style</h2>
+	<div class="mL" id="PFriendly">
+    	<p>This theme includes the file <strong>print.css</strong> which is a bare-bones stylesheet optimized for printing posts and pages.</p>
+	</div>
+</div>
+    	<p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Sticky')">
+    	<h2>Sticky posts?</h2>
+	<div class="mL" id="Sticky">
+    	<p>To help your users distinguish as to whether or not a post is sticky, an &quot;i&quot; (as in 'informative') icon will appear next to the post's title.</p>
+	</div>
+</div>
+    	<p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Feeds')">
+    	<h2>Default feed options</h2>
+	<div class="mL" id="Feeds">
+      	<p>By default, this theme includes the coding for the following feed types: RDF/RSS 1.0, RSS .92, RSS 2.0, Atom 0.3. The RSS feed for all comments for your blog is also included.</p>
+      	<p><strong>Conditional feeds: </strong> If viewing a single post, the comment feed for that post is available. If viewing a category, the feed for all posts in that category is available. If viewing a tag, the feed for all posts with that tag is available.</p>
+        <p><strong>Note:</strong> If you are using the Feedburner option, all of the above mentioned are replaced by the Feedburner feed link instead!</p>
+	</div>
+</div>
+      	<p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Feedburner')">
+      	<h2>Using Feedburner?</h2>
+	<div class="mL" id="Feedburner">
+      	<p>By default, the theme features a feed icon linked to the blog's RSS feed. This can be changed to a Feedburner RSS feed by simply updating the <a href="#themeoptions">theme options</a>. Under <strong>Sidebar Options</strong>, <strong>Feedburner RSS</strong>, input the URL to your Feedburner feed and save changes.  Also, the feed links in your site's meta tags (used by browser and feed readers) will automatically be changed to your Feedburner feed URL.</p>
+      	<p>Additionally, you can enable the Feedburner email subscription link by filling in your <strong>Feedburner Email Subscription </strong>link directly below. When this is enabled, you will see an email icon appear next to the RSS icon in your sidebar.</p>
+	</div>
+</div>
+      	<p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Twitter')">
+      	<h2>Twitter integration</h2>
+	<div class="mL" id="Twitter">
+      	<p>In the post footer (when you click on a post, not viewing the index or archive page), there is a &quot;Share on Twitter&quot; link. </p>
+      	<p>You can also add your latest Tweet to your sidebar by updating the <a href="#themeoptions">theme options</a>. Under <strong>Sidebar Options</strong>, <strong>Twitter Tweet</strong>, fill in your Twitter username and save changes.</p>
+	</div>
+</div>
+      <p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Facebook')">
+      <h2>Facebook post submissions</h2>
+	<div class="mL" id="Facebook">
+      	<p>In the post footer (when you click on a post, not viewing the index or archive page), there is a &quot;Share on Facebook&quot; link. </p>
+	</div>
+</div>
+      <p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Gravatar')">
+      <h2>Customized default avatar (Gravatar)</h2>
+	<div class="mL" id="Gravatar">
+      <p>Also included in this theme is a default avatar to match the theme style. To use, simply login to your WordPress Admin panel and set the custom gravatar as default.</p>
+      <p>Go to Settings, Discussion, scroll to the bottom and select &quot;Black Hat theme default avatar&quot; as the Default Avatar.</p>
+	</div>
+</div>
+      <p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Related')">
+      <h2>Related Posts</h2>
+	<div class="mL" id="Related">
+      <p>I've added a Related Posts function. This looks at the tags for a post and finds all posts matching those tags. If no tags are specified for a post, this function will not show up.</p>
+      <p>To disable this function, edit the <a href="#themeoptions">theme options</a>. Under <strong>Post Options</strong>, <strong>Related Posts</strong>, mark the checkbox to hide this feature and save changes.</p>
+	</div>
+</div>
+      <p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Meta_Tags')">
+      <h2>Meta tags</h2>
+	<div class="mL" id="Meta_Tags">
+      <p>When developing my themes, I take the liberty of adding many commonly used meta tags. Most of the information is automatically filled in via various WordPress commands.</p>
+      <p>Feel free to adjust as needed, or remove altogether if you use a WordPress plugin for meta tag handling.</p>
+      <p>The only tag not filled by default is <u>keywords</u>. This can easily be managed from the <a href="#themeoptions">theme options</a>. Under <strong>Header Options</strong>, <strong>Meta Keywords</strong>,  fill in the keywords separated by commas and save changes.</p>
+      <blockquote>
+      <p><em>Example: test, sample, lorem ipsum, circus, lions, tigers, clowns are scary, blah</em></p>
+      </blockquote>
+	</div>
+</div>
+      <p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Search')">
+      <h2>Highlighted search results</h2>
+	<div class="mL" id="Search">
+      <p>On search results, the keyword or phrase is highlighted in the post's content to help your visitors more quickly find what they're looking for.</p>
+	</div>
+</div>
+      <p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Nav_Menu')">
+      <h2>Need to hide a page from the navigation menu?</h2>
+	<div class="mL" id="Nav_Menu">
+      <p>If there's a page that you would rather not have appearing in the navigation menu at the top of the page, simply open the <strong>functions.php</strong> file and look for the block of code that begins with:</p>
+      <blockquote>
+        <code>function sandbox_globalnav()</code>
+      </blockquote>
+      <p><strong>WordPress 2.6:</strong> Modify the  bit of code containing <code>wp_list_pages</code> to include the following highlighted part. Replace the number 25 with the ID number of the page.</p>
+        <blockquote>
+          <p><code>('title_li=&amp;sort_column=menu_order&amp;echo=0&amp;depth=1<span style="background-color:#FFFF99">&amp;exclude=25</span>');</code>          </p>
+        </blockquote>
+        <p><strong>WordPress 2.7:</strong> Modify the  bit of code containing <code>wp_page_menu</code> to include the following highlighted part. Replace the number 25 with the ID number of the page.</p>
+        <blockquote>
+          <p><code>('show_home=1&amp;menu_class=page-navi&amp;depth=1<span style="background-color:#FFFF99">&amp;exclude=25</span>');</code>          </p>
+        </blockquote>
+	</div>
+</div>
+      <p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Header-img')">
+      <h2>How to add a header image</h2>
+	<div class="mL" id="Header-img">
+      <p>Because this is a minimal-style theme, there is currently no header image.  To add one, simply open header.php and find the following bit of code:</p>
+      <blockquote>
+        <code>
+			&lt;div id=&quot;header&quot;&gt;<br />
+			<span style="background-color:#FFFF99">&lt;h1 id=&quot;blog-title&quot;&gt;&lt;a href=&quot;&lt;?php echo get_option(&#39;home&#39;) ?&gt;/&quot; title=&quot;&lt;?php 
+			bloginfo(&#39;name&#39;) ?&gt;&quot; rel=&quot;home&quot;&gt;&lt;?php bloginfo(&#39;name&#39;) ?&gt;&lt;/a&gt;&lt;/h1&gt;</span><br />
+			<span style="background-color:#FFFF99">&lt;div id=&quot;blog-description&quot;&gt;&lt;?php bloginfo(&#39;description&#39;) ?&gt;&lt;/div&gt;</span><br />
+			&lt;/div&gt;&lt;!-- #header --&gt;<br />
+        </code>
+      </blockquote>
+      <p>Delete the highlighted parts as shown above and insert your image.</p>
+	</div>
+</div>
+      <p>&nbsp;</p>
+   	  <div class="mH" onclick="toggleMenu('Favicon')">
+      <h2>Favicon</h2>
+	<div class="mL" id="Favicon">
+      <p>A favicon (short for favorites icon) is a 16x16 pixel square icon associated with a particular website or webpage. Browsers that provide favicon support typically display a page's favicon in the browser's Address bar and next to the page's name in a list of bookmarks. Browsers that support a tabbed document interface typically show a page's favicon next to the page's title. The Microsoft Windows  also uses favicons to represent &quot;Internet shortcuts&quot; to web pages.</p>
+      <p>By default, all of my themes include a simple favicon. To replace this with your own, copy your <strong>favicon.ico</strong> file into the <strong>images</strong> directory in the theme folder.</p>
+      <p>To design your own favicon.ico file, try one or more of these resources: </p>
+      <ul>
+        <li><a href="http://www.favicon.cc/">Favicon.cc</a></li>
+        <li><a href="http://tools.dynamicdrive.com/favicon/">Dynamic Drive</a></li>
+        <li><a href="http://www.rw-designer.com/online_icon_maker.php">RealWorld Graphics</a></li>
+        <li><a href="http://www.freefavicon.com/freefavicons/objects/index.php">FreeFavicon</a></li>
+        <li><a href="http://www.favicon.co.uk/">Favicon.co.uk</a></li>
+        <li><a href="http://www.favicon.com/">Favicon.com</a> (pay service)</li>
+      </ul>
+      <p>Note: I've also added a "web clip" icon (similar to favicons) for iPhone users.  When an iPhone user saves your link to their Home Screen, this image will be used (rather than a scrunched grainy screenshot of your whole front page).</p>
+	</div>
+</div>
+      <p>&nbsp;</p>
+      <h1>Support / Feedback</h1>
+      <p>&nbsp;</p>
+      <p>Please <a href="http://www.nickifaulk.com/contact/">contact me</a> using the  form available on my website. </p>
+      <p>Remember to include the theme's name and version number (found in <strong>style.css</strong>) that you are using so that I can better troubleshoot any issue.</p>
+      <p>Thanks!</p>
+      <p> Nicki</p>
+      <p align="center">&nbsp;</p>
+	</div>
+</body>
+</html>

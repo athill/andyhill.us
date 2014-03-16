@@ -14,46 +14,38 @@ $sun = new Sunlight();
 
 
 $data = $sun->get('realtime', 'floor_updates', array());
-// $h->pa($data['floor_updates']);
+$h->pa($data);
+exit(1);
 
 
-$tdata = array();
+$h->otable('border="1"');
+$headers = explode(',', 'Date,Time,Event,Bills');
+foreach ($headers as $header) {
+	$h->th($header);
+}
 foreach ($data['floor_updates'] as $update) {
-	// $h->cotr();
-	// $date = formatDate($update['legislative_day']);
-	$bills = array();
-	foreach ($update['bill_ids'] as $bill) {
-		$bills[] = array('href'=>'http://www.opencongress.org/bill/'.$bill.'/show', 
-				'display'=>$bill,
-				'atts'=>'target="_blank"'
-
-		);
-	}
-	$tdata[] = array(
-		getTime($update['timestamp']),
-		ucfirst($update['chamber']),
-		trim($h->rtn('liArray', array('ol', $update['events']))),
-		trim($h->rtn('linkList', array($bills)))
-	);
+	$h->cotr();
+	$date = formatDate($update['legislative_day']);
+	$h->td($date);
+	$h->td(getTime($update['timestamp']));
+	$h->startBuffer();
+	$h->liArray('ol', $update['events']);
+	$h->td($h->endBuffer());
+	$h->startBuffer();
+	$h->liArray('ol', $update['bill_ids']);
+	$h->td($h->endBuffer());	
 }	
-
-$h->simpleTable(array(
-	'headers'=>array('Date', 'Chamber', 'Event', 'Bills'),
-	'data'=>$tdata,
-	'atts'=>'border="1"'
-));
-// $h->ctable();
+$h->ctable();
 $page->end();
 
 
 function formatDate($datestring) {
-	// return $datestring;
-	return preg_replace('/(\d{4})-(\d{2})-(\d{2})/', '$2/$3/$1', $datestring);
+	return $datestring;
 	return date('m/d/Y', strftime($datestring));
 }
 
 function getTime($timestamp) {
-	return date('m/d/Y G:ia', strtotime($timestamp));
+	
 }
 
 ?>

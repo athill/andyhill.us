@@ -80,7 +80,7 @@ function initLinks($element) {
 	//// Revert text to category
 	$element.html($element.data("category"));
 }
-//// Not used
+//// TODO: SCOPE
 var news = {
 	clean: function(str) {
 		str.replace(/&lt;/g, '<')

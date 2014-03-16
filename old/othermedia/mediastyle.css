@@ -1,0 +1,21 @@
+
+
+h1 {text-align:center;font:normal 30pt "Comic Sans MS"}
+
+h2 {font:normal 17pt "Comic Sans MS"}
+
+h3 {font:normal 15pt "Comic Sans MS"}
+
+li {font:normal 15pt "Comic Sans MS"}
+
+body {font:normal 12pt "Comic Sans MS"}
+
+td {font:normal 12pt "Comic Sans MS"}
+
+
+a:link {color:blue;text-decoration:none}
+
+a:hover {color:red;text-decoration:none}
+
+a:visited{text-decoration:none}
+

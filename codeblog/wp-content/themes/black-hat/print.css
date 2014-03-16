@@ -1,0 +1,213 @@
+﻿body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #bcbcbc;
+}
+
+#wrapper {
+	width:100%;
+}
+
+#header {
+	display:none;
+}
+
+#container {
+	width: 100%;
+}
+
+#content {
+}
+
+#sidebar {
+	display:none;
+}
+
+#footer {
+	display:none;
+}
+
+a {
+	color: #666666;
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+}
+
+
+.avatar {
+	float:left;
+	margin:0 10px 5px 0;
+}
+
+.centered  {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0;
+	float:none;
+}
+	
+.alignnone, .none {
+	margin:0;
+	padding:0 0 10px 0;
+	display:inline;
+}
+
+.alignright, .right {
+	float:right;
+	margin:0;
+	padding:0 0 10px 10px;
+	display:inline;
+}
+
+.alignleft, .left {
+	float:left;
+	margin:0;
+	padding:0 10px 10px 0;
+	display:inline;
+}
+
+.wp-caption {
+	margin:0;
+	padding:0;
+}
+	
+.wp-caption img {
+	margin:0px 0px 10px 0px;
+	padding:0px;
+	border:0px;
+}
+
+.wp-caption p.wp-caption-text {
+	margin:0;
+	padding:5px 0 0 0;
+	font-size:10px;
+	font-style:italic;
+	font-weight:bold;
+	line-height:12px;
+}
+
+
+.separator {
+}
+
+.clear {
+	display:none;
+}
+
+.meta-sep {
+}
+
+.navigation, .navigationpage {
+	display:none;
+}
+
+.floater-left {
+	display:none;
+}
+
+.floater-right {
+	display:none;
+}
+
+div.floater-left a, div.floater-right a {
+	display:none;
+}
+
+#access {
+	display:none;
+}
+
+#theend {
+	display:none;
+}
+
+#allowed {
+	display:none;
+}
+
+.page-title {
+}
+
+.post {
+}
+
+.related {
+	display:none;
+}
+
+.entry-title {
+}
+
+.more-link {
+}
+
+.entry-comments {
+	display:none;
+}
+
+.entry-meta {
+	display:none;
+}
+
+.entry-categ {
+	display:none;
+}
+
+.entry-footer {
+	display:none;
+}
+
+.entry-content {
+}
+
+.entry-content p {
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+
+.entry-content h2 {
+	font-size: 120%;
+	margin-bottom: 5px;
+	margin-top: 25px;
+}
+
+.entry-content a {
+	text-decoration: underline;
+}
+
+.entry-content ul, .entry-content ol {
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+
+.entry-content ul li, .entry-content ol li {
+	line-height: 1.3;
+	margin-bottom: 5px;
+}
+
+.sitemap h3 {
+	margin:25px 0 10px 20px;
+}
+
+.sitemap ul, .sitemap p {
+	margin-left:45px;
+}
+
+/* Comments */
+#comments {
+	display:none;
+}
+
+.comments {
+	display:none;
+}
+
+#respond {
+	display:none;
+}
+
+
