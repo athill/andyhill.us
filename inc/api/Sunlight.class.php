@@ -13,7 +13,7 @@ class Sunlight extends Api {
 				////http://services.sunlightlabs.com/api/api.method.format?apikey=YOUR_API_KEY&<params>
 				break;
 			case 'congress3':
-				$this->url = 'http://congress.api.sunlightfoundation.com';
+				$this->url = 'https://congress.api.sunlightfoundation.com/';
 				$this->separator = '/';
 				break;
 			case 'openstates':
@@ -32,7 +32,7 @@ class Sunlight extends Api {
 			//// deprecated
 			case 'realtime':
 			default:
-				$this->url = 'http://api.realtimecongress.org/api/v1/';
+				$this->url = 'https://api.realtimecongress.org/api/v1/';
 				break;
 		}
 		return parent::get($method, $params);

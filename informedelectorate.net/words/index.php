@@ -45,21 +45,21 @@ if (array_key_exists('words', $_GET)) {
 		$tmp[] = $bioguide_id;
 		if ($i % 5 == 0 || $i == $count - 1) {
 			//echo 'in here ';
-			$data = $sun->get('congress', 'legislators.getList', array('bioguide_id'=>$tmp));
+			$data = $sun->get('congress3', 'legislators', array('bioguide_id'=>$tmp));
 			// $h->pa($data);
-			foreach ($data['response']['legislators'] as $j => $leg) {
+			foreach ($data['results'] as $j => $leg) {
 
-				$d = $leg['legislator'];
+				$d = $leg;
 				if (count($d) > 0) {
 					
 					$id = $d['bioguide_id'];
-					$name = $d['firstname'];
-					if ($d['middlename'] != '') $name .= ' '.$d['middlename'];
+					$name = $d['first_name'];
+					if ($d['middle_name'] != '') $name .= ' '.$d['middle_name'];
 					if ($d['nickname'] != '') $name .= ' ('.$d['nickname'].')';
-					$name .= ' '.$d['lastname'];
+					$name .= ' '.$d['last_name'];
 					$tmp2 = array(
 						'name'=> $name,
-						'lname'=>$d['lastname'],
+						'lname'=>$d['last_name'],
 						'party'=>$d['party'],
 						'chamber'=>ucfirst($d['chamber']),
 						'state'=>$d['state'],
