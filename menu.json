@@ -1,0 +1,39 @@
+[
+	{ "href":"/", "display":"Home" },
+	{ "href":"/resume/", "display":"Resume", "children": [
+		 {"href":"print.php", "display":"Print", "target":"_blank" },
+		 {"href":"resume.pdf", "display":"Download", "target":"_blank" },
+	]},
+	 {"href":"/portfolio/", "display":"Portfolio" },
+	 {"href":"/news/", "display":"News" },
+
+	{ "href":"/pictures/", "display":"Pictures", "children": [
+		 {"href":"nationalmall.php", "display":"National Mall" },
+	]},
+	{"href":"/recipes/", "display":"Recipes" },
+	{ "href":"/blogs.php", "display":"Blogs", "children": [
+		{ "href":"codeblog", "display":"codeblog",
+			"redirect": "http://andyhill.us/codeblog/", "target":"_blank" },
+		{ "href":"ttsmoia", "display":"ttmsoia",
+			"redirect":"http://ttmsoia.andyhill.us", "target":"_blank",
+			"title":"trying to make sense of it all" }
+	]},
+	{ "href":"/inspire/", "display":"Inspiration", "children": [
+		{ "href":"songs/", "display":"Songs", "children": [
+			 {"href":"holdonhope", "display":"Hold On Hope" },
+			 {"href":"ontheradio", "display":"On the Radio" },
+			 {"href":"randydescribeseternity", "display":"Randy Describes Eternity" },
+		]},
+		{ "href":"spirit/", "display":"Spirit", "children": [
+			 {"href":"lordsprayer", "display":"The Lord's Prayer" },
+			 {"href":"shepherdspsalm", "display":"The Shepherd's Psalm" },
+			 {"href":"desiderata", "display":"Desiderata" },
+			 {"href":"serenityprayer", "display":"The Serenity Prayer" },
+		]},
+	]},
+	{ "href":"/d3/", "display":"D3.js", "children": [
+		 {"href":"barchart.php", "display":"Bar Chart" },
+		 {"href":"line.php", "display":"Line Chart"  },
+		 {"href":"snap/", "display":"S.N.A.P."  },
+	]}	
+]
