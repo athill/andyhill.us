@@ -92,9 +92,13 @@ $site['menu'] = new Menu($xmlfile, $site['script']);
 $menu = $site['menu'];
 //$retval = $site['menu']->buildPathAndSetTitle(array('script'=>$site['script']));
 $rv = $site['menu']->parseData();
-// // $h->pa($rv);
+// $h->pa($rv);
 $site['breadcrumbs'] = $rv['breadcrumbs'];
 $site['pageTitle'] = $rv['pagetitle'];
+
+$sanitizer = new Sanitizer();
+$_GET = $sanitizer->sanitize($_GET);
+$_POST = $sanitizer->sanitize($_POST);
 
 
 ////Directory Settings -- override global settings for directory

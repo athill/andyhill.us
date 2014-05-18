@@ -1,5 +1,5 @@
 <?php
-require_once("../inc/startup.inc.php");
+require_once("../inc/setup.inc.php");
 $page = new Page();
 
 $category = "nationalmall";
