@@ -81,15 +81,19 @@ if (count($site["script"]) > 0 && $site["script"][0] == "") {
 }
 
 ////Global objects
+
 $site['h'] = Html::singleton();
 $h = $site['h'];
+
 $site['logger'] = new Logger();
 $site['mailer'] = new Mailer();
+
 ////Menu
 $xmlfile = $site['fileroot'].'/menu.xml';
 $site['menu'] = new Menu($xmlfile, $site['script']);
 //// FIX: $menu should not be global
 $menu = $site['menu'];
+
 //$retval = $site['menu']->buildPathAndSetTitle(array('script'=>$site['script']));
 $rv = $site['menu']->parseData();
 // // $h->pa($rv);
