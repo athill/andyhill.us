@@ -1,6 +1,6 @@
 $(function() {
   $('#line-chart').linechart({
-    title: 'Total Federal Receipts and Outlays in Millions: 1901–2011 (2012-2017 projected)',
+    title: 'Total Federal Receipts and Outlays in Millions: 1901-2011 (2012-2017 projected)',
     csv: './data/line.csv',
     fields: {
       'TotalReceipts': {
