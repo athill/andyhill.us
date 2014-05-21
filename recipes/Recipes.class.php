@@ -36,6 +36,7 @@ class Recipe {
 	private function startXML() {
 		global $h;
 		header("Content-type: text/xml");
+		header('Content-Disposition: attachment; filename="'.trim(str_replace('_', '', $this->recipe->title)).'.xml"');
 		$h->wonl('<?xml version="1.0" encoding="UTF-8"?>');
 		$h->tnl('<!DOCTYPE gourmetDoc>');
 		$h->otag('gourmetDoc');

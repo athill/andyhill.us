@@ -123,7 +123,7 @@ foreach ($xml as $recipe) {
 	}
 }
 $h->linkList($links);
-$h->cdiv();	////close menu
+$h->cdiv("/#menu");	////close menu
 /////////////////////////
 ////Recipes
 ///////////////////////////
@@ -141,7 +141,6 @@ foreach ($xml as $tagname => $recipe) {
 		$h->br(2);
 	}
 }
-$h->cdiv(); ////close recipes
-// $template->footer();
+$h->cdiv('/#recipes'); ////close recipes
 $page->end();
 ?>
