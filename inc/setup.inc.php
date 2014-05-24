@@ -7,6 +7,7 @@ require_once('autoload.php');
 ////Discover webroot and fileroot
 $webroot = "";
 $basefileroot = "/home/andyhil/public_html";
+$dataroot = "/home/andyhil/data/andyhill.us";
 ////dev environments
 if (stripos($_SERVER['SCRIPT_NAME'], "/new/") === 0) {
 	$webroot .= "/new";
@@ -17,6 +18,7 @@ if (stripos($_SERVER['SCRIPT_NAME'], "/new/") === 0) {
 if ($_SERVER['HTTP_HOST'] == 'localhost' || !array_key_exists('HTTP_HOST', $_SERVER)) {
 	$webroot = '/andyhill';
 	$basefileroot = '/var/www/html';
+	$dataroot = '/var/www/html/data/andyhill.us';
 }
 
 //// Set up site
