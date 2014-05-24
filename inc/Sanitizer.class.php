@@ -1,6 +1,6 @@
 <?php
 //require_once('/ip/uirr/inc/lib/owasp-esapi/src/ESAPI.php');
-include($site['incroot'].'/libs/htmlpurifier/library/HTMLPurifier.auto.php');
+include('libs/htmlpurifier/library/HTMLPurifier.auto.php');
 class Sanitizer {
 	var $entities; 
 	var $badTags;
@@ -23,6 +23,7 @@ class Sanitizer {
 			// "&lt;" = chr(60),
 			"&ndash;" => chr(8211),
 			"&mdash;" => chr(8212)
+			
 		);	
 		$this->badTags = array('iframe','script','style','input');	
 		$this->attributeTests = array(
@@ -41,6 +42,7 @@ class Sanitizer {
 		//$methods = array();
 		//$methods = array('canonicalize', 'sanitizeHtmlEventAttributes');
 		$noerrormethods = array('canonicalize');
+		
 		//// clean field names
 		foreach ($methods as $methodname) {
 			$badNames = array();
@@ -184,10 +186,11 @@ class Sanitizer {
 		global $h, $site;
 		$h->startBuffer();
 		$page = $_SERVER['SCRIPT_NAME'];
+		$user =  isset($_SESSION['user'])? $_SESSION['user'] : array_key_exists('REMOTE_USER',$_SERVER) ? $_SERVER['REMOTE_USER'] :'';
 		$attributes = array(
 			'IP'   => $_SERVER['HTTP_HOST'],
 			'Page' => $page,
-			'User' => in_array('user',$_SESSION) ? $_SESSION['user'] : '',
+			'User' => $user,
 			'GET'  => $_SERVER['QUERY_STRING'],
 			'POST' => json_encode($_POST)
  		);
