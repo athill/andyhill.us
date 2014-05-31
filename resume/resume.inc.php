@@ -3,7 +3,8 @@
     <div id="header">
         <div id="name">Andrew T. Hill</div>
         <div id="info">
-        409 N. Roosevelt Bloomington, IN 47408 &bull; (812)323-1590 &bull; athill@indiana.edu &bull; http://andyhill.us
+        409 N. Roosevelt Bloomington, IN 47408 &bull; (812)323-1590 &bull; athill@indiana.edu &bull; 
+        <a href="http://andyhill.us">http://andyhill.us</a> &bull; <a href="https://github.com/athill/">https://github.com/athill/</a>
         </div>
     </div> <!-- Close header div -->
 </div> <!-- Close header-wrapper div -->
