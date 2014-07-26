@@ -1,0 +1,2457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gourmetDoc>
+<gourmetDoc>
+	<recipe id="1">
+		<title>Baked Rice With Cheese And Green Chilies</title>
+		<category>Entree</category>
+		<cuisine>Southwestern</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tsp.</unit>
+				<item>Olive Oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Onion</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1 1/2</amount>
+				<unit>c.</unit>
+				<item>Brown Rice</item>
+				<key>brown rice</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz.</unit>
+				<item>Cheddar Cheese</item>
+				<key>cheddar cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Ricotta</item>
+				<key>ricotta</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>Jalapeno Peppers</item>
+				<key>jalapeno peppers</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>oz.</unit>
+				<item>Green Chilis; Chopped</item>
+				<key>green chilis</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.,</unit>
+				<item>Cilantro</item>
+				<key>cilantro</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Cumin</item>
+				<key>cumin</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tsp.</unit>
+				<item>Salt And Pepper</item>
+				<key>salt and pepper</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Preheat the oven to 350 degrees.
+ Heat the oil in a small skillet. Add the onion and saute over low heat until lightly browned.
+ In a mixing bowl, combine the onion with the rice and all the remaining ingredients. Stir together thoroughly.
+Pour the mixture into a lightly oiled, 1 1/2-quart baking casserole.
+Bake for 35 minutes, or until the top is golden brown and bubbly.</instructions>
+	</recipe>
+	<recipe id="2">
+		<title>Crab dip</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>can</unit>
+				<item>Cream Of Shrimp Soup</item>
+				<key>cream of shrimp soup</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz</unit>
+				<item>Cream Cheese</item>
+				<key>cream cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>can</unit>
+				<item>King Crab</item>
+				<key>king crab</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tsp.</unit>
+				<item>Lemon Juice</item>
+				<key>lemon juice</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Mix</instructions>
+	</recipe>
+	<recipe id="24">
+		<title>Edamame Succotash</title>
+		<category>Salad</category>
+		<cuisine>Asian/Japanese</cuisine>
+		<rating>3/5 stars</rating>
+		<preptime>15 minutes</preptime>
+		<cooktime>7 minutes</cooktime>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tsp.</unit>
+				<item>Olive Oil</item>
+				<key>oil, olive</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/3</amount>
+				<unit>c.</unit>
+				<item>Red Onion; Chopped</item>
+				<key>onion, red</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Edamame; Shelled</item>
+				<key>edamame</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Corn</item>
+				<key>corn</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>Roasted Red Pepper; Chopped</item>
+				<key>roasted red pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>t. Sherry Vinegar</item>
+				<key>t. sherry vinegar</key>
+			</ingredient>
+			<ingredient optional="yes">
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>Cilantro Leaves; Minced</item>
+				<key>cilantro leaves</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Saute onion for 5 minutes
+Add edamame, corn, and red pepper and saute 3-5 minutes more
+Remove from heat and add vinegar</instructions>
+	</recipe>
+	<recipe id="3">
+		<title>Eggplant Parmesan</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>lb.</unit>
+				<item>Eggplant</item>
+				<key>eggplant</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tsp.</unit>
+				<item>Salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<item>Egg</item>
+				<key>egg</key>
+			</ingredient>
+			<ingredient>
+				<amount>1 1/2-2</amount>
+				<unit>c.</unit>
+				<item>Bread Crumb</item>
+				<key>bread crumbs</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Olive Oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Parmesan Cheese; Grated</item>
+				<key>cheese, parmesan</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tsp.</unit>
+				<item>Oregano</item>
+				<key>oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>lb.</unit>
+				<item>Mozzerella; Sliced</item>
+				<key>mozzerella</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>c.</unit>
+				<item>Tomato Sauce</item>
+				<key>tomato sauce</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Peel eggplant and slice into 1/8 in. slices, salt and let drain for 30 min.
+Pat dry.
+Beat eggs wit 2 T water
+Dip eggplant slices into eggs and then into crumbs
+Heat 1/4 c. oil in large fry pan and saute eggplant slices until golden brown
+Continue cooking eggplant until all is sauteed, using additional oil if needed
+Place half the eggplant slices in 9 X 13 pan, sprinkle with 1/3 parmesan, 1/2 oregano, and 1/3 mozzarella.  Cover with half the tomato sauce.  Repeat layers, top with last of parmesan and mozzarella.
+Bake in preheated 350 oven 30 min, or until bubbly.</instructions>
+	</recipe>
+	<recipe id="4">
+		<title>Favorite Corn Bread</title>
+		<preptime>10 minutes</preptime>
+		<cooktime>20 minutes</cooktime>
+		<image format="jpeg">
+<![CDATA[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]]>		</image>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>all-purpose flour</item>
+				<key>flour, all purpose</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>cornmeal</item>
+				<key>cornmeal</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>sugar</item>
+				<key>sugar, white</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>teaspoons</unit>
+				<item>baking powder</item>
+				<key>baking powder</key>
+			</ingredient>
+			<ingredient>
+				<amount>3/4</amount>
+				<unit>teaspoon</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>milk</item>
+				<key>milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>eggs</item>
+				<key>egg</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>shortening</item>
+				<key>shortening</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>In a mixing bowl, combine flour, cornmeal, sugar, baking powder and salt. Add the milk, eggs and shortening; beat for 1 minute. Pour into a greased 9-in. square baking pan. Bake at 425 degrees F for 20-25 minutes or until bread is golden brown and tests done.</instructions>
+	</recipe>
+	<recipe id="53">
+		<title>Fettuccine with Summer Corn Sauce</title>
+		<category>Entree</category>
+		<cuisine>American</cuisine>
+		<source>Magazine</source>
+		<rating>4.5/5 stars</rating>
+		<preptime>1 hour</preptime>
+		<yields>6 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz</unit>
+				<item>uncooked fettuccine</item>
+				<key>uncooked fettuccine</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>slices</unit>
+				<item>bacon, chopped</item>
+				<key>bacon, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>cups</unit>
+				<item>fresh corn kernels</item>
+				<key>fresh corn kernels</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cloves</unit>
+				<item>garlic, minced</item>
+				<key>garlic, minced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>t.</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/8</amount>
+				<unit>t.</unit>
+				<item>pepper</item>
+				<key>pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>parmesan cheese</item>
+				<key>parmesan cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/3</amount>
+				<unit>cup</unit>
+				<item>almonds</item>
+				<key>almonds</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/3</amount>
+				<unit>cup</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>basil, chopped</item>
+				<key>basil, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>grape tomatoes, halved</item>
+				<key>grape tomatoes, halved</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Cook fettuccine. Reserve 1/2 c. pasta water
+
+Cook bacon over medium heat until crisp. Remove and set aside. Add corn, garlic, salt and pepper. Cook until corn is tender. remove 3/4 cups corn and set aside.
+Transfer remaining corn mixture to a food processor. Add cheese, almonds, and oil. Process until blended. Return to skillet. Add reserved corn and heat through. Add fettuccine, bacon and basil. Add reserved pasta water to desired consistency. Add tomatoes.</instructions>
+	</recipe>
+	<recipe id="27">
+		<title>Ginger Miso Soup with Arame</title>
+		<category>Soup</category>
+		<cuisine>Asian/Japanese</cuisine>
+		<rating>4/5 stars</rating>
+		<preptime>1/2 hour</preptime>
+		<cooktime>15 minutes</cooktime>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>Tbs.</unit>
+				<item>Seseme Oil</item>
+				<key>seseme oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Onion; diced</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>lb.</unit>
+				<item>Button Mushrooms; Sliced</item>
+				<key>button mushrooms</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tbs.</unit>
+				<item>Ginger; Peeled and Minced</item>
+				<key>ginger</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Vegetable Boullion Cube</item>
+				<key>vegetable boullion cube</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>c.</unit>
+				<item>Water</item>
+				<key>water</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Arame Seaweed; Soaked and Drained (or substitute Hijiki)</item>
+				<key>arame seaweed</key>
+			</ingredient>
+			<ingredient>
+				<amount>2-3</amount>
+				<unit>Tbs.</unit>
+				<item>Red Miso</item>
+				<key>red miso</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<item>Scallions; Sliced</item>
+				<key>scallion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Extra Firm Tofu; Diced small</item>
+				<key>extra firm tofu</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Soak 2 large pinches of aramae in a cup of fresh water for 5 minutes.
+Saute onion and mushrooms for 3 minutes, add ginger and saute 2 minutes more
+Add 4 c. water, bring to boil, and simmer for 5 minutes
+In a small bowl, disolve miso in some of hot liquid.
+Add dissolved miso, tofu, and soaked and drained arame to pot
+Simmer for 5 minutes, careful not to boil</instructions>
+	</recipe>
+	<recipe id="5">
+		<title>Hot mushroom cheese spread</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>C.</unit>
+				<item>Mayonaise</item>
+				<key>mayonaise</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>package</unit>
+				<item>Italian Dressing Mix</item>
+				<key>italian dressing mix</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Cheddar</item>
+				<key>cheddar</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz</unit>
+				<item>Mushrooms</item>
+				<key>mushrooms</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Mix
+Bake 20-25 min. 350 deb.</instructions>
+	</recipe>
+	<recipe id="6">
+		<title>Karen Massey's Cheese Ball</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>16</amount>
+				<unit>oz</unit>
+				<item>Cream Cheese</item>
+				<key>cream cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Green Peeper</item>
+				<key>green peeper</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tsp. ,</unit>
+				<item>Onion</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tsp.</unit>
+				<item>Seasoned Ssalt</item>
+				<key>seasoned ssalt</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz</unit>
+				<item>Crushed Pineapple</item>
+				<key>crushed pineapple</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>1/2</unit>
+				<item>Grated Pecans</item>
+				<key>grated pecans</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Mix</instructions>
+	</recipe>
+	<recipe id="30">
+		<title>Maine Lobster Lasagne</title>
+		<category>Entree</category>
+		<rating>4/5 stars</rating>
+		<preptime>1 hour</preptime>
+		<cooktime>55 minutes</cooktime>
+		<image format="jpeg">
+<![CDATA[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]]>		</image>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>15 oz. container</unit>
+				<item>ricotta cheese</item>
+				<key>cheese, ricotta</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>eggs</item>
+				<key>egg</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>shredded Cheddar cheese</item>
+				<key>cheese, shredded cheddar</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>shredded mozzarella cheese</item>
+				<key>cheese, shredded mozzarella</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>grated Parmesan cheese</item>
+				<key>cheese, grated parmesan</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>medium</unit>
+				<item>onion, minced</item>
+				<key>onion, minced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>minced garlic</item>
+				<key>minced garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>chopped fresh parsley</item>
+				<key>chopped fresh parsley</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>freshly ground black pepper</item>
+				<key>freshly ground black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>16 oz. jars</unit>
+				<item>Alfredo pasta sauce</item>
+				<key>alfredo pasta sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>16</amount>
+				<item>no-boil lasagna noodles</item>
+				<key>no-boil lasagna noodles</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>pounds</unit>
+				<item>cooked and cubed lobster meat</item>
+				<key>cooked and cubed lobster meat</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>10 oz. package</unit>
+				<item>baby spinach leaves</item>
+				<key>baby spinach leaves</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Preheat the oven to 375 degrees F (190 degrees C). Grease a 9x13 inch baking dish.
+
+In a large bowl, stir together the ricotta cheese, eggs, half of the Cheddar, half of the mozzarella cheese and half of the Parmesan cheese. Mix in the onion, garlic, parsley and pepper.
+
+Spread 1 1/2 cups of Alfredo sauce in the bottom of the prepared baking dish. Top with a layer of lasagna noodles. Arrange 1/3 of the lobster meat over the noodles, cover with 1/3 of the ricotta cheese mixture, then 1/3 of the spinach and then another layer of Alfredo sauce. Repeat this process two more times ending with sauce on top. Sprinkle the remainder of the Cheddar, mozzarella and Parmesan cheeses over the top. Give the whole pan a gentle shake to get everything settled in.
+
+Bake, covered loosely with aluminum foil, for 45 minutes in the preheated oven. Remove the foil and continue baking for an additional 10 minutes or until the top is browned. Let stand for 10 minutes before serving.</instructions>
+	</recipe>
+	<recipe id="7">
+		<title>Mock Chicken and Rice Casserole</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<item>Onion; Chopped</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Rice; Uncooked</item>
+				<key>rice</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Celery; Chopped</item>
+				<key>celery</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Carrots; Chopped</item>
+				<key>carrots</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Soy Chicken; Diced</item>
+				<key>soy chicken</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Oil</item>
+				<key>oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>c.</unit>
+				<item>Water</item>
+				<key>water</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Veggie Boullion Cube</item>
+				<key>veggie boullion cube</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tsp.</unit>
+				<item>Vegex Or Spike</item>
+				<key>vegex or spike</key>
+			</ingredient>
+			<ingredient>
+				<amount>14</amount>
+				<unit>oz.</unit>
+				<item>Mushroom Soup</item>
+				<key>mushroom soup</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Combine onion, celery, rice, soy chicken, and carrots and place in 2 qt. casserole dish.
+Combine remaining ingredients. Cook 3 minutes over medium heat.
+Pour over other ingredients.
+Cook at 350 degrees for 1 hour.</instructions>
+	</recipe>
+	<recipe id="32">
+		<title>Parmesan Crusted Chicken</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<source>B-foods Newsletter</source>
+		<rating>4/5 stars</rating>
+		<preptime>20 minutes</preptime>
+		<cooktime>40 minutes</cooktime>
+		<ingredient-list>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>flour</item>
+				<key>flour, all purpose</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>Parmesan Cheese; grated</item>
+				<key>cheese, parmesan</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>eggs</item>
+				<key>egg</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tsp.</unit>
+				<item>Garlic; minced</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>Tbs.</unit>
+				<item>Parsley; minced</item>
+				<key>parsley</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<item>Chicken Breasts</item>
+				<key>chicken, breast</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>Tbs.</unit>
+				<item>Olive Oil</item>
+				<key>oil, olive</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. In a shallo dish, combine flour, parmesan cheese. In another dish, lighly beat together eggs, garlic, and parsley.
+2. Coat each chicken breast in egg mixture then dredge through flour mixture
+3. Heat oil in saute pan over medium heat
+4. Cook each chicken breast 6-10 min. on each side</instructions>
+		<modifications>Complete meal with spinach orzo or pasta parmesan</modifications>
+	</recipe>
+	<recipe id="8">
+		<title>Penne Pasta with Pupmkin Sauce</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>4</amount>
+				<unit>Tsp.</unit>
+				<item>Olive Oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>diced</unit>
+				<item>Onions</item>
+				<key>onions</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>diced</unit>
+				<item>Red Bell Pepper</item>
+				<key>red bell pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>cloves,</unit>
+				<item>Garlic</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>C.</unit>
+				<item>Pumpkin Puree</item>
+				<key>pumpkin puree</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>C.</unit>
+				<item>Vegetable Broth</item>
+				<key>vegetable broth</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>large</unit>
+				<item>Nutmeg</item>
+				<key>nutmeg</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Lb.</unit>
+				<item>Farfelle</item>
+				<key>farfelle</key>
+			</ingredient>
+			<ingredient>
+				<item>Parsley; Parmesan Cheese</item>
+				<key>parsley</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>C,</unit>
+				<item>White Beans</item>
+				<key>white beans</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Cook farfelle al dente
+Heat olive oil in large skillet
+Saute onion and pepper until soft (~3 min)
+Add garlic and saute another 2 minutes
+Mix in broth, puree, nutmeg, and beans and simmer for 10 minutes
+Mix pasta with sauce and garnish with parsley and parmesan</instructions>
+	</recipe>
+	<recipe id="9">
+		<title>Red Beans and Rice</title>
+		<category>Entree</category>
+		<cuisine>Cajun</cuisine>
+		<rating>5/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>c.</unit>
+				<item>Dried Kidney Beans</item>
+				<key>dried kidney beans</key>
+			</ingredient>
+			<ingredient>
+				<amount>14</amount>
+				<unit>oz.</unit>
+				<item>Vegetable Broth</item>
+				<key>vegetable broth</key>
+			</ingredient>
+			<ingredient>
+				<amount>14</amount>
+				<unit>oz.</unit>
+				<item>Whole Tomatoes</item>
+				<key>whole tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tsp.</unit>
+				<item>Veggie Bacon Bits</item>
+				<key>veggie bacon bits</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tsp.</unit>
+				<item>Veggie Worcestershire Sauce</item>
+				<key>veggie worcestershire sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cloves</unit>
+				<item>Chopped Garlic</item>
+				<key>chopped garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>Bay Leaves</item>
+				<key>bay leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tsp.</unit>
+				<item>Ceyenne Pepper</item>
+				<key>ceyenne pepper</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Soak beans overnight. Drain and rinse well.
+In large pot, place beans covered in water until it boils. Simmer on low heat for 30 minutes. Rinse and drain well.
+In a large saucepan, place the beans and other ingredients and simmer over very low heat for two or more hours, until most of the liquid has evaporated. Stir frequently during this process so that the bottom does not burn.
+Remove the bay leaves.
+With a slotted spoon, serve beans over a bed of rice.</instructions>
+	</recipe>
+	<recipe id="50">
+		<title>Red Beans and Sausage</title>
+		<category>Entree</category>
+		<cuisine>Cajun</cuisine>
+		<rating>4/5 stars</rating>
+		<preptime>10 minutes</preptime>
+		<cooktime>20 minutes</cooktime>
+		<yields>6 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>13 1/2</amount>
+				<unit>oz</unit>
+				<item>Andouille</item>
+				<key>Andouille</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>Olive Oil</item>
+				<key>Olive Oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<item>stalks celery, diced</item>
+				<key>stalks celery, diced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>medium</unit>
+				<item>onion, diced</item>
+				<key>onion, diced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>medium</unit>
+				<item>green pepper, diced</item>
+				<key>green pepper, diced</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cloves</unit>
+				<item>garlic,minced</item>
+				<key>garlic,minced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>water</item>
+				<key>water</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>bay leaves</item>
+				<key>bay leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>cayenne pepper</item>
+				<key>cayenne pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>cans light red kidney beans</item>
+				<key>cans light red kidney beans</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Brown sausage in oil for 3-4 minutes
+Add celery, onion, green pepper, garlic, cook until tender
+Add water, bay leaves, cayenne pepper, and beans
+Cover and simmer for 15-20 minutes
+Remove bay leaves</instructions>
+	</recipe>
+	<recipe id="54">
+		<title>Sczechuan Noodles</title>
+		<category>Entree</category>
+		<cuisine>Asian/Chinese</cuisine>
+		<source>website</source>
+		<rating>4/5 stars</rating>
+		<preptime>1/2 hour</preptime>
+		<yields>2 pints</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>6</amount>
+				<item>garlic cloves, chopped</item>
+				<key>garlic cloves, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>fresh ginger, peeled and chopped</item>
+				<key>fresh ginger, peeled and chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>vegetable oil</item>
+				<key>oil, vegetable</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>tahini (sesame paste)</item>
+				<key>tahini (sesame paste)</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>smooth peanut butter</item>
+				<key>smooth peanut butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>good soy sauce</item>
+				<key>good soy sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>dry sherry</item>
+				<key>dry sherry</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>sherry vinegar</item>
+				<key>sherry vinegar</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>honey</item>
+				<key>honey</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>hot chili oil</item>
+				<key>oil, hot chili</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>dark sesame oil</item>
+				<key>oil, dark sesame</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>freshly ground black pepper</item>
+				<key>freshly ground black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/8</amount>
+				<unit>teaspoon</unit>
+				<item>ground cayenne pepper</item>
+				<key>cayenne pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>spaghetti</item>
+				<key>spaghetti</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>red bell pepper, julienned</item>
+				<key>red bell pepper, julienned</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>yellow bell pepper, julienned</item>
+				<key>yellow bell pepper, julienned</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<item>scallions, sliced diagonally (white and green parts)</item>
+				<key>scallions, sliced diagonally (white and green parts)</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Place the garlic and ginger in a food processor fitted with a steel blade. Add the vegetable oil, tahini, peanut butter, soy sauce, sherry, sherry vinegar, honey, chili oil, sesame oil, and ground peppers. Puree the sauce.
+
+Add a splash of oil to a large pot of boiling salted water and cook the spaghetti al dente. Drain the pasta in a colander, place it in a large bowl, and while still warm, toss with 3/4 of the sauce. Add the red and yellow bell peppers and scallions; toss well. Serve warm or at room temperature. The remaining sauce may be added, as needed, to moisten the pasta.</instructions>
+	</recipe>
+	<recipe id="35">
+		<title>Seafood Enchiladas</title>
+		<category>Entree</category>
+		<cuisine>Mexican</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Flour</item>
+				<key>flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz.</unit>
+				<item>Krab Or Crab; Flake</item>
+				<key>krab or crab</key>
+			</ingredient>
+			<ingredient>
+				<amount>10</amount>
+				<unit>oz.</unit>
+				<item>Chikin Broth</item>
+				<key>chikin broth</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz.</unit>
+				<item>Sour Cream</item>
+				<key>sour cream</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>oz.</unit>
+				<item>Green Chiles; Chopped</item>
+				<key>green chiles</key>
+			</ingredient>
+			<ingredient>
+				<amount>10-12</amount>
+				<item>Tortillas; 12&quot; or Fajita</item>
+				<key>tortillas; 12&quot; or Fajita</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>Celery; Diced</item>
+				<key>celery</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Onion; Diced</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz.</unit>
+				<item>Montery Jack Cheese; Shredded</item>
+				<key>montery jack cheese</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Make a roux with the butter, flour, and chicken broth. To make a roux, melt the butter, add flour, stir until smooth, wait a minute, and then slowly add the chikin broth a little at a time, stirring all the time, bring the liquid near a boil before adding
+When roux is thick (or not, it
+Cover bottom of 9x13 casserole dish with sauce.
+Warm tortillas.
+Sprinkle krab, celery, onions, most of the cheese in each tortilla and roll.
+Pour rest of sauce on top and bake at 425 degrees 20 minutes.
+Sprinke remaining cheese on top and cook for 5 more minutes.</instructions>
+	</recipe>
+	<recipe id="11">
+		<title>Seafood Fettuccini</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>6</amount>
+				<unit>oz.</unit>
+				<item>Fettuccini</item>
+				<key>fettuccini</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cloves,</unit>
+				<item>Garlic</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<unit>or</unit>
+				<item>8 Oz.</item>
+				<key>8 oz.</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Whipping Cream</item>
+				<key>whipping cream</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.,</unit>
+				<item>Parmesan Cheese</item>
+				<key>parmesan cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>Black Pepper</item>
+				<key>black pepper</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Cook fettuccini.
+Heat butter and garlic in skillet on medium until garlic is slightly browned.
+Add Krab, whipping cream, and pepper.  Heat 3 min. or until mixture
+Add Parm. cheese, stir for 1 minute
+Toss with fettuccini.</instructions>
+	</recipe>
+	<recipe id="37">
+		<title>Southwestern Stuffed Pepeprs</title>
+		<category>Entree</category>
+		<cuisine>Southwestern</cuisine>
+		<source>B-foods Newsletter</source>
+		<rating>4/5 stars</rating>
+		<preptime>15 minutes</preptime>
+		<cooktime>20 minutes</cooktime>
+		<ingredient-list>
+			<ingredient>
+				<amount>4</amount>
+				<item>Bell Peppers; large</item>
+				<key>bell pepper, green</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>c.</unit>
+				<item>Corn</item>
+				<key>corn</key>
+			</ingredient>
+			<ingredient>
+				<amount>15</amount>
+				<unit>oz.</unit>
+				<item>Black Beans</item>
+				<key>black beans</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Cheddar Cheese; shredded</item>
+				<key>cheese, cheddar</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Jalapeno Pepper; diced</item>
+				<key>jalapeno peppers</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>Cilantro; chopped</item>
+				<key>cilantro</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Salsa</item>
+				<key>salsa</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Cooked Rice</item>
+				<key>cooked rice</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>Butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tsp.</unit>
+				<item>Paprika</item>
+				<key>paprika</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Preheat oven to 375 deg.
+Bring stock pot of water to boil
+Cut peppers in half or cut off tops
+Remove seeds and inner ribs and blanch in boliling water for 4 min.
+Combine corn, beans, cheese, salt, jalapeno, cilantro, salsa, and rice
+Stuff each pepper with filling and place on baking dish. Add enough water to fill bottom of baking dish
+Sprinkile each pepper with a dab of butter and pinch of paprika
+Bake for 20 min.
+Top with salsa or sour cream and serve with corn chips</instructions>
+	</recipe>
+	<recipe id="12">
+		<title>Spaghetti Casserole</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>6</amount>
+				<unit>oz.</unit>
+				<item>Spaghetti</item>
+				<key>spaghetti</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Onion; Chopped</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Green Bell Pepper; Chopped</item>
+				<key>green bell pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz.</unit>
+				<item>Tomato Sauce</item>
+				<key>tomato sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>14</amount>
+				<unit>oz.</unit>
+				<item>Corn</item>
+				<key>corn</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>Red Wine</item>
+				<key>red wine</key>
+			</ingredient>
+			<ingredient>
+				<item>Tobasco</item>
+				<key>tobasco</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>1/2</unit>
+				<item>Marjoram</item>
+				<key>marjoram</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>lb.</unit>
+				<item>Firm Tofu; Chopped</item>
+				<key>firm tofu</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>oz.</unit>
+				<item>Parmesan Cheese</item>
+				<key>parmesan cheese</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Preheat oven to 400F.
+Cook spaghetti.
+Saute onion, green pepper, and tofu in olive oil.
+Add tomato sauce, wine, corn, tabasco, salt, and pepper.
+Put cooked spaghetti in bottom of casserole dish and top with the sauce and parmesan cheese.
+Bake for 25-30 minutes</instructions>
+	</recipe>
+	<recipe id="40">
+		<title>Spinach artichoke dip</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>14</amount>
+				<unit>oz</unit>
+				<item>Artichoke Hearts</item>
+				<key>artichoke hearts</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c</unit>
+				<item>Mayonaise</item>
+				<key>mayonaise</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz</unit>
+				<item>Cream Cheese</item>
+				<key>cream cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>Garlic Powder</item>
+				<key>garlic powder</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>oz.</unit>
+				<item>Romano Cheese</item>
+				<key>romano cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>box,</unit>
+				<item>Frozen Spinach</item>
+				<key>frozen spinach</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>oz</unit>
+				<item>Mozzerella</item>
+				<key>mozzerella</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Mix all but mozzerella
+Top with mozzerella
+Bake at 350 for 30 min</instructions>
+	</recipe>
+	<recipe id="13">
+		<title>Spinach Veggie Casserole</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Rice</item>
+				<key>rice</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>c.</unit>
+				<item>Water</item>
+				<key>water</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>Tsp.</unit>
+				<item>Butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>Tsp.</unit>
+				<item>Flour</item>
+				<key>flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>c.</unit>
+				<item>Milk</item>
+				<key>milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>Garlic Cloves; Minced</item>
+				<key>garlic cloves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Onion; Chopped</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Red Bell Pepper; Chopped</item>
+				<key>red bell pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>15</amount>
+				<unit>oz.</unit>
+				<item>Corn; Drained</item>
+				<key>corn</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tsp.</unit>
+				<item>Vegetable Oil</item>
+				<key>vegetable oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>c.</unit>
+				<item>Swiss Cheese; Shredded</item>
+				<key>swiss cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>10</unit>
+				<item>Spinach; Chopped</item>
+				<key>spinach</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tsp.</unit>
+				<item>Hot Pepper Sauce</item>
+				<key>hot pepper sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>Dried Bread Crumbs</item>
+				<key>dried bread crumbs</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Preheat oven to 350F
+Cook rice in water
+Make a roux with the butter, flour, and milk. To make a roux, melt the butter, add flour, stir until smooth, wait a minute, and then slowly add the milk a little at a time, stirring all the time, bring the liquid near a boil before adding more.
+Saute garlic, onion, pepper, corn, and oil in skillet.
+When roux has thickened, add 3/4 cheese, salt, pepper, and hot sauce.
+Add spinach and stir.
+Combine rice, cheese mixture, and and sauteed veggies and poor in casserole dish.
+Sprinkle breadcrumbs and remaining cheese on top and cook until cheese melts.</instructions>
+	</recipe>
+	<recipe id="42">
+		<title>Sweet and Sour Meatball Sauce</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<source>B-foods Newsletter</source>
+		<rating>4/5 stars</rating>
+		<preptime>15 minutes</preptime>
+		<cooktime>15 minutes</cooktime>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>Tbs.</unit>
+				<item>Olive Oil</item>
+				<key>oil, olive</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tbs.</unit>
+				<item>Apple Cider Vinegar</item>
+				<key>apple cider vinegar</key>
+			</ingredient>
+			<ingredient>
+				<amount>10</amount>
+				<unit>Tbs.</unit>
+				<item>Apricot Jam</item>
+				<key>apricot jam</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<unit>Tbs.</unit>
+				<item>Ketchup</item>
+				<key>ketchup</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>Yellow Onion; minced</item>
+				<key>onion, yellow</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>Tbs.</unit>
+				<item>Dried Sage</item>
+				<key>dried sage</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>Tbs.</unit>
+				<item>Dried Oregano</item>
+				<key>dried oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>Hot Sauce</item>
+				<key>hot sauce</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Combine all ingredients
+Serve over  Vegetarian Meatballs</instructions>
+	</recipe>
+	<recipe id="15">
+		<title>Sweet Potato Burritos</title>
+		<category>Entree</category>
+		<cuisine>Chinese</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>3</amount>
+				<unit>tsp. sp</unit>
+				<item>Vegetable Broth</item>
+				<key>vegetable broth</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>lg,</unit>
+				<item>Onion</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>cloves,</unit>
+				<item>Garlic</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>C.,</unit>
+				<item>Sweet Potatos</item>
+				<key>sweet potatos</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tsp. bs,</unit>
+				<item>Chili Powder; Cumin</item>
+				<key>chili powder</key>
+			</ingredient>
+			<ingredient>
+				<amount>12</amount>
+				<item>10 In Flour Tortillas</item>
+				<key>10 in flour tortillas</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>tsp. sp</unit>
+				<item>Prepared Mustard</item>
+				<key>prepared mustard</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pinch</unit>
+				<item>Cayenne</item>
+				<key>cayenne</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tsp. bl</unit>
+				<item>Tamari</item>
+				<key>tamari</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz,</unit>
+				<item>Cheddar</item>
+				<key>cheddar</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>C</unit>
+				<item>Pinto Beans</item>
+				<key>pinto beans</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Preheat oven to 350 deg F (175 C).
+Combine everything except torillas and half cheddar
+Spoon mixture evenly into tortitillas in casserole dish
+Top with remaining cheddar
+Cook for 25-30 minutes.</instructions>
+	</recipe>
+	<recipe id="16">
+		<title>Sweet-n-sour Chikin</title>
+		<category>Entree</category>
+		<cuisine>Chinese</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>10-12</amount>
+				<unit>oz.</unit>
+				<item>Veggie &quot;chikin&quot;; Diced</item>
+				<key>veggie &quot;chikin&quot;</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>large</unit>
+				<item>Carrot; Diced</item>
+				<key>carrot</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Onion; Diced</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>16</amount>
+				<unit>oz.</unit>
+				<item>Pineapple Chunks In Juice</item>
+				<key>pineapple chunks in juice</key>
+			</ingredient>
+			<ingredient>
+				<amount>2-3</amount>
+				<unit>tsp.</unit>
+				<item>Brown Sugar</item>
+				<key>brown sugar</key>
+			</ingredient>
+			<ingredient>
+				<amount>2-3</amount>
+				<unit>tsp.</unit>
+				<item>Soy Sauce</item>
+				<key>soy sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>2-3</amount>
+				<unit>tsp.</unit>
+				<item>Corn Starch</item>
+				<key>corn starch</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Rice</item>
+				<key>rice</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Open pineapple, keep juice for sauce after draining.
+Add soy sauce to taste and cornstarch to desired thickness and stir.
+Fry up chikin, carrot, and onion (I use peanut oil). When close to done add sauce and stir for a minute or so.
+Mix in pineapple and serve over rice</instructions>
+	</recipe>
+	<recipe id="17">
+		<title>Tandoori Chicken Skewers</title>
+		<category>Entree</category>
+		<cuisine>Asian/Indian</cuisine>
+		<rating>4/5 stars</rating>
+		<preptime>3 hours</preptime>
+		<cooktime>15 minutes</cooktime>
+		<ingredient-list>
+			<ingredient>
+				<amount>24</amount>
+				<unit>oz.</unit>
+				<item>Boneless Chicken Breasts</item>
+				<key>chicken, breast</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Onion; Chopped</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Yogurt</item>
+				<key>yogurt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>Canola Oil</item>
+				<key>canola oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Coriander; Ground</item>
+				<key>cilantro</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>Black Pepper</item>
+				<key>black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>Tumeric</item>
+				<key>tumeric</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Cumin</item>
+				<key>cumin</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>Salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>3/4</amount>
+				<unit>tsp.</unit>
+				<item>Ginger; Chopped</item>
+				<key>ginger</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Puree everything but chicken breasts in food processor.
+Cut chicken into 1/2 inch strips or cubes
+Marinate chicken in puree for 2 hours
+Broil chicken for 6 minutes or so on each side
+Serve with rice and Traditional Indian Dipping Sauce</instructions>
+	</recipe>
+	<recipe id="18">
+		<title>Thai Peanut Noodles</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz</unit>
+				<item>Rice Or Spiral Noodles</item>
+				<key>rice or spiral noodles</key>
+			</ingredient>
+			<ingredient>
+				<amount>1 1/2</amount>
+				<unit>c.</unit>
+				<item>Peanut Butter (natural)</item>
+				<key>peanut butter (natural)</key>
+			</ingredient>
+			<ingredient>
+				<amount>14</amount>
+				<unit>oz</unit>
+				<item>Coconut Milk</item>
+				<key>coconut milk</key>
+			</ingredient>
+			<ingredient>
+				<unit>tsp. astsp. e</unit>
+				<item>Tamari Or Soy Sauce</item>
+				<key>tamari or soy sauce</key>
+			</ingredient>
+			<ingredient>
+				<unit>tsp. astsp. e</unit>
+				<item>Sesame Oil</item>
+				<key>sesame oil</key>
+			</ingredient>
+			<ingredient>
+				<unit>chopped</unit>
+				<item>Tofu</item>
+				<key>tofu</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>medium,</unit>
+				<item>Carrot</item>
+				<key>carrot</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>medium</unit>
+				<item>Broccoli</item>
+				<key>broccoli</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tsp. sp</unit>
+				<item>Peanut Oil</item>
+				<key>peanut oil</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Cook noodles
+Add peanut butter to coconut milk a little at a time while stirring until smooth
+Add tamari and sesame oil to taste
+Stir fry tofu, carrot, and brocolli in peanut oil
+Combine</instructions>
+	</recipe>
+	<recipe id="46">
+		<title>Tortilla-Black Bean Casserole</title>
+		<category>Entree</category>
+		<cuisine>Chinese</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>12</amount>
+				<unit>or</unit>
+				<item>Tortillas; 6&quot; Corn</item>
+				<key>tortillas; 6&quot; corn</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>diced</unit>
+				<item>Green Pepper</item>
+				<key>green pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>diced</unit>
+				<item>Onion</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>3/4</amount>
+				<unit>c.</unit>
+				<item>Salsa</item>
+				<key>salsa</key>
+			</ingredient>
+			<ingredient>
+				<amount>16</amount>
+				<unit>oz</unit>
+				<item>Stewed Tomatoes</item>
+				<key>stewed tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>32</amount>
+				<unit>oz</unit>
+				<item>Black Beans</item>
+				<key>black beans</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tsp.</unit>
+				<item>Cumin</item>
+				<key>cumin</key>
+			</ingredient>
+			<ingredient>
+				<item>Chili Powder</item>
+				<key>chili powder</key>
+			</ingredient>
+			<ingredient>
+				<item>Oregano</item>
+				<key>oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz,</unit>
+				<item>Cheddar</item>
+				<key>cheddar</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>preheat oven to 350 deg.
+Combine everything except tortillas into a sauce
+Layer tortillas, then sauce, tortillas, sauce, tortillas
+Top with cheddar
+Cook for 30 minutes or til cheese is melted</instructions>
+	</recipe>
+	<recipe id="47">
+		<title>Traditional Indian Dipping Sauce</title>
+		<category>Entree</category>
+		<cuisine>Asian/Indian</cuisine>
+		<source>Magazine</source>
+		<rating>4/5 stars</rating>
+		<preptime>5 minutes</preptime>
+		<cooktime>1 minute</cooktime>
+		<ingredient-list>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>PLain Yogurt</item>
+				<key>plain yogurt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>cucumber; peeled and seeded</item>
+				<key>cucumber</key>
+			</ingredient>
+			<ingredient>
+				<amount>2 1/2</amount>
+				<item>Tbs, Cilantro; fresh chopped</item>
+				<key>tbs, cilantro</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>tsp.</unit>
+				<item>Green Onions; chopped</item>
+				<key>scallion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>Coriander; ground</item>
+				<key>cilantro</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>Cumin; ground</item>
+				<key>cumin</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Combine all ingredients and season to taste with salt.
+Chill until ready to serve</instructions>
+	</recipe>
+	<recipe id="51">
+		<title>Turkey Andoille Gumbo</title>
+		<category>Soup</category>
+		<cuisine>Cajun</cuisine>
+		<source>B-Foods Newsletter</source>
+		<rating>5/5 stars</rating>
+		<preptime>3 hours</preptime>
+		<cooktime>1 hour</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>oil</item>
+				<key>oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>flour</item>
+				<key>flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>lbs.</unit>
+				<item>Andouille sausage</item>
+				<key>Andouille sausage</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>green pepper, diced</item>
+				<key>green pepper, diced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>red pepper, diced</item>
+				<key>red pepper, diced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>onion diced</item>
+				<key>onion diced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>head</unit>
+				<item>garlic, chopped</item>
+				<key>garlic, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>lb.</unit>
+				<item>okra, sliced</item>
+				<key>okra, sliced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>turkey breast</item>
+				<key>turkey breast</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>T</unit>
+				<item>Worstershire sauce</item>
+				<key>Worstershire sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>t</unit>
+				<item>Tobasco sauce</item>
+				<key>Tobasco sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>t.</unit>
+				<item>fresh thyme, chopped</item>
+				<key>fresh thyme, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>lbs.</unit>
+				<item>tomato concasse, diced</item>
+				<key>tomato concasse, diced</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>T.</unit>
+				<item>File powder</item>
+				<key>File powder</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>t.</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>t.</unit>
+				<item>black pepper</item>
+				<key>black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>t.</unit>
+				<item>cayenne pepper</item>
+				<key>cayenne pepper</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Cook turkey breast, make stock (1 gallon) from bones
+2. Make roux with flour and oil
+3. Render sausage, put aside, add peppers, celery and onion to the fat; cook until vegetables begin to soften
+4. Add garlic and cook until aroma is released (~ 30 sec.)
+5. Add okra, thyme, and spices
+6. Add stock, simmer for 10-15 minutes
+7. Add roux and stir until dissolved
+8. Simmer at least 20 minutes
+9. Add sausage, turkey, tomato, file powder, and seasoning to taste
+10. Serve over rice</instructions>
+	</recipe>
+	<recipe id="48">
+		<title>Vegan Sheppard's PIe</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<source>Good Life Culinary</source>
+		<rating>4/5 stars</rating>
+		<preptime>1 hour</preptime>
+		<cooktime>20 minutes</cooktime>
+		<ingredient-list>
+			<ingredient>
+				<amount>6</amount>
+				<item>Potatoes</item>
+				<key>potato</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Coconut Milk</item>
+				<key>coconut milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tbs.</unit>
+				<item>Canola Butter</item>
+				<key>canola butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>3/4</amount>
+				<unit>c.</unit>
+				<item>Dill; fresh, chopped, divided</item>
+				<key>dill</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>Sage; fresh, chopped</item>
+				<key>dried sage</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>can</unit>
+				<item>Chickpeas</item>
+				<key>chickpeas</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>can</unit>
+				<item>Red Beans</item>
+				<key>red beans</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>can</unit>
+				<item>Baked Beans</item>
+				<key>baked beans</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<item>head Cauliflower</item>
+				<key>head cauliflower</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<item>bunch Asparagus</item>
+				<key>bunch asparagus</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Leek</item>
+				<key>leek</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Onion</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>Carrots</item>
+				<key>carrot</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Black Pepper</item>
+				<key>black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Sea Salt</item>
+				<key>sea salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tsp.</unit>
+				<item>Worstestershire Sauce</item>
+				<key>worstestershire sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tsp.</unit>
+				<item>Hot Sauce</item>
+				<key>hot sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Curry Powder</item>
+				<key>curry powder</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Cumin</item>
+				<key>cumin</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tbs.</unit>
+				<item>Apricot Jam</item>
+				<key>apricot jam</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>Soy, Rice or Almond Milk</item>
+				<key>soy, rice or almond milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>Tbs.</unit>
+				<item>Flour</item>
+				<key>flour, all purpose</key>
+			</ingredient>
+			<ingredient>
+				<amount>2 1/5</amount>
+				<unit>oz</unit>
+				<item>Marmite or Vegemite</item>
+				<key>marmite or vegemite</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<unit>tbs.</unit>
+				<item>Parsley; fresh, chopped, divided</item>
+				<key>parsley</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Chop unpeeled potatoes and boil until tender
+2. While potatoes are boiling, chop otehr vegetables and steam
+3. Mix marmite or vegemite and flour in a large saucepan and combine with a fork. Add almond, roce, or soy milk; jam; cumin; curry powder; hot sauce; Worstershire sauce, salt and pepper. Bring to boil while whisking constantly, then remove from heat.
+4. When potatoes are bolied mash with coconut milk, conola butter, 3 Tbs. dill, 3 Tbs. parsley
+5. Add steamed vegetables to gravy mix. Add beans, rest of parsley and dill, and sage
+6. Pour vegetable/bean/gravy mix into greased 11x18 in. casserole dish
+7. Top with mashed potatoes, carefully using a spoon
+8. Draw a fork across potatoes horizontally and vertically to create a ridged matrix. Spray lightly with canola oil
+9. Broil for 15-30 minutes until potatoes are goldden and crispy on top.</instructions>
+	</recipe>
+	<recipe id="49">
+		<title>Vegetarian Meatballs</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<source>B-Foods Newsletter</source>
+		<rating>4/5 stars</rating>
+		<preptime>15 minutes</preptime>
+		<cooktime>45 minutes</cooktime>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<item>eggs</item>
+				<key>egg</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>Olive Oil</item>
+				<key>oil, olive</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>Colby Cheese; shredded</item>
+				<key>cheese, colby</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>Tbs.</unit>
+				<item>Yellow Onion; minced</item>
+				<key>onion, yellow</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Dried Basil</item>
+				<key>dried basil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Dried Sage</item>
+				<key>dried sage</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>Salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Herbed Stuffing Mix</item>
+				<key>herbed stuffing mix</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>Cottage Cheese</item>
+				<key>cheese, cottage</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<unit>Tbs.</unit>
+				<item>Pecans; ground</item>
+				<key>pecans</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Preheat oven to 350 deg.
+2. Oil casserole dish
+3. Mix all ingredients. Roll into 2 in. balls. Place in pan.&amp;lt;b&amp;gt; &amp;lt;/b&amp;gt;Bake 15 minutes, turn and bake another 15 minutes.
+4. Add meatball sauce and bake another 15 minutes.</instructions>
+	</recipe>
+	<recipe id="20">
+		<title>Vegetarian Taco Casserole</title>
+		<category>Entree</category>
+		<cuisine>Mexican</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>c.</unit>
+				<item>Tortilla Chips; Crushed</item>
+				<key>tortilla chips</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Large Onion; Chopped</item>
+				<key>large onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>Bell Pepper; Chopped</item>
+				<key>bell pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tsp.</unit>
+				<item>Canola Oil</item>
+				<key>canola oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>Garlic Cloves; Minced</item>
+				<key>garlic cloves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Frozen Hash Browns</item>
+				<key>frozen hash browns</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz.can</unit>
+				<item>Chopped Green Chiles</item>
+				<key>chopped green chiles</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>c.</unit>
+				<item>Brown Rice; Cooked</item>
+				<key>brown rice</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>Salsa</item>
+				<key>salsa</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tsp.</unit>
+				<item>Chili Powder</item>
+				<key>chili powder</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>Tsp.</unit>
+				<item>Cumin</item>
+				<key>cumin</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tsp.</unit>
+				<item>Oregano</item>
+				<key>oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>14</amount>
+				<unit>oz.</unit>
+				<item>Black Beans</item>
+				<key>black beans</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz.</unit>
+				<item>Cheddar Cheese</item>
+				<key>cheddar cheese</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Cover bottom of casserole dish with tortilla chips.
+Saute onion, pepper, garlic, and hash browns.
+Combine chiles, rice, salsa, chili powder, cumin, oregano, and black beans.
+Combine with vegetable mixture and heat until warm.
+Transfer to casserole dish, top with cheese, and bake at 350F for 20 minutes.</instructions>
+	</recipe>
+	<recipe id="21">
+		<title>Veggie Lasagne</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<rating>4/5 stars</rating>
+		<ingredient-list>
+			<ingredient>
+				<item>Onion; Zuchini; Carrot; Broccoli; Mushroom</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tsp.</unit>
+				<item>Garlic</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>14</amount>
+				<unit>oz</unit>
+				<item>Tomato Sauce</item>
+				<key>tomato sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tsp.</unit>
+				<item>Oregano</item>
+				<key>oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>Pepper; Thyme; Basil</item>
+				<key>pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>10-12</amount>
+				<item>Lasagne Noodles</item>
+				<key>lasagne noodles</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>lb</unit>
+				<item>Ricotta</item>
+				<key>ricotta</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz,</unit>
+				<item>Mozzeralla</item>
+				<key>mozzeralla</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c,</unit>
+				<item>Parmesan</item>
+				<key>parmesan</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Cook noodles
+Preheat oven to 350 deg
+Saute veggies
+Combine with tomato sauce and spices
+Spread thin layer of sauce
+layer noodles, sauce, ricotta, mozzerella, noodles, sauce, ricotta, mozzerella, noodles
+Top with remaining mozzerella and parmesan
+Cook for 30-40 minutes</instructions>
+	</recipe>
+</gourmetDoc>

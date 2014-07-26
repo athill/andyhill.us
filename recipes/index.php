@@ -4,7 +4,11 @@ $page = new Page(array(
 	'stylesheets'=>array('recipes.css')
 ));
 
-if(!$xml=simplexml_load_file('recipes0904.grmt')){
+// if(!$xml=simplexml_load_file('recipes0904.grmt')){
+//     trigger_error('Error reading XML file',E_USER_ERROR);
+// }
+
+if(!$xml=simplexml_load_file('recipes.xml')){
     trigger_error('Error reading XML file',E_USER_ERROR);
 }
 
