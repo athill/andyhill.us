@@ -5,7 +5,7 @@ $page = new Page(array(
 	'template'=>'none'
 ));
 
-if(!$xml=simplexml_load_file('recipes0904.grmt')){
+if(!$xml=simplexml_load_file('recipes.xml')){
     trigger_error('Error reading XML file',E_USER_ERROR);
 }
 

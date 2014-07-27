@@ -28,7 +28,7 @@ much time to it. There are all sorts of things like
 and <a href"http://www.epicurious.com/" target="_blank">epicurious.com</a>,
 so there's not a clear need. So it's got sentimental value, I guess.
 But then I found this desktop recipe manager, 
-<a href="http://grecipe-manager.sourceforge.net/" target="_blank">Gourmet</a> 
+<a href="http://thinkle.github.io/gourmet/" target="_blank">Gourmet</a> 
 I liked the idea that it stored my data locally and could use XML to 
 export and import data. I wrote a script to convert my XML to their XML you 
 can export these recipes into Gourmet
@@ -42,6 +42,8 @@ and the results.
 EOD;
 $page->template->template->geekOut($intro);
 
+
+$h->p('I use the excellent <a href="http://thinkle.github.io/gourmet/" target="_blank">Gourmet</a> recipe manager. If you use Gourmet as well, you can export these recipes (click on "Export" below the recipe) and import them into Gourmet');
 
 ///////////////////////
 ////Filter

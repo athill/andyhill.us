@@ -20,3 +20,17 @@ div#menu a {
 #recipes th {
 	text-align: left;
 }
+
+.recipe-title {
+	background-color: wheat;
+	border-top-left-radius: 1em;	
+	border-top-right-radius: 1em;	
+	padding: 0.5em;
+}
+
+.recipe-main {
+	background-color: wheat;
+	border-radius: 1em;
+	border-top-left-radius: 0;	
+	padding: 1em;
+}

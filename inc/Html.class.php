@@ -138,7 +138,7 @@ class Html extends Xml {
 	
 	public function rtn($methodName, $args=array()) {
 		if ($methodName == "rtn") die("Recursion fail");
-		if (!method_exists($this, $methodName)) die("Bad method name");
+		// if (!method_exists($this, $methodName)) die("Bad method name");
 		if ($methodName == "startBuffer" || $methodName == "endBuffer") die("Bad method start/endBuffer");
 		try {
 			$this->startBuffer();

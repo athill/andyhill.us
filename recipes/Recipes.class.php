@@ -50,8 +50,11 @@ class Recipe {
 	public function display() {
 		global $h;
 		$h->odiv('class="recipe"');
+		// $h->odiv('class="recipe-title"');
 		$title = trim($this->recipe->title);	
-		$h->h(2, $title, 'id="'. $this->getName($title).'"');
+		$h->h2($h->rtn('span', array($title, 'class="recipe-title"')), 'id="'. $this->getName($title).'"');
+		// $h->cdiv('/.recipe-title');
+		$h->odiv('class="recipe-main"');
 		$h->otable();
 		$items = array("Category,category",
 				"Style,cuisine",
@@ -96,7 +99,8 @@ class Recipe {
 		$h->h(3, "Instructions:");
 		$instructions = preg_replace("/\n/", "<br />\n", trim($this->recipe->instructions));
 		$h->op($instructions);	
-		$h->cdiv();
+		$h->cdiv('/.recipe-main');
+		$h->cdiv('/.recipe');
 	}
 
 	function getName($name) {
