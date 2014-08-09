@@ -54,14 +54,15 @@ $sites = array(
 		'I created and maintain the Pizza King site for my cousin, Jeff. It\'s a good 
 place and he\'s a good guy, you should 
 <a href="http://pizzakingofcarmel.com/directions.php" target="_blank">check it out.</a>'),
+	new site2("jquery-readmore", "https://github.com/athill/jquery-readmore", "img/jquery-readmore.png", 
+		'jQuery plugin read more functionality<br /><a href="/jquery-readmore/demo.html" target="_blank">Demo</a>'),		
+	new site2("InformedElectorate.net", "http://InformedElectorate.net", "img/informedelectorate.png", 
+		'Skeleton of site idea that would encourage civic engagement.'),		
 	new site2("From URL to Web Page", "From URL to Web Page.zip", "img/url2web.png", 
 		"Presentation I did for work"),
 	new site2("Metaprogramming in ColdFusion", "cfmeta/", "img/cfmeta.png", 
 		'Presentation I did for cfmeetup. <br /><a href="cfmeta/slideshow.pdf" target="_blank">PDF</a>
 		 ... <a href="https://github.com/athill/cfmeta/" target="_blank">GitHub</a>'),	
-	new site2("InformedElectorate.net", "http://InformedElectorate.net", "img/informedelectorate.png", 
-		'Skeleton of site idea that would encourage civic engagement.'),		
-
 );
 
 foreach ($sites as $site2) {
