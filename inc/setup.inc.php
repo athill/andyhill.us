@@ -21,6 +21,12 @@ if ($_SERVER['HTTP_HOST'] == 'localhost' || !array_key_exists('HTTP_HOST', $_SER
 	$dataroot = '/var/www/html/data/andyhill.us';
 }
 
+if ($_SERVER['HTTP_HOST'] == 'andyhill.app') {
+	$webroot = '';
+	$basefileroot = '/home/vagrant/Code/sites/andyhill';
+}
+
+
 //// Set up site
 $self = $_SERVER['PHP_SELF'];
 $site = array(
