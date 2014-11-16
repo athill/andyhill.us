@@ -1,1 +1,1 @@
-SetEnv PHPRC /home/andyhil/public_html/php.ini
+suPHP_ConfigPath /home/andyhil/public_html/php.ini
