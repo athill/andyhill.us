@@ -5,7 +5,7 @@ class Sunlight extends Api {
 	protected $url = 'http://api.realtimecongress.org/api/v1/';
 	protected $key = '0f9d6efec2874d029e55c76f67f08a88';	
 
-	public function get($collection, $method, $params=array()) {
+	public function getData($collection, $method, $params=array()) {
 		switch ($collection) {
 			//// deprecated
 			case 'congress':
