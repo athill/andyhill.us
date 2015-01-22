@@ -3,7 +3,7 @@ Contributors: Synved
 Donate link: http://synved.com/wordpress-social-media-feather/
 Tags: shortcode, shortcodes, link, links, url, permalink, permalinks, time, icons, button, buttons, free, content, plugin, Share, sharing, social share, social sharing, page, pages, widget, CSS, list, media, profile, shortlinks, social, social media, Like, twitter, google, Facebook, Reddit, youtube, vimeo, tumblr, instagram, flickr, foursquare, bookmark, bookmarks, bookmarking, pinterest, linkedin, image, edit, manage, mail, Post, posts, Style, seo, title, filter, follow, following, social follow, social following, high resolution, retina, ipad
 Requires at least: 3.1
-Tested up to: 3.8.1
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,10 +78,10 @@ The next shortcode will create a list of social following buttons that allow vis
 If you don't want to use shortcodes but instead prefer to use PHP directly, there are 2 PHP functions/template tags you can use.
 
 For sharing buttons you can use:
-`if (function_exists('synved_social_share_markup')) synved_social_share_markup();`
+`if (function_exists('synved_social_share_markup')) echo synved_social_share_markup();`
 
 For following buttons you can use:
-`if (function_exists('synved_social_follow_markup')) synved_social_follow_markup();`
+`if (function_exists('synved_social_follow_markup')) echo synved_social_follow_markup();`
 
 
 = Related Links: =
@@ -125,6 +125,64 @@ You can achieve this by using *Custom Fields*. Simply set a custom field of `syn
 7. This shows the available social sharing and following widgets and their settings 
 
 == Changelog ==
+
+= 1.6.9 =
+* Added url_trimmed variable that trims extra slashes off of the URL
+
+= 1.6.8 =
+* Added short_url variable that always contains the shortened URL
+
+= 1.6.7 =
+* Fix automatic displaying of share/follow buttons on single posts only
+
+= 1.6.6 =
+* Updated all images to "optimized" versions to silence certain analytical tools
+
+= 1.6.5 =
+* Fixed issue for correct detection of home page
+
+= 1.6.4 =
+* Added two filters for shortcode parameters: synved_social_shortcode_variable_list and synved_social_shortcode_parameter_list
+* Minor adjustments
+
+= 1.6.3 =
+* Additional fix for "ghost" prefixes appearing in odd cases for non-single pages
+
+= 1.6.2 =
+* Fix for "ghost" prefixes appearing in certain cases for non-single pages
+
+= 1.6.1 =
+* Adjusted some descriptions
+
+= 1.6 =
+* Added alignment options for both sharing and following buttons
+* Minor adjustments
+
+= 1.5.10 =
+* Added date variable
+* Minor adjustments
+
+= 1.5.9 =
+* Fix for RSS feeds displaying double resolution images 
+* Minor adjustments
+
+= 1.5.8 =
+* Attempt suggesting meta values to Facebook (it seems to ignore them at this time though)
+* Fix for esc_url strictness
+* Minor adjustments
+
+= 1.5.7 =
+* Fixed escaping of quote and double quote characters
+* Added mail as follow provider for "contact us" buttons
+* Minor adjustments
+
+= 1.5.6 =
+* Added %%author%% template variable for URL substitution
+* Minor tweaks
+
+= 1.5.5 =
+* For automatic display, allow positioning of buttons both before and after post content
+* Minor adjustments
 
 = 1.5.4 =
 * Pick first image in the post when featured image is not set

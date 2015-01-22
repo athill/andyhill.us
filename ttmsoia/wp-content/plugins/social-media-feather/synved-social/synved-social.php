@@ -3,7 +3,7 @@
 Module Name: Synved Social
 Description: Social sharing and following tools
 Author: Synved
-Version: 1.5.4
+Version: 1.6.9
 Author URI: http://synved.com/
 License: GPLv2
 
@@ -18,8 +18,8 @@ In no event shall Synved Ltd. be liable to you or any third party for any direct
 
 
 define('SYNVED_SOCIAL_LOADED', true);
-define('SYNVED_SOCIAL_VERSION', 100050004);
-define('SYNVED_SOCIAL_VERSION_STRING', '1.5.4');
+define('SYNVED_SOCIAL_VERSION', 100060009);
+define('SYNVED_SOCIAL_VERSION_STRING', '1.6.9');
 
 define('SYNVED_SOCIAL_ADDON_PATH', str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, dirname(__FILE__) . '/addons'));
 
@@ -66,6 +66,7 @@ class SynvedSocialWidget extends WP_Widget
     echo '<div>';
     
     $params = array();
+    $params['alignment'] = 'none';
     
     if ($icon_skin != 'default')
     {
@@ -211,7 +212,7 @@ function synved_social_service_provider_list($context, $raw = false)
 	{
 		$provider_list = array(
 			'facebook' => array(
-				'link' => 'http://www.facebook.com/sharer.php?u=%%url%%&t=%%title%%',
+				'link' => 'http://www.facebook.com/sharer.php?u=%%url%%&t=%%title%%&s=100&p[url]=%%url%%&p[images][0]=%%image%%&p[title]=%%title%%',
 				'title' => __('Share on Facebook')
 			),
 			'twitter' => array(
@@ -301,6 +302,11 @@ function synved_social_service_provider_list($context, $raw = false)
 			'foursquare' => array(
 				'link' => 'https://foursquare.com/myusername',
 				'title' => __('Check out our foursquare feed'),
+				'default-display' => false,
+			),
+			'mail' => array(
+				'link' => 'mailto:mail@example.com?subject=Contact%20Request',
+				'title' => __('Contact Us'),
 				'default-display' => false,
 			),
 		);
@@ -537,6 +543,9 @@ function synved_social_button_list_shortcode($atts, $content = null, $code = '',
 	$vars = array_filter($vars);
 	$params = array_filter($params);
 	
+	$vars = apply_filters('synved_social_shortcode_variable_list', $vars, $context, $atts);
+	$params = apply_filters('synved_social_shortcode_parameter_list', $params, $context, $atts);	
+	
 	if ($context == 'share')
 	{
 		return synved_social_share_markup($vars, null, $params);
@@ -580,6 +589,7 @@ function synved_social_button_list_markup_item_out($out_item)
 			{
 				if (in_array($attr_name, array('href', 'src')))
 				{
+					$attr_value = str_ireplace(array('[', ']'), array('&#91;', '&#93;'), $attr_value);
 					$attr_value = esc_url($attr_value);
 				}
 				else
@@ -652,7 +662,7 @@ function synved_social_button_list_markup($context, $vars = null, $buttons = nul
 		$id = $post->ID;
 	}
 	
-	if (!isset($vars['url']))
+	if (!isset($vars['url']) || !isset($vars['short_url']))
 	{
 		$full_url = synved_option_get('synved_social', 'share_full_url');
 		$home_url = home_url();
@@ -667,6 +677,7 @@ function synved_social_button_list_markup($context, $vars = null, $buttons = nul
 		}
 		
 		$url = home_url($req_uri);
+		$short_url = $url;
 		
 		if ($id != null && in_the_loop())
 		{
@@ -691,24 +702,35 @@ function synved_social_button_list_markup($context, $vars = null, $buttons = nul
 			{
 				$use_shortlinks = synved_option_get('synved_social', 'use_shortlinks');
 				$url = get_permalink($id);
-		
-				if ($use_shortlinks && function_exists('wp_get_shortlink')) 
-				{
-					$short = wp_get_shortlink($id);
+				$short_url = wp_get_shortlink($id);
 			
-					if ($short != null)
+				if ($short_url != null)
+				{
+					if ($use_shortlinks && function_exists('wp_get_shortlink')) 
 					{
-						$url = $short;
+						$url = $short_url;
 					}
 				}
+				else
+				{
+					$short_url = $url;
+				}
 			}
-			else if (is_home())
+			else if (is_front_page())
 			{
 				$url = $home_url;
 			}
 		}
 		
-		$vars['url'] = $url;
+		if (!isset($vars['url']))
+		{
+			$vars['url'] = $url;
+		}
+		
+		if (!isset($vars['short_url']))
+		{
+			$vars['short_url'] = $short_url;
+		}
 	}
 	
 	if (!isset($vars['image']))
@@ -756,6 +778,59 @@ function synved_social_button_list_markup($context, $vars = null, $buttons = nul
 		$vars['message'] = $message;
 	}
 	
+	if (!isset($vars['author']))
+	{
+		if ($id != null && in_the_loop())
+		{
+			$author = get_the_author_meta('_synved_twitter_handle');
+			
+			if ($author == null)
+			{
+				$author = get_the_author_meta('twitter');
+			}
+			
+			if ($author == null)
+			{
+				$author = get_the_author();
+			}
+			
+			if ($author != null)
+			{
+				$vars['author'] = $author;
+			}
+		}
+	}
+	
+	if (!isset($vars['date']))
+	{
+		if ($id != null && in_the_loop())
+		{
+			$date = get_the_date('', $id);
+			
+			if ($date != null)
+			{
+				$vars['date'] = $date;
+			}
+		}
+	}
+	
+	if (isset($vars['url']) && !isset($vars['url_trimmed']))
+	{
+		$url_trimmed = trim($vars['url']);
+		
+		while (substr($url_trimmed, -1) == '/')
+		{
+			$url_trimmed = substr($url_trimmed, 0, -1);
+		}
+		
+		while (strtolower(substr($url_trimmed, -3)) == '%2f')
+		{
+			$url_trimmed = substr($url_trimmed, 0, -3);
+		}
+		
+		$vars['url_trimmed'] = $url_trimmed;
+	}
+	
 	if (isset($params['class']) && !is_array($params['class']))
 	{
 		$class = explode(' ', $params['class']);
@@ -779,11 +854,20 @@ function synved_social_button_list_markup($context, $vars = null, $buttons = nul
 	
 	if ($vars != null)
 	{
+		$vars = array_map('wp_kses_decode_entities', $vars);
 		$vars = urlencode_deep($vars);
 		
-		// urlencode converts space characters to + rather than %20 which messes things up
-		$vars['message'] = str_replace('+', '%20', $vars['message']);
-		$vars['title'] = str_replace('+', '%20', $vars['title']);
+		// urlencode_deep converts space characters to + rather than %20 which messes things up
+		$vars['message'] = str_ireplace('+', '%20', $vars['message']);
+		$vars['title'] = str_ireplace('+', '%20', $vars['title']);
+		
+		// urlencode_deep tries to be smart and apostrophes (') to %19 not %27 and double quotes (") to their equivalent open/closed counterparts which doesn't work on most social networks sharings
+		$vars['message'] = str_ireplace('%19', '%27', $vars['message']);
+		$vars['title'] = str_ireplace('%19', '%27', $vars['title']);
+		$vars['message'] = str_ireplace('%1c', '%22', $vars['message']);
+		$vars['title'] = str_ireplace('%1c', '%22', $vars['title']);
+		$vars['message'] = str_ireplace('%1d', '%22', $vars['message']);
+		$vars['title'] = str_ireplace('%1d', '%22', $vars['title']);
 	}
 	
 	$path = synved_social_path();
@@ -821,10 +905,12 @@ function synved_social_button_list_markup($context, $vars = null, $buttons = nul
 	$icon_spacing = synved_option_get('synved_social', 'icon_spacing');
 	$buttons_container = synved_option_get('synved_social', 'buttons_container');
 	$buttons_container_type = synved_option_get('synved_social', 'buttons_container_type');
+	$buttons_alignment = synved_option_get('synved_social', 'buttons_alignment_' . $context);
 	$layout_rtl = synved_option_get('synved_social', 'layout_rtl');
 	$spacing = 5;
 	$container = 'none';
 	$container_type = 'basic';
+	$alignment = 'none';
 	
 	if ($icon_spacing != null)
 	{
@@ -841,16 +927,45 @@ function synved_social_button_list_markup($context, $vars = null, $buttons = nul
 		$container = $buttons_container;
 	}
 	
-	if (isset($params['container']))
-	{
-		$container = $params['container'];
-	}
-	
 	if ($buttons_container_type != null)
 	{
 		$container_type = $buttons_container_type;
 	}
 	
+	if ($buttons_alignment != null)
+	{
+		$alignment = $buttons_alignment;
+	}
+	
+	if (isset($params['alignment']))
+	{
+		$alignment = $params['alignment'];
+	}
+	
+	if ($alignment != 'none')
+	{
+		if ($container == 'none')
+		{
+			$container = $context;
+		}
+		else if ($container != 'both' && $container != $context)
+		{
+			$container = 'both';
+		}
+	}
+	
+	// Allow parameters to override container after we decide a default based on selected alignment
+	if (isset($params['container']))
+	{
+		$container = $params['container'];
+	}
+	
+	if ($alignment != 'none')
+	{
+		$container_type = 'block';
+	}
+	
+	// Allow parameters to override container after we decide a default based on selected alignment
 	if (isset($params['container_type']))
 	{
 		$container_type = $params['container_type'];
@@ -898,6 +1013,11 @@ function synved_social_button_list_markup($context, $vars = null, $buttons = nul
 	$image_list = array();
 	$icon_resolution = synved_option_get('synved_social', 'icon_resolution');
 	$resolutions = array('normal' => $size, 'hidef' => $size * 2);
+	
+	if (is_feed())
+	{
+		$icon_resolution = 'single';
+	}
 	
 	if ($icon_resolution == 'single')
 	{
@@ -970,7 +1090,7 @@ function synved_social_button_list_markup($context, $vars = null, $buttons = nul
 			{
 				$class_extra = ' ' . implode(' ', $class);
 			}
-		
+			
 			$out_button = array(
 				'tag' => 'a',
 				'class' => 'synved-social-button synved-social-button-' . $context .  ' synved-social-size-' . $size .  ' synved-social-resolution-' . $icon_def . ' synved-social-provider-' . $button_key . $class_extra,
@@ -1022,7 +1142,9 @@ function synved_social_button_list_markup($context, $vars = null, $buttons = nul
 		
 		if ($container != 'none' && ($container == 'both' || $container == $context))
 		{
-			$out .= '<' . $container_tag . ' class="synved-social-container synved-social-container-' . $context . '">';
+			$container_style = $alignment != 'none' ? ' style="text-align: ' . $alignment . '"' : null;
+			
+			$out .= '<' . $container_tag . ' class="synved-social-container synved-social-container-' . $context . '"' . $container_style . '>';
 		}
 		
 		foreach ($out_list as $def_key => $def_list)
