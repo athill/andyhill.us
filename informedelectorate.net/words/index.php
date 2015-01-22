@@ -24,7 +24,7 @@ if (array_key_exists('words', $_GET)) {
 	$h->h4('Results for "'.$_GET['words'].'"');
 	require_once(dirname($GLOBALS['site']['fileroot']).'/inc/api/Sunlight.class.php');
 	$sun = new Sunlight();
-	$data = $sun->get('capitolwords', 'phrases/legislator', array('phrase'=>$_GET['words']));
+	$data = $sun->getData('capitolwords', 'phrases/legislator', array('phrase'=>$_GET['words']));
 
 	$h->div('', 'id="chart"');
 
@@ -45,7 +45,7 @@ if (array_key_exists('words', $_GET)) {
 		$tmp[] = $bioguide_id;
 		if ($i % 5 == 0 || $i == $count - 1) {
 			//echo 'in here ';
-			$data = $sun->get('congress3', 'legislators', array('bioguide_id'=>$tmp));
+			$data = $sun->getData('congress3', 'legislators', array('bioguide_id'=>$tmp));
 			// $h->pa($data);
 			foreach ($data['results'] as $j => $leg) {
 

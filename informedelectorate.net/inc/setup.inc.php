@@ -18,6 +18,15 @@ if ($_SERVER['HTTP_HOST'] == 'localhost' || !array_key_exists('HTTP_HOST', $_SER
 	$basefileroot = '/var/www/html';
 }
 
+if ($_SERVER['HTTP_HOST'] == 'informedelectorate.app') {
+	$basefileroot = '/home/vagrant/Code/sites/andyhill/informedelectorate.net';	
+}
+
+if ($_SERVER['HTTP_HOST'] == 'andyhill.app' || !array_key_exists('HTTP_HOST', $_SERVER)) {
+	$webroot = '/informedelectorate.net';
+	$basefileroot = '/home/vagrant/Code/sites/andyhill';
+}
+
 //// Set up site
 $self = $_SERVER['PHP_SELF'];
 $site = array(
