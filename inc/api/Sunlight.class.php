@@ -13,6 +13,7 @@ class Sunlight extends Api {
 				////http://services.sunlightlabs.com/api/api.method.format?apikey=YOUR_API_KEY&<params>
 				break;
 			case 'congress3':
+				echo '???';
 				$this->url = 'https://congress.api.sunlightfoundation.com/';
 				$this->separator = '/';
 				break;
