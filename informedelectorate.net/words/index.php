@@ -89,8 +89,8 @@ if (array_key_exists('words', $_GET)) {
 			)
 		);
 	}
-
-	$h->script('var json='.json_encode($graph));
+	$h->script('var raw='.json_encode($data).';');
+	$h->script('var json='.json_encode($graph).';');
 	$h->scriptfile('scripts.js');
 }
 // $h->pa($final);
