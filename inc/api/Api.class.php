@@ -34,8 +34,8 @@ class Api {
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		$content = curl_exec($ch);
 		// $url = $this->getUrl($method, $params);
-		// echo $url;
-		// echo $content;
+		echo $url;
+		echo $content;
 		// $content = file_get_contents($url);
 		return json_decode($content, true);
 	}
