@@ -33,9 +33,8 @@ class Api {
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_HEADER, false);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch, CURLOPT_VERBOSE, true);
+		// curl_setopt($ch, CURLOPT_VERBOSE, true);
 		$content = curl_exec($ch);
-		// $url = $this->getUrl($method, $params);
 		// $content = file_get_contents($url);
 		if ($this->debug) {
 			echo $url.'<br>';
