@@ -3,7 +3,7 @@ class Api {
 	protected $url = '';
 	protected $key = '';
 	public $separator = '.json';
-	protected $debug = true;
+	protected $debug = false;
 
 	function init($url='', $key='') {
 		if ($url != '') $this->url = $url;
