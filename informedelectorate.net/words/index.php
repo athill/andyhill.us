@@ -29,8 +29,7 @@ if (array_key_exists('words', $_GET)) {
 	$data = $sun->getData('capitolwords', 'phrases/legislator', array('phrase'=>$_GET['words']));
 	if ($debug) $h->pa($data);
 	$h->div('', 'id="chart"');
-
-	$sequence = array();
+	
 	$results = array();
 	foreach ($data['results'] as $item) {
 		$results[$item['legislator']] = array('count'=>$item['count']);
@@ -91,7 +90,7 @@ if (array_key_exists('words', $_GET)) {
 			)
 		);
 	}
-	$h->script('var raw='.json_encode($data).';');
+	// $h->script('var raw='.json_encode($data).';');
 	$h->script('var json='.json_encode($graph).';');
 	$h->scriptfile('scripts.js');
 }
