@@ -3,6 +3,7 @@ class Api {
 	protected $url = '';
 	protected $key = '';
 	public $separator = '.json';
+	protected $debug = true;
 
 	function init($url='', $key='') {
 		if ($url != '') $this->url = $url;
@@ -35,8 +36,11 @@ class Api {
 		$content = curl_exec($ch);
 		// $url = $this->getUrl($method, $params);
 		$content = file_get_contents($url);
-		echo $url;
-		echo $content;
+		if ($this->debug) {
+			echo $url;
+			echo $content;			
+		}
+
 		
 		return json_decode($content, true);
 	}
