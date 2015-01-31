@@ -27,13 +27,15 @@ class Api {
 	}
 
 	public function get($method, $params=array()) {
+		$url = $this->getUrl($method, $params);
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $this->getUrl($method, $params));
+		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_HEADER, false);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		$content = curl_exec($ch);
 		// $url = $this->getUrl($method, $params);
-		// // echo $url;
+		echo $url;
+		echo $content;
 		// $content = file_get_contents($url);
 		return json_decode($content, true);
 	}
