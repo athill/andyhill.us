@@ -46,7 +46,7 @@ if (array_key_exists('words', $_GET)) {
 		if ($i % 5 == 0 || $i == $count - 1) {
 			//echo 'in here ';
 			$data = $sun->getData('congress3', 'legislators', array('bioguide_id'=>$tmp));
-			// $h->pa($data);
+			$h->pa($data);
 			foreach ($data['results'] as $j => $leg) {
 
 				$d = $leg;
