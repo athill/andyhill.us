@@ -4,6 +4,8 @@ require_once('../inc/setup.inc.php');
 $page = new Page(array(
 	'jsModules'=>array('d3'=>true),
 ));
+
+$debug = true;
 /*$api_key = '0f9d6efec2874d029e55c76f67f08a88';
 $baseurl = 'http://api.realtimecongress.org/api/v1/';
 
@@ -25,7 +27,7 @@ if (array_key_exists('words', $_GET)) {
 	require_once(dirname($GLOBALS['site']['fileroot']).'/inc/api/Sunlight.class.php');
 	$sun = new Sunlight();
 	$data = $sun->getData('capitolwords', 'phrases/legislator', array('phrase'=>$_GET['words']));
-
+	if ($debug) $h->pa($data);
 	$h->div('', 'id="chart"');
 
 	$sequence = array();
@@ -33,7 +35,7 @@ if (array_key_exists('words', $_GET)) {
 	foreach ($data['results'] as $item) {
 		$results[$item['legislator']] = array('count'=>$item['count']);
 	}
-
+	if ($debug) $h->pa($results);
 	// print_r($results);
 
 
@@ -44,9 +46,9 @@ if (array_key_exists('words', $_GET)) {
 	foreach ($keys as $i => $bioguide_id)  {
 		$tmp[] = $bioguide_id;
 		if ($i % 5 == 0 || $i == $count - 1) {
-			//echo 'in here ';
+			if ($debug) echo 'in here ';
 			$data = $sun->getData('congress3', 'legislators', array('bioguide_id'=>$tmp));
-			$h->pa($data);
+			if ($debug) $h->pa($data);
 			foreach ($data['results'] as $j => $leg) {
 
 				$d = $leg;
