@@ -24,12 +24,16 @@ $h->cform();
 
 if (array_key_exists('words', $_GET)) {
 	$h->h4('Results for "'.$_GET['words'].'"');
+	$h->div('', 'id="chart"');
+	$h->scriptfile('scripts.js');
+	$page->end();
+	exit();
 	require_once(dirname($GLOBALS['site']['fileroot']).'/inc/api/Sunlight.class.php');
 	$sun = new Sunlight();
 	$data = $sun->getData('capitolwords', 'phrases/legislator', array('phrase'=>$_GET['words']));
 	if ($debug) $h->pa($data);
-	$h->div('', 'id="chart"');
 	
+
 	$results = array();
 	foreach ($data['results'] as $item) {
 		$results[$item['legislator']] = array('count'=>$item['count']);

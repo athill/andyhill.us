@@ -29,12 +29,7 @@ class Api {
 
 	public function get($method, $params=array()) {
 		$url = $this->getUrl($method, $params);
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_HEADER, false);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		// curl_setopt($ch, CURLOPT_VERBOSE, true);
-		$content = curl_exec($ch);
+		$content = $this->getResponse($url);
 		// $content = file_get_contents($url);
 		if ($this->debug) {
 			echo $url.'<br>';
@@ -43,6 +38,16 @@ class Api {
 
 		
 		return json_decode($content, true);
+	}
+
+	function getResponse($url) {
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_HEADER, false);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		// curl_setopt($ch, CURLOPT_VERBOSE, true);
+		$content = curl_exec($ch);
+		return $content;		
 	}
 
 }
