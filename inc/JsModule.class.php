@@ -72,6 +72,10 @@ class JsModule {
 			"underscore" => array(
 				'scripts'=>array('/js/underscore-min.js'),
 				"styles" => array()
+			),
+			"font-awesome" => array(
+				'scripts'=>array(),
+				'styles'=>array('/css/font-awesome-4.3.0/css/font-awesome.min.css')
 			)
 		);
 	}
