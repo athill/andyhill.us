@@ -6,36 +6,31 @@ $page = new Page(array(
 	'jsModules'=>array('underscore'=>true, 'ui'=>true)
 ));
 
-
-$geekout=<<<EOT
-<p>
-This page uses AJAX to retrieve its content. When a tab is clicked, the feeds 
+//// geekout
+$h->startBuffer();
+$h->p("This page uses AJAX to retrieve its content. When a tab is clicked, the feeds 
 change without reloading the entire page. Instead, a request is made to the 
-server and a container is filled with the HTML returned by the server. 
-</p>
-<p>
-On the server side, each category is associated with a list of 
+server and a container is filled with the HTML returned by the server.");
+
+$h->p('On the server side, each category is associated with a list of 
 <a href="http://en.wikipedia.org/wiki/RSS" target="_blank">RSS feeds</a>. 
 When a request comes in the RSS feeds for the selected category are retrieved and 
-parsed to generate the HTML that is returned to the browser. 
-</p>
-<p>
-This is my first foray into hash ("#") navigation. This means when a tab is clicked on, 
+parsed to generate the HTML that is returned to the browser.');
+$h->p('This is my first foray into hash ("#") navigation. This means when a tab is clicked on, 
 JavaScript modifies the URL in the address bar to indicate the category, for example 
 appending #Radio to the URL. Doing this both enables browser history and also allows 
 users to directly load a category by adding the hash-category in the address bar 
-themselves.
-</p>
-EOT;
+themselves.');
+$geekout = $h->endBuffer();
 
 $page->template->template->geekout($geekout);
 
 //// Navigation
-$options = explode(',', "Wires,Government,Left,Right,Libertarian,TV,Print,Radio,Congress,Indiana,Bloomington");
-$items = array(
-	'display' => array(),
-	'atts' => array()
-);
+$options = ['Wires','Government','Left','Right','Libertarian','TV','Print','Radio','Congress','Indiana','Bloomington'];
+$items = [
+	'display' => [],
+	'atts' => ]
+];
 foreach ($options as $option) {
 	$items['display'][] = $option;
 	$items['atts'][] = 'class="feed-category" id="feed-category-'.$option.'" data-category="'.$option.'"';
@@ -74,41 +69,42 @@ $h->tnl('<output id="rss-feeds"></output>');
 </script>
 <?php
 ////  resources
-$resources = array(
-	array('title'=>'Polls', 
-			'links'=>array(
-
-			)
-	),
-	array('title'=>'Watchers', 
-			'links'=>array(
-
-			)
-	),	
-
-);
+$resources = [
+	[
+		'title'=>'Polls',
+		'links'=>[
+			["http://www.rasmussenreports.com/public_content/politics", "Rasmussen"],
+			["http://www.gallup.com/poll/politics.aspx?CSTS=pollnav&to=POLL-Politics-News", "Gallup"]
+		]
+	],
+	[
+		'title'=>'Watchers',
+		'links'=>[
+			["http://opencongress.org", "opencongress.org"],
+			["http://govtrack.us", "govtrack.us"],
+			["http://opensecrets.org", "opensecrets.org"]
+		]
+	],
+	[
+		'title'=>'Government',
+		'links'=>[
+			["http://www.gpoaccess.gov/", "gpoaccess.gov"]
+		]
+	]
+];
 
 $h->odiv('id="resources"');
-
-
-
-////other links
-$h->br(3);
-$h->div("<strong>Other Resources</strong>", 'style="font-size: 16px;"');
-$h->tnl("<strong>Polls:</strong>");
-$h->a("http://www.rasmussenreports.com/public_content/politics", "Rasmussen");
-$h->tnl(" ");
-$h->a("http://www.gallup.com/poll/politics.aspx?CSTS=pollnav&to=POLL-Politics-News", "Gallup");
-$h->br();
-$h->tnl("<strong>Govenment:</strong>");
-$h->a("http://opencongress.org", "opencongress.org");
-$h->tnl(" ");
-$h->a("http://govtrack.us", "govtrack.us");
-$h->tnl(" ");
-$h->a("http://opensecrets.org", "opensecrets.org");
-$h->tnl(" ");
-$h->a("http://www.gpoaccess.gov/", "gpoaccess.gov");
-$h->cdiv();
+foreach ($resources as $resource) {
+	$h->odiv('class="resource"');
+	$h->h4($resource['title']);
+	$links = [];
+	foreach ($resource['links'] as $link) {
+		$links[] = ['href'=>$link[0], 'display'=>$link[1]];
+	}
+	$h->linkList($links);
+	$h->cdiv('/.resource');
+}
+$h->cdiv('/#resources');
 
 $page->end();
 ?>

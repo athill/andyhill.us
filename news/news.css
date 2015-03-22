@@ -89,3 +89,9 @@ output#rss-feeds {
 #resources {
 	clear: both;
 }
+
+#resources .resource {
+	display: inline-block;
+	width: 20em;
+	vertical-align: top;
+}
