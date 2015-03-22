@@ -26,7 +26,7 @@ if ($_SERVER['HTTP_HOST'] == 'andyhill.app') {
 	$basefileroot = '/home/vagrant/Code/sites/andyhill';
 }
 
-
+$basefileroot = dirname(dirname(__FILE__));
 //// Set up site
 $self = $_SERVER['PHP_SELF'];
 $site = array(

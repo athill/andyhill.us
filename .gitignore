@@ -1,3 +1,4 @@
+*.spc
 /2.0/
 /old/
 cgi-bin/
@@ -14,7 +15,6 @@ codeblog/
 wgetLog_informed
 .sass-cache/
 informedelectorate.net/state_bills/cache/
-news/cache/
 error_log
 russ/
 news/cache/

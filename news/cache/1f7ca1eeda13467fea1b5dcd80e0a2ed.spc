@@ -1,1 +1,0 @@
-a:3:{s:3:"url";s:37:"http://feeds.technorati.com/politics/";s:8:"feed_url";s:41:"http://feeds09.technorati.com/tr-politics";s:5:"build";s:14:"20131001005941";}
