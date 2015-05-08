@@ -44,7 +44,9 @@ My name is Andy Hill. I am a programmer in
 Primarily a web developer. I got my Bachelor of Science in Computer Science from 
 <a href="https://www.iu.edu/" target="_blank">Indiana University</a> 
 at the age of 33. I currently work for the University in 
-<a href="https://usss.iu.edu/" target="_blank">University Student Services and Systems</a>. 
+<a href="https://uits.iu.edu/" target="_blank">
+	<abbr title="University Information Technology Services">UITS</abbr></a>'s
+<abbr title="Enterprise Service Integration">ESI</abbr> Middleware Team.
 There is no relationship between Indiana University and this site.
 EOT;
 
