@@ -1,0 +1,12 @@
+{
+    "name": "athill/andyhill",
+    "description": "My personal web site",
+    "license": "Apache-2",
+    "authors": [
+        {
+            "name": "Andy Hill",
+            "email": "andy@andyhill.us"
+        }
+    ],
+    "require": {}
+}
