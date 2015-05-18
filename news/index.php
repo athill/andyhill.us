@@ -29,7 +29,7 @@ $page->template->template->geekout($geekout);
 $options = ['Wires','Government','Left','Right','Libertarian','TV','Print','Radio','Congress','Indiana','Bloomington'];
 $items = [
 	'display' => [],
-	'atts' => ]
+	'atts' => []
 ];
 foreach ($options as $option) {
 	$items['display'][] = $option;
