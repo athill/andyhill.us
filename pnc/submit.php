@@ -12,7 +12,11 @@ $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 
-$template = file_get_contents('templates/'.strtolower($_POST['type']).'.html');
+$templatefile = 'templates/'.strtolower($_POST['type']).'.html';
+
+echo 'file: '.$templatefile;
+
+$template = file_get_contents($templatefile);
 $template = str_replace('[Name]', $_POST['name'], $template);
 
 $message = $template;
@@ -34,6 +38,9 @@ $email->AddAddress($_POST['email']);
 echo 'SENT';
 // $file_to_attach = 'PATH_OF_YOUR_FILE_HERE';
 
-$email->Send();
+$return = $email->Send();
+
+
+var_dump($return);
 
 // $email->AddAttachment( $file_to_attach , 'NameOfFile.pdf' );
