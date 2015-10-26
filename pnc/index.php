@@ -18,7 +18,7 @@ if (isset($_SESSION['message'])) {
 ?>
 
 <div class="container">
-	<form action="/pnc/submit.php" method="post">
+	<form action="/pnc/submit.php" method="post" id="email-form">
 	<div class="form-group">
 		<label for="name">Name</label>
 		<input type="text" class="form-control" id="name" name="name" placeholder="Name">
@@ -39,4 +39,22 @@ if (isset($_SESSION['message'])) {
 </div>
 
 </body>
+<script type="text/javascript">
+
+document.getElementById('email-form').onsubmit = function(e) {
+	var name = document.getElementById('name').value,
+		email = document.getElementById('email').value,
+		typefield = document.getElementById('type'),
+		type = typefield.options[typefield.selectedIndex].text;
+	if (name == '') {
+		alert('Please supply a name');
+		return false;
+	}
+	if (email == '') {
+		alert('Please supply an email');
+		return false;
+	}	
+	return confirm('Really email '+name+ ' ('+email+') with '+type+' template?');
+}
+</script>
 </html>
