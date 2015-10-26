@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('../vendor/autoload.php');
 
 $to = $_POST['email'];
@@ -25,12 +26,16 @@ if ($_POST['type'] == 'Match') {
 	$mail->addAttachment('ministry_information_form_2015.doc', 'UPC Ministry Information Form, 2015');    // Optional name	
 }
 
+
+
 //// send email
+$message = '';
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    $message = 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    print('Sent: <div>'.$message.'</div> to: '.$to.' ('.$_POST['name'].')';
+    $message = 'Sent: <div class="well">'.$message.'</div> to: '.$to.' ('.$_POST['name'].')';
 }
+$_SESSION['message'] = $message;
+header('location: index.php');
 
 

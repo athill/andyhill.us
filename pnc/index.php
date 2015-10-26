@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -8,8 +10,15 @@
 <body>
 <h1>PNC Response</h1>
 
+<?php
+if (isset($_SESSION['message'])) {
+	print('<div class="alert alert-info">'.$_SESSION['message'].'</div>');
+	unset($_SESSION['message']);
+}
+?>
+
 <div class="container">
-	<form action="submit.php" method="post">
+	<form action="/pnc/submit.php" method="post">
 	<div class="form-group">
 		<label for="name">Name</label>
 		<input type="text" class="form-control" id="name" placeholder="Name">
