@@ -9,11 +9,13 @@
 
 <form action="submit.php">
 Name: <input typr="text" name="name"/><br>
-ID: <input typr="text" name="id"/><br>
+Email: <input typr="text" name="email"/><br>
 Type: <select name="type">
 	<option>Match</option>
 	<option>Referral</option>
-</select>
+</select><br />
+
+<input type="submit" value="send mail"/>
 </form>
 
 </body>
