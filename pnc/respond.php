@@ -1,5 +1,7 @@
 <?php
-$to = 'andy@andyhill.us';
+require('../vendor/autoload.php');
+
+$to = $_POST['email'];
 
 $subject = 'Website Change Request';
 
@@ -7,8 +9,25 @@ $headers = "From: andy@andyhill.us\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-$message = '<html><body>';
-$message .= '<h1>Hello, World!</h1>';
-$message .= '</body></html>';
 
-mail($to, $subject, $message, $headers);
+$template = file_get_contents('templates/'.strtolower($_POST['type']).'.html');
+$template = str_replace('[Name]', $_POST['name'], $template);
+
+$message = $template;
+// $message .= '<h1>Hello, World!</h1>';
+
+
+// mail($to, $subject, $message, $headers);
+
+$email = new PHPMailer();
+$email->From      = 'andy@andyhill.us';
+$email->FromName  = 'Andy Hill';
+$email->Subject   = 'Response';
+$email->Body      = $message;
+$email->AddAddress($_POST['email']);
+
+// $file_to_attach = 'PATH_OF_YOUR_FILE_HERE';
+
+$email->Send();
+
+// $email->AddAttachment( $file_to_attach , 'NameOfFile.pdf' );

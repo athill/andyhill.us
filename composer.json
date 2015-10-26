@@ -8,5 +8,7 @@
             "email": "andy@andyhill.us"
         }
     ],
-    "require": {}
+    "require": {
+        "phpmailer/phpmailer": "~5.2"
+    }
 }
