@@ -1,6 +1,8 @@
 <?php
 require('../vendor/autoload.php');
 
+echo 'here';
+
 $to = $_POST['email'];
 
 $subject = 'Website Change Request';
@@ -17,6 +19,8 @@ $message = $template;
 // $message .= '<h1>Hello, World!</h1>';
 
 
+echo '<div>'.$message.'</div>';
+
 // mail($to, $subject, $message, $headers);
 
 $email = new PHPMailer();
@@ -26,6 +30,8 @@ $email->Subject   = 'Response';
 $email->Body      = $message;
 $email->AddAddress($_POST['email']);
 
+
+echo 'SENT';
 // $file_to_attach = 'PATH_OF_YOUR_FILE_HERE';
 
 $email->Send();
