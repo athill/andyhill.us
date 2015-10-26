@@ -21,15 +21,15 @@ if (isset($_SESSION['message'])) {
 	<form action="/pnc/submit.php" method="post">
 	<div class="form-group">
 		<label for="name">Name</label>
-		<input type="text" class="form-control" id="name" placeholder="Name">
+		<input type="text" class="form-control" id="name" name="name" placeholder="Name">
 	</div>
 	<div class="form-group">
 		<label for="email">Email</label>
-		<input type="email" class="form-control" id="email" placeholder="Email">
+		<input type="email" class="form-control" id="email" name="email" placeholder="Email">
 	</div>
 	<div class="form-group">
 		<label for="type">Type</label>
-		<select class="form-control" id="type">
+		<select class="form-control" id="type" name="type">
 			<option>Match</option>
 			<option>Referral</option>
 		</select>
