@@ -3,7 +3,7 @@ require('../vendor/autoload.php');
 
 $to = $_POST['email'];
 
-$subject = 'Website Change Request';
+$subject = ' Pastor Information Form response from United Presbyterian Church';
 
 
 //// Build message
@@ -16,9 +16,9 @@ $message = str_replace('[Name]', $_POST['name'], $message);
 $mail = new PHPMailer();
 $mail->From      = 'andy@andyhill.us';
 $mail->FromName  = 'Andy Hill';
-$mail->Subject   = 'Response';
+$mail->Subject   = $subject;
 $mail->Body      = $message;
-$mail->AddAddress($_POST['email']);
+$mail->AddAddress($to);
 $mail->isHTML(true);      
 
 if ($_POST['type'] == 'Match') {
@@ -30,7 +30,7 @@ if(!$mail->send()) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    print('Sent: <div>'.$message.'</div> to: '.$_POST['email'].' ('.$_POST['email'].')';
+    print('Sent: <div>'.$message.'</div> to: '.$to.' ('.$_POST['name'].')';
 }
 
 
