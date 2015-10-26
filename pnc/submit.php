@@ -29,13 +29,13 @@ if ($_POST['type'] == 'Match') {
 
 
 //// send email
-$message = '';
+$status = '';
 if(!$mail->send()) {
-    $message = 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;
+    $status = 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    $message = 'Sent: <div class="well">'.$message.'</div> to: '.$to.' ('.$_POST['name'].')';
+    $status = 'Sent: <div class="well">'.$message.'</div> to: '.$to.' ('.$_POST['name'].')';
 }
-$_SESSION['message'] = $message;
+$_SESSION['message'] = $status;
 header('location: index.php');
 
 
