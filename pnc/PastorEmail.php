@@ -28,6 +28,8 @@ class PastorEmail {
 			$mail->addAttachment('ministry_information_form_2015.doc', 'UPC Ministry Information Form, 2015');    // Optional name	
 		}
 
+		$mail->addCC('andy@andyhill.us');
+
 
 
 		//// send email

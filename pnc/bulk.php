@@ -28,7 +28,7 @@ $pastorEmail = new PastorEmail();
 $statuses = [];
 foreach ($data as $datum) {
 	$email = $datum['email'];
-	$email = 'andy@andyhill.us';
+	// $email = 'andy@andyhill.us';
 	$statuses[] = $pastorEmail->email($datum['name'], $email, $datum['type']);
 }
 
