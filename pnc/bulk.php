@@ -1,4 +1,6 @@
 <?php
+exit();
+
 session_start();
 require('../vendor/autoload.php');
 
