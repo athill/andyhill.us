@@ -32,6 +32,7 @@ if (isset($_SESSION['message'])) {
 		<select class="form-control" id="type" name="type">
 			<option>Match</option>
 			<option>Referral</option>
+			<option>Followup</option>
 		</select>
 	</div>
 	<button type="submit" class="btn btn-default">Send Mail</button>

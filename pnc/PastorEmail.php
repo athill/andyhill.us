@@ -24,7 +24,7 @@ class PastorEmail {
 		$mail->AddAddress($email);
 		$mail->isHTML(true);      
 
-		if ($type == 'Match') {
+		if (in_array($type, ['Match', 'Followup']) {
 			$mail->addAttachment('ministry_information_form_2015.doc', 'UPC Ministry Information Form, 2015');    // Optional name	
 		}
 
