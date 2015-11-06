@@ -2,44 +2,38 @@
 session_start();
 require('../vendor/autoload.php');
 
-$to = $_POST['email'];
+$data = $_POST;
 
 require('PastorEmail.php');
-$pastorEmail = new PastorEmail();
+$pastorEmailer = new PastorEmailer();
 
-$status = $pastorEmail->email($_POST['name'], $_POST['email'], $_POST['type']); 
+if (isset($data['data-file'])) {
+	//// TODO: upload file
+	$target_dir = "uploads/";
+	if (!file_exists($target_dir)) {
+		mkdir($target_dir);
+	}
+	$target_path = $target_dir . basename( $_FILES['uploadedfile']['name']); 
 
-// $subject = ' Pastor Information Form response from United Presbyterian Church';
+	if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
+	    echo "The file ".  basename( $_FILES['uploadedfile']['name']). 
+	    " has been uploaded";
+	} else{
+	    echo "There was an error uploading the file, please try again!";
+	}
+	unlink($target_path);
+	rmdir($target_dir);
+	//// send emails
+	// $status = [];
+	// foreach ($data as $datum) {
+	// 	$email = $datum['email'];
+	// 	// $email = 'andy@andyhill.us';
+	// 	$status[] = $pastorEmail->email($datum['name'], $email, $datum['type']);
+	// }
+} else {
+	$status = $pastorEmailer->email($data['name'], $data['email'], $data['type']); 	
+}
 
-
-// //// Build message
-// $templatefile = 'templates/'.strtolower($_POST['type']).'.html';
-// $message = file_get_contents($templatefile);
-// $message = str_replace('[Name]', $_POST['name'], $message);
-
-
-// //// Build email
-// $mail = new PHPMailer();
-// $mail->From      = 'andy@andyhill.us';
-// $mail->FromName  = 'Andy Hill';
-// $mail->Subject   = $subject;
-// $mail->Body      = $message;
-// $mail->AddAddress($to);
-// $mail->isHTML(true);      
-
-// if ($_POST['type'] == 'Match') {
-// 	$mail->addAttachment('ministry_information_form_2015.doc', 'UPC Ministry Information Form, 2015');    // Optional name	
-// }
-
-
-
-// //// send email
-// $status = '';
-// if(!$mail->send()) {
-//     $status = 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;
-// } else {
-//     $status = 'Sent: <div class="well">'.$message.'</div> to: '.$to.' ('.$_POST['name'].')';
-// }
 $_SESSION['message'] = $status;
 header('location: index.php');
 

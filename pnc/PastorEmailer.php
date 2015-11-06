@@ -1,6 +1,6 @@
 <?php
 
-class PastorEmail {
+class PastorEmailer {
 
 	function __construct($mail) {
 	}

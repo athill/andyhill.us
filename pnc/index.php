@@ -12,31 +12,59 @@ session_start();
 
 <?php
 if (isset($_SESSION['message'])) {
-	print('<div class="alert alert-info">'.$_SESSION['message'].'</div>');
+	$renderMessage = function($mssg) {
+		print('<div class="alert alert-info">'.$mssg.'</div>');
+	};
+	$messages = $_SESSION['message'];
+	if (!is_array($message)) {
+		$messages = [$messages];
+	}
+	foreach ($messages as $message) {
+		$renderMessage($message);
+	}
+	
 	unset($_SESSION['message']);
 }
 ?>
 
 <div class="container">
-	<form action="/pnc/submit.php" method="post" id="email-form">
-	<div class="form-group">
-		<label for="name">Name</label>
-		<input type="text" class="form-control" id="name" name="name" placeholder="Name">
-	</div>
-	<div class="form-group">
-		<label for="email">Email</label>
-		<input type="email" class="form-control" id="email" name="email" placeholder="Email">
-	</div>
-	<div class="form-group">
-		<label for="type">Type</label>
-		<select class="form-control" id="type" name="type">
-			<option>Match</option>
-			<option>Referral</option>
-			<option>Followup</option>
-		</select>
-	</div>
-	<button type="submit" class="btn btn-default">Send Mail</button>
-	</form>
+	<fieldset>
+		<legend>Send an Email</legend>
+		<form action="/pnc/submit.php" method="post" id="email-form">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+		</div>
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+		</div>
+		<div class="form-group">
+			<label for="type">Type</label>
+			<select class="form-control" id="type" name="type">
+				<option>Match</option>
+				<option>Referral</option>
+				<option>Followup</option>
+			</select>
+		</div>
+		<button type="submit" class="btn btn-default">Send Mail</button>
+		</form>
+	</fieldset>
+
+	<fieldset>
+		<legend>Send Multiple Emails</legend>
+		<form action="/pnc/submit.php" method="post" id="email-form" enctype="multipart/form-data">
+		<div class="form-group">
+			<label for="data-file">Data File</label>
+			<input type="file" class="form-control" id="data-file" name="data-file" placeholder="Data File">
+		</div>
+		<button type="submit" class="btn btn-default">Send Multiple</button>
+		</form>
+	</fieldset>	
+
+
+
+
 </div>
 
 </body>
