@@ -4,32 +4,28 @@ require('../vendor/autoload.php');
 
 $data = $_POST;
 
-require('PastorEmail.php');
+require('PastorEmailer.php');
 $pastorEmailer = new PastorEmailer();
 
 if (isset($_FILES['data-file'])) {
 	$dataFile = $_FILES['data-file'];
-	//// TODO: upload file
+	//// upload file
 	$target_dir = "uploads/";
 	if (!file_exists($target_dir)) {
 		mkdir($target_dir);
 	}
 	$target_path = $target_dir . basename($dataFile['name']); 
-
 	if (move_uploaded_file($dataFile['tmp_name'], $target_path)) {
-	    echo "The file ".  basename($dataFile['name']). 
-	    " has been uploaded";
 	    $data = json_decode(file_get_contents($target_path), true);
-	    var_dump($data);
 		//// send emails
-		// $status = [];
-		// foreach ($data as $datum) {
-		// 	$email = $datum['email'];
-		// 	// $email = 'andy@andyhill.us';
-		// 	$status[] = $pastorEmail->email($datum['name'], $email, $datum['type']);
-		// }
+		$status = [];
+		foreach ($data as $datum) {
+			$email = $datum['email'];
+			// $email = 'andy@andyhill.us';
+			$status[] = $pastorEmailer->email($datum['name'], $email, $datum['type']);
+		}
 	} else {
-	    echo "There was an error uploading the file, please try again!";
+	    $status = "There was an error uploading the file, please try again!";
 	}
 	unlink($target_path);
 	rmdir($target_dir);

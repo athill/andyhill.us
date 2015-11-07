@@ -11,12 +11,13 @@ session_start();
 <h1>PNC Response</h1>
 
 <?php
+//// handle response from submission page
 if (isset($_SESSION['message'])) {
 	$renderMessage = function($mssg) {
 		print('<div class="alert alert-info">'.$mssg.'</div>');
 	};
 	$messages = $_SESSION['message'];
-	if (!is_array($message)) {
+	if (!is_array($messages)) {
 		$messages = [$messages];
 	}
 	foreach ($messages as $message) {
@@ -53,7 +54,19 @@ if (isset($_SESSION['message'])) {
 
 	<fieldset>
 		<legend>Send Multiple Emails</legend>
-		<form action="/pnc/submit.php" method="post" id="email-form" enctype="multipart/form-data">
+		<form action="/pnc/submit.php" method="post" id="upload-form" enctype="multipart/form-data">
+		<p>
+			JSON file of form:
+			<pre>
+				[
+					{
+						"name": &lt;name&gt;,
+						"email": &lt;email&gt;,
+						"type": &lt;Match|Referral|Followup&gt;
+					},
+					...
+				]</pre>
+		</p>
 		<div class="form-group">
 			<label for="data-file">Data File</label>
 			<input type="file" class="form-control" id="data-file" name="data-file" placeholder="Data File">
