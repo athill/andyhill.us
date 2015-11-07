@@ -19,18 +19,21 @@ if (isset($_FILES['data-file'])) {
 	if (move_uploaded_file($dataFile['tmp_name'], $target_path)) {
 	    echo "The file ".  basename($dataFile['name']). 
 	    " has been uploaded";
+	    $data = json_decode(file_get_contents($target_path), true);
+	    var_dump($data);
+		//// send emails
+		// $status = [];
+		// foreach ($data as $datum) {
+		// 	$email = $datum['email'];
+		// 	// $email = 'andy@andyhill.us';
+		// 	$status[] = $pastorEmail->email($datum['name'], $email, $datum['type']);
+		// }
 	} else {
 	    echo "There was an error uploading the file, please try again!";
 	}
 	unlink($target_path);
 	rmdir($target_dir);
-	//// send emails
-	// $status = [];
-	// foreach ($data as $datum) {
-	// 	$email = $datum['email'];
-	// 	// $email = 'andy@andyhill.us';
-	// 	$status[] = $pastorEmail->email($datum['name'], $email, $datum['type']);
-	// }
+
 } else {
 	$status = $pastorEmailer->email($data['name'], $data['email'], $data['type']); 	
 }
