@@ -98,7 +98,7 @@ class Recipe {
 		////Instructions	
 		$h->h(3, "Instructions:");
 		$instructions = preg_replace("/\n/", "<br />\n", trim($this->recipe->instructions));
-		$h->op($instructions);	
+		$h->p($instructions);	
 		$h->cdiv('/.recipe-main');
 		$h->cdiv('/.recipe');
 	}
