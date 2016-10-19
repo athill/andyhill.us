@@ -22,3 +22,5 @@ freezer/
 jquery-readmore/
 demos/
 composer.lock
+php.ini.bak
+.htaccess

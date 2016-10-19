@@ -519,6 +519,107 @@ Simmer for 5 minutes, careful not to boil</instructions>
 		<instructions>Mix
 Bake 20-25 min. 350 deb.</instructions>
 	</recipe>
+	<recipe id="41">
+		<title>Hungarian Mushroom Soup</title>
+		<category>Entree</category>
+		<cuisine>Other</cuisine>
+		<source>The Moosewood Cookbook</source>
+		<link>http://www.food.com/recipe/hungarian-mushroom-soup-from-the-moosewood-cookbook-135215</link>
+		<rating>3.5/5 stars</rating>
+		<preptime>20 minutes</preptime>
+		<cooktime>25 minutes</cooktime>
+		<yields>4 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>12</amount>
+				<unit>ounces</unit>
+				<item>mushrooms, -sliced</item>
+				<key>mushrooms, -sliced</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>onions, chopped</item>
+				<key>onions, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>tablespoons</unit>
+				<item>flour</item>
+				<key>flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>milk</item>
+				<key>milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>teaspoons</unit>
+				<item>dill weed</item>
+				<key>dill weed</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>Hungarian paprika</item>
+				<key>hungarian paprika</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>tamari soy sauce</item>
+				<key>tamari soy sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>stock</item>
+				<key>stock</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>teaspoons</unit>
+				<item>lemon juice, -fresh</item>
+				<key>lemon juice, -fresh</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>parsley, chopped</item>
+				<key>parsley, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>sour cream</item>
+				<key>sour cream</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Saute onions in 2 Tbsp stock, salt lightly. 
+  A few minutes later, add mushrooms, 1 tsp dill, 1/2 cup stock or water, soy sauce, and paprika. 
+  Cover and simmer 15 minutes. 
+  Melt butter in large saucepan. 
+  Whisk in flour and cook, whisking, a few minutes. 
+  Add milk and cook, stirring frequently, over low heat about 10 minutes - until thick. 
+  Stir in mushroom mixture and remaining stock. 
+  Cover and simmer 10-15 minutes. 
+  Just before serving, add salt, pepper, lemon juice, sour cream, and, if desired, extra dill (1 tsp). 
+  Serve garnished with parsley.</instructions>
+	</recipe>
 	<recipe id="10">
 		<title>Karen Massey's Cheese Ball</title>
 		<category>Entree</category>
@@ -855,6 +956,180 @@ Saute onion and pepper until soft (~3 min)
 Add garlic and saute another 2 minutes
 Mix in broth, puree, nutmeg, and beans and simmer for 10 minutes
 Mix pasta with sauce and garnish with parsley and parmesan</instructions>
+	</recipe>
+	<recipe id="39">
+		<title>Philly Cheesesteak Stuffed Peppers Recipe - Food.com</title>
+		<link>http://www.food.com/recipeprint.do?rid=513064</link>
+		<preptime>1 hour</preptime>
+		<yields>4 servings</yields>
+		<image format="jpeg">
+<![CDATA[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]]>		</image>
+		<ingredient-list>
+			<ingredient>
+				<amount>8</amount>
+				<unit>ounces</unit>
+				<item>thinly sliced roast beef</item>
+				<key>thinly sliced roast beef</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>slices</unit>
+				<item>provolone cheese</item>
+				<key>cheese, provolone</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>large</unit>
+				<item>green bell peppers</item>
+				<key>bell pepper, green</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>medium</unit>
+				<item>sweet onion</item>
+				<key>onion, sweet</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>garlic, minced</item>
+				<key>garlic, minced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>(6 ounce) packages baby bella mushrooms</item>
+				<key>(6 ounce) packages baby bella mushrooms</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Slice peppers in half lengthwise, remove ribs and seeds. 
+   Slice onions and mushrooms. Saute over medium heat with butter, olive oil, minced garlic and a little salt and pepper. Saute until onions and mushroom are nice and caramelized. About 25-30 minutes. 
+   Preheat oven to 400*. 
+   Slice roast beef into thin strips and add to the onion/mushroom mixture. Allow to cook 5-10 minutes. 
+   Line the inside of each pepper with a slice of provolone cheese. 
+   Fill each pepper with meat mixture until they are nearly overflowing. 
+   Top each pepper with another slice of provolone cheese. 
+   Bake for 15-20 minutes until the cheese on top is golden brown.</instructions>
+	</recipe>
+	<recipe id="38">
+		<title>Ratatouille</title>
+		<category>Entree</category>
+		<cuisine>French</cuisine>
+		<source>Great Courses</source>
+		<rating>4/5 stars</rating>
+		<preptime>1 hour</preptime>
+		<cooktime>1 hour</cooktime>
+		<yields>6 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>onion; diced</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>large eggplant; diced</item>
+				<key>eggplant</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cloves</unit>
+				<item>garlic; minced</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>tomatoes; concasse</item>
+				<key>tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>red pepper; diced</item>
+				<key>red pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>yellow pepper; diced</item>
+				<key>yellow pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>zucchini; diced</item>
+				<key>zucchini</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>yellow squash; diced</item>
+				<key>yellow squash</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>t.</unit>
+				<item>tomato paste</item>
+				<key>tomato paste</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c</unit>
+				<item>water</item>
+				<key>water</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>t</unit>
+				<item>basil</item>
+				<key>basil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>t</unit>
+				<item>oregano</item>
+				<key>oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>t</unit>
+				<item>thyme</item>
+				<key>thyme</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>T</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>t</unit>
+				<item>pepper</item>
+				<key>pepper</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Saute onion in some olive oil
+2. Add eggplant, add more olive oil
+3. Add tomato paste. saute until brick red
+4. Add tomatoes, turn heat down and cook a while
+5. Add garlic, red and yellow peppers, zucchini, and squash as well as the herbs
+6. Add water
+7. Simmer until vegetables are tender
+8. Add salt and pepper</instructions>
 	</recipe>
 	<recipe id="15">
 		<title>Red Beans and Rice</title>
@@ -1311,6 +1586,70 @@ Stuff each pepper with filling and place on baking dish. Add enough water to fil
 Sprinkile each pepper with a dab of butter and pinch of paprika
 Bake for 20 min.
 Top with salsa or sour cream and serve with corn chips</instructions>
+	</recipe>
+	<recipe id="40">
+		<title>Spaghetti alla Carbonara</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<rating>5/5 stars</rating>
+		<yields>4 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>dry spaghetti or linguine.</item>
+				<key>dry spaghetti or linguine.</key>
+			</ingredient>
+			<ingredient>
+				<amount>8-12</amount>
+				<unit>ounces</unit>
+				<item>bacon or pancetta, cubed or sliced into small strips </item>
+				<key>bacon, cubed or sliced into small strips (pancetta is the classic, but i love the smokiness of the bacon)</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>ounces</unit>
+				<item>extra-virgin olive oil</item>
+				<key>oil, extra-virgin olive</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<item>garlic cloves, finely chopped</item>
+				<key>garlic cloves, finely chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>extra-large eggs</item>
+				<key>extra-large eggs</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>freshly grated Parmigiano-Reggiano</item>
+				<key>freshly grated parmigiano-reggiano</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>Italian (flat-leaf) parsley, chopped</item>
+				<key>italian (flat-leaf) parsley, chopped</key>
+			</ingredient>
+			<ingredient>
+				<item>black pepper; to taste</item>
+				<key>black pepper</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>While the water for the pasta is heating, put the bacon into a large saute pan along with an ounce or 2 of good olive oil. Cook the bacon on medium heat until it just begins to crisp, then add the chopped garlic.
+
+Turn the heat down a bit and continue cooking until the bacon is crispy and the garlic is soft. Be careful; if the garlic browns too much or burns it will add a bitterness to the dish that can only be masked by several large glasses of a good Chianti. Try to time it so the pasta is finished cooking at the same time as the bacon and garlic.
+
+Crack the eggs into a medium bowl and whisk them until they start to become frothy. Add the Parmigiano-Reggiano and whisk until the cheese is completely absorbed by the eggs.
+
+Add the pasta to the bacon and toss until the spaghetti is completely coated with the bacon fat and olive oil.
+
+Add the egg and cheese mixture (do this off the heat), spreading it over the pasta as you pour, and toss again, coating the pasta and lightly cooking the eggs. This is the tough part. The pasta has to be hot enough to barely cook the eggs as they coat the pasta, but not too hot; otherwise you will have scrambled eggs. That's not a bad combination, but it isn't Spaghetti alla Carbonara.
+
+Crack some black pepper into the pasta and toss again. I like tossing the parsley in with the pepper, but you can also use it as garnish after you serve it.</instructions>
 	</recipe>
 	<recipe id="21">
 		<title>Spaghetti Casserole</title>
