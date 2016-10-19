@@ -309,7 +309,7 @@ class Menu {
 		if ($test != "" && $test->test($item)) { 
 			$active = true;	
 		} else if ($item['href'] == $this->path || 
-				$item['href'] == './?'.$_SERVER['QUERY_STRING'] || 
+				(isset($_SERVER['QUERY_STRING']) && $item['href'] == './?'.$_SERVER['QUERY_STRING']) || 
 				($depth < count($this->script) && $step == $this->script[$depth])) {
 			$active = true;
 		}
