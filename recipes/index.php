@@ -4,15 +4,20 @@ $page = new Page(array(
 	'stylesheets'=>array('recipes.css')
 ));
 
+require_once('Api.php');
+$api = new Api('recipes.xml');
+
 // if(!$xml=simplexml_load_file('recipes0904.grmt')){
 //     trigger_error('Error reading XML file',E_USER_ERROR);
 // }
 
-if(!$xml=simplexml_load_file('recipes.xml')){
-    trigger_error('Error reading XML file',E_USER_ERROR);
-}
+// if(!$xml=simplexml_load_file('recipes.xml')){
+//     trigger_error('Error reading XML file',E_USER_ERROR);
+// }
 
-include_once('Recipes.class.php');
+$xml = $api->getXml();
+
+include_once('Recipe.class.php');
 
 $h->div("", 'id="top"');
 ///////////////////////
@@ -25,7 +30,7 @@ I hadn't found a practical use for it (I've found plenty since). Somehow
 the recipe idea seemed like a good fit. Since then, I haven't devoted 
 much time to it. There are all sorts of things like 
 <a href="http://allrecipes.com/">allrecipes.com</a> 
-and <a href"http://www.epicurious.com/" target="_blank">epicurious.com</a>,
+and <a href="http://www.epicurious.com/" target="_blank">epicurious.com</a>,
 so there's not a clear need. So it's got sentimental value, I guess.
 But then I found this desktop recipe manager, 
 <a href="http://thinkle.github.io/gourmet/" target="_blank">Gourmet</a> 
@@ -49,104 +54,49 @@ $h->p('I use the excellent <a href="http://thinkle.github.io/gourmet/" target="_
 ////Filter
 /////////////////////////
 ////Build drop-down options
-$ingredients = getOptions($xml->xpath('//ingredient/item'));
-$categories = getOptions($xml->xpath('//category'));
-$cuisines = getOptions($xml->xpath('//cuisine'));
+$ingredients = $api->getIngredients();
+$categories = $api->getCategories();
+$cuisines = $api->getCuisines();
 
-////helper
-function getOptions($result) {
-	$items = array();
-	foreach ($result as $item) {
-		$item = trim((string)$item);
-		$pos = strpos($item, ';');
-		if ($pos !== false) {
-			$item = substr($item, 0, $pos);
-		}
-		$item = $item."|".ucfirst($item);
-		$item = str_replace('"', '&quot;', $item);
-		if (!in_array($item, $items)) {
-			$items[] = $item;
-		}
-	}
-	sort($items);
-	array_unshift($items, "");
-	return $items;
-}
 ////render form
 $h->oform("", 'get');
 $h->ofieldset("Filter");
+// $filters = array(
+// 	array( 'id'=>'category', 'options'=> $categories),
+// 	array( 'id'=>'cuisine', 'options'=> $cuisines),
+// 	array( 'id'=>'ingredient', 'options'=> $ingredients),
+// );
 $filters = array(
-	array( 'id'=>'category', 'options'=> $categories),
-	array( 'id'=>'cuisine', 'options'=> $cuisines),
-	array( 'id'=>'ingredient', 'options'=> $ingredients),
+	array( 'id'=>'category', 'options'=> []),
+	array( 'id'=>'cuisine', 'options'=> []),
+	array( 'id'=>'ingredient', 'options'=> []),
 );
+
 foreach ($filters as $filter) {
 //	$h->pa($filter);
 	$h->label($filter['id'], "<strong>".ucfirst($filter['id']).": </strong>");
-	$h->select($filter['id'], $filter['options'], $h->getVal($filter['id']));
+	$h->select($filter['id'], [], $h->getVal($filter['id']));
 
 }
+$h->br();
+$h->label('filter', '<strong>Any: </strong>');
+$h->intext('filter');
 //$h->input("reset", "s", "Clear");
-$h->input("submit", "s", "Submit");
 $h->cfieldset();
 $h->cform();
-
-if (array_key_exists('s', $_GET)) {
-	$filters = array(
-		'category' => array('root'=>'recipe', 'field'=>'category', 'suffix'=>''),
-		'cuisine' => array('root'=>'recipe', 'field'=>'cuisine', 'suffix'=>''),
-		'ingredient' => array('root'=>'recipe/ingredient-list/ingredient', 'field'=>'item'
-			, 'suffix'=>'/ancestor::*')
-	);
-	$query = "";
-	foreach ($filters as $k => $v) {
-		if (array_key_exists($k, $_GET) && $_GET[$k] != "") {
-			if ($query != "") {
-				$query .= " | ";
-			}
-			$query .= $v['root'].'[normalize-space('.$v['field'].') = normalize-space("'.$_GET[$k].'")]'.$v['suffix'];
-		}
-	}
-	if ($query != "") {
-		$result = $xml->xpath($query);
-		$xml = $result;	
-//		$h->pa($result); 
-	}
-}
 
 
 
 /////////////////////////////////
 ////Menu
 ///////////////////////////////
-$h->odiv('id="menu"');
-$links = array();
-foreach ($xml as $recipe) {
-	$thisRecipe = new Recipe($recipe);
-	$title = trim($recipe->title);
-	if ($title != "") {
-		$links[] = array('href' => "#" . $thisRecipe->getName($title), 'display'=> $title);
-	}
-}
-$h->linkList($links);
-$h->cdiv("/#menu");	////close menu
+$h->linkList([], 'id="menu"');
 /////////////////////////
 ////Recipes
 ///////////////////////////
-$h->odiv('id="recipes"');
-foreach ($xml as $tagname => $recipe) {
-	$thisRecipe = new Recipe($recipe);
-//	$h->pa($recipe);
-	if ($recipe->title != "") {
-		$thisRecipe->display();
-		$h->a("printable.php?id=".$recipe[0]['id'], "Print", 'target="_blank"');
-		$h->tnl(" | ");
-		$h->a("export.php?id=".$recipe[0]['id'], "Export");
-		$h->br(2);
-		$h->a("#top", "Return to top");
-		$h->br(2);
-	}
-}
-$h->cdiv('/#recipes'); ////close recipes
+$h->div('', 'id="recipes"');
+
+$h->script('var recipes = '.$api->exportJson());
+$h->scriptfile('recipes.js');
 $page->end();
 ?>

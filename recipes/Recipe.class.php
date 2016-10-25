@@ -15,22 +15,60 @@
 class Recipe {
 	 	
  	/**
-	 * Recipe object
+	 * Simplexml recipe object
 	 *
 	 */  
- 	var $recipe;
+ 	private $recipe; 
 
 
- 	function __construct($recipe) {
+ 	public function __construct($recipe) {
  		$this->recipe       = $recipe;
  	}
 
-	function export($output=true) {
+	public function export($output=true) {
 		global $h;
 		if (!$output) $h->startBuffer();		
 		$this->startXML();
 		$h->tnl($this->recipe->asXML());
 		$this->endXML();
+	}
+
+	public function exportJson() {
+		return json_encode($this->getJson());
+	}
+
+	public function getJson() {
+		$json = [
+			'id' => (string) $this->recipe['id'],
+			'instructions' => explode("\n", (string) $this->recipe->instructions)
+		];
+		//// simple tags
+		$tagnames = ['title', 'category','cuisine','rating','preptime','servings','cooktime'];
+		foreach ($tagnames as $tagname) {
+			$json[$tagname] = (string)$this->recipe->{$tagname};
+		}
+		//// instructions
+		$ingredients = [];
+		foreach ($this->recipe->{'ingredient-list'}->ingredient as $ingredient) {
+			$ingredients[] = [
+				'amount' => (string) $ingredient->amount,
+				'unit' => (string) $ingredient->unit,
+				'item' => (string) $ingredient->item,
+				'key' => (string) $ingredient->key
+			];
+		}
+		$ingredients = [];
+		foreach ($this->recipe->{'ingredient-list'}->ingredient as $ingredient) {
+			$ingredients[] = [
+					'amount' => (string) $ingredient->amount,
+					'unit' => (string) $ingredient->unit,
+					'item' => (string) $ingredient->item,
+					'key' => (string) $ingredient->key
+			];
+		}
+		$json['ingredients'] = $ingredients;
+		return $json;
+
 	}
 
 	private function startXML() {
@@ -109,4 +147,3 @@ class Recipe {
 	}
 	
 }
-?>
