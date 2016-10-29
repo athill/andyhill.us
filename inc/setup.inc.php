@@ -41,9 +41,9 @@ $site = array(
 	"rightSideBar" => "none",
 	"template" => "default",
 	"scripts" => array(),
-	"stylesheets" => array(),
+	"stylesheets" => [],
 	'jsModules' => array(
-		'popup'=>true
+		'popup'=>true, 'bootstrap'=>true
 	),
 	"useImageHeader" => false,
 	"cas"=>false,

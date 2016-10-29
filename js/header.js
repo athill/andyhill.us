@@ -45,7 +45,7 @@ $(function() {
 					.replace(/[a-zA-Z]+/, "");
 			});
 			var hpad = parseInt(padding['left']) + parseInt(padding['right']);
-			var vpad = parseInt(padding['top']) + parseInt(padding['bottom']);
+			var vpad = parseInt(padding['top']) + parseInt(padding['bottom']) + 10;
 			var winWidth = $(this).width() - hpad;
 			var numImgs = ($("img", this).length);
 			var winSpace = winWidth - options.imgWidth * numImgs;

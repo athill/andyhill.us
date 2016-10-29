@@ -43,13 +43,13 @@ header, footer, nav, section, article {
 }
 /************ Images at top of page */
 #img-container {
-	height: 90px;
+	height: 115px;
 	position: relative;
 	background: #444;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
 	border-radius: 15px;
-	padding: 15px;	
+	padding: 10px;	
 }
 
 /************ Page title */

@@ -59,7 +59,7 @@ $categories = $api->getCategories();
 $cuisines = $api->getCuisines();
 
 ////render form
-$h->oform("", 'get');
+$h->oform("", 'get', 'class="form-inline"');
 $h->ofieldset("Filter");
 // $filters = array(
 // 	array( 'id'=>'category', 'options'=> $categories),
@@ -73,9 +73,10 @@ $filters = array(
 );
 
 foreach ($filters as $filter) {
-//	$h->pa($filter);
+	$h->odiv('class="form-group"');
 	$h->label($filter['id'], "<strong>".ucfirst($filter['id']).": </strong>");
-	$h->select($filter['id'], [], $h->getVal($filter['id']));
+	$h->select($filter['id'], [], $h->getVal($filter['id']), ['class' => 'form-control']);
+	$h->cdiv(); //// .form-group
 
 }
 $h->br();
@@ -84,6 +85,19 @@ $h->intext('filter');
 //$h->input("reset", "s", "Clear");
 $h->cfieldset();
 $h->cform();
+
+
+// <form class="form-inline">
+//   <div class="form-group">
+//     <label for="exampleInputName2">Name</label>
+//     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+//   </div>
+//   <div class="form-group">
+//     <label for="exampleInputEmail2">Email</label>
+//     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+//   </div>
+//   <button type="submit" class="btn btn-default">Send invitation</button>
+// </form>
 
 
 

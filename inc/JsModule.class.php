@@ -8,6 +8,11 @@ class JsModule {
 	function __construct() {
 		$this->jquery = array('/js/jquery-1.10.1.min.js');
 		$this->modules = array(
+			//// bootstrap
+			'bootstrap' => [
+				'scripts' => ['/css/bootstrap/js/bootstrap.min.js'],
+				'styles' => ['/css/bootstrap/css/bootstrap.min.css']
+			],
 					////Tooltip
 			"tooltip" => array( 
 				"scripts" => array("/js/jquery-tooltip/lib/jquery.bgiframe.js",
