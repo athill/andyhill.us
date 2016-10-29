@@ -7,15 +7,6 @@ $page = new Page(array(
 require_once('Api.php');
 $api = new Api('recipes.xml');
 
-// if(!$xml=simplexml_load_file('recipes0904.grmt')){
-//     trigger_error('Error reading XML file',E_USER_ERROR);
-// }
-
-// if(!$xml=simplexml_load_file('recipes.xml')){
-//     trigger_error('Error reading XML file',E_USER_ERROR);
-// }
-
-$xml = $api->getXml();
 
 include_once('Recipe.class.php');
 
@@ -52,29 +43,15 @@ $h->p('I use the excellent <a href="http://thinkle.github.io/gourmet/" target="_
 ///////////////////////
 ////Filter
 /////////////////////////
-////Build drop-down options
-$ingredients = $api->getIngredients();
-$categories = $api->getCategories();
-$cuisines = $api->getCuisines();
 
 ////render form
 $h->oform("", 'get', ['class' => 'form-inline', 'id' => 'filter-form']);
 $h->ofieldset("Filter");
-// $filters = array(
-// 	array( 'id'=>'category', 'options'=> $categories),
-// 	array( 'id'=>'cuisine', 'options'=> $cuisines),
-// 	array( 'id'=>'ingredient', 'options'=> $ingredients),
-// );
-$filters = array(
-	array( 'id'=>'category', 'options'=> []),
-	array( 'id'=>'cuisine', 'options'=> []),
-	array( 'id'=>'ingredient', 'options'=> []),
-);
-
+$filters = ['category', 'cuisine', 'ingredient'];
 foreach ($filters as $filter) {
 	$h->odiv('class="form-group"');
-	$h->label($filter['id'], "<strong>".ucfirst($filter['id']).": </strong>");
-	$h->select($filter['id'], [], '', ['class' => 'form-control']);
+	$h->label($filter, "<strong>".ucfirst($filter).": </strong>");
+	$h->select($filter, [], '', ['class' => 'form-control']);
 	$h->cdiv(); //// .form-group
 
 }
@@ -84,21 +61,6 @@ $h->intext('filter', '', ['class' => 'form-control']);
 $h->cdiv('./form-group');
 $h->cfieldset();
 $h->cform();
-
-
-// <form class="form-inline">
-//   <div class="form-group">
-//     <label for="exampleInputName2">Name</label>
-//     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-//   </div>
-//   <div class="form-group">
-//     <label for="exampleInputEmail2">Email</label>
-//     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-//   </div>
-//   <button type="submit" class="btn btn-default">Send invitation</button>
-// </form>
-
-
 
 /////////////////////////////////
 ////Menu
@@ -111,5 +73,5 @@ $h->div('', 'id="recipes"');
 
 $h->script('var recipes = '.$api->exportJson());
 $h->scriptfile(['util.js', 'indexjs.js']);
+
 $page->end();
-?>
