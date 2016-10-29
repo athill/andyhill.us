@@ -110,6 +110,6 @@ $h->linkList([], 'id="recipe-list"');
 $h->div('', 'id="recipes"');
 
 $h->script('var recipes = '.$api->exportJson());
-$h->scriptfile(['util.js', 'index.js']);
+$h->scriptfile(['util.js', 'indexjs.js']);
 $page->end();
 ?>
