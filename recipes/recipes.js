@@ -45,7 +45,6 @@ $(function() {
 	$recipeItems = $('.recipe', $recipes);
 
 	//// change handler for filter
-	console.log($filter);
 	$filter.keyup(function(e) {
 		e.preventDefault();
 		updateFilter();
@@ -81,7 +80,13 @@ $(function() {
 				<h3>Instructions:</h3> \
 				<p>'+recipe.instructions.join('<br />')+'</p> \
 			</div> \
-		</div>');
+		</div> \
+		<a href="printable.php?id='+recipe.id+'" target="_blank">Print</a> | \
+		<a href="export.php?id='+recipe.id+'">Export</a> \
+		<br /><br /> \
+		<a href="#top">Return to top</a> \
+		<br /><br /> \
+		');
 		//// meta
 		recipeMetaMap.forEach(function(map) {
 			$('.recipe-meta tbody' , $structure).append('<tr><th>'+map.header+'</th><td>'+recipe[map.key]+'</td></tr>');
