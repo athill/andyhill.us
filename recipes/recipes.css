@@ -1,3 +1,15 @@
+#filter-form {
+	padding-bottom: 1em;
+}
+
+#filter-form .form-group {
+	padding-bottom: 1em;
+}
+
+#filter {
+	margin-left: 2.75em;
+}
+
 div.recipe {
 	padding-bottom: 2em;
 }
@@ -10,27 +22,44 @@ div.recipe td, div.recipe th {
 
 div.recipe h2, div.recipe h3 {
 	margin: 0;
-	paadding: 0;
+	padding: 0;
 }
 
 div#menu a {
 	padding: .3em;
 }
 
-#recipes th {
-	text-align: left;
+#recipe-list {
+	padding-bottom: 2em;
+}
+
+.recipe-background {
+	background-color: wheat;
 }
 
 .recipe-title {
-	background-color: wheat;
 	border-top-left-radius: 1em;	
 	border-top-right-radius: 1em;	
 	padding: 0.5em;
 }
 
 .recipe-main {
-	background-color: wheat;
 	border-radius: 1em;
 	border-top-left-radius: 0;	
 	padding: 1em;
+}
+
+@media (min-width: 768px) {
+  .dl-horizontal dt {
+    float: left;
+    width: 80px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .dl-horizontal dd {
+    margin-left: 100px;
+  }
 }

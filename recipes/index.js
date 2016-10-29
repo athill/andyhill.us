@@ -5,18 +5,9 @@ $(function() {
 	var optionTypes = ['category', 'cuisine', 'ingredients'],
 		options = {},
 		$filterElems = {},
-		$recipeList = $('#menu'),
+		$recipeList = $('#recipe-list'),
 		$recipes = $('#recipes'),
 		$filter = $('#filter'),
-		recipeMetaMap = [
-			{ header: 'Category', key: 'category' },
-			{ header: 'Cuisine', key: 'cuisine' },
-			{ header: 'Rating', key: 'rating' },
-			{ header: 'Prep Time', key: 'preptime' },
-			{ header: 'Servings', key: 'servings' },
-			{ header: 'Cook Time', key: 'cooktime' }
-		],
-		ingredientItems = ['amount','unit','item'],
 		$recipeListItems = [];
 		$recipeItems = [];
 	//// set up option types
@@ -35,7 +26,7 @@ $(function() {
 				options[optionType][recipe[optionType]] = null;	
 			}
 		});
-		var name = recipe.title.replace(/[^a-zA-Z0-9]/g, '');
+		var name = getRecipeName(recipe);
 
 		$recipeList.append('<li id="list-'+recipe.id+'"><a href="#'+name+'">'+recipe.title+'</a></li>');
 		//// recipe list
@@ -44,6 +35,8 @@ $(function() {
 	$recipeListItems = $('li', $recipeList);
 	$recipeItems = $('.recipe', $recipes);
 
+	//// clear filter on page load
+	$filter.val('');
 	//// change handler for filter
 	$filter.keyup(function(e) {
 		e.preventDefault();
@@ -68,39 +61,6 @@ $(function() {
 			$filterElems[id].append($('<option>' + option + '</option>'));
 		});
 		
-	}
-
-	function getRecipeDom(recipe, name) {
-		var $structure = $('<div id="recipe-'+recipe.id+'" class="recipe"> \
-			<h2 id="'+name+'"><span class="recipe-title">'+recipe.title+'</span></h2> \
-			<div class="recipe-main"> \
-				<table class="recipe-meta"><tbody></tbody></table> \
-				<h3>Ingredients:</h3> \
-				<table class="recipe-ingredients"><tbody></tbody></table> \
-				<h3>Instructions:</h3> \
-				<p>'+recipe.instructions.join('<br />')+'</p> \
-			</div> \
-		</div> \
-		<a href="printable.php?id='+recipe.id+'" target="_blank">Print</a> | \
-		<a href="export.php?id='+recipe.id+'">Export</a> \
-		<br /><br /> \
-		<a href="#top">Return to top</a> \
-		<br /><br /> \
-		');
-		//// meta
-		recipeMetaMap.forEach(function(map) {
-			$('.recipe-meta tbody' , $structure).append('<tr><th>'+map.header+'</th><td>'+recipe[map.key]+'</td></tr>');
-		});
-
-		recipe.ingredients.forEach(function(ingredient) {
-			var $tr = $('<tr />');
-			ingredientItems.forEach(function(item) {
-				$tr.append('<td>'+ingredient[item]+'</td>');
-			});
-			$('.recipe-ingredients tbody' , $structure).append($tr);
-		});
-
-		return $structure;
 	}
 
 	function updateFilter() {

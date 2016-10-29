@@ -40,8 +40,7 @@ can export these recipes into Gourmet
 </p>
 
 <p>
-The filtering system is completely based on XPATH: Both populating the options 
-and the results.
+The filtering system uses jQuery. 
 </p>
 
 EOD;
@@ -59,7 +58,7 @@ $categories = $api->getCategories();
 $cuisines = $api->getCuisines();
 
 ////render form
-$h->oform("", 'get', 'class="form-inline"');
+$h->oform("", 'get', ['class' => 'form-inline', 'id' => 'filter-form']);
 $h->ofieldset("Filter");
 // $filters = array(
 // 	array( 'id'=>'category', 'options'=> $categories),
@@ -75,14 +74,14 @@ $filters = array(
 foreach ($filters as $filter) {
 	$h->odiv('class="form-group"');
 	$h->label($filter['id'], "<strong>".ucfirst($filter['id']).": </strong>");
-	$h->select($filter['id'], [], $h->getVal($filter['id']), ['class' => 'form-control']);
+	$h->select($filter['id'], [], '', ['class' => 'form-control']);
 	$h->cdiv(); //// .form-group
 
 }
-$h->br();
-$h->label('filter', '<strong>Any: </strong>');
-$h->intext('filter');
-//$h->input("reset", "s", "Clear");
+$h->odiv(['class' => 'form-group']);
+$h->label('filter', '<strong>Text: </strong>');
+$h->intext('filter', '', ['class' => 'form-control']);
+$h->cdiv('./form-group');
 $h->cfieldset();
 $h->cform();
 
@@ -104,13 +103,13 @@ $h->cform();
 /////////////////////////////////
 ////Menu
 ///////////////////////////////
-$h->linkList([], 'id="menu"');
+$h->linkList([], 'id="recipe-list"');
 /////////////////////////
 ////Recipes
 ///////////////////////////
 $h->div('', 'id="recipes"');
 
 $h->script('var recipes = '.$api->exportJson());
-$h->scriptfile('recipes.js');
+$h->scriptfile(['util.js', 'index.js']);
 $page->end();
 ?>

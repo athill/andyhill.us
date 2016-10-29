@@ -1,7 +1,8 @@
 <?php
 include('../inc/setup.inc.php');
 $page = new Page(array(
-	'template'=>'Basic'
+	'template'=>'Basic',
+	'stylesheets' => ['css/boostrap/css/bootstrap.min.css', 'recipes.css']
 ));
 
 if(!$xml=simplexml_load_file('recipes.xml')){
@@ -12,10 +13,13 @@ $id = $_GET['id'];
 $recipes = $xml->xpath("//recipe[@id=$id]");
 if (count($recipes) > 0) {
 	$recipe = new Recipe($recipes[0]);
-	$recipe->display();
+	$h->div('', ['id' => 'recipe']);
+	// $recipe->display();
+	$h->script('var recipe = '.$recipe->exportJson());
+	$h->scriptfile(['util.js', 'printable.js']);
 } else {
 	$h->div('Error: Bad id', 'class="error"');
 }
-// $template->footer();
+
 $page->end();
 ?>
