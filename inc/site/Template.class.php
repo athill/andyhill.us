@@ -4,8 +4,12 @@ class Template {
 	private $templateText = "default";
 	private $home;
 	public $menu;
+	public $hasLeftSidebar;
+	public $hasRightSidebar;
 	private $includes = array();
 	public $hasSkipNav = true;
+	private $gridWidth = 12;
+	private $sidebarWidth = 2;
 	
 	
 	public function __construct($menu, $templateText="default") {
@@ -16,19 +20,15 @@ class Template {
 		include_once($site['incroot']."/site/templates/".$this->templateText.".class.php");
 		$this->template = new TemplateInstance($this) or die("???");
 		$this->menu = $menu;
+
+		$this->hasLeftSidebar = $this->hasSidebar('left');
+		$this->hasRightSidebar = $this->hasSidebar('right');
 	}
 	
 	public function head() {
 	  if ($this->templateText == "none") return;
 	  global $h, $site;
-	  ////Add scripts/sheets from template
-//	  $scripts = explode(",", $this->template->scripts);
-//	  $sheets = explode(",", $this->template->stylesheets);
-//	  $h->pa($this->includes);
-	  
-	  
 	  ////Add scripts/styles from jsModules
-	  include_once($site['incroot']."/JsModule.class.php");
 	  $jsMods = new JsModule();
 	  foreach ($jsMods->jquery as $script) {
 	  	$this->includes[] = $script;
@@ -48,7 +48,7 @@ class Template {
 		$title .= ': '. $site['pageTitle'];
 	  }
 	  $h->ohtml($title, $this->includes, $site['meta']);
-	  if (array_key_exists('headerExtra', $site)) {
+	  if (isset($site['headerExtra'])) {
 		$h->tnl($site['headerExtra']);  
 	  }
 	  $h->script('var webroot = "'.$site['webroot'].'";');
@@ -59,32 +59,29 @@ class Template {
 	public function openLayout() {
 		global $h, $site;
 		////Site structure
-		$h->odiv('id="layout"');
-		$class = "column123";
-		if ($site['leftSideBar']['type'] != "none" && $site['rightSideBar'] != "none") {
-			$class = 'column2';	////left-content-right
-			$this->leftSideBar($site['leftSideBar']['type'], $site['leftSideBar']['args']);
-		} else if ($site['leftSideBar']['type'] != "none") {
-			$class = 'column23';	////left-content
-			$this->leftSideBar($site['leftSideBar']['type'], $site['leftSideBar']['args']);
-		} else if ($site['rightSideBar'] != "none") {
-			$class = 'column12';	////content-right
+		$h->odiv(['id' => 'layout', 'class' => 'row']);
+		$contentWidth = $this->gridWidth;
+		if ($this->hasLeftSidebar && $this->hasRightSidebar) {
+			$contentWidth -= 2 * $this->sidebarWidth;
+			$this->leftSideBar();
+		} else if ($this->hasLeftSidebar) {
+			$contentWidth -= $this->sidebarWidth;
+			$this->leftSideBar();
+		} else if ($this->hasRightSidebar) {
+			$contentWidth -= $this->sidebarWidth;
 		}
-		$h->odiv('id="content-wrapper" class="'.$class.'"');
+		$h->odiv('id="content-wrapper" class="col-md-'.$contentWidth.'"');
 		$h->odiv('id="content"');
 	}
 
 	function closeLayout() {
 		global $h, $site;		
-		$h->cdiv();	////close content
-		$h->cdiv();	//close content-wrapper
-		//$h->tbr('rsb: ' . $GLOBALS['rightSideBar']);
+		$h->cdiv('/#content');	////close content
+		$h->cdiv('/#content-wrapper');	//close content-wrapper
 		if ($site['rightSideBar'] != "none") {
 			$this->rightSideBar();
 		}
-		$h->cdiv();	//close layout
-
-
+		$h->cdiv('./row');	//close layout
 	}
 	
 	
@@ -97,7 +94,7 @@ class Template {
 		array("display" => "Search"),
 		array("display" => "Primary Navigation")
 	  );
-	  if ($site['leftSideBar']['type'] != "none") {
+	  if ($this->hasLeftSidebar) {
 		$links[] = 	array("display" => "Secondary Navigation");
 	  }
 	  ////generate href ids
@@ -118,10 +115,11 @@ class Template {
 	}
 	
 	////Left side bar
-	public function leftSideBar($type, $args) {
+	public function leftSideBar($type=null, $args=null) {
 		global $h, $site;
-		$h->odiv('id="column1"');
-		//$h->pa($leftSideBar);
+		$type = $type ? $type : $site['leftSideBar']['type'];
+		$args = $args ? $args : $site['leftSideBar']['args'];
+		$h->odiv(['class' => 'sidebar col-md-'.$this->sidebarWidth]);
 		switch ($type) {
 			case "content":
 				$h->tnl($args['content']);
@@ -140,7 +138,7 @@ class Template {
 			default:
 				$h->tnl("Unsupported sidebar type");
 		}
-		$h->cdiv(); //close column 1
+		$h->cdiv('/left sidebar'); //close column 1
 				
 	}
 
@@ -148,13 +146,11 @@ class Template {
 		global $h;
 		$h->odiv('id="column3"');
 		$h->tnl($site['rightSideBar']);
-		$h->cdiv(); //close column 3
+		$h->cdiv('/right sidebar'); //close column 3
 	}
 	
 	public function breadcrumbs($opts=array()) {
 	  global $h;
-//	  $h->pa($opts);
-	  //$h->script('KW_breadcrumbs("UIRR Home","&raquo;",0,1,"index.php",4,5)');		
 	  $this->menu->renderBreadcrumbs($opts);
 	}
 	
@@ -162,6 +158,11 @@ class Template {
 		if ($this->templateText == "none") return;		
 		$this->template->footer();	
 	}
-	
+
+	private function hasSidebar($side) {
+		global $site;
+		$sidebar = $site[$side.'SideBar'];
+		$type = is_array($sidebar) ? $sidebar['type'] : $sidebar;
+		return $type !== "none";
+	}
 }
-?>

@@ -21,8 +21,6 @@ a:hover {
 	padding: 0;
 	background: #CCC;
 	color: black;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
 	border-radius: 15px;	
 }
 
@@ -39,8 +37,6 @@ a:hover {
 	height: 115px;
 	position: relative;
 	background: #444;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
 	border-radius: 15px;
 	padding: 10px;	
 }
@@ -158,11 +154,6 @@ a:hover {
 }
 
 #search {
-	/*
-	position: absolute;
-	top: 0;
-	right: 0;
-	*/
 	float: right;
 	height: 100%;
 }
@@ -170,25 +161,8 @@ a:hover {
 /**********************
  * Content area layout. Sidebars, etc.
  ****************************/
-#layout {
-	overflow: auto;
-	clear: both;
-	/* background: yellow; */
-}
-
-#column1, .column2, #column3, .column23, .column12 {
-	float:left;
-}
-#column1 {
-/*	background: red; */
-}
-#column2 {
-/* 	background: orange; */
-/*	padding: 1em; */
-}
-
-.column2, .column12, .column23 {
-
+ #layout {
+	margin: 0;
 }
 
 #content-wrapper {
@@ -196,37 +170,16 @@ a:hover {
 }
 
 #content {
-	padding: 1em;
+	padding-top: 1em;
 }
 
-#column3 {
-/*	background: purple; */
-}
-#column1, #column3 {
-	width: 150px;
-
+.sidebar {
  	padding: 4px; 
-	margin: 4px;
-
+	margin: 0;
 	border: solid black medium; 
 	background: white;
-	height: 100;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border-radius: 15px;
-}
-.column2 {
-	width: 650px; 
-}
-
-.column23, .column12 {
-	width: 825px;	
-}
-
-
-
-.column123 {
-	width: 1000px;	
+	min-height: 100;
+	border-radius: 15px;	
 }
 
 /***********************> 
