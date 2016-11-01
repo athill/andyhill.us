@@ -15,19 +15,12 @@ a:hover {
 	text-decoration: underline;
 }
 
-/* HTML5 backward compatibility */
-header, footer, nav, section, article {  
-	display:block;  
-}
-
 
 #page {
-	width: 1000px;
-	margin: 0 auto;
+	margin: 2em auto 0 auto;
+	padding: 0;
 	background: #CCC;
 	color: black;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
 	border-radius: 15px;	
 }
 
@@ -35,10 +28,8 @@ header, footer, nav, section, article {
  * Header 
  *******************/
 #header {
-/*	background: blue; */ 
 	position: relative;
 	overflow: auto;
-	margin-top: 2em;
 	padding: 1em;
 }
 /************ Images at top of page */
@@ -46,39 +37,18 @@ header, footer, nav, section, article {
 	height: 115px;
 	position: relative;
 	background: #444;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
 	border-radius: 15px;
 	padding: 10px;	
 }
 
 /************ Page title */
-.page-title-base {
-	font: bold 22pt monospace; padding: 5px;
-}
-
 #page-title {
+	font: bold 22pt monospace; padding: 5px;
 	position: absolute; 
-	left: 52px; 
-	top: 82px; 
+	left: 2em; 
+	bottom: 0.5em; 
 	color: #FFF;
-}
-
-#page-title-drop {
-	position: absolute; 
-	left: 54px; 
-	top: 84px; 
-	color: #000;
-}
-
-#headerTitleDrop {
-	position: absolute; left: 2px; top: 2px; color: #FFF;
-		font: italic bold 20pt arial; padding: 5px;
-}
-
-#headerTitle {
-	position: absolute; left: 0px; top: 0px; color: #700;
-		font: italic bold 20pt arial; padding: 5px;
+	text-shadow: 3px 3px 2px gray; 
 }
 
 
@@ -184,11 +154,6 @@ header, footer, nav, section, article {
 }
 
 #search {
-	/*
-	position: absolute;
-	top: 0;
-	right: 0;
-	*/
 	float: right;
 	height: 100%;
 }
@@ -196,25 +161,8 @@ header, footer, nav, section, article {
 /**********************
  * Content area layout. Sidebars, etc.
  ****************************/
-#layout {
-	overflow: auto;
-	clear: both;
-	/* background: yellow; */
-}
-
-#column1, .column2, #column3, .column23, .column12 {
-	float:left;
-}
-#column1 {
-/*	background: red; */
-}
-#column2 {
-/* 	background: orange; */
-/*	padding: 1em; */
-}
-
-.column2, .column12, .column23 {
-
+ #layout {
+	margin: 0;
 }
 
 #content-wrapper {
@@ -222,37 +170,16 @@ header, footer, nav, section, article {
 }
 
 #content {
-	padding: 1em;
+	padding-top: 1em;
 }
 
-#column3 {
-/*	background: purple; */
-}
-#column1, #column3 {
-	width: 150px;
-
+.sidebar {
  	padding: 4px; 
-	margin: 4px;
-
+	margin: 0;
 	border: solid black medium; 
 	background: white;
-	height: 100;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border-radius: 15px;
-}
-.column2 {
-	width: 650px; 
-}
-
-.column23, .column12 {
-	width: 825px;	
-}
-
-
-
-.column123 {
-	width: 1000px;	
+	min-height: 100;
+	border-radius: 15px;	
 }
 
 /***********************> 
@@ -291,4 +218,13 @@ footer {
 	-moz-border-radius: 0 0 15px 15px;
 	-webkit-border-radius: 0 0 15px 15px;
 	border-radius: 0 0 15px 15px;
+}
+
+/*****************
+ * media queries
+ *****************/
+ @media (max-width: 767px) {
+  #img-container {
+    height: 5em;
+  }
 }

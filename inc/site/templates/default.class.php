@@ -3,8 +3,6 @@ $h = html::singleton();
 //echo "included";
 
 class TemplateInstance {
-
-
 	public $bodyAtts = 'id="default" class="default"';	
 	public $stylesheets = array("/css/main.css");
 	public $scripts = array();
@@ -22,7 +20,10 @@ class TemplateInstance {
 	public function heading() {
 	  global $h;
 		////Main container
-		$h->odiv('id="page"');
+	  	$h->odiv(['class' => 'container']);
+	  	$h->odiv(['class' => 'row']);
+	  	$h->div('', ['class' => 'col-md-1 hidden-sm']);
+		$h->odiv(['id' => 'page', 'class' => 'col-md-10 col-sm-12']);
 		$this->displayHeader();
 		////Site structure
 		$this->base->openLayout();
@@ -32,7 +33,7 @@ class TemplateInstance {
 		global $h;
 		////header container
 		$h->otag('header', 'id="header"');
-		$h->odiv('id="img-container"');
+		$h->odiv(['id' => 'img-container']);
 		////Images across the top
 		$images = array('house.jpg',
 					'band.jpg',
@@ -40,12 +41,13 @@ class TemplateInstance {
 					'wfhb.jpg'
 		);
 		for ($i = 0; $i < count($images); $i++) {
-			$h->img("/images/header/" . $images[$i], "", 'id="header-img'.$i.'" class="header-img"');
+			$h->img("/images/header/" . $images[$i], "", ['id' => 'header-img'.$i, 
+				 'class' => 'header-img hidden-xs']);
 		}
 		$h->cdiv(); ////close img-container
 		////Header title
 		$pageTitle = "andyhill.us";
-		$h->div($pageTitle, 'id="page-title-drop" class="page-title-base"');
+		// $h->div($pageTitle, 'id="page-title-drop" class="page-title-base"');
 		$h->div($pageTitle, 'id="page-title" class="page-title-base"');
 		$h->ctag('header');		////close header
 		////Global Navigation
@@ -131,7 +133,10 @@ class TemplateInstance {
 //		$h->tbr("footer");
 		$h->tnl('&copy; andyhill.us ' . date('Y'));
 		$h->ctag('footer');
-		$h->cdiv();	////close page
+		$h->cdiv('./page');	////close page
+		$h->div('', ['class' => 'col-md-1 hidden-sm']);
+		$h->cdiv('./row');
+		$h->cdiv('./container');
 		$h->chtml();
 	}
 }
