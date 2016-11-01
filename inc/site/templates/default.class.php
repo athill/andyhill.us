@@ -51,7 +51,8 @@ class TemplateInstance {
 		$h->div($pageTitle, 'id="page-title" class="page-title-base"');
 		$h->ctag('header');		////close header
 		////Global Navigation
-		$h->otag('nav', 'id="global-nav"');		
+		// $h->otag('nav', 'id="global-nav"')
+		$h->otag('nav', 'id="nav" role="navigation"');
 		//$h->tnl("Global Nav");
 		$this->renderGlobalNav();
 		$h->ctag('nav');
@@ -77,8 +78,11 @@ class TemplateInstance {
 	function renderGlobalNav() {
 		global $h;
 		$h->h(3, "Primary Navigation", 'id="primary-navigation" class="hide"');
+		$h->a('#nav', 'Show navigation', 'title="Show navigation"');
+		$h->a('#', 'Hide navigation', 'title="Hide navigation"');
 //		$array = $this->base->menu->xmlMenu2array($this->xml);
-		$h->linkList($this->base->menu->xmlMenu2array(), 'class="sf-menu" id="global-nav-menu"');
+		// $h->linkList($this->base->menu->xmlMenu2array(), 'class="sf-menu" id="global-nav-menu"');
+		$h->linkList($this->base->menu->xmlMenu2array());
 	}
 
 
