@@ -77,7 +77,7 @@ class TemplateInstance {
 
 	function renderGlobalNav() {
 		global $h;
-		$h->h(3, "Primary Navigation", 'id="primary-navigation" class="hide"');
+		// $h->h(3, "Primary Navigation", 'id="primary-navigation" class="hide"');
 		$h->a('#nav', 'Show navigation', 'title="Show navigation"');
 		//// https://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
 		$h->a('#', 'Hide navigation', 'title="Hide navigation"');
