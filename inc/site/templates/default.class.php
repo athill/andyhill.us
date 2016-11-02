@@ -4,8 +4,8 @@ $h = html::singleton();
 
 class TemplateInstance {
 	public $bodyAtts = 'id="default" class="default"';	
-	public $stylesheets = array("/css/main.css");
-	public $scripts = array();
+	public $stylesheets = ['/css/main.css', '/css/menu.css'];
+	public $scripts = [];
 	private $base;
 	
 	public function __construct($base) {
