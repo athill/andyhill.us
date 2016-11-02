@@ -37,9 +37,10 @@
 /* first level */
 
 #nav > ul {
-	height: 3.75em; /* 60 */
+	height: 2.75em; /* 60 */
 	background-color: #e15a1f;
 	margin: 0;	
+	padding: 0;
 	z-index: 1000;
 }
 
@@ -47,7 +48,6 @@
 	width: 11%;
 	height: 100%;
 	float: left;
-	z-index: 1000;
 }
 
 #nav > ul > li > a {
@@ -73,6 +73,7 @@
 	display: none;
 	position: absolute;
 	top: 100%;
+	z-index: 1000;
 }
 #nav li:hover ul {
 	display: block;
