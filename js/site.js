@@ -8,11 +8,7 @@ for (var i = 0; i < html5elems.length; i++) {
 if ( ! window.console ) console = { log: function(){} };
 
 $(function() { 	
-	//// Superfish
-	$('ul.sf-menu').superfish({ autoArrows: false });
-	var kids = $('ul#global-nav-menu:first').children();
-	var width = ($("#global-nav").width()/kids.length) - 0.5;
-	kids.css('width', width);
+	$( '#nav li:has(ul)' ).doubleTapToGo();
 	////tree menu
 	if (typeof $.treeview == "object") {
 		$("#lsb-menu").treeview({

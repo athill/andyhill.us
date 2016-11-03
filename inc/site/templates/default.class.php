@@ -14,7 +14,7 @@ class TemplateInstance {
 		// $this->scripts[] = ($site['isPRD']) ? 
 		// 	'/js/jquery-migrate-1.2.1.min.js' : 
 		// 	'/js/jquery-migrate-1.2.1.js';
-		$this->scripts = array_merge($this->scripts, array("/js/site.js","/js/header.js"));
+		$this->scripts = array_merge($this->scripts, ['/js/jquery-doubleTapToGo.js', "/js/site.js","/js/header.js"]);
 	}
 	
 	public function heading() {
@@ -78,11 +78,10 @@ class TemplateInstance {
 	function renderGlobalNav() {
 		global $h;
 		// $h->h(3, "Primary Navigation", 'id="primary-navigation" class="hide"');
+		//// from https://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
 		$h->a('#nav', 'Show navigation', 'title="Show navigation"');
-		//// https://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
+		
 		$h->a('#', 'Hide navigation', 'title="Hide navigation"');
-//		$array = $this->base->menu->xmlMenu2array($this->xml);
-		// $h->linkList($this->base->menu->xmlMenu2array(), 'class="sf-menu" id="global-nav-menu"');
 		$h->linkList($this->base->menu->xmlMenu2array(['maxdepth' => 1]));
 	}
 
