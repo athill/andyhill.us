@@ -83,7 +83,7 @@ class TemplateInstance {
 		$h->a('#', 'Hide navigation', 'title="Hide navigation"');
 //		$array = $this->base->menu->xmlMenu2array($this->xml);
 		// $h->linkList($this->base->menu->xmlMenu2array(), 'class="sf-menu" id="global-nav-menu"');
-		$h->linkList($this->base->menu->xmlMenu2array());
+		$h->linkList($this->base->menu->xmlMenu2array(['maxdepth' => 1]));
 	}
 
 

@@ -18,7 +18,8 @@
 	display: block;
 }
 #nav li a:active {
-	background-color: #c00 !important;
+	background-color: white !important;
+	color: black;
 }
 
 #nav span:after {
@@ -26,7 +27,7 @@
 	height: 0;
 	border: 0.313em solid transparent; /* 5 */
 	border-bottom: none;
-	border-top-color: #efa585;
+	border-top-color: gray;
 	content: '';
 	vertical-align: middle;
 	display: inline-block;
@@ -38,7 +39,7 @@
 
 #nav > ul {
 	height: 2.75em; /* 60 */
-	background-color: #e15a1f;
+	background-color: black;
 	margin: 0;	
 	padding: 0;
 	z-index: 1000;
@@ -58,22 +59,29 @@
 }
 
 #nav > ul > li:not( :last-child ) > a {
-	border-right: 1px solid #cc470d;
+	border-right: 1px solid gray;
 }
-#nav > ul > li:hover > a,
-#nav > ul:not( :hover ) > li.active > a {
-	background-color: #cc470d;
+
+#nav > ul > li:not( :hover ).active > a {
+	background-color: white;
+	color: black;
+}
+
+#nav > ul > li:hover > a {
+	background-color: gray;
+	text-decoration: none;
 }
 
 
 /* second level */
 
 #nav li ul {
-	background-color: #cc470d;
+	background-color: black;
 	display: none;
 	position: absolute;
 	top: 100%;
 	z-index: 1000;
+	padding-left: 1em;
 }
 #nav li:hover ul {
 	display: block;
@@ -83,14 +91,20 @@
 #nav li:not( :first-child ):hover ul {
 	left: -1px;
 }
+
 #nav li ul a {
-	font-size: 0.5em; 
-	border-top: 1px solid #e15a1f;
-	padding: 0.75em; /* 15 (20) */
+	font-size: 1em; 
+	padding: 1em 0;
+
+	border-top: 1px solid gray;
+	/* padding-left: 0; */ /* 15 (20) */
 }
-#nav li ul li a:hover,
-#nav li ul:not( :hover ) li.active a {
-	background-color: #e15a1f;
+#nav li ul li a:hover {
+	background-color: gray;
+}
+#nav li ul li:not( :hover ).active a {
+	background-color: white;
+	color: black;
 }
 
 
@@ -117,7 +131,7 @@
 		height: 3.125em; /* 50 */
 		text-align: left;
 		text-indent: -9999px;
-		background-color: #e15a1f;
+		background-color: black;
 		position: relative;
 	}
 	#nav > a:before,
@@ -160,10 +174,9 @@
 		text-align: left;
 		padding: 0 0.833em; /* 20 (24) */
 	}
-	#nav > ul > li:not( :last-child ) > a
-	{
+	#nav > ul > li:not( :last-child ) > a {
 		border-right: none;
-		border-bottom: 1px solid #cc470d;
+		border-bottom: 1px solid gray;
 	}
 
 	/* second level */

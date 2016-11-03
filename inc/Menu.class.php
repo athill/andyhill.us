@@ -247,15 +247,16 @@ class Menu {
 			}
 			$href = $item['href'];
 			$item = $this->parseItem($item, $opts['root'].$opts['path'], $opts['depth'], $opts['testFunction']);
-			if ($d) $h->pa($item);
 			if (count($node->children()) > 0 && ($opts['maxdepth'] == -1 || $opts['depth'] < $opts['maxdepth'])) {
-//				$h->tbr('path: '.$opts['path'] .' href: '. $item['href'] .' root: ' . $opts['root']);
 				$item['children'] = $this->xmlMenu2array(
-					array('xml'=>$node, 
-						'depth'=>++$opts['depth'],
+					[
+						'xml'=>$node, 
 						'path' => $opts['path'].$href,
+						'maxdepth' => $opts['maxdepth'],
+						'testFunction' => $opts['testFunction'],
+						'depth'=>$opts['depth'] + 1,
 						'root' => $opts['root']
-					)
+					]
 				);
 			}
 			$array[] = $item;
