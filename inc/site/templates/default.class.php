@@ -4,8 +4,8 @@ $h = html::singleton();
 
 class TemplateInstance {
 	public $bodyAtts = 'id="default" class="default"';	
-	public $stylesheets = array("/css/main.css");
-	public $scripts = array();
+	public $stylesheets = ['/css/main.css', '/css/menu.css'];
+	public $scripts = [];
 	private $base;
 	
 	public function __construct($base) {
@@ -51,7 +51,8 @@ class TemplateInstance {
 		$h->div($pageTitle, 'id="page-title" class="page-title-base"');
 		$h->ctag('header');		////close header
 		////Global Navigation
-		$h->otag('nav', 'id="global-nav"');		
+		// $h->otag('nav', 'id="global-nav"')
+		$h->otag('nav', 'id="nav" role="navigation"');
 		//$h->tnl("Global Nav");
 		$this->renderGlobalNav();
 		$h->ctag('nav');
@@ -76,9 +77,13 @@ class TemplateInstance {
 
 	function renderGlobalNav() {
 		global $h;
-		$h->h(3, "Primary Navigation", 'id="primary-navigation" class="hide"');
+		// $h->h(3, "Primary Navigation", 'id="primary-navigation" class="hide"');
+		$h->a('#nav', 'Show navigation', 'title="Show navigation"');
+		//// https://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
+		$h->a('#', 'Hide navigation', 'title="Hide navigation"');
 //		$array = $this->base->menu->xmlMenu2array($this->xml);
-		$h->linkList($this->base->menu->xmlMenu2array(), 'class="sf-menu" id="global-nav-menu"');
+		// $h->linkList($this->base->menu->xmlMenu2array(), 'class="sf-menu" id="global-nav-menu"');
+		$h->linkList($this->base->menu->xmlMenu2array(['maxdepth' => 1]));
 	}
 
 
