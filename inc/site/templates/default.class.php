@@ -95,16 +95,11 @@ class TemplateInstance {
 	}
 	
 	private function displaySearch() {
-		global $h, $webroot;				
+		global $h, $webroot, $site;				
 		$h->oform("http://google.com/search", "get");
-		$sitesearch = array("|Web", "andyhill.us".$webroot."|Site");
-/*
-		foreach ($this->base->menu->xml as $elem) {
-			$sitesearch[] = "andyhill.us".$webroot.$elem['href']."|".$elem['display'];
-		}
-*/
+		$sitesearch = 'andyhill.us'.$webroot;
 		$h->tnl("Search ");
-		$h->select("sitesearch", $sitesearch, "andyhill.us$webroot");
+		$h->hidden("sitesearch", $sitesearch);
 		$h->input("text", "q", "", 'size="10" maxlength="255"');
 		$h->tnl("by Google");
 		$h->cform();
