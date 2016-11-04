@@ -23,5 +23,6 @@ jquery-readmore/
 demos/
 composer.lock
 php.ini.bak
+.htaccess
 .htaccess.bak
 php.ini
