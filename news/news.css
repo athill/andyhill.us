@@ -2,6 +2,7 @@
 #news-nav {
 	list-style-type: none;
 	overflow: auto;
+	padding: 0;
 }
 
 #news-nav li {
@@ -36,14 +37,12 @@ output#rss-feeds {
 	border: solid thick gray;
 	padding: 4px;
 	margin: 5px;
-	width: 375px;
+	width: 45%;
 	vertical-align: top;
 	-moz-border-radius: 20px;
 	-webkit-border-radius:  20px;
 	border-radius:  20px;
 }
-
-
 
 .feed-header {
 	overflow: auto;
@@ -94,4 +93,11 @@ output#rss-feeds {
 	display: inline-block;
 	width: 20em;
 	vertical-align: top;
+}
+
+
+@media only screen and ( max-width: 40em )  {
+	#rss-feeds > article {
+		width: 95%;
+	}
 }
