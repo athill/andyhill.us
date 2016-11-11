@@ -117,6 +117,185 @@ Bake for 35 minutes, or until the top is golden brown and bubbly.</instructions>
 5. Whip egg white to soft peaks
 6. Fold egg white into batter</instructions>
 	</recipe>
+	<recipe id="44">
+		<title>Chicken Pot Pie</title>
+		<category>Entree</category>
+		<cuisine>American</cuisine>
+		<source>allrecipes</source>
+		<link>http://allrecipes.com/recipe/26317/chicken-pot-pie-ix/print/?recipeType=Recipe&amp;servings=8</link>
+		<rating>5/5 stars</rating>
+		<preptime>20 minutes</preptime>
+		<cooktime>50 minutes</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>skinless, boneless chicken breast halves - cubed</item>
+				<key>skinless, boneless chicken breast halves - cubed</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>sliced carrots</item>
+				<key>sliced carrots</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>frozen green peas</item>
+				<key>frozen green peas</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>sliced celery</item>
+				<key>sliced celery</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/3</amount>
+				<unit>cup</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/3</amount>
+				<unit>cup</unit>
+				<item>chopped onion</item>
+				<key>chopped onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/3</amount>
+				<unit>cup</unit>
+				<item>all-purpose flour</item>
+				<key>all-purpose flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>teaspoon</unit>
+				<item>black pepper</item>
+				<key>black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>teaspoon</unit>
+				<item>celery seed</item>
+				<key>celery seed</key>
+			</ingredient>
+			<ingredient>
+				<amount>1 3/4</amount>
+				<unit>cups</unit>
+				<item>chicken broth</item>
+				<key>chicken broth</key>
+			</ingredient>
+			<ingredient>
+				<amount>2/3</amount>
+				<unit>cup</unit>
+				<item>milk</item>
+				<key>milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>(9 inch) unbaked pie crusts</item>
+				<key>(9 inch) unbaked pie crusts</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Preheat oven to 425 degrees F (220 degrees C.)
+    In a saucepan, combine chicken, carrots, peas, and celery. Add water to cover and boil for 15 minutes. Remove from heat, drain and set aside.
+    In the saucepan over medium heat, cook onions in butter until soft and translucent. Stir in flour, salt, pepper, and celery seed. Slowly stir in chicken broth and milk. Simmer over medium-low heat until thick. Remove from heat and set aside.
+    Place the chicken mixture in bottom pie crust. Pour hot liquid mixture over. Cover with top crust, seal edges, and cut away excess dough. Make several small slits in the top to allow steam to escape.
+    Bake in the preheated oven for 30 to 35 minutes, or until pastry is golden brown and filling is bubbly. Cool for 10 minutes before serving</instructions>
+	</recipe>
+	<recipe id="42">
+		<title>Chili con Queso</title>
+		<category>Entree</category>
+		<cuisine>Mexican</cuisine>
+		<rating>5/5 stars</rating>
+		<preptime>1 hour</preptime>
+		<cooktime>1 hour</cooktime>
+		<yields>6 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1/2</amount>
+				<item>onion diced (about 1/2 cup)</item>
+				<key>onion diced (about 1/2 cup)</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>cloves</unit>
+				<item>of garlic minced</item>
+				<key>of garlic minced</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<item>Serrano peppers diced</item>
+				<key>Serrano peppers diced</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<item>jalapeno peppers diced</item>
+				<key>jalapeno peppers diced</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>of butter</item>
+				<key>of butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>of flour</item>
+				<key>of flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>of milk</item>
+				<key>of milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<unit>cups</unit>
+				<item>of shredded cheese, can use any combination of Longhorn cheddar and Monterrey Jack</item>
+				<key>of shredded cheese, can use any combination of Longhorn cheddar and Monterrey Jack</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>of cilantro, chopped</item>
+				<key>of cilantro, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>plum tomatoes, peeled and diced (about 1 cup, can use canned if tomatoes aren’t in season)</item>
+				<key>plum tomatoes, peeled and diced (about 1 cup, can use canned if tomatoes aren’t in season)</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>of sour cream</item>
+				<key>of sour cream</key>
+			</ingredient>
+			<ingredient>
+				<item>salt, to taste</item>
+				<key>salt, to taste</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Melt the butter in a saucepan on medium-low heat, and then cook the onions and peppers for about five minutes or until onions are translucent.
+2. Add the garlic and cook for another minute.
+3. Whisk the flour into the butter, vegetable mix and cook for about 30 seconds.
+4. Add the milk to the pot, and cook on medium, whisking constantly until sauce is thick, about five minutes. Stir in the cilantro and tomatoes.
+5. Turn heat down to low, and a 1/4-cup at a time, slowly add the shredded cheese stirring into the white sauce until completely melted. Repeat.
+6. Stir in the sour cream.
+7. Add salt to taste</instructions>
+	</recipe>
 	<recipe id="3">
 		<title>Crab dip</title>
 		<category>Entree</category>
@@ -485,6 +664,63 @@ In a small bowl, disolve miso in some of hot liquid.
 Add dissolved miso, tofu, and soaked and drained arame to pot
 Simmer for 5 minutes, careful not to boil</instructions>
 	</recipe>
+	<recipe id="45">
+		<title>Ham and Swiss Casserole</title>
+		<category>Entree</category>
+		<cuisine>American</cuisine>
+		<source>Taste of Home</source>
+		<link>http://www.tasteofhome.com/recipes/ham-and-swiss-casserole</link>
+		<rating>4/5 stars</rating>
+		<preptime>15 minutes</preptime>
+		<cooktime>40 minutes</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>package</unit>
+				<item>egg noodles; cooked and drained (8 oz)</item>
+				<key>(8 ounces) egg noodles, cooked and drained</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>ham; cooked, cubed</item>
+				<key>cubed fully cooked ham</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>Swiss cheese; shredded (8 oz)</item>
+				<key>(8 ounces) shredded Swiss cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>can</unit>
+				<item>condensed cream of celery soup; undiluted</item>
+				<key>(10-3/4 ounces) condensed cream of celery soup, undiluted</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>sour cream</item>
+				<key>(8 ounces) sour cream</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>green pepper; chopped</item>
+				<key>chopped green pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>onion; chopped</item>
+				<key>chopped onion</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. In a greased 13-in. x 9-in. baking dish, layer half of the noodles, ham and cheese.
+2. In a large bowl, combine the soup, sour cream, green pepper and onion; spread half over the top. Repeat layers. Bake, uncovered, at 350° for 40-45 minutes or until heated through.</instructions>
+	</recipe>
 	<recipe id="9">
 		<title>Hot mushroom cheese spread</title>
 		<category>Entree</category>
@@ -758,6 +994,122 @@ In a large bowl, stir together the ricotta cheese, eggs, half of the Cheddar, ha
 Spread 1 1/2 cups of Alfredo sauce in the bottom of the prepared baking dish. Top with a layer of lasagna noodles. Arrange 1/3 of the lobster meat over the noodles, cover with 1/3 of the ricotta cheese mixture, then 1/3 of the spinach and then another layer of Alfredo sauce. Repeat this process two more times ending with sauce on top. Sprinkle the remainder of the Cheddar, mozzarella and Parmesan cheeses over the top. Give the whole pan a gentle shake to get everything settled in.
 
 Bake, covered loosely with aluminum foil, for 45 minutes in the preheated oven. Remove the foil and continue baking for an additional 10 minutes or until the top is browned. Let stand for 10 minutes before serving.</instructions>
+	</recipe>
+	<recipe id="43">
+		<title>Manicotti</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<link>http://www.melskitchencafe.com/2009/09/best-baked-manicotti.html</link>
+		<rating>5/5 stars</rating>
+		<preptime>1 hour</preptime>
+		<cooktime>1 hour</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<item>28-ounce can diced tomatoes (in juice)</item>
+				<key>28-ounce can diced tomatoes (in juice)</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>28-ounce can crushed tomatoes</item>
+				<key>28-ounce can crushed tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>extra-virgin olive oil</item>
+				<key>extra-virgin olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>medium</unit>
+				<item>cloves garlic, finely minced</item>
+				<key>cloves garlic, finely minced</key>
+			</ingredient>
+			<ingredient optional="yes">
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>red pepper flakes,</item>
+				<key>red pepper flakes,</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>teaspoons</unit>
+				<item>dried basil</item>
+				<key>dried basil</key>
+			</ingredient>
+			<ingredient>
+				<item>Cheese Filling and Pasta:</item>
+				<key>Cheese Filling and Pasta:</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cups</unit>
+				<item>part-skim ricotta cheese</item>
+				<key>part-skim ricotta cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>ounces</unit>
+				<item>grated Parmesan cheese (about 2 cups)</item>
+				<key>grated Parmesan cheese (about 2 cups)</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>ounces</unit>
+				<item>shredded mozzarella cheese (about 2 cups)</item>
+				<key>shredded mozzarella cheese (about 2 cups)</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>large</unit>
+				<item>eggs , lightly beaten</item>
+				<key>eggs , lightly beaten</key>
+			</ingredient>
+			<ingredient>
+				<amount>3/4</amount>
+				<unit>teaspoon</unit>
+				<item>table salt</item>
+				<key>table salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>ground black pepper</item>
+				<key>ground black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>chopped fresh parsley leaves (or 2 1/2 teaspoons dried parsley)</item>
+				<key>chopped fresh parsley leaves (or 2 1/2 teaspoons dried parsley)</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>teaspoons</unit>
+				<item>chopped fresh basil (or 1 teaspoon dried basil)</item>
+				<key>chopped fresh basil (or 1 teaspoon dried basil)</key>
+			</ingredient>
+			<ingredient>
+				<amount>16</amount>
+				<item>no-boil lasagna noodles (I use the Barilla brand – apparently they are supposed to be the most similar to homemade pasta and I love them, both in this and in lasagna)</item>
+				<key>no-boil lasagna noodles (I use the Barilla brand – apparently they are supposed to be the most similar to homemade pasta and I love them, both in this and in lasagna)</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Adjust oven rack to middle position and heat oven to 375 degrees.
+    Heat oil, garlic, and pepper flakes (if using) in large saucepan over medium heat until fragrant but not brown, 1 to 2 minutes. Stir in tomatoes, basil and 1/2 teaspoon salt and simmer until thickened slightly, about 15 minutes.
+    In a medium bowl, combine ricotta, 1 cup Parmesan chese, mozzarella cheese, eggs, salt, pepper, and herbs; set aside.
+    To assemble, pour 1 inch boiling water into 13 by 9-inch baking dish, then add noodles one at a time. Let noodles soak until pliable, about 5 minutes, separating noodles with tip of sharp knife to prevent sticking. Remove noodles from water and place in single layer on clean kitchen towels; discard water in baking dish and dry baking dish.
+    Spread bottom of baking dish evenly with 1 1/2 cups sauce. Using soupspoon, spread 1/4 cup cheese mixture evenly onto bottom three-quarters of each noodle (with short side facing you), leaving top quarter of noodle exposed. Roll into tube shape and arrange in baking dish seam side down. (You should be able to fit 8 manicotti in each row, allowing all 16 to fit in the dish). Top evenly with remaining sauce, making certain that pasta is completely covered.
+    Cover manicotti with aluminum foil. Bake until bubbling, about 40 minutes, then remove foil. Sprinkle manicotti evenly with remaining 1 cup Parmesan. Bake until cheese is browned and bubbly, about 6-7 minutes. Remove from oven and let sit for 15 minutes before serving.
+    The manicotti can be prepared right up until the baking step then covered with a sheet of parchment paper, wrapped in aluminum foil, and refrigerated for up to 3 days or frozen for up to 1 month. (If frozen, thaw the manicotti in the refrigerator for 1 to 2 days.) To bake, remove the parchment, replace the aluminum foil, and increase baking time to 1 to 1 1/4 hours.</instructions>
 	</recipe>
 	<recipe id="12">
 		<title>Mock Chicken and Rice Casserole</title>

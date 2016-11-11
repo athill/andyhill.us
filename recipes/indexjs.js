@@ -58,7 +58,8 @@ $(function() {
 		});
 		//// append to select
 		options[optionType].forEach(function(option) {
-			$filterElems[id].append($('<option>' + option + '</option>'));
+			var display = (option.length > 20) ? option.substring(0, 20) + '...' : option;
+			$filterElems[id].append($('<option value="'+option+'" title="'+option+'">' + display + '</option>'));
 		});
 		
 	}

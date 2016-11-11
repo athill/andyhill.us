@@ -166,7 +166,7 @@ class Html extends Xml {
 		  'icon'=>'',
 		  'compatible'=>'IE=edge,chrome=1',
 		  'viewport'=>'width=device-width',
-		  'charset'=>'uft-8'
+		  'charset'=>'utf-8'
 		);
 		$options = $this->extend($defaults, $options);
 		$this->tag("meta", 'charset="'.$options['charset'].'"');
