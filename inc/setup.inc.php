@@ -49,13 +49,10 @@ $site = array(
 	"cas"=>false,
 	'meta'=>array(
 		  'description' => "Andy Hill's Webpage",
-		  'keywords' => "Andy Hill,Bloomington, IN",
+		  'keywords' => "Andy Hill,Bloomington, IN, IU, indiana university,indiana,andy,hill",
 		  'author' => "Andy Hill",
 		  'copyright' => date('Y'). ', andyhill.us',
-		  'icon'=>'',
-		  'compatible'=>'IE=edge,chrome=1',
-		  'viewport'=>'width=device-width',
-		  'charset'=>'uft-8'
+		  'icon'=>''
 	)	
 );
 if ($site['isTST']) {
