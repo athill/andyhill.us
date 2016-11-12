@@ -202,7 +202,8 @@ Bake for 35 minutes, or until the top is golden brown and bubbly.</instructions>
 			</ingredient>
 			<ingredient>
 				<amount>2</amount>
-				<item>(9 inch) unbaked pie crusts</item>
+				<unit>9 in</unit>
+				<item>unbaked pie crusts</item>
 				<key>(9 inch) unbaked pie crusts</key>
 			</ingredient>
 		</ingredient-list>
@@ -1320,7 +1321,7 @@ Mix pasta with sauce and garnish with parsley and parmesan</instructions>
 			<ingredient>
 				<amount>8</amount>
 				<unit>ounces</unit>
-				<item>thinly sliced roast beef</item>
+				<item>roast beef; thinly sliced</item>
 				<key>thinly sliced roast beef</key>
 			</ingredient>
 			<ingredient>
@@ -1356,12 +1357,13 @@ Mix pasta with sauce and garnish with parsley and parmesan</instructions>
 			<ingredient>
 				<amount>1</amount>
 				<unit>tablespoon</unit>
-				<item>garlic, minced</item>
+				<item>garlic; minced</item>
 				<key>garlic, minced</key>
 			</ingredient>
 			<ingredient>
-				<amount>1</amount>
-				<item>(6 ounce) packages baby bella mushrooms</item>
+				<amount>6</amount>
+				<unit>oz</unit>
+				<item>baby bella mushrooms</item>
 				<key>(6 ounce) packages baby bella mushrooms</key>
 			</ingredient>
 		</ingredient-list>

@@ -9,7 +9,8 @@ $(function() {
 		$recipes = $('#recipes'),
 		$filter = $('#filter'),
 		$recipeListItems = [];
-		$recipeItems = [];
+		$recipeItems = [],
+		maxOptionLength = 15;		//// max length of filter option display value
 	//// set up option types
 	optionTypes.forEach(function(optionType) {
 		options[optionType] = {};
@@ -57,9 +58,20 @@ $(function() {
 			updateFilter();
 		});
 		//// append to select
+		var seenValues = {};	
 		options[optionType].forEach(function(option) {
-			var display = (option.length > 20) ? option.substring(0, 20) + '...' : option;
-			$filterElems[id].append($('<option value="'+option+'" title="'+option+'">' + display + '</option>'));
+			//// remove everything after semi-colon
+			var display = value = option.split(';')[0];
+			//// deal with long values
+			if (display.length > maxOptionLength) {
+				 display = display.substring(0, maxOptionLength) + '...';
+			}
+			//// add value
+			if (!(value.toLowerCase() in seenValues)) {
+				$filterElems[id].append($('<option value="'+value+'" title="'+value+'">' + display + '</option>'));
+				seenValues[value.toLowerCase()] = null;
+			}
+			
 		});
 		
 	}
