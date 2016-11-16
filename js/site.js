@@ -8,9 +8,11 @@ for (var i = 0; i < html5elems.length; i++) {
 if ( ! window.console ) console = { log: function(){} };
 
 $(function() { 	
-	$( '#nav li:has(ul)' ).doubleTapToGo();
+	if (typeof $.doubleTapToGo === "object") {
+		$( '#nav li:has(ul)' ).doubleTapToGo();
+	}
 	////tree menu
-	if (typeof $.treeview == "object") {
+	if (typeof $.treeview === "object") {
 		$("#lsb-menu").treeview({
 			collapsed: true,
 			persist: "cookie"
