@@ -30,10 +30,10 @@
   vertical-align: top;
   display: table-cell; }
 #resume #table .left-col {
-  width: 104px;
+  /* width: 104px; */
   font-weight: bold; }
-#resume #table .right-col {
-  width: 592px; }
+/* #resume #table .right-col {
+  width: 592px; } */
   #resume #table .right-col .title-date {
     clear: both; }
     #resume #table .right-col .title-date .title {
