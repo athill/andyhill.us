@@ -10,6 +10,7 @@ class Resume {
 		$sections = [
 			['title' => 'Objective', 'callbackName' => 'objective'],
 			['title' => 'Education', 'callbackName' => 'education'],
+			['title' => 'Computer Skills', 'callbackName' => 'computerSkills'],
 			// ['title' => '', 'callbackName' => ''],
 		];
 
@@ -54,21 +55,6 @@ class Resume {
 		$h->tnl('To apply and expand my computer skills in a challenging position. Specifically interested in writing code, the web, open source software, and network technologies.');
 	}
 
-	private function educationCategory($title, $entries) {
-		global $h;
-		$h->div($title, ['class' => 'education-category-title']);
-		foreach ($entries as $entry) {
-			$h->odiv(['class' => 'title-date indent1 row']);
-			$h->div($entry['title'], ['class' => 'title col-xs-9']);
-			$h->div($entry['date'], ['class' => 'date col-xs-3']);
-			$h->cdiv('/.title-date');
-		}
-	}
-
-
-    // <div class="row">
-    // <strong>Indiana University</strong>, Bloomington, IN
-    // </div>
 	protected function education() {
 		global $h;
 		$categories = [
@@ -113,4 +99,25 @@ class Resume {
 			$this->educationCategory($category['title'], $category['entries']);
 		}
 	}
+
+	public function computerSkills() {
+		global $h;
+		return $h->tnl('    <ul class="indent0">
+        <li><strong>Languages:</strong> ColdFusion, PHP, Java, Apache Ant, C++, Python, Ruby, C#, Flex, C, Scheme, Perl</li>
+        <li><strong>Web:</strong> HTML5, JavaScript/XHR/jQuery, CSS3/Sass,  Rails, Django, D3.js</li>
+        <li><strong>Data:</strong> Oracle, SQL Server, MySQL, LDAP/ADS, JSON, XML, XPath</li>
+    </ul>');
+	}
+
+	//// helpers
+	private function educationCategory($title, $entries) {
+		global $h;
+		$h->div($title, ['class' => 'education-category-title']);
+		foreach ($entries as $entry) {
+			$h->odiv(['class' => 'title-date indent1 row']);
+			$h->div($entry['title'], ['class' => 'title col-xs-9']);
+			$h->div($entry['date'], ['class' => 'date col-xs-3']);
+			$h->cdiv('/.title-date');
+		}
+	}	
 }
