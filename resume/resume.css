@@ -82,7 +82,7 @@ a, a:visited, a:active {
   color: #990000;
   text-decoration: none; }
 
-@media print, screen {
+@media print {
   #header, #nav, #top-divider, .sidebar, footer, .site-side-padding {
     display: none;
   }
