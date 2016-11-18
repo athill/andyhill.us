@@ -38,14 +38,8 @@ class Resume {
 	    foreach ([$info, $links] as $section) {
 	    	$h->div(implode(' &bull; ', $section), ['class' => 'resume-info']);	
 	    }
-	    // $h->div(implode(' &bull; ', $info), ['class' => 'resume-info']);
-	    // $h->div(implode(' &bull; ', $links), ['class' => 'resume-info']);
-
-	    // $h->div('409 N. Roosevelt Bloomington, IN 47408 &bull; (812)323-1590 &bull; athill@indiana.edu &bull; 
-	    //     <a href="http://andyhill.us">http://andyhill.us</a> &bull; <a href="https://github.com/athill/">https://github.com/athill/</a>', ['class' => 'resume-info']);
-
-	    $h->cdiv('/#header');
-	    $h->cdiv('/#header-wrapper');
+	    $h->cdiv('/.resume-header');
+	    $h->cdiv('/.resume-header-wrapper');
 	}
 
 	protected function section($title, $callbackName) {
