@@ -23,11 +23,26 @@ class Resume {
 
 	public function header() {
 	    global $h;
-	    $h->odiv(['class'=>'row header-wrapper']);
-	    $h->odiv(['id' => 'header', 'class'=>'col-xs-12']);
-	    $h->div('Andrew T.Hill', ['id' => 'name']);
-	    $h->div('409 N. Roosevelt Bloomington, IN 47408 &bull; (812)323-1590 &bull; athill@indiana.edu &bull; 
-	        <a href="http://andyhill.us">http://andyhill.us</a> &bull; <a href="https://github.com/athill/">https://github.com/athill/</a>', ['id' => 'info']);
+	    $h->odiv(['class'=>'row resume-header-wrapper']);
+	    $h->odiv(['class' => 'resume-header', 'class'=>'col-xs-12']);
+	    $h->div('Andrew T.Hill', ['class' => 'resume-name']);
+	    $info = [
+	    	'409 N. Roosevelt Bloomington, IN 47408',
+	    	'(812)323-1590',
+	    	$h->rtn('email', ['athill@iu.edu'])
+	    ];
+	    $links = [
+	    	$h->rtn('a', ['http://andyhill.us']),
+	    	$h->rtn('a', ['https://github.com/athill/']),
+	    ];
+	    foreach ([$info, $links] as $section) {
+	    	$h->div(implode(' &bull; ', $section), ['class' => 'resume-info']);	
+	    }
+	    // $h->div(implode(' &bull; ', $info), ['class' => 'resume-info']);
+	    // $h->div(implode(' &bull; ', $links), ['class' => 'resume-info']);
+
+	    // $h->div('409 N. Roosevelt Bloomington, IN 47408 &bull; (812)323-1590 &bull; athill@indiana.edu &bull; 
+	    //     <a href="http://andyhill.us">http://andyhill.us</a> &bull; <a href="https://github.com/athill/">https://github.com/athill/</a>', ['class' => 'resume-info']);
 
 	    $h->cdiv('/#header');
 	    $h->cdiv('/#header-wrapper');
