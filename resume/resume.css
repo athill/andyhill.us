@@ -8,16 +8,16 @@
   #resume * {
     font-size: 10pt;
     font-family: Verdana, Geneva, sans-serif; }
-  #resume #header-wrapper {
+  #resume .header-wrapper {
     margin: 0 auto;
     padding-bottom: 1em;
     width: 650px; }
-    #resume #header-wrapper #header {
+    #resume .header-wrapper #header {
       text-align: center; }
-      #resume #header-wrapper #header #name {
+      #resume .header-wrapper #header #name {
         font-size: 20pt;
         text-align: left; }
-      #resume #header-wrapper #header #info {
+      #resume .header-wrapper #header #info {
         text-align: center;
         font-size: 8pt;
         font-weight: bold;
@@ -26,17 +26,17 @@
 /*************************************
  * "Table" layout
  ************************************/
-#resume #table .left-col, #resume #table .right-col {
+/* #resume #table .left-col, #resume #table .right-col {
   vertical-align: top;
   display: table-cell; }
 #resume #table .left-col {
-  /* width: 104px; */
+  width: 104px;
   font-weight: bold; }
-/* #resume #table .right-col {
-  width: 592px; } */
-  #resume #table .right-col .title-date {
-    clear: both; }
-    #resume #table .right-col .title-date .title {
+#resume #table .right-col {
+  width: 592px; }
+   #resume .title-date {
+    clear: both; } 
+    #resume .title-date .title {
       float: left;
       font-style: italic; }
     #resume #table .right-col .title-date .date {
@@ -47,7 +47,26 @@
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0; } */
+
+#resume .left-col {
+  font-weight: bold;
+  padding-right: 0;
+}
+
+#resume .right-col {
+  padding-left: 0;
+}
+
+#resume .title-date .title {
+  padding-left: 0;
+  font-style: italic;
+}
+
+#resume .title-date .date {
+  text-align: right;
+}
+
 
 /***********************************
  * Indenting

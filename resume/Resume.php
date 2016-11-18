@@ -9,7 +9,7 @@ class Resume {
 		$this->header();
 		$sections = [
 			['title' => 'Objective', 'callbackName' => 'objective'],
-			// ['title' => 'Education', 'callbackName' => 'education'],
+			['title' => 'Education', 'callbackName' => 'education'],
 			// ['title' => '', 'callbackName' => ''],
 		];
 
@@ -22,7 +22,7 @@ class Resume {
 
 	public function header() {
 	    global $h;
-	    $h->odiv(['id' => 'header-wrapper', 'class'=>'row']);
+	    $h->odiv(['class'=>'row header-wrapper']);
 	    $h->odiv(['id' => 'header', 'class'=>'col-xs-12']);
 	    $h->div('Andrew T.Hill', ['id' => 'name']);
 	    $h->div('409 N. Roosevelt Bloomington, IN 47408 &bull; (812)323-1590 &bull; athill@indiana.edu &bull; 
@@ -37,7 +37,7 @@ class Resume {
 		$h->odiv(['class' => 'row']);
 		$h->div($title, ['class' => 'left-col col-md-2']);
 
-		$h->div($this->callback($callbackName), ['class' => 'left-col col-md-10']);
+		$h->div($this->callback($callbackName), ['class' => 'right-col col-md-10']);
 		$h->cdiv('/.row');
 	}
 
@@ -54,67 +54,63 @@ class Resume {
 		$h->tnl('To apply and expand my computer skills in a challenging position. Specifically interested in writing code, the web, open source software, and network technologies.');
 	}
 
-	protected function education() {
-		return;
+	private function educationCategory($title, $entries) {
 		global $h;
-		$h->tnl('<strong>Coursera</strong>, <a href="https://www.coursera.org/" target="_blank">https://www.coursera.org/</a>
-    </div>
-    <div class="title-date indent1">
-        <div class="title">
-        Linear Algebra through C.S. Applications
-        <a href="http://andyhill.us/resume/matrix_cert.pdf" target="_blank">With Distinction</a>
-        </div>
-        <div class="date">
-        September 2013
-        </div>
-    </div>    
-    <div class="title-date indent1">
-        <div class="title">
-        Software Engineering for Software as a Service (Part I) 
-        <a href="http://andyhill.us/resume/saas_cert.pdf" target="_blank">1917.3/2126</a>
-        </div>
-        <div class="date">
-        March 2012
-        </div>
-    </div>
-    <div class="clear">
-    <div class="row">
-    <strong>Indiana University</strong>, Bloomington, IN
-    </div>
-    <div class="title-date indent1">
-        <div class="title">
-        Graduate course: Computer Networks 4.0/4.0
-        </div>
-        <div class="date">
-        December 2007
-        </div>
-    </div>
-    <div class="title-date indent1">
-        <div class="title">
-        Unix Systems Support Group Unix Certification
-        </div>
-        <div class="date">
-        August 2003
-        </div>
-    </div>
-    <div class="title-date indent1">
-        <div class="title">
-        Bachelor of Science in Computer Science GPA since returning: 3.5/4.0 
-        </div>
-        <div class="date">
-        May 2003
-        </div>
-    </div>
-    <div class="title-date indent1">
-        <div class="title">
-        Completed coursework in Anthropology GPA 3.2/4.0
-        </div>
-        <div class="date">
-        1989-1992
-        </div>
-    </div>
-	<div class="content indent1">
-    <div class="indent-after-first-line">
-    <strong>Relevant Coursework:</strong> Software Engineering, Programming Languages, Databases, Data Structures, Operating Systems, Compilers, Networking, Graphics.');
+		$h->div($title, ['class' => 'education-category-title']);
+		foreach ($entries as $entry) {
+			$h->odiv(['class' => 'title-date indent1 row']);
+			$h->div($entry['title'], ['class' => 'title col-xs-9']);
+			$h->div($entry['date'], ['class' => 'date col-xs-3']);
+			$h->cdiv('/.title-date');
+		}
+	}
+
+
+    // <div class="row">
+    // <strong>Indiana University</strong>, Bloomington, IN
+    // </div>
+	protected function education() {
+		global $h;
+		$categories = [
+			[
+				'title' => '<strong>Coursera</strong>, <a href="https://www.coursera.org/" target="_blank">https://www.coursera.org/</a>',
+				'entries' => [
+					[
+						'title' => 'Linear Algebra through C.S. Applications <a href="http://andyhill.us/resume/matrix_cert.pdf" target="_blank">With Distinction</a>',
+						'date' => 'September 2013'
+					],
+					[
+						'title' => 'Software Engineering for Software as a Service (Part I) 
+       						 <a href="http://andyhill.us/resume/saas_cert.pdf" target="_blank">1917.3/2126</a>',
+						'date' => 'March 2012'
+					],
+				]
+			],
+			[
+				'title' => '<strong>Indiana University</strong>, Bloomington, IN',
+				'entries' => [
+					[
+						'title' => 'Graduate course: Computer Networks 4.0/4.0',
+						'date' => 'December 2007'
+					],
+					[
+						'title' => 'Unix Systems Support Group Unix Certification',
+						'date' => 'August 2003'
+					],
+					[
+						'title' => 'Bachelor of Science in Computer Science GPA since returning: 3.5/4.0',
+						'date' => 'May 2003'
+					],
+					[
+						'title' => 'Completed coursework in Anthropology GPA 3.2/4.0',
+						'date' => '1989-1992'
+					],
+				]
+			],	
+		];
+
+		foreach ($categories as $category) {
+			$this->educationCategory($category['title'], $category['entries']);
+		}
 	}
 }
