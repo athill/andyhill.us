@@ -7,18 +7,25 @@
 	border: thin dotted white;
 	padding: 0.5em;
 	margin: 0.5em;
-	float: left;
+	// float: left;
+	display: inline-block;
+	vertical-align: top;
 	text-align: center;
 	background: #AAA;
 	width: 290px;
-	min-height: 290px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:  10px;
+	border-radius:  10px;	
 }
 
 .portfolio-entry a {
 	color: black;
 }
 
-.portfolio-entry a:hover {
+.portfolio-entry .link:hover {
+	-moz-border-radius: 10px;
+	-webkit-border-radius:  10px;
+	border-radius:  10px;	
 	text-decoration: none;
 	background: gray;
 }
