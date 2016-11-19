@@ -2,11 +2,30 @@
 #galleria {
 	margin: 0 auto;
 	width: 500px;	
+	height: 400px;
 }
+
+@media only screen and ( max-width: 31.25em ) /* 5000 */ {
+	#galleria {	
+		width: 400px;
+		height: 320px;
+	}
+	#galleria-sidebar {
+		min-height: 1em !important;
+	}
+}
+
+@media only screen and ( max-width: 20em ) {
+	#galleria {	
+		width: 250px;
+		height: 200px;
+	}
+}
+
 
 #galleria-sidebar {
 	padding: 1em;
-	min-height: 300px;
+	min-height: 3em;
 }
 
 #galleria-title {

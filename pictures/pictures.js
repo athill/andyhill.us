@@ -1,24 +1,14 @@
 Galleria.ready(function(options) {
-
-    // this = the gallery instance
-    // options = the gallery options
-
     this.bind('image', function(e) {
-		var data = this.getData(e.index);
-       // Galleria.log(data) // the image index
-		$("#galleria-title").html(data.title);
-		$("#galleria-descr").html(data.description);
+       Galleria.log(e.galleriaData.original.title);
+		$("#galleria-title").html(e.galleriaData.original.title);
+		$("#galleria-descr").html(e.galleriaData.original.alt);
     });
 });
 
-
-
 $(function() {
-	$("#galleria").galleria({
-		height: 400,
-		width: 500,
-//		transition: "fadeslide",
-//		imageCrop: true,
-		showInfo: false
-	});
+	  Galleria.loadTheme(webroot + '/js/galleria/themes/classic/galleria.classic.min.js');
+	  Galleria.run('#galleria', {
+	  	responsive: true
+	  });
 });

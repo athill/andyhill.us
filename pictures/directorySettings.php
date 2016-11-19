@@ -11,6 +11,6 @@ $h->div(' ', 'id="galleria-title"');
 $h->div(' ', 'id="galleria-descr"');
 $h->cdiv();
 $rsb = $h->endBuffer();
-$local['rightSideBar'] = $rsb;
+$directory['rightSideBar'] = $rsb;
 
 ?>

@@ -143,8 +143,8 @@ class Template {
 	}
 
 	public function rightSideBar() {
-		global $h;
-		$h->odiv('id="column3"');
+		global $h, $site;
+		$h->odiv('id="column3" class="sidebar col-md-2"');
 		$h->tnl($site['rightSideBar']);
 		$h->cdiv('/right sidebar'); //close column 3
 	}

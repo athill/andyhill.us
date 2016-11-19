@@ -1,16 +1,18 @@
 /**
- * @preserve Galleria Picasa Plugin 2011-08-01
- * http://galleria.aino.se
+ * Galleria Picasa Plugin 2016-09-03
+ * http://galleria.io
  *
- * Copyright 2011, Aino
- * Licensed under the MIT license.
+ * Copyright (c) 2010 - 2016 worse is better UG
+ * Licensed under the MIT license
+ * https://raw.github.com/worseisbetter/galleria/master/LICENSE
+ *
  */
+
+(function($) {
 
 /*global jQuery, Galleria, window */
 
 Galleria.requires(1.25, 'The Picasa Plugin requires Galleria version 1.2.5 or later.');
-
-(function($) {
 
 // The script path
 var PATH = Galleria.utils.getScriptPath();
@@ -22,7 +24,7 @@ var PATH = Galleria.utils.getScriptPath();
 
     @example var picasa = new Galleria.Picasa();
 
-    @author http://aino.se
+    @author http://wib.io
 
     @requires jQuery
     @requires Galleria
@@ -36,7 +38,6 @@ Galleria.Picasa = function() {
         max: 30,                       // photos to return
         imageSize: 'medium',           // photo size ( thumb,small,medium,big,original ) or a number
         thumbSize: 'thumb',            // thumbnail size ( thumb,small,medium,big,original ) or a number
-        description: false,            // set this to true to get description as caption
         complete: function(){}         // callback to be called inside the Galleria.prototype.load
     };
 
@@ -218,8 +219,7 @@ Galleria.Picasa.prototype = {
                 thumb: img[0].url,
                 image: img[1].url,
                 big: img[2].url,
-                title: this.title.$t,
-                description: self.options.description ? this.summary.$t : ''
+                title: this.summary.$t
             });
         });
 
