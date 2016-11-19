@@ -1,10 +1,7 @@
 <menu>
 	<links href="/" display="Home">
 	</links>
-	<links href="/resume/" display="Resume">
-		<link href="print.php" display="Print" target="_blank"/>
-		<link href="resume.pdf" display="Download" target="_blank"/>
-	</links>
+	<link href="/resume/" display="Resume" />
 	<link href="/portfolio/" display="Portfolio" />	
 	<link href="/news/" display="News"/>
 

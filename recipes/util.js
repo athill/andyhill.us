@@ -6,7 +6,17 @@ var recipeMetaMap = [
 		{ header: 'Servings', key: 'servings' },
 		{ header: 'Cook Time', key: 'cooktime' }
 	],
-	ingredientItems = ['amount','unit','item'];
+	ingredientItems = ['amount','unit','item']
+	unitReplacements = [
+		[/^teaspoons?$/i, 'tsp.'],
+		[/^tablespoons?$/i, 'Tbs.']
+	],
+	ingredientItemWidthMap = {
+			item: '8',
+			unit: '2',
+			amount: '2'
+	};
+
 
 function getRecipeName(recipe) {
 	return recipe.title.replace(/[^a-zA-Z0-9]/g, '');
@@ -27,11 +37,13 @@ function getRecipeDom(recipe, name, isScreenDisplay) {
 	}
 	var $structure = $('\
 		<div id="recipe-'+recipe.id+'" class="recipe"> \
-			<h4 id="'+name+'"><span class="'+recipeTitleClass+'">'+recipe.title+'</span></h4> \
+			<h4 id="'+name+'" class="'+recipeTitleClass+'">'+recipe.title+'</h4> \
 			<div class="'+recipeMainClass+'"> \
 				<dl class="recipe-meta dl-horizontal"></dl> \
 				<h5>Ingredients:</h5> \
-				<div class="container-fluid recipe-ingredients"><div class="row"><div class="col-md-6"></div></div></div> \
+				<div class="container-fluid recipe-ingredients"> \
+					<div class="row"><div class="col-md-6 .col-sm-12"></div></div> \
+				</div> \
 				<h5>Instructions:</h5> \
 				<p>'+recipe.instructions.join('<br />')+'</p> \
 			</div> \
@@ -45,13 +57,13 @@ function getRecipeDom(recipe, name, isScreenDisplay) {
 
 	recipe.ingredients.forEach(function(ingredient) {
 		var $tr = $('<div class="row" />');
-		var widthMap = {
-			item: '9',
-			unit: '2',
-			amount: '1'
-		}
 		ingredientItems.forEach(function(item) {
-			$tr.append('<div class="col-md-'+widthMap[item]+'">'+ingredient[item]+'</div>');
+			if (item === 'unit') {
+				unitReplacements.forEach(function(replacement) {
+					ingredient[item] = ingredient[item].replace(replacement[0], replacement[1]);
+				});
+			}
+			$tr.append('<div class="col-xs-'+ingredientItemWidthMap[item]+'">'+ingredient[item]+'</div>');
 		});
 		$('.recipe-ingredients .col-md-6' , $structure).append($tr);
 	});

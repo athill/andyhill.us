@@ -6,28 +6,16 @@
 	padding-bottom: 1em;
 }
 
-#filter {
-	margin-left: 2.75em;
-}
-
-div.recipe {
+.recipe {
 	padding-bottom: 2em;
 }
 
 
-div.recipe td, div.recipe th {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-div.recipe h2, div.recipe h3 {
+.recipe h2, .recipe h3  {
 	margin: 0;
 	padding: 0;
 }
 
-div#menu a {
-	padding: .3em;
-}
 
 #recipe-list {
 	padding-bottom: 2em;
@@ -38,6 +26,10 @@ div#menu a {
 }
 
 .recipe-title {
+	font-size: 1.1em;
+	margin: 0;
+	width: 80%; 
+	font-weight: bold;
 	border-top-left-radius: 1em;	
 	border-top-right-radius: 1em;	
 	padding: 0.5em;
@@ -50,6 +42,11 @@ div#menu a {
 }
 
 @media (min-width: 768px) {
+  .recipe-title {
+  	width: 33.33%; 
+  	font-size: 1.5em;
+  }
+
   .dl-horizontal dt {
     float: left;
     width: 80px;

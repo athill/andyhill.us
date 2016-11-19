@@ -47,6 +47,10 @@ $h->p('I use the excellent <a href="http://thinkle.github.io/gourmet/" target="_
 ////render form
 $h->oform("", 'get', ['class' => 'form-inline', 'id' => 'filter-form']);
 $h->ofieldset("Filter");
+$h->odiv(['class' => 'form-group']);
+$h->label('filter', '<strong>Text: </strong>');
+$h->intext('filter', '', ['class' => 'form-control', 'size' => '10']);
+$h->cdiv('./form-group');
 $filters = ['category', 'cuisine', 'ingredient'];
 foreach ($filters as $filter) {
 	$h->odiv('class="form-group"');
@@ -55,10 +59,7 @@ foreach ($filters as $filter) {
 	$h->cdiv(); //// .form-group
 
 }
-$h->odiv(['class' => 'form-group']);
-$h->label('filter', '<strong>Text: </strong>');
-$h->intext('filter', '', ['class' => 'form-control']);
-$h->cdiv('./form-group');
+
 $h->cfieldset();
 $h->cform();
 

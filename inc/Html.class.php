@@ -55,7 +55,7 @@ class Html extends Xml {
 		$emptyTags = explode(',', "area,base,br,col,hr,img,input,keygen,link,meta,param,source,track");
 		$nonemptyTags = explode(',', "a,abbr,address,article,aside,audio,b,bdi,bdo,blockquote,body,canvas,caption,cite,code,colgroup," .
 			"command,datalist,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6," .
-			"head,header,hgroup,html,i,iframe,ins,kbd,label,legend,li,map,mark,menu,meter,nav,noscript,object,ol,optgroup,option," .
+			"head,header,hgroup,html,i,iframe,ins,kbd,label,legend,li,main,map,mark,menu,meter,nav,noscript,object,ol,optgroup,option," .
 			"output,p,pre,progress,q,rp,rt,ruby,s,samp,script,section,select,span,strong,style,sub,summary,sup,table,tbody," .
 			"td,textarea,tfoot,th,thead,time,title,tr,u,ul,var,video,wbr");
 		$indentTags = explode(',', "datalist,div,dl,fieldset,footer,header,nav,ol,section,select,tr,ul");
@@ -166,7 +166,7 @@ class Html extends Xml {
 		  'icon'=>'',
 		  'compatible'=>'IE=edge,chrome=1',
 		  'viewport'=>'width=device-width',
-		  'charset'=>'uft-8'
+		  'charset'=>'utf-8'
 		);
 		$options = $this->extend($defaults, $options);
 		$this->tag("meta", 'charset="'.$options['charset'].'"');
