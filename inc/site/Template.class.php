@@ -71,12 +71,12 @@ class Template {
 			$contentWidth -= $this->sidebarWidth;
 		}
 		$h->odiv('id="content-wrapper" class="col-md-'.$contentWidth.'"');
-		$h->odiv('id="content"');
+		$h->omain('id="content"');
 	}
 
 	function closeLayout() {
 		global $h, $site;		
-		$h->cdiv('/#content');	////close content
+		$h->cmain('/#content');	////close content
 		$h->cdiv('/#content-wrapper');	//close content-wrapper
 		if ($site['rightSideBar'] != "none") {
 			$this->rightSideBar();

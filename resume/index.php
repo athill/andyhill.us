@@ -1,26 +1,13 @@
 <?php 
 require_once("../inc/setup.inc.php");
-$script = $_SERVER['SCRIPT_NAME'];
-$basename = basename($script);
-$isPrint = $basename == "print.php";
-$hasTemplate = !($basename == "word.php");
-$hasHeader = $isPrint || $hasTemplate;
+$page = new Page([
+	'stylesheets' => ['resume.css']
+]);
 
-if ($isPrint) {
-	$local['template'] = "Basic";
-}
-if ($hasHeader) { 
-	$page = new Page(array(
-		'jsModules'=>array('treemenu'=>true),
-		'leftSideBar'=>array('type' =>'menu', 'args' => array()),
-		'stylesheets'=>array('resume.css')
-	));
-} else { 
-	echo '<link rel="stylesheet" type="text/css" href="/resume/resume.css" />';
-} 
-include_once("resume.inc.php");
+$h->p('If you print this page, it will only print the resume. Alternatively, you can <a href="resume.pdf" target="_blank">download a PDF</a>.', ['class' => 'screen-only']);
 
-if ($hasHeader) { 
-	$page->end();	
-} 
-?>
+require_once('Resume.php');
+$resume = new Resume;
+$resume->render();
+
+$page->end();

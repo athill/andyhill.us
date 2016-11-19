@@ -22,7 +22,7 @@ class TemplateInstance {
 		////Main container
 	  	$h->odiv(['class' => 'container']);
 	  	$h->odiv(['class' => 'row']);
-	  	$h->div('', ['class' => 'col-md-1 hidden-sm']);
+	  	$h->div('', ['class' => 'col-md-1 hidden-sm site-side-padding']);
 		$h->odiv(['id' => 'page', 'class' => 'col-md-10 col-sm-12']);
 		$this->displayHeader();
 		////Site structure
@@ -133,7 +133,7 @@ class TemplateInstance {
 		$h->tnl('&copy; andyhill.us ' . date('Y'));
 		$h->ctag('footer');
 		$h->cdiv('./page');	////close page
-		$h->div('', ['class' => 'col-md-1 hidden-sm']);
+		$h->div('', ['class' => 'col-md-1 hidden-sm site-side-padding']);
 		$h->cdiv('./row');
 		$h->cdiv('./container');
 		$h->chtml();
