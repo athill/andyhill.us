@@ -53,7 +53,7 @@ class Html extends Xml {
 
 	function __call($name, $args) {
 		$emptyTags = explode(',', "area,base,br,col,hr,img,input,keygen,link,meta,param,source,track");
-		$nonemptyTags = explode(',', "a,abbr,address,article,aside,audio,b,bdi,bdo,blockquote,body,canvas,caption,cite,code,colgroup," .
+		$nonemptyTags = explode(',', "a,abbr,address,article,aside,audio,b,bdi,bdo,blockquote,body,button,canvas,caption,cite,code,colgroup," .
 			"command,datalist,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6," .
 			"head,header,hgroup,html,i,iframe,ins,kbd,label,legend,li,main,map,mark,menu,meter,nav,noscript,object,ol,optgroup,option," .
 			"output,p,pre,progress,q,rp,rt,ruby,s,samp,script,section,select,span,strong,style,sub,summary,sup,table,tbody," .
@@ -68,7 +68,7 @@ class Html extends Xml {
 			$atts = count($args) > 0 ? $args[0] : '';
 			$this->tag($name, $atts);
 		////input tag
-		} else if (in_array($name, explode(',', "radio,checkbox,hidden,submit,button,reset,number,month,intext,date,color,datetime,".
+		} else if (in_array($name, explode(',', "radio,checkbox,hidden,submit,reset,number,month,intext,inbutton,date,color,datetime,".
 				"inemail,range,search,tel,time,url,week"))) {
 			$fieldname = $args[0];
 			$value = count($args) >= 2 ? $args[1] : '';
@@ -1105,6 +1105,21 @@ class Html extends Xml {
 		}
 		$this->cdiv();
 	}
+	
+	public function icon($name, $atts=[]) {
+		$classes = 'fa fa-'.$name;
+		$atts['class'] = isset($atts['class']) ? $classes.' '.$atts['class'] : $classes;
+		$atts['aria-hidden'] = 'true';
+		if (isset($atts['buttonAtts'])) {
+			$this->obutton($atts['buttonAtts']);
+		}
+		$this->i('', $atts);
+		if (isset($atts['buttonAtts'])) {
+			$this->cbutton();
+		}		
+	}
+
+
 	/***** 
 	 * HTML Templates
 	 ******/

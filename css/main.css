@@ -62,17 +62,9 @@ a:hover {
 }
 
 /************ Path, search */
-#top-divider {
-	position: relative;
- 	overflow: auto;
+ #top-divider {
 	background: #999;
-	padding: 2px;
-	clear: both;
-}
-
-#breadcrumb {
-	float: left;
-	height: 100%;
+	margin: 0;
 }
 
 #breadcrumb ul {
@@ -90,8 +82,11 @@ a:hover {
 }
 
 #search {
-	float: right;
-	height: 100%;
+	text-align: right;
+} 
+
+#search-toggle {
+	text-align: right;
 }
 
 /**********************

@@ -22,4 +22,8 @@ $(function() {
 	$('#geek-out-button').click(function() {
 		$('#geek-out-content').toggleClass("hide");
 	});
+
+	$('#search-toggle').click(function(e) {
+		$('#search').toggleClass('hidden-xs');
+	});
 });
