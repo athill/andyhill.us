@@ -32,7 +32,7 @@ class TemplateInstance {
 	private function displayHeader() {
 		global $h;
 		////header container
-		$h->otag('header', 'id="header"');
+		$h->oheader('id="header"');
 		$h->odiv(['id' => 'img-container']);
 		////Images across the top
 		$images = array('house.jpg',
@@ -44,35 +44,31 @@ class TemplateInstance {
 			$h->img("/images/header/" . $images[$i], "", ['id' => 'header-img'.$i, 
 				 'class' => 'header-img hidden-xs']);
 		}
-		$h->cdiv(); ////close img-container
+		$h->cdiv('/#img-container');
 		////Header title
 		$pageTitle = "andyhill.us";
-		// $h->div($pageTitle, 'id="page-title-drop" class="page-title-base"');
 		$h->div($pageTitle, 'id="page-title" class="page-title-base"');
-		$h->ctag('header');		////close header
+		$h->cheader('/#header');
 		////Global Navigation
-		// $h->otag('nav', 'id="global-nav"')
-		$h->otag('nav', 'id="nav" role="navigation"');
-		//$h->tnl("Global Nav");
+		$h->onav('id="nav" role="navigation"');
 		$this->renderGlobalNav();
-		$h->ctag('nav');
-
+		$h->cnav('/#nav');
 		////Gray bar
-		$h->odiv('id="top-divider"');
-				
+		$h->odiv(['id' => 'top-divider', 'class' => 'row']);
 		//////Do path
-		$h->otag('nav', 'id="path"');
-//		$h->tnl("Path");
+		$h->onav(['id' => 'path', 'class' => 'col-sm-6 col-xs-10']);
 		$this->breadcrumbs();
-		$h->ctag('nav');
-		////Search
-		$h->odiv('id="search"');
+		$h->cnav();
+		
+		$h->odiv(['class' => 'visible-xs-block col-xs-2']);
+
+		$h->icon('search', ['class' => 'fa-lg', 'buttonAtts' => ['id' => 'search-toggle', 'class' => 'btn btn-default']]);
+		$h->cdiv();////Search
+		$h->odiv(['id' => 'search', 'class' => 'col-sm-6 col-xs-12 hidden-xs']);
 		$this->displaySearch();
 		$h->cdiv();
 
-		$h->cdiv(); ////close top-divider div
-		
-		$h->div("", 'style="clear: both"');
+		$h->cdiv('/.#top-divider'); 
 	}
 
 	function renderGlobalNav() {
@@ -96,12 +92,20 @@ class TemplateInstance {
 	
 	private function displaySearch() {
 		global $h, $webroot, $site;				
-		$h->oform("http://google.com/search", "get");
+		$h->oform("http://google.com/search", "get", ['class' => 'form-inline']);
 		$sitesearch = 'andyhill.us'.$webroot;
-		$h->tnl("Search ");
+		// $h->tnl("Search ");
 		$h->hidden("sitesearch", $sitesearch);
-		$h->input("text", "q", "", 'size="10" maxlength="255"');
-		$h->tnl("by Google");
+		$label = 'Search by Google';
+		$h->label('q', $label, ['class' => 'sr-only']);
+		$h->input("text", "q", "", [
+			'size' => '15', 
+			'maxlength' => '255', 
+			'placeholder' => $label,
+			'class' => 'form-control input-sm'
+		]);
+		$h->button('Search', ['class' => 'btn btn-default btn-xs', 'type' => 'submit']);
+		// $h->tnl("by Google");
 		$h->cform();
 	}
 	

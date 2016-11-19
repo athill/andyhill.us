@@ -43,7 +43,7 @@ $site = array(
 	"scripts" => array(),
 	"stylesheets" => [],
 	'jsModules' => array(
-		'popup'=>true, 'bootstrap'=>true
+		'popup'=>true, 'bootstrap'=>true, 'font-awesome'=>true
 	),
 	"useImageHeader" => false,
 	"cas"=>false,
