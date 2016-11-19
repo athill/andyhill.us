@@ -115,16 +115,16 @@ class Resume {
 		global $h;
 		$skillsets = [
 			['title' => 'Languages', 
-				'items' => ['ColdFusion', 'PHP', 'Java', 'Apache Ant', 'C++', 'Python', 'Ruby', 'C#', 'Flex', 'C', 'Scheme', 'Perl']
+				'items' => ['Java', 'JavaScript', 'ColdFusion', 'PHP', 'Apache Ant', 'C/C++', 'Bash', 'Python', 'Ruby', 'C#', 'Scheme', 'Perl']
 			],
 			['title' => 'Web',
-				'items' => ['HTML5', 'JavaScript/XHR/jQuery', 'CSS3/Sass', ' Rails', 'Django', 'D3.js']
+				'items' => ['Spring Boot', 'Laravel', 'React', 'Redux', 'Webpack', 'HTML5', 'jQuery', 'CSS3/Sass', 'D3.js']
 			],
 			['title' => 'Data',
-				'items' => ['Oracle', 'SQL Server', 'MySQL', 'LDAP/ADS', 'JSON', 'XML', 'XPath']
+				'items' => ['Elasticsearch', 'MongoDB', 'Oracle', 'MySQL', 'SQL Server', 'LDAP/ADS', 'JSON', 'XML', 'XPath']
 			]
 		];
-		$h->oul(['class' => 'indent0']);
+		$h->oul(['class' => 'skillsets indent0']);
 		foreach ($skillsets as $skillset) {
 			$h->li('<strong>'.$skillset['title'].':</strong> '.implode(', ', $skillset['items']));
 		}
@@ -136,41 +136,32 @@ class Resume {
 		$h->odiv(['class' => 'work-experience']);
 		$jobs = [
 			[
+				'department' => 'Enterprise Systems Integration Middleware',
+				'title' => 'Senior Programmer/Systems Analyst',
+				'dates' => '2014-Present',
+				'content' => 'As a member of a small team, maintain Kuali Rice implementation including updatating document search to use an Elasticsearch back end and build and maintain other sites which use Spring Boot, React, and Redux. We strive for continuos integration (Bamboo), practice scrum, and believe in testing, linting, peer-review and other best practices. We also maintain various services for other enterprise services, including a Nexus repository for Java and NPM artifacts, an integrated deployment process, and Elasticsearch as a service.'
+			],		
+			[
 				'department' => 'University Student Services and Systems',
 				'title' => 'Senior Programmer/Systems Analyst',
-				'dates' => '2005-Present',
-				'content' => '    <ul class="clear">
-			        <li>Maintain three web sites in ColdFusion/IIS/Sql Server-Oracle and one in PHP/Apache/MySQL-Oracle environments, as well as several SharePoint Master Pages</li>
-			        <li>Built templating infrastructure in both ColdFusion and PHP to maintain aesthetic consistency while 
-			        allowing granular flexibility. Includes a features manager to include appropriate JavaScript and CSS files when various jQuery plugins and other bundled client side scripts and styles are required.</li>
-			        <li>Built extensive toolsets in both ColdFusion and PHP to normalize API interaction, group common tasks, and provide pre-event control such as sending email to the authenticated user rather than the original recipients in test environments. Toolkits include sending email, ADS/LDAP and database interactions, creating and reading 
-			        .CSV files, and HTML utilities.</li>
-			        <li>Led project creating web form infrastructure which centralizes settings for rendering, updating, securing, and validating (both client and server side) web forms while offering flexibility in form layout and database updates.</li>
-			    </ul>'
+				'dates' => '2005-2014',
+				'content' => 'Maintained three extensive web sites in ColdFusion and PHP with Oracle, SQL Server, and MySQL back ends using jQuery and AJAX technologies. Build frameworks in both ColdFusion and PHP based on convention over configuration principles, allowing overrides at directory or page level, including a system to easily include jQuery plugins where needed. The frameworks have toolsets to ease sending emails, interacting with database and LDAP data stores, generating HTML, rendering and processing forms, and other common tasks. Initiated using version control (Git).'
 			],
 			[
 				'department' => 'Center for Survey Research',
 				'title' => 'Web Programmer',
 				'dates' => '2004-2005',
 				'content' => 'Implemented surveys on the web using ColdFusion/SQL Server, 	created interfaces for survey sponsors to view and interact 
-				        with acquired data, and maintained external and internal web sites including internal survey tracking. 
-				        <ul>
-				        <li>Modularized survey programming to improve consistency of display and function, simplified and streamlined 
-				        rendering and handling of survey questions.</li>
-				        <li>Implemented a primitive, but functional, time-keeping system</li>
-				    </ul>'
+				        with acquired data, and maintained external and internal web sites including internal survey tracking. Modularized survey programming to improve consistency of display and function, simplified and streamlined 
+				        rendering and handling of survey questions. Implemented a primitive, but functional, time-keeping system.'
 			],
 			[
 				'department' => 'University Information Technology Services',
-				'title' => 'Computer Lab Monitor, Phone/Walk-in Support',
+				'title' => 'Computer Lab Monitor, Help Desk',
 				'dates' => '2000-2004',
-				'content' => 'Started as a computer lab consultant, was promoted to Support Staff position in May of 2002, which entailed supervising 140 consultants, updating internal web pages, acting as go-between to 
-				    UITS higher-ups, and helping with difficult customer issues.
-				    <ul>
-				        <li>Improved user-interface and efficiency of online FAQ (Perl).</li>
-				        <li>Created online interface to communicate lab supply needs between support staff members (Perl).</li>
-				    </ul>    
-				    As Support Center Consultant(2003), Assisted walk-in and telephone customers with computer related problems including networking, hardware, authentication, and security issues. Continued in Support Staff Position.'
+				'content' => 'Started as a computer lab consultant, was promoted to Support Staff position in May of 2002, which entailed supervising 140 consultants, acting as go-between to 
+				    UITS higher-ups, and helping with difficult customer issues. Also contributed functionality to internal website using Perl.
+				    As a Support Center Consultant (2003), Assisted walk-in and telephone customers with computer related problems including networking, hardware, authentication, and security issues. Continued in Support Staff Position.'
 			],
 
 			// [

@@ -50,6 +50,10 @@
   text-align: right;
 }
 
+#resume .skillsets {
+  list-style: none;
+}
+
 
 /***********************************
  * Indenting
@@ -64,15 +68,15 @@
 
 .indent1 {
   padding-left: 0;
-  margin-left: 1em; }
+  margin-left: 0.5em; }
 
 .indent2 {
   padding-left: 0;
-  margin-left: 2em; }
+  margin-left: 1em; }
 
 .indent3 {
   padding-left: 0;
-  margin-left: 3em; }
+  margin-left: 1.5em; }
 
 /***************************
  * Link styles for when template
@@ -83,7 +87,7 @@ a, a:visited, a:active {
   text-decoration: none; }
 
 @media print {
-  #header, #nav, #top-divider, .sidebar, footer, .site-side-padding {
+  #header, #nav, #top-divider, .sidebar, footer, .site-side-padding, .screen-only {
     display: none;
   }
   #page, #content-wrapper, #content, .container {
