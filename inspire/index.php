@@ -6,7 +6,8 @@ $includeroot = str_replace("/dev", "", $root);
 $page = new Page(array(
 	'jsModules'=>array('treemenu'=>true),
 	'leftSideBar'=>array('type' =>'menu', 'args' => array()),
-	'stylesheets'=>array($includeroot."/quotes.css")
+	'stylesheets'=>array($includeroot."/quotes.css"),
+	'scripts' => ['inspire.js']
 ));
 
 $url = 'http://'.$_SERVER['HTTP_HOST'].$root;
@@ -25,44 +26,12 @@ which is rendered here:
 <a href="$url/songs/holdonhope" target="_blank">$url/songs/holdonhope</a>, 
 EOT;
 
-if (!array_key_exists('REDIRECT_URL', $_SERVER)) {
-////index page
 
-	$page->template->template->geekOut($content);
-	$h->tbr("Some words that inspire me.");
-	$options = array('maxdepth'=>-1);
-	$site['menu']->menuList($options);
-} else {
-	//$h->pa($_SERVER);
 
-//	$h->pa($root);
-	$redirect = $_SERVER['REDIRECT_URL'];
-//	if (stripos($redirect, $webroot) === 0) {
-//		$redirect = str_ireplace($webroot, "", $redirect);
-//	}	
-//	$h->tbr($redirect);
-	$path = str_replace($root, "", $redirect);
-//	$h->tbr($path);
-	$file = 'content'.$path;
-//	$h->tbr($file);
-
-	if (is_dir($file)) {
-//		$h->tbr('directory');
-		$site['menu']->menuList();
-	} else if (file_exists($file.'.txt')) {
-		$h->h(1, $pageTitle);
-		include_once("Quote.class.php");
-		$quote = new Quote($file.'.txt');
-		$quote->render();
-		
-	} else {
-		$h->tbr('none');
-	}
-	
-	
-
-}
-
+$page->template->template->geekOut($content);
+$h->tbr("Some words that inspire me.");
+$options = array('maxdepth'=>-1);
+$site['menu']->menuList($options);
 
 
 $page->end();

@@ -26,4 +26,7 @@ $(function() {
 	$('#search-toggle').click(function(e) {
 		$('#search').toggleClass('hidden-xs');
 	});
+
 });
+
+
