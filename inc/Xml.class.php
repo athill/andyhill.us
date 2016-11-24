@@ -97,6 +97,7 @@ class Xml {
 		} else {
 			$str = '';
 			foreach ($atts as $k => $v) {
+
 				$str .= ' '.strtolower($k).'="'.$v.'"';
 			}
 			return $str;
