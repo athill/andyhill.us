@@ -1112,7 +1112,9 @@ class Html extends Xml {
 		$atts['aria-hidden'] = 'true';
 		if (isset($atts['buttonAtts'])) {
 			$this->obutton($atts['buttonAtts']);
+			unset($atts['buttonAtts']);
 		}
+
 		$this->i('', $atts);
 		if (isset($atts['buttonAtts'])) {
 			$this->cbutton();
