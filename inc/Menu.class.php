@@ -67,15 +67,14 @@ class Menu {
 		$this->host = $_SERVER['HTTP_HOST'];
 	}
 
-	function menuList($options=array()) {
+	function menuList($options=[]) {
 		global $h;
 		$defaults = array(
 			'path' => $this->path,
-			'maxdepth'=>0,
-			'atts'=>''
+			'maxdepth' => 0,
+			'atts' => ''
 		);
 		$opts = $h->extend($defaults, $options);
-		if ($this->debugOn) $h->pa($opts);
 		$node = $this->getNodeFromPath(array('path'=>$opts['path']));
 		$array = $this->xmlMenu2array(array('xml'=>$node, 'root'=>$opts['path'], 'maxdepth'=>$opts['maxdepth']));
 		$h->linkList($array, $opts['atts']);
