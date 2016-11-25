@@ -30,7 +30,7 @@ class TemplateInstance {
 	}
 
 	private function displayHeader() {
-		global $h;
+		global $h, $site;
 		////header container
 		$h->oheader('id="header"');
 		$h->odiv(['id' => 'img-container']);
@@ -45,18 +45,20 @@ class TemplateInstance {
 				 'class' => 'header-img hidden-xs']);
 		}
 		$h->cdiv('/#img-container');
+		
 		////Header title
-		$pageTitle = "andyhill.us";
-		$h->div($pageTitle, 'id="page-title" class="page-title-base"');
+		$h->div($site['siteName'], ['id' => 'page-title']);
+
 		$h->cheader('/#header');
+		$h->odiv(['id' => 'top-divider', 'class' => 'row']);
 		////Global Navigation
-		$h->onav('id="nav" role="navigation"');
+		$h->onav(['id' => 'nav', 'role' => 'navigation', 'class' => 'col-sm-12 col-xs-2']);
 		$this->renderGlobalNav();
 		$h->cnav('/#nav');
 		////Gray bar
-		$h->odiv(['id' => 'top-divider', 'class' => 'row']);
+		
 		//////Do path
-		$h->onav(['id' => 'path', 'class' => 'col-sm-6 col-xs-10']);
+		$h->onav(['id' => 'path', 'class' => 'col-sm-6 col-xs-8']);
 		$this->breadcrumbs();
 		$h->cnav();
 		

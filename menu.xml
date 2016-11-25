@@ -18,12 +18,15 @@
 			title="trying to make sense of it all"/>
 	</links>
 	<links href="/inspire/" display="Inspiration">
-		<links href="songs/" display="Songs">
+		<links href="#civil/" display="Civil">
+			<link href="ifmenwereangels" display="If Men Were Angels"/>
+		</links>
+		<links href="#songs/" display="Songs">
 			<link href="holdonhope" display="Hold On Hope"/>
 			<link href="ontheradio" display="On the Radio"/>
 			<link href="randydescribeseternity" display="Randy Describes Eternity"/>
 		</links>
-		<links href="spirit/" display="Spirit">
+		<links href="#spirit/" display="Spirit">
 			<link href="lordsprayer" display="The Lord's Prayer"/>
 			<link href="shepherdspsalm" display="The Shepherd's Psalm"/>
 			<link href="desiderata" display="Desiderata"/>
