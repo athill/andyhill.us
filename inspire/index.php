@@ -12,27 +12,28 @@ $page = new Page(array(
 
 $url = 'http://'.$_SERVER['HTTP_HOST'].$root;
 $content = <<<EOT
-This directory uses Apache Web Server's 
-<a href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">MOD_REWRITE</a>. 
-Usually, the URL in the address 
-bar follows the structure of the directory where the site is hosted. For example, 
-if the URL is $url/, the directory path is $root/. However, within this directory, 
-if the URL is $root/songs/, for example, the processing still occurs at $root/. I then 
-use the rest of the URL (songs/ in this case) to determine what content to display. 
-The actual content of the songs are contained in text files in the content/ sub-directory. 
-for example, you can look at 
-<a href="$url/content/songs/holdonhope.txt" target="_blank">$url/content/songs/holdonhope.txt</a>, 
-which is rendered here:
-<a href="$url/songs/holdonhope" target="_blank">$url/songs/holdonhope</a>, 
+This section uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange" target="_blank">hash navigation</a>, 
+which means it uses the part of the URL after the pound sign (hash, '#') to determine the content of the page rather than reloading the 
+entire page. When a link is clicked, it changes the part of the URL after the hash. This is then parsed by the client-side script (JavaScript) 
+and then a request is made to the server for the content. On the server, the request makes a query against a 
+<a href="https://sqlite.org/" target="_blank">SQLite</a> database to retrieve the content, and then the breadcrumbs and page content 
+are updated without the page reloading. 
 EOT;
 
 
 
 $page->template->template->geekOut($content);
-$h->tbr("Some words that inspire me.");
-$options = array('maxdepth'=>-1);
+
+$h->div('', ['id' => 'inspire-root']);
+
+
+$options = ['maxdepth' => -1, 'atts' => ['id' => 'inspire-menu']];
+$h->startBuffer();
 $site['menu']->menuList($options);
+$menu = preg_replace("/[\n\t]/", "", $h->endBuffer());
+$menu = str_replace("'", "\'", $menu);
 
-
+$h->script("var menu = '$menu';", true);
 $page->end();
+
 ?>
