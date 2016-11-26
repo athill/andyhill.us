@@ -56,20 +56,18 @@ class TemplateInstance {
 		$this->renderGlobalNav();
 		$h->cnav('/#nav');
 		////Gray bar
-		
-		//////Do path
-		$h->onav(['id' => 'path', 'class' => 'col-sm-6 col-xs-8']);
+		//// path
+		$h->onav(['id' => 'path', 'class' => 'col-sm-6 col-xs-10']);
 		$this->breadcrumbs();
 		$h->cnav();
-		
-		$h->odiv(['class' => 'visible-xs-block col-xs-2']);
-
+		//// search toggle
+		$h->odiv(['class' => 'visible-xs-block col-xs-2 search-toggle']);
 		$h->icon('search', ['class' => 'fa-lg', 'buttonAtts' => ['id' => 'search-toggle', 'class' => 'btn btn-default']]);
-		$h->cdiv();////Search
+		$h->cdiv('./search-toggle');
+		////Search
 		$h->odiv(['id' => 'search', 'class' => 'col-sm-6 col-xs-12 hidden-xs']);
 		$this->displaySearch();
-		$h->cdiv();
-
+		$h->cdiv('/#search');
 		$h->cdiv('/.#top-divider'); 
 	}
 

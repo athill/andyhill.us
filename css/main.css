@@ -17,7 +17,7 @@ a:hover {
 
 
 #page {
-	margin: 2em auto 0 auto;
+	margin-top: 2em;
 	padding: 0;
 	background: #CCC;
 	color: black;
@@ -85,7 +85,7 @@ a:hover {
 	text-align: right;
 } 
 
-#search-toggle {
+.search-toggle {
 	text-align: right;
 }
 
@@ -153,6 +153,9 @@ footer {
  * media queries
  *****************/
  @media (max-width: 767px) {
+  #page {
+  	margin-top: 0;
+  }
   #img-container {
     height: 5em;
   }
