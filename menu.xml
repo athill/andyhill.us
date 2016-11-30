@@ -34,8 +34,8 @@
 		</links>
 	</links>
 	<links href="/d3/" display="D3.js">
-		<link href="barchart.php" display="Bar Chart"/>
-		<link href="line.php" display="Line Chart" />
+		<link href="doodle.php" display="Doodling"/>
+		<link href="line.php" display="Total Federal Receipts and Outlays" />
 		<link href="snap/" display="S.N.A.P." />
 	</links>		
 	<!--

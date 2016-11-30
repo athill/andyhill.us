@@ -19,7 +19,7 @@ function addCommas(nStr) {
     var defaults = {
          ////default values here
          csv:'snap.csv',
-         w: 815,
+         w: 715,
          h: 500,
          p: 30,
          padding: 40,

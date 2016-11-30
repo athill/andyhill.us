@@ -1,7 +1,8 @@
 <?php
 include('../inc/setup.inc.php');
 $page = new Page(array(
-	'jsModules' => array('d3'=>true),
+	'jsModules' => array('d3'=>true, 'treemenu'=>true),
+	'leftSideBar'=>array('type' =>'menu', 'args' => array()),
 ));
 
 

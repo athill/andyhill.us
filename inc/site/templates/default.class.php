@@ -78,7 +78,7 @@ class TemplateInstance {
 		$h->a('#nav', 'Show navigation', 'title="Show navigation"');
 		
 		$h->a('#', 'Hide navigation', 'title="Hide navigation"');
-		$h->linkList($this->base->menu->xmlMenu2array(['maxdepth' => 1]));
+		$h->linkList($this->base->menu->xmlMenu2array(['maxdepth' => 0]));
 	}
 
 

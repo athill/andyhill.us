@@ -1,71 +1,5 @@
+
 $(function() {
-	var data = [4, 8, 15, 16, 23, 42, 90];
-	var width = 800;
-
-	var chart = d3.select("#viz").append("svg")
-	    .attr("class", "chart")
-	    .attr("width", 440)
-    	.attr("height", 140)
-      .append('g')
-      	.attr('transform', 'translate(10,15)');
-
-	var x = d3.scale.linear()
-	     .domain([0, d3.max(data)])
-	     .range([0, width]);
-
-
-
-	var y = d3.scale.ordinal()
-	    .domain(data)
-	    .rangeBands([0, 120]);
-
-
-
- chart.selectAll("rect")
-     .data(data)
-   .enter().append("rect")
-   	 .attr("y", y)
-     .attr("width", x)
-     .attr("height", y.rangeBand());
-
-
-
-chart.selectAll("text")
-    .data(data)
-  .enter().append("text")
-    .attr("x", x)
-    .attr("y", function(d) { return y(d) + y.rangeBand() / 2; })
-    .attr("dx", -3) // padding-right
-    .attr("dy", ".35em") // vertical-align: middle
-    .attr("text-anchor", "end") // text-align: right
-    .text(String);
-
-
-chart.selectAll("line")
-    .data(x.ticks(10))
-  .enter().append("line")
-    .attr("x1", x)
-    .attr("x2", x)
-    .attr("y1", 0)
-    .attr("y2", 120)
-    .style("stroke", "#ccc");
-
- chart.selectAll(".rule")
-     .data(x.ticks(10))
-   .enter().append("text")
-     .attr("class", "rule")
-     .attr("x", x)
-     .attr("y", 0)
-     .attr("dy", -3)
-     .attr("text-anchor", "middle")
-     .text(String);
-
-chart.append("line")
-    .attr("y1", 0)
-    .attr("y2", 120)
-    .style("stroke", "#000");
-
-/* Dynamic chart */
 var t = 1297110663, // start time (seconds since epoch)
     v = 70, // start value (subscribers)
     data2 = d3.range(33).map(next); // starting dataset
@@ -142,8 +76,58 @@ function redraw() {
 
 }
 
+    ////Slide
+    var w = 750,
+        h = 500,
+        y = d3.scale.ordinal().domain(d3.range(50)).rangePoints([20, h - 20]),
+        t = Date.now();
 
+    var svg = d3.select("#slide").append("svg:svg")
+        .attr("width", w)
+        .attr("height", h);
 
+    var circle = svg.selectAll("circle")
+        .data(y.domain())
+      .enter().append("svg:circle")
+        .attr("r", 16)
+        .attr("cx", 20)
+        .attr("cy", y)
+        .each(slide(20, w - 20));
 
+    function slide(x0, x1) {
+      t += 50;
+      return function() {
+        d3.select(this).transition()
+            .duration(t - Date.now())
+            .attr("cx", x1)
+            .each("end", slide(x1, x0));
+      };
+    }
+
+    d3.text("hist01z1.csv", function(datasetText) {
+
+    var parsedCSV = d3.csv.parseRows(datasetText);
+
+    var sampleHTML = d3.select("#viz2")
+        .append("table")
+        .style("border-collapse", "collapse")
+        .style("border", "2px black solid")
+
+        .selectAll("tr")
+        .data(parsedCSV)
+        .enter().append("tr")
+
+        .selectAll("td")
+        .data(function(d){return d;})
+        .enter().append("td")
+        .style("border", "1px black solid")
+        .style("padding", "2px")
+        .on("mouseover", function(){d3.select(this).style("background-color", "red")})
+        .on("mouseout", function(){d3.select(this).style("background-color", "white")})
+        .text(function(d){return d;})
+        .style("font-size", "10px");
+    });
 
 });
+
+        
