@@ -11,13 +11,14 @@ EOT;
 $h->p($g1);
 ////g2
 $h->startBuffer();
-$h->tnl("jQuery is used heavily. My thanks to the jQuery team as well as the " .
-	"authors of the brilliant plugins I make use of. Specifically, this site uses ");
-$h->a("http://users.tpg.com.au/j_birch/plugins/superfish/", "Superfish", 'target="blank"');
-$h->tnl(" for its global (top) navigation menu and ");
+$h->a('https://jquery.com/', 'jQuery', ['target'=>'_blank']);
+$h->tnl(" is used heavily. I'm a huge fan of ");
+$h->a('https://facebook.github.io/react/', 'React', ['target'=>'_blank']);
+$h->tnl(", but it seems like overkill for the scope of this site. My thanks to the jQuery team as well as the " .
+	"authors of the plugins I make use of. Specifically, this site uses ");
 $h->a("http://bassistance.de/jquery-plugins/jquery-plugin-treeview/", "jQuery Treeview", 'target="blank"');
 $h->tnl(" for second-tier (side) navigation. Other plugins will be acknowledged on their ". 
-	"resective pages' Geek Outs");
+	"resective pages' Geek Outs.");
 $g2 = $h->endBuffer();
 $h->p(trim($g2));
 ////g3
