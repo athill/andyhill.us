@@ -1108,15 +1108,16 @@ class Html extends Xml {
 	
 	public function icon($name, $atts=[]) {
 		$classes = 'fa fa-'.$name;
+		$hasButton = isset($atts['buttonAtts']);
 		$atts['class'] = isset($atts['class']) ? $classes.' '.$atts['class'] : $classes;
-		$atts['aria-hidden'] = 'true';
-		if (isset($atts['buttonAtts'])) {
+		if ($hasButton) {
 			$this->obutton($atts['buttonAtts']);
 			unset($atts['buttonAtts']);
+		} else {
+			$atts['aria-hidden'] = 'true';
 		}
-
 		$this->i('', $atts);
-		if (isset($atts['buttonAtts'])) {
+		if ($hasButton) {
 			$this->cbutton();
 		}		
 	}
