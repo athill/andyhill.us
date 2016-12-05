@@ -722,6 +722,80 @@ Simmer for 5 minutes, careful not to boil</instructions>
 		<instructions>1. In a greased 13-in. x 9-in. baking dish, layer half of the noodles, ham and cheese.
 2. In a large bowl, combine the soup, sour cream, green pepper and onion; spread half over the top. Repeat layers. Bake, uncovered, at 350° for 40-45 minutes or until heated through.</instructions>
 	</recipe>
+	<recipe id="47">
+		<title>Hollywood Chicken With Almonds, Stir Fry</title>
+		<category>Entree</category>
+		<cuisine>Chinese</cuisine>
+		<rating>4/5 stars</rating>
+		<preptime>1/2 hour</preptime>
+		<cooktime>1/2 hour</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1 1/2</amount>
+				<unit>pounds</unit>
+				<item>Chicken Breasts; Skinned -- Cut Into 1 inch Pieces</item>
+				<key>Chicken Breasts</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/3</amount>
+				<unit>cup</unit>
+				<item>Chicken Broth</item>
+				<key>Chicken Broth</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>Soy Sauce</item>
+				<key>Soy Sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>teaspoons</unit>
+				<item>Cornstarch</item>
+				<key>Cornstarch</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>Peanut Oil</item>
+				<key>Peanut Oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>Sliced Almonds</item>
+				<key>Sliced Almonds</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<unit>Whole</unit>
+				<item>Green Onions; Bias Sliced Into 1 inch pieces</item>
+				<key>Green Onions</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<unit>ounces</unit>
+				<item>Pkg. Pea Pods -- Thawed</item>
+				<key>Pkg. Pea Pods -- Thawed</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>Sliced Fresh Mushrooms</item>
+				<key>Sliced Fresh Mushrooms</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Stir chicken broth and soy sauce into cornstarch; set the soy sauce-broth mixture aside. 
+2. Heat Oil over high heat. 
+3. Add almonds and stir fry 1 minute. Remove almonds. 
+4. Add Chicken and stir fry for 2 to 3 minutes, or until done; remove chicken. 
+5. Add green onions and pea pods and stir fry 1 minute; remove. 
+6. Add mushrooms and stir fry 1 minute. 
+7. Stir broth mixture; add to mushrooms. Cook and stir until bubbly. 
+8. Stir in chicken and vegetables. Cover; cook 1 minute. 
+9. Stir in almonds.</instructions>
+	</recipe>
 	<recipe id="9">
 		<title>Hot mushroom cheese spread</title>
 		<category>Entree</category>
@@ -1856,6 +1930,146 @@ Heat butter and garlic in skillet on medium until garlic is slightly browned.
 Add Krab, whipping cream, and pepper.  Heat 3 min. or until mixture
 Add Parm. cheese, stir for 1 minute
 Toss with fettuccini.</instructions>
+	</recipe>
+	<recipe id="48">
+		<title>Slow Cooker Chili with Ground Beef and Beans</title>
+		<category>Entree</category>
+		<cuisine>Mexican</cuisine>
+		<source>Editors at America's Slow Cooker Revolution</source>
+		<rating>5/5 stars</rating>
+		<preptime>45 minutes</preptime>
+		<cooktime>10 hours</cooktime>
+		<yields>6 qt</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tbs.</unit>
+				<item>Olive oil</item>
+				<key>Olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>onions; large, diced</item>
+				<key>onions</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>t</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>cloves</unit>
+				<item>garlic; crushed</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/3</amount>
+				<unit>c.</unit>
+				<item>tomato paste</item>
+				<key>tomato paste</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>c.</unit>
+				<item>chili powder</item>
+				<key>chili powder</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>ground cumin</item>
+				<key>ground cumin</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>ground coriander</item>
+				<key>ground coriander</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>dried oregano</item>
+				<key>dried oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>chipotle en adobo puree</item>
+				<key>chipotle en adobo puree</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>lbs.</unit>
+				<item>ground beef</item>
+				<key>ground beef</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tsp.</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>t</unit>
+				<item>black pepper</item>
+				<key>black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>cans</unit>
+				<item> kidney beans; (15 oz)</item>
+				<key> kidney beans</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>water</item>
+				<key>water</key>
+			</ingredient>
+			<ingredient>
+				<amount>28</amount>
+				<unit>oz</unit>
+				<item>crushed tomatoes</item>
+				<key>crushed tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>28</amount>
+				<unit>oz</unit>
+				<item>diced tomatoes</item>
+				<key>diced tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>soy sause</item>
+				<key>soy sause</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs.</unit>
+				<item>brown sugar</item>
+				<key>brown sugar</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>t.</unit>
+				<item>cider vinegar</item>
+				<key>cider vinegar</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Heat the oil in a large pot over medium heat until shimmering. 
+2. Add the onion and half teaspoon of kosher salt and sautee until onion is softened (about 4 minutes). 
+3. Stir in hte garlic, toato paste, chili powder, cumin, coriander, oregano, and chipotle. Saute until tomato paste darkens, about 2 minutes. 
+4. Add the ground beef, sprinkle with 1 t. salt and 1/2 t. pepper and sautee until meat just loses its pink color.
+5. Increase the heat to high, add the water, and bring to a boil, while deglazing pot
+6. Stir in tomatoes, beans, soy sauce, and brown sugar and bring to a simmer.
+7. Transfer to slow cooker. Cook, covered, on low for 10 hours or high for 4 to 5 hours
+8. Add cider vinegar and more salt and pepper to taste</instructions>
+		<modifications>Garnish with diced onions, sour cream, shredded cheese, pickled jalapenos, minced cilantro, and tortilla chips</modifications>
 	</recipe>
 	<recipe id="20">
 		<title>Southwestern Stuffed Pepeprs</title>
@@ -3191,6 +3405,81 @@ Spread thin layer of sauce
 layer noodles, sauce, ricotta, mozzerella, noodles, sauce, ricotta, mozzerella, noodles
 Top with remaining mozzerella and parmesan
 Cook for 30-40 minutes</instructions>
+	</recipe>
+	<recipe id="46">
+		<title>Whit's Chicken Enchiladas</title>
+		<category>Entree</category>
+		<cuisine>Mexican</cuisine>
+		<source>allrecipes</source>
+		<link>http://allrecipes.com/recipe/76012/whits-chicken-enchiladas/</link>
+		<rating>4/5 stars</rating>
+		<preptime>1/2 hour</preptime>
+		<cooktime>1/2 hour</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>4</amount>
+				<item>chicken breasts</item>
+				<key>chicken breasts</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>4 oz can</unit>
+				<item>diced green chile peppers; drained</item>
+				<key>diced green chile peppers</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>jalapeno pepper; chopped</item>
+				<key>jalapeno pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>clove</unit>
+				<item>garlic; minced</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz</unit>
+				<item>cream cheese</item>
+				<key>cream cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>Monterey Jack cheese; shredded, divided</item>
+				<key>Monterey Jack cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>water</item>
+				<key>water</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<item>flour tortillas; 10 in</item>
+				<key>flour tortillas</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>heavy cream</item>
+				<key>heavy cream</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Place the chicken breast halves into a saucepan, and fill with enough water to cover. Bring to a boil, and cook until the chicken is cooked through, about 20 minutes. Remove from the water, and set aside to cool.
+2. Preheat the oven to 375 degrees F (190 degrees C). Remove the chicken meat from the breasts, and discard the skin and bones. Set aside.
+3.Heat the olive oil in a large skillet over medium heat. Add the green chilies, jalapeno and garlic. Cook and stir for a few minutes, until fragrant, then stir in the cream cheese and half of the Monterey Jack. As the cheese begins to melt, gradually stir in the water. Chop the chicken meat, and stir into the skillet. Remove from the heat.
+4. Spoon the chicken mixture into tortillas, and roll up. Place the rolls seam side down in a 9x13 inch baking dish. Sprinkle the remaining Monterey Jack cheese over the top, then pour cream over all.
+5. Bake for 30 minutes in the preheated oven, or until the enchiladas are golden brown on the top.</instructions>
 	</recipe>
 	<recipe id="36">
 		<title>White Bean Chicken Chili</title>
