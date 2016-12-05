@@ -42,6 +42,9 @@ class Recipe {
 			'id' => (string) $this->recipe['id'],
 			'instructions' => explode("\n", (string) $this->recipe->instructions)
 		];
+		if ($this->recipe->modifications && strlen(trim((string) $this->recipe->modifications)) > 0) {
+			$json['notes'] = explode("\n", (string) $this->recipe->modifications);
+		}
 		//// simple tags
 		$tagnames = ['title', 'category','cuisine','rating','preptime','servings','cooktime'];
 		foreach ($tagnames as $tagname) {

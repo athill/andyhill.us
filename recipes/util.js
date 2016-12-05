@@ -50,22 +50,27 @@ function getRecipeDom(recipe, name, isScreenDisplay) {
  			'+links+'		\
 	    </div> \
 	');
+	//// notes
+	if ('notes' in recipe) {
+		$('.recipe-main', $structure).append($('<h5>Notes</h5><p>'+recipe.notes.join('<br />')+'</p>'))
+	}
 	//// meta
 	recipeMetaMap.forEach(function(map) {
 		$('.recipe-meta' , $structure).append('<dt>'+map.header+'</dt><dd>'+recipe[map.key]+'</dd>');
 	});
 
+	//// ingredients
 	recipe.ingredients.forEach(function(ingredient) {
-		var $tr = $('<div class="row" />');
+		var $row = $('<div class="row" />');
 		ingredientItems.forEach(function(item) {
 			if (item === 'unit') {
 				unitReplacements.forEach(function(replacement) {
 					ingredient[item] = ingredient[item].replace(replacement[0], replacement[1]);
 				});
 			}
-			$tr.append('<div class="col-xs-'+ingredientItemWidthMap[item]+'">'+ingredient[item]+'</div>');
+			$row.append('<div class="col-xs-'+ingredientItemWidthMap[item]+'">'+ingredient[item]+'</div>');
 		});
-		$('.recipe-ingredients .col-md-6' , $structure).append($tr);
+		$('.recipe-ingredients .col-md-6' , $structure).append($row);
 	});
 
 	return $structure;
