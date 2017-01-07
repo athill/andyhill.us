@@ -1157,6 +1157,124 @@ Bake 20-25 min. 350 deb.</instructions>
 		</ingredient-list>
 		<instructions>Mix</instructions>
 	</recipe>
+	<recipe id="53">
+		<title>Lasagne</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<source>food.com</source>
+		<link>http://www.food.com/recipeprint.do?rid=28768</link>
+		<rating>5/5 stars</rating>
+		<preptime>1 1/2 hours</preptime>
+		<cooktime>1 hour</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1 1/2</amount>
+				<unit>lbs</unit>
+				<item>lean ground beef</item>
+				<key>lean ground beef</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>lb</unit>
+				<item>Italian sausage</item>
+				<key>Italian sausage</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>large</unit>
+				<item>onion, chopped</item>
+				<key>onion, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>garlic cloves, minced</item>
+				<key>garlic cloves, minced</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>salt ( or to taste)</item>
+				<key>salt ( or to taste)</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>dried parsley flakes</item>
+				<key>dried parsley flakes</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>dried oregano</item>
+				<key>dried oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>dried basil</item>
+				<key>dried basil</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>(14 1/2 ounce) cans whole tomatoes, undrained and chopped</item>
+				<key>(14 1/2 ounce) cans whole tomatoes, undrained and chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>(6 ounce) cans tomato paste</item>
+				<key>(6 ounce) cans tomato paste</key>
+			</ingredient>
+			<ingredient>
+				<amount>24</amount>
+				<unit>ounces</unit>
+				<item>cottage cheese or 24 ounces ricotta cheese</item>
+				<key>cottage cheese or 24 ounces ricotta cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>eggs, beaten</item>
+				<key>eggs, beaten</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>pepper</item>
+				<key>pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>parsley</item>
+				<key>parsley</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>grated parmesan cheese</item>
+				<key>grated parmesan cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>lb</unit>
+				<item>mozzarella cheese, divided</item>
+				<key>mozzarella cheese, divided</key>
+			</ingredient>
+			<ingredient>
+				<amount>12-15</amount>
+				<item>lasagna noodles</item>
+				<key>lasagna noodles</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Brown ground beef, Italian sausage, onion and garlic.
+2. Add salt and next 5 ingredients; stirring until well mixed.
+3. Simmer 1 hour.
+4. Cook lasagna noodles according to package directions; drain and set aside.
+5. Spray a 13 x 9&quot; baking pan with cooking spray.
+6. Combine cottage cheese, eggs, pepper, 2 tablespoons parsley, Parmesan cheese and 1/2 of mozzarella cheese; In a lasagna pan, layer noodles, meat sauce, and cheese mixture; repeat.
+7. Top off with layer of noodles; sprinkle evenly with remaining mozzarella cheese.
+8. Bake at 375F for 40-60 minutes, or until cheese mixture is thoroughly melted. (I cover w/ foil for about 40 minutes, then uncover for 15-20 minutes.</instructions>
+	</recipe>
 	<recipe id="11">
 		<title>Maine Lobster Lasagne</title>
 		<category>Entree</category>
