@@ -76,6 +76,117 @@
 3. Reduce heat and simmer until rice is tender, about 20 minutes
 4. Add shrimp; simmer, covered until shrimp is cooked, about 10 minutes</instructions>
 	</recipe>
+	<recipe id="54">
+		<title>Authentic Louisiana Red Beans and Rice</title>
+		<category>Entree</category>
+		<cuisine>Cajun</cuisine>
+		<source>allrecipes</source>
+		<link>http://allrecipes.com/recipe/58211/authentic-louisiana-red-beans-and-rice/print/?recipeType=Recipe&amp;servings=8</link>
+		<rating>5/5 stars</rating>
+		<preptime>25 minutes</preptime>
+		<cooktime>3 hours</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>dry kidney beans</item>
+				<key>dry kidney beans</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>large</unit>
+				<item>onion, chopped</item>
+				<key>onion, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>green bell pepper, chopped</item>
+				<key>green bell pepper, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>minced garlic</item>
+				<key>minced garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>stalks celery, chopped</item>
+				<key>stalks celery, chopped</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<unit>cups</unit>
+				<item>water</item>
+				<key>water</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>bay leaves</item>
+				<key>bay leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>cayenne pepper</item>
+				<key>cayenne pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>dried thyme</item>
+				<key>dried thyme</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>teaspoon</unit>
+				<item>dried sage</item>
+				<key>dried sage</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>dried parsley</item>
+				<key>dried parsley</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>Cajun seasoning</item>
+				<key>Cajun seasoning</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>andouille sausage, sliced</item>
+				<key>andouille sausage, sliced</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>cups</unit>
+				<item>water</item>
+				<key>water</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>long grain white rice</item>
+				<key>long grain white rice</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1.  Rinse beans, and then soak in a large pot of water overnight.
+2.  In a skillet, heat oil over medium heat. Cook onion, bell pepper, garlic, and celery in olive oil for 3 to 4 minutes.
+3.  Rinse beans, and transfer to a large pot with 6 cups water. Stir cooked vegetables into beans. Season with bay leaves, cayenne pepper, thyme, sage, parsley, and Cajun seasoning. Bring to a boil, and then reduce heat to medium-low. Simmer for 2 1/2 hours.
+4.  Stir sausage into beans, and continue to simmer for 30 minutes.
+5.  Meanwhile, prepare the rice. In a saucepan, bring water and rice to a boil. Reduce heat, cover, and simmer for 20 minutes. Serve beans over steamed white rice.</instructions>
+	</recipe>
 	<recipe id="2">
 		<title>Baked Rice With Cheese And Green Chilies</title>
 		<category>Entree</category>
@@ -1858,139 +1969,6 @@ Mix pasta with sauce and garnish with parsley and parmesan</instructions>
 7. Simmer until vegetables are tender
 8. Add salt and pepper</instructions>
 	</recipe>
-	<recipe id="15">
-		<title>Red Beans and Rice</title>
-		<category>Entree</category>
-		<cuisine>Cajun</cuisine>
-		<rating>5/5 stars</rating>
-		<ingredient-list>
-			<ingredient>
-				<amount>2</amount>
-				<unit>c.</unit>
-				<item>Dried Kidney Beans</item>
-				<key>dried kidney beans</key>
-			</ingredient>
-			<ingredient>
-				<amount>14</amount>
-				<unit>oz.</unit>
-				<item>Vegetable Broth</item>
-				<key>vegetable broth</key>
-			</ingredient>
-			<ingredient>
-				<amount>14</amount>
-				<unit>oz.</unit>
-				<item>Whole Tomatoes</item>
-				<key>whole tomatoes</key>
-			</ingredient>
-			<ingredient>
-				<amount>3</amount>
-				<unit>Tsp.</unit>
-				<item>Veggie Bacon Bits</item>
-				<key>veggie bacon bits</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>Tsp.</unit>
-				<item>Veggie Worcestershire Sauce</item>
-				<key>veggie worcestershire sauce</key>
-			</ingredient>
-			<ingredient>
-				<amount>3</amount>
-				<unit>cloves</unit>
-				<item>Chopped Garlic</item>
-				<key>chopped garlic</key>
-			</ingredient>
-			<ingredient>
-				<amount>2</amount>
-				<item>Bay Leaves</item>
-				<key>bay leaves</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>Tsp.</unit>
-				<item>Ceyenne Pepper</item>
-				<key>ceyenne pepper</key>
-			</ingredient>
-		</ingredient-list>
-		<instructions>Soak beans overnight. Drain and rinse well.
-In large pot, place beans covered in water until it boils. Simmer on low heat for 30 minutes. Rinse and drain well.
-In a large saucepan, place the beans and other ingredients and simmer over very low heat for two or more hours, until most of the liquid has evaporated. Stir frequently during this process so that the bottom does not burn.
-Remove the bay leaves.
-With a slotted spoon, serve beans over a bed of rice.</instructions>
-	</recipe>
-	<recipe id="16">
-		<title>Red Beans and Sausage</title>
-		<category>Entree</category>
-		<cuisine>Cajun</cuisine>
-		<rating>4/5 stars</rating>
-		<preptime>10 minutes</preptime>
-		<cooktime>20 minutes</cooktime>
-		<yields>6 servings</yields>
-		<ingredient-list>
-			<ingredient>
-				<amount>13 1/2</amount>
-				<unit>oz</unit>
-				<item>Andouille</item>
-				<key>Andouille</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>Tbs.</unit>
-				<item>Olive Oil</item>
-				<key>Olive Oil</key>
-			</ingredient>
-			<ingredient>
-				<amount>3</amount>
-				<item>stalks celery, diced</item>
-				<key>stalks celery, diced</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>medium</unit>
-				<item>onion, diced</item>
-				<key>onion, diced</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>medium</unit>
-				<item>green pepper, diced</item>
-				<key>green pepper, diced</key>
-			</ingredient>
-			<ingredient>
-				<amount>3</amount>
-				<unit>cloves</unit>
-				<item>garlic,minced</item>
-				<key>garlic,minced</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/2</amount>
-				<unit>cup</unit>
-				<item>water</item>
-				<key>water</key>
-			</ingredient>
-			<ingredient>
-				<amount>2</amount>
-				<item>bay leaves</item>
-				<key>bay leaves</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/2</amount>
-				<unit>teaspoon</unit>
-				<item>cayenne pepper</item>
-				<key>cayenne pepper</key>
-			</ingredient>
-			<ingredient>
-				<amount>2</amount>
-				<item>cans light red kidney beans</item>
-				<key>cans light red kidney beans</key>
-			</ingredient>
-		</ingredient-list>
-		<instructions>Brown sausage in oil for 3-4 minutes
-Add celery, onion, green pepper, garlic, cook until tender
-Add water, bay leaves, cayenne pepper, and beans
-Cover and simmer for 15-20 minutes
-Remove bay leaves</instructions>
-	</recipe>
 	<recipe id="17">
 		<title>Sczechuan Noodles</title>
 		<category>Entree</category>
@@ -3311,164 +3289,6 @@ Chill until ready to serve</instructions>
 8. Simmer at least 20 minutes
 9. Add sausage, turkey, tomato, file powder, and seasoning to taste
 10. Serve over rice</instructions>
-	</recipe>
-	<recipe id="32">
-		<title>Vegan Sheppard's PIe</title>
-		<category>Entree</category>
-		<cuisine>Other</cuisine>
-		<source>Good Life Culinary</source>
-		<rating>4/5 stars</rating>
-		<preptime>1 hour</preptime>
-		<cooktime>20 minutes</cooktime>
-		<ingredient-list>
-			<ingredient>
-				<amount>6</amount>
-				<item>Potatoes</item>
-				<key>potato</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/4</amount>
-				<unit>c.</unit>
-				<item>Coconut Milk</item>
-				<key>coconut milk</key>
-			</ingredient>
-			<ingredient>
-				<amount>3</amount>
-				<unit>Tbs.</unit>
-				<item>Canola Butter</item>
-				<key>canola butter</key>
-			</ingredient>
-			<ingredient>
-				<amount>3/4</amount>
-				<unit>c.</unit>
-				<item>Dill; fresh, chopped, divided</item>
-				<key>dill</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>Tbs.</unit>
-				<item>Sage; fresh, chopped</item>
-				<key>dried sage</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>can</unit>
-				<item>Chickpeas</item>
-				<key>chickpeas</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>can</unit>
-				<item>Red Beans</item>
-				<key>red beans</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>can</unit>
-				<item>Baked Beans</item>
-				<key>baked beans</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/2</amount>
-				<item>head Cauliflower</item>
-				<key>head cauliflower</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/2</amount>
-				<item>bunch Asparagus</item>
-				<key>bunch asparagus</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<item>Leek</item>
-				<key>leek</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<item>Onion</item>
-				<key>onion</key>
-			</ingredient>
-			<ingredient>
-				<amount>2</amount>
-				<item>Carrots</item>
-				<key>carrot</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/2</amount>
-				<unit>tsp.</unit>
-				<item>Black Pepper</item>
-				<key>black pepper</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/2</amount>
-				<unit>tsp.</unit>
-				<item>Sea Salt</item>
-				<key>sea salt</key>
-			</ingredient>
-			<ingredient>
-				<amount>2</amount>
-				<unit>tsp.</unit>
-				<item>Worstestershire Sauce</item>
-				<key>worstestershire sauce</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>tsp.</unit>
-				<item>Hot Sauce</item>
-				<key>hot sauce</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/2</amount>
-				<unit>tsp.</unit>
-				<item>Curry Powder</item>
-				<key>curry powder</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/2</amount>
-				<unit>tsp.</unit>
-				<item>Cumin</item>
-				<key>cumin</key>
-			</ingredient>
-			<ingredient>
-				<amount>3</amount>
-				<unit>Tbs.</unit>
-				<item>Apricot Jam</item>
-				<key>apricot jam</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/2</amount>
-				<unit>c.</unit>
-				<item>Soy, Rice or Almond Milk</item>
-				<key>soy, rice or almond milk</key>
-			</ingredient>
-			<ingredient>
-				<amount>2</amount>
-				<unit>Tbs.</unit>
-				<item>Flour</item>
-				<key>flour, all purpose</key>
-			</ingredient>
-			<ingredient>
-				<amount>2 1/5</amount>
-				<unit>oz</unit>
-				<item>Marmite or Vegemite</item>
-				<key>marmite or vegemite</key>
-			</ingredient>
-			<ingredient>
-				<amount>6</amount>
-				<unit>tbs.</unit>
-				<item>Parsley; fresh, chopped, divided</item>
-				<key>parsley</key>
-			</ingredient>
-		</ingredient-list>
-		<instructions>1. Chop unpeeled potatoes and boil until tender
-2. While potatoes are boiling, chop otehr vegetables and steam
-3. Mix marmite or vegemite and flour in a large saucepan and combine with a fork. Add almond, roce, or soy milk; jam; cumin; curry powder; hot sauce; Worstershire sauce, salt and pepper. Bring to boil while whisking constantly, then remove from heat.
-4. When potatoes are bolied mash with coconut milk, conola butter, 3 Tbs. dill, 3 Tbs. parsley
-5. Add steamed vegetables to gravy mix. Add beans, rest of parsley and dill, and sage
-6. Pour vegetable/bean/gravy mix into greased 11x18 in. casserole dish
-7. Top with mashed potatoes, carefully using a spoon
-8. Draw a fork across potatoes horizontally and vertically to create a ridged matrix. Spray lightly with canola oil
-9. Broil for 15-30 minutes until potatoes are goldden and crispy on top.</instructions>
 	</recipe>
 	<recipe id="33">
 		<title>Vegetarian Meatballs</title>
