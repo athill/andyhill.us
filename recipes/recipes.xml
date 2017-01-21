@@ -303,6 +303,57 @@ Bake for 35 minutes, or until the top is golden brown and bubbly.</instructions>
 5. Whip egg white to soft peaks
 6. Fold egg white into batter</instructions>
 	</recipe>
+	<recipe id="55">
+		<title>Breakfast Casserole</title>
+		<category>Breakfast</category>
+		<cuisine>American</cuisine>
+		<rating>5/5 stars</rating>
+		<preptime>15 minutes</preptime>
+		<cooktime>1 hour</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>8</amount>
+				<item>eggs</item>
+				<key>eggs</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>c.</unit>
+				<item>milk</item>
+				<key>milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>lb</unit>
+				<item>breakfast sausage</item>
+				<key>breakfast sausage</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz</unit>
+				<item>cheddar; shredded</item>
+				<key>cheddar</key>
+			</ingredient>
+			<ingredient>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<item>pepper</item>
+				<key>pepper</key>
+			</ingredient>
+			<ingredient>
+				<item>bread crumbs</item>
+				<key>bread crumbs</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Cook sausage (samm chunks or slices)
+2. Mix everything but breadcrumbs
+3. Pour into casserole dish
+4. Top with bread crumbs
+5. Cook at 350 degrees for 40-50 minutes</instructions>
+	</recipe>
 	<recipe id="44">
 		<title>Chicken Pot Pie</title>
 		<category>Entree</category>
@@ -1721,6 +1772,81 @@ Cook at 350 degrees for 1 hour.</instructions>
 3. Heat oil in saute pan over medium heat
 4. Cook each chicken breast 6-10 min. on each side</instructions>
 		<modifications>Complete meal with spinach orzo or pasta parmesan</modifications>
+	</recipe>
+	<recipe id="56">
+		<title>Pasta with Spicy Italian Sausage and Spinach</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<rating>4.5/5 stars</rating>
+		<preptime>1/2 hour</preptime>
+		<cooktime>1/2 hour</cooktime>
+		<yields>4 ser</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>lb</unit>
+				<item>italian sausage</item>
+				<key>italian sausage</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>oz.</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cloves</unit>
+				<item>garlic; minced</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>oz</unit>
+				<item>white wine</item>
+				<key>white wine</key>
+			</ingredient>
+			<ingredient>
+				<amount>12</amount>
+				<unit>oz</unit>
+				<item>spinach; frozen</item>
+				<key>spinach</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>oz</unit>
+				<item>heavy whipping cream</item>
+				<key>heavy whipping cream</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>oz</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>oz</unit>
+				<item>parmesan cheese; grated</item>
+				<key>parmesan cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz</unit>
+				<item>pasta (shell or rotini)</item>
+				<key>pasta (shell or rotini)</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Cook pasta
+2. Heat oil in large pan over medium heat
+3. Add sausage and cook
+4. Remove sausage from pan
+5. Cook garlic in remaining oil/fat
+6. Add wine, deglaze, and reduce over high heat
+7. Back to medium heat, add spinach (cover unil thawed)
+8. Add cream and butter, stir until butter is completely incorporated
+9. Toss sausage into sauce
+10. Toss pasta and parmesan cheese into sauce</instructions>
 	</recipe>
 	<recipe id="14">
 		<title>Penne Pasta with Pupmkin Sauce</title>
