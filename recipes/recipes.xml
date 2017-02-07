@@ -2027,6 +2027,65 @@ Mix pasta with sauce and garnish with parsley and parmesan</instructions>
 6. When the shoulder has reached 200 degrees, shut off the oven and let the roast cool for a couple of hours before removing from the oven. If the bottom of the pan is dry (or crusted with dried spices) then cover the pan with foil to retain internal moisture of the meat during the cooling period.
 7. When the temperature drops to 170 degrees or slightly lower, remove from oven. Place on a large, clean work surface such as a cutting board, and remove the large sheet of crusted fat on the top. Pull apart with two forks, it will pull apart very easily. Serve for friends and family!</instructions>
 	</recipe>
+	<recipe id="58">
+		<title>Pesto</title>
+		<category>Sauce</category>
+		<cuisine>Italian</cuisine>
+		<source>Essentials o Classic Italian Cooking</source>
+		<rating>5/5 stars</rating>
+		<preptime>1 hour</preptime>
+		<yields>8 se</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>c.</unit>
+				<item>basil leaves; fresh</item>
+				<key>basil leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>extra virgin olive oil</item>
+				<key>extra virgin olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tbsp.</unit>
+				<item>pine nuts</item>
+				<key>pine nuts</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>garlic cloves; chopped fine</item>
+				<key>garlic cloves</key>
+			</ingredient>
+			<ingredient>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>parmesan; grated</item>
+				<key>parmesan</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>Tbsp.</unit>
+				<item>romano; grated</item>
+				<key>romano</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tbsp.</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Mix basil, olive oil, pine nuts, garlic, and salt in food processor
+2. Stir in cheese and butter</instructions>
+		<modifications>Freezing: Freeze all food processor ingredients after processing, add in other ingredients before serving</modifications>
+	</recipe>
 	<recipe id="39">
 		<title>Philly Cheesesteak Stuffed Peppers Recipe - Food.com</title>
 		<link>http://www.food.com/recipeprint.do?rid=513064</link>
