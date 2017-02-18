@@ -1065,6 +1065,72 @@ Simmer for 5 minutes, careful not to boil</instructions>
 		<instructions>1. In a greased 13-in. x 9-in. baking dish, layer half of the noodles, ham and cheese.
 2. In a large bowl, combine the soup, sour cream, green pepper and onion; spread half over the top. Repeat layers. Bake, uncovered, at 350° for 40-45 minutes or until heated through.</instructions>
 	</recipe>
+	<recipe id="59">
+		<title>High Rise Pancake</title>
+		<category>Breakfast</category>
+		<cuisine>German</cuisine>
+		<source>David Bremer/GQ magazine</source>
+		<rating>4/5 stars</rating>
+		<preptime>5 minutes</preptime>
+		<cooktime>20 minutes</cooktime>
+		<yields>4 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>3</amount>
+				<unit>Tbsp.</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>eggs; beaten</item>
+				<key>eggs</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>flour</item>
+				<key>flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>milk</item>
+				<key>milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tsp.</unit>
+				<item>sugar</item>
+				<key>sugar</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pinch</unit>
+				<item>nutmeg</item>
+				<key>nutmeg</key>
+			</ingredient>
+			<ingredient>
+				<item>lemon zest</item>
+				<key>lemon zest</key>
+			</ingredient>
+			<ingredient>
+				<item>powdered sugar</item>
+				<key>powdered sugar</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Preheat oven to 425 degrees
+Put the butter in a 9-10 inch pie plate or oven proof skillet and place in oven, remove once melted
+Mix the remaining ingredients with a whisk and pur into hot skillet
+Immediately return skillet to oven and bake 18-20 minutes till puffy and evenly browned on the outside
+Remove. Sprinkle with lemon zest and powdered sugar</instructions>
+	</recipe>
 	<recipe id="47">
 		<title>Hollywood Chicken With Almonds, Stir Fry</title>
 		<category>Entree</category>
@@ -2496,8 +2562,8 @@ Sprinke remaining cheese on top and cook for 5 more minutes.</instructions>
 		</ingredient-list>
 		<instructions>Cook fettuccini.
 Heat butter and garlic in skillet on medium until garlic is slightly browned.
-Add Krab, whipping cream, and pepper.  Heat 3 min. or until mixture
-Add Parm. cheese, stir for 1 minute
+Add Krab, whipping cream, and pepper.  Heat 3 min. or until cream and butter mix
+Add Parmesan cheese, stir for 1 minute
 Toss with fettuccini.</instructions>
 	</recipe>
 	<recipe id="48">
