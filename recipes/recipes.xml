@@ -3414,14 +3414,34 @@ Combine</instructions>
 	<recipe id="29">
 		<title>Tortilla-Black Bean Casserole</title>
 		<category>Entree</category>
-		<cuisine>Chinese</cuisine>
+		<cuisine>Mexican</cuisine>
 		<rating>4/5 stars</rating>
+		<preptime>10 minutes</preptime>
+		<cooktime>40 minutes</cooktime>
+		<yields>8 ser</yields>
 		<ingredient-list>
 			<ingredient>
-				<amount>12</amount>
-				<unit>or</unit>
+				<amount>18</amount>
 				<item>Tortillas; 6&quot; Corn</item>
 				<key>tortillas; 6&quot; corn</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbs</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>diced</unit>
+				<item>Onion</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cloves</unit>
+				<item>garlic</item>
+				<key>garlic</key>
 			</ingredient>
 			<ingredient>
 				<amount>1</amount>
@@ -3431,9 +3451,9 @@ Combine</instructions>
 			</ingredient>
 			<ingredient>
 				<amount>1</amount>
-				<unit>diced</unit>
-				<item>Onion</item>
-				<key>onion</key>
+				<unit>lb</unit>
+				<item>chicken breasts; diced</item>
+				<key>chicken breasts</key>
 			</ingredient>
 			<ingredient>
 				<amount>3/4</amount>
@@ -3455,27 +3475,33 @@ Combine</instructions>
 			</ingredient>
 			<ingredient>
 				<amount>1</amount>
-				<unit>Tsp.</unit>
+				<unit>Tbsp</unit>
 				<item>Cumin</item>
 				<key>cumin</key>
 			</ingredient>
 			<ingredient>
+				<amount>2</amount>
+				<unit>Tbsp</unit>
 				<item>Chili Powder</item>
 				<key>chili powder</key>
 			</ingredient>
 			<ingredient>
+				<amount>1</amount>
+				<unit>Tbsp</unit>
 				<item>Oregano</item>
 				<key>oregano</key>
 			</ingredient>
 			<ingredient>
 				<amount>8</amount>
 				<unit>oz,</unit>
-				<item>Cheddar</item>
+				<item>Cheddar; shredded</item>
 				<key>cheddar</key>
 			</ingredient>
 		</ingredient-list>
 		<instructions>preheat oven to 350 deg.
-Combine everything except tortillas into a sauce
+Saute onions in olive oil, after a minute add garlic and peppers. 
+When peppers are soft add chicken and cook until chicken is done
+Combine everything else except tortillas and cheese into a sauce
 Layer tortillas, then sauce, tortillas, sauce, tortillas
 Top with cheddar
 Cook for 30 minutes or til cheese is melted</instructions>
