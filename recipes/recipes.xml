@@ -354,6 +354,55 @@ Bake for 35 minutes, or until the top is golden brown and bubbly.</instructions>
 4. Top with bread crumbs
 5. Cook at 350 degrees for 40-50 minutes</instructions>
 	</recipe>
+	<recipe id="64">
+		<title>Buttermilk Pancakes</title>
+		<category>Breakfast</category>
+		<rating>4/5 stars</rating>
+		<preptime>15 minutes</preptime>
+		<cooktime>15 minutes</cooktime>
+		<yields>4 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>flour</item>
+				<key>flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>baking soda</item>
+				<key>baking soda</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>egg</item>
+				<key>egg</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbsp.</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>buttermilk; or 1 cup milk with 1 teaspoon vinegar</item>
+				<key>buttermilk</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Melt butter and combine with egg and buttermilk
+Combine flour, salt, and baking soda
+Mix liquid into dry ingredients
+Cook on griddle</instructions>
+	</recipe>
 	<recipe id="44">
 		<title>Chicken Pot Pie</title>
 		<category>Entree</category>
@@ -3187,6 +3236,90 @@ Add spinach and stir.
 Combine rice, cheese mixture, and and sauteed veggies and poor in casserole dish.
 Sprinkle breadcrumbs and remaining cheese on top and cook until cheese melts.</instructions>
 	</recipe>
+	<recipe id="63">
+		<title>Sweet and Sour Chicken</title>
+		<category>Entree</category>
+		<cuisine>Chinese</cuisine>
+		<link>http://www.foodnetwork.com/recipes/sweet-and-sour-chicken-recipe</link>
+		<rating>4.5/5 stars</rating>
+		<preptime>10 minutes</preptime>
+		<cooktime>1/2 hour</cooktime>
+		<yields>4 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>vegetable oil</item>
+				<key>vegetable oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>boneless chicken breasts; sliced into strips</item>
+				<key>boneless chicken breasts</key>
+			</ingredient>
+			<ingredient>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<item>pepper</item>
+				<key>pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>red pepper; chopped</item>
+				<key>red pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>teaspoons</unit>
+				<item>cornstarch; mixed with 4 teaspoons water</item>
+				<key>cornstarch</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>canned pineapple chunks; drained with 1/2 cup reserved juice</item>
+				<key>canned pineapple chunks</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>tablespoons</unit>
+				<item>light brown sugar</item>
+				<key>light brown sugar</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>tablespoons</unit>
+				<item>rice wine vinegar</item>
+				<key>rice wine vinegar</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>chicken stock</item>
+				<key>chicken stock</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>green pepper; chopped</item>
+				<key>green pepper</key>
+			</ingredient>
+			<ingredient>
+				<item>Cooked rice; for serving</item>
+				<key>Cooked rice</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>In a large non-stick skillet, heat oil over medium high heat. Season chicken strips and add to pan. Brown chicken and remove to plate. 
+Add red and green peppers and cook for 1 minute. 
+Stir in pineapple chunks, juice, sugar, vinegar and chicken stock and bring to a simmer. 
+Simmer until sauce begins to reduce. 
+Stir in cornstarch mixture and bring liquid to a simmer. 
+Stir in chicken strips and cook for 5 minutes. 
+Serve over rice.</instructions>
+	</recipe>
 	<recipe id="24">
 		<title>Sweet and Sour Meatball Sauce</title>
 		<category>Entree</category>
@@ -3325,65 +3458,6 @@ Combine everything except torillas and half cheddar
 Spoon mixture evenly into tortitillas in casserole dish
 Top with remaining cheddar
 Cook for 25-30 minutes.</instructions>
-	</recipe>
-	<recipe id="26">
-		<title>Sweet-n-sour Chikin</title>
-		<category>Entree</category>
-		<cuisine>Chinese</cuisine>
-		<rating>4/5 stars</rating>
-		<ingredient-list>
-			<ingredient>
-				<amount>10-12</amount>
-				<unit>oz.</unit>
-				<item>Veggie &quot;chikin&quot;; Diced</item>
-				<key>veggie &quot;chikin&quot;</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>large</unit>
-				<item>Carrot; Diced</item>
-				<key>carrot</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<item>Onion; Diced</item>
-				<key>onion</key>
-			</ingredient>
-			<ingredient>
-				<amount>16</amount>
-				<unit>oz.</unit>
-				<item>Pineapple Chunks In Juice</item>
-				<key>pineapple chunks in juice</key>
-			</ingredient>
-			<ingredient>
-				<amount>2-3</amount>
-				<unit>tsp.</unit>
-				<item>Brown Sugar</item>
-				<key>brown sugar</key>
-			</ingredient>
-			<ingredient>
-				<amount>2-3</amount>
-				<unit>tsp.</unit>
-				<item>Soy Sauce</item>
-				<key>soy sauce</key>
-			</ingredient>
-			<ingredient>
-				<amount>2-3</amount>
-				<unit>tsp.</unit>
-				<item>Corn Starch</item>
-				<key>corn starch</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>c.</unit>
-				<item>Rice</item>
-				<key>rice</key>
-			</ingredient>
-		</ingredient-list>
-		<instructions>Open pineapple, keep juice for sauce after draining.
-Add soy sauce to taste and cornstarch to desired thickness and stir.
-Fry up chikin, carrot, and onion (I use peanut oil). When close to done add sauce and stir for a minute or so.
-Mix in pineapple and serve over rice</instructions>
 	</recipe>
 	<recipe id="27">
 		<title>Tandoori Chicken Skewers</title>
