@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE gourmetDoc>
 <gourmetDoc>
+	<recipe id="65">
+		<title>Alfredo Sauce</title>
+		<category>Sauce</category>
+		<cuisine>Italian</cuisine>
+		<rating>4.5/5 stars</rating>
+		<preptime>10 minutes</preptime>
+		<cooktime>20 minutes</cooktime>
+		<yields>4 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>3</amount>
+				<unit>tablespoons</unit>
+				<item>sweet butter</item>
+				<key>sweet butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoons</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>garlic cloves; minced</item>
+				<key>garlic cloves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>heavy cream</item>
+				<key>heavy cream</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>teaspoon</unit>
+				<item>white pepper</item>
+				<key>white pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>parmesan cheese; grated</item>
+				<key>parmesan cheese</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Melt butter in medium saucepan with olive oil over medium/low heat.
+Add the garlic, cream, white pepper and bring mixture to a simmer.
+Stir often.
+Add the Parmesan cheese and simmer sauce for 8-10 minutes or until sauce has thickened and is smooth.</instructions>
+	</recipe>
 	<recipe id="51">
 		<title>Andoille Sausage and Shrimp Jambalaya</title>
 		<category>Entree</category>
