@@ -453,6 +453,86 @@ Combine flour, salt, and baking soda
 Mix liquid into dry ingredients
 Cook on griddle</instructions>
 	</recipe>
+	<recipe id="66">
+		<title>Chicken and Broccoli in Peanut Sauce</title>
+		<category>Entree</category>
+		<cuisine>Thai</cuisine>
+		<rating>4/5 stars</rating>
+		<preptime>45 minutes</preptime>
+		<cooktime>20 minutes</cooktime>
+		<yields>6 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>lbs</unit>
+				<item>boneless skinless chicken breasts</item>
+				<key>boneless skinless chicken breasts</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>red curry paste</item>
+				<key>red curry paste</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>teaspoons</unit>
+				<item>fresh ginger; finely grated</item>
+				<key>fresh ginger</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>garlic; crushed</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>peanut satay sauce</item>
+				<key>peanut satay sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>fish sauce</item>
+				<key>fish sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>14</amount>
+				<unit>ounces</unit>
+				<item>unsweetened coconut milk</item>
+				<key>unsweetened coconut milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>cups</unit>
+				<item>broccoli florets</item>
+				<key>broccoli florets</key>
+			</ingredient>
+			<ingredient optional="yes">
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>basil; chopped</item>
+				<key>basil</key>
+			</ingredient>
+			<ingredient optional="yes">
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>green onion; tops only, chopped</item>
+				<key>green onion</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>In a sealable plastic bag combine chicken, red curry paste, ginger and garlic.
+Massage bag until ingredients are well mixed and chicken is thoroughly coated.
+Refrigerate for 30 minutes.
+In a saucepan combine peanut satay sauce, fish sauce and coconut milk; blend well and cook until heated through.
+Broil chicken about 8 to 10 minutes, turning occasionally, until chicken is cooked.
+Meanwhile, blanch broccoli in boiling water; drain and set aside, keep warm.
+Arrange broccoli on a serving platter and top with chicken.
+Pour sauce over chicken and sprinkle with basil and green onion</instructions>
+		<modifications>Serve over rice</modifications>
+	</recipe>
 	<recipe id="44">
 		<title>Chicken Pot Pie</title>
 		<category>Entree</category>
@@ -3582,70 +3662,6 @@ Cut chicken into 1/2 inch strips or cubes
 Marinate chicken in puree for 2 hours
 Broil chicken for 6 minutes or so on each side
 Serve with rice and Traditional Indian Dipping Sauce</instructions>
-	</recipe>
-	<recipe id="28">
-		<title>Thai Peanut Noodles</title>
-		<category>Entree</category>
-		<cuisine>Other</cuisine>
-		<rating>4/5 stars</rating>
-		<ingredient-list>
-			<ingredient>
-				<amount>8</amount>
-				<unit>oz</unit>
-				<item>Rice Or Spiral Noodles</item>
-				<key>rice or spiral noodles</key>
-			</ingredient>
-			<ingredient>
-				<amount>1 1/2</amount>
-				<unit>c.</unit>
-				<item>Peanut Butter (natural)</item>
-				<key>peanut butter (natural)</key>
-			</ingredient>
-			<ingredient>
-				<amount>14</amount>
-				<unit>oz</unit>
-				<item>Coconut Milk</item>
-				<key>coconut milk</key>
-			</ingredient>
-			<ingredient>
-				<unit>tsp. astsp. e</unit>
-				<item>Tamari Or Soy Sauce</item>
-				<key>tamari or soy sauce</key>
-			</ingredient>
-			<ingredient>
-				<unit>tsp. astsp. e</unit>
-				<item>Sesame Oil</item>
-				<key>sesame oil</key>
-			</ingredient>
-			<ingredient>
-				<unit>chopped</unit>
-				<item>Tofu</item>
-				<key>tofu</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>medium,</unit>
-				<item>Carrot</item>
-				<key>carrot</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>medium</unit>
-				<item>Broccoli</item>
-				<key>broccoli</key>
-			</ingredient>
-			<ingredient>
-				<amount>1</amount>
-				<unit>tsp. sp</unit>
-				<item>Peanut Oil</item>
-				<key>peanut oil</key>
-			</ingredient>
-		</ingredient-list>
-		<instructions>Cook noodles
-Add peanut butter to coconut milk a little at a time while stirring until smooth
-Add tamari and sesame oil to taste
-Stir fry tofu, carrot, and brocolli in peanut oil
-Combine</instructions>
 	</recipe>
 	<recipe id="29">
 		<title>Tortilla-Black Bean Casserole</title>
