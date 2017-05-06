@@ -910,6 +910,9 @@ Remove from heat and add vinegar</instructions>
 		<category>Entree</category>
 		<cuisine>Italian</cuisine>
 		<rating>4/5 stars</rating>
+		<preptime>20 minutes</preptime>
+		<cooktime>50 minutes</cooktime>
+		<yields>8 servings</yields>
 		<ingredient-list>
 			<ingredient>
 				<amount>1</amount>
@@ -922,17 +925,6 @@ Remove from heat and add vinegar</instructions>
 				<unit>tsp.</unit>
 				<item>Salt</item>
 				<key>salt</key>
-			</ingredient>
-			<ingredient>
-				<amount>3</amount>
-				<item>Egg</item>
-				<key>egg</key>
-			</ingredient>
-			<ingredient>
-				<amount>1 1/2-2</amount>
-				<unit>c.</unit>
-				<item>Bread Crumb</item>
-				<key>bread crumbs</key>
 			</ingredient>
 			<ingredient>
 				<amount>1/4</amount>
@@ -961,17 +953,16 @@ Remove from heat and add vinegar</instructions>
 			<ingredient>
 				<amount>3</amount>
 				<unit>c.</unit>
-				<item>Tomato Sauce</item>
+				<item>Marinara sauce</item>
 				<key>tomato sauce</key>
 			</ingredient>
 		</ingredient-list>
 		<instructions>Peel eggplant and slice into 1/8 in. slices, salt and let drain for 30 min.
 Pat dry.
-Beat eggs wit 2 T water
-Dip eggplant slices into eggs and then into crumbs
-Heat 1/4 c. oil in large fry pan and saute eggplant slices until golden brown
-Continue cooking eggplant until all is sauteed, using additional oil if needed
-Place half the eggplant slices in 9 X 13 pan, sprinkle with 1/3 parmesan, 1/2 oregano, and 1/3 mozzarella.  Cover with half the tomato sauce.  Repeat layers, top with last of parmesan and mozzarella.
+Bake eggplant on baking sheets at 50 degrees for 15 minutes. Flip and cook for 10-15 minutes more, until carmelized
+Oil and cover a 9 X 13 pan with sauce, 
+Place a layer of eggplant, then half the remainig tomato sauce and then 1/2 the parmesan, and 1/2 the mozzarella.  
+Repeat layers
 Bake in preheated 350 oven 30 min, or until bubbly.</instructions>
 	</recipe>
 	<recipe id="6">
@@ -1111,6 +1102,92 @@ Bake in preheated 350 oven 30 min, or until bubbly.</instructions>
 
 Cook bacon over medium heat until crisp. Remove and set aside. Add corn, garlic, salt and pepper. Cook until corn is tender. remove 3/4 cups corn and set aside.
 Transfer remaining corn mixture to a food processor. Add cheese, almonds, and oil. Process until blended. Return to skillet. Add reserved corn and heat through. Add fettuccine, bacon and basil. Add reserved pasta water to desired consistency. Add tomatoes.</instructions>
+	</recipe>
+	<recipe id="67">
+		<title>Fettuccini with Shiitakes and Asparagus</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<source>Bon Appetit</source>
+		<link>http://www.bonappetit.com/recipe/fettuccine-with-shiitakes-and-asparagus</link>
+		<rating>4/5 stars</rating>
+		<preptime>15 minutes</preptime>
+		<cooktime>20 minutes</cooktime>
+		<yields>6 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>3</amount>
+				<unit>tablespoons</unit>
+				<item>olive oil; divided</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>bunch</unit>
+				<item>asparagus; trimmed, cut into 2” pieces</item>
+				<key>asparagus</key>
+			</ingredient>
+			<ingredient>
+				<item>Kosher salt</item>
+				<key>Kosher salt</key>
+			</ingredient>
+			<ingredient>
+				<item>black pepper</item>
+				<key>black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>unsalted butter</item>
+				<key>unsalted butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>oz.</unit>
+				<item>shiitake mushrooms; stems removed, caps sliced</item>
+				<key>shiitake mushrooms</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>small</unit>
+				<item>shallot; finely chopped</item>
+				<key>shallot</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>fresh oregano; chopped</item>
+				<key>fresh oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>fresh thyme; chopped</item>
+				<key>fresh thyme</key>
+			</ingredient>
+			<ingredient>
+				<amount>12</amount>
+				<unit>oz.</unit>
+				<item>dried fettuccine</item>
+				<key>dried fettuccine</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>oz.</unit>
+				<item>Parmesan; grated (about ¾ cup)</item>
+				<key>Parmesan</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>large</unit>
+				<item>egg yolks</item>
+				<key>egg yolks</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Heat 2 Tbsp. oil in a large skillet over medium-high heat. Add asparagus, season with salt and pepper, and cook, stirring occasionally, until just tender, about 4 minutes. Transfer to a plate.
+Heat butter and remaining 1 Tbsp. oil in same skillet over medium-high heat. Add mushrooms, season with salt and pepper, and cook, tossing often, until tender, about 5 minutes. Add shallot and cook, tossing occasionally, until softened, about 2 minutes. Toss in oregano, thyme, and asparagus.
+Meanwhile, cook pasta in a large pot of boiling salted water, stirring occasionally, until al dente. Drain, reserving 1 cup pasta cooking liquid.
+Add pasta, ½ cup pasta cooking liquid, and 3 oz. Parmesan to skillet. Cook, tossing and adding more pasta cooking liquid as needed, until sauce coats pasta, about 2 minutes; season with salt and pepper
+Stir the yolk into  the pasta</instructions>
 	</recipe>
 	<recipe id="8">
 		<title>Ginger Miso Soup with Arame</title>
