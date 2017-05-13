@@ -1303,6 +1303,164 @@ Simmer for 5 minutes, careful not to boil</instructions>
 4. Slowly add mik while constantly serving
 5. serve over biscuits</instructions>
 	</recipe>
+	<recipe id="68">
+		<title>Gumbo</title>
+		<category>Entree</category>
+		<cuisine>Cajun</cuisine>
+		<source>allrecipes</source>
+		<link>http://allrecipes.com/recipe/13275/big-charlies-gumbo/</link>
+		<rating>5/5 stars</rating>
+		<preptime>1/2 hour</preptime>
+		<cooktime>4 hours</cooktime>
+		<yields>6 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cloves</unit>
+				<item>garlic; minced</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>chopped onion</item>
+				<key>chopped onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>3/4</amount>
+				<unit>cup</unit>
+				<item>celery; chopped</item>
+				<key>celery</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>okra; chopped</item>
+				<key>okra</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>all-purpose flour</item>
+				<key>all-purpose flour</key>
+			</ingredient>
+			<ingredient optional="yes">
+				<amount>1/2</amount>
+				<unit>pound</unit>
+				<item>beef stew meat; cubed</item>
+				<key>beef stew meat</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>cups</unit>
+				<item>water</item>
+				<key>water</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>can</unit>
+				<item>whole tomatoes; (16 ounce) undrained and chopped</item>
+				<key>whole tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>1 1/2</amount>
+				<unit>teaspoons</unit>
+				<item>white sugar</item>
+				<key>white sugar</key>
+			</ingredient>
+			<ingredient>
+				<amount>1 1/2</amount>
+				<unit>tablespoons</unit>
+				<item>fresh parsley; chopped</item>
+				<key>fresh parsley</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>sprig fresh thyme</item>
+				<key>sprig fresh thyme</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>bay leaves</item>
+				<key>bay leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pinch</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>ground cayenne pepper</item>
+				<key>ground cayenne pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pinch</unit>
+				<item>ground black pepper</item>
+				<key>ground black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>andouille sausage; cut into 1/2 inch pieces</item>
+				<key>andouille sausage</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>pound</unit>
+				<item>crabmeat; flaked</item>
+				<key>crabmeat</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>medium shrimp; peeled and deveined</item>
+				<key>medium shrimp</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>hot pepper sauce</item>
+				<key>hot pepper sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>Worcestershire sauce</item>
+				<key>Worcestershire sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<item>lemon</item>
+				<key>lemon</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Melt 2 Tbsp. butter in large skillet over medium heat. Cook garlic, onions, celery, and okra, stirring constantly until golden brown. Set aside.
+In a large pot over medium heat, combine 1/4 butter and flour. Cook, stirring constantl, until roux becomes chocolate brown. Stir in the vegetable mixture and stew meat. 
+Cook, stirring constantly until vegetables are tender and meat is evenly browned.
+Stir in water, tomatoes, and sugar.
+Season with parsley, thyme, bay leaves, salt, cayenne pepper, and black pepper.
+Bring to a boil, reduce heat, and simmer for 1 1/2 hours, stirring occasionally.
+Add shrimp, crabmeat, and andouille to pot. 
+Stir in hot pepper, Worsteshire sauce, and lemon juice.
+Simmer another 10 minutes, stirring occasionally.
+Remove bay leaves, sprinkle with file powder, and serve.</instructions>
+	</recipe>
 	<recipe id="52">
 		<title>Hallandaise Sauce</title>
 		<category>Breakfast</category>
