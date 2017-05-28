@@ -237,6 +237,118 @@ Add the Parmesan cheese and simmer sauce for 8-10 minutes or until sauce has thi
 4.  Stir sausage into beans, and continue to simmer for 30 minutes.
 5.  Meanwhile, prepare the rice. In a saucepan, bring water and rice to a boil. Reduce heat, cover, and simmer for 20 minutes. Serve beans over steamed white rice.</instructions>
 	</recipe>
+	<recipe id="69">
+		<title>Baked Manicotti</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<source>Mel's Kitchen Cafe</source>
+		<link>https://www.melskitchencafe.com/best-baked-manicotti/</link>
+		<rating>4/5 stars</rating>
+		<preptime>1/2 hour</preptime>
+		<cooktime>50 minutes</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<item>28-ounce can diced tomatoes; (in juice)</item>
+				<key>28-ounce can diced tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>28-ounce can crushed tomatoes</item>
+				<key>28-ounce can crushed tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>extra-virgin olive oil</item>
+				<key>extra-virgin olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>medium</unit>
+				<item>cloves garlic; finely minced</item>
+				<key>cloves garlic</key>
+			</ingredient>
+			<ingredient optional="yes">
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>red pepper flakes;</item>
+				<key>red pepper flakes</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>teaspoons</unit>
+				<item>dried basil</item>
+				<key>dried basil</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cups</unit>
+				<item>ricotta cheese</item>
+				<key>ricotta cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<item>ouncesParmesan cheese;  grated (about 2 cups)</item>
+				<key>ouncesParmesan cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>ounces</unit>
+				<item>mozzarella cheese; shredded (about 2 cups)</item>
+				<key>mozzarella cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>large</unit>
+				<item>eggs; lightly beaten</item>
+				<key>eggs</key>
+			</ingredient>
+			<ingredient>
+				<amount>3/4</amount>
+				<unit>teaspoon</unit>
+				<item>table salt</item>
+				<key>table salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>ground black pepper</item>
+				<key>ground black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>fresh parsley leaves; chopped (or 2 1/2 teaspoons dried parsley)</item>
+				<key>fresh parsley leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>teaspoons</unit>
+				<item>fresh basil; chopped (or 1 teaspoon dried basil)</item>
+				<key>fresh basil</key>
+			</ingredient>
+			<ingredient>
+				<amount>16</amount>
+				<item>no-boil lasagna noodles; (I use the Barilla brand – apparently they are supposed to be the most similar to homemade pasta and I love them, both in this and in lasagna)</item>
+				<key>no-boil lasagna noodles</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Adjust oven rack to middle position and heat oven to 375 degrees.
+Heat oil, garlic, and pepper flakes (if using) in large saucepan over medium heat until fragrant but not brown, 1 to 2 minutes. Stir in tomatoes, basil and 1/2 teaspoon salt and simmer until thickened slightly, about 15 minutes.
+In a medium bowl, combine ricotta, 1 cup Parmesan chese, mozzarella cheese, eggs, salt, pepper, and herbs; set aside.
+To assemble, pour 1 inch boiling water into 13 by 9-inch baking dish, then add noodles one at a time. Let noodles soak until pliable, about 5 minutes, separating noodles with tip of sharp knife to prevent sticking. Remove noodles from water and place in single layer on clean kitchen towels; discard water in baking dish and dry baking dish.
+Spread bottom of baking dish evenly with 1 1/2 cups sauce. Using soupspoon, spread 1/4 cup cheese mixture evenly onto bottom three-quarters of each noodle (with short side facing you), leaving top quarter of noodle exposed. Roll into tube shape and arrange in baking dish seam side down. (You should be able to fit 8 manicotti in each row, allowing all 16 to fit in the dish). Top evenly with remaining sauce, making certain that pasta is completely covered.
+Cover manicotti with aluminum foil. Bake until bubbling, about 40 minutes, then remove foil. Sprinkle manicotti evenly with remaining 1 cup Parmesan. Bake until cheese is browned and bubbly, about 6-7 minutes. Remove from oven and let sit for 15 minutes before serving.
+The manicotti can be prepared right up until the baking step then covered with a sheet of parchment paper, wrapped in aluminum foil, and refrigerated for up to 3 days or frozen for up to 1 month. (If frozen, thaw the manicotti in the refrigerator for 1 to 2 days.) To bake, remove the parchment, replace the aluminum foil, and increase baking time to 1 to 1 1/4 hours.</instructions>
+	</recipe>
 	<recipe id="2">
 		<title>Baked Rice With Cheese And Green Chilies</title>
 		<category>Entree</category>
@@ -1262,6 +1374,67 @@ Add 4 c. water, bring to boil, and simmer for 5 minutes
 In a small bowl, disolve miso in some of hot liquid.
 Add dissolved miso, tofu, and soaked and drained arame to pot
 Simmer for 5 minutes, careful not to boil</instructions>
+	</recipe>
+	<recipe id="70">
+		<title>Grandma's Corrn Bread</title>
+		<category>Bread</category>
+		<cuisine>Southern</cuisine>
+		<source>Mom</source>
+		<rating>4/5 stars</rating>
+		<preptime>15 minutes</preptime>
+		<cooktime>20 minutes</cooktime>
+		<yields>4 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>cornmeal</item>
+				<key>cornmeal</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>boiling water</item>
+				<key>boiling water</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>t.</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>egg; well beaten</item>
+				<key>egg</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/3</amount>
+				<unit>c.</unit>
+				<item>milk</item>
+				<key>milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>flour</item>
+				<key>flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>2 1/2</amount>
+				<unit>t.</unit>
+				<item>baking powder</item>
+				<key>baking powder</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Place in bowl butter, cornmeal, boiling water and salt.  Let sit to melt, stirring occasionally.  Then add egg, milk to hot meal, stir in, then add flour and baking powder.
+Bake at 450 degrees for about 20 minutes. Will be beginning to brown on top.</instructions>
 	</recipe>
 	<recipe id="60">
 		<title>Gravy for Biscuits and Gravy</title>
