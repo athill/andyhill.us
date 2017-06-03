@@ -825,6 +825,140 @@ Pour sauce over chicken and sprinkle with basil and green onion</instructions>
 6. Stir in the sour cream.
 7. Add salt to taste</instructions>
 	</recipe>
+	<recipe id="71">
+		<title>Cioppino</title>
+		<category>Soup</category>
+		<cuisine>Italian</cuisine>
+		<source>ace of spaces hq</source>
+		<rating>4/5 stars</rating>
+		<preptime>15 minutes</preptime>
+		<cooktime>1 hour</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>6</amount>
+				<item>prawns; peeled with tails left on</item>
+				<key>prawns</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<item>clams</item>
+				<key>clams</key>
+			</ingredient>
+			<ingredient>
+				<amount>12</amount>
+				<item>mussels</item>
+				<key>mussels</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<unit>ounces</unit>
+				<item>halibut; cut into cubes.</item>
+				<key>halibut</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>small</unit>
+				<item>sea scallops</item>
+				<key>sea scallops</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>red bell pepper; diced</item>
+				<key>red bell pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<item>onion; diced</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<item>tomato; diced</item>
+				<key>tomato</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>garlic; minced</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>chili flakes</item>
+				<key>chili flakes</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>basil leaves; chopped</item>
+				<key>basil leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>tablespoon</unit>
+				<item>oregano leaves; chopped</item>
+				<key>oregano leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>rosemary leaves; chopped</item>
+				<key>rosemary leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>parsley leaves; chopped</item>
+				<key>parsley leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cups</unit>
+				<item>lobster stock</item>
+				<key>lobster stock</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>dry white wine</item>
+				<key>dry white wine</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>tomato; chopped, canned</item>
+				<key>tomato</key>
+			</ingredient>
+			<ingredient>
+				<item>Salt</item>
+				<key>Salt</key>
+			</ingredient>
+			<ingredient>
+				<item>pepper</item>
+				<key>pepper</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Add the onion and red pepper and sauté for a few minutes until soft.
+Add the garlic, chili flakes, basil, oregano, rosemary, and parsley and cook for 3 minutes.
+Add the clams and mussels and cook for another few minutes.
+Add the diced tomato and cook for another minute.
+Deglaze with the wine, then add lobster stock.
+Add the canned tomato and bring to a simmer.
+Cook until the clams and mussels just begin to open; about five minutes.
+Add the prawns and stir, cook for three minutes.
+Add the fish and the scallops and cook for three-four minutes.
+Taste the broth and add salt and black pepper as needed.
+Ladle into warmed bowls and serve with toasted baguettes.</instructions>
+	</recipe>
 	<recipe id="3">
 		<title>Crab dip</title>
 		<category>Entree</category>
@@ -1376,7 +1510,7 @@ Add dissolved miso, tofu, and soaked and drained arame to pot
 Simmer for 5 minutes, careful not to boil</instructions>
 	</recipe>
 	<recipe id="70">
-		<title>Grandma's Corrn Bread</title>
+		<title>Grandma's Corn Bread</title>
 		<category>Bread</category>
 		<cuisine>Southern</cuisine>
 		<source>Mom</source>
