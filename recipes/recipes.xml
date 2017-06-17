@@ -4643,20 +4643,69 @@ Transfer to casserole dish, top with more crumpled tortilla chips and cheese, an
 		<rating>4/5 stars</rating>
 		<ingredient-list>
 			<ingredient>
-				<item>Onion; Zuchini; Carrot; Broccoli; Mushroom</item>
+				<amount>1</amount>
+				<unit>c</unit>
+				<item>onion; chopped</item>
 				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>carrots; chopped</item>
+				<key>carrots</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>broccoli; chopped</item>
+				<key>broccoli</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>mushrooms; chopped</item>
+				<key>mushrooms</key>
 			</ingredient>
 			<ingredient>
 				<amount>3</amount>
 				<unit>Tsp.</unit>
-				<item>Garlic</item>
+				<item>garlic; minced</item>
 				<key>garlic</key>
 			</ingredient>
 			<ingredient>
-				<amount>14</amount>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>zucchini; chopped</item>
+				<key>zucchini</key>
+			</ingredient>
+			<ingredient>
+				<amount>28</amount>
 				<unit>oz</unit>
-				<item>Tomato Sauce</item>
+				<item>marinara sauce</item>
 				<key>tomato sauce</key>
+			</ingredient>
+			<ingredient>
+				<amount>10-12</amount>
+				<item>lasagne noodles</item>
+				<key>lasagne noodles</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>thyme</item>
+				<key>thyme</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>basil</item>
+				<key>basil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>tsp.</unit>
+				<item>black pepper</item>
+				<key>pepper</key>
 			</ingredient>
 			<ingredient>
 				<amount>1/2</amount>
@@ -4665,19 +4714,8 @@ Transfer to casserole dish, top with more crumpled tortilla chips and cheese, an
 				<key>oregano</key>
 			</ingredient>
 			<ingredient>
-				<amount>1/4</amount>
-				<unit>tsp.</unit>
-				<item>Pepper; Thyme; Basil</item>
-				<key>pepper</key>
-			</ingredient>
-			<ingredient>
-				<amount>10-12</amount>
-				<item>Lasagne Noodles</item>
-				<key>lasagne noodles</key>
-			</ingredient>
-			<ingredient>
-				<amount>1/2</amount>
-				<unit>lb</unit>
+				<amount>8</amount>
+				<unit>oz</unit>
 				<item>Ricotta</item>
 				<key>ricotta</key>
 			</ingredient>
@@ -4696,10 +4734,10 @@ Transfer to casserole dish, top with more crumpled tortilla chips and cheese, an
 		</ingredient-list>
 		<instructions>Cook noodles
 Preheat oven to 350 deg
-Saute veggies
-Combine with tomato sauce and spices
+Saute vegetables
+Combine vegretables with tomato sauce and spices
 Spread thin layer of sauce
-layer noodles, sauce, ricotta, mozzerella, noodles, sauce, ricotta, mozzerella, noodles
+Layer noodles, sauce, ricotta, mozzerella, noodles, sauce, ricotta, mozzerella, noodles
 Top with remaining mozzerella and parmesan
 Cook for 30-40 minutes</instructions>
 	</recipe>
