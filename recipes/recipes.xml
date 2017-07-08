@@ -516,6 +516,75 @@ Bake for 35 minutes, or until the top is golden brown and bubbly.</instructions>
 4. Top with bread crumbs
 5. Cook at 350 degrees for 40-50 minutes</instructions>
 	</recipe>
+	<recipe id="72">
+		<title>Buttermilk Biscuits</title>
+		<category>Bread</category>
+		<cuisine>Southern</cuisine>
+		<link>http://www.food.com/recipe/southern-buttermilk-biscuits-26110</link>
+		<rating>4/5 stars</rating>
+		<preptime>10 minutes</preptime>
+		<cooktime>10 minutes</cooktime>
+		<yields>8 biscuits</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>unbleached all-purpose flour; plus more for dusting the board ( if you can get White Lily flour, your biscuits will be even better)</item>
+				<key>unbleached all-purpose flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>teaspoon</unit>
+				<item>baking soda</item>
+				<key>baking soda</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>baking powder; ( use one without aluminum)</item>
+				<key>baking powder</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<unit>tablespoons</unit>
+				<item>unsalted butter; very cold</item>
+				<key>unsalted butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>buttermilk; ( approx)</item>
+				<key>buttermilk</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Preheat your oven to 450°F.
+Combine the dry ingredients in a bowl, or in the bowl of a food processor.
+Cut the butter into chunks and cut into the flour until it resembles course meal.
+If using a food processor, just pulse a few times until this consistency is achieved.
+Add the buttermilk and mix JUST until combined.
+If it appears on the dry side, add a bit more buttermilk. It should be very wet.
+Turn the dough out onto a floured board.
+Gently, gently PAT (do NOT roll with a rolling pin) the dough out until it's about 1/2&quot; thick. Fold the dough about 5 times, gently press the dough down to a 1 inch thick.
+Use a round cutter to cut into rounds.
+You can gently knead the scraps together and make a few more, but they will not be anywhere near as good as the first ones.
+Place the biscuits on a cookie sheet- if you like soft sides, put them touching each other.
+If you like&quot;crusty&quot; sides, put them about 1 inch apart- these will not rise as high as the biscuits put close together.
+Bake for about 10-12 minutes- the biscuits will be a beautiful light golden brown on top and bottom.</instructions>
+		<modifications>Do not overbake.
+Note: The key to real biscuits is not in the ingredients, but in the handling of the dough.
+The dough must be handled as little as possible or you will have tough biscuits.
+I have found that a food processor produces superior biscuits, because the ingredients stay colder and there's less chance of overmixing.
+You also must pat the dough out with your hands, lightly.
+Rolling with a rolling pin is a guaranteed way to overstimulate the gluten, resulting in a tougher biscuit.
+Note 2: You can make these biscuits, cut them, put them on cookie sheets and freeze them for up to a month.
+When you want fresh biscuits, simply place them frozen on the cookie sheet and bake at 450°F for about 20 minutes.</modifications>
+	</recipe>
 	<recipe id="64">
 		<title>Buttermilk Pancakes</title>
 		<category>Breakfast</category>
