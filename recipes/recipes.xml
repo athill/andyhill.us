@@ -810,6 +810,133 @@ Pour sauce over chicken and sprinkle with basil and green onion</instructions>
     Place the chicken mixture in bottom pie crust. Pour hot liquid mixture over. Cover with top crust, seal edges, and cut away excess dough. Make several small slits in the top to allow steam to escape.
     Bake in the preheated oven for 30 to 35 minutes, or until pastry is golden brown and filling is bubbly. Cool for 10 minutes before serving</instructions>
 	</recipe>
+	<recipe id="73">
+		<title>Chicken Verde Stew with Hominy</title>
+		<category>Soup</category>
+		<cuisine>Mexican</cuisine>
+		<source>ace of spaces hq</source>
+		<rating>4/5 stars</rating>
+		<preptime>1/2 hour</preptime>
+		<cooktime>1 1/2 hours</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>2</amount>
+				<item>Anaheim chiles</item>
+				<key>Anaheim chiles</key>
+			</ingredient>
+			<ingredient>
+				<item>Cooking spray</item>
+				<key>Cooking spray</key>
+			</ingredient>
+			<ingredient>
+				<amount>1 1/2</amount>
+				<unit>pounds</unit>
+				<item>tomatillos</item>
+				<key>tomatillos</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>fresh cilantro; finely chopped</item>
+				<key>fresh cilantro</key>
+			</ingredient>
+			<ingredient>
+				<amount>1 1/2</amount>
+				<unit>teaspoons</unit>
+				<item>ground cumin</item>
+				<key>ground cumin</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>dried oregano</item>
+				<key>dried oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>chicken broth; divided</item>
+				<key>chicken broth</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>olive oil; divided</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1 1/2</amount>
+				<unit>cups</unit>
+				<item>onion; finely chopped</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>carrot; chopped</item>
+				<key>carrot</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>celery; chopped</item>
+				<key>celery</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>red bell pepper; chopped</item>
+				<key>red bell pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>tablespoons</unit>
+				<item>flour</item>
+				<key>flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>teaspoons</unit>
+				<item>garlic; finely chopped</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>skinless, boneless chicken thighs; cut into 1 1/2-inch pieces</item>
+				<key>skinless, boneless chicken thighs</key>
+			</ingredient>
+			<ingredient>
+				<amount>3/4</amount>
+				<unit>teaspoon</unit>
+				<item>kosher salt; divided</item>
+				<key>kosher salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>black pepper; divided</item>
+				<key>black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>(29-ounce) can golden hominy; rinsed and drained</item>
+				<key>(29-ounce) can golden hominy</key>
+			</ingredient>
+			<ingredient>
+				<item>Sour cream</item>
+				<key>Sour cream</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Preheat broiler to high.
+
+Halve, stem, and seed chiles. Place chiles, skin side up, on a foil-lined baking sheet coated with cooking spray; broil for 5 minutes or until charred. Place chiles in a paper bag; seal. Let stand for 15 minutes. Peel and discard skins. Arrange tomatillos on prepared baking sheet, and broil 14 minutes or until blackened, turning once. Combine the chiles, tomatillos, 1/4 cup cilantro, cumin, and oregano in a blender. Add 1 cup broth; process until smooth.
+
+Heat a large Dutch oven over medium-high heat. Add 2 teaspoons olive oil; swirl to coat. Add onion, carrot, celery, and bell pepper; sauté for 2 minutes, stirring occasionally. Stir in flour; sauté for 2 minutes, stirring frequently. Add garlic; sauté for 30 seconds, stirring constantly. Place onion mixture in a large bowl.
+
+Sprinkle chicken with 1/2 teaspoon salt and 1/4 teaspoon black pepper. Add 2 teaspoons oil to pan; swirl to coat. Add half of chicken; sauté 3 minutes. Add browned chicken to onion mixture. Repeat procedure with remaining chicken and 2 teaspoons oil. Combine remaining 1 cup broth, tomatillo mixture, onion mixture, and hominy in pan over medium-high heat, and bring to a boil. Cover, reduce heat, and simmer for 45 minutes, stirring occasionally. Stir in 1/2 teaspoon salt and 1/4 teaspoon black pepper. Ladle 1 2/3 cups stew into each of 6 bowls, and top each with 1 tablespoon sour cream. Garnish with cilantro, if desired.</instructions>
+	</recipe>
 	<recipe id="42">
 		<title>Chili con Queso</title>
 		<category>Entree</category>
