@@ -1631,6 +1631,71 @@ Meanwhile, cook pasta in a large pot of boiling salted water, stirring occasiona
 Add pasta, ½ cup pasta cooking liquid, and 3 oz. Parmesan to skillet. Cook, tossing and adding more pasta cooking liquid as needed, until sauce coats pasta, about 2 minutes; season with salt and pepper
 Stir the yolk into  the pasta</instructions>
 	</recipe>
+	<recipe id="77">
+		<title>Fried Green Tomatoes</title>
+		<category>Side</category>
+		<cuisine>Southern</cuisine>
+		<source>simply recipes</source>
+		<link>http://www.simplyrecipes.com/recipes/fried_green_tomatoes/</link>
+		<rating>4/5 stars</rating>
+		<preptime>10 minutes</preptime>
+		<cooktime>20 minutes</cooktime>
+		<yields>4 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>3</amount>
+				<item>medium, firm green tomatoes</item>
+				<key>medium, firm green tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<item>Salt</item>
+				<key>Salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>all-purpose flour</item>
+				<key>all-purpose flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>Tbsp</unit>
+				<item>Cajun seasoning</item>
+				<key>Cajun seasoning</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>milk or buttermilk</item>
+				<key>milk or buttermilk</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>egg</item>
+				<key>egg</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/3</amount>
+				<unit>cup</unit>
+				<item>cornmeal</item>
+				<key>cornmeal</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>fine dry bread crumbs</item>
+				<key>fine dry bread crumbs</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>peanut oil</item>
+				<key>peanut oil</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Cut unpeeled tomatoes into 1/2 inch slices. Sprinkle slices with salt. Let tomato slices stand for 5 minutes. Meanwhile, place in separate shallow bowls: the flour and Cajun seasoning (if using), buttermilk and egg, and bread crumbs and cornmeal.
+Heat the peanut oil in a skillet on medium heat. Beat the egg and the buttermilk together. Dip tomato slices in the flour-seasoning mix, then buttermilk-egg mixture, then the cornmeal-bread crumb mix. In the skillet, fry half of the coated tomato slices at a time, for 3-5 minutes on each side or until brown. Set the cooked tomatoes on paper towels to drain. These are fantastic with a little Tabasco sauce or remoulade.</instructions>
+	</recipe>
 	<recipe id="8">
 		<title>Ginger Miso Soup with Arame</title>
 		<category>Soup</category>
@@ -2511,6 +2576,123 @@ Bake 20-25 min. 350 deb.</instructions>
 6. Combine cottage cheese, eggs, pepper, 2 tablespoons parsley, Parmesan cheese and 1/2 of mozzarella cheese; In a lasagna pan, layer noodles, meat sauce, and cheese mixture; repeat.
 7. Top off with layer of noodles; sprinkle evenly with remaining mozzarella cheese.
 8. Bake at 375F for 40-60 minutes, or until cheese mixture is thoroughly melted. (I cover w/ foil for about 40 minutes, then uncover for 15-20 minutes.</instructions>
+	</recipe>
+	<recipe id="78">
+		<title>Linguine with Clam Sauce</title>
+		<category>Entree</category>
+		<cuisine>Italian</cuisine>
+		<source>ace of spaces hq</source>
+		<link>http://ace.mu.nu/archives/353439.php</link>
+		<rating>4/5 stars</rating>
+		<preptime>20 minutes</preptime>
+		<cooktime>1/2 hour</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>linguine</item>
+				<key>linguine</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>ounces</unit>
+				<item>chorizo or prosciutto; diced</item>
+				<key>chorizo or prosciutto</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>yellow onions; finely chopped</item>
+				<key>yellow onions</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>thinly sliced garlic</item>
+				<key>thinly sliced garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>dry oregano</item>
+				<key>dry oregano</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/8</amount>
+				<unit>teaspoon</unit>
+				<item>red pepper flakes</item>
+				<key>red pepper flakes</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cans</unit>
+				<item>clams; whole or rough chopped</item>
+				<key>clams</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>dry white wine</item>
+				<key>dry white wine</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>clam juice (from canned clams above)</item>
+				<key>clam juice (from canned clams above)</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>half&amp;half</item>
+				<key>half&amp;half</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>oz.</unit>
+				<item>butter</item>
+				<key>butter</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>fresh lemon juice</item>
+				<key>fresh lemon juice</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>cup</unit>
+				<item>fresh parsley leaves; chopped</item>
+				<key>fresh parsley leaves</key>
+			</ingredient>
+			<ingredient>
+				<item>Parmesan; grated, to taste</item>
+				<key>Parmesan</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Bring a large pot of salted water to a boil. Add the linguine and cook until 1 minute before al dente. Drain the pasta in a colander, reserving 1/2 cup of the cooking liquid. Rinse the pasta in cold water to stop cooking, drain and return to pot. Cover and set aside.
+In a large, heavy saute pan or medium pot, heat the oil over medium heat. Add the chorizo and cook, stirring, for 2 minutes (If using prosciutto, remove and set aside).
+Add the onions and cook, stirring, until soft, 3 minutes.
+Add the garlic, oregano, salt, and red pepper flakes, and cook, stirring, for 1 minute.
+Add the wine and clam juice and cook for 1 minute.
+Add the half&amp;amp;half, butter and lemon juice, stir well, and simmer for 1 minute.
+Add the clams (and prosciutto), cover, and cook for about 2 minutes.
+Add the cooked pasta and toss to coat.
+Add the parsley, and toss to coat. Adjust the thickness with reserved pasta cooking water if necessary.
+Serve immediately with parmesan to taste.</instructions>
 	</recipe>
 	<recipe id="11">
 		<title>Maine Lobster Lasagne</title>
@@ -4097,6 +4279,68 @@ Add the egg and cheese mixture (do this off the heat), spreading it over the pas
 
 Crack some black pepper into the pasta and toss again. I like tossing the parsley in with the pepper, but you can also use it as garnish after you serve it.</instructions>
 	</recipe>
+	<recipe id="79">
+		<title>Spicy Black Eyed Peas</title>
+		<category>Side</category>
+		<cuisine>Southern</cuisine>
+		<source>Food Network</source>
+		<link>http://www.foodnetwork.com/recipes/paula-deen/spicy-black-eyed-peas-recipe.html</link>
+		<rating>3.5/5 stars</rating>
+		<preptime>1/2 hour</preptime>
+		<cooktime>1 hour</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>4</amount>
+				<unit>slices</unit>
+				<item>bacon</item>
+				<key>bacon</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>medium</unit>
+				<item>onion; chopped</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>package</unit>
+				<item>dried black-eyed peas; washed (16-ounce)</item>
+				<key>dried black-eyed peas</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>can</unit>
+				<item>diced tomatoes and green chiles; (12-ounce)</item>
+				<key>diced tomatoes and green chiles</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>teaspoon</unit>
+				<item>chili powder</item>
+				<key>chili powder</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>teaspoon</unit>
+				<item>black pepper; freshly ground</item>
+				<key>black pepper</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cups</unit>
+				<item>water</item>
+				<key>water</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>In a large saucepan, cook the bacon until crisp. Remove the bacon, crumble, and set aside to use as a topping for the peas. Saute the onion in the bacon drippings until tender. Add the peas, diced tomatoes and green chiles, salt, chili powder, pepper and water. Cover and cook over medium heat for 45 minutes to 1 hour, or until the peas are tender. Add additional water, if necessary. Serve garnished with crumbled bacon.</instructions>
+	</recipe>
 	<recipe id="22">
 		<title>Spinach artichoke dip</title>
 		<category>Entree</category>
@@ -4246,6 +4490,87 @@ When roux has thickened, add 3/4 cheese, salt, pepper, and hot sauce.
 Add spinach and stir.
 Combine rice, cheese mixture, and and sauteed veggies and poor in casserole dish.
 Sprinkle breadcrumbs and remaining cheese on top and cook until cheese melts.</instructions>
+	</recipe>
+	<recipe id="76">
+		<title>Suasage and Spinach Breakfast Casserole</title>
+		<category>Breakfast</category>
+		<cuisine>Other</cuisine>
+		<rating>4/5 stars</rating>
+		<preptime>20 minutes</preptime>
+		<cooktime>20 minutes</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>lb.</unit>
+				<item>italian sausage</item>
+				<key>italian sausage</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>onion; chopped</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<item>7oz jar roasted peppers; drained</item>
+				<key>7oz jar roasted peppers</key>
+			</ingredient>
+			<ingredient>
+				<amount>10</amount>
+				<unit>oz</unit>
+				<item>frozen spinach; thawed, drained, and squeezed dry</item>
+				<key>frozen spinach</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>all-purpose flour</item>
+				<key>all-purpose flour</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>c.</unit>
+				<item>parmesan cheese</item>
+				<key>parmesan cheese</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>t.</unit>
+				<item>dried basil</item>
+				<key>dried basil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>t.</unit>
+				<item>salt</item>
+				<key>salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<item>eggs</item>
+				<key>eggs</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>c</unit>
+				<item>milk</item>
+				<key>milk</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>c.</unit>
+				<item>provolone; shredded</item>
+				<key>provolone</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>saute suasage and onion, pour in casserole dish
+cover with 1/2 red peppers and all spinach
+In a bowl, combine flour, parmesan, basil and salt
+whisk together eggs and milk, stir into flour mixture and pour over spinach
+bake at 425 for 15-20 minutes (until a knife inserted comes out clean)
+top with provolone and remaining peppers, bake 3-5 minutes until cheese is melted</instructions>
 	</recipe>
 	<recipe id="63">
 		<title>Sweet and Sour Chicken</title>
@@ -4807,6 +5132,121 @@ Chill until ready to serve</instructions>
 8. Simmer at least 20 minutes
 9. Add sausage, turkey, tomato, file powder, and seasoning to taste
 10. Serve over rice</instructions>
+	</recipe>
+	<recipe id="75">
+		<title>Tuscan Vegetable Soup with White Beans and Parmesan</title>
+		<category>Soup</category>
+		<cuisine>Italian</cuisine>
+		<rating>3/5 stars</rating>
+		<preptime>20 minutes</preptime>
+		<cooktime>1/2 hour</cooktime>
+		<yields>12 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>1</amount>
+				<unit>pound</unit>
+				<item>package dried cannellini; (white kidney beans)</item>
+				<key>package dried cannellini</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>large</unit>
+				<item>onion; finely chopped</item>
+				<key>onion</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>fresh thyme; chopped</item>
+				<key>fresh thyme</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<unit>cloves</unit>
+				<item>garlic ; minced</item>
+				<key>garlic </key>
+			</ingredient>
+			<ingredient>
+				<amount>1/4</amount>
+				<unit>head</unit>
+				<item>green cabbage; cut into 1/2-inch pieces</item>
+				<key>green cabbage</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>tomatoes; chopped</item>
+				<key>tomatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<item>stalks celery; cut into 1/2-inch pieces</item>
+				<key>stalks celery</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<item>carrots; cut into 1/2-inch pieces</item>
+				<key>carrots</key>
+			</ingredient>
+			<ingredient>
+				<amount>10</amount>
+				<unit>cups</unit>
+				<item>vegetable stock or canned vegetable broth</item>
+				<key>vegetable stock or canned vegetable broth</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>medium</unit>
+				<item>potatoes; cut into 1/2-inch pieces</item>
+				<key>potatoes</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>cup</unit>
+				<item>fresh basil; chopped</item>
+				<key>fresh basil</key>
+			</ingredient>
+			<ingredient>
+				<amount>1/2</amount>
+				<unit>head</unit>
+				<item>red cabbage; cut into 1/2-inch pieces</item>
+				<key>red cabbage</key>
+			</ingredient>
+			<ingredient>
+				<amount>4</amount>
+				<item>zucchini; cut into 1/2-inch pieces</item>
+				<key>zucchini</key>
+			</ingredient>
+			<ingredient>
+				<amount>6</amount>
+				<unit>slices</unit>
+				<item>7-grain bread' toasted</item>
+				<key>7-grain bread' toasted</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>cup</unit>
+				<item>Parmesan cheese; grated (about 3 ounces)</item>
+				<key>Parmesan cheese</key>
+			</ingredient>
+			<ingredient>
+				<item>olive oil</item>
+				<key>olive oil</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>Place beans in heavy large pot. Pour in enough water to cover beans by 3 inches. Soak overnight. Drain beans.
+Heat 2 tablespoons olive oil in very large pot over medium heat. Add onion, thyme, and garlic; sauté 5 minutes.
+Add green cabbage, tomatoes, celery, and carrots; sauté 10 minutes.
+Add beans, 10 cups stock, potatoes, and basil. Bring to boil. Reduce heat; cover and simmer 1 hour.
+Add red cabbage and zucchini. Cover and simmer until vegetables are tender, about 20 minutes longer.
+Uncover. Add toasted bread slices to soup and remove from heat; let stand 10 minutes.
+Stir in cheese. Divide soup among bowls. Top each serving with ground pepper and additional olive oil and serve.</instructions>
 	</recipe>
 	<recipe id="33">
 		<title>Vegetarian Meatballs</title>
