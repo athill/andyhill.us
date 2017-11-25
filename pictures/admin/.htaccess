@@ -1,4 +1,0 @@
-AuthUserFile /home/andyhil/.htpasswd 
-AuthName "Please Log In" 
-AuthType Basic
-require user athill

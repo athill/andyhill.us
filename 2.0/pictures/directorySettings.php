@@ -1,3 +1,0 @@
-<?php
-$GLOBALS['lightbox'] = true;
-?>
