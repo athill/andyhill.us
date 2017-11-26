@@ -7,3 +7,90 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+	margin: 0;
+	padding: 0;
+	background: black;
+	font-family: Verdana, Ariel, sans;
+	font-size: 10pt;
+}
+
+a, a:visited, a:active {
+	color: #900;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#app-container {
+	margin-top: 2em;
+	padding: 0;
+	background: #CCC;
+	color: black;
+	border-radius: 15px;
+	.app-header {
+		position: relative;
+		overflow: auto;
+		padding: 1em;		
+		.img-container {
+			height: 115px;
+			width: 100%;
+			position: relative;
+			background: #444;
+			border-radius: 15px;
+			padding: 10px;
+			display: inline-flex; 
+			justify-content: space-between;
+		}
+		.page-title {
+			font: bold 22pt monospace; 
+			padding: 5px;
+			position: absolute; 
+			left: 1em; 
+			bottom: 0em; 
+			color: #FFF;
+			text-shadow: 3px 3px 2px gray; 				
+		}		
+	}	
+}
+
+#nav {
+	ul {
+		display: inline-flex;
+		list-style: none;
+		padding: 0;
+		width: 100%;
+		li {
+			flex: 1;
+			a {
+				background-color: black;
+				display: block;
+				color: white;
+				padding: 1em;
+				text-align: center;
+				text-decoration: none;
+				&:hover {
+					background-color: #999;
+				}
+			}
+			&.active  a {
+				background-color: white;
+				color: black;	
+			}			
+		}
+	}
+}
+
+/***********************
+ * Footer
+ **********************/
+footer {
+	background: #444;  
+	color: white;
+	text-align: center;
+	padding: 0.5em;
+	border-radius: 0 0 15px 15px;
+}

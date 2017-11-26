@@ -15,7 +15,7 @@
         <!-- <link href="/images/touch/andyhill_48x48.png" rel="shortcut icon" type="image/png"/> -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
    
-        <title>What&apos;s In My Freezer?</title>
+        <title>andyhill.us</title>
         <link href="{{mix('css/app.css')}}" rel="stylesheet" type="text/css">
     </head>
     <body>
