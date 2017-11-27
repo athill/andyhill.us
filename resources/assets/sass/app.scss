@@ -62,6 +62,7 @@ a:hover {
 		display: inline-flex;
 		list-style: none;
 		padding: 0;
+		margin: 0;
 		width: 100%;
 		li {
 			flex: 1;
@@ -69,7 +70,7 @@ a:hover {
 				background-color: black;
 				display: block;
 				color: white;
-				padding: 1em;
+				padding: 0.5em;
 				text-align: center;
 				text-decoration: none;
 				&:hover {

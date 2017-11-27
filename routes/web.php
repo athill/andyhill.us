@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
+//     return view('app');
+// });
+
+Route::get('/{foo?}/{bar?}', function () {
     return view('app');
 });

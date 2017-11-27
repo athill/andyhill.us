@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { Col, Grid, Row } from 'react-bootstrap';
 // import { Provider } from 'react-redux';
-// import { Router, Route } from 'react-router-dom';
+import { Link, Router, Route } from 'react-router-dom';
 
 
 // import AppNavbar from './AppNavbar';
-// import history from '../history';
-// import Login from './pages/login';
-// import Home from './pages/home';
-// import PasswordReset from './pages/password-reset';
-// import PrivateRoute from './PrivateRoute';
+import history from '../history';
+import Home from './pages/Home';
+import Resume from './pages/resume';
 // import Register from './pages/register';
 // import Import from './pages/import';
 // import createStore from '../store';
@@ -28,12 +26,12 @@ const Header = () =>(
         </div>                            
         
 
-        <nav id="nav" role="navigation" class="col-sm-12 col-xs-2">
+        <nav id="nav" role="navigation" className="col-sm-12 col-xs-2">
             <a href="#nav" title="Show navigation">Show navigation</a>
             <a href="#" title="Hide navigation">Hide navigation</a>
             <ul>
-                <li className="active"><a href="/">Home</a></li>
-                <li><a href="/resume/">Resume</a></li>
+                <li><Link className="active" to="/">Home</Link></li>
+                <li><Link to="/resume/">Resume</Link></li>
                 <li><a href="/portfolio/">Portfolio</a></li>
                 <li><a href="/news/">News</a></li>
                 <li><a href="/pictures/">Pictures</a></li>
@@ -48,19 +46,21 @@ const Header = () =>(
 
 class App extends Component {
     render() {
-        return (<div>  
+        return (<Router history={history}>  
                 <Grid>
                     <Row>
-                        <Col md={12} id="app-container">
+                        <Col md={1} className="hidden-sm site-side-padding"></Col>
+                        <Col md={10} sm={12} id="app-container">
                             <Header />
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            <Route path="/" exact component={Home}/>
+                            <Route path="/resume" component={Resume}/>
                             <footer>
                                 &copy; andyhill.us 2017
                             </footer>
                         </Col>
                     </Row>
                 </Grid>
-            </div>);
+            </Router>);
     }
   // render() {
   //   return (
