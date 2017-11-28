@@ -15,6 +15,10 @@
 //     return view('app');
 // });
 
+Route::get('/cfmeta', function() {
+	return view('cfmeta');
+});
+
 Route::get('/{foo?}/{bar?}', function () {
     return view('app');
 });
