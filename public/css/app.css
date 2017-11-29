@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -8406,6 +8406,23 @@ a:hover {
   bottom: 0em;
   color: #FFF;
   text-shadow: 3px 3px 2px gray;
+}
+
+.mobile-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+
+.mobile-navbar .title {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5em;
 }
 
 #nav ul {

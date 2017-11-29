@@ -1,46 +1,73 @@
 import React, { Component } from 'react';
 import { Col, Grid, Row } from 'react-bootstrap';
 // import { Provider } from 'react-redux';
-import { Link, Router, Route } from 'react-router-dom';
+import { NavLink, Router, Route } from 'react-router-dom';
 
 
 // import AppNavbar from './AppNavbar';
 import history from '../history';
 import Home from './pages/Home';
 import Resume from './pages/resume';
-// import Register from './pages/register';
+import Portfolio from './pages/portfolio';
 // import Import from './pages/import';
 // import createStore from '../store';
 // import reducers from '../modules/reducer';
 
 // const store = createStore(reducers(), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
+const Navigation = ({ className=null }) => (
+    <ul className={className}>
+        <li><NavLink activeClassName="active" to="/">Home</NavLink></li>
+        <li><NavLink activeClassName="active" to="/resume/">Resume</NavLink></li>
+        <li><NavLink activeClassName="active" to="/portfolio/">Portfolio</NavLink></li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/pictures/">Pictures</a></li>
+        <li><a href="/recipes/">Recipes</a></li>
+        <li><a href="/blogs.php">Blogs</a></li>
+        <li><a href="/inspire/">Inspiration</a></li>
+        <li><a href="/d3/">D3.js</a></li>
+    </ul>
+);
+
+class MobileNavbar extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = { showNav: false };
+    }
+
+    render() {
+        return (
+            <div>
+                <div className="mobile-navbar">
+                    <h1 className="title">andyhill.us</h1>
+                    <span className="button">X</span>
+                </div>
+                { this.state.showNav && <Navigation /> }
+            </div>
+        )
+    }
+}
+
 const Header = () =>(
     <div className="app-header">
-        <div className="img-container">
-            <img src="/images/header/house.jpg" alt="" className="header-img"  />
-            <img src="/images/header/band.jpg" alt="" className="header-img"/>
-            <img src="/images/header/showwater.jpg" alt="" className="header-img"/>
-            <img src="/images/header/wfhb.jpg" alt="" className="header-img"/> 
-            <h1 className="page-title">andyhill.us</h1>
-        </div>                            
-        
+        <div className="mobile-header hidden-md hidden-lg">
+            <MobileNavbar />
+        </div>
+        <div className="desktop-header hidden-xs hidden-sm">
+            <div className="img-container">
+                <img src="/images/header/house.jpg" alt="" className="header-img"  />
+                <img src="/images/header/band.jpg" alt="" className="header-img"/>
+                <img src="/images/header/showwater.jpg" alt="" className="header-img"/>
+                <img src="/images/header/wfhb.jpg" alt="" className="header-img"/> 
+                <h1 className="page-title">andyhill.us</h1>
+            </div>                            
+            
 
-        <nav id="nav" role="navigation" className="col-sm-12 col-xs-2">
-            <a href="#nav" title="Show navigation">Show navigation</a>
-            <a href="#" title="Hide navigation">Hide navigation</a>
-            <ul>
-                <li><Link className="active" to="/">Home</Link></li>
-                <li><Link to="/resume/">Resume</Link></li>
-                <li><a href="/portfolio/">Portfolio</a></li>
-                <li><a href="/news/">News</a></li>
-                <li><a href="/pictures/">Pictures</a></li>
-                <li><a href="/recipes/">Recipes</a></li>
-                <li><a href="/blogs.php">Blogs</a></li>
-                <li><a href="/inspire/">Inspiration</a></li>
-                <li><a href="/d3/">D3.js</a></li>
-            </ul>
-        </nav>                                 
+            <nav id="nav" role="navigation" className="col-sm-12 col-xs-2">
+                <Navigation />
+            </nav>
+        </div>                                 
     </div>
 );
 
@@ -54,6 +81,7 @@ class App extends Component {
                             <Header />
                             <Route path="/" exact component={Home}/>
                             <Route path="/resume" component={Resume}/>
+                            <Route path="/portfolio" component={Portfolio}/>
                             <footer>
                                 &copy; andyhill.us 2017
                             </footer>
