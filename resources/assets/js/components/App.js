@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
 import { Col, Grid, Row } from 'react-bootstrap';
-// import { Provider } from 'react-redux';
-import { NavLink, Router, Route } from 'react-router-dom';
+import { NavLink, Link, Router, Route } from 'react-router-dom';
 
 
-// import AppNavbar from './AppNavbar';
 import history from '../history';
 import Home from './pages/Home';
 import Resume from './pages/resume';
 import Portfolio from './pages/portfolio';
-// import Import from './pages/import';
-// import createStore from '../store';
-// import reducers from '../modules/reducer';
 
-// const store = createStore(reducers(), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const navigation = [
+    { display: 'Home', href: '/' },
+    { display: 'Resume', href: '/resume/' },
+    { display: 'Portfolio', href: '/portfolio/' },
+];
 
-const Navigation = ({ className=null }) => (
-    <ul className={className}>
-        <li><NavLink activeClassName="active" to="/">Home</NavLink></li>
-        <li><NavLink activeClassName="active" to="/resume/">Resume</NavLink></li>
-        <li><NavLink activeClassName="active" to="/portfolio/">Portfolio</NavLink></li>
+const Navigation = ({ onLinkClick }) => (
+    <ul>
+        {
+            navigation.map(({ display, href }) => <li key={href}><NavLink activeClassName="active" exact to={href} onClick={ onLinkClick }>{ display }</NavLink></li>)
+        }
         <li><a href="/news/">News</a></li>
         <li><a href="/pictures/">Pictures</a></li>
         <li><a href="/recipes/">Recipes</a></li>
@@ -29,32 +28,44 @@ const Navigation = ({ className=null }) => (
     </ul>
 );
 
-class MobileNavbar extends React.Component {
+class MobileHeader extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = { showNav: false };
+        this._menuToggle = this._menuToggle.bind(this);
+        this._menuClose = this._menuClose.bind(this);
     }
+
+    _menuClose(e) {
+        this.setState({
+            showNav: false
+        });
+    }
+
+    _menuToggle(e) {
+    this.setState ({
+            showNav: !this.state.showNav 
+        });
+    }
+
 
     render() {
         return (
-            <div>
+            <div className="mobile-header">
                 <div className="mobile-navbar">
-                    <h1 className="title">andyhill.us</h1>
-                    <span className="button">X</span>
+                    <h1 className="mobile-navbar-title"><Link to="/">andyhill.us</Link></h1>
+                    <span className="button" onClick={this._menuToggle}>X</span>
                 </div>
-                { this.state.showNav && <Navigation /> }
+                { this.state.showNav && <Navigation onLinkClick={this._menuClose} /> }
             </div>
         )
     }
 }
 
-const Header = () =>(
+const Header = () => (
     <div className="app-header">
-        <div className="mobile-header hidden-md hidden-lg">
-            <MobileNavbar />
-        </div>
-        <div className="desktop-header hidden-xs hidden-sm">
+        <div className="desktop-header">
             <div className="img-container">
                 <img src="/images/header/house.jpg" alt="" className="header-img"  />
                 <img src="/images/header/band.jpg" alt="" className="header-img"/>
@@ -64,7 +75,7 @@ const Header = () =>(
             </div>                            
             
 
-            <nav id="nav" role="navigation" className="col-sm-12 col-xs-2">
+            <nav id="nav" role="navigation">
                 <Navigation />
             </nav>
         </div>                                 
@@ -76,12 +87,15 @@ class App extends Component {
         return (<Router history={history}>  
                 <Grid>
                     <Row>
-                        <Col md={1} className="hidden-sm site-side-padding"></Col>
+                        <Col md={1} className="site-side-padding"></Col>
+                        <MobileHeader />
                         <Col md={10} sm={12} id="app-container">
                             <Header />
-                            <Route path="/" exact component={Home}/>
-                            <Route path="/resume" component={Resume}/>
-                            <Route path="/portfolio" component={Portfolio}/>
+                            <main id="main">
+                                <Route path="/" exact component={Home}/>
+                                <Route path="/resume" component={Resume}/>
+                                <Route path="/portfolio" component={Portfolio}/>
+                            </main>
                             <footer>
                                 &copy; andyhill.us 2017
                             </footer>
@@ -90,29 +104,6 @@ class App extends Component {
                 </Grid>
             </Router>);
     }
-  // render() {
-  //   return (
-  //   <Provider store={store}>
-  //       <Router history={history}>  
-  //           <div>  
-  //               <AppNavbar />
-  //               <Grid>
-  //                   <Row>
-  //                       <Col md={12}>
-  //                           <PrivateRoute path="/" exact component={Home}/>
-  //                           <Route path="/login" component={Login}/>
-  //                           <Route path="/demo" exact component={Home}/>
-  //                           <Route path="/password-reset" exact component={PasswordReset}/>
-  //                           <Route path="/register" exact component={Register}/>
-  //                           <Route path="/import" exact component={Import}/>
-  //                       </Col>
-  //                   </Row>
-  //               </Grid>
-  //           </div>
-  //       </Router>
-  //   </Provider>
-  //   )
-  // }
 };
 
 export default App;

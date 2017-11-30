@@ -3,12 +3,12 @@ import { Col, Row } from 'react-bootstrap';
 
 import './resume.scss';
 
+//// helpers
 const Link = ({ href }) => (
-	<a href={href}>{href}</a>
+	<a href={href} target="_blank" rel="noopener">{href}</a>
 );
 
-
-//$h->div('Andrew T.Hill', ['class' => 'resume-name']);
+//// components
 const Header = () => (
 	<Row className="resume-header-wrapper">
 		<Col className="resume-header" xs={12}>
@@ -42,6 +42,7 @@ const TitleDate = ({ date, title, leftWidth=9}) => (
 
 );
 
+//// sections
 const EducationCategory = ({title, entries }) => (
 	<div>
 		<div className="education-category-title">{ title }</div>
@@ -101,14 +102,21 @@ const Education = () => (
 );
 
 const skillsets = [
-	{title:  'Languages', 
+	{
+		title:  'Languages', 
 		items:  ['Java', 'JavaScript', 'ColdFusion', 'PHP', 'Apache Ant', 'C/C++', 'Bash', 'Python', 'Ruby', 'C#', 'Scheme', 'Perl']
 	},
-	{title:  'Web',
+	{
+		title:  'Web',
 		items:  ['Spring Boot', 'Laravel', 'React', 'Redux', 'Webpack', 'HTML5', 'jQuery', 'CSS3/Sass', 'D3.js']
 	},
-	{title:  'Data',
-		items:  ['Elasticsearch', 'MongoDB', 'Oracle', 'MySQL', 'SQL Server', 'LDAP/ADS', 'JSON', 'XML', 'XPath']
+	{
+		title:  'Data',
+		items:  ['Elasticsearch', 'MongoDB', 'Redis', 'MySQL', 'Postgres', 'Oracle', 'SQL Server', 'LDAP/ADS', 'JSON', 'XML', 'XPath']
+	},
+	{
+		title: 'DevOps',
+		items: ['Docker', 'Ansible', 'Bamboo', 'Jenkins', 'Splunk', 'Vagrant', 'DigitalOcean']
 	}
 ];
 
@@ -198,6 +206,8 @@ const References = () => (
 	<span>Available upon request.</span>
 );
 
+
+//// render
 const sections = [
 	{ title: 'Objective', Component: Objective },
 	{ title: 'Education', Component: Education },

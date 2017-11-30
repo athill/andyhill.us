@@ -8358,6 +8358,10 @@ body {
   font-size: 10pt;
 }
 
+#main {
+  padding: 1em;
+}
+
 a,
 a:visited,
 a:active {
@@ -8370,17 +8374,16 @@ a:hover {
 }
 
 #app-container {
-  margin-top: 2em;
   padding: 0;
   background: #CCC;
   color: black;
-  border-radius: 15px;
 }
 
 #app-container .app-header {
   position: relative;
   overflow: auto;
   padding: 1em;
+  padding-bottom: 0;
 }
 
 #app-container .app-header .img-container {
@@ -8408,7 +8411,19 @@ a:hover {
   text-shadow: 3px 3px 2px gray;
 }
 
-.mobile-navbar {
+.mobile-header a {
+  color: white !important;
+}
+
+.mobile-header a:visited {
+  color: white !important;
+}
+
+.mobile-header a:hover {
+  text-decoration: none !important;
+}
+
+.mobile-header .mobile-navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8416,13 +8431,47 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: black;
-  color: white;
+  padding: 0.5em;
 }
 
-.mobile-navbar .title {
-  padding: 0;
+.mobile-header .mobile-navbar .mobile-navbar-title {
   margin: 0;
   font-size: 1.5em;
+}
+
+.mobile-header .mobile-navbar .button {
+  cursor: pointer;
+}
+
+.mobile-header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-header ul li {
+  text-align: right;
+  border-top: thin solid #CCC;
+}
+
+.mobile-header ul li a {
+  display: block;
+  padding: 0.5em;
+}
+
+.mobile-header ul li a:hover {
+  background-color: #999;
+}
+
+.mobile-header ul li a.active {
+  background-color: white;
+  color: black !important;
+}
+
+#nav {
+  margin-top: 1em;
+  padding: 0;
+  width: 100%;
 }
 
 #nav ul {
@@ -8454,9 +8503,13 @@ a:hover {
   background-color: #999;
 }
 
-#nav ul li.active a {
+#nav ul li a.active {
   background-color: white;
   color: black;
+}
+
+.desktop-header {
+  display: none;
 }
 
 /***********************
@@ -8468,6 +8521,24 @@ footer {
   color: white;
   text-align: center;
   padding: 0.5em;
-  border-radius: 0 0 15px 15px;
+}
+
+@media (min-width: 768px) {
+  .desktop-header {
+    display: block;
+  }
+
+  #app-container {
+    margin-top: 2em;
+    border-radius: 15px;
+  }
+
+  .mobile-header {
+    display: none;
+  }
+
+  footer {
+    border-radius: 0 0 15px 15px;
+  }
 }
 

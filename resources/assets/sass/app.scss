@@ -16,6 +16,10 @@ body {
 	font-size: 10pt;
 }
 
+#main {
+	padding: 1em;
+}
+
 a, a:visited, a:active {
 	color: #900;
 	text-decoration: none;
@@ -26,15 +30,16 @@ a:hover {
 }
 
 #app-container {
-	margin-top: 2em;
+	// margin-top: 2em;
 	padding: 0;
 	background: #CCC;
 	color: black;
-	border-radius: 15px;
+	// border-radius: 15px;
 	.app-header {
 		position: relative;
 		overflow: auto;
 		padding: 1em;		
+		padding-bottom: 0;
 		.img-container {
 			height: 115px;
 			width: 100%;
@@ -57,22 +62,56 @@ a:hover {
 	}	
 }
 
-.mobile-navbar {
-	display: flex;
-	justify-content: space-between;
-	background-color: black;
-	color: white;
-	.title {
+.mobile-header {
+	a {
+		color: white !important;
+		&:visited {
+			color: white !important;
+		}
+		&:hover {
+			text-decoration: none !important;
+		}		
+	}
+	.mobile-navbar {
+		display: flex;
+		justify-content: space-between;
+		background-color: black;
+		padding: 0.5em;
+		.mobile-navbar-title {
+			margin: 0;
+			font-size: 1.5em;
+		}
+		.button {
+			cursor: pointer;
+		}
+	}	
+	ul {
+		list-style: none;
 		padding: 0;
-		margin: 0;
-		font-size: 1.5em;
-	}
-	.button {
-
-	}
+		margin: 0;	
+		li {
+			text-align: right;
+			border-top: thin solid #CCC;
+			a {
+				display: block;
+				padding: 0.5em;
+				&:hover {
+					background-color: #999;
+				}
+				&.active {
+					background-color: white;
+					color: black !important;	
+				}				
+			}
+		}	
+	}	
 }
 
+
 #nav {
+	margin-top: 1em;
+	padding: 0;
+	width: 100%;
 	ul {
 		display: inline-flex;
 		list-style: none;
@@ -91,13 +130,17 @@ a:hover {
 				&:hover {
 					background-color: #999;
 				}
-			}
-			&.active  a {
-				background-color: white;
-				color: black;	
-			}			
+				&.active {
+					background-color: white;
+					color: black;	
+				}					
+			}		
 		}
 	}
+}
+
+.desktop-header {
+	display: none;
 }
 
 /***********************
@@ -108,5 +151,24 @@ footer {
 	color: white;
 	text-align: center;
 	padding: 0.5em;
-	border-radius: 0 0 15px 15px;
+}
+
+@media (min-width: $screen-sm-min) {
+	.desktop-header {
+		display: block;
+	}	
+
+	#app-container {
+		margin-top: 2em;
+		border-radius: 15px;
+	}
+
+	.mobile-header {
+		display: none;
+	}
+
+
+	footer {
+		border-radius: 0 0 15px 15px;
+	}	
 }
