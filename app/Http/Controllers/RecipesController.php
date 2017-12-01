@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use File;
+
 class RecipesController extends Controller
 {
     /**
@@ -13,6 +15,8 @@ class RecipesController extends Controller
      */
     public function index()
     {
+        $recipesxml = File::get(storage_path('data/recipes/recipes.xml'));
+        dd($recipesxml);
         return ['foo' => 'bar'];
     }
 
