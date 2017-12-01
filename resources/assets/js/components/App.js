@@ -55,7 +55,7 @@ class MobileHeader extends React.Component {
             <div className="mobile-header">
                 <div className="mobile-navbar">
                     <h1 className="mobile-navbar-title"><Link to="/">andyhill.us</Link></h1>
-                    <span className="button" onClick={this._menuToggle}>X</span>
+                    <span className="button" onClick={this._menuToggle}><i className="fa fa-bars"></i></span>
                 </div>
                 { this.state.showNav && <Navigation onLinkClick={this._menuClose} /> }
             </div>

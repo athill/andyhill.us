@@ -8,6 +8,12 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+// font-awesome
+@import "~font-awesome/scss/font-awesome.scss";
+// $fa-font-path: "../../../node_modules/font-awesome/fonts" !default;
+
+// @import 'node_modules/font-awesome/scss/font-awesome';
+
 body {
 	margin: 0;
 	padding: 0;
@@ -63,6 +69,7 @@ a:hover {
 }
 
 .mobile-header {
+	color: white;
 	a {
 		color: white !important;
 		&:visited {
@@ -83,6 +90,7 @@ a:hover {
 		}
 		.button {
 			cursor: pointer;
+			font-size: 1em;
 		}
 	}	
 	ul {
