@@ -5,13 +5,16 @@ import { NavLink, Link, Router, Route } from 'react-router-dom';
 
 import history from '../history';
 import Home from './pages/Home';
-import Resume from './pages/resume';
 import Portfolio from './pages/portfolio';
+import Recipes from './pages/recipes';
+import Resume from './pages/resume';
+
 
 const navigation = [
     { display: 'Home', href: '/' },
     { display: 'Resume', href: '/resume/' },
     { display: 'Portfolio', href: '/portfolio/' },
+    { display: 'Recipes', href: '/recipes/' },
 ];
 
 const Navigation = ({ onLinkClick }) => (
@@ -20,8 +23,7 @@ const Navigation = ({ onLinkClick }) => (
             navigation.map(({ display, href }) => <li key={href}><NavLink activeClassName="active" exact to={href} onClick={ onLinkClick }>{ display }</NavLink></li>)
         }
         <li><a href="/news/">News</a></li>
-        <li><a href="/pictures/">Pictures</a></li>
-        <li><a href="/recipes/">Recipes</a></li>
+        <li><a href="/pictures/">Pictures foo</a></li>
         <li><a href="/blogs.php">Blogs</a></li>
         <li><a href="/inspire/">Inspiration</a></li>
         <li><a href="/d3/">D3.js</a></li>
@@ -95,6 +97,7 @@ class App extends Component {
                                 <Route path="/" exact component={Home}/>
                                 <Route path="/resume" component={Resume}/>
                                 <Route path="/portfolio" component={Portfolio}/>
+                                <Route path="/recipes" component={Recipes}/>
                             </main>
                             <footer>
                                 &copy; andyhill.us 2017
