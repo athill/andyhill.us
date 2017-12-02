@@ -65,17 +65,22 @@ class MobileHeader extends React.Component {
     }
 }
 
+const headerImages = [
+    { src: 'house.jpg' },
+    { src: 'band.jpg' },
+    { src: 'showwater.jpg' },
+    { src: 'wfhb.jpg' },
+];
+
 const Header = () => (
     <div className="app-header">
         <div className="desktop-header">
             <div className="img-container">
-                <img src="/images/header/house.jpg" alt="" className="header-img"  />
-                <img src="/images/header/band.jpg" alt="" className="header-img"/>
-                <img src="/images/header/showwater.jpg" alt="" className="header-img"/>
-                <img src="/images/header/wfhb.jpg" alt="" className="header-img"/> 
+                {
+                    headerImages.map(({ src }) => <img key={ src } src={"/images/header/" + src} alt="" className="header-img"  />)
+                }
                 <h1 className="page-title">andyhill.us</h1>
-            </div>                            
-            
+            </div>
 
             <nav id="nav" role="navigation">
                 <Navigation />
