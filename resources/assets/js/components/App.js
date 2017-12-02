@@ -23,7 +23,7 @@ const Navigation = ({ onLinkClick }) => (
             navigation.map(({ display, href }) => <li key={href}><NavLink activeClassName="active" exact to={href} onClick={ onLinkClick }>{ display }</NavLink></li>)
         }
         <li><a href="/news/">News</a></li>
-        <li><a href="/pictures/">Pictures foo</a></li>
+        <li><a href="/pictures/">Pictures</a></li>
         <li><a href="/blogs.php">Blogs</a></li>
         <li><a href="/inspire/">Inspiration</a></li>
         <li><a href="/d3/">D3.js</a></li>

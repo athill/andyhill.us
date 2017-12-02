@@ -23,9 +23,10 @@ class RecipesController extends Controller
        return $this->getJsonFromXml();
     }
 
-    private function getJsonFromXml() : array {
+    private function getJsonFromXml($xml=null) : array {
+        $xml = is_null($xml) ? $this->xml : $xml;
         $recipes = [];
-        foreach ($this->xml as $recipe) {
+        foreach ($xml as $recipe) {
             $json = [
                 'id' => (string) $recipe['id'],
                 'instructions' => explode("\n", (string) $recipe->instructions)
