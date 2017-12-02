@@ -23,7 +23,7 @@ const recipeMetaMap = [
 
 const Links = ({ id }) => (
 	<span>
-		<a href={`printable.php?id=${id}`} target="_blank">Print</a> | 
+		<a href={`printable.php?id=${id}`} target="_blank">Print</a>&nbsp;|&nbsp; 
 		<a href={`export.php?id=${id}`}>Export</a> 
 		<br /><br /> 
 		<a href="#top">Return to top</a>
