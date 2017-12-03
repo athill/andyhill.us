@@ -6,6 +6,7 @@ import { NavLink, Link, Router, Route } from 'react-router-dom';
 import history from '../history';
 import Blogs from './pages/Blogs';
 import Home from './pages/Home';
+import Inspire from './pages/inspire';
 import Portfolio from './pages/portfolio';
 import Recipes from './pages/recipes';
 import Resume from './pages/resume';
@@ -17,17 +18,15 @@ const navigation = [
     { display: 'Portfolio', href: '/portfolio/' },
     { display: 'Recipes', href: '/recipes/' },
     { display: 'Blogs', href: '/blogs/' },
+    { display: 'Inspiration', href: '/inspire/', exact: false },
 ];
 
 const Navigation = ({ onLinkClick }) => (
     <ul>
         {
-            navigation.map(({ display, href }) => <li key={href}><NavLink activeClassName="active" exact to={href} onClick={ onLinkClick }>{ display }</NavLink></li>)
+            navigation.map(({ display, href, exact=true }) => <li key={href}><NavLink activeClassName="active" exact={exact} to={href} onClick={ onLinkClick }>{ display }</NavLink></li>)
         }
         <li><a href="/news/">News</a></li>
-        <li><a href="/pictures/">Pictures</a></li>
-        <li><a href="/inspire/">Inspiration</a></li>
-        <li><a href="/d3/">D3.js</a></li>
     </ul>
 );
 
@@ -105,6 +104,7 @@ class App extends Component {
                                 <Route path="/portfolio" component={Portfolio}/>
                                 <Route path="/recipes" component={Recipes}/>
                                 <Route path="/blogs" component={Blogs}/>
+                                <Route path="/inspire" component={Inspire}/>
                             </main>
                             <footer>
                                 &copy; andyhill.us 2017

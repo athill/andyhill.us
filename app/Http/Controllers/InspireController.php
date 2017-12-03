@@ -20,17 +20,17 @@ class InspireController extends Controller {
     	$data = [];
 		foreach ($files as $file) {
 			$path = $file->getPath();
-			$key = preg_replace("/.*\/([^\/]+)$/", "$1", $path);
-			// dd($file); 
-		    if (!isset($data[$key])) {
-		    	$data[$key] = [];
+			$area = preg_replace("/.*\/([^\/]+)$/", "$1", $path); 
+		    if (!isset($data[$area])) {
+		    	$data[$area] = [];
 		    }
+		    $key = preg_replace("/(.*)\.txt/", "$1", $file->getBasename());
 		    $content = file_get_contents($file->getPathname());
+		    list($title, $content) = explode("\nCONTENT\n", $content);
 		    $sections = explode("\nCREDITS\n", $content);
 		    list($content, $credits) = $sections;
-		    $data[$key][] = [ 'content' => $content, 'credits' => $credits ];
+		    $data[$area][] = [ 'key' => $key, 'content' => $content, 'credits' => $credits, 'title' => $title ];
 		}
-		dd($data);
 		return $data;
     }
 }

@@ -21,6 +21,6 @@ Route::get('/cfmeta', function() {
 	return view('cfmeta');
 });
 
-Route::get('/{foo?}/{bar?}', function () {
+Route::get('/{foo?}/{bar?}/{baz?}', function () {
     return view('app');
 });
