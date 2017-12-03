@@ -19,19 +19,22 @@ const Select = ({ id, label, onChange, options=[] }) => (
     </FormGroup>
 );
 
-const RecipesForm = ({ categories, cuisines, ingredients, onCategoryChange, onCuisineChange, onFilterChange, onIngredientChange }) => (
+const RecipesForm = ({ categories, cuisines, ingredients, onCategoryChange, onCuisineChange, onTextChange, onIngredientChange }) => (
   <Form inline>
-    <FormGroup controlId="filter">
-      <ControlLabel>Text:</ControlLabel>
-      {' '}
-      <FormControl type="text" onChange={onFilterChange} />
-    </FormGroup>
-    {' '}
-    <Select id="category" label="Category" options={categories} onChange={onCategoryChange} />
-    {' '}
-    <Select id="cuisine" label="Cuisine" options={cuisines} onChange={onCuisineChange} />
-    {' '}
-    <Select id="ingredient" label="Ingredient" options={ingredients} onChange={onIngredientChange} />
+  	<fieldset>
+  		<legend>Filter</legend>
+	    <FormGroup controlId="filter">
+	      <ControlLabel>Text:</ControlLabel>
+	      {' '}
+	      <FormControl type="text" onChange={onTextChange} />
+	    </FormGroup>
+	    {' '}
+	    <Select id="category" label="Category" options={categories} onChange={onCategoryChange} />
+	    {' '}
+	    <Select id="cuisine" label="Cuisine" options={cuisines} onChange={onCuisineChange} />
+	    {' '}
+	    <Select id="ingredient" label="Ingredient" options={ingredients} onChange={onIngredientChange} />
+    </fieldset>
   </Form>
 );
 
@@ -132,13 +135,17 @@ class RecipesPage extends React.Component {
 		return (
 			<div>
 				<h2 id="top">Recipes</h2>
+				<p>
+					I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noopener">Gourmet</a> recipe manager. 
+					The content of this page is from an XML export of my recipes in Gourmet.
+				</p>
 				<RecipesForm 
 					categories={categories} 
 					cuisines={cuisines} 
 					ingredients={ingredients} 
 					onCategoryChange={this._onItemChange('categoryFilter')}
 					onCuisineChange={this._onItemChange('cuisineFilter')}
-					onFilterChange={this._onItemChange('textFilter')}
+					onTextChange={this._onItemChange('textFilter')}
 					onIngredientChange={this._onItemChange('ingredientFilter')}
 				/>
 				<ul id="recipe-list">
