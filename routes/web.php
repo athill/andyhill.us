@@ -11,9 +11,11 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('app');
-// });
+
+
+Route::get('/recipes/print/{id}', 'RecipesController@print');
+Route::get('/recipes/export/{id}', 'RecipesController@export');
+
 
 Route::get('/cfmeta', function() {
 	return view('cfmeta');

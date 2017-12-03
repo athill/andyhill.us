@@ -9,21 +9,38 @@ use Illuminate\Http\Request;
 class RecipesController extends Controller
 {
     private $xml;
+    private $data;
+
+    public function __construct() {
+         if (!$this->xml = simplexml_load_file(storage_path('data/recipes/recipes.xml'))){
+           trigger_error('Error reading XML file',E_USER_ERROR);
+        }   
+       $this->data = $this->getDataFromXml();       
+    }
 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        if (!$this->xml = simplexml_load_file(storage_path('data/recipes/recipes.xml'))){
-           trigger_error('Error reading XML file',E_USER_ERROR);
-        }
-       return $this->getJsonFromXml();
+    public function index() {
+        return $this->data;
     }
 
-    private function getJsonFromXml($xml=null) : array {
+    public function print($id) {
+        foreach ($this->data as $recipe) {
+            if ($recipe['id'] === $id) {
+                return view('print-recipe', ['recipe' => $recipe]);
+            }
+        }
+    }
+
+    public function export($id) {
+        $content = $this->xml->xpath("//recipe[@id=$id]");
+        return response($content[0]->asXml(), '200')->header('Content-Type', 'text/xml');
+    }
+
+    private function getDataFromXml($xml=null) : array {
         $xml = is_null($xml) ? $this->xml : $xml;
         $recipes = [];
         foreach ($xml as $recipe) {
