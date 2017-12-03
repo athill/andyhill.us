@@ -17,7 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::group(['middleware' => 'api'], function () {
+	Route::resource('recipes', 'RecipesController', ['only' => ['index']]);
 
-Route::resource('recipes', 'RecipesController', ['only' => ['index']]);
-
-Route::resource('inspire', 'InspireController', ['only' => ['index']]);
+	Route::resource('inspire', 'InspireController', ['only' => ['index']]);
+});
