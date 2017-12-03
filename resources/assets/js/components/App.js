@@ -4,6 +4,7 @@ import { NavLink, Link, Router, Route } from 'react-router-dom';
 
 
 import history from '../history';
+import Blogs from './pages/Blogs';
 import Home from './pages/Home';
 import Portfolio from './pages/portfolio';
 import Recipes from './pages/recipes';
@@ -15,6 +16,7 @@ const navigation = [
     { display: 'Resume', href: '/resume/' },
     { display: 'Portfolio', href: '/portfolio/' },
     { display: 'Recipes', href: '/recipes/' },
+    { display: 'Blogs', href: '/blogs/' },
 ];
 
 const Navigation = ({ onLinkClick }) => (
@@ -24,7 +26,6 @@ const Navigation = ({ onLinkClick }) => (
         }
         <li><a href="/news/">News</a></li>
         <li><a href="/pictures/">Pictures</a></li>
-        <li><a href="/blogs.php">Blogs</a></li>
         <li><a href="/inspire/">Inspiration</a></li>
         <li><a href="/d3/">D3.js</a></li>
     </ul>
@@ -103,6 +104,7 @@ class App extends Component {
                                 <Route path="/resume" component={Resume}/>
                                 <Route path="/portfolio" component={Portfolio}/>
                                 <Route path="/recipes" component={Recipes}/>
+                                <Route path="/blogs" component={Blogs}/>
                             </main>
                             <footer>
                                 &copy; andyhill.us 2017

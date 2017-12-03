@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::resource('recipes', 'RecipesController', ['only' => ['index']]);
+
+Route::resource('inspire', 'InspireController', ['only' => ['index']]);
