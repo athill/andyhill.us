@@ -84,7 +84,7 @@ const MobileNavigation = ({ data }) => (
 const Home = () => (
 	<div>
 		<p>
-		On the left are links to favorite quotes of mine, arranged by category.
+		Some words that inspire me.
 		</p>
 	</div>
 );
