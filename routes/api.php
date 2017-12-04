@@ -21,4 +21,6 @@ Route::group(['middleware' => 'api'], function () {
 	Route::resource('recipes', 'RecipesController', ['only' => ['index']]);
 
 	Route::resource('inspire', 'InspireController', ['only' => ['index']]);
+
+	Route::resource('news', 'NewsController', ['only' => ['index', 'show']]);
 });
