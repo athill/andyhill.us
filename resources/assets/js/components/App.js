@@ -7,6 +7,7 @@ import history from '../history';
 import Blogs from './pages/Blogs';
 import Home from './pages/Home';
 import Inspire from './pages/inspire';
+import News from './pages/news';
 import Portfolio from './pages/portfolio';
 import Recipes from './pages/recipes';
 import Resume from './pages/resume';
@@ -19,6 +20,7 @@ const navigation = [
     { display: 'Recipes', href: '/recipes/' },
     { display: 'Blogs', href: '/blogs/' },
     { display: 'Inspiration', href: '/inspire/', exact: false },
+    { display: 'News', href: '/news/', exact: false },
 ];
 
 const Navigation = ({ onLinkClick }) => (
@@ -26,7 +28,6 @@ const Navigation = ({ onLinkClick }) => (
         {
             navigation.map(({ display, href, exact=true }) => <li key={href}><NavLink activeClassName="active" exact={exact} to={href} onClick={ onLinkClick }>{ display }</NavLink></li>)
         }
-        <li><a href="/news/">News</a></li>
     </ul>
 );
 
@@ -105,6 +106,7 @@ class App extends Component {
                                 <Route path="/recipes" component={Recipes}/>
                                 <Route path="/blogs" component={Blogs}/>
                                 <Route path="/inspire" component={Inspire}/>
+                                <Route path="/news" component={News}/>
                             </main>
                             <footer>
                                 &copy; andyhill.us 2017
