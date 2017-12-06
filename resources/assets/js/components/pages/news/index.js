@@ -7,11 +7,54 @@ import './news.scss';
 
 const categories = ['Wires', 'Left', 'Right', 'Libtertarian', 'Government', 'TV', 'Print', 'Radio', 'Congress', 'Indiana', 'Bloomington'];
 
+//// refactor/promote
 const Error = ({ children }) => (
 	<Alert bsStyle="danger">{ children }</Alert>
 );
 
+const Icon = ({ name, className, srText }) => (
+	<span>
+		<i className={`fa fa-${name} ${className}`} aria-hidden="true"></i>
+		<span className="sr-only">{ srText }</span>
+	</span>
+);
 
+////// page
+//// danger zone (using html from feeds)
+const Item = ({ date, description, link, title }) => (
+	<span>
+		<a href={link} className="feed-links elipsis" 
+			title="" target="_blank" rel="noopener"><span dangerouslySetInnerHTML={{ __html: title }} /></a>
+		<div className="feed-description">
+			<div dangerouslySetInnerHTML={{ __html: description }} />
+			<br /><br />
+			Posted: <time>{ date }</time>
+		</div>
+	</span>
+);
+//// end danger zone
+
+const Feed = ({ title, link, description, items }) => (
+	<Col md={6}>
+		<article>
+			<header>
+				<h3 className="elipsis" title={ title }>{ title }</h3>
+				<nav>
+					<a href={link} target="_blank" rel="noopener" title="link to site"
+						><i className="fa fa-external-link" aria-hidden="true"></i>
+					</a>
+					<a href="#" className="feed-toggleall" title="expand all"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+</a>
+				</nav>
+			</header>
+			<ul>
+			{
+				items.slice(0, 10).map((item, i) => <li key={i}><Item {...item} /></li> )
+			}
+			</ul>
+		</article>
+	</Col>
+);
 
 class Category extends React.Component {
     constructor(props) {
@@ -80,14 +123,18 @@ class Category extends React.Component {
     }    
 
     render() {
-    	const { loadingState, category } = this.state;
+    	const { loadingState, data, category } = this.state;
     	if (loadingState === 'loading') {
     		return <div><i className="fa fa-cog fa-3x fa-spin"></i> Loading ...</div>;
     	} else if (loadingState === 'fail') {
     		<Error>Sorry, something went wrong</Error>;
     	}
     	return (
-    		<h3>{ category }</h3>
+    		<Row>
+    		{
+    			data[category] && data[category].map((feed, i) => <Feed key={i} {...feed} />) 
+    		}
+    		</Row>
     	);
     }	
 }
