@@ -45,6 +45,7 @@
     "bootstrap-sass-loader": "^1.0.10",
     "enzyme": "^3.1.0",
     "font-awesome": "^4.7.0",
+    "slug": "^0.9.1",
     "url-loader": "^0.6.2"
   }
 }

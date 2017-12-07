@@ -1,16 +1,13 @@
 import { find } from 'lodash';
 import React from 'react';
-import { Alert, Col, Row } from 'react-bootstrap';
+import { Alert, Col, OverlayTrigger, Row, Tooltip } from 'react-bootstrap';
 import { NavLink,  Route } from 'react-router-dom';
+import slug from 'slug';
 
 import './news.scss';
 
 const categories = ['Wires', 'Left', 'Right', 'Libtertarian', 'Government', 'TV', 'Print', 'Radio', 'Congress', 'Indiana', 'Bloomington'];
 
-//// refactor/promote
-const Error = ({ children }) => (
-	<Alert bsStyle="danger">{ children }</Alert>
-);
 
 const Icon = ({ name, className, srText }) => (
 	<span>
@@ -21,40 +18,70 @@ const Icon = ({ name, className, srText }) => (
 
 ////// page
 //// danger zone (using html from feeds)
-const Item = ({ date, description, link, title }) => (
-	<span>
-		<a href={link} className="feed-links elipsis" 
-			title="" target="_blank" rel="noopener"><span dangerouslySetInnerHTML={{ __html: title }} /></a>
-		<div className="feed-description">
-			<div dangerouslySetInnerHTML={{ __html: description }} />
-			<br /><br />
-			Posted: <time>{ date }</time>
-		</div>
-	</span>
-);
+const Item = ({ date, description, link, showDescription, title }) => {
+	const tooltip = <Tooltip id={slug(title)}><div dangerouslySetInnerHTML={{ __html: description }} /></Tooltip>
+	return (<span>
+			<OverlayTrigger placement="bottom" overlay={tooltip}>
+				<a href={link} className="feed-links elipsis" 
+					title="" target="_blank" rel="noopener"><span dangerouslySetInnerHTML={{ __html: title }} /></a>
+			</OverlayTrigger>				
+			{ 
+				showDescription && (<div className="feed-description">
+							<div dangerouslySetInnerHTML={{ __html: description }} />
+							<br /><br />
+							Posted: <time>{ date }</time>
+						</div>)
+			}
+		</span>);
+};
 //// end danger zone
 
-const Feed = ({ title, link, description, items }) => (
-	<Col md={6}>
-		<article>
-			<header>
-				<h3 className="elipsis" title={ title }>{ title }</h3>
-				<nav>
-					<a href={link} target="_blank" rel="noopener" title="link to site"
-						><i className="fa fa-external-link" aria-hidden="true"></i>
-					</a>
-					<a href="#" className="feed-toggleall" title="expand all"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-</a>
-				</nav>
-			</header>
-			<ul>
-			{
-				items.slice(0, 10).map((item, i) => <li key={i}><Item {...item} /></li> )
-			}
-			</ul>
-		</article>
-	</Col>
-);
+class Feed extends React.Component {
+	    constructor(props) {
+        super(props);
+        this.state = {
+        	showDescriptions: null
+        }
+        this._toggleDescriptions = this._toggleDescriptions.bind(this);
+    }
+
+    _toggleDescriptions(e) {
+    	console.log('toggling', e.target);
+    	e.preventDefault();
+    	this.setState({
+    		showDescriptions: !this.state.showDescriptions
+    	});
+    }
+
+    render() {
+    	const { title, link, description, items } = this.props;
+    	const { showDescriptions } = this.state;
+    	return (
+			<Col md={6}>
+				<article>
+					<header>
+						<h3 className="elipsis" title={ title }>{ title }</h3>
+						<nav>
+							<a href={link} target="_blank" rel="noopener" title="link to site">
+									<i className="fa fa-external-link" aria-hidden="true"></i>
+							</a>
+							<a href="#"  title="expand all">
+								<i className="fa fa-chevron-circle-down" onClick={this._toggleDescriptions } aria-hidden="true"></i>
+							</a>
+						</nav>
+					</header>
+					<ul>
+					{
+						items.slice(0, 10).map((item, i) => <li key={i}><Item showDescription={	showDescriptions } {...item} /></li> )
+					}
+					</ul>
+				</article>
+			</Col>
+		);
+    }
+
+}
+
 
 class Category extends React.Component {
     constructor(props) {
@@ -127,10 +154,10 @@ class Category extends React.Component {
     	if (loadingState === 'loading') {
     		return <div><i className="fa fa-cog fa-3x fa-spin"></i> Loading ...</div>;
     	} else if (loadingState === 'fail') {
-    		<Error>Sorry, something went wrong</Error>;
+    		<Alert bsStyle="danger">Sorry, something went wrong</Alert>;
     	}
     	return (
-    		<Row>
+    		<Row className="feeds">
     		{
     			data[category] && data[category].map((feed, i) => <Feed key={i} {...feed} />) 
     		}
