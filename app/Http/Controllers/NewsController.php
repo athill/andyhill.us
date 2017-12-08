@@ -15,7 +15,7 @@ class NewsController extends Controller {
 
 		"Left" => [
 			"http://www.huffingtonpost.com/feeds/verticals/politics/index.xml",
-			"http://feeds.dailykos.com/dailykos/index.xml",
+			'https://www.dailykos.com/blogs/main.rss',
 			"http://www.prospect.org/articles_rss.jsp",
 			"http://feeds.feedburner.com/talking-points-memo",
 
@@ -29,9 +29,7 @@ class NewsController extends Controller {
 		],
 		"Libertarian" => [
 			"http://feeds.feedburner.com/reason/AllArticles?format=xml",
-			"http://feeds2.feedburner.com/CatoDispatch",
-			"http://www.dailypaul.com/rss.xml",
-			'http://libertarianstandard.com/feed/'
+			"http://feeds2.feedburner.com/CatoDispatch"
 			
 		],
 		'Government'=>[
@@ -58,7 +56,7 @@ class NewsController extends Controller {
 		"Radio" => [
 			"http://www.npr.org/rss/rss.php?id=1001",
 			"http://www.democracynow.org/democracynow.rss",
-			"http://feeds.feedburner.com/RushLimbaugh-AllContent",
+			// "http://feeds.feedburner.com/RushLimbaugh-AllContent",
 			"http://www.marketplace.org/latest-stories/long-feed.xml",
 		],
 		"Congress" => [
@@ -67,18 +65,18 @@ class NewsController extends Controller {
 			// "http://www.opensecrets.org/news/atom.xml",
 			// "http://www.rollcall.com/issues/index.xml",
 		],
-		"Indiana" => [
-			"http://www.indystar.com/apps/pbcs.dll/section?Category=NEWS05&template=rss&mime=XML",
-			"http://www.opencongress.org/people/atom/402675_Daniel_Coats",
-			"http://www.opencongress.org/people/atom/412205_Joe_Donnelly",
-			"http://www.in.gov/portal/news_events/39832.xml",
-		],
-		"Bloomington" => [
-			"http://www.heraldtimesonline.com/rss/local.xml",
-			"http://bloomington.in.gov/documentTypes/documents.php?format=rss;documentType_id=9",
-			"http://www.opencongress.org/people/atom/412428_Todd_Young",
-			'http://www.idsnews.com/news/feeds/rss.aspx'
-		],
+		// "Indiana" => [
+		// 	"http://www.indystar.com/apps/pbcs.dll/section?Category=NEWS05&template=rss&mime=XML",
+		// 	"http://www.opencongress.org/people/atom/402675_Daniel_Coats",
+		// 	"http://www.opencongress.org/people/atom/412205_Joe_Donnelly",
+		// 	"http://www.in.gov/portal/news_events/39832.xml",
+		// ],
+		// "Bloomington" => [
+		// 	"http://www.heraldtimesonline.com/rss/local.xml",
+		// 	"http://bloomington.in.gov/documentTypes/documents.php?format=rss;documentType_id=9",
+		// 	"http://www.opencongress.org/people/atom/412428_Todd_Young",
+		// 	'http://www.idsnews.com/news/feeds/rss.aspx'
+		// ],
 	];
 
 

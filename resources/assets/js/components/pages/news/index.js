@@ -6,7 +6,8 @@ import slug from 'slug';
 
 import './news.scss';
 
-const categories = ['Wires', 'Left', 'Right', 'Libtertarian', 'Government', 'TV', 'Print', 'Radio', 'Congress', 'Indiana', 'Bloomington'];
+const categories = ['Wires', 'Left', 'Right', 'Libertarian', 'Government', 'TV', 'Print', 'Radio', 'Congress'];
+// , 'Indiana', 'Bloomington'
 
 
 const Icon = ({ name, className, srText }) => (
@@ -16,14 +17,15 @@ const Icon = ({ name, className, srText }) => (
 	</span>
 );
 
-////// page
 //// danger zone (using html from feeds)
 const Item = ({ date, description, link, showDescription, title }) => {
-	const tooltip = <Tooltip id={slug(title)}><div dangerouslySetInnerHTML={{ __html: description }} /></Tooltip>
+	const tooltip = <Tooltip id={slug(title)}><div dangerouslySetInnerHTML={{ __html: description }} /></Tooltip>;
+	const Empty = ({ id }) => <span id={id}></span>;
+	const empty = <Empty id={slug(title)} />;
 	return (<span>
-			<OverlayTrigger placement="bottom" overlay={tooltip}>
+			<OverlayTrigger placement="bottom" overlay={showDescription ? empty : tooltip }>
 				<a href={link} className="feed-links elipsis" 
-					title="" target="_blank" rel="noopener"><span dangerouslySetInnerHTML={{ __html: title }} /></a>
+					target="_blank" rel="noopener"><span dangerouslySetInnerHTML={{ __html: title }} /></a>
 			</OverlayTrigger>				
 			{ 
 				showDescription && (<div className="feed-description">
@@ -40,13 +42,12 @@ class Feed extends React.Component {
 	    constructor(props) {
         super(props);
         this.state = {
-        	showDescriptions: null
+        	showDescriptions: false
         }
         this._toggleDescriptions = this._toggleDescriptions.bind(this);
     }
 
     _toggleDescriptions(e) {
-    	console.log('toggling', e.target);
     	e.preventDefault();
     	this.setState({
     		showDescriptions: !this.state.showDescriptions
@@ -65,15 +66,15 @@ class Feed extends React.Component {
 							<a href={link} target="_blank" rel="noopener" title="link to site">
 									<i className="fa fa-external-link" aria-hidden="true"></i>
 							</a>
-							<a href="#"  title="expand all">
-								<i className="fa fa-chevron-circle-down" onClick={this._toggleDescriptions } aria-hidden="true"></i>
+							<a href="#" onClick={this._toggleDescriptions } title="expand all">
+								<i className="fa fa-chevron-circle-down" aria-hidden="true"></i>
 							</a>
 						</nav>
 					</header>
 					<ul>
 					{
 						items.slice(0, 10).map((item, i) => <li key={i}><Item showDescription={	showDescriptions } {...item} /></li> )
-					}
+					}	
 					</ul>
 				</article>
 			</Col>
@@ -177,7 +178,7 @@ const NewsPage = ({ match }) => (
     		<h2>News</h2>
     		<ul className="nav">
     		{
-    			categories.map(category => <li key={category}><NavLink activeClassName="active" exact to={`/news/${category}`}>{ category }</NavLink></li>)
+    			categories.map(category => <li key={category}><NavLink activeClassName="selected" exact to={`/news/${category}`}>{ category }</NavLink></li>)
     		}
     		</ul>
     		<Route path={match.url} exact render={CategoryWrapper} />
