@@ -1,3 +1,6 @@
+@import "../../../../sass/variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
 .clear {
   clear: both; }
 
@@ -5,14 +8,7 @@
   width: 100%;
   background: white;
   padding: 2em; 
-  .project {
-    .title {
 
-    }
-    .link {
-      text-align: right;
-    }
-  }
 }
 #resume * {
   font-size: 10pt;
@@ -43,6 +39,7 @@
 #resume .left-col {
   font-weight: bold;
   padding-right: 0;
+  padding-left: 0;
 }
 
 #resume .right-col {
@@ -54,9 +51,9 @@
   font-style: italic;
 }
 
-#resume .title-date .date {
-  text-align: right;
-}
+  #resume .title-date .date {
+    text-align: right;
+  } 
 
 #resume .skillsets {
   list-style: none;
@@ -98,6 +95,10 @@ a, a:visited, a:active {
   margin: 0 
 }
 
+@media (min-width: $screen-sm-min) {
+
+}
+
 @media print {
   #app-header, #nav, .mobile-header, .sidebar, footer, .site-side-padding, .screen-only {
     display: none;
@@ -116,6 +117,11 @@ a, a:visited, a:active {
     width: 100% !important;
     margin: 0 !important;
     padding: 0.5em !important;
+    .project {
+      .link {
+        text-align: right;
+      }
+    }    
   }
 
   #app-container {

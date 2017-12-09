@@ -97,7 +97,7 @@ class App extends Component {
                     <Row className="wrapper">
                         <Col md={1} className="site-side-padding"></Col>
                         <MobileHeader />
-                        <Col md={10} sm={12} id="app-container">
+                        <Col md={10} xs={12} id="app-container">
                             <Header />
                             <main id="main">
                                 <Route path="/" exact component={Home}/>

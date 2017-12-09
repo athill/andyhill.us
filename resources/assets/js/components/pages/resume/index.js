@@ -194,7 +194,7 @@ const workplaces = [
 				department:  'University Information Technology Services',
 				title:  'Computer Lab Monitor, Help Desk',
 				dates:  '2000-2004',
-				content:  'Started as a computer lab consultant, was promoted to Support Staff position in May of 2002. Learned customer service skills.'
+				content:  'Started as a computer lab consultant, was promoted to Support Staff position in May of 2002.'
 			},
 		]
 	},
@@ -221,8 +221,8 @@ const WorkExperience = () => (
 const Project = ({ description, link, name }) => (
 	<div className="project">
 	<Row>
-		<Col xs={8} className="name"><em>{name}</em></Col>
-		<Col xs={4} className="link"><Link href={link} /></Col>
+		<Col sm={8} className="name"><em>{name}</em></Col>
+		<Col sm={4} className="link"><Link href={link} /></Col>
 	</Row>
 	<Row className="indent1">
 		{description}
