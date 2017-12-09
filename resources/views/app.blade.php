@@ -12,7 +12,7 @@
         <!-- <link rel="manifest" href="{{ asset('manifest.json') }}"> -->
         <meta name="theme-color" content="#000000"/>
         <!-- favicon -->
-        <!-- <link href="/images/touch/andyhill_48x48.png" rel="shortcut icon" type="image/png"/> -->
+        <link href="/images/icons/icon_48x48.png" rel="shortcut icon" type="image/png"/>
         <meta name="csrf-token" content="{{ csrf_token() }}">
    
         <title>andyhill.us</title>
