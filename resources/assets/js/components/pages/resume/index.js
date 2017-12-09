@@ -14,7 +14,7 @@ const Header = () => (
 		<Col className="resume-header" xs={12}>
 			<div className="resume-name">Andrew T. Hill</div>
 			<div className="resume-info">
-				409 N. Roosevelt Bloomington, IN 47408 &bull; (812)323-1590 &bull; <a href="mailto:athill@iu.edu">athill@iu.edu</a>
+				409 N. Roosevelt Bloomington, IN 47408 &bull; (812) 323-1590 &bull; <a href="mailto:athill@iu.edu">athill@iu.edu</a>
 			</div>
 			<div className="resume-info">
 				<Link href="https://andyhill.us" /> &bull; <Link href="https://github.com/athill/" />
@@ -58,15 +58,33 @@ const Objective = () => (
 
 const schools = [
 	{
-		title: <span><strong>Coursera</strong>, <a href="https://www.coursera.org/" target="_blank">https://www.coursera.org/</a></span>,
+		title: <span><strong>Udemy</strong>, <Link href="https://www.udemy.com//" /></span>,
 		entries:  [
 			{
-				title: <span>Linear Algebra through C.S. Applications <a href="http://andyhill.us/resume/matrix_cert.pdf" target="_blank">With Distinction</a></span>,
-				date: 'September 2013'
+				title: <span><a href="https://andyhill.us/media/resume/get-into-devops-cert.pdf" target="_blank" rel="noopener">Get Into DevOps</a></span>,
+				date: '2017'
+			},
+		]
+	},
+	{
+		title: <span><strong>Splunk</strong>, <Link href="https://www.splunk.com/" /></span>,
+		entries:  [
+			{
+				title: <span>Splunk Power User Certification</span>,
+				date: '2017'
+			},
+		]
+	},
+	{
+		title: <span><strong>Coursera</strong>, <Link href="https://www.coursera.org/" /></span>,
+		entries:  [
+			{
+				title: <span>Linear Algebra through C.S. Applications <a href="https://andyhill.us/media/resume/matrix_cert.pdf" target="_blank" rel="noopener">With Distinction</a></span>,
+				date: '2013'
 			},
 			{
-				title: <span>Software Engineering for Software as a Service (Part I) <a href="http://andyhill.us/resume/saas_cert.pdf" target="_blank">1917.3/2126</a></span>,
-				date: 'March 2012'
+				title: <span>Software Engineering for Software as a Service (Part I) <a href="https://andyhill.us/media/resume/saas_cert.pdf" target="_blank" rel="noopener">1917.3/2126</a></span>,
+				date: '2012'
 			},
 		]
 	},
@@ -75,15 +93,15 @@ const schools = [
 		entries:  [
 			{
 				title: 'Graduate course: Computer Networks 4.0/4.0',
-				date: 'December 2007'
+				date: '2007'
 			},
 			{
 				title: 'Unix Systems Support Group Unix Certification',
-				date: 'August 2003'
+				date: '2003'
 			},
 			{
 				title: 'Bachelor of Science in Computer Science GPA since returning: 3.5/4.0',
-				date: 'May 2003'
+				date: '2003'
 			},
 			{
 				title: 'Completed coursework in Anthropology GPA 3.2/4.0',
@@ -104,19 +122,19 @@ const Education = () => (
 const skillsets = [
 	{
 		title:  'Languages', 
-		items:  ['Java', 'JavaScript', 'ColdFusion', 'PHP', 'Apache Ant', 'C/C++', 'Bash', 'Python', 'Ruby', 'C#', 'Scheme', 'Perl']
+		items:  ['Java', 'JavaScript', 'PHP', 'ColdFusion', 'Bash', 'Python']
 	},
 	{
 		title:  'Web',
-		items:  ['Spring Boot', 'Laravel', 'React', 'Redux', 'Webpack', 'HTML5', 'jQuery', 'CSS3/Sass', 'D3.js']
+		items:  ['Spring Boot', 'Laravel', 'React', 'Redux', 'Webpack', 'HTML5', 'CSS3/Sass', 'D3.js']
 	},
 	{
 		title:  'Data',
-		items:  ['Elasticsearch', 'MongoDB', 'Redis', 'MySQL', 'Postgres', 'Oracle', 'SQL Server', 'LDAP/ADS', 'JSON', 'XML', 'XPath']
+		items:  ['Elasticsearch', 'Redis', 'MySQL', 'Postgres', 'Oracle', 'SQL Server', 'MongoDB', 'LDAP/ADS']
 	},
 	{
 		title: 'DevOps',
-		items: ['Docker', 'Ansible', 'Bamboo', 'Jenkins', 'Splunk', 'Vagrant', 'DigitalOcean']
+		items: ['CD/CI', 'Docker', 'Ansible', 'Bamboo', 'Jenkins', 'Splunk', 'Vagrant', 'DigitalOcean']
 	}
 ];
 
@@ -134,11 +152,12 @@ const Workplace = ({ jobs, title }) => (
 		{
 			jobs.map(({ content, dates, department, title }, i) => {
 				let indent = 1;
+				const displayTitle = department ? `${department} - ${title}` : title;
 				return (
 					<div key={`${title}-${i}`}>
-						{ department && <div className={`clear indent${indent++}`}><em>{ department }</em></div> }
+						
 						<div className={`title-date indent${indent}`}>
-							<TitleDate title={title} date={dates} />
+							<TitleDate title={displayTitle} date={dates} />
 						</div>
 						<div className="indent3 clear">{ content }</div>
 					</div>
@@ -151,34 +170,31 @@ const Workplace = ({ jobs, title }) => (
 const workplaces = [
 	{
 		title: <span><strong>Indiana University</strong>, Bloomington, IN</span>,
-		jobs: [
+		jobs: [	
 			{
-				department:  'Enterprise Systems Integration Middleware',
+				department:  'Enterprise Systems Middleware',
 				title:  'Senior Programmer/Systems Analyst',
 				dates:  '2014-Present',
-				content:  'As a member of a small team, maintain Kuali Rice implementation including updatating document search to use an Elasticsearch back end and build and maintain other sites which use Spring Boot, React, and Redux. We strive for continuos integration (Bamboo), practice scrum, and believe in testing, linting, peer-review and other best practices. We also maintain various services for other enterprise services, including a Nexus repository for Java and NPM artifacts, an integrated deployment process, and Elasticsearch as a service.'
+				content:  'As a member of a small team, build and maintain internal IU websites using Spring Boot, React, and Redux. Provide middleware services and an integrated deployment process for other teams. Maintain enterprise Docker Data Center. Practice Continuous Delivery.'
 			},		
 			{
 				department:  'University Student Services and Systems',
 				title:  'Senior Programmer/Systems Analyst',
 				dates:  '2005-2014',
-				content:  'Maintained three extensive web sites in ColdFusion and PHP with Oracle, SQL Server, and MySQL back ends using jQuery and AJAX technologies. Build frameworks in both ColdFusion and PHP based on convention over configuration principles, allowing overrides at directory or page level, including a system to easily include jQuery plugins where needed. The frameworks have toolsets to ease sending emails, interacting with database and LDAP data stores, generating HTML, rendering and processing forms, and other common tasks. Initiated using version control (Git).'
+				content:  'Maintained three extensive web sites in ColdFusion and PHP. Built frameworks in both ColdFusion and PHP based on convention over configuration principles. \
+						Initiated using version control (Git).'
 			},
 			{
 				department:  'Center for Survey Research',
 				title:  'Web Programmer',
 				dates:  '2004-2005',
-				content:  'Implemented surveys on the web using ColdFusion/SQL Server, 	created interfaces for survey sponsors to view and interact \
-				        with acquired data, and maintained external and internal web sites including internal survey tracking. Modularized survey programming to improve consistency of display and function, simplified and streamlined \
-				        rendering and handling of survey questions. Implemented a primitive, but functional, time-keeping system.'
+				content:  'Implemented surveys on the web using ColdFusion/SQL Server. Modularized survey programming to improve consistency of display and function.'
 			},
 			{
 				department:  'University Information Technology Services',
 				title:  'Computer Lab Monitor, Help Desk',
 				dates:  '2000-2004',
-				content:  'Started as a computer lab consultant, was promoted to Support Staff position in May of 2002, which entailed supervising 140 consultants, acting as go-between to \
-				    UITS higher-ups, and helping with difficult customer issues. Also contributed functionality to internal website using Perl. \
-				    As a Support Center Consultant (2003), Assisted walk-in and telephone customers with computer related problems including networking, hardware, authentication, and security issues. Continued in Support Staff Position.'
+				content:  'Started as a computer lab consultant, was promoted to Support Staff position in May of 2002. Learned customer service skills.'
 			},
 		]
 	},
@@ -202,6 +218,38 @@ const WorkExperience = () => (
 	</div>
 );
 
+const Project = ({ description, link, name }) => (
+	<div className="project">
+	<Row>
+		<Col xs={8} className="name"><em>{name}</em></Col>
+		<Col xs={4} className="link"><Link href={link} /></Col>
+	</Row>
+	<Row className="indent1">
+		{description}
+	</Row>
+	</div>
+);
+
+const projects = [
+	{
+		name: 'Informed Electorate',
+		description: 'Civic information app using Laravel and React',
+		link: 'https://informedelectorate.net'
+	},	
+	{
+		name: "What's in my Freezer?",
+		description: 'Inventory app using Laravel, React, and Redux',
+		link: 'https://wimf.space'
+	},
+];
+const Projects = () => (
+	<div className="projects">
+	{
+		projects.map((project, i) => <Project key={i} {...project} />)
+	}
+	</div>
+);
+
 const References = () => (
 	<span>Available upon request.</span>
 );
@@ -211,8 +259,9 @@ const References = () => (
 const sections = [
 	{ title: 'Objective', Component: Objective },
 	{ title: 'Education', Component: Education },
-	{ title: 'Computer Skills', Component: ComputerSkills },
-	{ title: 'Work Experience', Component: WorkExperience },
+	{ title: 'Skills', Component: ComputerSkills },
+	{ title: 'Work', Component: WorkExperience },
+	{ title: 'Projects', Component: Projects },
 	{ title: 'References', Component: References }
 ];
 
@@ -227,7 +276,7 @@ const Resume = () => (
 
 const ResumePage = () => (
 	<div>
-		<p className="screen-only">If you print this page, it will only print the resume. Alternatively, you can <a href="resume.pdf" target="_blank">download a PDF</a></p>
+		<p className="screen-only">If you print this page, it will only print the resume. Alternatively, you can <a href="resume.pdf" target="_blank" rel="noopener">download a PDF</a></p>
 		<Resume />
 	</div>
 );

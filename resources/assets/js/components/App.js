@@ -94,7 +94,7 @@ class App extends Component {
     render() {
         return (<Router history={history}>  
                 <Grid>
-                    <Row>
+                    <Row className="wrapper">
                         <Col md={1} className="site-side-padding"></Col>
                         <MobileHeader />
                         <Col md={10} sm={12} id="app-container">

@@ -5,6 +5,14 @@
   width: 100%;
   background: white;
   padding: 2em; 
+  .project {
+    .title {
+
+    }
+    .link {
+      text-align: right;
+    }
+  }
 }
 #resume * {
   font-size: 10pt;
@@ -86,14 +94,34 @@ a, a:visited, a:active {
   color: #990000;
   text-decoration: none; }
 
+@page { 
+  margin: 0 
+}
+
 @media print {
-  #header, #nav, #top-divider, .sidebar, footer, .site-side-padding, .screen-only {
+  #app-header, #nav, .mobile-header, .sidebar, footer, .site-side-padding, .screen-only {
     display: none;
   }
+  a[href]:after {
+    content: none !important;
+  }
+
   #page, #content-wrapper, #content, .container {
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  #resume, #main, .wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0.5em !important;
+  }
+
+  #app-container {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0;
   }
   /**
   deal with bootstrap grid http://stackoverflow.com/questions/20243767/printing-page-with-bootstrap-3#answer-20244712
