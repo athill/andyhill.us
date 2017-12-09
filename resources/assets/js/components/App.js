@@ -18,9 +18,9 @@ const navigation = [
     { display: 'Resume', href: '/resume/' },
     { display: 'Portfolio', href: '/portfolio/' },
     { display: 'Recipes', href: '/recipes/' },
-    { display: 'Blogs', href: '/blogs/' },
-    { display: 'Inspiration', href: '/inspire/', exact: false },
     { display: 'News', href: '/news/', exact: false },
+    { display: 'Inspiration', href: '/inspire/', exact: false },
+    { display: 'Blogs', href: '/blogs/' },
 ];
 
 const Navigation = ({ onLinkClick }) => (
