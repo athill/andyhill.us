@@ -84,6 +84,15 @@ const PortfolioPage = () => (
 				title="From URL to Webpage">
 			<p>Presentation I did to inform work colleagues about how web pages work. Including URL components, network routing, and page generation.</p>
 		</PortfolioItem>
+
+		{/* URL to Webpage */}
+		<PortfolioItem alt="jquery-readmore screencap" 
+				image="/images/portfolio/jquery-readmore.png" 
+				link="https://athill.github.io/jquery-readmore/" 
+				title="jquery-readmore"
+				source="https://github.com/athill/jquery-readmore">
+			<p>jQuery plugin I wrote when I couldn't find the functionality elsewhere. Allows customizable expansion and contraction of text</p>
+		</PortfolioItem>		
 	</div>
 );
 
