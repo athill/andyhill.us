@@ -1,6 +1,10 @@
 
 
-
+.tooltip .tooltip-inner {
+    max-width: 350px !important;
+    /* If max-width does not work, try using width instead */
+    width: 350px !important; 
+}	
 
 #news {
 	//// promote?
@@ -10,6 +14,7 @@
 		text-overflow: ellipsis;
 		display: block;
 	}
+
 
 	ul.nav {
 		padding: 0;
@@ -32,31 +37,36 @@
 		}
 	}
 	.feeds {
-		margin-top: 1em;
 		article {
 			border: solid thick gray;
 			padding: 4px;
 			vertical-align: top;
 			border-radius:  20px;
-
+			margin-top: 1em;
 			header {
 				overflow: auto;
-				
+				background-color: black;
+				color: white;
+				font-size: 14pt;
+				padding: 0.2em 0.5em 0 0.5em;
+				margin: -8px -8px 0px -8px;
+				border-radius:  20px 20px 0 0;
 				h3 {
-					font-size: 16pt;
-					color: black;
 					float: left;
-					padding: 0;
+					
 					margin: 0;
 					width: 275px;
 				}
 
 				nav {
 					float: right;
-					font-size: 1.2em;
 					a {
 						padding: 2px;
 						display: black;	
+						color: white;
+						&:hover {
+							color: white !important;
+						}
 					}		
 				}			
 

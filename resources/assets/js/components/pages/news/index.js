@@ -10,12 +10,18 @@ const categories = ['Wires', 'Left', 'Right', 'Libertarian', 'Government', 'TV',
 // , 'Indiana', 'Bloomington'
 
 
-const Icon = ({ name, className, srText }) => (
-	<span>
-		<i className={`fa fa-${name} ${className}`} aria-hidden="true"></i>
-		<span className="sr-only">{ srText }</span>
-	</span>
-);
+const Icon = ({ name, className, srText, ...props }) => { 
+	srText = props.title || srText;
+	if (!srText) {
+		throw new Error('Error in Icon: at least one of "title" or "srText" must be provided. If only "title" is provided, it will act as "srText" as well.');
+	}
+	return (
+		<span {...props}>
+			<i className={`fa fa-${name} ${className}`} aria-hidden="true"></i>
+			<span className="sr-only">{ srText }</span>
+		</span>
+	);
+}
 
 //// danger zone (using html from feeds)
 const Item = ({ date, description, link, showDescription, title }) => {
@@ -63,11 +69,11 @@ class Feed extends React.Component {
 					<header>
 						<h3 className="elipsis" title={ title }>{ title }</h3>
 						<nav>
-							<a href={link} target="_blank" rel="noopener" title="link to site">
-									<i className="fa fa-external-link" aria-hidden="true"></i>
+							<a href={link} target="_blank" rel="noopener" title="go to site">
+								<Icon name="external-link" srText="go to site" />
 							</a>
-							<a href="#" onClick={this._toggleDescriptions } title="expand all">
-								<i className="fa fa-chevron-circle-down" aria-hidden="true"></i>
+							<a href="#" onClick={this._toggleDescriptions } title="expand all desciptions">
+								<Icon name={showDescriptions ? 'chevron-circle-up' : 'chevron-circle-down'} srText="expand all desciptions" />
 							</a>
 						</nav>
 					</header>
@@ -175,7 +181,6 @@ const NewsPage = ({ match }) => (
 	<Row id="news">
     	<Col md={1}></Col>
     	<Col md={10}>
-    		<h2>News</h2>
     		<ul className="nav">
     		{
     			categories.map(category => <li key={category}><NavLink activeClassName="selected" exact to={`/news/${category}`}>{ category }</NavLink></li>)

@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Cache;
 use Feeds;
 
 class NewsController extends Controller {
+	const CACHE_PREFIX = 'news:';
+	const CACHE_TIMEOUT = 3600;
+
+
 	private $feeds = [
 		"Wires" => [
 			"http://feeds.reuters.com/reuters/politicsNews",
@@ -36,7 +41,6 @@ class NewsController extends Controller {
 			'https://www.federalregister.gov/blog/feed',
 			'http://gao.gov/rss/reports_450.xml',
 			'http://www.cbo.gov/publications/all/rss.xml',
-			'http://www.whitehouse.gov/omb/feed/blog',
 			'http://www.treasury.gov/rss/Pages/RSS.aspx?config=TreasuryNotes',
 		],
 		"TV" => [
@@ -48,7 +52,7 @@ class NewsController extends Controller {
 		],
 		"Print" => [
 			"http://rssfeeds.usatoday.com/usatoday-NewsTopStories",
-			"http://feeds.wsjonline.com/wsj/xml/rss/3_7011.xml",
+			'http://www.wsj.com/xml/rss/3_7041.xml',
 			"http://feeds.nytimes.com/nyt/rss/HomePage",
 			"http://feeds.latimes.com/latimes/news/nationworld/nation",
 			"http://feeds.washingtonpost.com/rss/politics",
@@ -56,14 +60,14 @@ class NewsController extends Controller {
 		"Radio" => [
 			"http://www.npr.org/rss/rss.php?id=1001",
 			"http://www.democracynow.org/democracynow.rss",
-			// "http://feeds.feedburner.com/RushLimbaugh-AllContent",
+			'https://www.rushlimbaugh.com/rss/transcripts/25/1',
 			"http://www.marketplace.org/latest-stories/long-feed.xml",
 		],
 		"Congress" => [
 			"http://www.govtrack.us/users/events-rss2.xpd?monitors=misc:activebills",
-			// "http://feeds.technorati.com/politics/",
-			// "http://www.opensecrets.org/news/atom.xml",
-			// "http://www.rollcall.com/issues/index.xml",
+			'https://www.congress.gov/rss/most-viewed-bills.xml',
+			'https://www.congress.gov/rss/house-floor-today.xml',
+			'https://www.congress.gov/rss/senate-floor-today.xml',
 		],
 		// "Indiana" => [
 		// 	"http://www.indystar.com/apps/pbcs.dll/section?Category=NEWS05&template=rss&mime=XML",
@@ -79,12 +83,20 @@ class NewsController extends Controller {
 		// ],
 	];
 
-
     public function index() {
     	return $this->show('Wires');
     }
 
     public function show($category) {
+		$cachekey = self::CACHE_PREFIX.$category;
+		if (!Cache::get($cachekey)) {	
+			Cache::put($cachekey, $this->getCategory($category), self::CACHE_TIMEOUT);
+		}	
+		return Cache::get($cachekey);
+
+    }
+
+    function getCategory($category) {
     	$rtn = [];
     	if (!isset($this->feeds[$category])) {
     		return ['error' => 'Invalid Category'];
