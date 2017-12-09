@@ -28,7 +28,7 @@ body {
 }
 
 a, a:visited, a:active {
-	color: #900;
+	color: #900 !important;
 	text-decoration: none;
 }
 
@@ -141,17 +141,20 @@ h2 {
 			a {
 				background-color: black;
 				display: block;
-				color: white;
+				color: white !important;
 				padding: 0.5em;
 				text-align: center;
 				text-decoration: none;
+				&:visited {
+					color: white !important;
+				}
 				&:hover {
 					background-color: #999;
 					color: white !important;
 				}
 				&.active {
 					background-color: white;
-					color: black;	
+					color: black !important;	
 				}					
 			}		
 		}
