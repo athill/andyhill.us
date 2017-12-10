@@ -1,18 +1,28 @@
-var STATIC_CACHE = 'informed-cache-v11';
-var DYNAMIC_CACHE = 'informed-static-cache-v3';
+var STATIC_CACHE = 'andy-cache-v1';
+var DYNAMIC_CACHE = 'andy-static-cache-v1';
 // foo
 
 var urlsToCache = [
   '/',
-  '/reps',
-  '/elections',
-  '/federalbills',
-  '/statebills',
-  '/statetax',
+  '/resume',
+  '/portfolio',
+  '/recipes',
+  '/news',
+  '/inspire',
+  '/blogs'
   '/css/app.css',
   '/js/app.js',
-  'https://fonts.googleapis.com/css?family=UnifrakturMaguntia',
-  'https://fonts.gstatic.com/s/unifrakturmaguntia/v8/7KWy3ymCVR_xfAvvcIXm33xeO3Ru8xeVcoZnah1CFiM.woff2'
+  '/images/header/band.jpg',
+  '/images/header/house.jpg',
+  '/images/header/showwater.jpg',
+  '/images/header/wfhb.jpg',
+  '/images/portfolio/cfmeta.png',
+  '/images/portfolio/jquery-readmore.png',
+  '/images/portfolio/pwa-screencap-219px.png',
+  '/images/portfolio/wimf-screenshot.png',
+  '/images/portfolio/informedelectorate.png',
+  '/images/portfolio/pizzakingscreencap.png',
+  '/images/portfolio/url2web.png',
 ];
 
 self.addEventListener('install', function(event) {
