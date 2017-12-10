@@ -89,7 +89,7 @@ const PortfolioPage = () => (
 		<PortfolioItem alt="jquery-readmore screencap" 
 				image="/images/portfolio/game-of-life-screencap.png" 
 				link="https://athill.github.io/game-of-life-jquery-bootstrap/" 
-				title="Conways's Game of Life"
+				title="Conway's Game of Life"
 				source="https://github.com/athill/game-of-life-jquery-bootstrap">
 			<p>Implementation of <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="noopener">Conway's Game of Life</a> in jQuery. Fun for the whole family!</p>
 		</PortfolioItem>		
