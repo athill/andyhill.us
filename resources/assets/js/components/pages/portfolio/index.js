@@ -85,14 +85,25 @@ const PortfolioPage = () => (
 			<p>Presentation I did to inform work colleagues about how web pages work. Including URL components, network routing, and page generation.</p>
 		</PortfolioItem>
 
-		{/* URL to Webpage */}
+		{/* game-of-life-jquery-bootstrap */}
+		<PortfolioItem alt="jquery-readmore screencap" 
+				image="/images/portfolio/game-of-life-screencap.png" 
+				link="https://athill.github.io/game-of-life-jquery-bootstrap/" 
+				title="Conways's Game of Life"
+				source="https://github.com/athill/game-of-life-jquery-bootstrap">
+			<p>Implementation of <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="noopener">Conway's Game of Life</a> in jQuery. Fun for the whole family!</p>
+		</PortfolioItem>		
+
+		{/* jquery-readmore */}
 		<PortfolioItem alt="jquery-readmore screencap" 
 				image="/images/portfolio/jquery-readmore.png" 
 				link="https://athill.github.io/jquery-readmore/" 
 				title="jquery-readmore"
 				source="https://github.com/athill/jquery-readmore">
 			<p>jQuery plugin I wrote when I couldn't find the functionality elsewhere. Allows customizable expansion and contraction of text</p>
-		</PortfolioItem>		
+		</PortfolioItem>
+
+https://athill.github.io/game-of-life-jquery-bootstrap/				
 	</div>
 );
 
