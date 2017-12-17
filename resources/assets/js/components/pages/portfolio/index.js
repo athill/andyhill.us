@@ -51,7 +51,7 @@ const PortfolioPage = () => (
 				link="http://pizzakingofcarmel.com" 
 				title="Pizza King of Carmel"
 				source="https://github.com/athill/pizzakingofcarmel.com">
-			<p>I created and maintain the Pizza King site for my cousin, Jeff. It's a good place and he's a good guy, you should check it out.</p>	
+			<p>I created and maintain the Pizza King of Carmel site for my cousin, Jeff. It's a good place and he's a good guy, you should check it out.</p>	
 			<p>Still rocking jQuery and vanilla PHP on this one.</p>
 		</PortfolioItem>
 

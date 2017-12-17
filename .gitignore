@@ -2,7 +2,7 @@
 .sass-cache/
 error_log
 php.ini
-
+laradockah
 /node_modules
 /public/css
 /public/fonts
@@ -22,4 +22,4 @@ yarn-error.log
 .env
 .DS_Store
 
-composer.lock
+composer.lockpackage-lock.json

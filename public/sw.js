@@ -9,7 +9,7 @@ var urlsToCache = [
   '/recipes',
   '/news',
   '/inspire',
-  '/blogs'
+  '/blogs',
   '/css/app.css',
   '/js/app.js',
   '/images/header/band.jpg',
