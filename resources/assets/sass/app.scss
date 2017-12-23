@@ -5,6 +5,9 @@
 // Variables
 @import "variables";
 
+// toasts
+@import "toasts";
+
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -25,6 +28,7 @@ body {
 
 #main {
 	padding: 1em;
+	position: relative;
 }
 
 a, a:visited, a:active {

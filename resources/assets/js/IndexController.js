@@ -52,10 +52,12 @@ IndexController.prototype._registerServiceWorker = function() {
 
 IndexController.prototype._sendMessage = function(message) {
  var indexController = this;
+ 
  if (!indexController._lostConnectionToast) {
    var toast = indexController._toastsView.show(message, {
       buttons: ['dismiss']
     });
+   console.log('in _sendMessage toast', toast);
     indexController._lostConnectionToast = 1;
     toast.answer.then(function(answer) {
       indexController._lostConnectionToast = null;

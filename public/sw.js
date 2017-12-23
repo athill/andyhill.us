@@ -1,4 +1,4 @@
-var STATIC_CACHE = 'andy-cache-v2';
+var STATIC_CACHE = 'andy-cache-v3';
 var DYNAMIC_CACHE = 'andy-dynamic-cache-v1';
 // foo
 
