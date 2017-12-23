@@ -1,7 +1,11 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const BlogsPage = () => (
 	<div>
+		<Helmet>
+			<title>andyhill.us - Blogs</title>
+		</Helmet>	
 		<p>As of this writing, I haven't updated either of these blogs for a while. I still like the ideas, so I'll try to address that.</p>
 		<p>
 			<a href="https://athill.github.io" target="_blank" rel="noopener">codeblog</a> is a blog related especially to code, but branches into other 

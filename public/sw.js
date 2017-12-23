@@ -1,5 +1,5 @@
-var STATIC_CACHE = 'andy-cache-v1';
-var DYNAMIC_CACHE = 'andy-static-cache-v1';
+var STATIC_CACHE = 'andy-cache-v2';
+var DYNAMIC_CACHE = 'andy-dynamic-cache-v1';
 // foo
 
 var urlsToCache = [

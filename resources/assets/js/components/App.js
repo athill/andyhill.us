@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Grid, Row } from 'react-bootstrap';
+import { Helmet } from "react-helmet";
 import { NavLink, Link, Router, Route } from 'react-router-dom';
 
 
@@ -92,8 +93,11 @@ const Header = () => (
 
 class App extends Component {
     render() {
-        return (<Router history={history}>  
+        return (<Router history={history}>            
                 <Grid>
+                   <Helmet>
+                        <title>andyhill.us</title>
+                    </Helmet>                  
                     <Row className="wrapper">
                         <Col md={1} className="site-side-padding"></Col>
                         <MobileHeader />

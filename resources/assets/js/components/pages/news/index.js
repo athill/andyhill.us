@@ -1,6 +1,7 @@
 import { find } from 'lodash';
 import React from 'react';
 import { Alert, Col, OverlayTrigger, Row, Tooltip } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import { NavLink,  Route } from 'react-router-dom';
 import slug from 'slug';
 
@@ -179,6 +180,9 @@ const CategoryWrapper = (props) => (
 
 const NewsPage = ({ match }) => (
 	<Row id="news">
+        <Helmet>
+            <title>andyhill.us - News</title>
+        </Helmet>    
     	<Col md={1}></Col>
     	<Col md={10}>
     		<ul className="nav">

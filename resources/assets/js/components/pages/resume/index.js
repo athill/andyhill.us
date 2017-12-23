@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 
 import './resume.scss';
 
@@ -276,6 +277,9 @@ const Resume = () => (
 
 const ResumePage = () => (
 	<div>
+		<Helmet>
+			<title>andyhill.us - Resume</title>
+		</Helmet>	
 		<p className="screen-only">If you print this page, it will only print the resume. Alternatively, you can <a href="resume.pdf" target="_blank" rel="noopener">download a PDF</a></p>
 		<Resume />
 	</div>

@@ -1,6 +1,7 @@
 import { sortBy, uniqBy } from 'lodash';
 import React from 'react';
 import { Alert, Col, ControlLabel, Form, FormControl, FormGroup,  Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 
 import Recipe from './Recipe';
 
@@ -134,6 +135,9 @@ class RecipesPage extends React.Component {
 		const { categories, cuisines, loadingState, ingredients } = this.state;
 		return (
 			<div>
+                <Helmet>
+                    <title>andyhill.us - Recipes</title>
+                </Helmet>            
 				<h2 id="top">Recipes</h2>
 				<p>
 					I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noopener">Gourmet</a> recipe manager. 

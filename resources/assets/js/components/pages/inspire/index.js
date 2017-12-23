@@ -1,6 +1,7 @@
 import { find } from 'lodash';
 import React from 'react';
 import { Alert, Col, Row } from 'react-bootstrap';
+import { Helmet } from "react-helmet";
 import { NavLink,  Route } from 'react-router-dom';
 
 import './inspire.scss';
@@ -161,8 +162,11 @@ class InspirePage extends React.Component {
     	const QuoteWrapper = (props) => <Quote data={data} {...props} />;
     	return (
     		<Row id="inspire">
+    			<Helmet>
+    				<title>andyhill.us - Inspiration</title>
+    			</Helmet>
 		    	<Col md={3}>
-		    		<MobileNavigation data={data} />
+		    		<MobileNavigation data={data} /> 
 		    		<DesktopNavigation data={data} />
 		    	</Col>
 		    	<Col md={9}>

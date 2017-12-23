@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 
 import './portfolio.scss';
 
@@ -21,6 +22,9 @@ const PortfolioItem = ({alt, children, image, link, source, title }) => (
 
 const PortfolioPage = () => (
 	<div id="portfolio">
+		<Helmet>
+			<title>andyhill.us - Portfolio</title>
+		</Helmet>	
 		<h2>Portfolio</h2>
 
 		{/* Informed Electorate */}
@@ -102,8 +106,6 @@ const PortfolioPage = () => (
 				source="https://github.com/athill/jquery-readmore">
 			<p>jQuery plugin I wrote when I couldn't find the functionality elsewhere. Allows customizable expansion and contraction of text</p>
 		</PortfolioItem>
-
-https://athill.github.io/game-of-life-jquery-bootstrap/				
 	</div>
 );
 
