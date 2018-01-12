@@ -1,4 +1,4 @@
-var STATIC_CACHE = 'andy-cache-v3';
+var STATIC_CACHE = 'andy-cache-v4';
 var DYNAMIC_CACHE = 'andy-dynamic-cache-v1';
 // foo
 
@@ -23,6 +23,7 @@ var urlsToCache = [
   '/images/portfolio/informedelectorate.png',
   '/images/portfolio/pizzakingscreencap.png',
   '/images/portfolio/url2web.png',
+  '/media/resume/resume.pdf'
 ];
 
 self.addEventListener('install', function(event) {

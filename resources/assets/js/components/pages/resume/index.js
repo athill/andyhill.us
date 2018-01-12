@@ -280,7 +280,7 @@ const ResumePage = () => (
 		<Helmet>
 			<title>andyhill.us - Resume</title>
 		</Helmet>	
-		<p className="screen-only">If you print this page, it will only print the resume. Alternatively, you can <a href="resume.pdf" target="_blank" rel="noopener">download a PDF</a></p>
+		<p className="screen-only">If you print this page, it will only print the resume. Alternatively, you can <a href="/media/resume/resume.pdf" target="_blank" rel="noopener">download a PDF</a></p>
 		<Resume />
 	</div>
 );
