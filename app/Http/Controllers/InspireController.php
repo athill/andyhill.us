@@ -23,7 +23,6 @@ class InspireController extends Controller {
     	// dd($files);
     	$data = [];
 		foreach ($files as $file) {
-			Log::info($file->getPath());
 			$path = $file->getPath();
 			$area = preg_replace("/.*\/([^\/]+)$/", "$1", $path); 
 		    if (!isset($data[$area])) {
