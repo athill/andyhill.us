@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Cache;
 use File;
+use Log;
 
 class InspireController extends Controller {
 	private $data;
 
     public function index() {
-    	$this->data = $this->getData();
+    	$this->data =  Cache::remember('inspire', 60, function () {
+    		return $this->getData();
+    	});
         return $this->data;
     }
 
@@ -19,6 +23,7 @@ class InspireController extends Controller {
     	// dd($files);
     	$data = [];
 		foreach ($files as $file) {
+			Log::info($file->getPath());
 			$path = $file->getPath();
 			$area = preg_replace("/.*\/([^\/]+)$/", "$1", $path); 
 		    if (!isset($data[$area])) {

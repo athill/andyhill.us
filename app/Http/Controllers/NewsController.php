@@ -9,7 +9,7 @@ use Feeds;
 
 class NewsController extends Controller {
 	const CACHE_PREFIX = 'news:';
-	const CACHE_TIMEOUT = 3600;
+	const CACHE_TIMEOUT = 1440;
 
 
 	private $feeds = [
@@ -89,10 +89,9 @@ class NewsController extends Controller {
 
     public function show($category) {
 		$cachekey = self::CACHE_PREFIX.$category;
-		if (!Cache::get($cachekey)) {	
-			Cache::put($cachekey, $this->getCategory($category), self::CACHE_TIMEOUT);
-		}	
-		return Cache::get($cachekey);
+		return Cache::remember($cachekey, 60, function () use ($category) {
+			return $this->getCategory($category);
+		});
 
     }
 

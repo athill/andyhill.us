@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-// use File;
+use Cache;
+use Log;
 
 class RecipesController extends Controller
 {
@@ -12,10 +13,12 @@ class RecipesController extends Controller
     private $data;
 
     public function __construct() {
-         if (!$this->xml = simplexml_load_file(storage_path('data/recipes/recipes.xml'))){
-           trigger_error('Error reading XML file',E_USER_ERROR);
-        }   
-       $this->data = $this->getDataFromXml();       
+        $this->data = Cache::remember('recipes', 60, function () {
+            if (!$this->xml = simplexml_load_file(storage_path('data/recipes/recipes.xml'))){
+               Log::error('Error reading recipes XML file');
+            }   
+            return $this->getDataFromXml();
+        });       
     }
 
     /**

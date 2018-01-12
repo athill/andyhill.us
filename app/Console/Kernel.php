@@ -5,6 +5,8 @@ namespace App\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
+use Log;
+
 class Kernel extends ConsoleKernel
 {
     /**
@@ -24,8 +26,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->call(function() {
+            copy('https://www.dropbox.com/s/wclbvga9x50i0wv/recipes.xml?raw=1', storage_path('data/recipes/recipes.xml'));
+        })->hourly();
     }
 
     /**

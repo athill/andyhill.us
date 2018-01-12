@@ -4341,6 +4341,108 @@ Crack some black pepper into the pasta and toss again. I like tossing the parsle
 		</ingredient-list>
 		<instructions>In a large saucepan, cook the bacon until crisp. Remove the bacon, crumble, and set aside to use as a topping for the peas. Saute the onion in the bacon drippings until tender. Add the peas, diced tomatoes and green chiles, salt, chili powder, pepper and water. Cover and cook over medium heat for 45 minutes to 1 hour, or until the peas are tender. Add additional water, if necessary. Serve garnished with crumbled bacon.</instructions>
 	</recipe>
+	<recipe id="80">
+		<title>Spicy Cornbread Stuffing</title>
+		<category>Side</category>
+		<cuisine>Cajun</cuisine>
+		<link>https://www.epicurious.com/recipes/member/views/spicy-cornbread-stuffing-with-red-peppers-chipotle-chiles-and-andouille-sausage-from-cooks-50158726</link>
+		<rating>4.5/5 stars</rating>
+		<preptime>1 hour</preptime>
+		<cooktime>40 minutes</cooktime>
+		<yields>8 servings</yields>
+		<ingredient-list>
+			<ingredient>
+				<amount>12</amount>
+				<unit>cups</unit>
+				<item>cornbread; broken into 1-inch pieces (include crumbs), spread in even layer on 2 baking sheets, and dried in 250-degree oven 50 to 60 minutes</item>
+				<key>cornbread</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cups</unit>
+				<item>chicken stock</item>
+				<key>chicken stock</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>cups</unit>
+				<item>half-and-half</item>
+				<key>half-and-half</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>large</unit>
+				<item>eggs; beaten lightly</item>
+				<key>eggs</key>
+			</ingredient>
+			<ingredient>
+				<amount>8</amount>
+				<unit>tablespoons</unit>
+				<item>unsalted butter (1 stick); plus extra for baking dish</item>
+				<key>unsalted butter (1 stick)</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<item>red bell peppers; cut into 1/4-inch pieces</item>
+				<key>red bell peppers</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>medium</unit>
+				<item>onions; chopped fine (about 3 cups)</item>
+				<key>onions</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<item>rib celery; chopped fine (about 1 1/2 cups)</item>
+				<key>rib celery</key>
+			</ingredient>
+			<ingredient>
+				<amount>4-5</amount>
+				<item>chipotle chiles en adobo; chopped (about 4 tablespoons)</item>
+				<key>chipotle chiles en adobo</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>fresh thyme leaves; minced</item>
+				<key>fresh thyme leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>tablespoons</unit>
+				<item>fresh sage leaves; minced</item>
+				<key>fresh sage leaves</key>
+			</ingredient>
+			<ingredient>
+				<amount>3</amount>
+				<unit>cloves</unit>
+				<item>garlic; minced</item>
+				<key>garlic</key>
+			</ingredient>
+			<ingredient>
+				<amount>1 1/2</amount>
+				<unit>pounds</unit>
+				<item>andouille sausage; cut into 1/2-inch pieces</item>
+				<key>andouille sausage</key>
+			</ingredient>
+			<ingredient>
+				<amount>1</amount>
+				<unit>tablespoon</unit>
+				<item>kosher salt</item>
+				<key>kosher salt</key>
+			</ingredient>
+			<ingredient>
+				<amount>2</amount>
+				<unit>teaspoons</unit>
+				<item>ground black pepper</item>
+				<key>ground black pepper</key>
+			</ingredient>
+		</ingredient-list>
+		<instructions>1. Place cornbread in large bowl. Whisk together stock, half-and-half, and eggs in medium bowl; pour over cornbread and toss very gently to coat so that cornbread does not break into smaller pieces. Set aside. 
+2. Melt 4 tablespoons butter in heated skillet; when foam subsides, add red bell peppers to skillet along with a third of the onion and celery. Sauté until softened, about 5 minutes, and transfer to medium bowl. Return skillet to heat and add remaining 4 tablespoons butter; when foam subsides, add remaining onion and celery and sauté, stirring occasionally, until softened, about 5 minutes. Stir in chipotle chiles en adobo, along with thyme, sage, and garlic. Add this mixture, along with sautéed onions and celery and andouille sausage, into cornbread and mix gently so that cornbread does not break into smaller pieces. Cover bowl with plastic wrap and refrigerate to blend flavors, at least 1 hour or up to 4 hours. 
+3. Adjust oven rack to lower-middle position and heat oven to 400 degrees. Butter 10 by 15-inch baking dish (or two 9-inch square or 11- by 7-inch baking dishes). Transfer stuffing to baking dish; pour any liquid accumulated in bottom of bowl over stuffing and, if necessary, gently press stuffing with rubber spatula to fit into baking dish. Bake until golden brown, 35 to 40 minutes</instructions>
+	</recipe>
 	<recipe id="22">
 		<title>Spinach artichoke dip</title>
 		<category>Entree</category>
