@@ -21,5 +21,7 @@ npm-debug.log
 yarn-error.log
 .env
 .DS_Store
+storage/data/recipes/recipes.xml
+storage/data/recipes/recipes.back.xml
 
 composer.lockpackage-lock.json

@@ -7,18 +7,19 @@ use Illuminate\Http\Request;
 use Cache;
 use Log;
 
+use App\Services\RecipesService;
+
 class RecipesController extends Controller
 {
     private $xml;
     private $data;
 
     public function __construct() {
-        $this->data = Cache::remember('recipes', 60, function () {
-            if (!$this->xml = simplexml_load_file(storage_path('data/recipes/recipes.xml'))){
-               Log::error('Error reading recipes XML file');
-            }   
-            return $this->getDataFromXml();
-        });       
+        if (!Cache::has(RecipesService::CACHE_KEY)) {
+            $service = new RecipesService;
+            $service->update();
+        }     
+        $this->data = Cache::get(RecipesService::CACHE_KEY);
     }
 
     /**

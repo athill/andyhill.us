@@ -26,9 +26,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(function() {
-            copy('https://www.dropbox.com/s/wclbvga9x50i0wv/recipes.xml?raw=1', storage_path('data/recipes/recipes.xml'));
-        })->hourly();
+        $schedule->command('update:recipes')->hourly();
     }
 
     /**
