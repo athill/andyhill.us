@@ -26,7 +26,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        //// recipes
         $schedule->command('update:recipes')->hourly();
+        //// news
+        $schedule->command('update:news')->hourly();
     }
 
     /**
