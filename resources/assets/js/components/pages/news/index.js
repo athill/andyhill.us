@@ -62,30 +62,40 @@ class Feed extends React.Component {
     }
 
     render() {
-    	const { title, link, description, items } = this.props;
+    	const { error, title, link, description, items } = this.props;
     	const { showDescriptions } = this.state;
-    	return (
-			<Col md={6}>
-				<article>
-					<header>
-						<h3 className="elipsis" title={ title }>{ title }</h3>
-						<nav>
-							<a href={link} target="_blank" rel="noopener" title="go to site">
-								<Icon name="external-link" srText="go to site" />
-							</a>
-							<a href="#" onClick={this._toggleDescriptions } title="expand all desciptions">
-								<Icon name={showDescriptions ? 'chevron-circle-up' : 'chevron-circle-down'} srText="expand all desciptions" />
-							</a>
-						</nav>
-					</header>
-					<ul>
-					{
-						items.slice(0, 10).map((item, i) => <li key={i}><Item showDescription={	showDescriptions } {...item} /></li> )
-					}	
-					</ul>
-				</article>
-			</Col>
-		);
+        if (error) {
+            return (
+                <Col md={6}>
+                    <article>
+                        <Alert bsStyle="danger">{ error }</Alert>
+                    </article>
+                </Col>
+            );
+        } else {
+        	return (
+                <Col md={6}>
+    			     <article>
+    					<header>
+    						<h3 className="elipsis" title={ title }>{ title }</h3>
+    						<nav>
+    							<a href={link} target="_blank" rel="noopener" title="go to site">
+    								<Icon name="external-link" srText="go to site" />
+    							</a>
+    							<a href="#" onClick={this._toggleDescriptions } title="expand all desciptions">
+    								<Icon name={showDescriptions ? 'chevron-circle-up' : 'chevron-circle-down'} srText="expand all desciptions" />
+    							</a>
+    						</nav>
+    					</header>
+    					<ul>
+    					{
+    						items.slice(0, 10).map((item, i) => <li key={i}><Item showDescription={	showDescriptions } {...item} /></li> )
+    					}	
+    					</ul>
+    				</article>
+    			</Col>
+    		);
+        }
     }
 
 }
