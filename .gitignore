@@ -1,3 +1,4 @@
+.env*
 *error_log*
 .sass-cache/
 error_log
