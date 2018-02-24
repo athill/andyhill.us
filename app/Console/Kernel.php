@@ -30,6 +30,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('update:recipes')->hourly();
         //// news
         $schedule->command('update:news')->hourly();
+        //// inspire
+        $schedule->command('update:inspire')->daily();
     }
 
     /**

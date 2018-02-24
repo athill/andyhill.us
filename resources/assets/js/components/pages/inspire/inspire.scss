@@ -8,13 +8,13 @@
 		border-radius: 0.5em;
 		border: solid black medium;
 		ul {
-			padding-left: 0.5em;
+			padding-left: 1em;
 			margin: 0 0 0 0.5em;
 			list-style: none;
 			li ul {
 				background-color: #AAA;
 				border-radius: 0.5em;
-
+				list-style: circle;
 				a.selected {
 					font-weight: bold;
 				}
