@@ -2,13 +2,13 @@
 namespace App\Services;
 
 use Log;
-use File;
 use Cache;
+use Illuminate\Support\Facades\Storage;
 
 class InspireService {
 
 	const CACHE_KEY = 'inspire';
-
+	const STORAGE_ROOT = 'data/inspire';
 
 	public function update() {
 		try {
@@ -27,17 +27,18 @@ class InspireService {
 	}
 
     public function getData() : array {
-    	$files = File::allFiles(storage_path('data/inspire'));
-    	// dd($files);
+    	$files = Storage::allFiles(self::STORAGE_ROOT);
     	$data = [];
-		foreach ($files as $file) {
-			$path = $file->getPath();
-			$area = preg_replace("/.*\/([^\/]+)$/", "$1", $path); 
+		foreach ($files as $path) {
+			// $path = $file->getPath();
+			$area = preg_replace("/.*\/([^\/]+)$/", "$1", dirname($path)); 
+			// dd($area);
 		    if (!isset($data[$area])) {
 		    	$data[$area] = [];
 		    }
-		    $key = preg_replace("/(.*)\.txt/", "$1", $file->getBasename());
-		    $content = file_get_contents($file->getPathname());
+
+		    $key = preg_replace("/(.*)\.txt/", "$1", basename($path));
+		    $content = Storage::get($path);
 		    list($title, $content) = explode("\nCONTENT\n", $content);
 		    $sections = explode("\nCREDITS\n", $content);
 		    list($content, $credits) = $sections;
@@ -45,4 +46,29 @@ class InspireService {
 		}
 		return $data;
     }
+
+    /**
+     * Generates an inspire template file in data/n
+     */
+    public function makeInspire($category, $title, $content=null, $credits=null) {
+    	$content = "$title\nCONTENT\n[content]\nCREDITS\n[credits]";
+    	$slug = $this->sluggify($title);
+    	$destination = self::STORAGE_ROOT."/${category}/${slug}.txt";
+    	Storage::put($destination, $content);
+    	return $this->log('info', "Added '${title}' to ${destination}");
+    }
+
+    private function sluggify($str)  {
+    	return preg_replace("/[^a-z0-9]+/", '', strtolower($str));
+    }
+
+  	protected function log($type, $message) {
+  		return [ 'type' => $type, 'message' => $message ];	
+  	}
+
+  	private function getCategories() {
+  		$directory = storage_path(self::STORAGE_ROOT);
+  		//// shoud be able to $categories = Storage::directories(storage_path(self::STORAGE_ROOT)); or something like that
+  		return array_diff(scandir($directory), array('..', '.'));
+  	}
 }
