@@ -23,4 +23,6 @@ Route::group(['middleware' => 'api'], function () {
 	Route::resource('inspire', 'InspireController', ['only' => ['index']]);
 
 	Route::resource('news', 'NewsController', ['only' => ['index', 'show']]);
+
+	Route::get('health', 'HealthController@index');
 });
