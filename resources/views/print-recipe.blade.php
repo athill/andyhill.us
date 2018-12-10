@@ -17,7 +17,7 @@
         <style type="text/css">
         body {
             color: black;
-            background-color: white;
+            background-color: white !important;
         }    
         h5 {
             margin-bottom: 0.5em;
