@@ -17,13 +17,13 @@ class NewsController extends Controller {
     }
 
     public function show($category) {
-		$cachekey = NewsService::CACHE_PREFIX.$category;
-		if (!Cache::has($cachekey)) {
-			return ['error' => 'Invalid category '.$category];
-		}
-		return Cache::get($cachekey);
+		// $cachekey = NewsService::CACHE_PREFIX.$category;
+		// if (!Cache::has($cachekey)) {
+		// 	return ['error' => 'Invalid category '.$category];
+		// }
+		// return Cache::get($cachekey);
 		// get in real time
-		// $service = new NewsService;
-		// return $service->getCategory($category);
+		$service = new NewsService;
+		return $service->getCategory($category);
     }
 }

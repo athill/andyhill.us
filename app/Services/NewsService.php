@@ -16,10 +16,10 @@ class NewsService {
 	],
 
 	"Left" => [
-		"http://www.huffingtonpost.com/feeds/verticals/politics/index.xml",
+		"https://www.huffpost.com/section/front-page/feed",
 		'https://www.dailykos.com/blogs/main.rss',
-		"http://www.prospect.org/articles_rss.jsp",
-		"http://feeds.feedburner.com/talking-points-memo",
+		"https://prospect.org/api/rss/all.rss",
+		"http://talkingpointsmemo.com/feed/all",
 
 	],
 	"Right" => [
@@ -41,11 +41,11 @@ class NewsService {
 		'http://www.treasury.gov/rss/Pages/RSS.aspx?config=TreasuryNotes',
 	],
 	"TV" => [
-		"http://feeds.abcnews.com/abcnews/politicsheadlines",
+		"http://feeds.abcnews.com/abcnews/topstories",
 		"http://feeds.cbsnews.com/CBSNewsMain",
 		"http://rss.cnn.com/rss/cnn_topstories.rss",
-		"http://www.foxnews.com/about/rss/feedburner/foxnews/politics",
-		"http://www.msnbc.msn.com/id/3032552/device/rss/rss.xml",
+		"http://feeds.foxnews.com/foxnews/politics",
+		"https://www.cnbc.com/id/100003114/device/rss/rss.html",
 	],
 	"Print" => [
 		"http://rssfeeds.usatoday.com/usatoday-NewsTopStories",
@@ -58,7 +58,7 @@ class NewsService {
 		"http://www.npr.org/rss/rss.php?id=1001",
 		"http://www.democracynow.org/democracynow.rss",
 		'https://www.rushlimbaugh.com/rss/transcripts/25/1',
-		"http://www.marketplace.org/latest-stories/long-feed.xml",
+		"https://www.marketplace.org/feed/podcast/marketplace",
 	],
 	"Congress" => [
 		"http://www.govtrack.us/users/events-rss2.xpd?monitors=misc:activebills",
