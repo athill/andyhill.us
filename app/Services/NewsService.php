@@ -10,11 +10,6 @@ class NewsService {
 	const CACHE_PREFIX = 'news:';
 
 	public $feeds = [
-	"Wires" => [
-		"http://feeds.reuters.com/reuters/politicsNews",
-		"http://hosted2.ap.org/atom/APDEFAULT/89ae8247abe8493fae24405546e9a1aa",
-	],
-
 	"Left" => [
 		"https://www.huffpost.com/section/front-page/feed",
 		'https://www.dailykos.com/blogs/main.rss',

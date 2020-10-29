@@ -22,7 +22,7 @@ class NewsController extends Controller {
 			return ['error' => 'Invalid category '.$category];
 		}
 		return Cache::get($cachekey);
-		// get in real time
+		// // get in real time
 		// $service = new NewsService;
 		// return $service->getCategory($category);
     }
