@@ -49,13 +49,11 @@ class RecipesService {
 
 	public function cache($data) {
 		Cache::forget(self::CACHE_KEY);
-		Cache::forever(self::CACHE_KEY, $data);		
+		Cache::forever(self::CACHE_KEY, $data);
 	}
 
 
 	public function get() {
-		////magic to get data;
-
         // create curl resource
         $ch = curl_init();
 
@@ -64,7 +62,7 @@ class RecipesService {
 		curl_setopt($ch, CURLOPT_FAILONERROR,1);
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION,1);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($ch, CURLOPT_TIMEOUT, 15);        
+		curl_setopt($ch, CURLOPT_TIMEOUT, 15);
 
         //return the transfer as a string
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -72,7 +70,7 @@ class RecipesService {
         // $output contains the output string
         $output = curl_exec($ch);
         // close curl resource to free up system resources
-        curl_close($ch); 		
+        curl_close($ch);
         return $output;
 	}
 
@@ -84,45 +82,31 @@ class RecipesService {
 
     public function parse() : array {
 		$xml = simplexml_load_file($this->filepath);
-		if (!$xml) {	
+		if (!$xml) {
 			throw new \RuntimeException('Error reading recipes XML file');
-		}        
+		}
+		$json = json_encode($xml);
+		$array = json_decode($json,TRUE);
         $recipes = [];
-        foreach ($xml as $recipe) {
+        foreach ($array['recipe'] as $recipe) {
+			// dd($recipe);
             $json = [
-                'id' => (string) $recipe['id'],
-                'instructions' => explode("\n", (string) $recipe->instructions)
+                'id' => $recipe['@attributes']['id'],
+				'instructions' => isset($recipe['instructions']) ? explode("\n", $recipe['instructions']) : '',
+				'servings' => isset($recipe['yields']) ? $recipe['yields'] : ''
             ];
-            if ($recipe->modifications && strlen(trim((string) $recipe->modifications)) > 0) {
-                $json['notes'] = explode("\n", (string) $recipe->modifications);
+            if (isset($recipe['modifications']) && strlen(trim($recipe['modifications'])) > 0) {
+                $json['notes'] = explode("\n", $recipe['modifications']);
             }
             //// simple tags
-            $tagnames = ['title', 'category','cuisine','rating','preptime','servings','cooktime'];
+            $tagnames = ['category','cooktime','cuisine','link','preptime','rating','source','title'];
             foreach ($tagnames as $tagname) {
-                $json[$tagname] = (string)$recipe->{$tagname};
-            }
+                $json[$tagname] = isset($recipe[$tagname]) ? $recipe[$tagname] : '';
+			}
             //// instructions
-            $ingredients = [];
-            foreach ($recipe->{'ingredient-list'}->ingredient as $ingredient) {
-                $ingredients[] = [
-                    'amount' => (string) $ingredient->amount,
-                    'unit' => (string) $ingredient->unit,
-                    'item' => (string) $ingredient->item,
-                    'key' => (string) $ingredient->key
-                ];
-            }
-            $ingredients = [];
-            foreach ($recipe->{'ingredient-list'}->ingredient as $ingredient) {
-                $ingredients[] = [
-                        'amount' => (string) $ingredient->amount,
-                        'unit' => (string) $ingredient->unit,
-                        'item' => (string) $ingredient->item,
-                        'key' => (string) $ingredient->key
-                ];
-            }
-            $json['ingredients'] = $ingredients;
+            $json['ingredients'] = isset($recipe['ingredient-list']) ? $recipe['ingredient-list']['ingredient']: '';
             $recipes[] = $json;
         }
         return $recipes;
-    }	
+    }
 }
