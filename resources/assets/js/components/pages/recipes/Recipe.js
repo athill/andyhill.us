@@ -23,24 +23,40 @@ const recipeMetaMap = [
 
 const Links = ({ id }) => (
 	<span>
-		<a href={`/recipes/print/${id}`} target="_blank" rel="noopener">Print</a>&nbsp;|&nbsp; 
-		<a href={`/recipes/export/${id}`} target="_blank" rel="noopener">Export</a> 
-		<br /><br /> 
+		<a href={`/recipes/print/${id}`} target="_blank" rel="noopener">Print</a>&nbsp;|&nbsp;
+		<a href={`/recipes/export/${id}`} target="_blank" rel="noopener">Export</a>
+		<br /><br />
 		<a href="#top">Return to top</a>
 	</span>
 );
 
+const Source = ({ recipe }) => {
+  // if (recipe.link && recipe.source) {
+  //   return <div key={map.key}><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noopener noreferrer">{recipe.source}</a></dd></div>
+  // } else if (recipe.link) {
+  //   const display = recipe.link.replace(/\w+:\/\/([^\/]+).*/, '$1');
+  //   return <div key={map.key}><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noopener noreferrer">{display}</a></dd></div>
+  // } else if (recipe.source) {
+  //   return <div key={map.key}><dt>Source</dt><dd>{recipe.source}</dd></div>
+  // } else {
+    return null;
+  // }
+};
+
+
+
 const Recipe = ({ recipe, isScreenDisplay=true }) => (
-	<div id={`recipe-${recipe.id}`} className="recipe"> 
-		<h4 id={recipe.name} className="recipe-title">{recipe.title}</h4> 
-		<div className="recipe-main"> 
+	<div id={`recipe-${recipe.id}`} className="recipe">
+		<h4 id={recipe.name} className="recipe-title">{recipe.title}</h4>
+		<div className="recipe-main">
 			<dl className="recipe-meta dl-horizontal">
 			{
 				recipeMetaMap.map(map => <div key={map.key}><dt>{map.header}</dt><dd>{recipe[map.key]}</dd></div>)
 			}
-			</dl> 
-			<h5>Ingredients:</h5> 
-			<div className="container-fluid recipe-ingredients"> 
+      {/* <Source recipe={recipe} /> */}
+			</dl>
+			<h5>Ingredients:</h5>
+			<div className="container-fluid recipe-ingredients">
 				<Row>
 					<Col md={6} sm={12} >
 					{
@@ -51,7 +67,7 @@ const Recipe = ({ recipe, isScreenDisplay=true }) => (
 									if (item == 'unit') {
 										unitReplacements.forEach(function(replacement) {
 											ingredient[item] = ingredient[item].replace(replacement[0], replacement[1]);
-										});											
+										});
 									}
 									return <Col key={i} xs={ingredientItemWidthMap[item]}>{ ingredient[item] }</Col>;
 								})
@@ -60,14 +76,14 @@ const Recipe = ({ recipe, isScreenDisplay=true }) => (
 						))
 					}
 					</Col>
-				</Row> 
-			</div> 
-			<h5>Instructions:</h5> 
+				</Row>
+			</div>
+			<h5>Instructions:</h5>
 			{ recipe.instructions.map((instruction, i) => <div key={`${instruction}-${i}`}>{ instruction }</div>) }
 			{ 'notes' in recipe && <div><h5>Notes</h5>{ recipe.notes.map((note, i) => <div key={`${note}-${i}`}>{ note }</div>) } </div> }
-		</div> 
+		</div>
 			{ isScreenDisplay && <Links id={recipe.id} /> }
-    </div> 
+    </div>
 );
 
 export default Recipe;
