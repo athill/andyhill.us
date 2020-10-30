@@ -52,7 +52,7 @@ class RecipesPage extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { 
+        this.state = {
         	recipes: [],
         	loadingState: 'loading',
         	textFilter: null,
@@ -66,7 +66,7 @@ class RecipesPage extends React.Component {
         this._filter = this._filter.bind(this);
         this._getOption = this._getOption.bind(this);
         this._onItemChange = this._onItemChange.bind(this);
-        
+
     }
 
 
@@ -80,9 +80,9 @@ class RecipesPage extends React.Component {
     		return inString(categoryFilter, recipe.category) &&
     			inString(cuisineFilter, recipe.cuisine) &&
     			inString(ingredientFilter, recipe.ingredients.map(ingredient => ingredient.item).join(' ')) &&
-    			(inString(textFilter, recipe.category) || 
+    			(inString(textFilter, recipe.category) ||
 						inString(textFilter, recipe.cuisine) ||
-						inString(textFilter, recipe.title) ||	
+						inString(textFilter, recipe.title) ||
 						inString(textFilter, recipe.instructions.join(' ')));
     	});
     }
@@ -96,7 +96,7 @@ class RecipesPage extends React.Component {
 		const value =  option.split(';')[0];
 		const display = (value.length > maxOptionLength) ? value.substring(0, maxOptionLength) + '...' : value;
 		return {
-			display, 
+			display,
 			value
 		}
     }
@@ -105,17 +105,17 @@ class RecipesPage extends React.Component {
     	fetch('/api/recipes')
     		.then(response => response.json().then(data => {
     			let categories = [],
-    					cuisines = [],
-    					ingredients = [];
+                    cuisines = [],
+                    ingredients = [];
     			const recipes = data.map(recipe => {
     				recipe.category && categories.push(this._getOption(recipe.category));
     				recipe.cuisine && cuisines.push(this._getOption(recipe.cuisine));
     				ingredients = ingredients.concat(recipe.ingredients.map(ingredient => this._getOption(ingredient.item)));
     				return { ...recipe, name: recipe.title.replace(/[^a-zA-Z0-9]/g, '')};
     			});
-    			categories = sortBy(uniqBy(categories, 'value'), o => o.display);
-    			cuisines = sortBy(uniqBy(cuisines, 'value'), o => o.display);
-    			ingredients = sortBy(uniqBy(ingredients, 'value'), o => o.display);
+    			// categories = sortBy(uniqBy(categories, 'value'), o => o.display);
+    			// cuisines = sortBy(uniqBy(cuisines, 'value'), o => o.display);
+    			// ingredients = sortBy(uniqBy(ingredients, 'value'), o => o.display);
     			this.setState({
     				loadingState: 'loaded',
     				categories,
@@ -124,10 +124,10 @@ class RecipesPage extends React.Component {
     				recipes
     			});
     		}))
-    		.catch(error => {
-    			console.error(error);
-    			this.setState({ loadingState: 'fail' });
-    		});
+    		// .catch(error => {
+    		// 	console.error(error);
+    		// 	this.setState({ loadingState: 'fail' });
+    		// });
     }
 
 	render() {
@@ -137,16 +137,16 @@ class RecipesPage extends React.Component {
 			<div>
                 <Helmet>
                     <title>andyhill.us - Recipes</title>
-                </Helmet>            
+                </Helmet>
 				<h2 id="top">Recipes</h2>
 				<p>
-					I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noopener">Gourmet</a> recipe manager. 
+					I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noopener">Gourmet</a> recipe manager.
 					The content of this page is from an XML export of my recipes in Gourmet.
 				</p>
-				<RecipesForm 
-					categories={categories} 
-					cuisines={cuisines} 
-					ingredients={ingredients} 
+				<RecipesForm
+					categories={categories}
+					cuisines={cuisines}
+					ingredients={ingredients}
 					onCategoryChange={this._onItemChange('categoryFilter')}
 					onCuisineChange={this._onItemChange('cuisineFilter')}
 					onTextChange={this._onItemChange('textFilter')}
@@ -159,9 +159,9 @@ class RecipesPage extends React.Component {
 				</ul>
 				{ loadingState === 'loading' && <div><i className="fa fa-refresh fa-cog fa-3x fa-fw"></i> Loading ...</div> }
 				{ loadingState === 'loaded' && <Recipes recipes={recipes} /> }
-				{ loadingState === 'fail' && <Alert bsStyle="danger">We&apos;re sorry, something went wrong.</Alert> }
-			</div>		
-		);		
+				{ loadingState === 'fail' && <Alert bsStyle="danger">We&apos;re sorry, something went wrong....</Alert> }
+			</div>
+		);
 	}
 }
 
