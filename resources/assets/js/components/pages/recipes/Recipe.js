@@ -31,18 +31,17 @@ const Links = ({ id }) => (
 );
 
 const Source = ({ recipe }) => {
-  // if (recipe.link && recipe.source) {
-  //   return <div key={map.key}><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noopener noreferrer">{recipe.source}</a></dd></div>
-  // } else if (recipe.link) {
-  //   const display = recipe.link.replace(/\w+:\/\/([^\/]+).*/, '$1');
-  //   return <div key={map.key}><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noopener noreferrer">{display}</a></dd></div>
-  // } else if (recipe.source) {
-  //   return <div key={map.key}><dt>Source</dt><dd>{recipe.source}</dd></div>
-  // } else {
+  if (recipe.link && recipe.source) {
+    return <div><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noopener noreferrer">{recipe.source}</a></dd></div>
+  } else if (recipe.link) {
+    const display = recipe.link.replace(/\w+:\/\/([^\/]+).*/, '$1');
+    return <div><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noopener noreferrer">{display}</a></dd></div>
+  } else if (recipe.source) {
+    return <div><dt>Source</dt><dd>{recipe.source}</dd></div>
+  } else {
     return null;
-  // }
+  }
 };
-
 
 
 const Recipe = ({ recipe, isScreenDisplay=true }) => (
@@ -53,7 +52,7 @@ const Recipe = ({ recipe, isScreenDisplay=true }) => (
 			{
 				recipeMetaMap.map(map => <div key={map.key}><dt>{map.header}</dt><dd>{recipe[map.key]}</dd></div>)
 			}
-      {/* <Source recipe={recipe} /> */}
+            <Source recipe={recipe} />
 			</dl>
 			<h5>Ingredients:</h5>
 			<div className="container-fluid recipe-ingredients">
@@ -64,12 +63,12 @@ const Recipe = ({ recipe, isScreenDisplay=true }) => (
 							<Row key={`${ingredient.item}-${i}`}>
 							{
 								ingredientItems.map((item, i) => {
-									if (item == 'unit') {
+									if (item === 'unit' && item.unit) {
 										unitReplacements.forEach(function(replacement) {
 											ingredient[item] = ingredient[item].replace(replacement[0], replacement[1]);
 										});
 									}
-									return <Col key={i} xs={ingredientItemWidthMap[item]}>{ ingredient[item] }</Col>;
+									return <Col key={i} xs={ingredientItemWidthMap[item]}>{ ingredient[item] || '' }</Col>;
 								})
 							}
 							</Row>

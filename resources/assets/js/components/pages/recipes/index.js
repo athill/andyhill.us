@@ -92,13 +92,13 @@ class RecipesPage extends React.Component {
     }
 
     _getOption(option) {
-		//// remove everything after semi-colon
-		const value =  option.split(';')[0];
-		const display = (value.length > maxOptionLength) ? value.substring(0, maxOptionLength) + '...' : value;
-		return {
-			display,
-			value
-		}
+      //// remove everything after semi-colon
+      const value =  option.split(';')[0];
+      const display = (value.length > maxOptionLength) ? value.substring(0, maxOptionLength) + '...' : value;
+      return {
+        display,
+        value
+      };
     }
 
     componentDidMount() {
