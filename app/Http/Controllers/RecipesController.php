@@ -15,10 +15,11 @@ class RecipesController extends Controller
     private $data;
 
     public function __construct() {
+        Cache::clear(RecipesService::CACHE_KEY);
         if (!Cache::has(RecipesService::CACHE_KEY)) {
             $service = new RecipesService;
             $service->update();
-        }     
+        }
         $this->data = Cache::get(RecipesService::CACHE_KEY);
     }
 
@@ -28,6 +29,7 @@ class RecipesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
+        $service = new RecipesService;
         return $this->data;
     }
 
@@ -43,47 +45,4 @@ class RecipesController extends Controller
         $content = $this->xml->xpath("//recipe[@id=$id]");
         return response($content[0]->asXml(), '200')->header('Content-Type', 'text/xml');
     }
-
-    private function getDataFromXml($xml=null) : array {
-        $xml = is_null($xml) ? $this->xml : $xml;
-        $recipes = [];
-        foreach ($xml as $recipe) {
-            $json = [
-                'id' => (string) $recipe['id'],
-                'instructions' => explode("\n", (string) $recipe->instructions)
-            ];
-            if ($recipe->modifications && strlen(trim((string) $recipe->modifications)) > 0) {
-                $json['notes'] = explode("\n", (string) $recipe->modifications);
-            }
-            //// simple tags
-            $tagnames = ['title', 'category','cuisine','rating','preptime','servings','cooktime'];
-            foreach ($tagnames as $tagname) {
-                $json[$tagname] = (string)$recipe->{$tagname};
-            }
-            //// instructions
-            $ingredients = [];
-            foreach ($recipe->{'ingredient-list'}->ingredient as $ingredient) {
-                $ingredients[] = [
-                    'amount' => (string) $ingredient->amount,
-                    'unit' => (string) $ingredient->unit,
-                    'item' => (string) $ingredient->item,
-                    'key' => (string) $ingredient->key
-                ];
-            }
-            $ingredients = [];
-            foreach ($recipe->{'ingredient-list'}->ingredient as $ingredient) {
-                $ingredients[] = [
-                        'amount' => (string) $ingredient->amount,
-                        'unit' => (string) $ingredient->unit,
-                        'item' => (string) $ingredient->item,
-                        'key' => (string) $ingredient->key
-                ];
-            }
-            $json['ingredients'] = $ingredients;
-            $recipes[] = $json;
-        }
-        return $recipes;
-    }
-
- 
 }

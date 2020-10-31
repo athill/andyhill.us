@@ -7,18 +7,18 @@
         <meta name="keywords" content="andy hill,andy,hill,developer,iu"/>
         <meta name="description" content="andyhill.us, home page for Andy Hill"/>
         <meta name="author" content="Andy Hill"/>
-        <meta name="copyright" content="{{ date('Y') }}, andyhill.us"/>       
+        <meta name="copyright" content="{{ date('Y') }}, andyhill.us"/>
         <!-- favicon -->
         <!-- <link href="/images/touch/andyhill_48x48.png" rel="shortcut icon" type="image/png"/> -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-   
+
         <title>andyhill.us -- {{ $recipe['title'] }}</title>
         <link href="{{mix('css/app.css')}}" rel="stylesheet" type="text/css">
         <style type="text/css">
         body {
             color: black;
             background-color: white !important;
-        }    
+        }
         h5 {
             margin-bottom: 0.5em;
             font-weight: bold;
@@ -61,8 +61,8 @@
                      <div class="row">
                         <div class="col-md-6 col-sm-12">
                            <div class="row">
-                              <div class="col-xs-2">{{ $ingredient['amount'] }}</div>
-                              <div class="col-xs-2">{{ $ingredient['unit'] }}</div>
+                              <div class="col-xs-2">{{ isset($ingredient['amount']) ? $ingredient['amount'] : '' }}</div>
+                              <div class="col-xs-2">{{ isset($ingredient['unit']) ? $ingredient['unit'] : '' }}</div>
                               <div class="col-xs-8">{{ $ingredient['item'] }}</div>
                            </div>
                         </div>
@@ -77,9 +77,9 @@
                 <h5>Notes:</h5>
                   @foreach ($recipe['notes'] as $note)
                     <div>{{ $note }}</div>
-                  @endforeach                
+                  @endforeach
               @endisset
            </div>
-        </div>        
+        </div>
     </body>
 </html>
