@@ -1,5 +1,5 @@
-var STATIC_CACHE = 'andy-cache-v6';
-var DYNAMIC_CACHE = 'andy-dynamic-cache-v1';
+var STATIC_CACHE = 'andy-cache-v7';
+var DYNAMIC_CACHE = 'andy-dynamic-cache-v3';
 // foo
 
 var urlsToCache = [
@@ -60,7 +60,7 @@ function toast(event, message) {
       .then(function(client) {
         client.postMessage({
           msg: message,
-        });       
+        });
       })
       .catch(function(err)  {
         return;
@@ -105,7 +105,7 @@ function cacheFirstStrategy(event) {
         toast(event, 'You appear to be offline. Please check your internet connection.');
         return;
       });
-    }); 
+    });
 }
 
 function onlineFirstStrategy(event) {
@@ -122,10 +122,10 @@ function onlineFirstStrategy(event) {
         .then(function(match) {
           if (match) {
             toast(event, 'You appear to be offline. Returning result from local cache.');
-            return match;            
+            return match;
           } else {
             toast(event, 'You appear to be offline. Please check your internet connection.');
-            return;              
+            return;
           }
         })
     })
