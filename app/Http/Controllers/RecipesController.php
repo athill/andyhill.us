@@ -15,7 +15,8 @@ class RecipesController extends Controller
     private $data;
 
     public function __construct() {
-        Cache::clear(RecipesService::CACHE_KEY);
+        //// for debugging
+        // Cache::clear(RecipesService::CACHE_KEY);
         if (!Cache::has(RecipesService::CACHE_KEY)) {
             $service = new RecipesService;
             $service->update();
@@ -29,7 +30,6 @@ class RecipesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $service = new RecipesService;
         return $this->data;
     }
 
