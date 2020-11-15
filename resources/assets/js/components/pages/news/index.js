@@ -7,11 +7,11 @@ import slug from 'slug';
 
 import './news.scss';
 
-const categories = ['Wires', 'Left', 'Right', 'Libertarian', 'Government', 'TV', 'Print', 'Radio', 'Congress'];
+const categories = ['Left', 'Right', 'Libertarian', 'Government', 'TV', 'Print', 'Radio', 'Congress'];
 // , 'Indiana', 'Bloomington'
 
 
-const Icon = ({ name, className, srText, ...props }) => { 
+const Icon = ({ name, className, srText, ...props }) => {
 	srText = props.title || srText;
 	if (!srText) {
 		throw new Error('Error in Icon: at least one of "title" or "srText" must be provided. If only "title" is provided, it will act as "srText" as well.');
@@ -31,10 +31,10 @@ const Item = ({ date, description, link, showDescription, title }) => {
 	const empty = <Empty id={slug(title)} />;
 	return (<span>
 			<OverlayTrigger placement="bottom" overlay={showDescription ? empty : tooltip }>
-				<a href={link} className="feed-links elipsis" 
+				<a href={link} className="feed-links elipsis"
 					target="_blank" rel="noopener"><span dangerouslySetInnerHTML={{ __html: title }} /></a>
-			</OverlayTrigger>				
-			{ 
+			</OverlayTrigger>
+			{
 				showDescription && (<div className="feed-description">
 							<div dangerouslySetInnerHTML={{ __html: description }} />
 							<br /><br />
@@ -90,7 +90,7 @@ class Feed extends React.Component {
     					<ul>
     					{
     						items.slice(0, 10).map((item, i) => <li key={i}><Item showDescription={	showDescriptions } {...item} /></li> )
-    					}	
+    					}
     					</ul>
     				</article>
     			</Col>
@@ -114,7 +114,7 @@ class Category extends React.Component {
 
 
     _update(props) {
-    	const category = props.match.params.category || 'Wires';
+    	const category = props.match.params.category || categories[0];
     	const statedata = this.state.data;
     	if (statedata[category]) {
     		this.setState({
@@ -165,7 +165,7 @@ class Category extends React.Component {
 			return;
 		}
     	this._update(nextProps);
-    }    
+    }
 
     render() {
     	const { loadingState, data, category } = this.state;
@@ -177,11 +177,11 @@ class Category extends React.Component {
     	return (
     		<Row className="feeds">
     		{
-    			data[category] && data[category].map((feed, i) => <Feed key={i} {...feed} />) 
+    			data[category] && data[category].map((feed, i) => <Feed key={i} {...feed} />)
     		}
     		</Row>
     	);
-    }	
+    }
 }
 
 const CategoryWrapper = (props) => (
@@ -192,7 +192,7 @@ const NewsPage = ({ match }) => (
 	<Row id="news">
         <Helmet>
             <title>andyhill.us - News</title>
-        </Helmet>    
+        </Helmet>
     	<Col md={1}></Col>
     	<Col md={10}>
     		<ul className="nav">
