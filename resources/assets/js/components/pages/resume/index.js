@@ -19,7 +19,7 @@ const Header = () => (
 			</div>
 			<div className="resume-info">
 				<Link href="https://andyhill.us" /> &bull; <Link href="https://github.com/athill/" />
-			</div>			
+			</div>
 		</Col>
 	</Row>
 );
@@ -31,7 +31,7 @@ const Section = ({ title, Component }) => (
 		</Col>
 		<Col md={10} className="right-col">
 			<Component />
-		</Col>		
+		</Col>
 	</Row>
 );
 
@@ -48,7 +48,7 @@ const EducationCategory = ({title, entries }) => (
 	<div>
 		<div className="education-category-title">{ title }</div>
 		{
-			entries.map(({ date, title }, i) => <TitleDate key={`${title}-${i}`} title={title} date={date} />)	
+			entries.map(({ date, title }, i) => <TitleDate key={`${title}-${i}`} title={title} date={date} />)
 		}
 	</div>
 );
@@ -109,7 +109,7 @@ const schools = [
 				date: '1989-1992'
 			},
 		]
-	},	
+	},
 ];
 const Education = () => (
 	<div>
@@ -122,7 +122,7 @@ const Education = () => (
 
 const skillsets = [
 	{
-		title:  'Languages', 
+		title:  'Languages',
 		items:  ['Java', 'JavaScript', 'PHP', 'ColdFusion', 'Bash', 'Python']
 	},
 	{
@@ -156,7 +156,7 @@ const Workplace = ({ jobs, title }) => (
 				const displayTitle = department ? `${department} - ${title}` : title;
 				return (
 					<div key={`${title}-${i}`}>
-						
+
 						<div className={`title-date indent${indent}`}>
 							<TitleDate title={displayTitle} date={dates} />
 						</div>
@@ -171,13 +171,13 @@ const Workplace = ({ jobs, title }) => (
 const workplaces = [
 	{
 		title: <span><strong>Indiana University</strong>, Bloomington, IN</span>,
-		jobs: [	
+		jobs: [
 			{
 				department:  'Enterprise Systems Middleware',
 				title:  'Senior Programmer/Systems Analyst',
 				dates:  '2014-Present',
-				content:  'As a member of a small team, build and maintain internal IU websites using Spring Boot, React, and Redux. Provide middleware services and an integrated deployment process for other teams. Maintain enterprise Docker Data Center. Practice Continuous Delivery.'
-			},		
+				content:  'As a member of a small team, build and maintain internal IU websites using Spring Boot, React, and Redux. Provide middleware services such as Redis and RabbitMQ for other teams. Maintain enterprise TKGI Kubernetes environment. Practice Continuous Delivery.'
+			},
 			{
 				department:  'University Student Services and Systems',
 				title:  'Senior Programmer/Systems Analyst',
@@ -208,7 +208,7 @@ const workplaces = [
 				content: 'Acquired work ethic, learned teamwork and interpersonal skills'
 			}
 		]
-	}	
+	}
 ];
 
 const WorkExperience = () => (
@@ -236,7 +236,7 @@ const projects = [
 		name: 'Informed Electorate',
 		description: 'Civic information app using Laravel and React',
 		link: 'https://informedelectorate.net'
-	},	
+	},
 	{
 		name: "What's in my Freezer?",
 		description: 'Inventory app using Laravel, React, and Redux',
@@ -262,16 +262,16 @@ const sections = [
 	{ title: 'Education', Component: Education },
 	{ title: 'Skills', Component: ComputerSkills },
 	{ title: 'Work', Component: WorkExperience },
-	{ title: 'Projects', Component: Projects },
+	// { title: 'Projects', Component: Projects },
 	{ title: 'References', Component: References }
 ];
 
 const Resume = () => (
 	<div className="container" id="resume">
-		<Header />	
+		<Header />
 		{
 			sections.map(({ title, Component }, i) => <Section key={`${title}-${i}`} title={title} Component={Component} />)
-		}	
+		}
 	</div>
 );
 
@@ -279,7 +279,7 @@ const ResumePage = () => (
 	<div>
 		<Helmet>
 			<title>andyhill.us - Resume</title>
-		</Helmet>	
+		</Helmet>
 		<p className="screen-only">If you print this page, it will only print the resume. Alternatively, you can <a href="/media/resume/resume.pdf" target="_blank" rel="noopener">download a PDF</a></p>
 		<Resume />
 	</div>
