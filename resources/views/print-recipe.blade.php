@@ -18,10 +18,14 @@
         body {
             color: black;
             background-color: white !important;
+            margin: 4em;
         }
         h5 {
             margin-bottom: 0.5em;
             font-weight: bold;
+        }
+        .recipe-meta th {
+            padding-right: 1em;
         }
         </style>
     </head>
@@ -29,32 +33,34 @@
         <div id="recipe-{{ $recipe['id'] }}" class="recipe">
            <h4 class="recipe-title recipe-background">{{ $recipe['title'] }}</h4>
            <div class="recipe-main recipe-background">
-              <dl class="recipe-meta dl-horizontal">
-                 <div>
-                    <dt>Category</dt>
-                    <dd>{{ $recipe['category'] }}</dd>
-                 </div>
-                 <div>
-                    <dt>Cuisine</dt>
-                    <dd>{{ $recipe['cuisine'] }}</dd>
-                 </div>
-                 <div>
-                    <dt>Rating</dt>
-                    <dd>{{ $recipe['rating'] }}</dd>
-                 </div>
-                 <div>
-                    <dt>Prep Time</dt>
-                    <dd>{{ $recipe['preptime'] }}</dd>
-                 </div>
-                 <div>
-                    <dt>Servings</dt>
-                    <dd>{{ $recipe['servings'] }}</dd>
-                 </div>
-                 <div>
-                    <dt>Cook Time</dt>
-                    <dd>{{ $recipe['cooktime'] }}</dd>
-                 </div>
-              </dl>
+              <table class="recipe-meta">
+               <tbody>
+               <tr>
+                  <th>Category</th>
+                  <td>{{ $recipe['category'] }}</td>
+               </tr>
+               <tr>
+                  <th>Cuisine</th>
+                  <td>{{ $recipe['cuisine'] }}</td>
+               </tr>
+               <tr>
+                  <th>Rating</th>
+                  <td>{{ $recipe['rating'] }}</td>
+               </tr>
+               <tr>
+                  <th>Prep Time</th>
+                  <td>{{ $recipe['preptime'] }}</td>
+               </tr>
+               <tr>
+                  <th>Servings</th>
+                  <td>{{ $recipe['servings'] }}</td>
+               </tr>
+               <tr>
+                  <th>Cook Time</th>
+                  <td>{{ $recipe['cooktime'] }}</td>
+               </tr>
+               <tbody>
+              </table>
               <h5>Ingredients:</h5>
               <div class="container-fluid recipe-ingredients">
                 @foreach ($recipe['ingredients'] as $ingredient)
