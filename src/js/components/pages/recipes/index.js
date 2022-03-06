@@ -1,43 +1,43 @@
 import { sortBy, uniqBy } from 'lodash';
 import React from 'react';
-import { Alert, Col, ControlLabel, Form, FormControl, FormGroup,  Row } from 'react-bootstrap';
+import { Alert, Form, FormControl, FormGroup } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 
 import Recipe from './Recipe';
 
-import './recipes.scss';
+import './recipes.css';
 
-const Select = ({ id, label, onChange, options=[] }) => (
-    <FormGroup controlId={id}>
-      <ControlLabel>{ label }:</ControlLabel>
-      {' '}
-      <FormControl componentClass="select" onChange={onChange}>
-      <option></option>
-      {
-      	options.map(({display, value}, i) => <option key={i} value={value}>{display}</option>)
-      }
-      </FormControl>
-    </FormGroup>
-);
+// const Select = ({ id, label, onChange, options=[] }) => (
+//     <FormGroup controlId={id}>
+//       <ControlLabel>{ label }:</ControlLabel>
+//       {' '}
+//       <FormControl componentClass="select" onChange={onChange}>
+//       <option></option>
+//       {
+//       	options.map(({display, value}, i) => <option key={i} value={value}>{display}</option>)
+//       }
+//       </FormControl>
+//     </FormGroup>
+// );
 
-const RecipesForm = ({ categories, cuisines, ingredients, onCategoryChange, onCuisineChange, onTextChange, onIngredientChange }) => (
-  <Form inline>
-  	<fieldset>
-  		<legend>Filter</legend>
-	    <FormGroup controlId="filter">
-	      <ControlLabel>Text:</ControlLabel>
-	      {' '}
-	      <FormControl type="text" onChange={onTextChange} />
-	    </FormGroup>
-	    {' '}
-	    <Select id="category" label="Category" options={categories} onChange={onCategoryChange} />
-	    {' '}
-	    <Select id="cuisine" label="Cuisine" options={cuisines} onChange={onCuisineChange} />
-	    {' '}
-	    <Select id="ingredient" label="Ingredient" options={ingredients} onChange={onIngredientChange} />
-    </fieldset>
-  </Form>
-);
+// const RecipesForm = ({ categories, cuisines, ingredients, onCategoryChange, onCuisineChange, onTextChange, onIngredientChange }) => (
+//   <Form inline>
+//   	<fieldset>
+//   		<legend>Filter</legend>
+// 	    <FormGroup controlId="filter">
+// 	      <ControlLabel>Text:</ControlLabel>
+// 	      {' '}
+// 	      <FormControl type="text" onChange={onTextChange} />
+// 	    </FormGroup>
+// 	    {' '}
+// 	    <Select id="category" label="Category" options={categories} onChange={onCategoryChange} />
+// 	    {' '}
+// 	    <Select id="cuisine" label="Cuisine" options={cuisines} onChange={onCuisineChange} />
+// 	    {' '}
+// 	    <Select id="ingredient" label="Ingredient" options={ingredients} onChange={onIngredientChange} />
+//     </fieldset>
+//   </Form>
+// );
 
 const Recipes = ({ recipes }) => (
 	<div>
@@ -143,7 +143,7 @@ class RecipesPage extends React.Component {
 					I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noopener">Gourmet</a> recipe manager.
 					The content of this page is from an XML export of my recipes in Gourmet.
 				</p>
-				<RecipesForm
+				{/* <RecipesForm
 					categories={categories}
 					cuisines={cuisines}
 					ingredients={ingredients}
@@ -151,7 +151,7 @@ class RecipesPage extends React.Component {
 					onCuisineChange={this._onItemChange('cuisineFilter')}
 					onTextChange={this._onItemChange('textFilter')}
 					onIngredientChange={this._onItemChange('ingredientFilter')}
-				/>
+				/> */}
 				<ul id="recipe-list">
 				{
 					recipes.map(recipe => <li key={recipe.id}><a href={`#${recipe.name}`}>{ recipe.title }</a></li>)

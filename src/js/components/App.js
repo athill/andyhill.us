@@ -12,7 +12,7 @@ import Home from './pages/Home';
 // import Inspire from './pages/inspire';
 // import News from './pages/news';
 // import Portfolio from './pages/portfolio';
-// import Recipes from './pages/recipes';
+import Recipes from './pages/recipes';
 import Resume from './pages/resume';
 
 
@@ -116,7 +116,7 @@ class App extends Component {
                         <Route path="/" element={<Home />}/>
                         <Route path="resume" element={<Resume />}/>
                         {/* <Route path="/portfolio" component={Portfolio}/> */}
-                        {/* <Route path="/recipes" component={Recipes}/> */}
+                        <Route path="/recipes" element={<Recipes />}/>
                         {/* <Route path="/blogs" component={Blogs}/>
                         <Route path="/inspire" component={Inspire}/>
                         <Route path="/news" component={News}/> */}
