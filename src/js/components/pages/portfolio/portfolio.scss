@@ -1,0 +1,19 @@
+
+#portfolio {
+	.portfolio-entry {
+		border: thin dotted black;
+		padding: 0.5em;
+		margin: 0.5em;
+		border-radius: 0.5em;
+		.portfolio-link {
+			text-align: center;
+		
+			h3 {
+				padding: 0.2em;
+				margin: 0;
+				font-size: 1.2em;
+			}
+		}
+
+	}
+}

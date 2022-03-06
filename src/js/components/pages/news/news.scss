@@ -1,0 +1,89 @@
+
+
+.tooltip .tooltip-inner {
+    max-width: 350px !important;
+    /* If max-width does not work, try using width instead */
+    width: 350px !important; 
+}	
+
+#news {
+	//// promote?
+	.elipsis {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		display: block;
+	}
+
+
+	ul.nav {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		li {
+			display: inline-block;
+			margin: 0.1em;
+			a {
+				padding: 0.25em 0.75em;
+				display: block;
+				color: black;
+				background-color: #AAA;
+				border-radius: 1em 1em 0 0;
+				
+				&.selected {
+					background-color: white !important;
+				}
+			}
+		}
+	}
+	.feeds {
+		article {
+			border: solid thick gray;
+			padding: 4px;
+			vertical-align: top;
+			border-radius:  20px;
+			margin-top: 1em;
+			header {
+				overflow: auto;
+				background-color: black;
+				color: white;
+				font-size: 14pt;
+				padding: 0.2em 0.5em 0 0.5em;
+				margin: -8px -8px 0px -8px;
+				border-radius:  20px 20px 0 0;
+				h3 {
+					float: left;
+					
+					margin: 0;
+					width: 275px;
+				}
+
+				nav {
+					float: right;
+					a {
+						padding: 2px;
+						display: black;	
+						color: white !important;
+						&:hover {
+							color: white !important;
+						}
+					}		
+				}			
+
+			}
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none !important;
+			}
+
+
+			.feed-description {
+				img {
+					max-width: 100%;
+				}
+			}		
+		}
+	}	
+}
