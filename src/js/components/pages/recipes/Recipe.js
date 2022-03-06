@@ -23,8 +23,8 @@ const recipeMetaMap = [
 
 const Links = ({ id }) => (
 	<span>
-		<a href={`/recipes/print/${id}`} target="_blank" rel="noopener">Print</a>&nbsp;|&nbsp;
-		<a href={`/recipes/export/${id}`} target="_blank" rel="noopener">Export</a>
+		<a href={`/recipes/print/${id}`} target="_blank" rel="noreferrer">Print</a>&nbsp;|&nbsp;
+		<a href={`/recipes/export/${id}`} target="_blank" rel="noreferrer">Export</a>
 		<br /><br />
 		<a href="#top">Return to top</a>
 	</span>
@@ -32,10 +32,10 @@ const Links = ({ id }) => (
 
 const Source = ({ recipe }) => {
   if (recipe.link && recipe.source) {
-    return <div><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noopener noreferrer">{recipe.source}</a></dd></div>
+    return <div><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noreferrer">{recipe.source}</a></dd></div>
   } else if (recipe.link) {
     const display = recipe.link.replace(/\w+:\/\/([^\/]+).*/, '$1');
-    return <div><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noopener noreferrer">{display}</a></dd></div>
+    return <div><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noreferrer">{display}</a></dd></div>
   } else if (recipe.source) {
     return <div><dt>Source</dt><dd>{recipe.source}</dd></div>
   } else {

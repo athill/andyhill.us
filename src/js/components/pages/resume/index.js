@@ -182,8 +182,8 @@ const workplaces = [
 				department:  'University Student Services and Systems',
 				title:  'Senior Programmer/Systems Analyst',
 				dates:  '2005-2014',
-				content:  'Maintained three extensive web sites in ColdFusion and PHP. Built frameworks in both ColdFusion and PHP based on convention over configuration principles. \
-						Initiated using version control (Git).'
+				content:  'Maintained three extensive web sites in ColdFusion and PHP. Built frameworks in both ColdFusion and PHP based on convention over configuration principles. ' +
+						'Initiated using version control (Git).'
 			},
 			{
 				department:  'Center for Survey Research',

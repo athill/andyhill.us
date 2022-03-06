@@ -140,7 +140,7 @@ class RecipesPage extends React.Component {
                 </Helmet>
 				<h2 id="top">Recipes</h2>
 				<p>
-					I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noopener">Gourmet</a> recipe manager.
+					I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noreferrer">Gourmet</a> recipe manager.
 					The content of this page is from an XML export of my recipes in Gourmet.
 				</p>
 				{/* <RecipesForm
