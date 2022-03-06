@@ -13,7 +13,7 @@ import Home from './pages/Home';
 // import News from './pages/news';
 // import Portfolio from './pages/portfolio';
 // import Recipes from './pages/recipes';
-// import Resume from './pages/resume';
+import Resume from './pages/resume';
 
 
 const navigation = [
@@ -26,10 +26,15 @@ const navigation = [
     // { display: 'Blogs', href: '/blogs/' },
 ];
 
+const activeClassName = "active";
+
 const Navigation = ({ onLinkClick }) => (
     <ul>
         {
-            navigation.map(({ display, href, exact=true }) => <li key={href}><NavLink activeClassName="active" exact={exact} to={href} onClick={ onLinkClick }>{ display }</NavLink></li>)
+            navigation.map(({ display, href}) => <li key={href}><NavLink
+              className={({ isActive }) => isActive ? activeClassName : undefined }
+                  to={href}
+                  onClick={ onLinkClick }>{ display }</NavLink></li>)
         }
     </ul>
 );
@@ -107,10 +112,9 @@ class App extends Component {
                 <Col md={10} xs={12} id="app-container">
                   <Header />
                     <main id="main">
-                      <Home />
                       <Routes>
-                        <Route path="/" component={Home}/>
-                        {/* <Route path="/resume" component={Resume}/> */}
+                        <Route path="/" element={<Home />}/>
+                        <Route path="resume" element={<Resume />}/>
                         {/* <Route path="/portfolio" component={Portfolio}/> */}
                         {/* <Route path="/recipes" component={Recipes}/> */}
                         {/* <Route path="/blogs" component={Blogs}/>
@@ -130,32 +134,5 @@ class App extends Component {
     }
 };
 
-
-// return (<Router history={history}>
-//         <Grid>
-//            <Helmet>
-//                 <title>andyhill.us</title>
-//             </Helmet>
-//             <Row className="wrapper">
-//                 <Col md={1} className="site-side-padding"></Col>
-//                 <MobileHeader />
-//                 <Col md={10} xs={12} id="app-container">
-//                     <Header />
-//                     <main id="main">
-//                         <Route path="/" exact component={Home}/>
-//                         <Route path="/resume" component={Resume}/>
-//                         <Route path="/portfolio" component={Portfolio}/>
-//                         <Route path="/recipes" component={Recipes}/>
-//                         <Route path="/blogs" component={Blogs}/>
-//                         <Route path="/inspire" component={Inspire}/>
-//                         <Route path="/news" component={News}/>
-//                     </main>
-//                     <footer>
-//                         &copy; andyhill.us 2017
-//                     </footer>
-//                 </Col>
-//             </Row>
-//         </Grid>
-//     </Router>);
 
 export default App;

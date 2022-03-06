@@ -2,11 +2,11 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 
-import './resume.scss';
+import './resume.css';
 
 //// helpers
 const Link = ({ href }) => (
-	<a href={href} target="_blank" rel="noopener">{href}</a>
+	<a href={href} target="_blank" rel="noreferrer">{href}</a>
 );
 
 //// components
@@ -62,7 +62,7 @@ const schools = [
 		title: <span><strong>Udemy</strong>, <Link href="https://www.udemy.com//" /></span>,
 		entries:  [
 			{
-				title: <span><a href="https://andyhill.us/media/resume/get-into-devops-cert.pdf" target="_blank" rel="noopener">Get Into DevOps</a></span>,
+				title: <span><a href="https://andyhill.us/media/resume/get-into-devops-cert.pdf" target="_blank" rel="noreferrer">Get Into DevOps</a></span>,
 				date: '2017'
 			},
 		]
@@ -80,11 +80,11 @@ const schools = [
 		title: <span><strong>Coursera</strong>, <Link href="https://www.coursera.org/" /></span>,
 		entries:  [
 			{
-				title: <span>Linear Algebra through C.S. Applications <a href="https://andyhill.us/media/resume/matrix_cert.pdf" target="_blank" rel="noopener">With Distinction</a></span>,
+				title: <span>Linear Algebra through C.S. Applications <a href="https://andyhill.us/media/resume/matrix_cert.pdf" target="_blank" rel="noreferrer">With Distinction</a></span>,
 				date: '2013'
 			},
 			{
-				title: <span>Software Engineering for Software as a Service (Part I) <a href="https://andyhill.us/media/resume/saas_cert.pdf" target="_blank" rel="noopener">1917.3/2126</a></span>,
+				title: <span>Software Engineering for Software as a Service (Part I) <a href="https://andyhill.us/media/resume/saas_cert.pdf" target="_blank" rel="noreferrer">1917.3/2126</a></span>,
 				date: '2012'
 			},
 		]
@@ -280,7 +280,7 @@ const ResumePage = () => (
 		<Helmet>
 			<title>andyhill.us - Resume</title>
 		</Helmet>
-		<p className="screen-only">If you print this page, it will only print the resume. Alternatively, you can <a href="/media/resume/resume.pdf" target="_blank" rel="noopener">download a PDF</a></p>
+		<p className="screen-only">If you print this page, it will only print the resume. Alternatively, you can <a href="/media/resume/resume.pdf" target="_blank" rel="noreferrer">download a PDF</a></p>
 		<Resume />
 	</div>
 );
