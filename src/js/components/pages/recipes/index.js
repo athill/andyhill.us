@@ -1,4 +1,3 @@
-import { sortBy, uniqBy } from 'lodash';
 import React from 'react';
 import { Alert, Col, Form, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
@@ -109,32 +108,22 @@ class RecipesPage extends React.Component {
     }
 
     componentDidMount() {
-    	// fetch('/api/recipes')
-    	// 	.then(response => response.json().then(data => {
-    	// 		let categories = [],
-    	// 				cuisines = [],
-			// 			ingredients = [];
-    	// 		const recipes = data.filter(recipe => recipe.ingredients !== '').map(recipe => {
-    	// 			recipe.category && categories.push(this._getOption(recipe.category));
-			// 		  recipe.cuisine && cuisines.push(this._getOption(recipe.cuisine));
-    	// 			ingredients = ingredients.concat(recipe.ingredients.map(ingredient => this._getOption(ingredient.item)));
-    	// 			return { ...recipe, name: recipe.title.replace(/[^a-zA-Z0-9]/g, '')};
-    	// 		});
-    	// 		categories = sortBy(uniqBy(categories, 'value'), o => o.display);
-    	// 		cuisines = sortBy(uniqBy(cuisines, 'value'), o => o.display);
-    	// 		ingredients = sortBy(uniqBy(ingredients, 'value'), o => o.display);
-    	// 		this.setState({
-    	// 			loadingState: 'loaded',
-    	// 			categories,
-    	// 			cuisines,
-    	// 			ingredients,
-    	// 			recipes
-    	// 		});
-    	// 	}))
-    	// 	.catch(error => {
-    	// 		console.error(error);
-    	// 		this.setState({ loadingState: 'fail' });
-    	// 	});
+      fetch(`/api/recipes`)
+        .then(response => response.json())
+        .then((response) => {
+          const { categories, cuisines, ingredients, recipes } = response;
+      		this.setState({
+        			loadingState: 'loaded',
+        			categories,
+        			cuisines,
+        			ingredients,
+        			recipes
+        		});
+        })
+    		.catch(error => {
+    			console.error(error);
+    			this.setState({ loadingState: 'fail' });
+    		});
     }
 
 	render() {
@@ -142,9 +131,9 @@ class RecipesPage extends React.Component {
 		const { categories, cuisines, loadingState, ingredients } = this.state;
 		return (
 			<div>
-                <Helmet>
-                    <title>andyhill.us - Recipes</title>
-                </Helmet>
+        <Helmet>
+          <title>andyhill.us - Recipes</title>
+        </Helmet>
 				<h2 id="top">Recipes</h2>
 				<p>
 					I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noreferrer">Gourmet</a> recipe manager.

@@ -10,13 +10,17 @@
     "closest": "0.0.1",
     "dotenv": "16.0.0",
     "express": "4.17.3",
+    "lodash": "4.17.21",
+    "node-cache": "5.1.2",
+    "node-fetch": "3.2.1",
     "react": "^17.0.2",
     "react-bootstrap": "2.2.0",
     "react-dom": "^17.0.2",
     "react-helmet": "6.1.0",
     "react-router-dom": "6.2.2",
     "react-scripts": "5.0.0",
-    "web-vitals": "2.1.4"
+    "web-vitals": "2.1.4",
+    "xml2js": "0.4.23"
   },
   "scripts": {
     "server": "node ./server",
