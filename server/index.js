@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
 // recipes
 app.get('/api/recipes', async (req, res) => {
   try {
-    let recipes = await recipesService.get();
-    res.status(200).json(recipes);
+    let recipeData = await recipesService.get();
+    res.status(200).json(recipeData);
   } catch (err) {
     console.log(err);
     res.sendStatus(500);

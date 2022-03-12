@@ -6,10 +6,8 @@ import PrintRecipe from "./pages/recipes/PrintRecipe";
 
 const PrintView = () => {
   useEffect(() => {
-
     document.body.style.backgroundColor = 'white';
     document.body.style.color = 'black';
-    console.log('ran it');
   }, []);
   return (
     <Routes>
