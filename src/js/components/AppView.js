@@ -4,6 +4,7 @@ import { Link, NavLink, Route, Routes } from 'react-router-dom';
 
 // import history from '../history';
 // import Blogs from './pages/Blogs';
+import Covers from './pages/covers';
 import Home from './pages/Home';
 // import Inspire from './pages/inspire';
 // import News from './pages/news';
@@ -18,6 +19,7 @@ const navigation = [
   { display: 'Resume', href: '/resume/' },
   // { display: 'Portfolio', href: '/portfolio/' },
   { display: 'Recipes', href: '/recipes/' },
+  { display: 'Covers', href: '/covers/' },
   // { display: 'News', href: '/news/', exact: false },
   // { display: 'Inspiration', href: '/inspire/', exact: false },
   // { display: 'Blogs', href: '/blogs/' },
@@ -109,6 +111,7 @@ const AppView = () => (
                 <Route path="resume" element={<Resume />}/>
                 {/* <Route path="/portfolio" component={Portfolio}/> */}
                 <Route path="/recipes" element={<Recipes />}/>
+                <Route path="/covers" element={<Covers />}/>
                 {/* <Route path="/blogs" component={Blogs}/>
                 <Route path="/inspire" component={Inspire}/>
                 <Route path="/news" component={News}/> */}

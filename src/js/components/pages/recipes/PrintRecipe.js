@@ -12,7 +12,7 @@ const PrintRecipe = () => {
     setRecipe(recipe);
   }, [recipe]);
   return (
-    <div style={{ margin: '2em' }}>
+    <div style={{ margin: '6em' }}>
       {
         recipe ? <Recipe recipe={recipe} isScreenDisplay={false} /> : null
       }

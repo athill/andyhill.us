@@ -4,8 +4,10 @@ var xpath = require('xpath');
 const dom = require('xmldom').DOMParser
 
 const RecipesService = require('./services/RecipesService');
+const YoutubeService = require('./services/YoutubeService');
 
 const recipesService = new RecipesService();
+const youtubeService = new YoutubeService();
 
 const app = express();
 const port = process.env.REACT_APP_SERVER_PORT;
@@ -27,7 +29,7 @@ app.get('/api/recipes', async (req, res) => {
 
 app.get('/api/recipes/:id', async (req, res) => {
   try {
-    const reesponse = await recipesService.get();
+    const recipes = await recipesService.get();
     const recipe = recipes.filter(recipe => recipe.id === req.params.id);
     if (recipe.length === 0) {
       res.sendStatus(404);
@@ -46,6 +48,15 @@ app.get('/export/recipes/:id', async (req, res) => {
   res.type('text/xml').send('<?xml version = "1.0"?>\n' + recipe.toString());
 });
 
+app.get('/api/youtube', async (req, res) => {
+  try {
+    const response = await youtubeService.get();
+    res.status(200).json(response);
+  } catch (err) {
+    console.log(err);
+    res.sendStatus(500);
+  }
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

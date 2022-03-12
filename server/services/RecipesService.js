@@ -54,7 +54,7 @@ class RecipesService {
         servings: getKey(xmlRecipe, 'yields'),
         ingredients: xmlRecipe['ingredient-list'][0].ingredient.map(xmlIngredient => {
           const ingredients = {};
-          ['amount', 'item', 'key', 'xml'].forEach(key => {
+          ['amount', 'item', 'key', 'unit'].forEach(key => {
             ingredients[key] = getKey(xmlIngredient, key);
           });
           return ingredients;
