@@ -6,6 +6,7 @@ import { Link, NavLink, Route, Routes } from 'react-router-dom';
 // import Blogs from './pages/Blogs';
 import Covers from './pages/covers';
 import Home from './pages/Home';
+import NotFound from './NotFound';
 // import Inspire from './pages/inspire';
 // import News from './pages/news';
 // import Portfolio from './pages/portfolio';
@@ -115,6 +116,7 @@ const AppView = () => (
                 {/* <Route path="/blogs" component={Blogs}/>
                 <Route path="/inspire" component={Inspire}/>
                 <Route path="/news" component={News}/> */}
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
           <footer>

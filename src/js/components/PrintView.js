@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import NotFound from './NotFound';
 
 import PrintRecipe from "./pages/recipes/PrintRecipe";
 
@@ -13,6 +14,7 @@ const PrintView = () => {
   return (
     <Routes>
       <Route path="/recipes/:id" element={<PrintRecipe />}/>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
