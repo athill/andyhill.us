@@ -29,7 +29,7 @@ app.get('/api/recipes', async (req, res) => {
 
 app.get('/api/recipes/:id', async (req, res) => {
   try {
-    const recipes = await recipesService.get();
+    const { recipes } = await recipesService.get();
     const recipe = recipes.filter(recipe => recipe.id === req.params.id);
     if (recipe.length === 0) {
       res.sendStatus(404);
