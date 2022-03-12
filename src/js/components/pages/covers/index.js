@@ -1,4 +1,3 @@
-import { toHaveErrorMessage } from '@testing-library/jest-dom/dist/matchers';
 import { useEffect, useState } from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 
@@ -6,7 +5,7 @@ const Covers = () => {
   const [covers, setCovers] = useState(null);
   const [ filter, setFilter ] = useState('');
   const [curated, setCurated] = useState(null);
-  const defaultSort = { type: 'date', dir: 'asc', prevType: 'alpha' };
+  const defaultSort = { type: 'date', dir: 'asc', prevType: 'title' };
   const [ sort, setSort ] = useState(defaultSort);
 
   const handleSort = type => {
@@ -16,36 +15,27 @@ const Covers = () => {
       setSort({ type, dir: 'asc', prevType: sort.type });
     }
   };
-
+  const getStringForCompare = (string) => string.toUpperCase().replace(/[^\w]/g, '');
+  const sortTitleAsc = (a, b) => getStringForCompare(a.snippet.title).localeCompare(getStringForCompare(b.snippet.title));
   useEffect(() => {
-    let filtered = covers;
+    let filtered = covers ? [...covers] : covers;
+    // handle filter
     if (filter) {
       const upperCaseFilter = filter.toUpperCase();
       filtered = covers.filter(({ snippet }) => {
         return snippet.title.toUpperCase().includes(upperCaseFilter)
       });
     };
-    const sortAlphaAsc = ({ snippet: snippetA }, { snippet: snippetB}) => snippetB.title.toUpperCase() - snippetA.title.toUpperCase();
-    console.log(sort);
+    // handle sort
+    // sort type has changed
     if (sort.prevType !== sort.type) {
-      console.log('type has changed')
-      if (sort.type === 'alpha') {
-        filtered = filtered.sort(sortAlphaAsc);
+      // sort ascending, if type is date, this is the original order and no sorting is necessary
+      if (sort.type === 'title') {
+        filtered = filtered.sort(sortTitleAsc);
       }
-    // type is same toggle sort direction
+    // type is same, toggle sort direction
     } else {
-      if (sort.type === 'date') {
-        console.log('toggling date sort');
-        if (sort.dir === 'desc') {
-          console.log('date desc');
-          filtered = filtered.reverse();
-        }
-      } else {
-        console.log('toggling alpha sort');
-        filtered = sort.dir === 'asc'
-          ? filtered.sort(sortAlphaAsc)
-          : filtered.sort(({ snippet: snippetA }, { snippet: snippetB}) => snippetA.title.toUpperCase() - snippetB.title.toUpperCase());
-      }
+      filtered = curated.reverse();
     }
     setCurated(filtered ? [...filtered] : null);
   }, [covers, filter, sort])
@@ -63,7 +53,6 @@ const Covers = () => {
     }
     return null;
   };
-  curated && console.log('curated: ' + curated[0].snippet.title)
   return (
     <div>
       <h2>Covers</h2>
@@ -71,9 +60,11 @@ const Covers = () => {
         <a href="https://youtube.com/playlist?list=PL48l16ugvQtB6vQbtSpnePBWNm2sCmypf"  target="_blank" rel="noreferrer">Mediocre Covers of Good Songs</a>, is available on YouTube.
       </p>
       <Row>
-        <Col><strong>Filter: </strong><input onChange={e => setFilter(e.target.value)} /></Col>
+        <Col md={8}><strong>Filter: </strong><input onChange={e => setFilter(e.target.value)} /></Col>
         <Col>
-          <Button onClick={() => handleSort('alpha')}>Sort alpha {sortIcon('alpha')}</Button>
+          <Button onClick={() => handleSort('title')}>Sort title {sortIcon('title')}</Button>
+        </Col>
+        <Col>
           <Button onClick={() => handleSort('date')}>Sort date {sortIcon('date')} </Button>
         </Col>
       </Row>
