@@ -130,6 +130,10 @@ h2 {
   color: black !important;
 }
 
+.covers-modal .modal-body {
+  text-align: center;
+}
+
 .not-found p {
   padding: 2em;
   font-size: 2em;

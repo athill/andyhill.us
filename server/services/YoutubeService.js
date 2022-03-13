@@ -12,7 +12,7 @@ class YoutubeService {
     }
     console.log('fetching youtube');
     const key = process.env.REACT_APP_YOUTUBE_API_KEY;
-    const maxResults = 100;
+    const maxResults = 1000;
     const response = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${maxResults}&playlistId=PL48l16ugvQtB6vQbtSpnePBWNm2sCmypf&key=${key}`)
     const json = response.json();
     youtubeCache.set('youtube', json);

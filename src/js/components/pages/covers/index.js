@@ -1,5 +1,28 @@
 import { useEffect, useState } from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col, Modal, Row } from 'react-bootstrap';
+
+const CoverModal = ({selected, handleClose}) => {
+  if (!selected) {
+    return 'loading ...';
+  }
+  const src = `https://www.youtube.com/embed/${selected.resourceId.videoId}`;
+  return (
+    <Modal className="covers-modal" show={!!selected} onHide={handleClose} size="lg">
+    <Modal.Header closeButton>
+      <Modal.Title>{selected.title}</Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <iframe width="560" height="315"
+        src={src}
+        title={selected.title}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen>
+      </iframe>
+    </Modal.Body>
+  </Modal>
+  );
+};
 
 const Covers = () => {
   const [covers, setCovers] = useState(null);
@@ -7,6 +30,7 @@ const Covers = () => {
   const [curated, setCurated] = useState(null);
   const defaultSort = { type: 'date', dir: 'asc', prevType: 'title' };
   const [ sort, setSort ] = useState(defaultSort);
+  const [ selected, setSelected ] = useState(null);
 
   const handleSort = type => {
     if (type === sort.type) {
@@ -56,8 +80,8 @@ const Covers = () => {
   return (
     <div>
       <h2>Covers</h2>
-      <p>I've been publishing covers for the past few years, which is fun. My playlist,
-        <a href="https://youtube.com/playlist?list=PL48l16ugvQtB6vQbtSpnePBWNm2sCmypf"  target="_blank" rel="noreferrer">Mediocre Covers of Good Songs</a>, is available on YouTube.
+      <p>I've been publishing covers for the past few years, which is fun. My
+        playlist,&nbsp; <a href="https://youtube.com/playlist?list=PL48l16ugvQtB6vQbtSpnePBWNm2sCmypf"  target="_blank" rel="noreferrer">Mediocre Covers of Good Songs</a>, is available on YouTube.
       </p>
       <Row>
         <Col md={8}><strong>Filter: </strong><input onChange={e => setFilter(e.target.value)} /></Col>
@@ -73,7 +97,7 @@ const Covers = () => {
         {
           curated && curated.map(({ snippet }, i) => (
             <Col  key={i} md={3}>
-              <a href="">
+              <a href="" onClick={e => { e.preventDefault(); setSelected(snippet) }}>
               <Card className="cover">
               <Card.Header as="h6">{snippet.title}</Card.Header>
               <Card.Body>
@@ -86,19 +110,9 @@ const Covers = () => {
           ))
         }
       </Row>
+      <CoverModal selected={selected} handleClose={() => setSelected(false)} />
     </div>
   );
 };
-
-/*
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/videoseries?list=PL48l16ugvQtB6vQbtSpnePBWNm2sCmypf"
-      title="Mediocre Covers of Good Songs"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-
-    </iframe>
-*/
 
 export default Covers;
