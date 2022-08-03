@@ -1,9 +1,7 @@
 <?php
 require('../vendor/autoload.php');
 
-use Pecee\SimpleRouter\SimpleRouter;
-use Pecee\SimpleRouter\Exceptions\NotFoundHttpException;
-use App\Services\RecipeService;
+use App\Router;
 
 // function route($pattern, $function) {
 //   return function ($path) use ($pattern, $function) {
@@ -13,25 +11,8 @@ use App\Services\RecipeService;
 
 $uri = $_SERVER['REQUEST_URI'];
 if (preg_match("/^\/api(\/.*)?/", $uri)) {
-  SimpleRouter::get('/api/recipes', function() {
-    return 'recipes';
-  });
-  SimpleRouter::get('/api/recipes/{id}', function() {
-    return 'recipe';
-  });
-  SimpleRouter::get('/api/recipes/{id}/print', function() {
-    return 'recipe print';
-  });
-  SimpleRouter::get('/api/youtube', function() {
-    $recipeService = new RecipeService();
-    return $recipeService->get();
-  });
-  try {
-    SimpleRouter::start();
-  } catch (NotFoundHttpException $e) {
-    print('404');
-  }
-
+  $router = new Router();
+  $router->route();
   exit(0);
 }
 

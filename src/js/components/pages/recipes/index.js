@@ -111,6 +111,7 @@ class RecipesPage extends React.Component {
       fetch(`/api/recipes`)
         .then(response => response.json())
         .then((response) => {
+			console.log(response);
           const { categories, cuisines, ingredients, recipes } = response;
       		this.setState({
         			loadingState: 'loaded',

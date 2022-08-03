@@ -2,6 +2,7 @@ import React from 'react';
 
 const Home = () => (
 	<div>
+		<p></p>
 		<p>
 			My name is Andy Hill. I am a programmer in <a href="http://bloomington.in.gov/" target="_blank" rel="noreferrer">Bloomington, Indiana</a>. &nbsp;
 			Primarily a web developer. I got my Bachelor of Science in Computer Science from &nbsp;
@@ -10,6 +11,7 @@ const Home = () => (
 			<abbr title="University Information Technology Services">UITS</abbr></a>&apos;s &nbsp;
 			Enterprise Platforms Team. There is no relationship between Indiana University and this site.
 		</p>
+		<p></p>
 		{/* <p>
 			This site was originally a playground for me to play with web programming technologies, though I tend to use&nbsp;
 			<a href="https://informedelectorate.net/" target="_blank" rel="noreferrer" >other</a>&nbsp;
