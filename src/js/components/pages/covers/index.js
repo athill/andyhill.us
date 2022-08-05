@@ -32,6 +32,16 @@ const Covers = () => {
   const [ sort, setSort ] = useState(defaultSort);
   const [ selected, setSelected ] = useState(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('/api/youtube');
+      const items  = await response.json();
+      console.log(items);
+      setCovers(items);
+    };
+    fetchData();
+  }, []);
+
   const handleSort = type => {
     if (type === sort.type) {
       setSort({ type, dir: sort.dir === 'asc' ? 'desc' : 'asc', prevType: sort.type })
@@ -62,15 +72,7 @@ const Covers = () => {
       filtered = curated.reverse();
     }
     setCurated(filtered ? [...filtered] : null);
-  }, [covers, filter, sort])
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('/api/youtube');
-      const { items } = await response.json();
-      setCovers(items);
-    };
-    fetchData();
-  }, []);
+  }, [covers, filter, sort]);
   const sortIcon = type => {
     if (sort.type === type) {
       return sort.dir === 'asc' ? '^' : 'v';
