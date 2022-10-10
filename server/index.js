@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config();
+const path = require('path');
 var xpath = require('xpath');
 const dom = require('xmldom').DOMParser
 
@@ -12,9 +13,7 @@ const youtubeService = new YoutubeService();
 const app = express();
 const port = process.env.REACT_APP_SERVER_PORT;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use(express.static(path.resolve(__dirname, '../build')));
 
 // recipes
 app.get('/api/recipes', async (req, res) => {
@@ -56,6 +55,10 @@ app.get('/api/youtube', async (req, res) => {
     console.log(err);
     res.sendStatus(500);
   }
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
 });
 
 app.listen(port, () => {
