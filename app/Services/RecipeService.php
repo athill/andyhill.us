@@ -45,6 +45,9 @@ class RecipeService {
 		$array = json_decode($json,TRUE);
 
     $recipes = [];
+    $categories = [];
+    $cuisines = [];
+    $ingredients = [];
     foreach ($array['recipe'] as $recipe) {
       $json = [
           'id' => $recipe['@attributes']['id'],
@@ -62,7 +65,18 @@ class RecipeService {
       //// instructions
       $json['ingredients'] = isset($recipe['ingredient-list']) ? $recipe['ingredient-list']['ingredient']: '';
       $recipes[] = $json;
+      if (!in_array($json['category'], $categories)) {
+        $categories[] = $json['category'];
+      }
+      if (!in_array($json['cuisine'], $cuisines)) {
+        $categories[] = $json['cuisine'];
+      }      
     }
-    return $recipes;
+    return [
+      'categories' => $categories,
+      'cuisines' => $cuisines,
+      'igredients' => $ingredients,
+      'recipes' => $recipes
+    ];
   }
 }

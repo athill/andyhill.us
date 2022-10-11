@@ -1,6 +1,9 @@
 <?php
 require('../vendor/autoload.php');
 
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->safeLoad();
+
 use App\Router;
 
 // function route($pattern, $function) {

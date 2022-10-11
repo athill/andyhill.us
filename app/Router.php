@@ -4,6 +4,7 @@ namespace App;
 use Pecee\SimpleRouter\SimpleRouter;
 use Pecee\SimpleRouter\Exceptions\NotFoundHttpException;
 use App\Services\RecipeService;
+use App\Services\YoutubeService;
 
 class Router {
     public function route() {
@@ -19,8 +20,8 @@ class Router {
             return 'recipe print';
         });
         SimpleRouter::get('/api/youtube', function() {
-            $recipeService = new RecipeService();
-            return $recipeService->get();
+            $youtubeService = new YoutubeService();
+            return $youtubeService->get();
         });
         try {
             SimpleRouter::start();
