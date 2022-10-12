@@ -1,16 +1,9 @@
 <?php
-require('../vendor/autoload.php');
+require(__DIR__ . '/../vendor/autoload.php');
 
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
-$dotenv->safeLoad();
+require(__DIR__ . '/../app/bootstrap.php');
 
 use App\Router;
-
-// function route($pattern, $function) {
-//   return function ($path) use ($pattern, $function) {
-//     $function($pattern, $path);
-//   }
-// }
 
 $uri = $_SERVER['REQUEST_URI'];
 if (preg_match("/^\/api(\/.*)?/", $uri)) {
@@ -19,6 +12,6 @@ if (preg_match("/^\/api(\/.*)?/", $uri)) {
   exit(0);
 }
 
-readfile('./index.html');
+readfile(__DIR__ . '/index.html');
 
 

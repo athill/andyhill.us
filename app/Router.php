@@ -11,7 +11,8 @@ class Router {
         
         SimpleRouter::get('/api/recipes', function() {
             $recipeService = new RecipeService;
-            return SimpleRouter::response()->json($recipeService->get());
+            $response = $recipeService->get();
+            return SimpleRouter::response()->json($response, 0);
         });
         SimpleRouter::get('/api/recipes/{id}', function() {
             return 'recipe';
@@ -21,7 +22,7 @@ class Router {
         });
         SimpleRouter::get('/api/youtube', function() {
             $youtubeService = new YoutubeService();
-            return $youtubeService->get();
+            return SimpleRouter::response()->json($youtubeService->get(), 0);
         });
         try {
             SimpleRouter::start();

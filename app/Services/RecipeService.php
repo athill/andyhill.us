@@ -1,11 +1,15 @@
 <?php
 namespace App\Services;
 
+use App\Utils;
+
 class RecipeService {
   private $url = 'https://www.dropbox.com/s/wclbvga9x50i0wv/recipes.xml?raw=1';
   private $xml;
+  private $logger;
 
   public function __construct() {
+    $this->logger =  Utils::getLogger();
     $this->xml = $this->getXml();
   }
 
@@ -13,27 +17,8 @@ class RecipeService {
     return $this->parse($this->xml);
   }
 
-
-
-
 	public function getXml() {
-    // create curl resource
-    $ch = curl_init();
-
-    // set url
-    curl_setopt($ch, CURLOPT_URL, $this->url);
-    curl_setopt($ch, CURLOPT_FAILONERROR,1);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION,1);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 15);
-
-    //return the transfer as a string
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-    // $output contains the output string
-    $output = curl_exec($ch);
-    // close curl resource to free up system resources
-    curl_close($ch);
+    $output = file_get_contents($this->url);
     return simplexml_load_string($output);
   }
 
@@ -65,18 +50,31 @@ class RecipeService {
       //// instructions
       $json['ingredients'] = isset($recipe['ingredient-list']) ? $recipe['ingredient-list']['ingredient']: '';
       $recipes[] = $json;
-      if (!in_array($json['category'], $categories)) {
-        $categories[] = $json['category'];
+      $category = trim($json['category']);
+      $option = $this->getOption($category);
+      if ($category !== "" && !in_array($option, $categories)) {
+        $categories[] = $this->getOption($category);
       }
-      if (!in_array($json['cuisine'], $cuisines)) {
-        $categories[] = $json['cuisine'];
+      $cuisine = trim($json['cuisine']);
+      $option = $this->getOption($cuisine);
+      if ($cuisine !== "" && !in_array($option, $cuisines)) {
+        $cuisines[] = $option;
       }      
     }
+    sort($categories);
+    sort($cuisines);
     return [
       'categories' => $categories,
       'cuisines' => $cuisines,
       'igredients' => $ingredients,
       'recipes' => $recipes
+    ];
+  }
+
+  private function getOption($option) {
+    return [
+      'display' => $option,
+      'value' => $option
     ];
   }
 }

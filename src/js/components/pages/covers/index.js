@@ -66,8 +66,8 @@ const Covers = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('/api/youtube');
-      const { items } = await response.json();
-      setCovers(items);
+      const result = await response.json();
+      setCovers(result);
     };
     fetchData();
   }, []);

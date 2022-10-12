@@ -37,9 +37,6 @@ const RecipesForm = ({ categories, cuisines, ingredients, onCategoryChange, onCu
 	      <Col>
 	        <Select id="cuisine" label="Cuisine" options={cuisines} onChange={onCuisineChange} />
         </Col>
-	      <Col>
-	        <Select id="ingredient" label="Ingredient" options={ingredients} onChange={onIngredientChange} />
-        </Col>
       </Row>
     </fieldset>
   </Form>
