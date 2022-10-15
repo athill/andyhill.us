@@ -15,7 +15,6 @@ class RecipeService {
     $this->logger =  Utils::getLogger();
     $this->cache = Utils::getCache();
     $cached = $this->cache->get($this->xmlCacheKey);
-    $cached = null;
     if (!is_null($cached)) {
       $this->logger->info('returning recipes xml from cache');
       $this->xml = $cached;
@@ -27,14 +26,14 @@ class RecipeService {
   }
 
   public function get() {
-    return $this->getDate();
+    return $this->getData();
   }
 
   public function print($id) {
     $data = $this->getData();
-    foreach ($data as $recipe) {
+    foreach ($data['recipes'] as $recipe) {
       if ($recipe['id'] === $id) {
-          return view('print-recipe', ['recipe' => $recipe]);
+          return $recipe;
       }
     }
   }
@@ -81,8 +80,8 @@ EOD;
     foreach ($array['recipe'] as $recipe) {
       $json = [
           'id' => $recipe['@attributes']['id'],
-          'instructions' => isset($recipe['instructions']) ? explode("\n", $recipe['instructions']) : '',
-        'servings' => isset($recipe['yields']) ? $recipe['yields'] : ''
+          'instructions' => isset($recipe['instructions']) ? explode("\n", trim($recipe['instructions'])) : '',
+          'servings' => isset($recipe['yields']) ? trim($recipe['yields']) : ''
       ];
       if (isset($recipe['modifications']) && strlen(trim($recipe['modifications'])) > 0) {
           $json['notes'] = explode("\n", $recipe['modifications']);
@@ -94,6 +93,7 @@ EOD;
       }   
       //// instructions
       $json['ingredients'] = isset($recipe['ingredient-list']) ? $recipe['ingredient-list']['ingredient']: '';
+      $json['name'] = preg_replace("[^A-Za-z0-9]", "-", $json['title']);
       $recipes[] = $json;
       $category = trim($json['category']);
       $option = $this->getOption($category);

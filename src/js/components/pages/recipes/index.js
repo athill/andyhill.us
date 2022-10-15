@@ -37,6 +37,9 @@ const RecipesForm = ({ categories, cuisines, ingredients, onCategoryChange, onCu
 	      <Col>
 	        <Select id="cuisine" label="Cuisine" options={cuisines} onChange={onCuisineChange} />
         </Col>
+	      <Col>
+	        <Select id="ingredient" label="Ingredient" options={ingredients} onChange={onIngredientChange} />
+        </Col>
       </Row>
     </fieldset>
   </Form>
@@ -108,7 +111,6 @@ class RecipesPage extends React.Component {
       fetch(`/api/recipes`)
         .then(response => response.json())
         .then((response) => {
-			console.log(response);
           const { categories, cuisines, ingredients, recipes } = response;
       		this.setState({
         			loadingState: 'loaded',

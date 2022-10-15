@@ -22,8 +22,10 @@ class Router {
             echo $response;
             exit(0);
         });
-        SimpleRouter::get('/print/recipes/{id}', function() {
-            return 'recipe print';
+        SimpleRouter::get('/api/recipes/{id}', function($id) {
+            $recipeService = new RecipeService;
+            $response = $recipeService->print($id);
+            return SimpleRouter::response()->json($response, 0);
         });
         SimpleRouter::get('/api/youtube', function() {
             $youtubeService = new YoutubeService();
