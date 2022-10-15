@@ -7,20 +7,65 @@ class RecipeService {
   private $url = 'https://www.dropbox.com/s/wclbvga9x50i0wv/recipes.xml?raw=1';
   private $xml;
   private $logger;
+  private $cacheKey = 'recipes';
+  private $xmlCacheKey = 'recipes-xml';
+  private $expireSeconds = 86400;
 
   public function __construct() {
     $this->logger =  Utils::getLogger();
-    $this->xml = $this->getXml();
+    $this->cache = Utils::getCache();
+    $cached = $this->cache->get($this->xmlCacheKey);
+    $cached = null;
+    if (!is_null($cached)) {
+      $this->logger->info('returning recipes xml from cache');
+      $this->xml = $cached;
+    } else {
+      $this->logger->info('fetching recipes xml');
+      $this->xml = file_get_contents($this->url);
+      $this->cache->set($this->xmlCacheKey, $this->xml, $this->expireSeconds);
+    }
   }
 
   public function get() {
-    return $this->parse($this->xml);
+    return $this->getDate();
   }
 
-	public function getXml() {
-    $output = file_get_contents($this->url);
-    return simplexml_load_string($output);
+  public function print($id) {
+    $data = $this->getData();
+    foreach ($data as $recipe) {
+      if ($recipe['id'] === $id) {
+          return view('print-recipe', ['recipe' => $recipe]);
+      }
+    }
   }
+
+  public function export($id) {
+    $simpleXml = simplexml_load_string($this->xml);
+    $content = $simpleXml->xpath("//recipe[@id=$id]");
+    $recipe = $content[0]->asXml();
+    return <<<EOD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gourmetDoc>
+<gourmetDoc>
+  $recipe
+</gourmetDoc>
+EOD;
+  }
+
+  private function getData() {
+    $cached = $this->cache->get($this->cacheKey);
+    if (!is_null($cached)) {
+        $this->logger->info('returning cached recipes');
+        return json_decode($cached, true);
+    }
+    $this->logger->info('parsing recipes');
+    $simpleXml = simplexml_load_string($this->xml);
+    $response =  $this->parse($simpleXml);
+    $this->cache->set($this->cacheKey, json_encode($response), $this->expireSeconds);
+    return $response;
+  }
+
+
 
   private function parse($xml) : array {
 		if (!$xml) {
@@ -45,7 +90,7 @@ class RecipeService {
       //// simple tags
       $tagnames = ['category','cooktime','cuisine','link','preptime','rating','source','title'];
       foreach ($tagnames as $tagname) {
-          $json[$tagname] = isset($recipe[$tagname]) ? $recipe[$tagname] : '';
+          $json[$tagname] = isset($recipe[$tagname]) ? trim($recipe[$tagname]) : '';
       }   
       //// instructions
       $json['ingredients'] = isset($recipe['ingredient-list']) ? $recipe['ingredient-list']['ingredient']: '';

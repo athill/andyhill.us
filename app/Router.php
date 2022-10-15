@@ -14,10 +14,15 @@ class Router {
             $response = $recipeService->get();
             return SimpleRouter::response()->json($response, 0);
         });
-        SimpleRouter::get('/api/recipes/{id}', function() {
-            return 'recipe';
+        SimpleRouter::get('/export/recipes/{id}', function($id) {
+            $recipeService = new RecipeService;
+            $response = $recipeService->export($id);
+
+            SimpleRouter::response()->header('Content-Type: text/xml');
+            echo $response;
+            exit(0);
         });
-        SimpleRouter::get('/api/recipes/{id}/print', function() {
+        SimpleRouter::get('/print/recipes/{id}', function() {
             return 'recipe print';
         });
         SimpleRouter::get('/api/youtube', function() {
