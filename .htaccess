@@ -1,0 +1,31 @@
+# used for shared hosting
+
+RewriteEngine On
+# add a trailing slash if build/$1 is a directory
+RewriteCond %{DOCUMENT_ROOT}/build/$1 -d
+RewriteRule ^(.*?[^/])$ %{REQUEST_URI}/ [L,R=301,NE]
+
+# Make /build like it was root
+RewriteCond %{THE_REQUEST} \s/+build/(\S*)\s [NC]
+RewriteRule ^ /%1 [L,R=301,NE]
+
+# internally add build/ to URIs
+RewriteRule ^(?!build/).*$ build/$0 [L,NC]
+
+# Redirect Trailing Slashes If Not A Folder...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
+
+# Handle Front Controller...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+# Handle Authorization Header
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Redirect to ssl
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://andyhill.us/$1 [R=301,L]

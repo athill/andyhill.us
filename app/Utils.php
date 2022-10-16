@@ -5,6 +5,7 @@ use Monolog\Level;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Phpfastcache\Helper\Psr16Adapter;
+use Phpfastcache\Config\ConfigurationOption;
 
 
 class Utils {
@@ -26,13 +27,7 @@ class Utils {
             mkdir($cachedir, 0755, true);
         }  
         $defaultDriver = 'Files';
-        $cache = new Psr16Adapter($defaultDriver);
-        // CacheManager::setDefaultConfig(new Config([
-        //     "path" => $cachedir
-        //   ]));     
-        //   $cache = CacheManager::getInstance('files');
-        // $storage = new FileStorage($cachedir);
-        // $cache = new Cache($storage, 'app-cache');
+        $cache = new Psr16Adapter($defaultDriver, new ConfigurationOption([ "path" => $cachedir ]));
         return $cache;
     }
 }

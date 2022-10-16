@@ -53,7 +53,6 @@ EOD;
 
   private function getData() {
     $cached = $this->cache->get($this->cacheKey);
-    $cached = null;
     if (!is_null($cached)) {
         $this->logger->info('returning cached recipes');
         return json_decode($cached, true);

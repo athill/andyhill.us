@@ -6,10 +6,13 @@ import Recipe from './Recipe';
 const PrintRecipe = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
-  useEffect(async () => {
-    const response = await fetch(`/api/recipes/${id}`);
-    const recipe = await response.json()
-    setRecipe(recipe);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`/api/recipes/${id}`);
+      const recipe = await response.json()
+      setRecipe(recipe);
+    };
+    fetchData();
   }, [recipe]);
   return (
     <div style={{ margin: '6em' }}>

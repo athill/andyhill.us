@@ -62,7 +62,7 @@ const Covers = () => {
       filtered = curated.reverse();
     }
     setCurated(filtered ? [...filtered] : null);
-  }, [covers, filter, sort])
+  }, [covers, filter, sort, curated, sortTitleAsc])
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('/api/youtube');
