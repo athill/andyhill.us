@@ -1,0 +1,48 @@
+#filter-form {
+  padding-bottom: 1em; }
+
+#filter-form .form-group {
+  padding-bottom: 1em; }
+
+.recipe {
+  padding-bottom: 2em; }
+
+.recipe h2, .recipe h3 {
+  margin: 0;
+  padding: 0; }
+
+#recipe-list {
+  padding-bottom: 2em;
+  padding-top: 1em; }
+
+.recipe-background {
+  background-color: wheat; }
+
+.recipe-title {
+  font-size: 1.1em;
+  margin: 0;
+  width: 80%;
+  font-weight: bold;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  padding: 0.5em; }
+
+.recipe-main {
+  border-radius: 1em;
+  border-top-left-radius: 0;
+  padding: 1em; }
+
+@media (min-width: 768px) {
+  .recipe-title {
+    width: 33.33%;
+    font-size: 1.5em; }
+  .dl-horizontal dt {
+    float: left;
+    width: 80px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .dl-horizontal dd {
+    margin-left: 100px; } }
