@@ -219,38 +219,6 @@ const WorkExperience = () => (
 	</div>
 );
 
-const Project = ({ description, link, name }) => (
-	<div className="project">
-	<Row>
-		<Col sm={8} className="name"><em>{name}</em></Col>
-		<Col sm={4} className="link"><Link href={link} /></Col>
-	</Row>
-	<Row className="indent1">
-		{description}
-	</Row>
-	</div>
-);
-
-const projects = [
-	{
-		name: 'Informed Electorate',
-		description: 'Civic information app using Laravel and React',
-		link: 'https://informedelectorate.net'
-	},
-	{
-		name: "What's in my Freezer?",
-		description: 'Inventory app using Laravel, React, and Redux',
-		link: 'https://wimf.space'
-	},
-];
-const Projects = () => (
-	<div className="projects">
-	{
-		projects.map((project, i) => <Project key={i} {...project} />)
-	}
-	</div>
-);
-
 const References = () => (
 	<span>Available upon request.</span>
 );

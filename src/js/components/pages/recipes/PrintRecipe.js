@@ -13,7 +13,7 @@ const PrintRecipe = () => {
       setRecipe(recipe);
     };
     fetchData();
-  }, [recipe]);
+  }, [recipe, id]);
   return (
     <div style={{ margin: '6em' }}>
       {

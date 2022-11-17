@@ -40,8 +40,8 @@ const Covers = () => {
     }
   };
   const getStringForCompare = (string) => string.toUpperCase().replace(/[^\w]/g, '');
-  const sortTitleAsc = (a, b) => getStringForCompare(a.snippet.title).localeCompare(getStringForCompare(b.snippet.title));
   useEffect(() => {
+    const sortTitleAsc = (a, b) => getStringForCompare(a.snippet.title).localeCompare(getStringForCompare(b.snippet.title));
     let filtered = covers ? [...covers] : covers;
     // handle filter
     if (filter) {
