@@ -31,6 +31,10 @@ class Router {
             $youtubeService = new YoutubeService();
             return SimpleRouter::response()->json($youtubeService->get(), 0);
         });
+        // SimpleRouter::get('/api/info', function() {
+        //     phpinfo();
+        //     exit(0);
+        // });        
         try {
             SimpleRouter::start();
         } catch (NotFoundHttpException $e) {
