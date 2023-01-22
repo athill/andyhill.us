@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, NavLink, Route, Routes } from 'react-router-dom';

@@ -12,6 +12,8 @@ $ docker-compose run --rm composer install
 $ docker-compose run --rm npm i
 
 $ docker-compose run --rm npm run build
+
+$ docker-compose up -d site
 ```
 
 Site is available at http://localhost
