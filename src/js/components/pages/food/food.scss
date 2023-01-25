@@ -1,0 +1,16 @@
+
+
+.food-modal {
+  .navigation {
+    width: 6em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 6em;
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+}

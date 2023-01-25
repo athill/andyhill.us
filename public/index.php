@@ -7,7 +7,7 @@ use App\Router;
 
 $uri = $_SERVER['REQUEST_URI'];
 
-if (preg_match("/^\/(api|export)(\/.*)?/", $uri)) {
+if (preg_match("/^\/(api|export|data)(\/.*)?/", $uri)) {
   $router = new Router();
   $router->route();
   exit(0);
