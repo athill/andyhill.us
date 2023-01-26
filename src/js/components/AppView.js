@@ -16,8 +16,8 @@ import './appview.css';
 const navigation = [
   { display: 'Home', href: '/' },
   { display: 'Resume', href: '/resume/' },
-  { display: 'Recipes', href: '/recipes/' },
   { display: 'Covers', href: '/covers/' },
+  { display: 'Recipes', href: '/recipes/' },
   { display: 'Food', href: '/food/' }
 ];
 
