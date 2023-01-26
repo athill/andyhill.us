@@ -5,7 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Link, NavLink, Route, Routes } from 'react-router-dom';
 
 import Covers from './pages/covers';
-import Food from './pages/Food';
+import Food from './pages/food';
 import Home from './pages/Home';
 import NotFound from './NotFound';
 import Recipes from './pages/recipes';
