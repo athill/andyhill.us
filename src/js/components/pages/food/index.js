@@ -83,7 +83,7 @@ const Food = () => {
   const latest = food && food[food.length - 1];
   return (
     <div>
-      <h2>Covers</h2>
+      <h2>Food</h2>
       <p>
         As mentioned on my <a href="/recipes">recipes page</a>, I like to cook, so here are some of my results. You can find most of the recipes on that page.
       </p>
