@@ -19,7 +19,7 @@ const FoodModal = ({images, selected, setSelected, handleClose, webRoot}) => {
     </Modal.Header>
     <Modal.Body style={{ display: 'flex'}}>
       <div className="navigation"><div onClick={e => setSelected(previous)}><Icon icon={faCaretLeft} /></div></div>
-      <div><img src={`${webRoot}/${current.image}`} width="600" alt={current.title} /></div>
+      <div><img src={`${webRoot}/${current.image}`} className="photo-embed" alt={current.title} /></div>
       <div className="navigation"><div onClick={e => setSelected(next)}><Icon icon={faCaretRight} /></div></div>
     </Modal.Body>
   </Modal>
@@ -91,7 +91,7 @@ const Food = () => {
         <Col style={{ textAlign: 'center', margin: '2em' }}>
           <h2>Latest</h2>
           { latest && <h3>{latest && latest.title}</h3>}
-          { latest && <p><img src={`${webRoot}/${latest.image}`} width="400" alt={latest.title} /></p> }
+          { latest && <p><img src={`${webRoot}/${latest.image}`} className="photo-embed" alt={latest.title} /></p> }
           <p>{latest && new Date(latest.date).toLocaleDateString()}</p>
         </Col>
       </Row>
