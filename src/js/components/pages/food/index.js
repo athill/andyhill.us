@@ -3,6 +3,8 @@ import { Button, Card, Col, Modal, Row } from 'react-bootstrap';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faCaretLeft, faCaretRight, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 
+import { getPagination } from '../../../utils/PrimaryPagination';
+
 import './food.scss';
 
 const FoodModal = ({images, selected, setSelected, handleClose, webRoot}) => {
@@ -29,10 +31,14 @@ const FoodModal = ({images, selected, setSelected, handleClose, webRoot}) => {
 const Food = () => {
   const [food, setFood] = useState(null);
   const [ filter, setFilter ] = useState('');
-  const [curated, setCurated] = useState(null);
+  const [curated, setCurated] = useState([]);
   const defaultSort = { type: 'date', dir: 'asc', prevType: 'title' };
   const [ sort, setSort ] = useState(defaultSort);
   const [ selected, setSelected ] = useState(false);
+
+  const [ activePage, setActivePage ] = useState(0);
+  const pageSize = 25;
+  const { Pagination, slice } = getPagination({activePage, items: curated, pageSize, setActivePage});
 
   const handleSort = type => {
     if (type === sort.type) {
@@ -63,7 +69,7 @@ const Food = () => {
     } else {
       filtered = curated.reverse();
     }
-    setCurated(filtered ? [...filtered] : null);
+    setCurated(filtered ? [...filtered] : []);
   }, [food, filter, sort])
   useEffect(() => {
     const fetchData = async () => {
@@ -83,7 +89,7 @@ const Food = () => {
   const latest = food && food[food.length - 1];
   return (
     <div>
-      <h2>Covers</h2>
+      <h2>Food</h2>
       <p>
         As mentioned on my <a href="/recipes">recipes page</a>, I like to cook, so here are some of my results. You can find most of the recipes on that page.
       </p>
@@ -105,9 +111,10 @@ const Food = () => {
         </Col>
       </Row>
       { curated && curated.length + ' results' }
+      <Pagination />
       <Row className="food">
         {
-          curated && curated.map((item, i) => (
+          curated && slice(curated).map((item, i) => (
             <Col  key={i} md={3}>
               <a href="" onClick={e => { e.preventDefault(); setSelected(i) }}>
               <Card className="cover">
@@ -122,6 +129,7 @@ const Food = () => {
           ))
         }
       </Row>
+      <Pagination />
       <FoodModal images={curated} setSelected={setSelected} webRoot={webRoot} selected={selected} handleClose={() => setSelected(false)} />
     </div>
   );

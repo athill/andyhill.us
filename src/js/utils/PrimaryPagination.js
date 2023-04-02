@@ -38,7 +38,7 @@ const PrimaryPagination = ({ delta = 2, numPages, active, setActive }) => {
  * Usage :
  *   const [ activePage, setActivePage ] = useState(0);
  *   const pageSize = 50;
- *   const { numPages, Pagination, slice, startDisplay } = getPagination({activePage, items: transactions, pageSize, setActivePage});
+ *   const { Pagination, slice } = getPagination({activePage, items: transactions, pageSize, setActivePage});
  *   return (<Pagination />
  *   <div>
  *      {

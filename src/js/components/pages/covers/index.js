@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Button, Card, Col, Modal, Row } from 'react-bootstrap';
 
+import { getPagination } from '../../../utils/PrimaryPagination';
+
 import './covers.css';
 
 
@@ -37,6 +39,10 @@ const Covers = () => {
   const defaultSort = { type: 'date', dir: 'asc', prevType: 'title' };
   const [ sort, setSort ] = useState(defaultSort);
   const [ selected, setSelected ] = useState(null);
+
+  const [ activePage, setActivePage ] = useState(0);
+  const pageSize = 50;
+  const { Pagination, slice } = getPagination({activePage, items: curated || [], pageSize, setActivePage});
 
   const handleSort = type => {
     if (type === sort.type) {
@@ -107,9 +113,10 @@ const Covers = () => {
         </Col>
       </Row>
       { curated && curated.length + ' results' }
+      <Pagination />
       <Row className="covers">
         {
-          curated && curated.map(({ snippet }, i) => (
+          curated && slice(curated).map(({ snippet }, i) => (
             <Col  key={i} md={3}>
               <a href="" onClick={e => { e.preventDefault(); setSelected(snippet) }}>
               <Card className="cover">
@@ -124,6 +131,7 @@ const Covers = () => {
           ))
         }
       </Row>
+      <Pagination />
       <CoverModal selected={selected} handleClose={() => setSelected(false)} />
     </div>
   );
