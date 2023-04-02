@@ -1,0 +1,12 @@
+
+.video-embed {
+  width: 250px;
+  height: 160px;
+}
+
+@media (min-width: 400px) {
+  .video-embed {
+    width: 500px;
+    height: 315px;
+  }
+}
