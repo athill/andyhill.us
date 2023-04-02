@@ -5,6 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Link, NavLink, Route, Routes } from 'react-router-dom';
 
 import Covers from './pages/covers';
+import Food from './pages/food';
 import Home from './pages/Home';
 import NotFound from './NotFound';
 import Recipes from './pages/recipes';
@@ -15,8 +16,9 @@ import './appview.css';
 const navigation = [
   { display: 'Home', href: '/' },
   { display: 'Resume', href: '/resume/' },
+  { display: 'Covers', href: '/covers/' },
   { display: 'Recipes', href: '/recipes/' },
-  { display: 'Covers', href: '/covers/' }
+  { display: 'Food', href: '/food/' }
 ];
 
 const activeClassName = "active";
@@ -104,6 +106,7 @@ const AppView = () => (
             <main id="main">
               <Routes>
                 <Route path="/" element={<Home />}/>
+                <Route path="/food" element={<Food />}/>
                 <Route path="resume" element={<Resume />}/>
                 <Route path="/recipes" element={<Recipes />}/>
                 <Route path="/covers" element={<Covers />}/>

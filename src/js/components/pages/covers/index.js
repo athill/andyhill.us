@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Button, Card, Col, Modal, Row } from 'react-bootstrap';
 
+import './covers.css';
 
-const Embed = ({ videoId, title }) => (
-  <iframe width="560" height="315"
+
+const Embed = ({ videoId, title , ...atts}) => (
+  <iframe {...atts}
   src={`https://www.youtube.com/embed/${videoId}`}
   title={title}
   frameBorder="0"
@@ -22,7 +24,7 @@ const CoverModal = ({selected, handleClose}) => {
       <Modal.Title>{selected.title}</Modal.Title>
     </Modal.Header>
     <Modal.Body>
-      <Embed title={selected.title} videoId={selected.resourceId.videoId} />
+      <Embed title={selected.title} videoId={selected.resourceId.videoId} className="video-embed" />
     </Modal.Body>
   </Modal>
   );
@@ -82,7 +84,6 @@ const Covers = () => {
     return null;
   };
   const latest = covers && covers[covers.length - 1];
-  console.log(latest);
   return (
     <div>
       <h2>Covers</h2>
@@ -92,7 +93,7 @@ const Covers = () => {
       <Row>
         <Col style={{ textAlign: 'center', margin: '2em' }}>
           <h2>Latest Video - {latest && latest.snippet.title}</h2>
-          { latest && <Embed title={latest.snippet.title} videoId={latest.snippet.resourceId.videoId} /> }
+          { latest && <Embed title={latest.snippet.title} videoId={latest.snippet.resourceId.videoId} className="video-embed" /> }
           <p>{latest && new Date(latest.snippet.publishedAt).toLocaleDateString()}</p>
         </Col>
       </Row>
