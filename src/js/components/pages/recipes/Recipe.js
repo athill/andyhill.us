@@ -57,7 +57,7 @@ const Recipe = ({ recipe, isScreenDisplay=true }) => (
 			<h5>Ingredients:</h5>
 			<div className="container-fluid recipe-ingredients">
 				<Row>
-					<Col md={8} sm={12}>
+					<Col>
           <table className='recipe-ingredients'>
 					{
 						recipe.ingredients.map((ingredient, i) => (
