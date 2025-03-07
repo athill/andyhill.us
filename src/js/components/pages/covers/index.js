@@ -56,12 +56,12 @@ const Covers = () => {
     const sortTitleAsc = (a, b) => getStringForCompare(a.snippet.title).localeCompare(getStringForCompare(b.snippet.title));
     let filtered = covers ? [...covers] : covers;
     // handle filter
-    if (filter) {
-      const upperCaseFilter = filter.toUpperCase();
-      filtered = covers.filter(({ snippet }) => {
-        return snippet.title.toUpperCase().includes(upperCaseFilter)
+    if (filtered) {
+      const upperCaseFilter = filter ? filter.toUpperCase() : '';
+      filtered = filtered.filter(({ snippet }) => {
+        return Object.keys(snippet.thumbnails).length && (!filter || snippet.title.toUpperCase().includes(upperCaseFilter));
       });
-    };
+    }
     // handle sort
     // sort type has changed
     if (sort.prevType !== sort.type) {
@@ -71,7 +71,7 @@ const Covers = () => {
       }
     // type is same, toggle sort direction
     } else {
-      filtered = curated.reverse();
+      filtered = filtered.reverse();
     }
     setCurated(filtered ? [...filtered] : null);
   }, [covers, filter, sort])

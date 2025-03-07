@@ -57,10 +57,11 @@ const Recipe = ({ recipe, isScreenDisplay=true }) => (
 			<h5>Ingredients:</h5>
 			<div className="container-fluid recipe-ingredients">
 				<Row>
-					<Col md={6} sm={12} >
+					<Col md={8} sm={12}>
+          <table className='recipe-ingredients'>
 					{
 						recipe.ingredients.map((ingredient, i) => (
-							<Row key={`${ingredient.item}-${i}`}>
+							<tr key={`${ingredient.item}-${i}`}>
 							{
 								ingredientItems.map((item, i) => {
 									if (item === 'unit' && item.unit) {
@@ -68,12 +69,13 @@ const Recipe = ({ recipe, isScreenDisplay=true }) => (
 											ingredient[item] = ingredient[item].replace(replacement[0], replacement[1]);
 										});
 									}
-									return <Col key={i} xs={ingredientItemWidthMap[item]}>{ ingredient[item] || '' }</Col>;
+									return <td key={i}>{ ingredient[item] || '' }</td>;
 								})
 							}
-							</Row>
+							</tr>
 						))
 					}
+          </table>
 					</Col>
 				</Row>
 			</div>

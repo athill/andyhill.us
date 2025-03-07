@@ -16,6 +16,10 @@ body {
 	background-color: black !important;
 }
 
+page {
+  size: A4;
+}
+
 #main {
 	padding: 1em;
 	position: relative;
@@ -44,7 +48,7 @@ h2 {
 	.app-header {
 		position: relative;
 		overflow: auto;
-		padding: 1em;		
+		padding: 1em;
 		padding-bottom: 0;
 		.img-container {
 			height: 115px;
@@ -53,19 +57,19 @@ h2 {
 			background: #444;
 			border-radius: 15px;
 			padding: 10px;
-			display: inline-flex; 
+			display: inline-flex;
 			justify-content: space-between;
 		}
 		.page-title {
-			font: bold 22pt monospace; 
+			font: bold 22pt monospace;
 			padding: 5px;
-			position: absolute; 
-			left: 1em; 
-			bottom: 0em; 
+			position: absolute;
+			left: 1em;
+			bottom: 0em;
 			color: #FFF;
-			text-shadow: 3px 3px 2px gray; 				
-		}		
-	}	
+			text-shadow: 3px 3px 2px gray;
+		}
+	}
 }
 
 .mobile-header {
@@ -78,7 +82,7 @@ h2 {
 		}
 		&:hover {
 			text-decoration: none !important;
-		}		
+		}
 	}
 	.mobile-navbar {
 		display: flex;
@@ -96,11 +100,11 @@ h2 {
 				font-size: 1.5em;
 			}
 		}
-	}	
+	}
 	ul {
 		list-style: none;
 		padding: 0;
-		margin: 0;	
+		margin: 0;
 		li {
 			text-align: right;
 			border-top: thin solid #CCC;
@@ -112,11 +116,11 @@ h2 {
 				}
 				&.active {
 					background-color: white;
-					color: black !important;	
-				}				
+					color: black !important;
+				}
 			}
-		}	
-	}	
+		}
+	}
 }
 
 
@@ -148,9 +152,9 @@ h2 {
 				}
 				&.active {
 					background-color: white;
-					color: black !important;	
-				}					
-			}		
+					color: black !important;
+				}
+			}
 		}
 	}
 }
@@ -163,7 +167,7 @@ h2 {
  * Footer
  **********************/
 footer {
-	background: #444;  
+	background: #444;
 	color: white;
 	text-align: center;
 	padding: 0.5em;
@@ -172,7 +176,7 @@ footer {
 @media (min-width: $screen-sm-min) {
 	.desktop-header {
 		display: block;
-	}	
+	}
 
 	#app-container {
 		margin-top: 2em;
@@ -186,5 +190,5 @@ footer {
 
 	footer {
 		border-radius: 0 0 15px 15px;
-	}	
+	}
 }
