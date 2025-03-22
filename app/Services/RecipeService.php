@@ -13,16 +13,16 @@ class RecipeService {
 
   public function __construct() {
     $this->logger =  Utils::getLogger();
-    $this->cache = Utils::getCache();
-    $cached = $this->cache->get($this->xmlCacheKey);
-    if (!is_null($cached)) {
-      $this->logger->info('returning recipes xml from cache');
-      $this->xml = $cached;
-    } else {
+    // $this->cache = Utils::getCache();
+    // $cached = $this->cache->get($this->xmlCacheKey);
+    // if (!is_null($cached)) {
+    //   $this->logger->info('returning recipes xml from cache');
+    //   $this->xml = $cached;
+    // } else {
       $this->logger->info('fetching recipes xml');
       $this->xml = file_get_contents($this->url);
-      $this->cache->set($this->xmlCacheKey, $this->xml, $this->expireSeconds);
-    }
+    //   $this->cache->set($this->xmlCacheKey, $this->xml, $this->expireSeconds);
+    // }
   }
 
   public function get() {
@@ -52,15 +52,15 @@ EOD;
   }
 
   private function getData() {
-    $cached = $this->cache->get($this->cacheKey);
-    if (!is_null($cached)) {
-        $this->logger->info('returning cached recipes');
-        return json_decode($cached, true);
-    }
+    // $cached = $this->cache->get($this->cacheKey);
+    // if (!is_null($cached)) {
+    //     $this->logger->info('returning cached recipes');
+    //     return json_decode($cached, true);
+    // }
     $this->logger->info('parsing recipes');
     $simpleXml = simplexml_load_string($this->xml);
     $response =  $this->parse($simpleXml);
-    $this->cache->set($this->cacheKey, json_encode($response), $this->expireSeconds);
+    // $this->cache->set($this->cacheKey, json_encode($response), $this->expireSeconds);
     return $response;
   }
 
@@ -89,7 +89,7 @@ EOD;
       $tagnames = ['category','cooktime','cuisine','link','preptime','rating','source','title'];
       foreach ($tagnames as $tagname) {
           $json[$tagname] = isset($recipe->{$tagname}) ? trim($recipe->{$tagname}) : '';
-      }  
+      }
       // ingredients
       $mapper = function($ingredient) {
         $mapped = [];
@@ -115,7 +115,7 @@ EOD;
       $option = $this->getOption($cuisine);
       if ($cuisine !== "" && !in_array($option, $cuisines)) {
         $cuisines[] = $option;
-      }      
+      }
     }
     sort($categories);
     sort($cuisines);

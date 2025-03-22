@@ -25,8 +25,6 @@ const Links = ({ id }) => (
 	<span>
 		<a href={`/print/recipes/${id}`} target="_blank" rel="noreferrer">Print</a>&nbsp;|&nbsp;
 		<a href={`/export/recipes/${id}`} target="_blank" rel="noreferrer">Export</a>
-		<br /><br />
-		<a href="#top">Return to top</a>
 	</span>
 );
 

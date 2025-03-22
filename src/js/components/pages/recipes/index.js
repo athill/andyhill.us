@@ -1,8 +1,9 @@
-import React from 'react';
-import { Alert, Col, Form, Row } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Alert, Col, Form, ListGroup, Row, Tab } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 
 import Recipe from './Recipe';
+import { getPagination } from '../../../utils/PrimaryPagination';
 
 import './recipes.css';
 
@@ -19,8 +20,8 @@ const Select = ({ id, label, onChange, options=[] }) => (
     </Form.Group>
 );
 
-const RecipesForm = ({ categories, cuisines, ingredients, onCategoryChange, onCuisineChange, onTextChange, onIngredientChange }) => (
-  <Form>
+const RecipesForm = ({ categories, cuisines, onCategoryChange, onCuisineChange, onTextChange }) => (
+  <Form style={{ paddingBottom: '1em' }}>
   	<fieldset>
   		<legend>Filter</legend>
 	    <Row>
@@ -37,20 +38,31 @@ const RecipesForm = ({ categories, cuisines, ingredients, onCategoryChange, onCu
 	      <Col>
 	        <Select id="cuisine" label="Cuisine" options={cuisines} onChange={onCuisineChange} />
         </Col>
-	      <Col>
-	        <Select id="ingredient" label="Ingredient" options={ingredients} onChange={onIngredientChange} />
-        </Col>
       </Row>
     </fieldset>
   </Form>
 );
 
 const Recipes = ({ recipes }) => (
-	<div>
-	{
-		recipes.map(recipe => <Recipe key={recipe.id} recipe={recipe} />)
-	}
-	</div>
+	<Tab.Container>
+    <Row>
+      <Col sm={4}>
+        <ListGroup defaultActiveKey={`#recipe-{recipes.length && recipes[0].id}`}>
+          {
+            recipes.map(recipe => <ListGroup.Item key={recipe.id} action href={`#recipe-${recipe.id}`}>{recipe.title}</ListGroup.Item>)
+          }
+        </ListGroup>
+      </Col>
+      <Col sm={8}>
+        <Tab.Content>
+          {
+            recipes.map(recipe => <Tab.Pane key={recipe.id} eventKey={`#recipe-${recipe.id}`}><Recipe recipe={recipe} /></Tab.Pane>)
+          }
+          <Tab.Pane eventKey="#link2">Tab pane content 2</Tab.Pane>
+        </Tab.Content>
+      </Col>
+    </Row>
+	</Tab.Container>
 );
 
 const maxOptionLength = 15;		//// max length of filter option display value
@@ -146,7 +158,6 @@ class RecipesPage extends React.Component {
 					onCategoryChange={this._onItemChange('categoryFilter')}
 					onCuisineChange={this._onItemChange('cuisineFilter')}
 					onTextChange={this._onItemChange('textFilter')}
-					onIngredientChange={this._onItemChange('ingredientFilter')}
 				/>
 				<ul id="recipe-list">
 				{
@@ -161,4 +172,94 @@ class RecipesPage extends React.Component {
 	}
 }
 
-export default RecipesPage;
+const RecipesPage2 = () => {
+  const [ recipeData, setRecipeData ] = useState({
+    categories: [],
+    cuisines: [],
+    recipes: [],
+  });
+  const [ filters, setFilters ] = useState({
+    text: null,
+    category: null,
+    cuisine: null,
+  });
+  const [ loadingState, setLoadingState ] = useState('loading');
+  const [ activePage, setActivePage ] = useState(0);
+  const pageSize = 15;
+  let curated = [...recipeData.recipes];
+  const { Pagination, slice } = getPagination({activePage, items: curated || [], pageSize, setActivePage});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/recipes');
+        const result = await response.json();
+        const { categories, cuisines, recipes } = result;
+        setRecipeData({
+          categories,
+          cuisines,
+          recipes
+        });
+        setLoadingState('loaded');
+      } catch (e) {
+        console.log(e);
+        setLoadingState('fail');
+      }
+    };
+    fetchData();
+  }, []);
+
+  const onItemChange = (key) => {
+    return e => setFilters({ ...filters, [key]: e.target.value });
+  };
+  const inString = (needle, haystack) => !needle ? true : haystack.toLowerCase().includes(needle.toLowerCase());
+
+  const filterItems =  () => {
+    if (!filters.category && !filters.cuisine && !filters.text) {
+      return curated;
+    }
+
+    return curated.filter(recipe => {
+      return inString(filters.category, recipe.category) &&
+        inString(filters.cuisine, recipe.cuisine) &&
+        (inString(filters.text, recipe.category) ||
+          inString(filters.text, recipe.cuisine) ||
+          inString(filters.text, recipe.title) ||
+          inString(filters.text, recipe.instructions.join(' ')));
+    });
+  }
+
+  const recipes = filterItems(curated);
+  return (
+    <>
+      <Helmet>
+        <title>andyhill.us - Recipes</title>
+      </Helmet>
+      <h2 id="top">Recipes</h2>
+      <p>
+        I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noreferrer">Gourmet</a> recipe manager.
+        The content of this page is from an XML export of my recipes in Gourmet.
+      </p>
+      <RecipesForm
+					categories={recipeData.categories}
+					cuisines={recipeData.cuisines}
+					onCategoryChange={onItemChange('category')}
+					onCuisineChange={onItemChange('cuisine')}
+					onTextChange={onItemChange('text')}
+				/>
+
+				{ loadingState === 'loading' && <div><i className="fa fa-refresh fa-cog fa-3x fa-fw"></i> Loading ...</div> }
+				{ loadingState === 'fail' && <Alert bsStyle="danger">We&apos;re sorry, something went wrong.</Alert> }
+        { loadingState === 'loaded' &&
+          <>
+          <div style={{ display: 'inline-flex' }}>
+            <Pagination />
+            <div><strong>&nbsp;{recipes.length}  results</strong></div>
+          </div>
+          <Recipes recipes={slice(recipes)} />
+          </> }
+    </>
+  )
+};
+
+export default RecipesPage2;
