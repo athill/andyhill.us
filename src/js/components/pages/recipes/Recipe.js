@@ -46,12 +46,12 @@ const Recipe = ({ recipe, isScreenDisplay=true }) => (
 	<div id={`recipe-${recipe.id}`} className="recipe">
 		<h4 id={recipe.name} className="recipe-title">{recipe.title}</h4>
 		<div className="recipe-main">
-			<dl className="recipe-meta dl-horizontal">
+			<table className="recipe-meta">
 			{
-				recipeMetaMap.map(map => <div key={map.key}><dt>{map.header}</dt><dd>{recipe[map.key]}</dd></div>)
+				recipeMetaMap.map(map => <tr key={map.key}><th scope="row">{map.header}</th><td>{recipe[map.key]}</td></tr>)
 			}
             <Source recipe={recipe} />
-			</dl>
+			</table>
 			<h5>Ingredients:</h5>
 			<div className="container-fluid recipe-ingredients">
 				<Row>

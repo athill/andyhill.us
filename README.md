@@ -5,15 +5,15 @@ My personal website. Built with [React](https://reactjs.org/) and [PHP](https://
 ## Developing
 
 ```
-$ docker-compose build
+$ docker compose build
 
-$ docker-compose run --rm composer install
+$ docker compose run --rm composer install
 
-$ docker-compose run --rm npm i
+$ docker compose run --rm npm i
 
-$ docker-compose run --rm npm run build
+$ docker compose run --rm npm run build
 
-$ docker-compose up -d site
+$ docker compose up -d site
 ```
 
 Site is available at http://localhost

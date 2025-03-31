@@ -45,7 +45,7 @@
   .recipe-title {
     width: 33.33%;
     font-size: 1.5em; }
-  .dl-horizontal dt {
+  /* .dl-horizontal dt {
     float: left;
     width: 80px;
     overflow: hidden;
@@ -54,4 +54,5 @@
     text-overflow: ellipsis;
     white-space: nowrap; }
   .dl-horizontal dd {
-    margin-left: 100px; } }
+    margin-left: 100px; }  */
+  }
