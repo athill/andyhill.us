@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Alert, Col, Form, ListGroup, Row, Tab } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
 
 import Recipe from './Recipe';
 import { getPagination } from '../../../utils/PrimaryPagination';
@@ -66,111 +65,6 @@ const Recipes = ({ recipes }) => (
 );
 
 const maxOptionLength = 15;		//// max length of filter option display value
-class RecipesPage extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-        	recipes: [],
-        	loadingState: 'loading',
-        	textFilter: null,
-        	categoryFilter: null,
-        	cuisineFilter: null,
-        	ingredientFilter: null,
-        	categories: [],
-        	cuisines: [],
-        	ingredients: []
-        };
-        this._filter = this._filter.bind(this);
-        this._getOption = this._getOption.bind(this);
-        this._onItemChange = this._onItemChange.bind(this);
-
-    }
-
-
-    _filter() {
-    	let { categoryFilter, cuisineFilter, ingredientFilter, textFilter, recipes} = this.state;
-    	if (!categoryFilter && !cuisineFilter && !ingredientFilter && !textFilter) {
-    		return recipes;
-    	}
-    	const inString = (needle, haystack) => !needle ? true : haystack.toLowerCase().includes(needle.toLowerCase());
-    	return recipes.filter(recipe => {
-    		return inString(categoryFilter, recipe.category) &&
-    			inString(cuisineFilter, recipe.cuisine) &&
-    			inString(ingredientFilter, recipe.ingredients.map(ingredient => ingredient.item).join(' ')) &&
-    			(inString(textFilter, recipe.category) ||
-						inString(textFilter, recipe.cuisine) ||
-						inString(textFilter, recipe.title) ||
-						inString(textFilter, recipe.instructions.join(' ')));
-    	});
-    }
-
-    _onItemChange(key) {
-    	return e => this.setState({ [key]: e.target.value });
-    }
-
-    _getOption(option) {
-      //// remove everything after semi-colon
-      const value =  option.split(';')[0];
-      const display = (value.length > maxOptionLength) ? value.substring(0, maxOptionLength) + '...' : value;
-      return {
-        display,
-        value
-      };
-    }
-
-    componentDidMount() {
-      fetch(`/api/recipes`)
-        .then(response => response.json())
-        .then((response) => {
-          const { categories, cuisines, ingredients, recipes } = response;
-      		this.setState({
-        			loadingState: 'loaded',
-        			categories,
-        			cuisines,
-        			ingredients,
-        			recipes
-        		});
-        })
-    		.catch(error => {
-    			console.error(error);
-    			this.setState({ loadingState: 'fail' });
-    		});
-    }
-
-	render() {
-		const recipes = this._filter();
-		const { categories, cuisines, loadingState, ingredients } = this.state;
-		return (
-			<div>
-        <Helmet>
-          <title>andyhill.us - Recipes</title>
-        </Helmet>
-				<h2 id="top">Recipes</h2>
-				<p>
-					I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noreferrer">Gourmet</a> recipe manager.
-					The content of this page is from an XML export of my recipes in Gourmet.
-				</p>
-				<RecipesForm
-					categories={categories}
-					cuisines={cuisines}
-					ingredients={ingredients}
-					onCategoryChange={this._onItemChange('categoryFilter')}
-					onCuisineChange={this._onItemChange('cuisineFilter')}
-					onTextChange={this._onItemChange('textFilter')}
-				/>
-				<ul id="recipe-list">
-				{
-					recipes.map(recipe => <li key={recipe.id}><a href={`#${recipe.name}`}>{ recipe.title }</a></li>)
-				}
-				</ul>
-				{ loadingState === 'loading' && <div><i className="fa fa-refresh fa-cog fa-3x fa-fw"></i> Loading ...</div> }
-				{ loadingState === 'loaded' && <Recipes recipes={recipes} /> }
-				{ loadingState === 'fail' && <Alert bsStyle="danger">We&apos;re sorry, something went wrong.</Alert> }
-			</div>
-		);
-	}
-}
 
 const RecipesPage2 = () => {
   const [ recipeData, setRecipeData ] = useState({
@@ -244,9 +138,7 @@ const RecipesPage2 = () => {
   const recipes = filterItems(curated);
   return (
     <>
-      <Helmet>
-        <title>andyhill.us - Recipes</title>
-      </Helmet>
+      <title>andyhill.us - Recipes</title>
       <h2 id="top">Recipes</h2>
       <p>
         I love to cook and used <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noreferrer">Gourmet</a> recipe manager for years.

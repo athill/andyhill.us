@@ -78,7 +78,7 @@ const Food = () => {
       setFood(result);
     };
     fetchData();
-  }, []);
+  }, [curated]);
   const webRoot = `/data/food/images`;
   const SortIcon = ({ type }) => {
     if (sort.type === type) {
@@ -116,15 +116,13 @@ const Food = () => {
         {
           curated && slice(curated).map((item, i) => (
             <Col  key={i} md={3}>
-              <a href="" onClick={e => { e.preventDefault(); setSelected(i) }}>
-              <Card className="cover">
-                <Card.Header as="h6">{item.title}</Card.Header>
-                <Card.Body>
-                  <img src={`${webRoot}/${item.image}`} width="200" alt={'thumbnail of ' + item.title + ' video'} />
-                  <p>{new Date(item.date).toLocaleDateString()}</p>
-                </Card.Body>
-              </Card>
-              </a>
+            <Card className="cover" onClick={e => { e.preventDefault(); setSelected(i) }}>
+              <Card.Header as="h6">{item.title}</Card.Header>
+              <Card.Body>
+                <img src={`${webRoot}/${item.image}`} width="200" alt={'thumbnail of ' + item.title + ' video'} />
+                <p>{new Date(item.date).toLocaleDateString()}</p>
+              </Card.Body>
+            </Card>
             </Col>
           ))
         }

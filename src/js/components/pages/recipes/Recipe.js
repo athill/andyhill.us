@@ -14,12 +14,7 @@ const recipeMetaMap = [
 	unitReplacements = [
 		[/^teaspoons?$/i, 'tsp.'],
 		[/^tablespoons?$/i, 'Tbs.']
-	],
-	ingredientItemWidthMap = {
-			item: 8,
-			unit: 2,
-			amount: 2
-	};
+	];
 
 const Links = ({ id }) => (
 	<span>

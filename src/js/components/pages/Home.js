@@ -4,7 +4,7 @@ const Home = () => (
 	<div style={{ marginTop: '4em', marginBottom: '4em' }}>
 
 		<p>
-      <img src="/images/fb_profile.jpg" width="120" style={{ float: 'right' }} />
+      <img src="/images/fb_profile.jpg" width="120" alt="Andy Hill" style={{ float: 'right' }} />
 			My name is Andy Hill. I am a programmer in <a href="http://bloomington.in.gov/" target="_blank" rel="noreferrer">Bloomington, Indiana</a>. &nbsp;
 			Primarily a web developer. I got my Bachelor of Science in Computer Science from &nbsp;
 			<a href="https://www.iu.edu/" target="_blank" rel="noreferrer">Indiana University</a> I currently work at IU in&nbsp;

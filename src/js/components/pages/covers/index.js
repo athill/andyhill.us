@@ -118,15 +118,13 @@ const Covers = () => {
         {
           curated && slice(curated).map(({ snippet }, i) => (
             <Col  key={i} md={3}>
-              <a href="" onClick={e => { e.preventDefault(); setSelected(snippet) }}>
-              <Card className="cover">
+              <Card className="cover" onClick={e => { e.preventDefault(); setSelected(snippet) }}>
                 <Card.Header as="h6">{snippet.title}</Card.Header>
                 <Card.Body>
                   <img src={snippet.thumbnails.medium.url} width="200" alt={'still frame of ' + snippet.title + ' video'} />
                   <p>{new Date(snippet.publishedAt).toLocaleDateString()}</p>
                 </Card.Body>
               </Card>
-              </a>
             </Col>
           ))
         }
