@@ -1,5 +1,5 @@
 # https://github.com/aschmelyun/docker-compose-laravel
-version: '3'
+# version: '3'
 
 networks:
   laravel:

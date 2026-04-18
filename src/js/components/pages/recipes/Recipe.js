@@ -23,8 +23,7 @@ const recipeMetaMap = [
 
 const Links = ({ id }) => (
 	<span>
-		<a href={`/print/recipes/${id}`} target="_blank" rel="noreferrer">Print</a>&nbsp;|&nbsp;
-		<a href={`/export/recipes/${id}`} target="_blank" rel="noreferrer">Export</a>
+		<a href={`/print/recipes/${id}`} target="_blank" rel="noreferrer">Print</a>
 	</span>
 );
 
@@ -79,7 +78,7 @@ const Recipe = ({ recipe, isScreenDisplay=true }) => (
 			</div>
 			<h5>Instructions:</h5>
 			{ recipe.instructions.map((instruction, i) => <div key={`${instruction}-${i}`}>{ instruction }</div>) }
-			{ 'notes' in recipe && <div><h5>Notes</h5>{ recipe.notes.map((note, i) => <div key={`${note}-${i}`}>{ note }</div>) } </div> }
+			{ recipe.notes && <div><h5>Notes</h5>{ recipe.notes.map((note, i) => <div key={`${note}-${i}`}>{ note }</div>) } </div> }
 		</div>
 			{ isScreenDisplay && <Links id={recipe.id} /> }
     </div>

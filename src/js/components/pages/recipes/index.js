@@ -193,11 +193,23 @@ const RecipesPage2 = () => {
     const fetchData = async () => {
       try {
         const response = await fetch('/api/recipes');
-        const result = await response.json();
-        const { categories, cuisines, recipes } = result;
+        const recipes = await response.json();
+        const categories = new Set();
+        const cuisines = new Set();
+        recipes.sort((a, b) => a.title.localeCompare(b.title));
+        console.log(recipes);
+        recipes.forEach(recipe => {
+          categories.add(recipe.category);
+          cuisines.add(recipe.cuisine);
+          recipe.instructions = recipe.instructions.split('\n');
+          if (recipe.notes) {
+            recipe.notes = recipe.notes.split('\n');
+          }
+        });
+        // const { categories, cuisines, recipes } = result;
         setRecipeData({
-          categories,
-          cuisines,
+          categories: Array.from(categories),
+          cuisines: Array.from(cuisines),
           recipes
         });
         setLoadingState('loaded');
@@ -237,8 +249,10 @@ const RecipesPage2 = () => {
       </Helmet>
       <h2 id="top">Recipes</h2>
       <p>
-        I love to cook and use <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noreferrer">Gourmet</a> recipe manager.
-        The content of this page is from an XML export of my recipes in Gourmet.
+        I love to cook and used <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noreferrer">Gourmet</a> recipe manager for years.
+        However, It's only available on Windows, so I
+        wrote <a href="https://github.com/athill/gourmet2" target="_blank" rel="noreferrer">my own recipe manager in JavaScript</a> and
+        imported my recipes from Gourmet. The content of this page generated from the data in my recipe manager.
       </p>
       <RecipesForm
 					categories={recipeData.categories}

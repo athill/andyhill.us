@@ -17,17 +17,19 @@ class Utils {
             mkdir($logdir, 0755, true);
         }
         // Now add some handlers
-        $logger->pushHandler(new StreamHandler($logdir . '/andyhill.us.log'));  
-        return $logger; 
+        $logger->pushHandler(new StreamHandler($logdir . '/andyhill.us.log'));
+        $logger->pushHandler(new StreamHandler('php://stdout'));
+        return $logger;
     }
 
     public static function getCache() {
         $cachedir = __DIR__.'/../cache';
         if (!is_dir($cachedir)) {
             mkdir($cachedir, 0755, true);
-        }  
+        }
         $defaultDriver = 'Files';
         $cache = new Psr16Adapter($defaultDriver, new ConfigurationOption([ "path" => $cachedir ]));
+
         return $cache;
     }
 }

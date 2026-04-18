@@ -10,6 +10,10 @@ const PrintRecipe = () => {
     const fetchData = async () => {
       const response = await fetch(`/api/recipes/${id}`);
       const recipe = await response.json()
+      recipe.instructions = recipe.instructions.split('\n');
+      if (recipe.notes) {
+        recipe.notes = recipe.notes.split('\n');
+      }
       setRecipe(recipe);
     };
     fetchData();
