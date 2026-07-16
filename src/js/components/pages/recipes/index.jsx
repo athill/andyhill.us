@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Alert, Col, Form, ListGroup, Row, Tab } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
 
 import Recipe from './Recipe';
 import { getPagination } from '../../../utils/PrimaryPagination';
@@ -42,27 +43,30 @@ const RecipesForm = ({ categories, cuisines, onCategoryChange, onCuisineChange, 
   </Form>
 );
 
-const Recipes = ({ recipes }) => (
-	<Tab.Container>
-    <Row>
-      <Col sm={4}>
-        <ListGroup defaultActiveKey={`#recipe-{recipes.length && recipes[0].id}`}>
-          {
-            recipes.map(recipe => <ListGroup.Item key={recipe.id} action href={`#recipe-${recipe.id}`}>{recipe.title}</ListGroup.Item>)
-          }
-        </ListGroup>
-      </Col>
-      <Col sm={8}>
-        <Tab.Content>
-          {
-            recipes.map(recipe => <Tab.Pane key={recipe.id} eventKey={`#recipe-${recipe.id}`}><Recipe recipe={recipe} /></Tab.Pane>)
-          }
-          <Tab.Pane eventKey="#link2">Tab pane content 2</Tab.Pane>
-        </Tab.Content>
-      </Col>
-    </Row>
-	</Tab.Container>
-);
+const Recipes = ({ recipes }) =>  {
+  const location = useLocation();
+  const activeKey = location.hash || (recipes.length && `#recipe-${recipes[0].id}`);
+  return recipes.length && (
+    <Tab.Container defaultActiveKey={activeKey}>
+      <Row>
+        <Col sm={4}>
+          <ListGroup>
+            {
+              recipes.map(recipe => <ListGroup.Item key={recipe.id} action href={`#recipe-${recipe.id}`}>{recipe.title}</ListGroup.Item>)
+            }
+          </ListGroup>
+        </Col>
+        <Col sm={8}>
+          <Tab.Content>
+            {
+              recipes.map(recipe => <Tab.Pane key={recipe.id} eventKey={`#recipe-${recipe.id}`}><Recipe recipe={recipe} /></Tab.Pane>)
+            }
+          </Tab.Content>
+        </Col>
+      </Row>
+    </Tab.Container>
+  );
+};
 
 const maxOptionLength = 15;		//// max length of filter option display value
 

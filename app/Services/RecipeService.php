@@ -13,7 +13,7 @@ class RecipeService {
 
   public function __construct() {
     $this->logger =  Utils::getLogger();
-    $this->cache = Utils::getCache();
+    // $this->cache = Utils::getCache();
   }
 
   public function get() {
@@ -33,14 +33,17 @@ class RecipeService {
   }
 
   private function getData() {
-    $cached = $this->cache->get($this->cacheKey);
-    if (!is_null($cached)) {
-        $this->logger->info('returning cached recipes');
-        return json_decode($cached, true);
-    }
-    $response = json_decode(file_get_contents($this->url), true);
-
-    $this->cache->set($this->cacheKey, json_encode($response), $this->expireSeconds);
+    // $cached = $this->cache->get($this->cacheKey);
+    // if (!is_null($cached)) {
+    //     $this->logger->info('returning cached recipes');
+    //     return json_decode($cached, true);
+    // }
+    // $this->logger->info('fetching recipes from URL', ['url' => $this->url]);
+    $json = file_get_contents($this->url);
+    // $this->logger->info('fetched recipes', ['json' => $json]);
+    $response = json_decode($json, true);
+    // $this->logger->info('decoded recipes', ['response' => count($response)]);
+    // $this->cache->set($this->cacheKey, json_encode($response), $this->expireSeconds);
     return $response;
   }
 }

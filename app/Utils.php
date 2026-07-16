@@ -18,7 +18,7 @@ class Utils {
         }
         // Now add some handlers
         $logger->pushHandler(new StreamHandler($logdir . '/andyhill.us.log'));
-        $logger->pushHandler(new StreamHandler('php://stdout'));
+        // $logger->pushHandler(new StreamHandler('php://stdout'));
         return $logger;
     }
 
