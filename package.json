@@ -21,15 +21,14 @@
   "devDependencies": {
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
-    "@testing-library/user-event": "14.6.1"
+    "@testing-library/user-event": "14.6.1",
+    "@vitejs/plugin-react": "^6.0.3",
+    "vite": "^8.1.5"
   },
   "scripts": {
-    "server": "node ./server",
-    "web": "react-scripts start",
-    "start": "npm run server & npm run web",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --mode development"
   },
   "eslintConfig": {
     "extends": [
