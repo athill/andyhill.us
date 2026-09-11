@@ -18,7 +18,6 @@ const navigation = [
   { display: 'Resume', href: '/resume/' },
   { display: 'Covers', href: '/covers/' },
   { display: 'Recipes', href: '/recipes/' },
-  { display: 'Food', href: '/food/' }
 ];
 
 const activeClassName = "active";
@@ -106,7 +105,6 @@ const AppView = () => (
             <main id="main">
               <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/food" element={<Food />}/>
                 <Route path="resume" element={<Resume />}/>
                 <Route path="/recipes" element={<Recipes />}/>
                 <Route path="/covers" element={<Covers />}/>
