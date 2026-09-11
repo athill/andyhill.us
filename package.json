@@ -6,6 +6,7 @@
     "@fortawesome/fontawesome-svg-core": "7.2.0",
     "@fortawesome/free-solid-svg-icons": "7.2.0",
     "@fortawesome/react-fontawesome": "3.3.0",
+    "@tailwindcss/vite": "4.3.3",
     "bootstrap": "5.3.8",
     "closest": "0.0.1",
     "dotenv": "17.4.2",
@@ -15,7 +16,8 @@
     "react-bootstrap": "2.10.10",
     "react-dom": "19.2.5",
     "react-router-dom": "6.2.2",
-    "sass": "1.99.0"
+    "sass": "1.99.0",
+    "tailwindcss": "4.3.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "6.9.1",
