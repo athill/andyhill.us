@@ -75,9 +75,10 @@
  * Link styles for when template
  * not included
  ***************************/
-a, a:visited, a:active {
+/* a, a:visited, a:active {
   color: #990000;
   text-decoration: none; }
+*/
 
 @page {
   margin: 0; }

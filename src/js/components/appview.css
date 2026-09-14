@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
   background-color: black;
@@ -142,6 +142,7 @@ h2 {
 /***********************
  * Footer
  **********************/
+ /*
 footer {
   background: #444;
   color: white;
@@ -157,4 +158,4 @@ footer {
   .mobile-header {
     display: none; }
   footer {
-    border-radius: 0 0 15px 15px; } }
+    border-radius: 0 0 15px 15px; } } */

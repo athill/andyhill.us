@@ -1,5 +1,12 @@
-import React from "react";
-import { Pagination } from 'react-bootstrap';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
 
 
 const PrimaryPagination = ({ delta = 2, numPages, active, setActive }) => {
@@ -16,19 +23,26 @@ const PrimaryPagination = ({ delta = 2, numPages, active, setActive }) => {
   const nextDisabled = active === length - 1;
   return (
     <Pagination>
-        <Pagination.First disabled={previousDisabled} onClick={() => setActive(0)} />
-        <Pagination.Prev disabled={previousDisabled} onClick={() => setActive(active - 1)} />
-      { active > delta && <Pagination.Ellipsis disabled /> }
+      <PaginationContent>
+      <PaginationItem>
+        <PaginationPrevious disabled={previousDisabled} onClick={() => setActive(active - 1)} />
+      </PaginationItem>
+      { active > delta && <PaginationEllipsis disabled /> }
       {
         show.map((i) => (
-          <Pagination.Item key={i} active={i === active} onClick={() => setActive(i)}>
-            { i + 1 }
-          </Pagination.Item>
+          <PaginationItem key={i}>
+            <PaginationLink active={i === active} onClick={() => setActive(i)}>{ i + 1 }</PaginationLink>
+          </PaginationItem>
         ))
       }
-      { active < length - delta - 1 &&  <Pagination.Ellipsis disabled /> }
-        <Pagination.Next disabled={nextDisabled} onClick={() => setActive(active + 1)} />
-        <Pagination.Last disabled={nextDisabled} onClick={() => setActive(pages.length - 1)} />
+      { active < length - delta - 1 &&  <PaginationEllipsis disabled /> }
+      <PaginationItem>
+        <PaginationNext disabled={nextDisabled} onClick={() => {
+          console.log({ active, setActive });
+          setActive(active + 1)
+        }} />
+      </PaginationItem>
+      </PaginationContent>
     </Pagination>
   );
 };

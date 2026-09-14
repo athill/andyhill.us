@@ -234,7 +234,7 @@ const sections = [
 ];
 
 const Resume = () => (
-	<div className="container" id="resume">
+	<div className="container text-black" id="resume">
 		<Header />
 		{
 			sections.map(({ title, Component }, i) => <Section key={`${title}-${i}`} title={title} Component={Component} />)

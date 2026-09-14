@@ -1,9 +1,23 @@
 import { useEffect, useState } from 'react';
-import { Button, Card, Col, Modal, Row } from 'react-bootstrap';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { useSearchParams } from "react-router-dom";
 
 import { getPagination } from '../../../utils/PrimaryPagination';
 
-import './covers.css';
+// import './covers.css';
 
 
 const Embed = ({ videoId, title , ...atts}) => (
@@ -17,32 +31,38 @@ const Embed = ({ videoId, title , ...atts}) => (
 );
 
 const CoverModal = ({selected, handleClose}) => {
-  if (!selected) {
-    return 'loading ...';
-  }
   return (
-    <Modal className="covers-modal" show={!!selected} onHide={handleClose} size="lg">
-    <Modal.Header closeButton>
-      <Modal.Title>{selected.title}</Modal.Title>
-    </Modal.Header>
-    <Modal.Body>
-      <Embed title={selected.title} videoId={selected.resourceId.videoId} className="video-embed" />
-    </Modal.Body>
-  </Modal>
+    <Dialog open={!!selected} onOpenChange={(open) => { if (!open) handleClose(); }}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>{selected?.title}</DialogTitle>
+        </DialogHeader>
+        <Embed title={selected?.title} videoId={selected?.resourceId?.videoId} className="video-embed" />
+      </DialogContent>
+      </Dialog>
   );
 };
 
 const Covers = () => {
+  const [searchParams, setSearchParams] = useSearchParams(location.search);
+  console.log({searchParams});
   const [covers, setCovers] = useState(null);
-  const [ filter, setFilter ] = useState('');
   const [curated, setCurated] = useState(null);
   const defaultSort = { type: 'date', dir: 'asc', prevType: 'title' };
   const [ sort, setSort ] = useState(defaultSort);
   const [ selected, setSelected ] = useState(null);
-
-  const [ activePage, setActivePage ] = useState(0);
   const pageSize = 50;
-  const { Pagination, slice } = getPagination({activePage, items: curated || [], pageSize, setActivePage});
+  const { Pagination, slice } = getPagination({
+    activePage: parseInt(searchParams.get('page') || '0', 10),
+    items: curated || [],
+    pageSize,
+    setActivePage: (page) => {
+      setSearchParams({
+        ...Object.fromEntries(searchParams),
+        page: page?.toString() || '0'
+      })
+    }
+  });
 
   const handleSort = type => {
     if (type === sort.type) {
@@ -57,9 +77,9 @@ const Covers = () => {
     let filtered = covers ? [...covers] : covers;
     // handle filter
     if (filtered) {
-      const upperCaseFilter = filter ? filter.toUpperCase() : '';
+      const upperCaseFilter = searchParams.get('filter') ? searchParams.get('filter').toUpperCase() : '';
       filtered = filtered.filter(({ snippet }) => {
-        return Object.keys(snippet.thumbnails).length && (!filter || snippet.title.toUpperCase().includes(upperCaseFilter));
+        return Object.keys(snippet.thumbnails).length && (!upperCaseFilter || snippet.title.toUpperCase().includes(upperCaseFilter));
       });
     }
     // handle sort
@@ -74,7 +94,7 @@ const Covers = () => {
       filtered = filtered.reverse();
     }
     setCurated(filtered ? [...filtered] : null);
-  }, [covers, filter, sort])
+  }, [covers, searchParams, sort])
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('/api/youtube');
@@ -96,41 +116,49 @@ const Covers = () => {
       <p>I've been publishing covers for the past few years, which is fun. My
         playlist,&nbsp; <a href="https://youtube.com/playlist?list=PL48l16ugvQtB6vQbtSpnePBWNm2sCmypf"  target="_blank" rel="noreferrer">Mediocre Covers of Good Songs</a>, is available on YouTube.
       </p>
-      <Row>
-        <Col style={{ textAlign: 'center', margin: '2em' }}>
-          <h2>Latest Video - {latest && latest.snippet.title}</h2>
-          { latest && <Embed title={latest.snippet.title} videoId={latest.snippet.resourceId.videoId} className="video-embed" /> }
-          <p>{latest && new Date(latest.snippet.publishedAt).toLocaleDateString()}</p>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={8}><strong>Filter: </strong><input onChange={e => setFilter(e.target.value)} /></Col>
-        <Col>
+      <div className="text-center my-8">
+        <h2>Latest Video - {latest && latest.snippet.title}</h2>
+        { latest && <Embed title={latest.snippet.title} videoId={latest.snippet.resourceId.videoId} className="video-embed" /> }
+        <p>{latest && new Date(latest.snippet.publishedAt).toLocaleDateString()}</p>
+      </div>
+      <div className="grid grid-cols-12">
+        <div className="col-span-8">
+          <strong>Filter: </strong>
+          <Input onChange={e => setSearchParams({
+            ...Object.fromEntries(searchParams),
+            filter: e.target.value })}
+            defaultValue={searchParams.get('filter') || ''}
+          />
+        </div>
+        <div className="col-span-2">
           <Button onClick={() => handleSort('title')}>Sort title {sortIcon('title')}</Button>
-        </Col>
-        <Col>
+        </div>
+        <div className="col-span-2">
           <Button onClick={() => handleSort('date')}>Sort date {sortIcon('date')} </Button>
-        </Col>
-      </Row>
+        </div>
+      </div>
       { curated && curated.length + ' results' }
       <Pagination />
-      <Row className="covers">
+      <div className="grid grid-cols-4 gap-4">
+
         {
           curated && slice(curated).map(({ snippet }, i) => (
-            <Col  key={i} md={3}>
-              <Card className="cover" onClick={e => { e.preventDefault(); setSelected(snippet) }}>
-                <Card.Header as="h6">{snippet.title}</Card.Header>
-                <Card.Body>
-                  <img src={snippet.thumbnails.medium.url} width="200" alt={'still frame of ' + snippet.title + ' video'} />
-                  <p>{new Date(snippet.publishedAt).toLocaleDateString()}</p>
-                </Card.Body>
-              </Card>
-            </Col>
+            <div key={i} className="col-span-1">
+                    <Card className="cover cursor-pointer" onClick={() => setSelected(snippet)}>
+                      <CardHeader>
+                        <CardTitle>{snippet.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <img src={snippet.thumbnails.medium.url} width="200" alt={'still frame of ' + snippet.title + ' video'} />
+                        <p>{new Date(snippet.publishedAt).toLocaleDateString()}</p>
+                      </CardContent>
+                    </Card>
+            </div>
           ))
         }
-      </Row>
-      <Pagination />
-      <CoverModal selected={selected} handleClose={() => setSelected(false)} />
+      </div>
+      {/* <Pagination /> */}
+      <CoverModal selected={selected} handleClose={() => setSelected(null)} />
     </div>
   );
 };

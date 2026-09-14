@@ -44,6 +44,9 @@
     // custom
     "allowJs": true,
     "noEmit": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "exclude": [
     "node_modules",

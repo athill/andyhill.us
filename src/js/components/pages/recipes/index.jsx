@@ -1,11 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { Alert, Col, Form, ListGroup, Row, Tab } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
+import { Alert, Col, Form, ListGroup, Row} from 'react-bootstrap';
+
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"
 import { useLocation } from 'react-router-dom';
+import { Input } from "@/components/ui/input"
 
 import Recipe from './Recipe';
 import { getPagination } from '../../../utils/PrimaryPagination';
 
-import './recipes.css';
+// import './recipes.css';
 
 const Select = ({ id, label, onChange, options=[] }) => (
     <Form.Group controlId={id}>
@@ -21,50 +29,40 @@ const Select = ({ id, label, onChange, options=[] }) => (
 );
 
 const RecipesForm = ({ categories, cuisines, onCategoryChange, onCuisineChange, onTextChange }) => (
-  <Form style={{ paddingBottom: '1em' }}>
+  <form style={{ paddingBottom: '1em' }}>
   	<fieldset>
   		<legend>Filter</legend>
-	    <Row>
-        <Col>
-          <Form.Group controlId="filter">
-            <Form.Label>Text:</Form.Label>
-            {' '}
-            <Form.Control type="text" onChange={onTextChange} />
-          </Form.Group>
-        </Col>
-	      <Col>
+	    <div className="flex">
+        <div className="flex-1">
+            <Input type="text" placeholder="Text" onChange={onTextChange} />
+        </div>
+	      <div className="flex-1">
 	        <Select id="category" label="Category" options={categories} onChange={onCategoryChange} />
-        </Col>
-	      <Col>
+        </div>
+	      <div className="flex-1">
 	        <Select id="cuisine" label="Cuisine" options={cuisines} onChange={onCuisineChange} />
-        </Col>
-      </Row>
+        </div>
+      </div>
     </fieldset>
-  </Form>
+  </form>
 );
 
 const Recipes = ({ recipes }) =>  {
   const location = useLocation();
   const activeKey = location.hash || (recipes.length && `#recipe-${recipes[0].id}`);
   return recipes.length && (
-    <Tab.Container defaultActiveKey={activeKey}>
-      <Row>
-        <Col sm={4}>
-          <ListGroup>
+    <Tabs defaultValue={activeKey} className="grid grid-cols-2" orientation="vertical">
+        <TabsList className="col-span-1">
             {
-              recipes.map(recipe => <ListGroup.Item key={recipe.id} action href={`#recipe-${recipe.id}`}>{recipe.title}</ListGroup.Item>)
+              recipes.map(recipe => <TabsTrigger key={recipe.id} value={`#recipe-${recipe.id}`}>{recipe.title}</TabsTrigger>)
             }
-          </ListGroup>
-        </Col>
-        <Col sm={8}>
-          <Tab.Content>
+        </TabsList>
+        <div className="col-span-1">
             {
-              recipes.map(recipe => <Tab.Pane key={recipe.id} eventKey={`#recipe-${recipe.id}`}><Recipe recipe={recipe} /></Tab.Pane>)
+              recipes.map(recipe => <TabsContent key={recipe.id} value={`#recipe-${recipe.id}`}><Recipe recipe={recipe} /></TabsContent>)
             }
-          </Tab.Content>
-        </Col>
-      </Row>
-    </Tab.Container>
+        </div>
+    </Tabs>
   );
 };
 
@@ -143,7 +141,7 @@ const RecipesPage2 = () => {
   return (
     <>
       <title>andyhill.us - Recipes</title>
-      <h2 id="top">Recipes</h2>
+      <h2 id="top" className="text-3xl font-bold underline">Recipes</h2>
       <p>
         I love to cook and used <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noreferrer">Gourmet</a> recipe manager for years.
         However, It's only available on Windows, so I

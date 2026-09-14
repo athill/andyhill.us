@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Home = () => (
-	<div style={{ marginTop: '4em', marginBottom: '4em' }}>
+	<div className="pt-4 pb-4">
 
 		<p>
-      <img src="/images/fb_profile.jpg" width="120" alt="Andy Hill" style={{ float: 'right' }} />
+      <img src="/images/fb_profile.jpg" width="120" alt="Andy Hill" className="float-right ml-4 mb-4" />
 			My name is Andy Hill. I am a programmer in <a href="http://bloomington.in.gov/" target="_blank" rel="noreferrer">Bloomington, Indiana</a>. &nbsp;
 			Primarily a web developer. I got my Bachelor of Science in Computer Science from &nbsp;
 			<a href="https://www.iu.edu/" target="_blank" rel="noreferrer">Indiana University</a> I currently work at IU in&nbsp;
