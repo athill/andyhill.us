@@ -1,7 +1,3 @@
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
-
-
 const recipeMetaMap = [
 		{ header: 'Category', key: 'category' },
 		{ header: 'Cuisine', key: 'cuisine' },
@@ -10,7 +6,6 @@ const recipeMetaMap = [
 		{ header: 'Servings', key: 'servings' },
 		{ header: 'Cook Time', key: 'cooktime' }
 	],
-	ingredientItems = ['amount','unit','item'],
 	unitReplacements = [
 		[/^teaspoons?$/i, 'tsp.'],
 		[/^tablespoons?$/i, 'Tbs.']
@@ -24,12 +19,12 @@ const Links = ({ id }) => (
 
 const Source = ({ recipe }) => {
   if (recipe.link && recipe.source) {
-    return <div><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noreferrer">{recipe.source}</a></dd></div>
+    return <a href={recipe.link} target="_blank" rel="noreferrer">{recipe.source}</a>
   } else if (recipe.link) {
     const display = recipe.link.replace(/\w+:\/\/([^/]+).*/, '$1');
-    return <div><dt>Source</dt><dd><a href={recipe.link} target="_blank" rel="noreferrer">{display}</a></dd></div>
+    return <a href={recipe.link} target="_blank" rel="noreferrer">{display}</a>
   } else if (recipe.source) {
-    return <div><dt>Source</dt><dd>{recipe.source}</dd></div>
+    return recipe.source
   } else {
     return null;
   }
@@ -38,41 +33,44 @@ const Source = ({ recipe }) => {
 
 const Recipe = ({ recipe, isScreenDisplay=true }) => (
 	<div id={`recipe-${recipe.id}`} className="recipe">
-		<h4 id={recipe.name} className="recipe-title">{recipe.title}</h4>
-		<div className="recipe-main">
-			<table className="recipe-meta">
-			{
-				recipeMetaMap.map(map => <tr key={map.key}><th scope="row">{map.header}</th><td>{recipe[map.key]}</td></tr>)
-			}
-            <Source recipe={recipe} />
+		<h4 id={recipe.name}>{recipe.title}</h4>
+		<div>
+			<table>
+        <tbody>
+          {
+            recipeMetaMap.map(map => (
+              <tr key={map.key}>
+                <th scope="row" className="text-left">{map.header}</th>
+                <td>{recipe[map.key]}</td>
+              </tr>
+            ))
+          }
+          <tr>
+            <th scope="row" className="text-left">Source</th>
+            <td><Source recipe={recipe} /></td>
+          </tr>
+        </tbody>
 			</table>
 			<h5>Ingredients:</h5>
 			<div className="container-fluid recipe-ingredients">
-				<Row>
-					<Col>
-          <table className='recipe-ingredients'>
+          <table className="table-auto">
+            <tbody>
 					{
-						recipe.ingredients.map((ingredient, i) => (
-							<tr key={`${ingredient.item}-${i}`}>
-							{
-								ingredientItems.map((item, i) => {
-									if (item === 'unit' && item.unit) {
-										unitReplacements.forEach(function(replacement) {
-											ingredient[item] = ingredient[item].replace(replacement[0], replacement[1]);
-										});
-									}
-									return <td key={i}>{ ingredient[item] || '' }</td>;
-								})
-							}
+						recipe.ingredients.map(({ amount, unit, item }, i) => (
+							<tr key={`${item}-${i}`}>
+                <td className="p-1">{ amount?.replace(' ', '\u00A0') || '' }</td>
+                <td className="p-1">{ unit ||  '' }</td>
+                <td className="p-1">{ item || '' }</td>
 							</tr>
 						))
 					}
+          </tbody>
           </table>
-					</Col>
-				</Row>
 			</div>
 			<h5>Instructions:</h5>
-			{ recipe.instructions.map((instruction, i) => <div key={`${instruction}-${i}`}>{ instruction }</div>) }
+      <ol className="list-decimal">
+			{ recipe.instructions.map((instruction, i) => <li key={`${instruction}-${i}`}>{ instruction }</li>) }
+      </ol>
 			{ recipe.notes && <div><h5>Notes</h5>{ recipe.notes.map((note, i) => <div key={`${note}-${i}`}>{ note }</div>) } </div> }
 		</div>
 			{ isScreenDisplay && <Links id={recipe.id} /> }

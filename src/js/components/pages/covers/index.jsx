@@ -21,14 +21,16 @@ import { getPagination } from '../../../utils/PrimaryPagination';
 
 
 const Embed = ({ videoId, title , ...atts}) => (
-  <iframe {...atts}
+  <iframe className="w-62.5 h-40 sm:w-125 sm:h-78.75 inline" {...atts}
   src={`https://www.youtube.com/embed/${videoId}`}
   title={title}
   frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allow="picture-in-picture"
   allowFullScreen>
 </iframe>
 );
+
+// allow: accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
 
 const CoverModal = ({selected, handleClose}) => {
   return (
@@ -37,7 +39,7 @@ const CoverModal = ({selected, handleClose}) => {
         <DialogHeader>
           <DialogTitle>{selected?.title}</DialogTitle>
         </DialogHeader>
-        <Embed title={selected?.title} videoId={selected?.resourceId?.videoId} className="video-embed" />
+        <Embed title={selected?.title} videoId={selected?.resourceId?.videoId} />
       </DialogContent>
       </Dialog>
   );
@@ -46,10 +48,10 @@ const CoverModal = ({selected, handleClose}) => {
 const Covers = () => {
   const [searchParams, setSearchParams] = useSearchParams(location.search);
   console.log({searchParams});
-  const [covers, setCovers] = useState(null);
+  const [covers, setCovers] = useState([]);
   const [curated, setCurated] = useState(null);
-  const defaultSort = { type: 'date', dir: 'asc', prevType: 'title' };
-  const [ sort, setSort ] = useState(defaultSort);
+  const defaultSort = { sort: searchParams.get('sort') || 'date', dir: searchParams.get('dir') || 'asc' };
+  // const [ sort, setSort ] = useState(defaultSort);
   const [ selected, setSelected ] = useState(null);
   const pageSize = 50;
   const { Pagination, slice } = getPagination({
@@ -65,15 +67,23 @@ const Covers = () => {
   });
 
   const handleSort = type => {
-    if (type === sort.type) {
-      setSort({ type, dir: sort.dir === 'asc' ? 'desc' : 'asc', prevType: sort.type })
-    } else {
-      setSort({ type, dir: 'asc', prevType: sort.type });
+    const { sort, dir } = Object.fromEntries(searchParams);
+    let newDir = 'asc';
+    if (type === sort) {
+      newDir = dir === 'asc' ? 'desc' : 'asc';
     }
+    setSearchParams({
+      ...Object.fromEntries(searchParams),
+      sort: type,
+      dir: newDir,
+      page: '0'
+    });
   };
   const getStringForCompare = (string) => string.toUpperCase().replace(/[^\w]/g, '');
+  const sortTitleAsc = (a, b) => getStringForCompare(a.snippet.title).localeCompare(getStringForCompare(b.snippet.title));
+  const sortDateAsc = (a, b) => new Date(a.snippet.publishedAt) - new Date(b.snippet.publishedAt);
   useEffect(() => {
-    const sortTitleAsc = (a, b) => getStringForCompare(a.snippet.title).localeCompare(getStringForCompare(b.snippet.title));
+
     let filtered = covers ? [...covers] : covers;
     // handle filter
     if (filtered) {
@@ -84,17 +94,17 @@ const Covers = () => {
     }
     // handle sort
     // sort type has changed
-    if (sort.prevType !== sort.type) {
-      // sort ascending, if type is date, this is the original order and no sorting is necessary
-      if (sort.type === 'title') {
-        filtered = filtered.sort(sortTitleAsc);
-      }
-    // type is same, toggle sort direction
-    } else {
+    if (searchParams.get('sort') === 'date') {
+      filtered = filtered.sort(sortDateAsc);
+    }
+    if (searchParams.get('sort') === 'title') {
+      filtered = filtered.sort(sortTitleAsc);
+    }
+    if (searchParams.get('dir') === 'desc') {
       filtered = filtered.reverse();
     }
     setCurated(filtered ? [...filtered] : null);
-  }, [covers, searchParams, sort])
+  }, [covers, searchParams])
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('/api/youtube');
@@ -104,8 +114,8 @@ const Covers = () => {
     fetchData();
   }, []);
   const sortIcon = type => {
-    if (sort.type === type) {
-      return sort.dir === 'asc' ? '^' : 'v';
+    if (searchParams.get('sort') === type) {
+      return searchParams.get('dir') === 'asc' ? '^' : 'v';
     }
     return null;
   };
@@ -118,28 +128,31 @@ const Covers = () => {
       </p>
       <div className="text-center my-8">
         <h2>Latest Video - {latest && latest.snippet.title}</h2>
-        { latest && <Embed title={latest.snippet.title} videoId={latest.snippet.resourceId.videoId} className="video-embed" /> }
+        { latest && <Embed title={latest.snippet.title} videoId={latest.snippet.resourceId.videoId} /> }
         <p>{latest && new Date(latest.snippet.publishedAt).toLocaleDateString()}</p>
       </div>
-      <div className="grid grid-cols-12">
-        <div className="col-span-8">
-          <strong>Filter: </strong>
-          <Input onChange={e => setSearchParams({
-            ...Object.fromEntries(searchParams),
-            filter: e.target.value })}
+      <div className="flex w-full justify-between">
+        <div className="w-1/2">
+          <Input
+            onChange={e => setSearchParams({
+              ...Object.fromEntries(searchParams),
+              filter: e.target.value })}
+            placeholder="Filter..."
             defaultValue={searchParams.get('filter') || ''}
           />
         </div>
-        <div className="col-span-2">
+        <div>
           <Button onClick={() => handleSort('title')}>Sort title {sortIcon('title')}</Button>
-        </div>
-        <div className="col-span-2">
           <Button onClick={() => handleSort('date')}>Sort date {sortIcon('date')} </Button>
         </div>
       </div>
-      { curated && curated.length + ' results' }
-      <Pagination />
-      <div className="grid grid-cols-4 gap-4">
+      <div className="flex w-full justify-between">
+        <div>
+          <Pagination />
+        </div>
+        { curated && <div>{curated.length}&nbsp;results</div> }
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
         {
           curated && slice(curated).map(({ snippet }, i) => (

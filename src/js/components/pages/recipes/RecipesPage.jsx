@@ -1,6 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Alert, Col, Form, ListGroup, Row} from 'react-bootstrap';
+import { useSearchParams } from 'react-router-dom';
+import {
+  Alert,
+  AlertDescription,
+} from "@/components/ui/alert"
 
+import {
+  Select as SelectUI,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import {
   Tabs,
   TabsContent,
@@ -8,56 +20,92 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 import { useLocation } from 'react-router-dom';
-import { Input } from "@/components/ui/input"
+import ClearableInput from '@/components/clearable-input';
 
 import Recipe from './Recipe';
 import { getPagination } from '../../../utils/PrimaryPagination';
+import { Button } from '@/components/ui/button';
 
 // import './recipes.css';
 
-const Select = ({ id, label, onChange, options=[] }) => (
-    <Form.Group controlId={id}>
-      <Form.Label>{ label }:</Form.Label>
-      {' '}
-      <Form.Select onChange={onChange}>
-      <option></option>
-      {
-      	options.map(({display, value}, i) => <option key={i} value={value}>{display}</option>)
-      }
-      </Form.Select>
-    </Form.Group>
-);
+const Select = ({ label, onChange, options=[], value }) => {
+  const items = options.map(value => ({ label: value, value }));
+  return (
+    <SelectUI items={items} onValueChange={onChange} value={value}>
+      <SelectTrigger>
+        <SelectValue placeholder={label} />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          {
+            items.map(({label, value}, i) => <SelectItem key={i} value={value}>{label}</SelectItem>)
+          }
+        </SelectGroup>
+      </SelectContent>
+    </SelectUI>
+  );
+};
 
-const RecipesForm = ({ categories, cuisines, onCategoryChange, onCuisineChange, onTextChange }) => (
-  <form style={{ paddingBottom: '1em' }}>
-  	<fieldset>
-  		<legend>Filter</legend>
-	    <div className="flex">
-        <div className="flex-1">
-            <Input type="text" placeholder="Text" onChange={onTextChange} />
+const RecipesForm = ({ categories, cuisines, filters }) => {
+  const [searchParams, setSearchParams] = useSearchParams(location.search);
+  const onItemChange = (key) => {
+    return e => {
+      console.log(e)
+      return setSearchParams({
+      ...filters,
+      [key]: e });
+    };
+  };
+  return (
+    <form style={{ paddingBottom: '1em' }}>
+      <fieldset>
+        <legend>Filter</legend>
+        <div className="flex justify-start gap-5">
+              <ClearableInput
+                value={searchParams.get('text') || ''}
+                setValue={onItemChange('text')}
+                placeholder="Text"
+                />
+            <Select
+              label="Category"
+              options={categories}
+              onChange={onItemChange('category')}
+              value={searchParams.get('category') || ''}
+            />
+            <Select
+              label="Cuisine"
+              options={cuisines}
+              onChange={onItemChange('cuisine')}
+              value={searchParams.get('cuisine') || ''}
+            />
+            <Button
+              type="button"
+              onClick={() => setSearchParams({
+                text: '',
+                category: '',
+                cuisine: ''
+              })}
+            >
+              Clear All
+            </Button>
+
         </div>
-	      <div className="flex-1">
-	        <Select id="category" label="Category" options={categories} onChange={onCategoryChange} />
-        </div>
-	      <div className="flex-1">
-	        <Select id="cuisine" label="Cuisine" options={cuisines} onChange={onCuisineChange} />
-        </div>
-      </div>
-    </fieldset>
-  </form>
-);
+      </fieldset>
+    </form>
+  );
+};
 
 const Recipes = ({ recipes }) =>  {
   const location = useLocation();
   const activeKey = location.hash || (recipes.length && `#recipe-${recipes[0].id}`);
   return recipes.length && (
-    <Tabs defaultValue={activeKey} className="grid grid-cols-2" orientation="vertical">
+    <Tabs defaultValue={activeKey} className="grid grid-cols-2 gap-4" orientation="vertical">
         <TabsList className="col-span-1">
             {
               recipes.map(recipe => <TabsTrigger key={recipe.id} value={`#recipe-${recipe.id}`}>{recipe.title}</TabsTrigger>)
             }
         </TabsList>
-        <div className="col-span-1">
+        <div className="col-span-1 p-4">
             {
               recipes.map(recipe => <TabsContent key={recipe.id} value={`#recipe-${recipe.id}`}><Recipe recipe={recipe} /></TabsContent>)
             }
@@ -66,24 +114,23 @@ const Recipes = ({ recipes }) =>  {
   );
 };
 
-const maxOptionLength = 15;		//// max length of filter option display value
-
-const RecipesPage2 = () => {
+const RecipesPage = () => {
   const [ recipeData, setRecipeData ] = useState({
     categories: [],
     cuisines: [],
     recipes: [],
   });
-  const [ filters, setFilters ] = useState({
-    text: null,
-    category: null,
-    cuisine: null,
-  });
+  const [ searchParams ] = useSearchParams(location.search);
   const [ loadingState, setLoadingState ] = useState('loading');
   const [ activePage, setActivePage ] = useState(0);
   const pageSize = 15;
   let curated = [...recipeData.recipes];
   const { Pagination, slice } = getPagination({activePage, items: curated || [], pageSize, setActivePage});
+  const filters = {
+    text: searchParams.get('text') || '',
+    category: searchParams.get('category') || '',
+    cuisine: searchParams.get('cuisine') || '',
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -93,7 +140,6 @@ const RecipesPage2 = () => {
         const categories = new Set();
         const cuisines = new Set();
         recipes.sort((a, b) => a.title.localeCompare(b.title));
-        console.log(recipes);
         recipes.forEach(recipe => {
           categories.add(recipe.category);
           cuisines.add(recipe.cuisine);
@@ -110,16 +156,12 @@ const RecipesPage2 = () => {
         });
         setLoadingState('loaded');
       } catch (e) {
-        console.log(e);
         setLoadingState('fail');
       }
     };
     fetchData();
   }, []);
 
-  const onItemChange = (key) => {
-    return e => setFilters({ ...filters, [key]: e.target.value });
-  };
   const inString = (needle, haystack) => !needle ? true : haystack.toLowerCase().includes(needle.toLowerCase());
 
   const filterItems =  () => {
@@ -141,7 +183,7 @@ const RecipesPage2 = () => {
   return (
     <>
       <title>andyhill.us - Recipes</title>
-      <h2 id="top" className="text-3xl font-bold underline">Recipes</h2>
+      <h2>Recipes</h2>
       <p>
         I love to cook and used <a href="http://thinkle.github.io/gourmet/" target="_blank" rel="noreferrer">Gourmet</a> recipe manager for years.
         However, It's only available on Windows, so I
@@ -151,18 +193,24 @@ const RecipesPage2 = () => {
       <RecipesForm
 					categories={recipeData.categories}
 					cuisines={recipeData.cuisines}
-					onCategoryChange={onItemChange('category')}
-					onCuisineChange={onItemChange('cuisine')}
-					onTextChange={onItemChange('text')}
+          filters={filters}
 				/>
 
 				{ loadingState === 'loading' && <div><i className="fa fa-refresh fa-cog fa-3x fa-fw"></i> Loading ...</div> }
-				{ loadingState === 'fail' && <Alert bsStyle="danger">We&apos;re sorry, something went wrong.</Alert> }
+				{ loadingState === 'fail' && (
+          <Alert variant="destructive">
+            <AlertDescription>
+              We&apos;re sorry, something went wrong.
+            </AlertDescription>
+          </Alert>
+        ) }
         { loadingState === 'loaded' &&
           <>
-          <div style={{ display: 'inline-flex' }}>
-            <Pagination />
-            <div><strong>&nbsp;{recipes.length}  results</strong></div>
+          <div className="flex justify-between">
+            <div>
+              <Pagination />
+            </div>
+            <div>{recipes.length}&nbsp;results</div>
           </div>
           <Recipes recipes={slice(recipes)} />
           </> }
@@ -170,4 +218,4 @@ const RecipesPage2 = () => {
   )
 };
 
-export default RecipesPage2;
+export default RecipesPage;

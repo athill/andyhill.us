@@ -1,12 +1,13 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Menu } from 'lucide-react';
 import React from 'react';
-import { Link, NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
+import { ModeToggle } from "@/components/mode-toggle"
+import { Button } from "@/components/ui/button"
 
 import Covers from './pages/covers';
 import Home from './pages/Home';
 import NotFound from './NotFound';
-import Recipes from './pages/recipes';
+import Recipes from './pages/recipes/RecipesPage';
 import Resume from './pages/resume';
 
 // import './appview.css';
@@ -64,11 +65,14 @@ class MobileHeader extends React.Component {
   render() {
       return (
           <div className="block sm:hidden">
-              <div className="mobile-navbar">
-                  <h1 className="mobile-navbar-title"><Link to="/">andyhill.us</Link></h1>
-                  <span className="button" onClick={this._menuToggle}>
-                    <FontAwesomeIcon icon={faBars} />
-                  </span>
+              <div className="width-full flex flex-row justify-items-end gap-1 bg-header text-header-foreground">
+                  <h1 className="text-5xl grow">andyhill.us</h1>
+                  <div className="bg-header text-header-foreground">
+                    <ModeToggle className="bg-header text-header-foreground" />
+                  </div>
+                  <Button className="size-8 p-3" variant="outline bg-header text-header-foreground" onClick={this._menuToggle}>
+                    <Menu />
+                  </Button>
               </div>
               { this.state.showNav && <Navigation onLinkClick={this._menuClose} /> }
           </div>
@@ -85,7 +89,7 @@ const headerImages = [
 
 const Header = () => (
   <div className="hidden sm:block">
-    <div className="flex bg-gray relative justify-between bg-[#999] p-3 rounded-md m-2">
+    <div className="flex relative justify-between bg-header p-3 rounded-lg m-3">
         {
             headerImages.map(({ src }) => <img key={ src } src={"/images/header/" + src} alt="" className="header-img"  />)
         }
@@ -99,8 +103,11 @@ const Header = () => (
 );
 
 const AppView = () => (
-  <div className="flex justify-center">
-    <div className="bg-[#444] sm:mt-6 sm:mb-6 sm:w-80/100 md:w-60/100 sm:rounded-md">
+  <div className="flex justify-center relative">
+    <div className="hidden sm:block absolute top-2 right-2 flex-none">
+      <ModeToggle />
+    </div>
+    <div className="sm:mt-6 sm:mb-6 sm:w-80/100 md:w-60/100 sm:rounded-lg bg-content">
       <MobileHeader />
       <Header />
       <main className="p-4">
@@ -112,7 +119,8 @@ const AppView = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-    <footer className="p-2 text-center bg-[#ccc] text-black rounded-b-md">
+    <footer className="p-2 text-center bg-header text-header-foreground rounded-b-md">
+
       &copy; andyhill.us { new Date().getFullYear() }
     </footer>
     </div>

@@ -38,7 +38,6 @@ const PrimaryPagination = ({ delta = 2, numPages, active, setActive }) => {
       { active < length - delta - 1 &&  <PaginationEllipsis disabled /> }
       <PaginationItem>
         <PaginationNext disabled={nextDisabled} onClick={() => {
-          console.log({ active, setActive });
           setActive(active + 1)
         }} />
       </PaginationItem>
@@ -66,6 +65,7 @@ export const getPagination = ({ activePage, items, pageSize, setActivePage }) =>
   const startDisplay = pageSize * activePage;
   const Pagination = () => <PrimaryPagination numPages={numPages} active={activePage} setActive={setActivePage} />;
   const slice = (items) => items.slice(startDisplay, Math.min(startDisplay + pageSize, items.length));
+  console.log({ slice, startDisplay, last: Math.min(startDisplay + pageSize, items.length) });
   return {
     numPages,
     Pagination,

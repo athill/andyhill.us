@@ -47,6 +47,14 @@
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
+
+    --color-header: var(--header-background);
+    --color-content: var(--content-background);
+    --color-link-foreground: var(--link-foreground);
+    --color-header-foreground: var(--header-foreground);
+    --color-link-foreground: var(--link-foreground);
+
+
 }
 
 :root {
@@ -82,6 +90,10 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+    --header-background: #444;
+    --header-foreground: #fff;
+    --content-background: #ccc;
+    --link-foreground: #900;
 }
 
 .dark {
@@ -116,6 +128,11 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
+    --color-header: var(--header-background);
+    --header-background: #888;
+    --header-foreground: #000;
+    --content-background: #444;
+    --link-foreground: #f23;
 }
 
 @layer base {
@@ -129,11 +146,33 @@
     @apply font-sans;
     }
 
-    a, a:visited {
-      @apply text-[#900] no-underline;
-    }
+  h1 {
+    @apply text-4xl font-extrabold mb-4;
+  }
+  h2 {
+    @apply text-2xl font-bold mb-3;
+  }
+  h3 {
+    @apply text-xl font-semibold mb-2;
+  }
 
-    a:hover {
-      @apply underline;
-    }
+  h4 {
+    @apply text-lg font-semibold mb-2;
+  }
+
+  h5 {
+    @apply text-base font-semibold mb-2;
+  }
+
+  h6 {
+    @apply text-base font-semibold mb-2;
+  }
+
+  a, a:visited {
+    @apply text-link-foreground no-underline;
+  }
+
+  a:hover {
+    @apply underline;
+  }
 }
