@@ -1,44 +1,46 @@
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
-
-import './resume.css';
-
 //// helpers
 const Link = ({ href }) => (
 	<a href={href} target="_blank" rel="noreferrer">{href}</a>
 );
 
+const SubHeader = ({ items }) => (
+	<ul className="flex space-x-4 list-disc justify-center gap-2 text-sm">
+		{items.map((item, i) => <li key={i} className={i === 0 ? 'list-none' : null}>{item}</li>)}
+	</ul>
+);
+
 //// components
 const Header = () => (
-	<Row className="resume-header-wrapper">
-		<Col className="resume-header" xs={12}>
-			<div className="resume-name">Andrew T. Hill</div>
-			<div className="resume-info">
-				409 N. Roosevelt Bloomington, IN 47408 &bull; (812) 323-1590 &bull; <a href="mailto:athill@iu.edu">athill@iu.edu</a>
-			</div>
-			<div className="resume-info">
-				<Link href="https://andyhill.us" /> &bull; <Link href="https://github.com/athill/" />
-			</div>
-		</Col>
-	</Row>
+	<div className="">
+    <div className="text-3xl border-b-2 border-black">Andrew T. Hill</div>
+    <SubHeader items={[
+      '409 N. Roosevelt Bloomington, IN 47408',
+      '(812) 323-1590',
+      <a href="mailto:athill@iu.edu">athill@iu.edu</a>
+    ]} />
+    <SubHeader items={[
+      <Link href="https://andyhill.us" />,
+      <Link href="https://github.com/athill/" />
+    ]} />
+  </div>
 );
 
 const Section = ({ title, Component }) => (
-	<Row>
-		<Col md={2} className="left-col">
+	<div className="sm:grid sm:grid-cols-6">
+		<div className="sm:col-span-1 font-bold">
 			{ title }
-		</Col>
-		<Col md={10} className="right-col">
+		</div>
+		<div className="sm:col-span-5">
 			<Component />
-		</Col>
-	</Row>
+		</div>
+	</div>
 );
 
 const TitleDate = ({ date, title, leftWidth=9}) => (
-	<Row className="title-date indent1">
-		<Col xs={leftWidth} className="title">{title}</Col>
-		<Col xs={12 - leftWidth} className="date">{date}</Col>
-	</Row>
+	<div className="flex justify-between pl-1">
+		<div className="italic">{title}</div>
+		<div className="">{date}</div>
+	</div>
 
 );
 
@@ -234,7 +236,7 @@ const sections = [
 ];
 
 const Resume = () => (
-	<div className="container text-black" id="resume">
+	<div className="bg-white text-black p-6">
 		<Header />
 		{
 			sections.map(({ title, Component }, i) => <Section key={`${title}-${i}`} title={title} Component={Component} />)
@@ -245,7 +247,7 @@ const Resume = () => (
 const ResumePage = () => (
 	<div>
 		<title>andyhill.us - Resume</title>
-		<p className="screen-only">If you print this page, it will only print the resume. Alternatively, you can <a href="/media/resume/resume.pdf" target="_blank" rel="noreferrer">download a PDF</a></p>
+		<p className="block print:hidden m-1">If you print this page, it will only print the resume. Alternatively, you can <a href="/media/resume/resume.pdf" target="_blank" rel="noreferrer">download a PDF</a></p>
 		<Resume />
 	</div>
 );

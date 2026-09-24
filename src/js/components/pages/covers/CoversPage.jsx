@@ -12,7 +12,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
+import { ClearableInput } from '@/components/clearable-input';
 import { useSearchParams } from "react-router-dom";
 
 import { getPagination } from '../../../utils/PrimaryPagination';
@@ -133,12 +133,13 @@ const Covers = () => {
       </div>
       <div className="flex w-full justify-between">
         <div className="w-1/2">
-          <Input
-            onChange={e => setSearchParams({
+          <ClearableInput
+            setValue={value => setSearchParams({
               ...Object.fromEntries(searchParams),
-              filter: e.target.value })}
+              filter: value
+            })}
             placeholder="Filter..."
-            defaultValue={searchParams.get('filter') || ''}
+            value={searchParams.get('filter') || ''}
           />
         </div>
         <div>

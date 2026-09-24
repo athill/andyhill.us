@@ -4,13 +4,11 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import { ModeToggle } from "@/components/mode-toggle"
 import { Button } from "@/components/ui/button"
 
-import Covers from './pages/covers';
+import CoversPage from './pages/covers/CoversPage';
 import Home from './pages/Home';
 import NotFound from './NotFound';
-import Recipes from './pages/recipes/RecipesPage';
-import Resume from './pages/resume';
-
-// import './appview.css';
+import RecipesPage from './pages/recipes/RecipesPage';
+import ResumePage from './pages/resume/ResumePage';
 
 const navigation = [
   { display: 'Home', href: '/' },
@@ -64,7 +62,7 @@ class MobileHeader extends React.Component {
 
   render() {
       return (
-          <div className="block sm:hidden">
+          <div className="block sm:hidden print:hidden">
               <div className="width-full flex flex-row justify-items-end gap-1 bg-header text-header-foreground">
                   <h1 className="text-5xl grow">andyhill.us</h1>
                   <div className="bg-header text-header-foreground">
@@ -88,7 +86,7 @@ const headerImages = [
 ];
 
 const Header = () => (
-  <div className="hidden sm:block">
+  <div className="hidden sm:block print:hidden">
     <div className="flex relative justify-between bg-header p-3 rounded-lg m-3">
         {
             headerImages.map(({ src }) => <img key={ src } src={"/images/header/" + src} alt="" className="header-img"  />)
@@ -104,18 +102,18 @@ const Header = () => (
 
 const AppView = () => (
   <div className="flex justify-center relative">
-    <div className="hidden sm:block absolute top-2 right-2 flex-none">
+    <div className="hidden sm:block absolute top-2 right-2 flex-none print:hidden">
       <ModeToggle />
     </div>
-    <div className="sm:mt-6 sm:mb-6 sm:w-80/100 md:w-60/100 sm:rounded-lg bg-content">
+    <div className="sm:mt-6 sm:mb-6 sm:w-80/100 md:w-60/100 sm:rounded-lg bg-content print:w-100/100">
       <MobileHeader />
       <Header />
       <main className="p-4">
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="resume" element={<Resume />}/>
-          <Route path="/recipes" element={<Recipes />}/>
-          <Route path="/covers" element={<Covers />}/>
+          <Route path="resume" element={<ResumePage />}/>
+          <Route path="/recipes" element={<RecipesPage />}/>
+          <Route path="/covers" element={<CoversPage />}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

@@ -20,7 +20,7 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 import { useLocation } from 'react-router-dom';
-import ClearableInput from '@/components/clearable-input';
+import {ClearableInput} from '@/components/clearable-input';
 
 import Recipe from './Recipe';
 import { getPagination } from '../../../utils/PrimaryPagination';

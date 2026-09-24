@@ -11,7 +11,7 @@ interface ClearableInputProps {
   setValue: (value: string) => void;
 }
 
-const ClearableInput = ({ value, setValue, ...props }: ClearableInputProps) => {
+export const ClearableInput = ({ value, setValue, ...props }: ClearableInputProps) => {
   return (
     <div>
       <InputGroup>
@@ -25,5 +25,3 @@ const ClearableInput = ({ value, setValue, ...props }: ClearableInputProps) => {
     </div>
   );
 };
-
-export default ClearableInput;

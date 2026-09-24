@@ -1,8 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-// import 'bootstrap/dist/css/bootstrap.css';
-
 import AppView from './AppView';
 import PrintView from './PrintView';
 
